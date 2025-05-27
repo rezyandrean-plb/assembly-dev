@@ -1,0 +1,301 @@
+/* PLB Book Page Styles */
+/* Using system fonts instead of Google Fonts */
+
+:root {
+  --primary: #123b79;
+  --primary-light: #2a5295;
+  --primary-dark: #0a2755;
+  --secondary: #ffffff;
+  --accent: #f5f5f5;
+  --text: #333333;
+  --highlight: #e8f0ff;
+  --transition-speed: 300ms;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base styles */
+.plb-book-page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.feature-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.text-primary {
+  color: #123b79;
+}
+
+.bg-primary {
+  background-color: #123b79;
+}
+
+.bg-highlight {
+  background-color: #f8f9fa;
+}
+
+.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, var(--primary-dark), var(--primary));
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(to right, var(--primary-dark), var(--primary));
+}
+
+/* Section styling */
+.section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.btn-primary {
+  background-color: #123b79;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0a2550;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #123b79;
+  border: 2px solid #123b79;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(18, 59, 121, 0.1);
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(3deg);
+  }
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Book cover styling */
+.book-cover {
+  position: relative;
+  perspective: 1000px;
+}
+
+.book-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+.book-cover:hover img {
+  transform: rotateY(15deg);
+}
+
+/* Chapter list styling */
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.chapter-list .chapter-number {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin-right: 1rem;
+  min-width: 2rem;
+}
+
+/* FAQ styling */
+.faq-item {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.faq-question:hover {
+  background-color: rgba(18, 59, 121, 0.05);
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  background-color: white;
+  transition: all var(--transition-speed) var(--transition-ease);
+}
+
+.faq-icon {
+  transition: transform var(--transition-speed) var(--transition-ease);
+}
+
+.faq-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Form styling */
+.form-control {
+  margin-bottom: 1.5rem;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control input,
+.form-control select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(18, 59, 121, 0.2);
+}
+
+.checkbox-control {
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkbox-control input {
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
