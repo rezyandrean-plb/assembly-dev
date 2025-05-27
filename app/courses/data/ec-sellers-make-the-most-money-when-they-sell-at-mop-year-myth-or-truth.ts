@@ -1,0 +1,25 @@
+export const courseData = {
+  id: 3002,
+  title: "EC Sellers Make the Most Money when they sell at MOP Year – Myth or Truth?",
+  slug: "ec-sellers-make-the-most-money-when-they-sell-at-mop-year-myth-or-truth",
+  level: "All Levels",
+  duration: "1 hour",
+  category: "Webinar",
+  price: "Free",
+  image: "/images/courses/ec-sellers-make-the-most-money-when-they-sell-at-mop-year-myth-or-truth.jpg",
+  featured: false,
+  tags: ["Webinar", "EC", "Myth or Truth"],
+  rating: 0,
+  students: 0,
+  instructors: [],
+  lastUpdated: "2024-06-01",
+  description: "Explore whether EC sellers really make the most money at MOP year or if it's a myth.",
+  whatYouWillLearn: ["EC market timing", "MOP year analysis", "Investment myths"],
+  curriculum: [
+    { title: "EC Market Timing", lessons: ["What is MOP?", "Case studies"] }
+  ],
+  highlights: ["Expert analysis", "Market insights"],
+  requirements: ["Interest in EC investment"],
+  targetAudience: ["EC owners", "Investors"],
+  reviews: [],
+}; 
