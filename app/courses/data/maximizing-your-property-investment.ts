@@ -1,0 +1,25 @@
+export const courseData = {
+  id: 2003,
+  title: "Maximizing Your Property Investment",
+  slug: "maximizing-your-property-investment",
+  level: "All Levels",
+  duration: "1 hour",
+  category: "Webinar",
+  price: "Free",
+  image: "/images/courses/maximizing-your-property-investment.jpg",
+  featured: false,
+  tags: ["Webinar", "Investment"],
+  rating: 0,
+  students: 0,
+  instructors: [],
+  lastUpdated: "2024-06-01",
+  description: "Learn strategies to maximize returns on your property investment.",
+  whatYouWillLearn: ["Maximizing returns", "Investment strategies", "Property management"],
+  curriculum: [
+    { title: "Maximizing Returns", lessons: ["Key strategies", "Case studies"] }
+  ],
+  highlights: ["Expert tips", "Real-world examples"],
+  requirements: ["Interest in property investment"],
+  targetAudience: ["Investors", "Homeowners"],
+  reviews: [],
+}; 

@@ -1,0 +1,25 @@
+export const courseData = {
+  id: 4002,
+  title: "New Launch Condo Selection Strategies",
+  slug: "new-launch-condo-selection-strategies",
+  level: "All Levels",
+  duration: "1 hour",
+  category: "Webinar",
+  price: "Free",
+  image: "/images/courses/new-launch-condo-selection-strategies.jpg",
+  featured: false,
+  tags: ["Webinar", "Condo", "New Launch"],
+  rating: 0,
+  students: 0,
+  instructors: [],
+  lastUpdated: "2024-06-01",
+  description: "Discover the best strategies for selecting a new launch condo in Singapore.",
+  whatYouWillLearn: ["Condo selection", "New launch analysis", "Investment tips"],
+  curriculum: [
+    { title: "Selection Strategies", lessons: ["What to look for", "Case studies"] }
+  ],
+  highlights: ["Expert frameworks", "Real-world examples"],
+  requirements: ["Interest in property investment"],
+  targetAudience: ["Investors", "Homebuyers"],
+  reviews: [],
+}; 

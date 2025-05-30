@@ -1,0 +1,135 @@
+"use client"
+
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { MapPin, ExternalLink } from "lucide-react"
+
+export default function ContactMap() {
+  const [isHovered, setIsHovered] = useState(false)
+
+  // Office location coordinates
+  const location = {
+    name: "Assembly SG",
+    address: "Oxley Bizhub 2, #11-15, 62 Ubi Road 1, Singapore 408734",
+    googleMapsUrl: "https://maps.google.com/?q=Oxley+Bizhub+2+62+Ubi+Road+1+Singapore+408734",
+  }
+
+  return (
+    <div className="relative w-full h-full bg-blue-50">
+      {/* Decorative background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Grid lines */}
+        <div className="absolute inset-0 grid grid-cols-12 gap-4">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div key={`col-${i}`} className="h-full w-full border-r border-blue-100" />
+          ))}
+        </div>
+        <div className="absolute inset-0 grid grid-rows-12 gap-4">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div key={`row-${i}`} className="w-full h-full border-b border-blue-100" />
+          ))}
+        </div>
+
+        {/* Decorative circles */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-blue-200 opacity-20"
+          animate={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-60 h-60 rounded-full bg-blue-300 opacity-10"
+          animate={{
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
+            delay: 1,
+          }}
+        />
+      </div>
+
+      {/* Singapore map outline (simplified SVG) */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-20">
+        <svg width="60%" height="60%" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.3,10.2c0,0,7.5-0.2,11.4,0.1c3.9,0.3,9.5,1.6,14.4,1.6c4.9,0,10.2-0.8,15.4-0.6c5.2,0.2,10.1,1.2,15.2,1.5
+            c5.1,0.3,10.3-0.4,10.3-0.4s2.1,0.8,2.8,2.9c0.7,2.1,0.5,4.6,0.5,4.6s-1.9,0.3-2.8,1.9c-0.9,1.6-0.9,3.9-0.9,3.9s-2.1,0.3-3.5,1.4
+            c-1.4,1.1-2.3,2.8-2.3,2.8s-3.2,0.2-5.6,0.9c-2.4,0.7-4.1,2-4.1,2s-2.8-0.5-5.6-0.5c-2.8,0-5.6,0.5-5.6,0.5s-2.1-1.1-4.4-1.6
+            c-2.3-0.5-4.9-0.4-4.9-0.4s-1.9-1.4-4.1-2.1c-2.2-0.7-4.7-0.8-4.7-0.8s-1.6-1.6-3.5-2.5c-1.9-0.9-4.1-1.1-4.1-1.1s-1.2-1.8-2.8-2.9
+            c-1.6-1.1-3.5-1.6-3.5-1.6s-0.9-1.9-2.1-3.2c-1.2-1.3-2.8-2-2.8-2s-0.7-1.6-1.6-2.8C20.8,11.8,20.3,10.2,20.3,10.2z"
+            fill="#2563EB"
+            stroke="#1E40AF"
+            strokeWidth="0.5"
+          />
+        </svg>
+      </div>
+
+      {/* Location pin */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <motion.div
+          className="relative"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
+        >
+          <div className="relative">
+            <MapPin className="h-12 w-12 text-blue-600 drop-shadow-lg" />
+            <motion.div
+              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-3 bg-blue-600 rounded-full opacity-30"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Location card */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-lg p-4 w-[90%] max-w-md"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full">
+            <MapPin className="h-5 w-5 text-blue-600" />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-bold text-gray-900">{location.name}</h3>
+            <p className="text-gray-600 text-sm">{location.address}</p>
+            <a
+              href={location.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center mt-2 text-sm font-medium text-blue-600 hover:text-blue-800"
+            >
+              Get Directions
+              <ExternalLink className="ml-1 h-3 w-3" />
+            </a>
+          </div>
+        </div>
+
+        <motion.div
+          className="absolute bottom-0 left-0 h-1 bg-blue-600 rounded-bl-xl rounded-br-xl"
+          initial={{ width: "0%" }}
+          animate={{ width: isHovered ? "100%" : "30%" }}
+          transition={{ duration: 0.3 }}
+        />
+      </motion.div>
+    </div>
+  )
+}

@@ -1,0 +1,26 @@
+export const courseData = {
+  id: 2002,
+  title: "7 Analytical Factors for Safe New Launch Property Investment",
+  slug: "7-analytical-factors-for-safe-new-launch-property-investment",
+  level: "All Levels",
+  duration: "1 hour",
+  category: "Condo, Webinar",
+  price: "Free",
+  image: "/images/courses/7-analytical-factors-for-safe-new-launch-property-investment.jpg",
+  featured: false,
+  tags: ["Condo", "Webinar", "Analysis"],
+  rating: 0,
+  students: 0,
+  instructors: [],
+  lastUpdated: "2024-06-01",
+  description: "Discover the 7 key factors to analyze before investing in a new launch property.",
+  whatYouWillLearn: ["Analytical frameworks", "Risk assessment", "Investment safety"],
+  curriculum: [
+    { title: "Introduction to Analytical Factors", lessons: ["Overview of 7 factors"] },
+    { title: "Application", lessons: ["Case studies", "Practical analysis"] }
+  ],
+  highlights: ["Expert frameworks", "Real-world application"],
+  requirements: ["Interest in property investment"],
+  targetAudience: ["Investors", "Homebuyers"],
+  reviews: [],
+}; 
