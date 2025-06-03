@@ -18,6 +18,13 @@ export default function BookPreviewPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  useEffect(() => {
+   setWindowHeight(window.innerHeight)
+   const handleResize = () => setWindowHeight(window.innerHeight)
+   window.addEventListener('resize', handleResize)
+   return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormState((prev) => ({

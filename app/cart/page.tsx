@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import { useCart } from "@/components/cart-context"
@@ -805,4 +805,10 @@ function CartPageContent() {
   )
 }
 
-export default CartPageContent;
+export default function CartPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CartPageContent />
+    </Suspense>
+  )
+}
