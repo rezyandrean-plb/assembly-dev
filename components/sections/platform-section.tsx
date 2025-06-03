@@ -20,6 +20,16 @@ export default function PlatformSection() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
   const contentY = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50])
 
+  // Add state for random paths
+  const [randomPaths, setRandomPaths] = useState<string[]>([])
+
+  useEffect(() => {
+    const newPaths = [...Array(30)].map(() =>
+      `M${Math.random() * 1000},${Math.random() * 1000} C${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000}`
+    )
+    setRandomPaths(newPaths)
+  }, [])
+
   // Update active feature based on scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -77,10 +87,10 @@ export default function PlatformSection() {
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
           {/* Base network - complex background */}
-          {[...Array(30)].map((_, i) => (
+          {randomPaths.map((d, i) => (
             <motion.path
               key={`base-path-${i}`}
-              d={`M${Math.random() * 1000},${Math.random() * 1000} C${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000}`}
+              d={d}
               stroke="#AAAAAA"
               strokeWidth="1"
               strokeOpacity="0.16"
