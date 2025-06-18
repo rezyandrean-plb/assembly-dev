@@ -84,7 +84,7 @@ export default function NewHeroSection() {
             {/* Left Content */}
             <div className="text-center lg:text-left" data-oid="tmfjejl">
               <motion.div
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-[#123B79]/10 text-[#123B79] px-4 py-2 rounded-full text-sm font-medium mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,17 +95,14 @@ export default function NewHeroSection() {
               </motion.div>
 
               <motion.h1
-                className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent leading-tight"
+                className="text-5xl lg:text-7xl font-bold mb-6 text-gray-900 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 data-oid="f.099kv"
               >
                 Master Real Estate
-                <span
-                  className="block text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                  data-oid="wl7yc_f"
-                >
+                <span className="block text-[#123B79]" data-oid="wl7yc_f">
                   Investment
                 </span>
               </motion.h1>
@@ -132,7 +129,7 @@ export default function NewHeroSection() {
                 <Link href="/courses" data-oid="pizbgf6">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    className="bg-[#123B79] hover:bg-[#0F2F66] text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                     data-oid="jhnskum"
                   >
                     Start Learning Today
@@ -237,7 +234,7 @@ export default function NewHeroSection() {
                     data-oid="g.na-m3"
                   >
                     <div
-                      className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center"
+                      className="w-12 h-12 bg-[#123B79] rounded-xl flex items-center justify-center"
                       data-oid="3wg706s"
                     >
                       <BookOpen
@@ -278,7 +275,7 @@ export default function NewHeroSection() {
                       data-oid="b5:absl"
                     >
                       <motion.div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+                        className="bg-[#123B79] h-2 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: isInView ? "75%" : 0 }}
                         transition={{ duration: 1.5, delay: 1 }}
@@ -315,7 +312,7 @@ export default function NewHeroSection() {
 
                 {/* Floating Cards */}
                 <motion.div
-                  className="absolute -top-4 -right-4 bg-gradient-to-r from-green-400 to-blue-500 text-white p-4 rounded-xl shadow-lg"
+                  className="absolute -top-4 -right-4 bg-[#7CB6B2] text-white p-4 rounded-xl shadow-lg"
                   animate={{
                     y: [0, -10, 0],
                   }}
@@ -348,7 +345,7 @@ export default function NewHeroSection() {
                 >
                   <div className="flex items-center gap-2" data-oid="u7rhgfc">
                     <div
-                      className="w-8 h-8 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center"
+                      className="w-8 h-8 bg-[#123B79] rounded-full flex items-center justify-center"
                       data-oid="c80ybmt"
                     >
                       <Users
