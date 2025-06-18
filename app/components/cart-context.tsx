@@ -9,13 +9,20 @@ export type CartItem = {
   type: "course" | "book";
   image?: string;
   slug?: string;
+  instructor?: string;
+  quantity: number;
+  category?: string;
+  rating?: number;
 };
 
 type CartContextType = {
   cart: CartItem[];
-  addToCart: (item: CartItem) => void;
+  addToCart: (item: Omit<CartItem, "quantity">) => void;
   removeFromCart: (id: string) => void;
+  updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
+  getTotalItems: () => number;
+  getTotalPrice: () => number;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -40,14 +47,25 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (item: CartItem) => {
+  const addToCart = (item: Omit<CartItem, "quantity">) => {
     setCart((prevCart) => {
-      // Check if item already exists in cart
-      const exists = prevCart.some((cartItem) => cartItem.id === item.id);
-      if (exists) {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
+
+      if (existingItem) {
+        // If item exists and it's a book, increase quantity
+        if (item.type === "book") {
+          return prevCart.map((cartItem) =>
+            cartItem.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + 1 }
+              : cartItem,
+          );
+        }
+        // For courses, don't add duplicates
         return prevCart;
       }
-      return [...prevCart, item];
+
+      // Add new item with quantity 1
+      return [...prevCart, { ...item, quantity: 1 }];
     });
   };
 
@@ -55,14 +73,47 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
+  const updateQuantity = (id: string, quantity: number) => {
+    if (quantity <= 0) {
+      removeFromCart(id);
+      return;
+    }
+
+    setCart((prevCart) =>
+      prevCart.map((item) => (item.id === id ? { ...item, quantity } : item)),
+    );
+  };
+
   const clearCart = () => {
     setCart([]);
   };
 
+  const getTotalItems = () => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const getTotalPrice = () => {
+    return cart.reduce((total, item) => {
+      const price =
+        typeof item.price === "string"
+          ? parseFloat(item.price.replace(/[^0-9.]/g, "")) || 0
+          : item.price;
+      return total + price * item.quantity;
+    }, 0);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
-      data-oid="djvcppg"
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        getTotalItems,
+        getTotalPrice,
+      }}
+      data-oid="1x3iazz"
     >
       {children}
     </CartContext.Provider>

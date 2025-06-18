@@ -5,13 +5,26 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/components/cart-context";
 import { Button } from "@/components/ui/button";
-import { Trash, Heart } from "lucide-react";
+import {
+  Trash,
+  Heart,
+  Plus,
+  Minus,
+  ShoppingBag,
+  ArrowRight,
+  Star,
+  Clock,
+  Users,
+  Award,
+  Shield,
+  Sparkles,
+} from "lucide-react";
 import { courses as allCourses } from "@/app/data/courses";
 import CourseCard from "@/components/course-card";
 import Navbar from "@/components/navbar";
 import { useAuth } from "@/context/auth-context";
 import LoginModal from "@/app/components/login-modal";
-import Stepper from "../checkout/components/stepper";
+import { motion, AnimatePresence } from "framer-motion";
 
 function formatPrice(price: number | string) {
   const numericPrice =
@@ -39,6 +52,7 @@ export default function CartPageContent() {
   const { isLoggedIn } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [removingItems, setRemovingItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     setIsMounted(true);
@@ -52,7 +66,7 @@ export default function CartPageContent() {
   const subtotal = cart.reduce((sum, item) => {
     let price = 0;
     if (item.id === BOOK_ID) {
-      price = BOOK_ORIGINAL_PRICE; // Always use original price for subtotal
+      price = BOOK_ORIGINAL_PRICE;
     } else if (item.price.toString().toLowerCase() !== "free") {
       const parsedPrice = parseFloat(
         item.price.toString().replace(/[^0-9.]/g, ""),
@@ -64,8 +78,19 @@ export default function CartPageContent() {
 
   const hasBook = cart.some((item) => item.type === "Book");
   const shippingCost = hasBook ? 10.0 : 0.0;
-
   const orderTotal = subtotal - discount + shippingCost;
+
+  const handleRemoveItem = (itemId: string) => {
+    setRemovingItems((prev) => new Set(prev).add(itemId));
+    setTimeout(() => {
+      removeFromCart(itemId);
+      setRemovingItems((prev) => {
+        const newSet = new Set(prev);
+        newSet.delete(itemId);
+        return newSet;
+      });
+    }, 300);
+  };
 
   const handleCheckout = () => {
     if (!isLoggedIn) {
@@ -80,19 +105,46 @@ export default function CartPageContent() {
     }
   };
 
-  const recommendedCourses = allCourses
-    .filter((course) => !cart.some((cartItem) => cartItem.id === course.id))
-    .slice(0, 4);
+  // Enhanced recommendation logic
+  const getRecommendedCourses = () => {
+    const cartCourseIds = cart.map((item) => item.id);
+    const cartCategories = cart
+      .map((item) => {
+        const course = allCourses.find((c) => c.id === item.id);
+        return course?.category || "";
+      })
+      .filter(Boolean);
+
+    // Get courses from same categories first
+    const sameCategoryCourses = allCourses.filter(
+      (course) =>
+        !cartCourseIds.includes(course.id) &&
+        cartCategories.includes(course.category || ""),
+    );
+
+    // Get popular courses if we need more
+    const popularCourses = allCourses
+      .filter(
+        (course) =>
+          !cartCourseIds.includes(course.id) &&
+          !sameCategoryCourses.includes(course),
+      )
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+
+    return [...sameCategoryCourses, ...popularCourses].slice(0, 6);
+  };
+
+  const recommendedCourses = getRecommendedCourses();
 
   if (!isMounted) {
     return (
       <div
-        className="min-h-screen bg-gray-50 flex items-center justify-center"
-        data-oid="gndbf:o"
+        className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex items-center justify-center"
+        data-oid="x8n7ra3"
       >
         <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123B79]"
-          data-oid="ljlrwx3"
+          className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"
+          data-oid="o2uhg9c"
         ></div>
       </div>
     );
@@ -106,306 +158,571 @@ export default function CartPageContent() {
           setIsLoginModalOpen(false);
           setTimeout(handleCheckout, 100);
         }}
-        data-oid="5d7kcbb"
+        data-oid=":3hrpx9"
       />
 
-      <div className="bg-gray-50" data-oid="ut9u_y3">
-        <Navbar data-oid="iuj4l_i" />
+      <div
+        className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5"
+        data-oid="gos3i7s"
+      >
+        <Navbar data-oid="hsvaihb" />
+
         <div
           className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24"
-          data-oid="ae2nwfw"
+          data-oid="2w_4d3y"
         >
-          <Stepper currentStep={1} data-oid="s:6uw7z" />
-          <h1
-            className="text-3xl font-bold text-gray-900 my-8"
-            data-oid="em3vs:w"
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-12"
+            data-oid="gksmr82"
           >
-            Shopping Cart
-          </h1>
-          {cart.length === 0 ? (
             <div
-              className="text-center py-20 bg-white rounded-lg shadow-sm"
-              data-oid="t3pmxeb"
+              className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
+              data-oid="16zyb-j"
             >
-              <h2
-                className="text-2xl font-semibold text-gray-800 mb-2"
-                data-oid="-bicec7"
+              <ShoppingBag
+                className="w-6 h-6 text-primary"
+                data-oid="65n:hq:"
+              />
+              <span
+                className="font-semibold text-neutral-700"
+                data-oid="v2n:470"
               >
-                Your cart is empty
-              </h2>
-              <p className="text-gray-600 mb-6" data-oid="59_wn01">
-                Looks like you haven't added anything to your cart yet.
-              </p>
-              <Button
-                onClick={() => router.push("/courses")}
-                className="bg-[#123B79] hover:bg-[#0A2A5E]"
-                data-oid="0:gdrl6"
+                Shopping Cart
+              </span>
+              <span
+                className="bg-primary text-white text-sm px-2 py-1 rounded-full"
+                data-oid=".t9edqj"
               >
-                Browse Courses
-              </Button>
+                {cart.length}
+              </span>
             </div>
+            <h1
+              className="text-4xl font-bold text-neutral-900 mb-4"
+              data-oid="i6dqtbt"
+            >
+              Your Learning Journey Awaits
+            </h1>
+            <p
+              className="text-xl text-neutral-600 max-w-2xl mx-auto"
+              data-oid="12qsh36"
+            >
+              Review your selected courses and take the next step towards
+              mastering real estate investment
+            </p>
+          </motion.div>
+
+          {cart.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="max-w-2xl mx-auto text-center py-20"
+              data-oid="_ao3ssb"
+            >
+              <div
+                className="bg-white rounded-3xl shadow-xl p-12"
+                data-oid="3cu.aqp"
+              >
+                <div
+                  className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8"
+                  data-oid="3ckf-p7"
+                >
+                  <ShoppingBag
+                    className="w-12 h-12 text-primary"
+                    data-oid="ej3kp27"
+                  />
+                </div>
+                <h2
+                  className="text-3xl font-bold text-neutral-900 mb-4"
+                  data-oid="neyujm_"
+                >
+                  Your cart is empty
+                </h2>
+                <p className="text-neutral-600 mb-8 text-lg" data-oid="nasslvg">
+                  Discover our expert-led courses and start building your real
+                  estate investment portfolio today.
+                </p>
+                <Button
+                  onClick={() => router.push("/courses")}
+                  className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  data-oid="35a6ld7"
+                >
+                  Explore Courses
+                  <ArrowRight className="w-5 h-5 ml-2" data-oid="c--ar0n" />
+                </Button>
+              </div>
+            </motion.div>
           ) : (
             <div
-              className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start"
-              data-oid="rt4lry8"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-12"
+              data-oid="p71oan9"
             >
-              <section
-                aria-labelledby="cart-heading"
-                className="lg:col-span-8"
-                data-oid="gel:mc-"
-              >
-                <ul
-                  role="list"
-                  className="divide-y divide-gray-200 border-t border-b border-gray-200"
-                  data-oid="um5zksw"
+              {/* Cart Items */}
+              <div className="lg:col-span-2" data-oid="qrrv1-6">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                  data-oid="j610ypt"
                 >
-                  {cart.map((item) => (
-                    <li
-                      key={item.id}
-                      className="flex py-6 px-4 bg-white"
-                      data-oid="jm-xrjb"
+                  <div
+                    className="p-6 border-b border-neutral-200"
+                    data-oid="ag1-vgr"
+                  >
+                    <h2
+                      className="text-2xl font-bold text-neutral-900"
+                      data-oid=".yghkvv"
                     >
-                      <div className="flex-shrink-0" data-oid="bsi97:e">
-                        <Image
-                          src={item.image || "/placeholder.jpg"}
-                          alt={item.title}
-                          width={160}
-                          height={160}
-                          className="w-40 h-40 rounded-md object-contain"
-                          data-oid="wgpxrkt"
-                        />
-                      </div>
-                      <div
-                        className="ml-4 flex-1 flex flex-col justify-between sm:ml-6"
-                        data-oid="2ywwghi"
+                      Course Selection ({cart.length} items)
+                    </h2>
+                  </div>
+
+                  <AnimatePresence data-oid="iijy4ab">
+                    {cart.map((item, index) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={`border-b border-neutral-100 last:border-b-0 ${
+                          removingItems.has(item.id) ? "opacity-50" : ""
+                        }`}
+                        data-oid="k5lxdqr"
                       >
-                        <div
-                          className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6"
-                          data-oid=":.r.wmv"
-                        >
-                          <div data-oid=":ennnyj">
-                            <h3
-                              className="text-lg font-semibold text-gray-800"
-                              data-oid="xp8ws57"
-                            >
-                              <a
-                                href={`/courses/${item.slug}`}
-                                className="hover:text-[#123B79]"
-                                data-oid="jmlr4-_"
+                        <div className="p-6" data-oid="1:qt47z">
+                          <div className="flex gap-6" data-oid="2mggo-c">
+                            {/* Course Image */}
+                            <div className="flex-shrink-0" data-oid="nn60log">
+                              <div
+                                className="relative w-32 h-32 rounded-xl overflow-hidden bg-neutral-100"
+                                data-oid="tuom4t_"
                               >
-                                {item.title}
-                              </a>
-                            </h3>
-                            <p
-                              className="mt-1 text-sm text-gray-500"
-                              data-oid="n6_4v:z"
-                            >
-                              By {item.instructor}
-                            </p>
-                          </div>
-                          <div
-                            className="mt-4 sm:mt-0 sm:text-right"
-                            data-oid="5kba7m7"
-                          >
-                            <p
-                              className="text-lg font-bold text-gray-900"
-                              data-oid="n12ty:z"
-                            >
-                              {formatPrice(item.price)}
-                            </p>
+                                <Image
+                                  src={item.image || "/placeholder.jpg"}
+                                  alt={item.title}
+                                  fill
+                                  className="object-cover"
+                                  data-oid="e.9_9eb"
+                                />
+
+                                <div
+                                  className="absolute top-2 left-2"
+                                  data-oid="t3pw-te"
+                                >
+                                  <span
+                                    className="bg-primary text-white text-xs px-2 py-1 rounded-full font-medium"
+                                    data-oid="pw4cq9e"
+                                  >
+                                    {item.type === "Book" ? "Book" : "Course"}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Course Details */}
+                            <div className="flex-1 min-w-0" data-oid="m:moqd_">
+                              <div
+                                className="flex justify-between items-start mb-3"
+                                data-oid="l6h-j37"
+                              >
+                                <div className="flex-1" data-oid="7m_awm9">
+                                  <h3
+                                    className="text-lg font-bold text-neutral-900 mb-2 line-clamp-2"
+                                    data-oid=".p.x1r1"
+                                  >
+                                    {item.title}
+                                  </h3>
+                                  <p
+                                    className="text-neutral-600 mb-3"
+                                    data-oid="dgx44h0"
+                                  >
+                                    By {item.instructor || "Assembly.sg"}
+                                  </p>
+
+                                  {/* Course Features */}
+                                  <div
+                                    className="flex items-center gap-4 text-sm text-neutral-500 mb-4"
+                                    data-oid="cacjx3q"
+                                  >
+                                    <div
+                                      className="flex items-center gap-1"
+                                      data-oid="q2mlffp"
+                                    >
+                                      <Clock
+                                        className="w-4 h-4"
+                                        data-oid=".-q-f1x"
+                                      />
+                                      <span data-oid="5uljg21">2-3 hours</span>
+                                    </div>
+                                    <div
+                                      className="flex items-center gap-1"
+                                      data-oid="_i3euv1"
+                                    >
+                                      <Users
+                                        className="w-4 h-4"
+                                        data-oid="era:f.g"
+                                      />
+                                      <span data-oid="y5spsj4">
+                                        1,200+ students
+                                      </span>
+                                    </div>
+                                    <div
+                                      className="flex items-center gap-1"
+                                      data-oid="yt_-f8z"
+                                    >
+                                      <Star
+                                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                                        data-oid="n-b71dv"
+                                      />
+                                      <span data-oid="qpb0.um">4.8</span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="text-right ml-4"
+                                  data-oid="9fj_3oz"
+                                >
+                                  <div
+                                    className="text-2xl font-bold text-neutral-900"
+                                    data-oid="_tbrguz"
+                                  >
+                                    {formatPrice(item.price)}
+                                  </div>
+                                  {item.id === BOOK_ID && (
+                                    <div
+                                      className="text-sm text-neutral-500 line-through"
+                                      data-oid="-:imc41"
+                                    >
+                                      {formatPrice(BOOK_ORIGINAL_PRICE)}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+
+                              {/* Quantity and Actions */}
+                              <div
+                                className="flex items-center justify-between"
+                                data-oid="ngjl0ve"
+                              >
+                                <div
+                                  className="flex items-center gap-4"
+                                  data-oid="audzanv"
+                                >
+                                  {item.type === "Book" ? (
+                                    <div
+                                      className="flex items-center gap-2"
+                                      data-oid="e_4o5c0"
+                                    >
+                                      <span
+                                        className="text-sm text-neutral-600"
+                                        data-oid="lis3tay"
+                                      >
+                                        Quantity:
+                                      </span>
+                                      <div
+                                        className="flex items-center border border-neutral-200 rounded-lg"
+                                        data-oid="3gj3as9"
+                                      >
+                                        <button
+                                          onClick={() =>
+                                            updateQuantity(
+                                              item.id,
+                                              Math.max(1, item.quantity - 1),
+                                            )
+                                          }
+                                          className="p-2 hover:bg-neutral-50 transition-colors"
+                                          data-oid="u46cpfz"
+                                        >
+                                          <Minus
+                                            className="w-4 h-4"
+                                            data-oid="irsai6l"
+                                          />
+                                        </button>
+                                        <span
+                                          className="px-4 py-2 font-medium"
+                                          data-oid="n33590i"
+                                        >
+                                          {item.quantity}
+                                        </span>
+                                        <button
+                                          onClick={() =>
+                                            updateQuantity(
+                                              item.id,
+                                              Math.min(10, item.quantity + 1),
+                                            )
+                                          }
+                                          className="p-2 hover:bg-neutral-50 transition-colors"
+                                          data-oid="7njk3:6"
+                                        >
+                                          <Plus
+                                            className="w-4 h-4"
+                                            data-oid="21v.fso"
+                                          />
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <div
+                                      className="flex items-center gap-2 text-sm text-neutral-600"
+                                      data-oid="se_ig3."
+                                    >
+                                      <Award
+                                        className="w-4 h-4"
+                                        data-oid=".0lwkp2"
+                                      />
+                                      <span data-oid="3ir86gb">
+                                        Lifetime Access
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+
+                                <div
+                                  className="flex items-center gap-2"
+                                  data-oid=".o93ry4"
+                                >
+                                  <button
+                                    type="button"
+                                    className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
+                                    data-oid="sncypi2"
+                                  >
+                                    <Heart
+                                      className="w-5 h-5"
+                                      data-oid="k4q0:xs"
+                                    />
+                                  </button>
+                                  <button
+                                    onClick={() => handleRemoveItem(item.id)}
+                                    type="button"
+                                    className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
+                                    data-oid="nxxb79y"
+                                  >
+                                    <Trash
+                                      className="w-5 h-5"
+                                      data-oid="5u3jtw3"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
+              </div>
+
+              {/* Order Summary */}
+              <div className="lg:col-span-1" data-oid="2r0no3h">
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="sticky top-24"
+                  data-oid="740m:b9"
+                >
+                  <div
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                    data-oid="wti2rbq"
+                  >
+                    <div
+                      className="p-6 bg-primary text-white"
+                      data-oid="2u08yab"
+                    >
+                      <h2 className="text-xl font-bold mb-2" data-oid="-hyhp6x">
+                        Order Summary
+                      </h2>
+                      <p className="text-primary-light" data-oid="o66g_ks">
+                        Ready to start learning?
+                      </p>
+                    </div>
+
+                    <div className="p-6" data-oid="5ban46j">
+                      <div className="space-y-4 mb-6" data-oid="vd--4jt">
                         <div
-                          className="mt-4 flex items-center justify-between"
-                          data-oid="geb8s3y"
+                          className="flex justify-between items-center"
+                          data-oid="vusu5ws"
                         >
-                          <div className="flex items-center" data-oid="9ufx3h.">
-                            <label
-                              htmlFor={`quantity-${item.id}`}
-                              className="sr-only"
-                              data-oid="-seigkm"
-                            >
-                              Quantity
-                            </label>
-                            <select
-                              id={`quantity-${item.id}`}
-                              name={`quantity-${item.id}`}
-                              value={item.quantity}
-                              onChange={(e) =>
-                                updateQuantity(
-                                  item.id,
-                                  parseInt(e.target.value),
-                                )
-                              }
-                              disabled={item.type !== "Book"}
-                              className="block max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm disabled:bg-gray-100 disabled:cursor-not-allowed"
-                              data-oid="dj:40ex"
-                            >
-                              {item.type === "Book" ? (
-                                [...Array(10).keys()].map((i) => (
-                                  <option
-                                    key={i + 1}
-                                    value={i + 1}
-                                    data-oid="pmljsn7"
-                                  >
-                                    {i + 1}
-                                  </option>
-                                ))
-                              ) : (
-                                <option value="1" data-oid="o:f959l">
-                                  1
-                                </option>
-                              )}
-                            </select>
-                          </div>
+                          <span className="text-neutral-600" data-oid="sdfjf8o">
+                            Subtotal
+                          </span>
+                          <span className="font-semibold" data-oid=":1mnhl-">
+                            {formatPrice(subtotal)}
+                          </span>
+                        </div>
+
+                        {discount > 0 && (
                           <div
-                            className="flex items-center space-x-4"
-                            data-oid="w25wodk"
+                            className="flex justify-between items-center text-green-600"
+                            data-oid="p6-b0tp"
                           >
-                            <button
-                              type="button"
-                              className="text-gray-400 hover:text-gray-600"
-                              data-oid="rdd._r0"
+                            <span data-oid="10.dqlo">Discount</span>
+                            <span className="font-semibold" data-oid="v8.7j82">
+                              -{formatPrice(discount)}
+                            </span>
+                          </div>
+                        )}
+
+                        <div
+                          className="flex justify-between items-center"
+                          data-oid="7eaj7ou"
+                        >
+                          <span className="text-neutral-600" data-oid="osd7al5">
+                            Shipping
+                          </span>
+                          <span className="font-semibold" data-oid="1jbhu.z">
+                            {shippingCost > 0
+                              ? formatPrice(shippingCost)
+                              : "Free"}
+                          </span>
+                        </div>
+
+                        <div
+                          className="border-t border-neutral-200 pt-4"
+                          data-oid="kyao3ht"
+                        >
+                          <div
+                            className="flex justify-between items-center"
+                            data-oid="c9k0uwr"
+                          >
+                            <span
+                              className="text-lg font-bold text-neutral-900"
+                              data-oid="59n0wa9"
                             >
-                              <Heart className="h-5 w-5" data-oid="dvdbetb" />
-                            </button>
-                            <button
-                              onClick={() => removeFromCart(item.id)}
-                              type="button"
-                              className="text-red-500 hover:text-red-700 font-medium"
-                              data-oid="xtjronh"
+                              Total
+                            </span>
+                            <span
+                              className="text-2xl font-bold text-primary"
+                              data-oid="8-enlww"
                             >
-                              <Trash className="h-5 w-5" data-oid="ert7swq" />
-                            </button>
+                              {formatPrice(orderTotal)}
+                            </span>
                           </div>
                         </div>
                       </div>
-                    </li>
-                  ))}
-                </ul>
-              </section>
 
-              {/* Order summary */}
-              <section
-                aria-labelledby="summary-heading"
-                className="mt-16 bg-white rounded-lg shadow-sm lg:col-span-4 lg:mt-0 lg:sticky lg:top-28 p-6"
-                data-oid="su7eaug"
-              >
-                <h2
-                  id="summary-heading"
-                  className="text-xl font-bold text-gray-900 border-b pb-4"
-                  data-oid="ozg-c-k"
-                >
-                  Order Summary
-                </h2>
-                <div className="py-4 space-y-4" data-oid="c27:7pm">
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="as9scup"
-                  >
-                    <dt className="text-sm text-gray-600" data-oid="mc_n7zu">
-                      Subtotal
-                    </dt>
-                    <dd
-                      className="text-sm font-medium text-gray-900"
-                      data-oid="8.9z4sx"
-                    >
-                      {formatPrice(subtotal)}
-                    </dd>
-                  </div>
-                  {discount > 0 && (
-                    <div
-                      className="flex items-center justify-between text-sm"
-                      data-oid="9t0j67u"
-                    >
-                      <dt className="text-red-600" data-oid="y9_pa9f">
-                        Discount
-                      </dt>
-                      <dd
-                        className="font-medium text-red-600"
-                        data-oid="aq0ynpi"
+                      {/* Security Features */}
+                      <div
+                        className="bg-neutral-50 rounded-xl p-4 mb-6"
+                        data-oid="ei:2dmh"
                       >
-                        -{formatPrice(discount)}
-                      </dd>
-                    </div>
-                  )}
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="_yvxu4f"
-                  >
-                    <dt className="text-sm text-gray-600" data-oid="s20y99u">
-                      Shipping
-                    </dt>
-                    <dd
-                      className="text-sm font-medium text-gray-900"
-                      data-oid="6usy-vg"
-                    >
-                      {formatPrice(shippingCost)}
-                    </dd>
-                  </div>
-                </div>
-                <div
-                  className="flex items-center justify-between border-t pt-4"
-                  data-oid="cjwq.vs"
-                >
-                  <dt
-                    className="text-base font-bold text-gray-900"
-                    data-oid="9cdrlfm"
-                  >
-                    Order Total
-                  </dt>
-                  <dd
-                    className="text-base font-bold text-gray-900"
-                    data-oid="onm3ug_"
-                  >
-                    {formatPrice(orderTotal)}
-                  </dd>
-                </div>
+                        <div
+                          className="flex items-center gap-3 mb-3"
+                          data-oid="ptef89r"
+                        >
+                          <Shield
+                            className="w-5 h-5 text-green-500"
+                            data-oid="it7gk.k"
+                          />
+                          <span
+                            className="font-semibold text-neutral-900"
+                            data-oid="cuyv4do"
+                          >
+                            Secure Checkout
+                          </span>
+                        </div>
+                        <ul
+                          className="text-sm text-neutral-600 space-y-1"
+                          data-oid="65h3rf3"
+                        >
+                          <li data-oid="gd2kjpu">
+                            • 30-day money-back guarantee
+                          </li>
+                          <li data-oid="1yum.j3">
+                            • Lifetime access to courses
+                          </li>
+                          <li data-oid="8i6q-ov">• SSL encrypted payment</li>
+                        </ul>
+                      </div>
 
-                <div className="mt-6" data-oid="48p7cj.">
-                  <Button
-                    onClick={handleCheckout}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white text-base font-bold py-3"
-                    data-oid="uffgoh3"
-                  >
-                    Checkout
-                  </Button>
-                </div>
-                <div className="mt-4" data-oid="-xe9rkh">
-                  <Button
-                    onClick={() => router.push("/courses")}
-                    variant="outline"
-                    className="w-full text-base font-bold py-3"
-                    data-oid="8h9aa2e"
-                  >
-                    Continue Shopping
-                  </Button>
-                </div>
-              </section>
+                      <Button
+                        onClick={handleCheckout}
+                        className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                        data-oid="qbba60k"
+                      >
+                        Proceed to Checkout
+                        <ArrowRight
+                          className="w-5 h-5 ml-2"
+                          data-oid="aelm7ls"
+                        />
+                      </Button>
+
+                      <Button
+                        onClick={() => router.push("/courses")}
+                        variant="outline"
+                        className="w-full mt-3 py-3 border-2 border-neutral-200 hover:border-primary hover:text-primary transition-all duration-300"
+                        data-oid=".mo-5.w"
+                      >
+                        Continue Shopping
+                      </Button>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           )}
 
-          {/* Recommended Courses Section */}
-          <div className="mt-24" data-oid="bthpzhd">
-            <h2
-              className="text-2xl font-bold text-gray-900 mb-6 text-center"
-              data-oid="v5bf161"
+          {/* Enhanced Recommendations Section */}
+          {cart.length > 0 && recommendedCourses.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-20"
+              data-oid="p6cjcju"
             >
-              Similar Course You May Like
-            </h2>
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-              data-oid="ylfk_6s"
-            >
-              {recommendedCourses.map((course) => (
-                <CourseCard
-                  key={course.id}
-                  course={course}
-                  data-oid="j4nwo-7"
-                />
-              ))}
-            </div>
-          </div>
+              <div className="text-center mb-12" data-oid=":e4gvx5">
+                <div
+                  className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
+                  data-oid="i3zt5ud"
+                >
+                  <Sparkles
+                    className="w-5 h-5 text-yellow-500"
+                    data-oid="6w7w4h3"
+                  />
+                  <span
+                    className="font-semibold text-neutral-700"
+                    data-oid="6-uqf2q"
+                  >
+                    Recommended for You
+                  </span>
+                </div>
+                <h2
+                  className="text-3xl font-bold text-neutral-900 mb-4"
+                  data-oid="pkbacxi"
+                >
+                  Complete Your Learning Path
+                </h2>
+                <p
+                  className="text-neutral-600 text-lg max-w-2xl mx-auto"
+                  data-oid="xz-s55o"
+                >
+                  Based on your selections, these courses will help you build a
+                  comprehensive understanding of real estate investment
+                </p>
+              </div>
+
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                data-oid="d63rbti"
+              >
+                {recommendedCourses.map((course, index) => (
+                  <motion.div
+                    key={course.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * index }}
+                    data-oid="cfcz27_"
+                  >
+                    <CourseCard course={course} data-oid="j_n38kh" />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </>
