@@ -72,7 +72,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Active Students",
       description: "Learning and growing with us",
-      color: "bg-blue-500",
+      color: "bg-primary-light",
     },
     {
       icon: <BookOpen className="w-8 h-8" data-oid="z:a1mf-" />,
@@ -80,7 +80,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Expert Courses",
       description: "Comprehensive learning materials",
-      color: "bg-green-500",
+      color: "bg-success",
     },
     {
       icon: <TrendingUp className="w-8 h-8" data-oid="a4b2x1l" />,
@@ -88,7 +88,7 @@ export default function NewStatsSection() {
       suffix: "%",
       label: "Success Rate",
       description: "Students achieving their goals",
-      color: "bg-purple-500",
+      color: "bg-secondary",
     },
     {
       icon: <DollarSign className="w-8 h-8" data-oid="_wo:gc3" />,
@@ -96,7 +96,7 @@ export default function NewStatsSection() {
       suffix: "B+",
       label: "Portfolio Value",
       description: "Combined student investments",
-      color: "bg-orange-500",
+      color: "bg-accent",
     },
     {
       icon: <Globe className="w-8 h-8" data-oid="k55ioa0" />,
@@ -104,7 +104,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Countries",
       description: "Global student community",
-      color: "bg-indigo-500",
+      color: "bg-primary-darker",
     },
     {
       icon: <Award className="w-8 h-8" data-oid="8f.kr9t" />,
@@ -112,14 +112,14 @@ export default function NewStatsSection() {
       suffix: "/5",
       label: "Satisfaction",
       description: "Average student rating",
-      color: "bg-yellow-500",
+      color: "bg-warning",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-gray-900 text-white relative overflow-hidden"
+      className="py-24 bg-primary text-white relative overflow-hidden"
       data-oid="qf-xudn"
     >
       {/* Background Pattern */}
@@ -139,7 +139,7 @@ export default function NewStatsSection() {
         data-oid="ak-rfy5"
       >
         <motion.div
-          className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"
           animate={{
             y: [0, -30, 0],
             x: [0, 20, 0],
@@ -153,7 +153,7 @@ export default function NewStatsSection() {
         />
 
         <motion.div
-          className="absolute bottom-20 right-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/20 rounded-full blur-xl"
           animate={{
             y: [0, 40, 0],
             x: [0, -25, 0],
@@ -183,7 +183,7 @@ export default function NewStatsSection() {
             Our Impact in Numbers
           </h2>
           <p
-            className="text-xl text-blue-100 max-w-3xl mx-auto"
+            className="text-xl text-white/80 max-w-3xl mx-auto"
             data-oid="pc1p3b:"
           >
             Join a thriving community of successful real estate investors from
@@ -221,7 +221,7 @@ export default function NewStatsSection() {
               >
                 {stat.value}
                 <span
-                  className="text-2xl lg:text-3xl text-blue-200"
+                  className="text-2xl lg:text-3xl text-white/60"
                   data-oid="h:gfim5"
                 >
                   {stat.suffix}
@@ -235,13 +235,13 @@ export default function NewStatsSection() {
                 {stat.label}
               </h3>
 
-              <p className="text-blue-200" data-oid="h_7izi:">
+              <p className="text-white/70" data-oid="h_7izi:">
                 {stat.description}
               </p>
 
               {/* Hover Effect */}
               <div
-                className="absolute inset-0 bg-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 data-oid="3r99_-w"
               />
             </motion.div>
@@ -263,12 +263,12 @@ export default function NewStatsSection() {
             <h3 className="text-2xl font-bold mb-4" data-oid="8ixi7bp">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-blue-100 mb-6" data-oid="cnpytw8">
+            <p className="text-white/80 mb-6" data-oid="cnpytw8">
               Start your real estate investment journey today and become part of
               our growing community.
             </p>
             <motion.button
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               data-oid="ha9c1ux"

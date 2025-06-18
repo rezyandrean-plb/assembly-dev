@@ -62,7 +62,7 @@ export default function ProfileNavbar() {
       >
         <Link href="/" className="flex items-center" data-oid="cgwdlew">
           <Image
-            src="/images/assembly-logo.png"
+            src="/public/images/assembly-logo.png"
             alt="Assembly Logo"
             width={180}
             height={50}

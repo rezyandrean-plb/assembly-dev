@@ -6,16 +6,30 @@
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
+  /* Brand Color Palette based on #123B79 */
   --primary: #123b79;
   --primary-light: #1e4a8c;
   --primary-lighter: #2a5ba0;
-  --primary-dark: #0f2f61;
-  --primary-darker: #0c2549;
-  --secondary: #64748b;
+  --primary-dark: #0e2d5f;
+  --primary-darker: #0a1f47;
+  /* Complementary Colors */
+  --secondary: #79123b;
   --accent: #f59e0b;
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
+  /* Neutral Palette */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+  /* Legacy variables for compatibility */
   --naturalPalette: #64748b;
   --naturalPalette-foreground: #f8fafc;
   --naturalPalette-naturalPalette1: #f1f5f9;
@@ -69,17 +83,17 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #123b79;
+  background: var(--primary);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f2f61;
+  background: var(--primary-dark);
 }
 
 /* Text gradient utility - simplified */
 .text-gradient {
-  color: #123b79;
+  color: var(--primary);
 }
 
 /* Line clamp utilities */
@@ -113,7 +127,7 @@ html {
 
 /* Animated background patterns - simplified */
 .animated-bg {
-  background: #123b79;
+  background: var(--primary);
 }
 
 /* Hover effects */

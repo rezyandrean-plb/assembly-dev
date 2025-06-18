@@ -13,7 +13,7 @@ export default function NewHeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-50"
       data-oid="autfk40"
     >
       {/* Background Pattern */}
@@ -84,7 +84,7 @@ export default function NewHeroSection() {
             {/* Left Content */}
             <div className="text-center lg:text-left" data-oid="tmfjejl">
               <motion.div
-                className="inline-flex items-center gap-2 bg-slate-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,7 +95,7 @@ export default function NewHeroSection() {
               </motion.div>
 
               <motion.h1
-                className="text-5xl lg:text-7xl font-bold mb-6 text-gray-900 leading-tight"
+                className="text-5xl lg:text-7xl font-bold mb-6 text-neutral-900 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -108,7 +108,7 @@ export default function NewHeroSection() {
               </motion.h1>
 
               <motion.p
-                className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -142,7 +142,7 @@ export default function NewHeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg rounded-xl group"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg rounded-xl group transition-all duration-300"
                   data-oid="hfk0fk_"
                 >
                   <Play

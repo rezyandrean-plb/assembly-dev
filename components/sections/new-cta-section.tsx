@@ -22,7 +22,7 @@ export default function NewCtaSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-blue-600 relative overflow-hidden"
+      className="py-24 bg-primary relative overflow-hidden"
       data-oid="y2-l-_l"
     >
       {/* Background Pattern */}
@@ -143,7 +143,7 @@ export default function NewCtaSection() {
                 data-oid="g_44zq_"
               >
                 <CheckCircle
-                  className="w-6 h-6 text-green-300 flex-shrink-0"
+                  className="w-6 h-6 text-success flex-shrink-0"
                   data-oid=":317_hf"
                 />
 
@@ -165,7 +165,7 @@ export default function NewCtaSection() {
             <Link href="/courses" data-oid="qxo6go6">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-white text-primary hover:bg-neutral-100 px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                 data-oid="0-u6dml"
               >
                 <Zap
@@ -183,7 +183,7 @@ export default function NewCtaSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg rounded-xl transition-all duration-300"
                 data-oid="2stqt_d"
               >
                 Speak to an Advisor
@@ -203,18 +203,11 @@ export default function NewCtaSection() {
               className="flex items-center justify-center gap-2 mb-4"
               data-oid="eaya8a6"
             >
-              <Sparkles
-                className="w-6 h-6 text-yellow-300"
-                data-oid="ix86mxh"
-              />
+              <Sparkles className="w-6 h-6 text-accent" data-oid="ix86mxh" />
 
               <span className="text-xl font-bold" data-oid="9zp-3jb">
                 Special Launch Offer
               </span>
-              <Sparkles
-                className="w-6 h-6 text-yellow-300"
-                data-oid="jrq5sel"
-              />
             </div>
             <p className="text-lg mb-4" data-oid="p--tzq-">
               Get 30% off your first course when you sign up this month!

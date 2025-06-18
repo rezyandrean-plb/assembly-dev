@@ -51,20 +51,12 @@ export default function Navbar() {
           className="flex items-center z-10 group"
           data-oid="14.5us-"
         >
-          <div className="flex items-center gap-2" data-oid="4vs5hp3">
-            <div
-              className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-              data-oid="sqioblt"
-            >
-              <Sparkles className="w-6 h-6 text-white" data-oid="e-1_ea8" />
-            </div>
-            <span
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-              data-oid="e1vp30n"
-            >
-              Assembly.sg
-            </span>
-          </div>
+          <img
+            src="/images/assembly-logo.png"
+            alt="Assembly Logo"
+            style={{ height: "40px", width: "auto" }}
+            data-oid=".05p0oe"
+          />
         </Link>
 
         {/* Desktop Navigation */}

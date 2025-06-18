@@ -30,8 +30,8 @@ export default function NewLearningPathsSection() {
       duration: "4-6 weeks",
       courses: 8,
       level: "Beginner",
-      color: "bg-green-500",
-      bgColor: "bg-green-50",
+      color: "bg-success",
+      bgColor: "bg-success/5",
       features: [
         "Real Estate Investment Basics",
         "Market Analysis Fundamentals",
@@ -51,8 +51,8 @@ export default function NewLearningPathsSection() {
       duration: "6-8 weeks",
       courses: 12,
       level: "Intermediate",
-      color: "bg-blue-500",
-      bgColor: "bg-blue-50",
+      color: "bg-primary",
+      bgColor: "bg-primary/5",
       features: [
         "HDB Regulations & Policies",
         "Upgrading Strategies",
@@ -72,8 +72,8 @@ export default function NewLearningPathsSection() {
       duration: "8-10 weeks",
       courses: 15,
       level: "Advanced",
-      color: "bg-purple-500",
-      bgColor: "bg-purple-50",
+      color: "bg-secondary",
+      bgColor: "bg-secondary/5",
       features: [
         "New Launch Analysis",
         "Condo Market Trends",
@@ -93,8 +93,8 @@ export default function NewLearningPathsSection() {
       duration: "10-12 weeks",
       courses: 18,
       level: "Expert",
-      color: "bg-orange-500",
-      bgColor: "bg-orange-50",
+      color: "bg-accent",
+      bgColor: "bg-accent/5",
       features: [
         "Landed Property Analysis",
         "High-Value Negotiations",
@@ -118,13 +118,13 @@ export default function NewLearningPathsSection() {
           data-oid="x:2:la."
         >
           <h2
-            className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
+            className="text-4xl lg:text-5xl font-bold mb-6 text-neutral-900"
             data-oid="2ft.x-t"
           >
             Choose Your Learning Path
           </h2>
           <p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-neutral-600 max-w-3xl mx-auto"
             data-oid="xyg6wvl"
           >
             Structured learning journeys designed to take you from beginner to
@@ -137,7 +137,7 @@ export default function NewLearningPathsSection() {
           {learningPaths.map((path, index) => (
             <motion.div
               key={path.id}
-              className={`group relative ${path.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100`}
+              className={`group relative ${path.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-neutral-200`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -157,7 +157,7 @@ export default function NewLearningPathsSection() {
                 </div>
                 <Badge
                   variant="secondary"
-                  className="bg-white/80 text-gray-700"
+                  className="bg-white/80 text-neutral-700"
                   data-oid="1z6wt2d"
                 >
                   {path.level}
@@ -165,19 +165,19 @@ export default function NewLearningPathsSection() {
               </div>
 
               <h3
-                className="text-2xl font-bold text-gray-900 mb-2"
+                className="text-2xl font-bold text-neutral-900 mb-2"
                 data-oid="spvxeyq"
               >
                 {path.title}
               </h3>
               <p
-                className="text-lg font-medium text-gray-700 mb-4"
+                className="text-lg font-medium text-neutral-700 mb-4"
                 data-oid="5-50qa6"
               >
                 {path.subtitle}
               </p>
               <p
-                className="text-gray-600 mb-6 leading-relaxed"
+                className="text-neutral-600 mb-6 leading-relaxed"
                 data-oid="697uzq8"
               >
                 {path.description}
@@ -185,7 +185,7 @@ export default function NewLearningPathsSection() {
 
               {/* Meta Info */}
               <div
-                className="flex items-center gap-6 mb-6 text-sm text-gray-600"
+                className="flex items-center gap-6 mb-6 text-sm text-neutral-600"
                 data-oid="-tb-c61"
               >
                 <div className="flex items-center gap-2" data-oid="mivcrqq">
@@ -207,11 +207,11 @@ export default function NewLearningPathsSection() {
                     data-oid="u93-k._"
                   >
                     <CheckCircle
-                      className="w-5 h-5 text-green-500 flex-shrink-0"
+                      className="w-5 h-5 text-success flex-shrink-0"
                       data-oid="7e0g566"
                     />
 
-                    <span className="text-gray-700" data-oid="f:kl48i">
+                    <span className="text-neutral-700" data-oid="f:kl48i">
                       {feature}
                     </span>
                   </div>
@@ -238,7 +238,7 @@ export default function NewLearningPathsSection() {
 
         {/* Bottom Section */}
         <motion.div
-          className="bg-blue-600 rounded-3xl p-12 text-center text-white"
+          className="bg-primary rounded-3xl p-12 text-center text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -258,7 +258,7 @@ export default function NewLearningPathsSection() {
             <Button
               size="lg"
               variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+              className="bg-white text-primary hover:bg-neutral-100 px-8 py-3"
               data-oid="2aqvtta"
             >
               Take Assessment
@@ -266,7 +266,7 @@ export default function NewLearningPathsSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3"
               data-oid=".mb78qw"
             >
               Speak to Advisor
