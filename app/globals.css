@@ -27,6 +27,15 @@
   --discreetPalette-discreetPalette1: #858fbb;
   --discreetPalette-discreetPalette2: #f6f8ff;
   --discreetPalette-discreetPalette3: #fff7d6;
+  --spotPalette: #123b79;
+  --spotPalette-spotPalette1: #516aae;
+  --spotPalette-spotPalette2: #e8efff;
+  --spotPalette-spotPalette3: #d3a518;
+  --classyPalette: #123b79;
+  --classyPalette-classyPalette1: #a7aabc;
+  --classyPalette-classyPalette2: #737687;
+  --classyPalette-classyPalette3: #731b2e;
+  --classyPalette-classyPalette4: #ac4f5c;
 }
 
 body {

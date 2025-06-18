@@ -24,42 +24,42 @@ export default function NewFeaturesSection() {
       title: "Expert-Led Courses",
       description:
         "Learn from Singapore's top real estate professionals with proven track records.",
-      color: "#123B79",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: <Users className="w-8 h-8" data-oid="0jsx1-k" />,
       title: "Community Learning",
       description:
         "Join a vibrant community of investors sharing insights and experiences.",
-      color: "#7CB6B2",
+      color: "from-purple-500 to-pink-500",
     },
     {
       icon: <TrendingUp className="w-8 h-8" data-oid="l4thw.m" />,
       title: "Market Analysis",
       description:
         "Get real-time market insights and trends to make informed investment decisions.",
-      color: "#123B79",
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: <Shield className="w-8 h-8" data-oid="b6yr77l" />,
       title: "Risk Management",
       description:
         "Learn proven strategies to minimize risks and maximize returns on your investments.",
-      color: "#A7AABC",
+      color: "from-orange-500 to-red-500",
     },
     {
       icon: <Clock className="w-8 h-8" data-oid="xspue.:" />,
       title: "Flexible Learning",
       description:
         "Study at your own pace with lifetime access to all course materials.",
-      color: "#7CB6B2",
+      color: "from-indigo-500 to-purple-500",
     },
     {
       icon: <Award className="w-8 h-8" data-oid="g.e28l1" />,
       title: "Certification",
       description:
         "Earn recognized certificates to validate your real estate investment expertise.",
-      color: "#123B79",
+      color: "from-yellow-500 to-orange-500",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function NewFeaturesSection() {
           data-oid="zeb3esq"
         >
           <h2
-            className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
+            className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent"
             data-oid="w36qhz_"
           >
             Why Choose Assembly.sg?
@@ -126,8 +126,7 @@ export default function NewFeaturesSection() {
               data-oid="o6fecy-"
             >
               <div
-                className="inline-flex p-3 rounded-xl text-white mb-6 group-hover:scale-110 transition-transform duration-300"
-                style={{ backgroundColor: feature.color }}
+                className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
                 data-oid="0q2bbhq"
               >
                 {feature.icon}
@@ -147,7 +146,7 @@ export default function NewFeaturesSection() {
 
         {/* Stats Section */}
         <motion.div
-          className="bg-[#123B79]/5 rounded-3xl p-12"
+          className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -183,7 +182,7 @@ export default function NewFeaturesSection() {
                   className="inline-flex p-4 bg-white rounded-2xl shadow-lg mb-4"
                   data-oid="drko:1e"
                 >
-                  <div className="text-[#123B79]" data-oid="7ezk2c5">
+                  <div className="text-blue-600" data-oid="7ezk2c5">
                     {stat.icon}
                   </div>
                 </div>

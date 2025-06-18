@@ -22,10 +22,10 @@ export default function CheckoutLayout({
   }
 
   return (
-    <CheckoutProvider data-oid="lodkt08">
-      <div className="min-h-screen bg-gray-50" data-oid="y22etmg">
-        <div className="container mx-auto px-4" data-oid="s__fj00">
-          <Stepper currentStep={currentStep} data-oid="t8xcf6s" />
+    <CheckoutProvider data-oid="du.ea08">
+      <div className="min-h-screen bg-gray-50" data-oid="6z0lc_v">
+        <div className="container mx-auto px-4" data-oid="3ahugy7">
+          <Stepper currentStep={currentStep} data-oid="1h9sx42" />
           {children}
         </div>
       </div>

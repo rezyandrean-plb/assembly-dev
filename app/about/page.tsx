@@ -10,22 +10,22 @@ const HeroSection = () => (
   <section
     id="hero-section"
     className="section-container mb-24"
-    data-oid="9yld6qp"
+    data-oid="arjvm-j"
   >
     <div
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid=":sdq0ro"
+      data-oid="8qr:j:8"
     >
-      <div data-oid="zo:l8mj">
+      <div data-oid="e7ghseb">
         <h2
           className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="qidl22x"
+          data-oid="v0xuj-."
         >
           Creating Creators, Empowering Realtors
         </h2>
         <p
           className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="i-i8xqw"
+          data-oid="w8wo.tp"
         >
           In a world where information is readily available at our fingertips,
           success is defined by the ability to innovate, adapt, and connect.
@@ -38,7 +38,7 @@ const HeroSection = () => (
       </div>
       <div
         className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="nue6b5v"
+        data-oid="7fke2ga"
       >
         <img
           src="/images/about-us-hero.jpg"
@@ -51,7 +51,7 @@ const HeroSection = () => (
             target.src =
               "/placeholder.svg?height=384&width=576&text=Real+Estate+Professionals";
           }}
-          data-oid="x502awf"
+          data-oid="jov79a0"
         />
       </div>
     </div>
@@ -62,15 +62,15 @@ const AimSection = () => (
   <section
     id="aim-section"
     className="section-container mb-24"
-    data-oid="qgcv0ck"
+    data-oid="hj7kol8"
   >
     <div
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="so.a3x1"
+      data-oid="b-mdj7n"
     >
       <div
         className="order-2 lg:order-1 section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="0cq_9mb"
+        data-oid="o.h0fm5"
       >
         <img
           src="/images/about-us-aim.jpg"
@@ -83,19 +83,19 @@ const AimSection = () => (
             target.src =
               "/placeholder.svg?height=384&width=576&text=Community+Networking";
           }}
-          data-oid="gji01hv"
+          data-oid="8-5f59p"
         />
       </div>
-      <div className="order-1 lg:order-2" data-oid="02clkse">
+      <div className="order-1 lg:order-2" data-oid="ta8jnni">
         <h2
           className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="wmtzc5x"
+          data-oid="ryef57:"
         >
           Our Aim
         </h2>
         <p
           className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="n51o:tf"
+          data-oid="0wx41-k"
         >
           More than just education, Assembly is dedicated to building a vibrant
           community of like-minded individuals. We provide a platform where
@@ -114,32 +114,32 @@ const StructureSection = () => (
   <section
     id="structure-section"
     className="section-container mb-24"
-    data-oid="t-2h.hh"
+    data-oid="2rvt72k"
   >
     <div
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="u.z0vey"
+      data-oid="::4tx.c"
     >
-      <div data-oid="dh:5ve9">
+      <div data-oid="vy.df_e">
         <h2
           className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="ulrdz3u"
+          data-oid=".-69uxs"
         >
           Our Structure
         </h2>
         <p
           className="section-paragraph text-lg text-gray-700 leading-relaxed mb-6"
-          data-oid="m65v2:e"
+          data-oid="c_iv47e"
         >
           Assembly is structured to address the multifaceted needs of the modern
           professional through specialized schools designed for forward-thinking
           development:
         </p>
-        <ul className="space-y-4 text-lg text-gray-700" data-oid="-vyw9.1">
-          <li className="section-list-item flex items-start" data-oid="1hwh7-p">
+        <ul className="space-y-4 text-lg text-gray-700" data-oid="6govp4r">
+          <li className="section-list-item flex items-start" data-oid="ox9b.69">
             <span
               className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="gdtc0dz"
+              data-oid="nkwu4b-"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,27 +147,27 @@ const StructureSection = () => (
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                data-oid="niwxmrv"
+                data-oid="kl1j-sw"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M5 13l4 4L19 7"
-                  data-oid="gvtsbs5"
+                  data-oid="7rv65fo"
                 />
               </svg>
             </span>
-            <span data-oid="209h3.2">
-              <strong data-oid="-dv3tyt">School of Real Estate</strong>{" "}
+            <span data-oid="4oqc_wr">
+              <strong data-oid="octtous">School of Real Estate</strong>{" "}
               (Launching at a Later Date): Focused on innovative approaches and
               advanced strategies for property professionals.
             </span>
           </li>
-          <li className="section-list-item flex items-start" data-oid="zc8vo-e">
+          <li className="section-list-item flex items-start" data-oid="qw2s2-f">
             <span
               className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="-6s5xqn"
+              data-oid="n2n53t."
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -175,27 +175,27 @@ const StructureSection = () => (
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                data-oid="3kdphwh"
+                data-oid="3tjqmqp"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M5 13l4 4L19 7"
-                  data-oid="8fkal67"
+                  data-oid="ot5ef7m"
                 />
               </svg>
             </span>
-            <span data-oid="caf3481">
-              <strong data-oid="m0q29cg">School of Creative Media</strong>{" "}
+            <span data-oid="4v-w0d_">
+              <strong data-oid="0erf_8w">School of Creative Media</strong>{" "}
               (Launching at a Later Date): Cultivating skills in content
               creation, digital storytelling, and brand building.
             </span>
           </li>
-          <li className="section-list-item flex items-start" data-oid="a3qfqca">
+          <li className="section-list-item flex items-start" data-oid="5:7h.i9">
             <span
               className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="w4ega2."
+              data-oid="jae4w6h"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -203,19 +203,19 @@ const StructureSection = () => (
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                data-oid="-unzpxu"
+                data-oid="ae80r0z"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M5 13l4 4L19 7"
-                  data-oid=".38fr0:"
+                  data-oid="-x_x3m9"
                 />
               </svg>
             </span>
-            <span data-oid="m0hagtr">
-              <strong data-oid=":d71l1z">School of Entrepreneurship</strong>{" "}
+            <span data-oid="xkh2c6g">
+              <strong data-oid="i6g2oju">School of Entrepreneurship</strong>{" "}
               (Launching at a Later Date): Empowering individuals with the
               knowledge and tools to build and scale successful ventures.
             </span>
@@ -224,7 +224,7 @@ const StructureSection = () => (
       </div>
       <div
         className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="0jquyy3"
+        data-oid="v1j93xg"
       >
         <img
           src="/images/structure-image.jpg"
@@ -237,7 +237,7 @@ const StructureSection = () => (
             target.src =
               "/placeholder.svg?height=384&width=576&text=Educational+Structure";
           }}
-          data-oid="ci3s_9x"
+          data-oid="b4iyrh_"
         />
       </div>
     </div>
@@ -248,15 +248,15 @@ const PhilosophySection = () => (
   <section
     id="philosophy-section"
     className="section-container mb-24"
-    data-oid="n5llfp3"
+    data-oid="94.n4cc"
   >
     <div
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="xcufkqa"
+      data-oid="4366v2-"
     >
       <div
         className="order-2 lg:order-1 section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="3ij7ra7"
+        data-oid="9p6oxuj"
       >
         <img
           src="/images/philosophy-image.jpg"
@@ -269,19 +269,19 @@ const PhilosophySection = () => (
             target.src =
               "/placeholder.svg?height=384&width=576&text=Core+Values";
           }}
-          data-oid="aab07n-"
+          data-oid="elh0-ym"
         />
       </div>
-      <div className="order-1 lg:order-2" data-oid="o8.b3_j">
+      <div className="order-1 lg:order-2" data-oid="gqnxxti">
         <h2
           className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="36gbi:k"
+          data-oid="g1dmoki"
         >
           Our Philosophy
         </h2>
         <p
           className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="oy5z40l"
+          data-oid="2mgzfso"
         >
           At the heart of Assembly are core values that guide our community and
           curriculum: Innovation, Collaboration, Empowerment, and
@@ -299,22 +299,22 @@ const ChooseSection = () => (
   <section
     id="choose-section"
     className="section-container mb-24"
-    data-oid="7vgm3_o"
+    data-oid="x185d7m"
   >
     <div
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="njn6aoj"
+      data-oid="fjv5vx6"
     >
-      <div data-oid=":eioklj">
+      <div data-oid="mu5s99d">
         <h2
           className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="br6pweb"
+          data-oid="_axghia"
         >
           Why Choose Assembly?
         </h2>
         <p
           className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="iwmej5g"
+          data-oid="306z6w2"
         >
           Assembly offers a unique synthesis of real estate expertise and
           creative/entrepreneurial skills. We provide not just education, but a
@@ -325,7 +325,7 @@ const ChooseSection = () => (
       </div>
       <div
         className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="v_-wnf9"
+        data-oid="eredpqz"
       >
         <img
           src="/images/choose-image.jpg"
@@ -338,7 +338,7 @@ const ChooseSection = () => (
             target.src =
               "/placeholder.svg?height=384&width=576&text=Professionals+Celebrating";
           }}
-          data-oid="fptfxx-"
+          data-oid=":zg1rr1"
         />
       </div>
     </div>
@@ -359,10 +359,10 @@ const ScrollToTopButton = ({ visible }: { visible: boolean }) => {
       onClick={scrollToTop}
       aria-label="Scroll to top"
       className={`scroll-to-top-button ${visible ? "visible" : ""}`}
-      data-oid="_jtvyxu"
+      data-oid="d.p86ba"
     >
-      <ChevronUp size={24} data-oid="l0f4u.0" />
-      <span className="sr-only" data-oid="knw4ug5">
+      <ChevronUp size={24} data-oid="lqgrjic" />
+      <span className="sr-only" data-oid="37wpcwb">
         Scroll to top
       </span>
     </button>
@@ -659,19 +659,19 @@ export default function AboutPage() {
 
   return (
     <>
-      <Navbar data-oid="dzjyrsi" />
-      <div ref={containerRef} className="bg-white pt-24" data-oid="j9e9os2">
+      <Navbar data-oid="pm1__ak" />
+      <div ref={containerRef} className="bg-white pt-24" data-oid="9ouy_4:">
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-          data-oid="jelfzn."
+          data-oid="wvtc:1e"
         >
-          <HeroSection data-oid="pwlontr" />
-          <AimSection data-oid="nno4yei" />
-          <StructureSection data-oid="xxq16e-" />
-          <PhilosophySection data-oid="zsnr:b7" />
-          <ChooseSection data-oid="1257mmb" />
+          <HeroSection data-oid="erk4fdx" />
+          <AimSection data-oid="cf:csl7" />
+          <StructureSection data-oid="x8_llos" />
+          <PhilosophySection data-oid="8ydyxlt" />
+          <ChooseSection data-oid="svdz7s4" />
         </div>
-        <ScrollToTopButton visible={showScrollToTop} data-oid="1z-8lh-" />
+        <ScrollToTopButton visible={showScrollToTop} data-oid="91gte.v" />
       </div>
     </>
   );

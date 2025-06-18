@@ -35,14 +35,14 @@ export default function PaymentPage() {
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start"
-      data-oid="6eqiyap"
+      data-oid="1mgkhzi"
     >
-      <div className="space-y-4" data-oid="o9ssko_">
-        <h2 className="text-xl font-semibold" data-oid="dgh5qso">
+      <div className="space-y-4" data-oid="e.2ytws">
+        <h2 className="text-xl font-semibold" data-oid="z51dzr_">
           Payment Method
         </h2>
 
-        <div className="border rounded-lg" data-oid="2gpx:_z">
+        <div className="border rounded-lg" data-oid="-e1ma0.">
           {/* Credit/Debit Card Section */}
           <div
             className="flex justify-between items-center p-4 cursor-pointer"
@@ -51,9 +51,9 @@ export default function PaymentPage() {
                 selectedPayment === "Credit / Debit" ? "" : "Credit / Debit",
               )
             }
-            data-oid="_dd9781"
+            data-oid="u.j.z7n"
           >
-            <div className="flex items-center" data-oid="p5bp.qc">
+            <div className="flex items-center" data-oid="dv.p0da">
               <input
                 type="radio"
                 name="paymentMethod"
@@ -61,20 +61,20 @@ export default function PaymentPage() {
                 checked={selectedPayment === "Credit / Debit"}
                 onChange={() => setSelectedPayment("Credit / Debit")}
                 className="radio radio-primary"
-                data-oid="n-1yi5o"
+                data-oid="zbbvluj"
               />
 
-              <span className="font-semibold ml-4" data-oid="xfce3a6">
+              <span className="font-semibold ml-4" data-oid="zpbupf3">
                 Debit or Credit Card
               </span>
             </div>
-            <div className="flex items-center space-x-1" data-oid="qgug71c">
+            <div className="flex items-center space-x-1" data-oid="n5qf5.:">
               <Image
                 src="/images/payment/visa.png"
                 alt="Visa"
                 width={30}
                 height={20}
-                data-oid="m.rbg95"
+                data-oid="ug6hwwj"
               />
 
               <Image
@@ -82,7 +82,7 @@ export default function PaymentPage() {
                 alt="Mastercard"
                 width={30}
                 height={20}
-                data-oid="38_gb9r"
+                data-oid="1-wlsls"
               />
 
               <Image
@@ -90,61 +90,61 @@ export default function PaymentPage() {
                 alt="Amex"
                 width={30}
                 height={20}
-                data-oid="pg4679p"
+                data-oid="saa.xc4"
               />
 
               <ChevronDown
                 className={`transition-transform ${selectedPayment === "Credit / Debit" ? "rotate-180" : ""}`}
-                data-oid="u5t-o1z"
+                data-oid="gh5g8dh"
               />
             </div>
           </div>
 
           {selectedPayment === "Credit / Debit" && (
-            <div className="p-4 border-t" data-oid="l1y55lt">
-              <div className="space-y-4" data-oid="r0j9wig">
-                <div className="form-control" data-oid="tnts2j0">
-                  <label className="label" data-oid="l4m0dza">
-                    <span className="label-text" data-oid="-p9hnh4">
+            <div className="p-4 border-t" data-oid="ihdne6c">
+              <div className="space-y-4" data-oid="shwa52y">
+                <div className="form-control" data-oid="honhijl">
+                  <label className="label" data-oid="ytfc4jm">
+                    <span className="label-text" data-oid="-.fdlx0">
                       Card Number *
                     </span>
                   </label>
                   <input
                     type="text"
                     className="input input-bordered w-full"
-                    data-oid="zmifye_"
+                    data-oid="o23ts6u"
                   />
                 </div>
-                <div className="form-control" data-oid="g781cb4">
-                  <label className="label" data-oid="lli7mqh">
-                    <span className="label-text" data-oid="s-d_0ph">
+                <div className="form-control" data-oid="b61p-4z">
+                  <label className="label" data-oid="72qizc3">
+                    <span className="label-text" data-oid="f4phrut">
                       Card Name *
                     </span>
                   </label>
                   <input
                     type="text"
                     className="input input-bordered w-full"
-                    data-oid="5ae.i:3"
+                    data-oid="x8_5udl"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4" data-oid="1x69bnr">
-                  <div className="form-control" data-oid="w0zy7s2">
-                    <label className="label" data-oid="3-7sb18">
-                      <span className="label-text" data-oid="_u71_sp">
+                <div className="grid grid-cols-2 gap-4" data-oid="h.mav2i">
+                  <div className="form-control" data-oid="r3aylns">
+                    <label className="label" data-oid="fakpp4q">
+                      <span className="label-text" data-oid="dfc:ao1">
                         Expiry Date *
                       </span>
                     </label>
-                    <div className="grid grid-cols-2 gap-2" data-oid="34na7ew">
+                    <div className="grid grid-cols-2 gap-2" data-oid="kb0o:i:">
                       <select
                         className="select select-bordered"
-                        data-oid="5a8j2yy"
+                        data-oid="wpmw:oi"
                       >
-                        <option disabled selected data-oid="4fxtvug">
+                        <option disabled selected data-oid="r9a8qf6">
                           MM
                         </option>
                         {Array.from({ length: 12 }, (_, i) => i + 1).map(
                           (m) => (
-                            <option key={m} data-oid="0-rb1y_">
+                            <option key={m} data-oid="9rc1b3h">
                               {m.toString().padStart(2, "0")}
                             </option>
                           ),
@@ -152,25 +152,25 @@ export default function PaymentPage() {
                       </select>
                       <select
                         className="select select-bordered"
-                        data-oid="3-uadnh"
+                        data-oid="uco4rbw"
                       >
-                        <option disabled selected data-oid="29_2.:n">
+                        <option disabled selected data-oid="v45_qt3">
                           YYYY
                         </option>
                         {Array.from(
                           { length: 10 },
                           (_, i) => new Date().getFullYear() + i,
                         ).map((y) => (
-                          <option key={y} data-oid="3r_nece">
+                          <option key={y} data-oid="qpejomj">
                             {y}
                           </option>
                         ))}
                       </select>
                     </div>
                   </div>
-                  <div className="form-control" data-oid="jmbsu.d">
-                    <label className="label" data-oid="f9gq5rl">
-                      <span className="label-text" data-oid="ty5mf0-">
+                  <div className="form-control" data-oid="f77nyr_">
+                    <label className="label" data-oid="cn2gdqz">
+                      <span className="label-text" data-oid="se7e1hb">
                         CVC *
                       </span>
                     </label>
@@ -178,7 +178,7 @@ export default function PaymentPage() {
                       type="text"
                       placeholder=""
                       className="input input-bordered w-full"
-                      data-oid="na1-.46"
+                      data-oid="8uhfkn5"
                     />
                   </div>
                 </div>
@@ -194,9 +194,9 @@ export default function PaymentPage() {
             <div
               key={method.name}
               className="border rounded-lg p-4 flex justify-between items-center"
-              data-oid="ncc8ai:"
+              data-oid="psn41h:"
             >
-              <div className="flex items-center" data-oid="pr6yo.f">
+              <div className="flex items-center" data-oid="j71x28n">
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -204,14 +204,14 @@ export default function PaymentPage() {
                   checked={selectedPayment === method.name}
                   onChange={() => setSelectedPayment(method.name)}
                   className="radio radio-primary"
-                  data-oid="zk:u1ue"
+                  data-oid="tu073y6"
                 />
 
-                <span className="font-semibold ml-4" data-oid="6scekg4">
+                <span className="font-semibold ml-4" data-oid="icco-.q">
                   {method.name}
                 </span>
               </div>
-              <div className="flex space-x-2" data-oid="fw9:zwz">
+              <div className="flex space-x-2" data-oid="veq29z5">
                 {method.logos.map((logo) => (
                   <Image
                     src={logo}
@@ -220,7 +220,7 @@ export default function PaymentPage() {
                     height={25}
                     key={logo}
                     className="object-contain"
-                    data-oid="gwu0p-1"
+                    data-oid="m.kv0_x"
                   />
                 ))}
               </div>
@@ -228,33 +228,33 @@ export default function PaymentPage() {
           ))}
       </div>
 
-      <div className="space-y-6" data-oid=".c9-ko_">
-        <div className="bg-gray-50 p-6 rounded-lg" data-oid="pn6_bke">
+      <div className="space-y-6" data-oid=":gttc3p">
+        <div className="bg-gray-50 p-6 rounded-lg" data-oid="gj.wfrs">
           <div
             className="flex justify-between items-center mb-4"
-            data-oid="9m:9vju"
+            data-oid="-p2_p67"
           >
-            <h2 className="text-lg font-semibold" data-oid="zf-7sge">
+            <h2 className="text-lg font-semibold" data-oid="jdd41gb">
               Review Address
             </h2>
             <button
               onClick={() => router.push("/checkout/address")}
               className="text-sm text-primary hover:underline"
-              data-oid="6ovz23d"
+              data-oid="ikz2oex"
             >
               Edit
             </button>
           </div>
-          <div className="text-sm space-y-1" data-oid="4bjjkco">
-            <h4 className="font-bold" data-oid="g38nssf">
+          <div className="text-sm space-y-1" data-oid="ha:s152">
+            <h4 className="font-bold" data-oid="i6c6.rp">
               Delivery & Billing Address
             </h4>
-            <p className="font-bold" data-oid="4yblh3q">
+            <p className="font-bold" data-oid="5humvls">
               {finalBillingAddress.firstName} {finalBillingAddress.lastName}
             </p>
-            <p data-oid=":u47h0u">{finalBillingAddress.email}</p>
-            <p data-oid="d_qhqf_">{finalBillingAddress.mobile}</p>
-            <p data-oid="2d:uhdx">
+            <p data-oid="pj-yp9t">{finalBillingAddress.email}</p>
+            <p data-oid="zgjo0nk">{finalBillingAddress.mobile}</p>
+            <p data-oid="uuzrwxg">
               {finalBillingAddress.streetAddress}, {finalBillingAddress.suburb},{" "}
               {finalBillingAddress.state} {finalBillingAddress.postcode},{" "}
               {finalBillingAddress.country}
@@ -262,31 +262,31 @@ export default function PaymentPage() {
           </div>
         </div>
 
-        <OrderSummary data-oid="ij79yul" />
+        <OrderSummary data-oid="lnfxsc:" />
 
         <button
           onClick={() => alert("Order Placed!")}
           className="btn btn-primary w-full btn-lg mt-4"
-          data-oid="vwr4pln"
+          data-oid="qj7s.c8"
         >
-          <Lock size={16} className="mr-2" data-oid="h0vq31f" />
+          <Lock size={16} className="mr-2" data-oid="ybn8f0-" />
           Place Order Securely
         </button>
         <p
           className="text-xs text-gray-500 mt-2 text-center"
-          data-oid="6qu_sbu"
+          data-oid="b-:w5bv"
         >
           By clicking Place Order Securely you confirm that you have read,
           understood and accept our{" "}
-          <a href="#" className="underline" data-oid="zkpjgoq">
+          <a href="#" className="underline" data-oid="lp4kuix">
             Terms and Conditions
           </a>
           ,{" "}
-          <a href="#" className="underline" data-oid="_ovu.dc">
+          <a href="#" className="underline" data-oid="y-r.zw4">
             Returns Policy
           </a>{" "}
           and{" "}
-          <a href="#" className="underline" data-oid="yia3xzh">
+          <a href="#" className="underline" data-oid="vhhb8vc">
             Privacy Policy
           </a>
           .

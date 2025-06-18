@@ -55,6 +55,19 @@ const config: Config = {
           discreetPalette2: "var(--discreetPalette-discreetPalette2)",
           discreetPalette3: "var(--discreetPalette-discreetPalette3)",
         },
+        spotPalette: {
+          DEFAULT: "var(--spotPalette)",
+          spotPalette1: "var(--spotPalette-spotPalette1)",
+          spotPalette2: "var(--spotPalette-spotPalette2)",
+          spotPalette3: "var(--spotPalette-spotPalette3)",
+        },
+        classyPalette: {
+          DEFAULT: "var(--classyPalette)",
+          classyPalette1: "var(--classyPalette-classyPalette1)",
+          classyPalette2: "var(--classyPalette-classyPalette2)",
+          classyPalette3: "var(--classyPalette-classyPalette3)",
+          classyPalette4: "var(--classyPalette-classyPalette4)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

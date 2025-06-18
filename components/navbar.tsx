@@ -53,13 +53,13 @@ export default function Navbar() {
         >
           <div className="flex items-center gap-2" data-oid="4vs5hp3">
             <div
-              className="w-10 h-10 bg-[#123B79] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
               data-oid="sqioblt"
             >
               <Sparkles className="w-6 h-6 text-white" data-oid="e-1_ea8" />
             </div>
             <span
-              className="text-2xl font-bold text-[#123B79]"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
               data-oid="e1vp30n"
             >
               Assembly.sg
@@ -110,13 +110,13 @@ export default function Navbar() {
                 data-oid="ykg.spm"
               >
                 <ShoppingCart
-                  className="h-6 w-6 text-gray-700 group-hover:text-[#123B79] transition-colors"
+                  className="h-6 w-6 text-gray-700 group-hover:text-blue-600 transition-colors"
                   data-oid="is-z1ec"
                 />
 
                 {cart.length > 0 && (
                   <span
-                    className="absolute -top-1 -right-1 bg-[#123B79] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
+                    className="absolute -top-1 -right-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
                     data-oid="htmmcte"
                   >
                     {cart.length}
@@ -152,7 +152,7 @@ export default function Navbar() {
             >
               <Link href="/signup" data-oid="ycsy2g0">
                 <Button
-                  className="bg-[#123B79] hover:bg-[#0F2F66] text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   data-oid="d_ff7ph"
                 >
                   Get Started
@@ -237,7 +237,7 @@ export default function Navbar() {
                   >
                     <Link href="/signup" data-oid="e2.sr.n">
                       <Button
-                        className="w-full bg-[#123B79] hover:bg-[#0F2F66] text-white"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                         onClick={() => setIsOpen(false)}
                         data-oid="t99e861"
                       >
