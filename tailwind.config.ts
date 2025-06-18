@@ -25,6 +25,8 @@ const config: Config = {
         },
         accent: {
           DEFAULT: "var(--accent)",
+          vibrant: "var(--accent-vibrant)",
+          "vibrant-dark": "var(--accent-vibrant-dark)",
         },
         success: {
           DEFAULT: "var(--success)",
