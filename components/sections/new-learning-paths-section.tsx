@@ -30,8 +30,8 @@ export default function NewLearningPathsSection() {
       duration: "4-6 weeks",
       courses: 8,
       level: "Beginner",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-50 to-emerald-50",
+      color: "bg-green-500",
+      bgColor: "bg-green-50",
       features: [
         "Real Estate Investment Basics",
         "Market Analysis Fundamentals",
@@ -51,8 +51,8 @@ export default function NewLearningPathsSection() {
       duration: "6-8 weeks",
       courses: 12,
       level: "Intermediate",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50",
+      color: "bg-blue-500",
+      bgColor: "bg-blue-50",
       features: [
         "HDB Regulations & Policies",
         "Upgrading Strategies",
@@ -72,8 +72,8 @@ export default function NewLearningPathsSection() {
       duration: "8-10 weeks",
       courses: 15,
       level: "Advanced",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-50 to-pink-50",
+      color: "bg-purple-500",
+      bgColor: "bg-purple-50",
       features: [
         "New Launch Analysis",
         "Condo Market Trends",
@@ -93,8 +93,8 @@ export default function NewLearningPathsSection() {
       duration: "10-12 weeks",
       courses: 18,
       level: "Expert",
-      color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-50 to-red-50",
+      color: "bg-orange-500",
+      bgColor: "bg-orange-50",
       features: [
         "Landed Property Analysis",
         "High-Value Negotiations",
@@ -118,7 +118,7 @@ export default function NewLearningPathsSection() {
           data-oid="x:2:la."
         >
           <h2
-            className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent"
+            className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
             data-oid="2ft.x-t"
           >
             Choose Your Learning Path
@@ -137,7 +137,7 @@ export default function NewLearningPathsSection() {
           {learningPaths.map((path, index) => (
             <motion.div
               key={path.id}
-              className={`group relative bg-gradient-to-br ${path.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100`}
+              className={`group relative ${path.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -150,7 +150,7 @@ export default function NewLearningPathsSection() {
                 data-oid=".nzwx.d"
               >
                 <div
-                  className={`p-4 rounded-2xl bg-gradient-to-r ${path.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  className={`p-4 rounded-2xl ${path.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   data-oid="8q-.j0t"
                 >
                   {path.icon}
@@ -221,7 +221,7 @@ export default function NewLearningPathsSection() {
               {/* CTA */}
               <Link href={`/learning-paths/${path.slug}`} data-oid="2g7vczt">
                 <Button
-                  className={`w-full bg-gradient-to-r ${path.color} hover:shadow-lg text-white group-hover:scale-105 transition-all duration-300`}
+                  className={`w-full ${path.color} hover:shadow-lg text-white group-hover:scale-105 transition-all duration-300`}
                   size="lg"
                   data-oid="gi8xl3u"
                 >
@@ -238,7 +238,7 @@ export default function NewLearningPathsSection() {
 
         {/* Bottom Section */}
         <motion.div
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white"
+          className="bg-blue-600 rounded-3xl p-12 text-center text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}

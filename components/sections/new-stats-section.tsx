@@ -72,7 +72,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Active Students",
       description: "Learning and growing with us",
-      color: "from-blue-500 to-cyan-500",
+      color: "bg-blue-500",
     },
     {
       icon: <BookOpen className="w-8 h-8" data-oid="z:a1mf-" />,
@@ -80,7 +80,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Expert Courses",
       description: "Comprehensive learning materials",
-      color: "from-green-500 to-emerald-500",
+      color: "bg-green-500",
     },
     {
       icon: <TrendingUp className="w-8 h-8" data-oid="a4b2x1l" />,
@@ -88,7 +88,7 @@ export default function NewStatsSection() {
       suffix: "%",
       label: "Success Rate",
       description: "Students achieving their goals",
-      color: "from-purple-500 to-pink-500",
+      color: "bg-purple-500",
     },
     {
       icon: <DollarSign className="w-8 h-8" data-oid="_wo:gc3" />,
@@ -96,7 +96,7 @@ export default function NewStatsSection() {
       suffix: "B+",
       label: "Portfolio Value",
       description: "Combined student investments",
-      color: "from-orange-500 to-red-500",
+      color: "bg-orange-500",
     },
     {
       icon: <Globe className="w-8 h-8" data-oid="k55ioa0" />,
@@ -104,7 +104,7 @@ export default function NewStatsSection() {
       suffix: "+",
       label: "Countries",
       description: "Global student community",
-      color: "from-indigo-500 to-purple-500",
+      color: "bg-indigo-500",
     },
     {
       icon: <Award className="w-8 h-8" data-oid="8f.kr9t" />,
@@ -112,14 +112,14 @@ export default function NewStatsSection() {
       suffix: "/5",
       label: "Satisfaction",
       description: "Average student rating",
-      color: "from-yellow-500 to-orange-500",
+      color: "bg-yellow-500",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden"
+      className="py-24 bg-gray-900 text-white relative overflow-hidden"
       data-oid="qf-xudn"
     >
       {/* Background Pattern */}
@@ -139,7 +139,7 @@ export default function NewStatsSection() {
         data-oid="ak-rfy5"
       >
         <motion.div
-          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"
           animate={{
             y: [0, -30, 0],
             x: [0, 20, 0],
@@ -153,7 +153,7 @@ export default function NewStatsSection() {
         />
 
         <motion.div
-          className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-pink-400/20 to-red-500/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl"
           animate={{
             y: [0, 40, 0],
             x: [0, -25, 0],
@@ -177,7 +177,7 @@ export default function NewStatsSection() {
           data-oid=":3c-g52"
         >
           <h2
-            className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent"
+            className="text-4xl lg:text-5xl font-bold mb-6 text-white"
             data-oid="zuyk6-8"
           >
             Our Impact in Numbers
@@ -207,7 +207,7 @@ export default function NewStatsSection() {
               data-oid="-ij:gsx"
             >
               <div
-                className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`inline-flex p-4 rounded-2xl ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
                 data-oid="hl0f2c."
               >
                 <div className="text-white" data-oid="88enva6">
@@ -241,7 +241,7 @@ export default function NewStatsSection() {
 
               {/* Hover Effect */}
               <div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 data-oid="3r99_-w"
               />
             </motion.div>
@@ -268,7 +268,7 @@ export default function NewStatsSection() {
               our growing community.
             </p>
             <motion.button
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               data-oid="ha9c1ux"

@@ -22,7 +22,7 @@ export default function NewCtaSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden"
+      className="py-24 bg-blue-600 relative overflow-hidden"
       data-oid="y2-l-_l"
     >
       {/* Background Pattern */}
@@ -110,10 +110,7 @@ export default function NewCtaSection() {
               data-oid=".9faz89"
             >
               Start Your Real Estate
-              <span
-                className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent"
-                data-oid="mh8p31."
-              >
+              <span className="block text-yellow-300" data-oid="mh8p31.">
                 Success Story Today
               </span>
             </h2>
