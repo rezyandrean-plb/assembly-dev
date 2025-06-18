@@ -5,28 +5,11 @@ import { useRouter } from "next/navigation";
 import { useCheckout } from "@/context/checkout-context";
 import OrderSummary from "../components/order-summary";
 
-const shippingOptions = [
-  { name: "J&T Express [1-3 working day(s)]", price: 3.75 },
-  { name: "Aramex Domestic Delivery [1-3 working day(s)]", price: 4.55 },
-  { name: "Tracx Logis [1-2 working day(s)]", price: 4.05 },
-];
-
 export default function DeliveryPage() {
   const router = useRouter();
   const { deliveryOption, setDeliveryOption, setShippingCost } = useCheckout();
-  const [postalCode, setPostalCode] = useState("");
-  const [showShipping, setShowShipping] = useState(false);
-
-  const handleCheckDelivery = () => {
-    // In a real app, you'd validate the postal code and fetch options
-    if (postalCode) {
-      setShowShipping(true);
-    }
-  };
-
-  const handleSelectShipping = (price: number) => {
-    setShippingCost(price);
-  };
+  const [postalCode, setPostalCode] = useState("4000");
+  const [selectedShipping, setSelectedShipping] = useState("delivery");
 
   const handleNext = () => {
     if (deliveryOption === "self-collect") {
@@ -35,127 +18,178 @@ export default function DeliveryPage() {
     router.push("/checkout/address");
   };
 
+  const handleDeliveryChange = (option: string) => {
+    setSelectedShipping(option);
+    if (option === "collect") {
+      setDeliveryOption("self-collect");
+      setShippingCost(0);
+    } else {
+      setDeliveryOption("delivery");
+    }
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16" data-oid="oark0x0">
-      <div data-oid="m0fu7-z">
-        <h2 className="text-2xl font-bold mb-6" data-oid="scnqi2i">
-          Select click & collect or delivery for each item
-        </h2>
+    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="kzd80fn">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="qs7_02p">
+        {/* Left Column - Items */}
+        <div className="lg:col-span-1" data-oid="-9is4:2">
+          <h2 className="text-2xl font-bold mb-6" data-oid="nscpyxi">
+            Your Items (1)
+          </h2>
 
-        <div className="space-y-4" data-oid="lb:05je">
-          <label
-            className={`flex items-center p-4 border rounded-lg cursor-pointer ${deliveryOption === "self-collect" ? "border-primary ring-2 ring-primary" : "border-gray-300"}`}
-            data-oid="s_1_n5e"
+          <h3 className="text-lg font-semibold mb-4" data-oid="veor1jb">
+            Select click & collect or delivery for each item
+          </h3>
+
+          <div
+            className="bg-white border rounded-lg p-4 mb-6"
+            data-oid="htv75ag"
           >
-            <input
-              type="radio"
-              name="deliveryOption"
-              value="self-collect"
-              checked={deliveryOption === "self-collect"}
-              onChange={() => setDeliveryOption("self-collect")}
-              className="mr-4"
-              data-oid="sovy5-e"
-            />
-
-            <div data-oid="sbclf5l">
-              <p className="font-semibold" data-oid=":8luo-9">
-                Click & Collect
-              </p>
-              <p className="text-sm text-gray-500" data-oid="676o1xs">
-                Collection from 62 Ubi Road 1, Oxley BizHub 2, #11-15/18,
-                Singapore, 408734
-              </p>
-            </div>
-            <p className="ml-auto font-semibold" data-oid="hrcues2">
-              FREE
-            </p>
-          </label>
-
-          <label
-            className={`p-4 border rounded-lg ${deliveryOption === "delivery" ? "border-primary ring-2 ring-primary" : "border-gray-300"}`}
-            data-oid=":iw13j_"
-          >
-            <div
-              className="flex items-center cursor-pointer"
-              data-oid="nh8moa1"
-            >
-              <input
-                type="radio"
-                name="deliveryOption"
-                value="delivery"
-                checked={deliveryOption === "delivery"}
-                onChange={() => setDeliveryOption("delivery")}
-                className="mr-4"
-                data-oid="_y8r8nj"
-              />
-
-              <p className="font-semibold" data-oid="9:p3ptb">
-                Delivery
-              </p>
-            </div>
-            {deliveryOption === "delivery" && (
-              <div className="mt-4 pl-8" data-oid="4scj0b7">
-                <p className="font-semibold mb-2" data-oid="dvpn23x">
-                  Delivers to
+            <div className="flex items-center gap-4" data-oid=":5ouael">
+              <div
+                className="w-16 h-16 bg-gray-200 rounded flex-shrink-0"
+                data-oid="7k.2ayw"
+              ></div>
+              <div className="flex-1" data-oid=".hbnr3o">
+                <h4 className="font-semibold" data-oid="ir1s27p">
+                  Country Road
+                </h4>
+                <p className="text-sm text-gray-600" data-oid="ogdp3.j">
+                  TRI CROSSBODY
                 </p>
-                <div className="flex gap-2" data-oid="2r8jfsx">
+                <p className="text-sm text-gray-600" data-oid="neh_4ii">
+                  Size: no size | Colour: BLACK
+                </p>
+                <p className="text-sm text-gray-600" data-oid="jmm:mvv">
+                  Quantity: 1
+                </p>
+                <p className="font-semibold" data-oid="5q7ub:v">
+                  $129.00
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 space-y-3" data-oid="a-s.vku">
+              <div className="flex items-center gap-3" data-oid="247v21:">
+                <input
+                  type="radio"
+                  id="collect"
+                  name="deliveryMethod"
+                  value="collect"
+                  checked={selectedShipping === "collect"}
+                  onChange={(e) => handleDeliveryChange(e.target.value)}
+                  className="w-4 h-4"
+                  data-oid="1dlke3k"
+                />
+
+                <label htmlFor="collect" className="flex-1" data-oid="c4jakb0">
+                  <div
+                    className="flex justify-between items-center"
+                    data-oid="7_2o2s-"
+                  >
+                    <div data-oid="r_oc4ak">
+                      <p className="font-medium" data-oid="8ckjt_v">
+                        Click & Collect
+                      </p>
+                      <p className="text-sm text-gray-600" data-oid="g1ma449">
+                        Select to check availability
+                      </p>
+                    </div>
+                    <span className="font-semibold" data-oid="u.d:aat">
+                      FREE
+                    </span>
+                  </div>
+                </label>
+              </div>
+
+              <div className="border rounded-lg" data-oid="uvv0oto">
+                <div className="flex items-center gap-3 p-3" data-oid="2x-z3ih">
                   <input
-                    type="text"
-                    value={postalCode}
-                    onChange={(e) => setPostalCode(e.target.value)}
-                    placeholder="Enter your postal code"
-                    className="input input-bordered w-full"
-                    data-oid="x2o4zbh"
+                    type="radio"
+                    id="delivery"
+                    name="deliveryMethod"
+                    value="delivery"
+                    checked={selectedShipping === "delivery"}
+                    onChange={(e) => handleDeliveryChange(e.target.value)}
+                    className="w-4 h-4"
+                    data-oid="2_.i1ns"
                   />
 
-                  <button
-                    onClick={handleCheckDelivery}
-                    className="btn btn-primary"
-                    data-oid="xc0j33j"
+                  <label
+                    htmlFor="delivery"
+                    className="flex-1"
+                    data-oid="yx:mdoa"
                   >
-                    Check
-                  </button>
+                    <p className="font-medium" data-oid="wl9q_5o">
+                      Delivery
+                    </p>
+                  </label>
                 </div>
 
-                {showShipping && (
-                  <div className="mt-4 space-y-2" data-oid="yjc0vm1">
-                    {shippingOptions.map((option) => (
+                {selectedShipping === "delivery" && (
+                  <div className="border-t p-3" data-oid="qngnz:t">
+                    <div className="mb-3" data-oid="j0qem3u">
                       <label
-                        key={option.name}
-                        className="flex items-center p-2 border rounded-md cursor-pointer"
-                        data-oid="r2zizar"
+                        className="block text-sm font-medium mb-1"
+                        data-oid="f_pk_0q"
                       >
-                        <input
-                          type="radio"
-                          name="shipping"
-                          onChange={() => handleSelectShipping(option.price)}
-                          className="mr-3"
-                          data-oid="pvodv.7"
-                        />
-
-                        <p data-oid="535k7ub">{option.name}</p>
-                        <p className="ml-auto font-semibold" data-oid="1:c-lxa">
-                          ${option.price.toFixed(2)}
-                        </p>
+                        Postcode: {postalCode}
                       </label>
-                    ))}
+                      <p className="text-sm text-gray-600" data-oid="vf7bzf6">
+                        Standard Delivery (5-9 Business Days) FREE
+                      </p>
+                    </div>
+                    <button
+                      className="text-blue-600 text-sm hover:underline"
+                      data-oid="bv4by92"
+                    >
+                      Change Delivery Type
+                    </button>
                   </div>
                 )}
               </div>
-            )}
-          </label>
+            </div>
+          </div>
+
+          <button
+            onClick={handleNext}
+            className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+            data-oid="njusf9n"
+          >
+            Next
+          </button>
+        </div>
+
+        {/* Right Column - Order Summary */}
+        <div className="lg:col-span-2" data-oid="n4tdra6">
+          <OrderSummary data-oid="_3u5_ql" />
         </div>
       </div>
 
-      <div className="space-y-8" data-oid="tdqlux5">
-        <OrderSummary data-oid="62es6i2" />
-        <button
-          onClick={handleNext}
-          className="btn btn-primary w-full mt-6"
-          data-oid="6yeauq:"
-        >
-          Next
-        </button>
+      {/* Help Section */}
+      <div className="mt-12 text-center" data-oid="ywc8upb">
+        <h3 className="text-lg font-semibold mb-2" data-oid="pjxm8ad">
+          Need Help?
+        </h3>
+        <p className="text-gray-600" data-oid="::h2f_b">
+          Perhaps our{" "}
+          <a
+            href="#"
+            className="text-blue-600 hover:underline font-medium"
+            data-oid="xk11b-9"
+          >
+            FAQs
+          </a>{" "}
+          page can answer your question. Alternatively, use our{" "}
+          <a
+            href="#"
+            className="text-blue-600 hover:underline font-medium"
+            data-oid="5_6jjn6"
+          >
+            Contact Us
+          </a>{" "}
+          page to speak to a member of our customer service team
+        </p>
       </div>
     </div>
   );
