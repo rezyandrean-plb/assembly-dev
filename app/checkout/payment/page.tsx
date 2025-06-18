@@ -76,6 +76,7 @@ export default function PaymentPage() {
                 height={20}
                 data-oid="6t4apem"
               />
+
               <Image
                 src="/images/payment/mastercard.png"
                 alt="Mastercard"
@@ -83,6 +84,7 @@ export default function PaymentPage() {
                 height={20}
                 data-oid="0h8km2u"
               />
+
               <Image
                 src="/images/payment/amex.png"
                 alt="Amex"
@@ -90,6 +92,7 @@ export default function PaymentPage() {
                 height={20}
                 data-oid="0vh-boc"
               />
+
               <ChevronDown
                 className={`transition-transform ${selectedPayment === "Credit / Debit" ? "rotate-180" : ""}`}
                 data-oid="h8aagpp"

@@ -55,6 +55,7 @@ export default function CourseFilter({
               size={20}
               data-oid=":272ocd"
             />
+
             <input
               type="text"
               placeholder="Search courses by name or topic..."
@@ -174,6 +175,7 @@ export default function CourseFilter({
               size={20}
               data-oid="hqd.xjy"
             />
+
             <input
               type="text"
               placeholder="Search courses..."

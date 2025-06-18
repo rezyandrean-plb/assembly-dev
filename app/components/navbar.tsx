@@ -191,6 +191,7 @@ export default function Navbar() {
                           className="h-5 w-5 text-gray-500"
                           data-oid="zciaw3e"
                         />
+
                         <span className="text-sm" data-oid="cj4m-bz">
                           Profile
                         </span>
@@ -210,6 +211,7 @@ export default function Navbar() {
                           className="h-5 w-5 text-gray-500"
                           data-oid="l2bzbt9"
                         />
+
                         <span className="text-sm" data-oid="9pkzw76">
                           Settings
                         </span>
@@ -229,6 +231,7 @@ export default function Navbar() {
                           className="h-5 w-5 text-gray-500"
                           data-oid="tmld4dg"
                         />
+
                         <span className="text-sm" data-oid="r77xus_">
                           Help & Support
                         </span>

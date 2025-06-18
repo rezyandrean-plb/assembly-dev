@@ -124,6 +124,7 @@ export default function ContactMap() {
               className="h-12 w-12 text-blue-600 drop-shadow-lg"
               data-oid="fa71b39"
             />
+
             <motion.div
               className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-3 bg-blue-600 rounded-full opacity-30"
               animate={{ scale: [1, 1.5, 1] }}

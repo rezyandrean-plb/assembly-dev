@@ -180,6 +180,7 @@ export default function LearningPathCard({
                 path.nodes[0].x,
                 ...path.nodes.slice(1).map((node) => node.x),
               ],
+
               y: [
                 path.nodes[0].y,
                 ...path.nodes.slice(1).map((node) => node.y),
@@ -350,6 +351,7 @@ export default function LearningPathCard({
                   fill={path.color}
                   data-oid="bj-.8._"
                 />
+
                 {i === 0 && (
                   <text
                     x={node.x}

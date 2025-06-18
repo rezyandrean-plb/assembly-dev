@@ -34,6 +34,7 @@ export default function LearningPreferencesPage() {
       "Property Financing",
       "Market Analysis",
     ],
+
     experience: "Intermediate",
     learningGoals:
       "Learn advanced property investment strategies and understand the Singapore real estate market in depth.",

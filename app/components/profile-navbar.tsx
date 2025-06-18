@@ -276,6 +276,7 @@ export default function ProfileNavbar() {
                         className="h-5 w-5 text-gray-500"
                         data-oid="gv4wd6t"
                       />
+
                       <span className="text-sm" data-oid="rub7_uh">
                         Account Settings
                       </span>
@@ -297,6 +298,7 @@ export default function ProfileNavbar() {
                         className="h-5 w-5 text-gray-500"
                         data-oid="awp7x-b"
                       />
+
                       <span className="text-sm" data-oid="ke2qzf:">
                         Purchase History
                       </span>
@@ -316,6 +318,7 @@ export default function ProfileNavbar() {
                         className="h-5 w-5 text-gray-500"
                         data-oid="va-s1vj"
                       />
+
                       <span className="text-sm" data-oid="vg_e0m7">
                         Settings
                       </span>
@@ -335,6 +338,7 @@ export default function ProfileNavbar() {
                         className="h-5 w-5 text-gray-500"
                         data-oid="-t4m.57"
                       />
+
                       <span className="text-sm" data-oid="71eksoc">
                         Terms of Use
                       </span>

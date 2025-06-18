@@ -80,6 +80,7 @@ export default function PlatformSection() {
       icon: (
         <Navigation className="h-8 w-8 text-[#123B79]" data-oid="hf-xwv4" />
       ),
+
       title: "Connect the Dots",
       description:
         "Discover how real estate, finance, and learning interconnect to create opportunities.",

@@ -9,7 +9,20 @@ import CondoPathSection from "@/components/sections/learning-paths/condo-path-se
 import HdbPathSection from "@/components/sections/learning-paths/hdb-path-section";
 import BenefitsSection from "@/components/sections/benefits-section";
 import CtaSection from "@/components/sections/cta-section";
-import NetworkBackground from "@/components/network-background";
+import dynamic from "next/dynamic";
+
+const NetworkBackground = dynamic(
+  () => import("@/components/network-background"),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none bg-gradient-to-br from-blue-50 to-white"
+        data-oid="mezl7d-"
+      />
+    ),
+  },
+);
 import Navbar from "@/components/navbar";
 
 export default function HomePage() {
@@ -73,6 +86,7 @@ export default function HomePage() {
         windowHeight={windowHeight}
         data-oid="0qb4tqd"
       />
+
       <HeroSection data-oid="-2ddcf." />
       <PlatformSection data-oid="ji4br46" />
       <PillarsSection data-oid="apnn90q" />

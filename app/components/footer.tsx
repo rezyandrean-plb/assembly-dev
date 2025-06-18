@@ -24,6 +24,7 @@ export default function AppFooter() {
                 height={40}
                 data-oid="cas6xzt"
               />
+
               <span className="ml-2 text-xl font-bold" data-oid="l:_scwu">
                 Assembly SG
               </span>

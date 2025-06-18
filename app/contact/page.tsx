@@ -270,6 +270,7 @@ export default function ContactPage() {
                           className="h-16 w-16 text-green-500 mx-auto mb-4"
                           data-oid="xvkg9ky"
                         />
+
                         <h3
                           className="text-xl font-semibold text-green-800 mb-2"
                           data-oid="6se7666"

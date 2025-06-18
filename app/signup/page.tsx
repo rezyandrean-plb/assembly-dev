@@ -183,6 +183,7 @@ export default function SignupPage() {
           opacity={0.3}
           data-oid="bkmuu5u"
         />
+
         <Navbar data-oid="on5oesb" />
 
         <section className="pt-32 pb-16 relative z-10" data-oid="n_rs.72">

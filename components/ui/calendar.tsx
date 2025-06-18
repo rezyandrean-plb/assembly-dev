@@ -57,6 +57,7 @@ function Calendar({
         IconLeft: ({ ...props }) => (
           <ChevronLeft className="h-4 w-4" data-oid="tj:sbav" />
         ),
+
         IconRight: ({ ...props }) => (
           <ChevronRight className="h-4 w-4" data-oid="sh4ui26" />
         ),

@@ -361,6 +361,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                 rx="2"
                 data-oid="vtb62sd"
               />
+
               <path d="M9 3v18" data-oid="0onc33l" />
               <path d="M14 8h.01" data-oid="b:eph_:" />
               <path d="M14 12h.01" data-oid="h6f0d79" />

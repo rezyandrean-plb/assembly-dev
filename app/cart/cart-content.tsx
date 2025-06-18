@@ -108,6 +108,7 @@ export default function CartPageContent() {
         }}
         data-oid="ai:gj1s"
       />
+
       <div className="bg-gray-50" data-oid="ojzacfr">
         <Navbar data-oid="m0-y4c8" />
         <div

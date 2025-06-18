@@ -318,6 +318,7 @@ export default function CoursesPage() {
             "Landed",
             "Market Trends",
           ],
+
           instructor:
             "Melvin Lim, Marc Chan, Grayce Tan, Ong Yu Rong, Shawn Tay, Jesley Lim, George Peng, Wayne Tang, Joan Loh",
           price: "$399.00",

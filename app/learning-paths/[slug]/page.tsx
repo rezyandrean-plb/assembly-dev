@@ -445,6 +445,7 @@ export default function LearningPathPage() {
                       rx="2"
                       data-oid="lc-qq77"
                     />
+
                     <path d="M9 3v18" data-oid="xg-umcb" />
                     <path d="M14 8h.01" data-oid="3sll07m" />
                     <path d="M14 12h.01" data-oid="4q9fdme" />
@@ -547,6 +548,7 @@ export default function LearningPathPage() {
                       className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5"
                       data-oid="qp2dty-"
                     />
+
                     <p className="text-gray-700" data-oid="mlr0_iy">
                       {outcome}
                     </p>
@@ -566,6 +568,7 @@ export default function LearningPathPage() {
                       className="h-5 w-5 text-[#123B79] mr-3"
                       data-oid="s0.heum"
                     />
+
                     <div data-oid="dvcu:y4">
                       <p className="font-semibold" data-oid="gfv0xf4">
                         Courses
@@ -580,6 +583,7 @@ export default function LearningPathPage() {
                       className="h-5 w-5 text-[#123B79] mr-3"
                       data-oid="jkb8-.f"
                     />
+
                     <div data-oid="sk9-.oc">
                       <p className="font-semibold" data-oid="9wh0492">
                         Duration
@@ -594,6 +598,7 @@ export default function LearningPathPage() {
                       className="h-5 w-5 text-[#123B79] mr-3"
                       data-oid="0hk17ml"
                     />
+
                     <div data-oid="fm66hdv">
                       <p className="font-semibold" data-oid="a4ng:ar">
                         Level

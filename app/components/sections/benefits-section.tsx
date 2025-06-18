@@ -25,6 +25,7 @@ export default function BenefitsSection() {
       icon: (
         <BarChart2 className="h-6 w-6 text-orange-500" data-oid="8z8n1-1" />
       ),
+
       title: "Career Growth",
       description:
         "Develop skills that can accelerate your professional advancement",

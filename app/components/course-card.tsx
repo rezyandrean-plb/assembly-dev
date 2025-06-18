@@ -43,6 +43,7 @@ export default function CourseCard({ course, delay }: CourseCardProps) {
             className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"
             data-oid=":imdjll"
           />
+
           <div
             className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full"
             data-oid="mlkw80m"

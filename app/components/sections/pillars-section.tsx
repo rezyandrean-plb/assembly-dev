@@ -13,6 +13,7 @@ export default function PillarsSection() {
       icon: (
         <TrendingUp className="h-12 w-12 text-orange-500" data-oid="brf758z" />
       ),
+
       title: "Market Trends",
       description:
         "Stay informed with the latest data and analysis on Singapore's property market movements.",
@@ -21,6 +22,7 @@ export default function PillarsSection() {
       icon: (
         <BookOpen className="h-12 w-12 text-orange-500" data-oid="i81xs5j" />
       ),
+
       title: "Regulations & Compliance",
       description:
         "Navigate the complex regulatory landscape with our comprehensive guides and updates.",
@@ -29,6 +31,7 @@ export default function PillarsSection() {
       icon: (
         <Lightbulb className="h-12 w-12 text-orange-500" data-oid="5yo1j-x" />
       ),
+
       title: "Marketing Strategies",
       description:
         "Learn effective techniques to market properties and build your personal brand.",
@@ -37,6 +40,7 @@ export default function PillarsSection() {
       icon: (
         <BarChart3 className="h-12 w-12 text-orange-500" data-oid="-sm3xvd" />
       ),
+
       title: "Professional Development",
       description:
         "Enhance your skills and knowledge with our curated learning resources and expert insights.",

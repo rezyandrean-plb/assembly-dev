@@ -160,6 +160,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="-jttrs0"
           />
+
           <line
             x1={frontLeg2X}
             y1={frontLegY1}
@@ -169,6 +170,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="kifqls3"
           />
+
           <line
             x1={backLeg1X}
             y1={backLegY1}
@@ -178,6 +180,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="dgle0pt"
           />
+
           <line
             x1={backLeg2X}
             y1={backLegY1}
@@ -201,6 +204,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="_ypk07e"
           />
+
           <line
             x1={frontLeg2X}
             y1={frontLegY1}
@@ -210,6 +214,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="sbmiqz3"
           />
+
           <line
             x1={backLeg1X}
             y1={backLegY1}
@@ -219,6 +224,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="srj262h"
           />
+
           <line
             x1={backLeg2X}
             y1={backLegY1}
@@ -242,6 +248,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="yyu94xd"
           />
+
           <line
             x1={frontLeg2X}
             y1={frontLegY1}
@@ -251,6 +258,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="5dogiuv"
           />
+
           <line
             x1={backLeg1X}
             y1={backLegY1}
@@ -260,6 +268,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid=":6wdxig"
           />
+
           <line
             x1={backLeg2X}
             y1={backLegY1}
@@ -283,6 +292,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="7jlx9sn"
           />
+
           <line
             x1={frontLeg2X}
             y1={frontLegY1}
@@ -292,6 +302,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="0g0uj9k"
           />
+
           <line
             x1={backLeg1X}
             y1={backLegY1}
@@ -301,6 +312,7 @@ export default function ResetPasswordContent() {
             strokeWidth="2.5"
             data-oid="9bgzykq"
           />
+
           <line
             x1={backLeg2X}
             y1={backLegY1}

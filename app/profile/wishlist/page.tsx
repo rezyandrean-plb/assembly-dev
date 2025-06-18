@@ -274,6 +274,7 @@ export default function WishlistPage() {
                     className="h-4 w-4 text-yellow-500 fill-current"
                     data-oid="z9nprcp"
                   />
+
                   <span className="ml-1 text-sm font-medium" data-oid="azahpcx">
                     {item.rating}
                   </span>

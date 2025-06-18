@@ -54,6 +54,7 @@ export default function ForgotPasswordPage() {
           opacity={0.3}
           data-oid="g:4fvee"
         />
+
         <Navbar data-oid="_c4kn3m" />
 
         <section className="pt-32 pb-16 relative z-10" data-oid="5cig_j.">

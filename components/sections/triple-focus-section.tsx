@@ -94,6 +94,7 @@ const TripleFocusSection: React.FC<TripleFocusSectionProps> = ({
         style={{ pointerEvents: "none" }}
         data-oid="s9e8.ce"
       />
+
       <div className="container mx-auto px-4 relative z-10" data-oid="wqx_70z">
         <h2 className="text-3xl font-semibold mb-4" data-oid="j_5lqx_">
           {title}

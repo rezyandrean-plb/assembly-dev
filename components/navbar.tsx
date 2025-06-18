@@ -44,14 +44,14 @@ export default function Navbar() {
         data-oid="_k9np43"
       >
         <Link href="/" className="flex items-center z-10" data-oid="27q4mdz">
-          <Image
-            src="/images/assembly-logo.png"
-            alt="Assembly.sg Logo"
-            width={180}
-            height={50}
-            className="h-10 w-auto"
-            data-oid="jk0n:cf"
-          />
+          <div className="h-10 flex items-center" data-oid="c82eump">
+            <span
+              className="text-2xl font-bold text-[#123B79]"
+              data-oid="t0r0lv9"
+            >
+              Assembly.sg
+            </span>
+          </div>
         </Link>
 
         <div

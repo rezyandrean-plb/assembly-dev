@@ -132,6 +132,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                   defaultChecked
                   data-oid="h_.rwz5"
                 />
+
                 <span className="ml-2 text-sm text-gray-700" data-oid="d.:u6nd">
                   Keep me signed in
                 </span>

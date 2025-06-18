@@ -172,6 +172,7 @@ export default function PLBBookPage() {
               windowHeight={windowHeight}
               data-oid="oswfshl"
             />
+
             {/* Semi-transparent overlay to improve text readability across the entire page */}
             <div
               className="absolute inset-0 bg-white opacity-30 z-0"

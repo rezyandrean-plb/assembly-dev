@@ -90,6 +90,7 @@ export default function SettingsPage() {
                     defaultChecked
                     data-oid="jkxkhfk"
                   />
+
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                     data-oid="t-h-vq2"
@@ -130,6 +131,7 @@ export default function SettingsPage() {
                         defaultChecked
                         data-oid="0gzoqmg"
                       />
+
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                         data-oid="a-fzxjm"
@@ -162,6 +164,7 @@ export default function SettingsPage() {
                         defaultChecked
                         data-oid="i8t2v_-"
                       />
+
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                         data-oid="in5c87q"
@@ -193,6 +196,7 @@ export default function SettingsPage() {
                         className="sr-only peer"
                         data-oid="ndd__tr"
                       />
+
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                         data-oid="..4jq8w"
@@ -225,6 +229,7 @@ export default function SettingsPage() {
                         defaultChecked
                         data-oid="25lmt93"
                       />
+
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                         data-oid="1eky:76"
@@ -281,6 +286,7 @@ export default function SettingsPage() {
                       defaultChecked
                       data-oid="jmmc-oe"
                     />
+
                     <div
                       className="w-full h-16 bg-white border border-gray-200 rounded-md mb-2"
                       data-oid="r9qz92g"
@@ -299,6 +305,7 @@ export default function SettingsPage() {
                       className="sr-only"
                       data-oid="w8ig6on"
                     />
+
                     <div
                       className="w-full h-16 bg-gray-800 border border-gray-700 rounded-md mb-2"
                       data-oid="3630hit"
@@ -317,6 +324,7 @@ export default function SettingsPage() {
                       className="sr-only"
                       data-oid="9n3l4lc"
                     />
+
                     <div
                       className="w-full h-16 bg-gradient-to-b from-white to-gray-800 border border-gray-200 rounded-md mb-2"
                       data-oid="m0297z0"
@@ -346,6 +354,7 @@ export default function SettingsPage() {
                       className="sr-only"
                       data-oid="ccjcz9o"
                     />
+
                     <span className="text-xs mb-2" data-oid="ix7o7r_">
                       Aa
                     </span>
@@ -364,6 +373,7 @@ export default function SettingsPage() {
                       defaultChecked
                       data-oid="aak51tk"
                     />
+
                     <span className="text-sm mb-2" data-oid="c1o4mgl">
                       Aa
                     </span>
@@ -381,6 +391,7 @@ export default function SettingsPage() {
                       className="sr-only"
                       data-oid="pt_uiif"
                     />
+
                     <span className="text-base mb-2" data-oid="ef:u3mf">
                       Aa
                     </span>
@@ -415,6 +426,7 @@ export default function SettingsPage() {
                     className="sr-only peer"
                     data-oid="ig91o4e"
                   />
+
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                     data-oid="yak5-o4"
@@ -446,6 +458,7 @@ export default function SettingsPage() {
                     className="sr-only peer"
                     data-oid="0w:v2ge"
                   />
+
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
                     data-oid="inrmcyz"

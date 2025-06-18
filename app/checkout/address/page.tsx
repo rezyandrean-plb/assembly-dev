@@ -210,6 +210,7 @@ export default function AddressPage() {
                 title="Delivery Address"
                 data-oid="xtpp2gc"
               />
+
               <div className="text-sm space-y-4 mt-8" data-oid="eotjpp:">
                 <h4 className="font-semibold" data-oid="r4lurdn">
                   Authority to Leave
@@ -251,6 +252,7 @@ export default function AddressPage() {
                 className="checkbox"
                 data-oid="w9:9sl:"
               />
+
               <label
                 htmlFor="sameAsDelivery"
                 className="ml-2 font-semibold"

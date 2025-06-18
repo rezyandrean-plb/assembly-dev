@@ -56,6 +56,7 @@ export default function DeliveryPage() {
               className="mr-4"
               data-oid="0i80cwg"
             />
+
             <div data-oid="khh:ofz">
               <p className="font-semibold" data-oid="7j_93:6">
                 Click & Collect
@@ -87,6 +88,7 @@ export default function DeliveryPage() {
                 className="mr-4"
                 data-oid="v10uvfv"
               />
+
               <p className="font-semibold" data-oid="l0-nb91">
                 Delivery
               </p>
@@ -105,6 +107,7 @@ export default function DeliveryPage() {
                     className="input input-bordered w-full"
                     data-oid="1pu_bvi"
                   />
+
                   <button
                     onClick={handleCheckDelivery}
                     className="btn btn-primary"
@@ -129,6 +132,7 @@ export default function DeliveryPage() {
                           className="mr-3"
                           data-oid="d91d17r"
                         />
+
                         <p data-oid="jojggkn">{option.name}</p>
                         <p className="ml-auto font-semibold" data-oid="yt1570p">
                           ${option.price.toFixed(2)}

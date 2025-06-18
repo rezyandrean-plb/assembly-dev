@@ -182,6 +182,7 @@ export default function TripleFocusSection() {
       icon: (
         <Building2 className="h-12 w-12 text-orange-500" data-oid="8ckzfog" />
       ),
+
       title: "Real Estate",
       description:
         "Navigate Singapore's dynamic property market with expert insights on trends, regulations, and opportunities.",
@@ -192,6 +193,7 @@ export default function TripleFocusSection() {
       icon: (
         <TrendingUp className="h-12 w-12 text-blue-500" data-oid="bsjpc1g" />
       ),
+
       title: "Finance",
       description:
         "Master the financial aspects of real estate with knowledge on investment strategies, mortgages, and market analysis.",
@@ -205,6 +207,7 @@ export default function TripleFocusSection() {
           data-oid="g3kt9_r"
         />
       ),
+
       title: "Learning",
       description:
         "Continuously develop your expertise through structured courses, workshops, and community knowledge sharing.",

@@ -275,6 +275,7 @@ export default function CourseDetailTemplate({
           opacity={0.3}
           data-oid="68n9pd3"
         />
+
         <Navbar data-oid="vfb7eji" />
         {/* Hero Section */}
         <section className="pt-32 pb-16 relative z-10" data-oid="kfky7hm">
@@ -328,6 +329,7 @@ export default function CourseDetailTemplate({
                       className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
                       data-oid="tzhmba1"
                     />
+
                     <span className="ml-1 font-semibold" data-oid="tk95vrl">
                       {courseData.rating}
                     </span>
@@ -446,6 +448,7 @@ export default function CourseDetailTemplate({
                             className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5"
                             data-oid="gvxozu3"
                           />
+
                           <p className="text-gray-700" data-oid="21l1gbs">
                             {highlight}
                           </p>
@@ -482,6 +485,7 @@ export default function CourseDetailTemplate({
                             className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5"
                             data-oid="xuokjm4"
                           />
+
                           <p className="text-gray-700" data-oid="isf6lew">
                             {item}
                           </p>
@@ -578,6 +582,7 @@ export default function CourseDetailTemplate({
                                       className="h-4 w-4 text-[#123B79] mr-3"
                                       data-oid="d1r59_g"
                                     />
+
                                     <span
                                       className="text-gray-700"
                                       data-oid="c:gujxp"
@@ -887,6 +892,7 @@ export default function CourseDetailTemplate({
                             className="h-5 w-5 text-[#123B79] mr-3"
                             data-oid="axb5b0e"
                           />
+
                           <div data-oid="az0d75p">
                             <p className="font-semibold" data-oid="7upl1-6">
                               Course Duration
@@ -904,6 +910,7 @@ export default function CourseDetailTemplate({
                             className="h-5 w-5 text-[#123B79] mr-3"
                             data-oid="a8x5weu"
                           />
+
                           <div data-oid="k.fg-:r">
                             <p className="font-semibold" data-oid="4ja:e3a">
                               Total Enrolled
@@ -921,6 +928,7 @@ export default function CourseDetailTemplate({
                             className="h-5 w-5 text-[#123B79] mr-3"
                             data-oid="65721z_"
                           />
+
                           <div data-oid="4_a4iqy">
                             <p className="font-semibold" data-oid="a0u7m_9">
                               Course Level

@@ -186,6 +186,7 @@ export default function JourneySection() {
               fill="rgba(249, 115, 22, 0.05)"
               data-oid="ze14kiv"
             />
+
             <circle
               cx="400"
               cy="400"
@@ -195,6 +196,7 @@ export default function JourneySection() {
               fill="none"
               data-oid="qicl6ro"
             />
+
             <circle
               cx="400"
               cy="400"
@@ -257,6 +259,7 @@ export default function JourneySection() {
                 fill="none"
                 data-oid="_kad1ej"
               />
+
               <path
                 d="M 710 540 A 380 380 0 0 1 400 780"
                 stroke="#84cc16"
