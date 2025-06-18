@@ -7,35 +7,43 @@
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
   --primary: #123b79;
-  --naturalPalette: #858fbb;
-  --naturalPalette-foreground: #f6f8ff;
-  --naturalPalette-naturalPalette1: #f1f1e6;
+  --primary-light: #1e4a8c;
+  --primary-lighter: #2a5ba0;
+  --primary-dark: #0f2f61;
+  --primary-darker: #0c2549;
+  --secondary: #64748b;
+  --accent: #f59e0b;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --naturalPalette: #64748b;
+  --naturalPalette-foreground: #f8fafc;
+  --naturalPalette-naturalPalette1: #f1f5f9;
   --greyFriends: #123b79;
-  --greyFriends-foreground: #434655;
-  --greyFriends-matchingPalette1: #a7aabc;
-  --accent: #123b79;
+  --greyFriends-foreground: #64748b;
+  --greyFriends-matchingPalette1: #94a3b8;
   --dottingPalette: #123b79;
-  --dottingPalette-dottingPalette1: #731b2e;
-  --dottingPalette-dottingPalette2: #a7aabc;
-  --dottingPalette-dottingPalette3: #bfa5a7;
+  --dottingPalette-dottingPalette1: #1e4a8c;
+  --dottingPalette-dottingPalette2: #94a3b8;
+  --dottingPalette-dottingPalette3: #cbd5e1;
   --popover: #123b79;
   --neighbourPalette: #123b79;
-  --neighbourPalette-foreground: #7cb6b2;
-  --neighbourPalette-neighbourPalette1: #178581;
-  --neighbourPalette-neighbourPalette2: #334b4a;
+  --neighbourPalette-foreground: #64748b;
+  --neighbourPalette-neighbourPalette1: #1e4a8c;
+  --neighbourPalette-neighbourPalette2: #475569;
   --discreetPalette: #123b79;
-  --discreetPalette-discreetPalette1: #858fbb;
-  --discreetPalette-discreetPalette2: #f6f8ff;
-  --discreetPalette-discreetPalette3: #fff7d6;
+  --discreetPalette-discreetPalette1: #64748b;
+  --discreetPalette-discreetPalette2: #f8fafc;
+  --discreetPalette-discreetPalette3: #fef3c7;
   --spotPalette: #123b79;
-  --spotPalette-spotPalette1: #516aae;
-  --spotPalette-spotPalette2: #e8efff;
-  --spotPalette-spotPalette3: #d3a518;
+  --spotPalette-spotPalette1: #1e4a8c;
+  --spotPalette-spotPalette2: #e0f2fe;
+  --spotPalette-spotPalette3: #f59e0b;
   --classyPalette: #123b79;
-  --classyPalette-classyPalette1: #a7aabc;
-  --classyPalette-classyPalette2: #737687;
-  --classyPalette-classyPalette3: #731b2e;
-  --classyPalette-classyPalette4: #ac4f5c;
+  --classyPalette-classyPalette1: #94a3b8;
+  --classyPalette-classyPalette2: #64748b;
+  --classyPalette-classyPalette3: #1e4a8c;
+  --classyPalette-classyPalette4: #475569;
 }
 
 body {
@@ -65,17 +73,17 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #123b79, #1e4a8c);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #0f2f61, #123b79);
 }
 
 /* Text gradient utility */
 .text-gradient {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(135deg, #123b79, #1e4a8c, #f59e0b);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -124,7 +132,7 @@ html {
 
 /* Animated background patterns */
 .animated-bg {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #123b79, #1e4a8c, #2a5ba0, #64748b);
   background-size: 400% 400%;
   animation: gradient-animation 15s ease infinite;
 }
@@ -233,12 +241,12 @@ html {
 
 /* Glow effect */
 .glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 20px rgba(18, 59, 121, 0.5);
   transition: box-shadow 0.3s ease;
 }
 
 .glow:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+  box-shadow: 0 0 30px rgba(18, 59, 121, 0.8);
 }
 
 /* Typography improvements */
@@ -248,7 +256,7 @@ html {
 
 /* Selection styles */
 ::selection {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(18, 59, 121, 0.2);
   color: inherit;
 }
 

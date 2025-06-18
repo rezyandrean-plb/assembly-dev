@@ -17,7 +17,23 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "var(--primary)",
+          light: "var(--primary-light)",
+          lighter: "var(--primary-lighter)",
+          dark: "var(--primary-dark)",
+          darker: "var(--primary-darker)",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+        },
+        success: {
+          DEFAULT: "var(--success)",
+        },
+        warning: {
+          DEFAULT: "var(--warning)",
+        },
+        error: {
+          DEFAULT: "var(--error)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
