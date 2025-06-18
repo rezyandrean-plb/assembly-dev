@@ -274,10 +274,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/signup"
-                className="btn btn-primary"
+                className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium transition-colors"
                 data-oid="e5dt:ds"
               >
-                Sign Up
+                Get Started
               </Link>
             </div>
           )}

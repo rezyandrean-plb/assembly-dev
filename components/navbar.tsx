@@ -108,7 +108,7 @@ export default function Navbar() {
 
                 {cart.length > 0 && (
                   <span
-                    className="absolute -top-1 -right-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
+                    className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
                     data-oid="htmmcte"
                   >
                     {cart.length}
@@ -144,7 +144,7 @@ export default function Navbar() {
             >
               <Link href="/signup" data-oid="ycsy2g0">
                 <Button
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-primary hover:bg-primary-dark text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   data-oid="d_ff7ph"
                 >
                   Get Started
@@ -229,7 +229,7 @@ export default function Navbar() {
                   >
                     <Link href="/signup" data-oid="e2.sr.n">
                       <Button
-                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                        className="w-full bg-primary hover:bg-primary-dark text-white"
                         onClick={() => setIsOpen(false)}
                         data-oid="t99e861"
                       >
