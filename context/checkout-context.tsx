@@ -71,7 +71,7 @@ export function CheckoutProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <CheckoutContext.Provider value={value} data-oid="7v:fia8">
+    <CheckoutContext.Provider value={value} data-oid="j2ry9:e">
       {children}
     </CheckoutContext.Provider>
   );

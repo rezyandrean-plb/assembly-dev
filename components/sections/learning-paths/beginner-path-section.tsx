@@ -59,15 +59,15 @@ export default function BeginnerPathSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white overflow-hidden min-h-screen"
-      data-oid="2do88dr"
+      data-oid="tdbebjl"
     >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none" data-oid="w0vy13v">
+      <div className="absolute inset-0 pointer-events-none" data-oid="uqatotz">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid slice"
-          data-oid="2pl-mjn"
+          data-oid="cfx.piz"
         >
           {/* Background network elements */}
           {Array(20)
@@ -86,7 +86,7 @@ export default function BeginnerPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
-                data-oid="a2n3x5m"
+                data-oid="ez:q0_q"
               />
             ))}
 
@@ -100,7 +100,7 @@ export default function BeginnerPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="y4s0ci."
+            data-oid=":0.jjrd"
           />
 
           {/* Foundation structure - horizontal base */}
@@ -113,7 +113,7 @@ export default function BeginnerPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: foundationProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="zhd-cya"
+            data-oid="0yl65:p"
           />
 
           {/* Foundation structure - vertical supports */}
@@ -141,7 +141,7 @@ export default function BeginnerPathSection() {
                       : 0,
                   }}
                   transition={{ duration: 0.3 }}
-                  data-oid="91pj1co"
+                  data-oid="n9x1.ru"
                 />
               );
             })}
@@ -158,7 +158,7 @@ export default function BeginnerPathSection() {
               pathLength: foundationTopHorizontalPathLength,
             }}
             transition={{ duration: 0.5 }}
-            data-oid=":s7zi85"
+            data-oid="aq6ets2"
           />
 
           {/* Knowledge blocks being placed on the foundation */}
@@ -198,7 +198,7 @@ export default function BeginnerPathSection() {
                       : -100,
                   }}
                   transition={{ type: "spring", stiffness: 100 }}
-                  data-oid="u3ep1xn"
+                  data-oid="4p71td7"
                 />
               );
             })}
@@ -220,7 +220,7 @@ export default function BeginnerPathSection() {
             style={{
               opacity: useTransform(foundationProgress, [0, 1], [0, 1]),
             }}
-            data-oid="35-v6bc"
+            data-oid="19iprc2"
           />
 
           {/* Particles flowing along the entry path */}
@@ -244,7 +244,7 @@ export default function BeginnerPathSection() {
                 style={{
                   offsetPath: "path('M100,500 C200,450 300,500 400,450')",
                 }}
-                data-oid="0q25ic."
+                data-oid=":685v4x"
               />
             ))}
 
@@ -255,7 +255,7 @@ export default function BeginnerPathSection() {
               <motion.g
                 key={`concept-${index}`}
                 style={{ originX: 0.5, originY: 0.5 }}
-                data-oid="xhnvy8f"
+                data-oid="a-y88qc"
               >
                 <motion.text
                   x={x}
@@ -294,7 +294,7 @@ export default function BeginnerPathSection() {
                       : -20,
                   }}
                   transition={{ duration: 0.5, delay: concept.delay }}
-                  data-oid="znv1kek"
+                  data-oid="a1augqx"
                 >
                   {concept.text}
                 </motion.text>
@@ -336,7 +336,7 @@ export default function BeginnerPathSection() {
                       : 0,
                   }}
                   transition={{ duration: 0.5, delay: concept.delay }}
-                  data-oid="3zzra1k"
+                  data-oid="w_4iabc"
                 />
               </motion.g>
             );
@@ -354,51 +354,51 @@ export default function BeginnerPathSection() {
               pathLength: exitPathwayPathLength,
             }}
             transition={{ duration: 0.5 }}
-            data-oid="q5s-7qt"
+            data-oid="514s8a_"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="7y-s1qw">
+      <div className="container mx-auto px-4 relative z-10" data-oid="q0myz8t">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: headerOpacity, y: headerY }}
-          data-oid="5tdmfwo"
+          data-oid=".4rk_hi"
         >
           <h2
             className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="up0dr_g"
+            data-oid="64l0yap"
           >
             Beginner Property Investor Path
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="4x7t2cw"
+            data-oid="y_tan78"
           >
             Build a strong foundation in property investment and understand the
             Singapore market
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="ztt2ks8"
+            data-oid="itb19jq"
           ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto" data-oid="pt-3q73">
+        <div className="max-w-4xl mx-auto" data-oid="qmg9_z7">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            data-oid="xujowv_"
+            data-oid=":ztvgm:"
           >
             <h3
               className="text-2xl font-bold text-[#123B79] mb-4"
-              data-oid="yym6vq."
+              data-oid="b733oq1"
             >
               Laying the Foundation
             </h3>
-            <p className="text-gray-700 mb-6" data-oid="f65-l.e">
+            <p className="text-gray-700 mb-6" data-oid="xhi5-on">
               The Beginner Property Investor Path guides you through building a
               solid foundation of knowledge and skills essential for success in
               Singapore's property market. Starting with fundamental concepts
@@ -406,20 +406,20 @@ export default function BeginnerPathSection() {
               structured learning journey prepares you to make informed
               investment decisions with confidence.
             </p>
-            <p className="text-gray-700 mb-6" data-oid="u9c5mxi">
+            <p className="text-gray-700 mb-6" data-oid="w4zfn6i">
               Through a carefully sequenced curriculum covering market analysis,
               financial planning, risk assessment, regulatory frameworks, and
               strategic decision-making, you'll develop the comprehensive
               understanding needed to navigate your first property investments
               successfully.
             </p>
-            <div className="flex justify-center mt-8" data-oid="8bj:.p-">
+            <div className="flex justify-center mt-8" data-oid="2f99ihp">
               <Button
                 className="bg-[#123B79] hover:bg-[#0A2A5E] text-white"
-                data-oid="b_3w5.1"
+                data-oid="x:1hv0i"
               >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" data-oid="vbw9rxv" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid=":0f5lvt" />
               </Button>
             </div>
           </motion.div>

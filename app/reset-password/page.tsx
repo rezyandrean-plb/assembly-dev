@@ -9,27 +9,27 @@ export default function ResetPasswordPage() {
       fallback={
         <div
           className="min-h-screen flex items-center justify-center"
-          data-oid="bsh4x-m"
+          data-oid="riyf7ne"
         >
-          <div className="animate-pulse" data-oid="y8bam.k">
+          <div className="animate-pulse" data-oid="qpuo2-4">
             <div
               className="h-12 w-32 bg-gray-200 rounded mb-4"
-              data-oid="ylf9coo"
+              data-oid="0bh2l55"
             ></div>
             <div
               className="h-8 w-48 bg-gray-200 rounded mb-4"
-              data-oid="dhvnxca"
+              data-oid="r0r:byp"
             ></div>
             <div
               className="h-4 w-64 bg-gray-200 rounded"
-              data-oid=":jh:e_v"
+              data-oid="qkl5fj:"
             ></div>
           </div>
         </div>
       }
-      data-oid="dusrth_"
+      data-oid="p.ta:-y"
     >
-      <ResetPasswordContent data-oid="yncf41r" />
+      <ResetPasswordContent data-oid="llr2.4." />
     </Suspense>
   );
 }

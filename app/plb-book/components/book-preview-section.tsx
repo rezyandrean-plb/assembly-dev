@@ -56,9 +56,9 @@ export default function BookPreviewSection() {
     <section
       className="section preview-section"
       id="preview"
-      data-oid="5gj6a3a"
+      data-oid="qzgrle-"
     >
-      <div className="container" data-oid="a692m:4">
+      <div className="container" data-oid="y-53gb-">
         <h2
           className="section-title text-center"
           ref={(el) => {
@@ -69,13 +69,13 @@ export default function BookPreviewSection() {
               titleAnimRef(el);
             }
           }}
-          data-oid="hpy6.jo"
+          data-oid="ghizbm4"
         >
           Preview
         </h2>
 
-        <div className="preview-container" data-oid="g7gy8vk">
-          <div className="book-preview-wrapper" data-oid="1eydp27">
+        <div className="preview-container" data-oid="lqdn27l">
+          <div className="book-preview-wrapper" data-oid="s317:m6">
             <div
               className={`book-preview ${flipped ? "flipped" : ""}`}
               onClick={handleFlip}
@@ -87,28 +87,28 @@ export default function BookPreviewSection() {
                   bookAnimRef(el);
                 }
               }}
-              data-oid="bz:6jcj"
+              data-oid="e1ondfw"
             >
-              <div className="book-preview-front" data-oid="6im3ol2">
+              <div className="book-preview-front" data-oid="uspi2a3">
                 <img
                   src="/placeholder.svg?height=400&width=300"
                   alt="Book Cover"
                   className="book-preview-cover"
-                  data-oid="-pwo6-3"
+                  data-oid="nx.wyct"
                 />
               </div>
-              <div className="book-preview-back" data-oid="e0xqwac">
-                <div className="book-preview-content" data-oid=".g67x4-">
-                  <h3 className="book-preview-title" data-oid=".6f4:5g">
+              <div className="book-preview-back" data-oid="w8qps2.">
+                <div className="book-preview-content" data-oid="fwt5hgz">
+                  <h3 className="book-preview-title" data-oid="2eagxoq">
                     Chapter 1: The Beginning
                   </h3>
-                  <p className="book-preview-text" data-oid="jn0jn4_">
+                  <p className="book-preview-text" data-oid="ft3hv-p">
                     The Singapore property market has always been dynamic, with
                     unique characteristics that set it apart from other global
                     markets. Understanding these nuances is the first step to
                     successful property investment.
                   </p>
-                  <p className="book-preview-text" data-oid="zauq480">
+                  <p className="book-preview-text" data-oid="56e6b43">
                     In this chapter, we explore the fundamentals that every
                     property investor in Singapore should know before making
                     their first purchase.
@@ -118,11 +118,11 @@ export default function BookPreviewSection() {
             </div>
           </div>
 
-          <p className="preview-instructions" data-oid="qlod5y_">
+          <p className="preview-instructions" data-oid="0it9vcm">
             Click the book to flip
           </p>
 
-          <div className="quotes-container" data-oid="_x:f_3t">
+          <div className="quotes-container" data-oid="3ogntx3">
             <div
               className="quote"
               ref={(el) => {
@@ -133,14 +133,14 @@ export default function BookPreviewSection() {
                   quote1AnimRef(el);
                 }
               }}
-              data-oid="0ex1my0"
+              data-oid="lw0m..e"
             >
-              <p className="quote-text" data-oid="iosazzv">
+              <p className="quote-text" data-oid="l9jf4h.">
                 "Understanding the property cycle is crucial for timing your
                 investments. This book provides clear insights into recognizing
                 market phases."
               </p>
-              <p className="quote-page" data-oid="60d2ra5">
+              <p className="quote-page" data-oid="xhzudo9">
                 — Page 42
               </p>
             </div>
@@ -155,13 +155,13 @@ export default function BookPreviewSection() {
                   quote2AnimRef(el);
                 }
               }}
-              data-oid="p-uae4e"
+              data-oid="t.u0:v_"
             >
-              <p className="quote-text" data-oid="48ma6pv">
+              <p className="quote-text" data-oid="xbnv3p2">
                 "The difference between a good and great property investment
                 often comes down to location, timing, and financing strategy."
               </p>
-              <p className="quote-page" data-oid="jokejf3">
+              <p className="quote-page" data-oid="5eyh418">
                 — Page 87
               </p>
             </div>

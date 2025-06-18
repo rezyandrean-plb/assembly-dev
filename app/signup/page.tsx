@@ -171,49 +171,49 @@ export default function SignupPage() {
     countryCodes[0];
 
   return (
-    <NetworkProvider data-oid="okmjjvl">
+    <NetworkProvider data-oid="hzaobsn">
       <main
         className="relative overflow-hidden bg-[#F5F5F5] min-h-screen"
-        data-oid="j_vex.2"
+        data-oid="1xhzi43"
       >
         <NetworkBackground
           scrollY={0}
           scrollSpeed={0}
           windowHeight={0}
           opacity={0.3}
-          data-oid="bkmuu5u"
+          data-oid="jghwq3e"
         />
 
-        <Navbar data-oid="on5oesb" />
+        <Navbar data-oid=":ty1bz4" />
 
-        <section className="pt-32 pb-16 relative z-10" data-oid="n_rs.72">
+        <section className="pt-32 pb-16 relative z-10" data-oid="__r.yfk">
           <div
             className="container mx-auto px-4 relative z-10"
-            data-oid=".-mioh0"
+            data-oid="kdwt996"
           >
             <div
               className="max-w-md mx-auto bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200"
-              data-oid="ffsiey:"
+              data-oid="ia248hv"
             >
               <div
                 className="flex justify-between items-center p-4 border-b"
-                data-oid="zv.c94r"
+                data-oid="g-mywmg"
               >
-                <h3 className="font-bold text-lg" data-oid="5j4-uye">
+                <h3 className="font-bold text-lg" data-oid="mbh2s5t">
                   Create an Account
                 </h3>
                 <Link
                   href="/"
                   className="p-1 rounded-full hover:bg-gray-100"
-                  data-oid="68awncs"
+                  data-oid="iek1h:s"
                 >
-                  <X className="h-5 w-5" data-oid="1z-q1fk" />
+                  <X className="h-5 w-5" data-oid="rrou3ij" />
                 </Link>
               </div>
 
               {!isSuccess ? (
-                <div className="p-6" data-oid="85yj9-j">
-                  <p className="mb-6" data-oid="gbs-0tv">
+                <div className="p-6" data-oid="0:ejp24">
+                  <p className="mb-6" data-oid="_1c8ef:">
                     Join Assembly.sg to access exclusive property investment
                     courses and resources.
                   </p>
@@ -221,14 +221,14 @@ export default function SignupPage() {
                   <form
                     onSubmit={handleSubmit}
                     className="space-y-4"
-                    data-oid="yhmr.3r"
+                    data-oid="428twwo"
                   >
-                    <div className="grid grid-cols-2 gap-4" data-oid="ya4mp.9">
-                      <div data-oid="m3_zs36">
+                    <div className="grid grid-cols-2 gap-4" data-oid=".ogv2lb">
+                      <div data-oid="qs8zgre">
                         <label
                           htmlFor="firstName"
                           className="block text-sm font-medium text-gray-700 mb-1"
-                          data-oid="rcv7m1w"
+                          data-oid="rr:0hud"
                         >
                           First Name
                         </label>
@@ -244,24 +244,24 @@ export default function SignupPage() {
                               : "border-gray-300"
                           } rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                           placeholder="John"
-                          data-oid="ioi-8so"
+                          data-oid="gxxgnk1"
                         />
 
                         {errors.firstName && (
                           <p
                             className="mt-1 text-sm text-red-600"
-                            data-oid="9h6k9.-"
+                            data-oid="iyl0azt"
                           >
                             {errors.firstName}
                           </p>
                         )}
                       </div>
 
-                      <div data-oid="d8ulsv3">
+                      <div data-oid="j0p-evd">
                         <label
                           htmlFor="lastName"
                           className="block text-sm font-medium text-gray-700 mb-1"
-                          data-oid="nu0u0jc"
+                          data-oid="gwlq5bw"
                         >
                           Last Name
                         </label>
@@ -277,13 +277,13 @@ export default function SignupPage() {
                               : "border-gray-300"
                           } rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                           placeholder="Doe"
-                          data-oid="6:jwcks"
+                          data-oid="-oj8tij"
                         />
 
                         {errors.lastName && (
                           <p
                             className="mt-1 text-sm text-red-600"
-                            data-oid="7xd7iv2"
+                            data-oid="7ilq:8s"
                           >
                             {errors.lastName}
                           </p>
@@ -291,11 +291,11 @@ export default function SignupPage() {
                       </div>
                     </div>
 
-                    <div data-oid="azqjoru">
+                    <div data-oid=".u_4hhd">
                       <label
                         htmlFor="email"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="4id.6.c"
+                        data-oid="01ntw.2"
                       >
                         Email Address
                       </label>
@@ -309,29 +309,29 @@ export default function SignupPage() {
                           errors.email ? "border-red-500" : "border-gray-300"
                         } rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                         placeholder="your@email.com"
-                        data-oid="s.o8wz4"
+                        data-oid="j674tv4"
                       />
 
                       {errors.email && (
                         <p
                           className="mt-1 text-sm text-red-600"
-                          data-oid="7hawp2a"
+                          data-oid="53hasku"
                         >
                           {errors.email}
                         </p>
                       )}
                     </div>
 
-                    <div data-oid="dmdni68">
+                    <div data-oid=":gdyvw4">
                       <label
                         htmlFor="phoneNumber"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="-.8_42a"
+                        data-oid="srpda9y"
                       >
                         Mobile Number
                       </label>
-                      <div className="flex" data-oid="cvpx9_f">
-                        <div className="relative" data-oid="2x7mayk">
+                      <div className="flex" data-oid="jw72aoz">
+                        <div className="relative" data-oid="5obdh-0">
                           <button
                             type="button"
                             className={`flex items-center justify-between px-3 py-2 border ${
@@ -342,29 +342,29 @@ export default function SignupPage() {
                             onClick={() =>
                               setShowCountryDropdown(!showCountryDropdown)
                             }
-                            data-oid="92a-2pg"
+                            data-oid="s1lwwj3"
                           >
                             <span
                               className="flex items-center"
-                              data-oid="r8u2m6_"
+                              data-oid="hnnrpa5"
                             >
-                              <span className="mr-2 text-lg" data-oid="3r2.urs">
+                              <span className="mr-2 text-lg" data-oid="_.w7yaj">
                                 {selectedCountry.flag}
                               </span>
-                              <span data-oid="6wctuff">
+                              <span data-oid="d71j30o">
                                 {selectedCountry.dialCode}
                               </span>
                             </span>
                             <ChevronDown
                               className="h-4 w-4 text-gray-500"
-                              data-oid="9ql7q0k"
+                              data-oid="l2aql9n"
                             />
                           </button>
 
                           {showCountryDropdown && (
                             <div
                               className="absolute z-10 mt-1 w-[220px] bg-white shadow-lg max-h-60 rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm border border-gray-200"
-                              data-oid="s3x:tio"
+                              data-oid="u82cx0x"
                             >
                               {countryCodes.map((country) => (
                                 <button
@@ -374,20 +374,20 @@ export default function SignupPage() {
                                   onClick={() =>
                                     handleCountryCodeSelect(country.dialCode)
                                   }
-                                  data-oid="6rs_8wq"
+                                  data-oid="h0lxqpe"
                                 >
                                   <span
                                     className="mr-2 text-lg"
-                                    data-oid="kt:sy4f"
+                                    data-oid="bhmet:1"
                                   >
                                     {country.flag}
                                   </span>
-                                  <span className="mr-2" data-oid="jkbd9ru">
+                                  <span className="mr-2" data-oid="2qxin8p">
                                     {country.dialCode}
                                   </span>
                                   <span
                                     className="text-gray-500"
-                                    data-oid="lywd2ab"
+                                    data-oid="iwcpk3_"
                                   >
                                     {country.name}
                                   </span>
@@ -409,28 +409,28 @@ export default function SignupPage() {
                               : "border-gray-300"
                           } rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                           placeholder="81234567"
-                          data-oid="cdtya:y"
+                          data-oid="d-7i8dy"
                         />
                       </div>
                       {errors.phoneNumber && (
                         <p
                           className="mt-1 text-sm text-red-600"
-                          data-oid="l_2f-4v"
+                          data-oid="d1n2gkf"
                         >
                           {errors.phoneNumber}
                         </p>
                       )}
                     </div>
 
-                    <div data-oid="8gpi1_s">
+                    <div data-oid="33u_k7.">
                       <label
                         htmlFor="password"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="1l0cszw"
+                        data-oid=".v1roqt"
                       >
                         Password
                       </label>
-                      <div className="relative" data-oid="zg.zzs_">
+                      <div className="relative" data-oid="64kit5k">
                         <input
                           type={showPassword ? "text" : "password"}
                           id="password"
@@ -443,24 +443,24 @@ export default function SignupPage() {
                               : "border-gray-300"
                           } rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                           placeholder="••••••••"
-                          data-oid="2eah__z"
+                          data-oid="fo2iol9"
                         />
 
                         <button
                           type="button"
                           className="absolute inset-y-0 right-0 pr-3 flex items-center"
                           onClick={() => setShowPassword(!showPassword)}
-                          data-oid="98_tfxq"
+                          data-oid="-za6wul"
                         >
                           {showPassword ? (
                             <EyeOff
                               className="h-5 w-5 text-gray-400"
-                              data-oid="4zt7rsc"
+                              data-oid="cozyfuv"
                             />
                           ) : (
                             <Eye
                               className="h-5 w-5 text-gray-400"
-                              data-oid="5rxko_a"
+                              data-oid="yh4ek0q"
                             />
                           )}
                         </button>
@@ -468,28 +468,28 @@ export default function SignupPage() {
                       {errors.password && (
                         <p
                           className="mt-1 text-sm text-red-600"
-                          data-oid=":coy23f"
+                          data-oid="ec9yv9."
                         >
                           {errors.password}
                         </p>
                       )}
                       <p
                         className="mt-1 text-xs text-gray-500"
-                        data-oid="rp82b1z"
+                        data-oid="75nni7y"
                       >
                         Password must be at least 8 characters
                       </p>
                     </div>
 
-                    <div data-oid="s6-svv8">
+                    <div data-oid="5glxvy.">
                       <label
                         htmlFor="confirmPassword"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="e13tnf-"
+                        data-oid="5f-3nox"
                       >
                         Confirm Password
                       </label>
-                      <div className="relative" data-oid="__czb:z">
+                      <div className="relative" data-oid="9_0ne7i">
                         <input
                           type={showConfirmPassword ? "text" : "password"}
                           id="confirmPassword"
@@ -502,7 +502,7 @@ export default function SignupPage() {
                               : "border-gray-300"
                           } rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]`}
                           placeholder="••••••••"
-                          data-oid="zaqqqjt"
+                          data-oid="t1ezk2w"
                         />
 
                         <button
@@ -511,17 +511,17 @@ export default function SignupPage() {
                           onClick={() =>
                             setShowConfirmPassword(!showConfirmPassword)
                           }
-                          data-oid="_a4skca"
+                          data-oid="s8-z2ok"
                         >
                           {showConfirmPassword ? (
                             <EyeOff
                               className="h-5 w-5 text-gray-400"
-                              data-oid="xhlbpo9"
+                              data-oid="6b30o99"
                             />
                           ) : (
                             <Eye
                               className="h-5 w-5 text-gray-400"
-                              data-oid="c51l1iv"
+                              data-oid="8a051ab"
                             />
                           )}
                         </button>
@@ -529,7 +529,7 @@ export default function SignupPage() {
                       {errors.confirmPassword && (
                         <p
                           className="mt-1 text-sm text-red-600"
-                          data-oid="a_c57bp"
+                          data-oid="-fux2hi"
                         >
                           {errors.confirmPassword}
                         </p>
@@ -539,7 +539,7 @@ export default function SignupPage() {
                     {errors.general && (
                       <div
                         className="bg-red-50 text-red-600 p-3 rounded-md text-sm"
-                        data-oid="mehmezb"
+                        data-oid="9t:pfmq"
                       >
                         {errors.general}
                       </div>
@@ -549,19 +549,19 @@ export default function SignupPage() {
                       type="submit"
                       className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
                       disabled={isSubmitting}
-                      data-oid="1gg2scq"
+                      data-oid="6ph019t"
                     >
                       {isSubmitting ? (
                         <span
                           className="flex items-center justify-center"
-                          data-oid="dn2h7kl"
+                          data-oid="i6-yh:l"
                         >
                           <svg
                             className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            data-oid="goq4pfw"
+                            data-oid="tyaxh37"
                           >
                             <circle
                               className="opacity-25"
@@ -570,13 +570,13 @@ export default function SignupPage() {
                               r="10"
                               stroke="currentColor"
                               strokeWidth="4"
-                              data-oid="i_lbk.p"
+                              data-oid="_kksdk."
                             ></circle>
                             <path
                               className="opacity-75"
                               fill="currentColor"
                               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                              data-oid="8:pg:nn"
+                              data-oid="e6:2ejj"
                             ></path>
                           </svg>
                           Creating account...
@@ -588,13 +588,13 @@ export default function SignupPage() {
 
                     <div
                       className="text-center text-sm text-gray-500"
-                      data-oid="13yuqj6"
+                      data-oid="2doe:jm"
                     >
                       Already have an account?{" "}
                       <Link
                         href="/login"
                         className="text-[#123B79] hover:underline"
-                        data-oid="23.t2.6"
+                        data-oid="60bjypl"
                       >
                         Log in
                       </Link>
@@ -602,13 +602,13 @@ export default function SignupPage() {
 
                     <div
                       className="text-xs text-gray-500 pt-4"
-                      data-oid="dcgg8wb"
+                      data-oid="0tzq:31"
                     >
                       By creating an account, you agree to our{" "}
                       <Link
                         href="/terms"
                         className="text-[#123B79] hover:underline"
-                        data-oid="-s:bmrm"
+                        data-oid="7o4nct:"
                       >
                         Terms of Service
                       </Link>{" "}
@@ -616,7 +616,7 @@ export default function SignupPage() {
                       <Link
                         href="/privacy"
                         className="text-[#123B79] hover:underline"
-                        data-oid="v692p8r"
+                        data-oid="q120yo6"
                       >
                         Privacy Policy
                       </Link>
@@ -625,31 +625,31 @@ export default function SignupPage() {
                   </form>
                 </div>
               ) : (
-                <div className="p-6 text-center" data-oid="gjitidb">
+                <div className="p-6 text-center" data-oid="2478g6f">
                   <div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4"
-                    data-oid="c8_i.95"
+                    data-oid="4ugr:b3"
                   >
-                    <Check className="h-8 w-8" data-oid="mkz1wqm" />
+                    <Check className="h-8 w-8" data-oid="mxyg8sq" />
                   </div>
                   <h2
                     className="text-xl font-semibold text-gray-800 mb-2"
-                    data-oid="du0fsvp"
+                    data-oid="8r13v7u"
                   >
                     Account Created Successfully!
                   </h2>
-                  <p className="text-gray-600 mb-6" data-oid="u_kmyxu">
+                  <p className="text-gray-600 mb-6" data-oid="v:bwhgh">
                     Welcome to Assembly.sg! You're now being redirected to the
                     homepage.
                   </p>
-                  <div className="flex justify-center" data-oid="1a3xsxn">
+                  <div className="flex justify-center" data-oid="cc6sphi">
                     <div
                       className="w-16 h-1 bg-gray-200 rounded-full overflow-hidden"
-                      data-oid="7e-4s5."
+                      data-oid="47pbdpk"
                     >
                       <div
                         className="h-full bg-green-500 animate-[progress_3s_ease-in-out]"
-                        data-oid="f1w_pi2"
+                        data-oid="c92fv0r"
                       ></div>
                     </div>
                   </div>

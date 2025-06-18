@@ -180,7 +180,7 @@ export default function TripleFocusSection() {
   const focusAreas = [
     {
       icon: (
-        <Building2 className="h-12 w-12 text-orange-500" data-oid="8ckzfog" />
+        <Building2 className="h-12 w-12 text-orange-500" data-oid="csd9.uj" />
       ),
 
       title: "Real Estate",
@@ -191,7 +191,7 @@ export default function TripleFocusSection() {
     },
     {
       icon: (
-        <TrendingUp className="h-12 w-12 text-blue-500" data-oid="bsjpc1g" />
+        <TrendingUp className="h-12 w-12 text-blue-500" data-oid="cuujc6h" />
       ),
 
       title: "Finance",
@@ -204,7 +204,7 @@ export default function TripleFocusSection() {
       icon: (
         <GraduationCap
           className="h-12 w-12 text-green-500"
-          data-oid="g3kt9_r"
+          data-oid="k69inqr"
         />
       ),
 
@@ -243,35 +243,35 @@ export default function TripleFocusSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-white relative overflow-hidden"
-      data-oid="bodgsha"
+      data-oid="6eg5sa9"
     >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
-        data-oid="e3sm22p"
+        data-oid="659h4bw"
       />
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="9.x.nzs">
+      <div className="container mx-auto px-4 relative z-10" data-oid="277exzp">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          data-oid="mlj9rwk"
+          data-oid="haiorq4"
         >
-          <h2 className="text-4xl font-bold text-gray-900" data-oid="z0y0xp6">
+          <h2 className="text-4xl font-bold text-gray-900" data-oid="dxcm614">
             Our Triple Focus
           </h2>
           <p
             className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
-            data-oid="g5gay:7"
+            data-oid="f2zfg1a"
           >
             Assembly brings together three essential pillars for success in
             Singapore's real estate industry
           </p>
           <div
             className="w-20 h-1 bg-orange-500 mx-auto mt-4"
-            data-oid="opawru7"
+            data-oid="xqhyc:9"
           ></div>
         </motion.div>
 
@@ -280,7 +280,7 @@ export default function TripleFocusSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          data-oid="y9zhi32"
+          data-oid="j32v4lr"
         >
           {focusAreas.map((focus, index) => (
             <motion.div
@@ -288,32 +288,32 @@ export default function TripleFocusSection() {
               className="bg-white rounded-xl p-8 shadow-lg border hover:shadow-xl transition-shadow duration-300"
               style={{ borderColor: focus.borderColor.split("-")[1] }}
               variants={itemVariants}
-              data-oid="7zoseh7"
+              data-oid="7tv6d6z"
             >
               <div
                 className={`rounded-full p-4 inline-block bg-gradient-to-br ${focus.color} mb-6`}
-                data-oid="oosacxy"
+                data-oid="g5tvwn:"
               >
                 {focus.icon}
               </div>
               <h3
                 className="text-2xl font-bold text-gray-800 mb-4"
-                data-oid="20:ezjy"
+                data-oid="3mxrsxb"
               >
                 {focus.title}
               </h3>
-              <p className="text-gray-600" data-oid="_w4hd0v">
+              <p className="text-gray-600" data-oid="e8vg_3w">
                 {focus.description}
               </p>
 
               <div
                 className="mt-6 pt-6 border-t border-gray-100"
-                data-oid="1:c00w."
+                data-oid="qw.866w"
               >
                 <a
                   href={`/${focus.title.toLowerCase().replace(" ", "-")}`}
                   className="inline-flex items-center text-gray-700 font-medium hover:text-orange-500 transition-colors"
-                  data-oid="gaedu._"
+                  data-oid="od-5885"
                 >
                   Explore {focus.title}
                   <svg
@@ -321,14 +321,14 @@ export default function TripleFocusSection() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    data-oid="5k6_keg"
+                    data-oid="s:_.rl-"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      data-oid="x97orqy"
+                      data-oid="uj4n.xm"
                     ></path>
                   </svg>
                 </a>

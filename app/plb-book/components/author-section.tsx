@@ -29,9 +29,9 @@ export default function AuthorSection() {
   });
 
   return (
-    <section className="section author-section" data-oid="m:l4c.m">
-      <div className="container" data-oid=":tsarhg">
-        <div className="author-content" data-oid="ac1f6gq">
+    <section className="section author-section" data-oid="1.:.5lj">
+      <div className="container" data-oid="s1jdhnq">
+        <div className="author-content" data-oid="ggmp5ix">
           <div
             className="author-image-wrapper"
             ref={(el) => {
@@ -42,16 +42,16 @@ export default function AuthorSection() {
                 imageAnimRef(el);
               }
             }}
-            data-oid="5j1m-rw"
+            data-oid="3r5uc5u"
           >
             <img
               src="/placeholder.svg?height=400&width=400"
               alt="Property Lim Brothers Team"
               className="author-image"
-              data-oid="07gf3db"
+              data-oid=".-occwz"
             />
 
-            <div className="author-image-decoration" data-oid="0r5slp4"></div>
+            <div className="author-image-decoration" data-oid="8x.emh9"></div>
           </div>
 
           <div
@@ -64,44 +64,44 @@ export default function AuthorSection() {
                 infoAnimRef(el);
               }
             }}
-            data-oid="w5pireq"
+            data-oid="2py.fxj"
           >
-            <h2 className="author-name" data-oid="4dm_.n_">
+            <h2 className="author-name" data-oid="lzxz8nw">
               Property Lim Brothers
             </h2>
-            <p className="author-title feature-text" data-oid="q0e-2dx">
+            <p className="author-title feature-text" data-oid="mbrsv3l">
               Singapore's Property Experts
             </p>
-            <p className="author-bio" data-oid="-d:282d">
+            <p className="author-bio" data-oid="gp3bv7:">
               Property Lim Brothers is Singapore's leading property consultancy,
               with decades of experience in the local real estate market. Our
               team of experts has helped thousands of clients make informed
               property investment decisions.
             </p>
-            <div className="social-links" data-oid="9cutqho">
+            <div className="social-links" data-oid="5xb0i:t">
               <a
                 href="#"
                 className="social-link"
                 aria-label="Twitter"
-                data-oid="6-hx0:t"
+                data-oid="f3g4a-7"
               >
-                <Twitter size={20} data-oid="j_ap_xi" />
+                <Twitter size={20} data-oid="k:owg9q" />
               </a>
               <a
                 href="#"
                 className="social-link"
                 aria-label="Instagram"
-                data-oid="2x4xmov"
+                data-oid=":p8yl4g"
               >
-                <Instagram size={20} data-oid="3s9auzd" />
+                <Instagram size={20} data-oid="9653s5_" />
               </a>
               <a
                 href="#"
                 className="social-link"
                 aria-label="LinkedIn"
-                data-oid="2v_5vy-"
+                data-oid="pl0.sme"
               >
-                <Linkedin size={20} data-oid="j2xmto2" />
+                <Linkedin size={20} data-oid="k804ww8" />
               </a>
             </div>
           </div>

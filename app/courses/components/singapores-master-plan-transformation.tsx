@@ -2,5 +2,5 @@ import CourseDetailTemplate from "./course-detail-template";
 import courseData from "../data/singapores-master-plan-transformation";
 
 export default function SingaporesMasterPlanTransformation() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="kuj._08" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="4-71dqn" />;
 }

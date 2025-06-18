@@ -28,18 +28,18 @@ export function FAQItem({
   return (
     <div
       className="bg-white rounded-lg shadow-md overflow-hidden"
-      data-oid="d5gp5k9"
+      data-oid="bj0ufbw"
     >
       <button
         className="w-full p-6 flex items-center focus:outline-none transition-colors duration-300 hover:bg-gray-50 min-h-[80px]"
         onClick={onClick}
         aria-expanded={isOpen}
-        data-oid="cebs_mc"
+        data-oid="34zmnav"
       >
-        <div className="flex-grow flex items-center" data-oid="pwoflfw">
+        <div className="flex-grow flex items-center" data-oid="a8qncm-">
           <h3
             className="text-xl font-medium text-primary text-left w-full max-w-3xl px-4"
-            data-oid="powhqgb"
+            data-oid="kywum5b"
           >
             {question}
           </h3>
@@ -49,7 +49,7 @@ export function FAQItem({
             "h-5 w-5 text-primary transition-transform duration-300 ease-in-out flex-shrink-0",
             isOpen && "transform rotate-180",
           )}
-          data-oid="wyak10q"
+          data-oid=".2hv_o9"
         />
       </button>
       <div
@@ -59,15 +59,15 @@ export function FAQItem({
           "overflow-hidden transition-all duration-300 ease-in-out",
           isOpen ? "opacity-100" : "opacity-0",
         )}
-        data-oid=".93jce7"
+        data-oid="jgbxdh6"
       >
         <div
           className="p-6 pt-0 flex items-center min-h-[60px]"
-          data-oid="469bju0"
+          data-oid="t9_p.f0"
         >
           <p
             className="mx-auto max-w-3xl px-4 w-full text-left"
-            data-oid="uoxouhl"
+            data-oid="2eluo0x"
           >
             {answer}
           </p>

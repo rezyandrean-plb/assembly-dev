@@ -2,5 +2,5 @@ import CourseDetailTemplate from "./course-detail-template";
 import { courseData } from "../data/maximizing-your-property-investment";
 
 export default function MaximizingYourPropertyInvestment() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="9e7fcsb" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="f6e:7c-" />;
 }

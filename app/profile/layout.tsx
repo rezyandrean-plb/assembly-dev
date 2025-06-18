@@ -41,31 +41,31 @@ export default function ProfileLayout({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16 relative" data-oid="xe:af.w">
+    <div className="min-h-screen bg-gray-50 pt-16 relative" data-oid="umbruyu">
       <NetworkBackground
         scrollY={scrollY}
         scrollSpeed={0.5}
         windowHeight={0}
         opacity={0.05}
-        data-oid="cnr-40p"
+        data-oid="zjxie7g"
       />
 
       {/* Use the ProfileNavbar component */}
-      <ProfileNavbar data-oid="za01v0-" />
+      <ProfileNavbar data-oid="kzn_oze" />
 
-      <div className="flex" data-oid="j50mapx">
+      <div className="flex" data-oid="uaypfo8">
         {/* Sidebar */}
         <div
           className="w-64 fixed left-0 top-16 bg-white shadow-sm z-10 h-screen"
           style={{ maxHeight: "calc(100vh - 16px)", overflowY: "auto" }}
-          data-oid="snrxwts"
+          data-oid="_:7v8rp"
         >
-          <div className="flex flex-col h-full" data-oid="028qpoh">
-            <div className="p-4" data-oid="j5evvvh">
-              <div className="flex items-center gap-3" data-oid="dadjf6o">
+          <div className="flex flex-col h-full" data-oid="3yy0cyp">
+            <div className="p-4" data-oid="rl-b:24">
+              <div className="flex items-center gap-3" data-oid="v9lp5za">
                 <div
                   className="w-10 h-10 rounded-full overflow-hidden"
-                  data-oid="3.2q.3c"
+                  data-oid="_aa8:h_"
                 >
                   <Image
                     src="/profile-placeholder.png"
@@ -73,13 +73,13 @@ export default function ProfileLayout({
                     width={40}
                     height={40}
                     className="object-cover"
-                    data-oid="xl57hme"
+                    data-oid="-lbffke"
                   />
                 </div>
-                <div className="flex-1 min-w-0" data-oid="qtrsddd">
+                <div className="flex-1 min-w-0" data-oid="l5g0epu">
                   <h3
                     className="text-sm font-medium text-gray-900 truncate"
-                    data-oid="q7k667_"
+                    data-oid="ub-r.sn"
                   >
                     Melvin Lim
                   </h3>
@@ -87,10 +87,10 @@ export default function ProfileLayout({
               </div>
             </div>
 
-            <div className="px-3 py-2" data-oid="xa3ltpt">
+            <div className="px-3 py-2" data-oid="y-p0vz8">
               <p
                 className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 mb-2"
-                data-oid="bll5-ze"
+                data-oid="5fg6mw5"
               >
                 MAIN NAVIGATION
               </p>
@@ -101,9 +101,9 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid="gu5qh3_"
+                data-oid="7i7thet"
               >
-                <Home size={18} data-oid="mjtozsz" />
+                <Home size={18} data-oid="dcbjbjb" />
                 Dashboard
               </Link>
               <Link
@@ -113,9 +113,9 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid="xpxc:.a"
+                data-oid="o1lpaz3"
               >
-                <User size={18} data-oid="74d6nfq" />
+                <User size={18} data-oid="ka3zp0k" />
                 Learning Preferences
               </Link>
               <Link
@@ -125,9 +125,9 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid="8:9zlly"
+                data-oid="gdewxrs"
               >
-                <BookOpen size={18} data-oid="j3wmoe6" />
+                <BookOpen size={18} data-oid="1ueh.rt" />
                 Learning Progress
               </Link>
               <Link
@@ -137,9 +137,9 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid="9c5h-lo"
+                data-oid="fxj2a-n"
               >
-                <Award size={18} data-oid="al9jg47" />
+                <Award size={18} data-oid="gnh-ej4" />
                 Completed Courses
               </Link>
               <Link
@@ -149,9 +149,9 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid="vv6aorp"
+                data-oid="selm6k7"
               >
-                <MessageSquare size={18} data-oid="73:87xu" />
+                <MessageSquare size={18} data-oid="svftw_b" />
                 My Reviews
               </Link>
               <Link
@@ -161,19 +161,19 @@ export default function ProfileLayout({
                     ? "bg-blue-50 text-blue-600"
                     : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                 }`}
-                data-oid=":baw3ep"
+                data-oid="7ov53y-"
               >
-                <Heart size={18} data-oid="0lf.wdd" />
+                <Heart size={18} data-oid="xc8._hb" />
                 Wishlist
               </Link>
             </div>
 
-            <div className="mt-auto p-4" data-oid="yl10b-f">
+            <div className="mt-auto p-4" data-oid="wf-nna2">
               <button
                 className="w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 text-red-600 hover:bg-red-50"
-                data-oid="zpfxfhy"
+                data-oid="2edioz5"
               >
-                <LogOut size={18} data-oid="1jepet2" />
+                <LogOut size={18} data-oid="0motw2c" />
                 Logout
               </button>
             </div>
@@ -181,10 +181,10 @@ export default function ProfileLayout({
         </div>
 
         {/* Main Content */}
-        <div className="ml-64 flex-1 pb-16 min-h-screen" data-oid="v9:3k5.">
+        <div className="ml-64 flex-1 pb-16 min-h-screen" data-oid="98pet52">
           <Suspense
-            fallback={<div data-oid="dcv4wdk">Loading...</div>}
-            data-oid="hea.m33"
+            fallback={<div data-oid="56pyc4v">Loading...</div>}
+            data-oid="thtdbz."
           >
             {children}
           </Suspense>

@@ -24,58 +24,58 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
-      data-oid="gkaz56:"
+      data-oid="nf4lu55"
     >
       <div
         className="relative bg-white rounded-lg shadow-xl w-full max-w-md p-8"
-        data-oid="xg82:5d"
+        data-oid="z2s2mr2"
       >
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
-          data-oid="sypx:in"
+          data-oid="a6a5r_3"
         >
           <svg
             className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            data-oid="dqimyj."
+            data-oid=".n79j.b"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M6 18L18 6M6 6l12 12"
-              data-oid="u7203iy"
+              data-oid="ik.ibm8"
             />
           </svg>
         </button>
-        <div className="text-center" data-oid="fgi_eb7">
-          <h2 className="text-2xl font-bold mb-2" data-oid="1fm-e8j">
+        <div className="text-center" data-oid="f2siu-n">
+          <h2 className="text-2xl font-bold mb-2" data-oid="nesv:57">
             Returning Customers
           </h2>
-          <p className="text-sm text-gray-600 mb-2" data-oid="ru:eof3">
+          <p className="text-sm text-gray-600 mb-2" data-oid="9g3l6ba">
             Please sign in to enjoy a faster checkout experience.
           </p>
-          <p className="text-sm text-gray-600 mb-6" data-oid="je0oguy">
+          <p className="text-sm text-gray-600 mb-6" data-oid="hj84eal">
             Not yet a member?{" "}
             <Link
               href="/signup"
               className="font-semibold text-primary hover:underline"
-              data-oid="zztkdz5"
+              data-oid="ovnev6:"
             >
               Sign up
             </Link>
           </p>
 
-          <form data-oid="479f:tw">
-            <div className="space-y-4 text-left" data-oid="pjgyymd">
-              <div data-oid="e13fbuz">
+          <form data-oid="0-bg4ub">
+            <div className="space-y-4 text-left" data-oid=".amth4q">
+              <div data-oid="j:4f1mc">
                 <label
                   className="block text-sm font-medium text-gray-700 mb-1"
                   htmlFor="email"
-                  data-oid="c6a:inh"
+                  data-oid="gy.byz9"
                 >
                   EMAIL*
                 </label>
@@ -84,14 +84,14 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                   id="email"
                   className="input input-bordered w-full"
                   defaultValue="pyee.t104@gmail.com"
-                  data-oid="t:4u.-7"
+                  data-oid="1f61nn3"
                 />
               </div>
-              <div data-oid="h2m.mtf">
+              <div data-oid="bggao7-">
                 <label
                   className="block text-sm font-medium text-gray-700 mb-1"
                   htmlFor="password"
-                  data-oid="fhro9c4"
+                  data-oid="0rwi2ha"
                 >
                   PASSWORD*
                 </label>
@@ -100,18 +100,18 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                   id="password"
                   className="input input-bordered w-full"
                   defaultValue="********"
-                  data-oid="skar.oa"
+                  data-oid="ln6u8k7"
                 />
               </div>
             </div>
             <div
               className="flex justify-between items-center mt-4"
-              data-oid="mej-3j-"
+              data-oid=".1_8ecy"
             >
               <a
                 href="#"
                 className="text-sm text-primary hover:underline"
-                data-oid="pmb6mhz"
+                data-oid="5:qp95g"
               >
                 Forgotten your password?
               </a>
@@ -120,20 +120,20 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
               type="button"
               onClick={handleLogin}
               className="btn btn-primary w-full mt-6"
-              data-oid="8ge7v:l"
+              data-oid="e68t-ua"
             >
               CONTINUE TO CHECKOUT
             </button>
-            <div className="mt-4 text-left" data-oid="dv2xp:w">
-              <label className="flex items-center" data-oid="2acqtqh">
+            <div className="mt-4 text-left" data-oid="o_wlmtc">
+              <label className="flex items-center" data-oid="zv..b9b">
                 <input
                   type="checkbox"
                   className="checkbox checkbox-primary"
                   defaultChecked
-                  data-oid="h_.rwz5"
+                  data-oid=".gvf43h"
                 />
 
-                <span className="ml-2 text-sm text-gray-700" data-oid="d.:u6nd">
+                <span className="ml-2 text-sm text-gray-700" data-oid="x6d96j_">
                   Keep me signed in
                 </span>
               </label>

@@ -42,39 +42,39 @@ export default function OrderSummary() {
   const orderTotal = orderTotalBeforeGst + gst;
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow" data-oid="ujkkc.m">
-      <h2 className="text-xl font-bold mb-6" data-oid="w37jjve">
+    <div className="bg-white p-6 rounded-lg shadow" data-oid="j-n:c-y">
+      <h2 className="text-xl font-bold mb-6" data-oid="t6xgsij">
         Order Summary
       </h2>
-      <div className="space-y-4" data-oid="xk-ln07">
-        <div className="flex justify-between" data-oid="7xhyd0f">
-          <span data-oid="oifv9nq">Subtotal</span>
-          <span data-oid="4hpduq.">{formatPrice(subtotal)}</span>
+      <div className="space-y-4" data-oid="rb1h2yp">
+        <div className="flex justify-between" data-oid="c-cdko1">
+          <span data-oid="m9yxdh_">Subtotal</span>
+          <span data-oid="tw9u:58">{formatPrice(subtotal)}</span>
         </div>
         {discount > 0 && (
-          <div className="flex justify-between text-red-600" data-oid="aab641a">
-            <span data-oid="17arccm">Discount</span>
-            <span data-oid="i6:x71:">-{formatPrice(discount)}</span>
+          <div className="flex justify-between text-red-600" data-oid="1x5cl-1">
+            <span data-oid="hqhldjr">Discount</span>
+            <span data-oid="8qn6p0h">-{formatPrice(discount)}</span>
           </div>
         )}
-        <div className="flex justify-between" data-oid="ox2w7qn">
-          <span data-oid=":q32yig">Estimated Shipping</span>
-          <span data-oid="kn0xt:8">
+        <div className="flex justify-between" data-oid="8zm60lp">
+          <span data-oid="4y6:ztv">Estimated Shipping</span>
+          <span data-oid="u:u-daa">
             {shippingCost > 0 ? formatPrice(shippingCost) : "FREE"}
           </span>
         </div>
-        <p className="text-xs text-gray-500 mt-1" data-oid="y8uyn21">
+        <p className="text-xs text-gray-500 mt-1" data-oid="g5_eqg:">
           Actual shipping cost is calculated once we know your delivery details
         </p>
-        <div className="border-t border-gray-200 my-4" data-oid="y7yya.8"></div>
+        <div className="border-t border-gray-200 my-4" data-oid="ckn_1d4"></div>
         <div
           className="flex justify-between font-bold text-lg"
-          data-oid="hxtpw9b"
+          data-oid="fulyotu"
         >
-          <span data-oid="g617p.m">Order Total</span>
-          <span data-oid="yh5o8hg">{formatPrice(orderTotal)}</span>
+          <span data-oid="4k6tzb:">Order Total</span>
+          <span data-oid="t1rpdsi">{formatPrice(orderTotal)}</span>
         </div>
-        <div className="text-right text-sm text-gray-500" data-oid="-l1frda">
+        <div className="text-right text-sm text-gray-500" data-oid="0avh1mi">
           Including {formatPrice(gst)} GST
         </div>
       </div>

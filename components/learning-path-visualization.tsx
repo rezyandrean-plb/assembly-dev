@@ -72,35 +72,35 @@ export default function LearningPathVisualization() {
   ];
 
   return (
-    <div className="py-16" data-oid="yn7heh4">
-      <div className="container mx-auto px-4" data-oid="v1hzrhv">
-        <div className="text-center mb-16" data-oid="s6x2mt:">
+    <div className="py-16" data-oid="ldmf7l2">
+      <div className="container mx-auto px-4" data-oid="eb1yc53">
+        <div className="text-center mb-16" data-oid="5cahnco">
           <h2
             className="text-3xl font-bold text-[#123B79] mb-4"
-            data-oid="ur20cfc"
+            data-oid="9w_lho9"
           >
             Learning Paths
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto" data-oid="du7kwdr">
+          <p className="text-gray-700 max-w-3xl mx-auto" data-oid="e-c-zrd">
             Structured course sequences designed to guide you from beginner to
             expert in specific areas
           </p>
           <div
             className="w-16 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="2jz9cqd"
+            data-oid="v40de29"
           ></div>
         </div>
 
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          data-oid="dw7_f0a"
+          data-oid="85620cj"
         >
           {paths.map((path, index) => (
             <PathCard
               key={index}
               path={path}
               index={index}
-              data-oid="f.8ohds"
+              data-oid="z0gcmer"
             />
           ))}
         </div>
@@ -183,7 +183,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
             style={{ transformOrigin: "left" }}
-            data-oid="y7:ac-a"
+            data-oid="2uo::3h"
           />
         ),
       };
@@ -230,7 +230,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "loop",
               }}
-              data-oid="-kkw:pv"
+              data-oid="d:d0.h9"
             />
           )),
       };
@@ -267,7 +267,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  data-oid="jto6u.8"
+                  data-oid="kifo329"
                 />
 
                 <motion.line
@@ -281,7 +281,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  data-oid="851_:zi"
+                  data-oid="fe_n07j"
                 />
 
                 <motion.line
@@ -295,7 +295,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  data-oid="_scide4"
+                  data-oid="p8cy6xs"
                 />
               </>
             )}
@@ -330,18 +330,18 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
       transition={{ duration: 0.5, delay: 0.2 * index }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="k2q90ua"
+      data-oid="77zoir."
     >
       <div
         className="h-3"
         style={{ backgroundColor: path.color }}
-        data-oid="gu-5rad"
+        data-oid="7__x.44"
       ></div>
-      <div className="p-6" data-oid="x-xbvi4">
+      <div className="p-6" data-oid="_26-kpa">
         <div
           className="rounded-full w-14 h-14 flex items-center justify-center mb-4"
           style={{ backgroundColor: path.color }}
-          data-oid="_91l4qm"
+          data-oid="trd.e6."
         >
           {index === 0 ? (
             <svg
@@ -351,7 +351,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              data-oid="9mb_:33"
+              data-oid="zqjkr04"
             >
               <rect
                 x="3"
@@ -359,13 +359,13 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                 width="18"
                 height="18"
                 rx="2"
-                data-oid="vtb62sd"
+                data-oid="z.261t-"
               />
 
-              <path d="M9 3v18" data-oid="0onc33l" />
-              <path d="M14 8h.01" data-oid="b:eph_:" />
-              <path d="M14 12h.01" data-oid="h6f0d79" />
-              <path d="M14 16h.01" data-oid=".vfepyr" />
+              <path d="M9 3v18" data-oid="xzs986x" />
+              <path d="M14 8h.01" data-oid=":uxum7h" />
+              <path d="M14 12h.01" data-oid="0c5.d9a" />
+              <path d="M14 16h.01" data-oid="rs:d9ri" />
             </svg>
           ) : index === 1 ? (
             <svg
@@ -375,16 +375,16 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              data-oid="a1p7bp2"
+              data-oid="8z6t:6y"
             >
-              <path d="M2 12h6" data-oid="n1wgo-f" />
-              <path d="M22 12h-6" data-oid="rx2hmxv" />
-              <path d="M12 2v2" data-oid="mhly3m-" />
-              <path d="M12 8v2" data-oid="yy4d1w4" />
-              <path d="M12 14v2" data-oid="7q-zy7." />
-              <path d="M12 20v2" data-oid="ikct.a8" />
-              <path d="M19 9l-7 3-7-3" data-oid="z68hrw1" />
-              <path d="M19 15l-7-3-7 3" data-oid="80pcg_m" />
+              <path d="M2 12h6" data-oid="87hyaw:" />
+              <path d="M22 12h-6" data-oid="6_p8wtv" />
+              <path d="M12 2v2" data-oid="6k6hnab" />
+              <path d="M12 8v2" data-oid="1h57us7" />
+              <path d="M12 14v2" data-oid="3kwk.p0" />
+              <path d="M12 20v2" data-oid="2vq6gbr" />
+              <path d="M19 9l-7 3-7-3" data-oid="riyo3hc" />
+              <path d="M19 15l-7-3-7 3" data-oid="naijy0k" />
             </svg>
           ) : (
             <svg
@@ -394,11 +394,11 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              data-oid="8t:c..q"
+              data-oid="2i4l6bx"
             >
               <path
                 d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
-                data-oid="sn3p78f"
+                data-oid="40lu5:2"
               />
             </svg>
           )}
@@ -406,22 +406,22 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
         <h3
           className="text-xl font-bold mb-3"
           style={{ color: path.color }}
-          data-oid="57oivoh"
+          data-oid=":znrmb6"
         >
           {path.title}
         </h3>
-        <p className="text-gray-600 mb-6" data-oid="tgt9l2w">
+        <p className="text-gray-600 mb-6" data-oid="93n_uk3">
           {path.description}
         </p>
 
         {/* Path Visualization */}
-        <div className="mb-6 h-20 relative" data-oid="23at71e">
+        <div className="mb-6 h-20 relative" data-oid="5136nzh">
           <svg
             ref={svgRef}
             width="300"
             height="80"
             viewBox="0 0 300 80"
-            data-oid="c6l4z.t"
+            data-oid="oexsa_z"
           >
             {/* Special background effects */}
             {animations.specialEffect}
@@ -435,12 +435,12 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
               strokeDasharray="5,5"
               initial={{ pathLength: 0, opacity: 0.5 }}
               animate={isInView ? animations.pathAnimation : {}}
-              data-oid="003v9o_"
+              data-oid="w.satff"
             />
 
             {/* Nodes */}
             {path.nodes.map((node, i) => (
-              <g key={i} data-oid="wdq7dee">
+              <g key={i} data-oid="m.xz1ey">
                 <motion.circle
                   cx={node.x * 300}
                   cy={node.y * 80}
@@ -448,7 +448,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                   fill={node.color}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={isInView ? animations.nodeAnimation(i) : {}}
-                  data-oid="0v95-f:"
+                  data-oid="4tjs:ur"
                 />
 
                 {node.label && (
@@ -458,7 +458,7 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                     textAnchor="middle"
                     fill="#666"
                     fontSize="12"
-                    data-oid="-3m38_v"
+                    data-oid="ts.7-_s"
                   >
                     {node.label}
                   </text>
@@ -485,25 +485,25 @@ function PathCard({ path, index }: { path: LearningPath; index: number }) {
                   ease: "linear",
                   repeat: Number.POSITIVE_INFINITY,
                 }}
-                data-oid="3kw9xhg"
+                data-oid="hm-.dam"
               />
             )}
           </svg>
         </div>
 
-        <div className="flex justify-between items-center" data-oid="qkeuq4_">
-          <span className="text-sm text-gray-500" data-oid="k6j014h">
+        <div className="flex justify-between items-center" data-oid="ze2ly_.">
+          <span className="text-sm text-gray-500" data-oid="o2op3bz">
             {path.courses} courses
           </span>
           <Link
             href={`/learning-paths/${path.title.toLowerCase().replace(/\s+/g, "-")}`}
-            data-oid="se_g:mc"
+            data-oid="vy3wxo_"
           >
             <Button
               variant="outline"
               className="text-sm"
               style={{ borderColor: path.color, color: path.color }}
-              data-oid="pn:m1zj"
+              data-oid="ep35llw"
             >
               View Path
             </Button>

@@ -102,7 +102,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   return (
     <CartContext.Provider
       value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart }}
-      data-oid="5fq.d5."
+      data-oid=".t6319g"
     >
       {children}
     </CartContext.Provider>

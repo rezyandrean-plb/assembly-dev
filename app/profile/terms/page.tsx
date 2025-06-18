@@ -1,30 +1,30 @@
 export default function TermsOfUsePage() {
   return (
-    <div className="p-6" data-oid="nzdw1ga">
-      <div className="mb-6" data-oid="3zn9.n6">
-        <h1 className="text-2xl font-bold" data-oid=".r_sd:3">
+    <div className="p-6" data-oid="tbqqzbd">
+      <div className="mb-6" data-oid="vh7aewy">
+        <h1 className="text-2xl font-bold" data-oid="s2wr9d4">
           Terms of Use
         </h1>
-        <p className="text-gray-600" data-oid="6ruyncu">
+        <p className="text-gray-600" data-oid="s2f-y:o">
           Assembly's terms and conditions for using our services
         </p>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm p-6" data-oid="gx.39us">
-        <p className="font-medium" data-oid="2_8tuo7">
+      <div className="bg-white rounded-lg shadow-sm p-6" data-oid="7_91qsy">
+        <p className="font-medium" data-oid=":vip0x-">
           Effective Date: 31 May 2024
         </p>
 
-        <p className="my-4" data-oid="q6p-t75">
+        <p className="my-4" data-oid="5mpfiyz">
           Welcome to Assembly! These Terms of Use ("Terms") that governs the
           access to and use of our services, including our website, courses,
           content, and any related services (collectively, the "Services"). By
           accessing or using our Services, you agree to be bound by these Terms.
         </p>
 
-        <ol className="list-decimal pl-6 space-y-4 mt-6" data-oid="4wh5kk1">
-          <li data-oid="ytsse7t">
-            <span className="font-semibold" data-oid="e30b9uu">
+        <ol className="list-decimal pl-6 space-y-4 mt-6" data-oid="vbdgin3">
+          <li data-oid="w73aryf">
+            <span className="font-semibold" data-oid=":-hg5zb">
               Acceptance of Terms:
             </span>{" "}
             By accessing or using the Services, you confirm that you have read,
@@ -34,8 +34,8 @@ export default function TermsOfUsePage() {
             organization to these Terms.
           </li>
 
-          <li data-oid="jpy:bg_">
-            <span className="font-semibold" data-oid="rk1xbgw">
+          <li data-oid="5m73h8j">
+            <span className="font-semibold" data-oid="j5qf:_w">
               Eligibility:
             </span>{" "}
             Our Services are intended for users who are at least 18 years old.
@@ -44,8 +44,8 @@ export default function TermsOfUsePage() {
             Terms.
           </li>
 
-          <li data-oid="-h8zezb">
-            <span className="font-semibold" data-oid="18v4_99">
+          <li data-oid="sm:84nw">
+            <span className="font-semibold" data-oid="41zhrnf">
               Account Registration:
             </span>{" "}
             To access certain features of our Services, you may need to register
@@ -56,8 +56,8 @@ export default function TermsOfUsePage() {
             activities that occur under your account.
           </li>
 
-          <li data-oid="8:dbn43">
-            <span className="font-semibold" data-oid="p-2l2w:">
+          <li data-oid="ir2:s9p">
+            <span className="font-semibold" data-oid="a790x5c">
               User Conduct:
             </span>{" "}
             You agree to use our Services only for lawful purposes and in a way
@@ -66,26 +66,26 @@ export default function TermsOfUsePage() {
             includes but is not limited to:
             <ol
               className="list-[lower-alpha] pl-6 mt-2 space-y-1"
-              data-oid="c2s2h:u"
+              data-oid="luttgf_"
             >
-              <li data-oid="p6vz.n5">
+              <li data-oid="3xd0009">
                 Violating any applicable laws or regulations.
               </li>
-              <li data-oid="elohx6f">
+              <li data-oid="upxcw2:">
                 Infringing on the intellectual property rights of others.
               </li>
-              <li data-oid="8uc36r6">
+              <li data-oid="28u3_g7">
                 Uploading or distributing any harmful or malicious content.
               </li>
-              <li data-oid="h3mt5ds">
+              <li data-oid="8d41xn6">
                 Engaging in any activity that could harm or disrupt our
                 Services.
               </li>
             </ol>
           </li>
 
-          <li data-oid="04ekr15">
-            <span className="font-semibold" data-oid="c.7aw4-">
+          <li data-oid="k4cl.zb">
+            <span className="font-semibold" data-oid="915:2ir">
               Content and Intellectual Property:
             </span>{" "}
             All content provided through our Services, including text, graphics,
@@ -95,8 +95,8 @@ export default function TermsOfUsePage() {
             content without our express written permission.
           </li>
 
-          <li data-oid="scyrjh2">
-            <span className="font-semibold" data-oid="-_ggh.6">
+          <li data-oid="muimgrq">
+            <span className="font-semibold" data-oid="s3v0ve5">
               User-Generated Content:
             </span>{" "}
             You may have the opportunity to contribute content, such as
@@ -108,8 +108,8 @@ export default function TermsOfUsePage() {
             does not violate any laws or infringe the rights of any third party.
           </li>
 
-          <li data-oid="heu9g8i">
-            <span className="font-semibold" data-oid="aoz4b0o">
+          <li data-oid="vec.x-m">
+            <span className="font-semibold" data-oid="mytp5-_">
               Payments and Refunds:
             </span>{" "}
             Certain parts of our Services may require payment. All fees are
@@ -118,8 +118,8 @@ export default function TermsOfUsePage() {
             such changes will be communicated to you before they take effect.
           </li>
 
-          <li data-oid="lbsflc9">
-            <span className="font-semibold" data-oid="-sd4ibz">
+          <li data-oid="sj8i0g2">
+            <span className="font-semibold" data-oid="sx1h2a9">
               Third-Party Links:
             </span>{" "}
             Our Services may contain links to third-party websites or services
@@ -129,8 +129,8 @@ export default function TermsOfUsePage() {
             risk.
           </li>
 
-          <li data-oid="qbg1c.n">
-            <span className="font-semibold" data-oid="wy1.o79">
+          <li data-oid="ch.k-7w">
+            <span className="font-semibold" data-oid="g4ywk_u">
               Termination:
             </span>{" "}
             We may terminate or suspend your access to our Services at any time,
@@ -139,8 +139,8 @@ export default function TermsOfUsePage() {
             will immediately cease.
           </li>
 
-          <li data-oid="fb_vzw3">
-            <span className="font-semibold" data-oid="b8uxvnv">
+          <li data-oid="-2dgyxe">
+            <span className="font-semibold" data-oid="x-210_o">
               Disclaimers:
             </span>{" "}
             Our Services are provided on an "as-is" and "as-available" basis. We
@@ -149,8 +149,8 @@ export default function TermsOfUsePage() {
             to the fullest extent permitted by law.
           </li>
 
-          <li data-oid="v_snik9">
-            <span className="font-semibold" data-oid="j2cbf3n">
+          <li data-oid="7yxgq-.">
+            <span className="font-semibold" data-oid="--hm7uw">
               Limitation of Liability:
             </span>{" "}
             To the fullest extent permitted by law, Assembly shall not be liable
@@ -159,16 +159,16 @@ export default function TermsOfUsePage() {
             directly or indirectly, or any loss of data, use, goodwill, or other
             intangible losses, resulting from(a) your use or inability to use
             the Services;
-            <ol className="list-[lower-alpha] pl-6 mt-2" data-oid="rd4hu0y">
-              <li data-oid="ups5c17">
+            <ol className="list-[lower-alpha] pl-6 mt-2" data-oid="bo9b7qs">
+              <li data-oid="fx60cqv">
                 any unauthorized access to or use of our servers and/or any
                 personal information stored therein.
               </li>
             </ol>
           </li>
 
-          <li data-oid="b8qgsyq">
-            <span className="font-semibold" data-oid="g_ua_cd">
+          <li data-oid="qx1bt6s">
+            <span className="font-semibold" data-oid="c_01nth">
               Governing Law:
             </span>{" "}
             These Terms shall be governed by and construed in accordance with
@@ -177,8 +177,8 @@ export default function TermsOfUsePage() {
             Terms shall be resolved exclusively in the courts of Singapore.
           </li>
 
-          <li data-oid="_khd6ec">
-            <span className="font-semibold" data-oid="ywt6mux">
+          <li data-oid="4e590bi">
+            <span className="font-semibold" data-oid="cyt5l.q">
               Changes to Terms:
             </span>{" "}
             We may modify these Terms at any time. Any changes will be effective
@@ -187,8 +187,8 @@ export default function TermsOfUsePage() {
             constitutes your acceptance of such changes.
           </li>
 
-          <li data-oid="fjf.dnu">
-            <span className="font-semibold" data-oid=":9pj4_9">
+          <li data-oid="rdd9vvq">
+            <span className="font-semibold" data-oid="1iu8kyv">
               Contact Information:
             </span>{" "}
             If you have any questions about these Terms, please contact us at
@@ -196,7 +196,7 @@ export default function TermsOfUsePage() {
           </li>
         </ol>
 
-        <p className="mt-6" data-oid="y870ui_">
+        <p className="mt-6" data-oid="i-e2iw3">
           Thank you for being a part of Assembly!
         </p>
       </div>

@@ -72,70 +72,70 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md py-2" : "bg-white shadow-sm py-3"
       }`}
-      data-oid="rqymn1c"
+      data-oid="o4ck__3"
     >
       <div
         className="container mx-auto px-4 flex justify-between items-center"
-        data-oid="tfei-no"
+        data-oid="ga9gw5e"
       >
-        <Link href="/" className="flex items-center" data-oid="xz_je5s">
+        <Link href="/" className="flex items-center" data-oid="puu98cm">
           <Image
             src="/images/assembly-logo.png"
             alt="Assembly SG Logo"
             width={60}
             height={60}
-            data-oid="jqfw7w6"
+            data-oid="98rb_y5"
           />
         </Link>
 
         <div
           className="hidden md:flex items-center space-x-8"
-          data-oid="ecp.t-q"
+          data-oid="vl4eyhz"
         >
-          <Link href="/courses" className="nav-link" data-oid="y126by1">
+          <Link href="/courses" className="nav-link" data-oid="9-c3ivq">
             Courses
           </Link>
-          <Link href="/learning-paths" className="nav-link" data-oid="7umok2:">
+          <Link href="/learning-paths" className="nav-link" data-oid=":wl2a58">
             Learning Paths
           </Link>
-          <Link href="/plb-book" className="nav-link" data-oid="ra7heb-">
+          <Link href="/plb-book" className="nav-link" data-oid="3qbbi.:">
             PLB Book
           </Link>
-          <Link href="/about" className="nav-link" data-oid="y41-xht">
+          <Link href="/about" className="nav-link" data-oid="g2dir5m">
             About
           </Link>
-          <Link href="/contact" className="nav-link" data-oid="io_mg9h">
+          <Link href="/contact" className="nav-link" data-oid="_ijhbo:">
             Contact
           </Link>
 
           {isLoggedIn ? (
-            <div className="flex items-center space-x-4" data-oid="8.4obn3">
-              <CartIcon data-oid="b83.z9u" />
+            <div className="flex items-center space-x-4" data-oid="vo15fcz">
+              <CartIcon data-oid="pot6dy_" />
 
-              <div className="relative" data-oid="z6:z_4x">
+              <div className="relative" data-oid="uix8fci">
                 <button
                   className="relative p-1 rounded-full hover:bg-gray-100"
-                  data-oid="a6r:nza"
+                  data-oid="_noba30"
                 >
-                  <Bell className="h-6 w-6 text-gray-600" data-oid="r.jc4ar" />
+                  <Bell className="h-6 w-6 text-gray-600" data-oid=":6smbzd" />
                   {hasNotifications && (
                     <span
                       className="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white"
-                      data-oid="be5u.7m"
+                      data-oid="tf44uce"
                     ></span>
                   )}
                 </button>
               </div>
 
-              <div className="relative" data-oid="76ykqrr">
+              <div className="relative" data-oid="eg_gyuq">
                 <button
                   onClick={toggleDropdown}
                   className="flex items-center space-x-2 focus:outline-none border border-gray-200 rounded-full pl-1 pr-2 py-1 hover:bg-gray-50"
-                  data-oid="63pjpx5"
+                  data-oid="2xsrmhj"
                 >
                   <div
                     className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center overflow-hidden"
-                    data-oid="mkwmyhl"
+                    data-oid="i849bo7"
                   >
                     <Image
                       src="/professional-headshot.png"
@@ -143,36 +143,36 @@ export default function Navbar() {
                       width={32}
                       height={32}
                       className="object-cover"
-                      data-oid="jkfxauz"
+                      data-oid="7qc2r7a"
                     />
                   </div>
-                  <span className="font-medium text-sm" data-oid="38w194s">
+                  <span className="font-medium text-sm" data-oid="dffal4c">
                     Paul Tan
                   </span>
                   <ChevronDown
                     className={`h-4 w-4 text-gray-500 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
-                    data-oid="lur8wic"
+                    data-oid="6y7zp6-"
                   />
                 </button>
 
                 {isDropdownOpen && (
                   <div
                     className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-100"
-                    data-oid="tzeq4ul"
+                    data-oid="4vy3epl"
                   >
                     <div
                       className="px-4 py-3 border-b border-gray-100"
-                      data-oid="3mss-6l"
+                      data-oid="0fhcg.x"
                     >
                       <p
                         className="text-sm font-medium text-gray-900"
-                        data-oid="jmakp3a"
+                        data-oid="rbjgfdh"
                       >
                         paul.tan@example.com
                       </p>
                       <p
                         className="text-xs text-gray-500 mt-1"
-                        data-oid="pcf259x"
+                        data-oid="yy2u-lg"
                       >
                         Premium Member
                       </p>
@@ -181,18 +181,18 @@ export default function Navbar() {
                     <Link
                       href="/profile"
                       className="block px-4 py-2 hover:bg-gray-50"
-                      data-oid="sqr1ss8"
+                      data-oid="8mb3134"
                     >
                       <div
                         className="flex items-center space-x-2"
-                        data-oid="j0ktqml"
+                        data-oid="jskmymq"
                       >
                         <User
                           className="h-5 w-5 text-gray-500"
-                          data-oid="zciaw3e"
+                          data-oid="w9u59yw"
                         />
 
-                        <span className="text-sm" data-oid="cj4m-bz">
+                        <span className="text-sm" data-oid="f31x0vq">
                           Profile
                         </span>
                       </div>
@@ -201,18 +201,18 @@ export default function Navbar() {
                     <Link
                       href="/profile/settings"
                       className="block px-4 py-2 hover:bg-gray-50"
-                      data-oid=":qacpmw"
+                      data-oid="5-zvx8a"
                     >
                       <div
                         className="flex items-center space-x-2"
-                        data-oid="viltco8"
+                        data-oid="o73q7.:"
                       >
                         <Settings
                           className="h-5 w-5 text-gray-500"
-                          data-oid="l2bzbt9"
+                          data-oid="00dc89j"
                         />
 
-                        <span className="text-sm" data-oid="9pkzw76">
+                        <span className="text-sm" data-oid="mqd3-8q">
                           Settings
                         </span>
                       </div>
@@ -221,18 +221,18 @@ export default function Navbar() {
                     <Link
                       href="/help"
                       className="block px-4 py-2 hover:bg-gray-50"
-                      data-oid="glm9ql."
+                      data-oid="zyzvg_."
                     >
                       <div
                         className="flex items-center space-x-2"
-                        data-oid="5lj0n65"
+                        data-oid="cctbm6."
                       >
                         <HelpCircle
                           className="h-5 w-5 text-gray-500"
-                          data-oid="tmld4dg"
+                          data-oid="i8i5ww9"
                         />
 
-                        <span className="text-sm" data-oid="r77xus_">
+                        <span className="text-sm" data-oid="7rrtype">
                           Help & Support
                         </span>
                       </div>
@@ -240,18 +240,18 @@ export default function Navbar() {
 
                     <div
                       className="border-t border-gray-100 mt-2 pt-2"
-                      data-oid="i36-9pi"
+                      data-oid="ay77abs"
                     >
                       <button
                         className="w-full text-left px-4 py-2 hover:bg-gray-50 text-red-600"
-                        data-oid="rjrzta3"
+                        data-oid="pibivgd"
                       >
                         <div
                           className="flex items-center space-x-2"
-                          data-oid="jxjh8lp"
+                          data-oid="y:cbgbi"
                         >
-                          <LogOut className="h-5 w-5" data-oid="m5n_50b" />
-                          <span className="text-sm" data-oid="csxcrea">
+                          <LogOut className="h-5 w-5" data-oid="alqvhcp" />
+                          <span className="text-sm" data-oid="8lstpzc">
                             Log out
                           </span>
                         </div>
@@ -262,20 +262,20 @@ export default function Navbar() {
               </div>
             </div>
           ) : (
-            <div className="flex items-center space-x-4" data-oid="z03s.:c">
-              <CartIcon data-oid="aj2gg.9" />
+            <div className="flex items-center space-x-4" data-oid="dkf1qeo">
+              <CartIcon data-oid="ojg483a" />
               <Link
                 href="/profile"
                 className="btn btn-outline"
                 onClick={handleLogin}
-                data-oid="cwexd7z"
+                data-oid="3kvng7a"
               >
                 Log In
               </Link>
               <Link
                 href="/signup"
                 className="btn btn-primary"
-                data-oid="-zrpcqe"
+                data-oid="e5dt:ds"
               >
                 Sign Up
               </Link>
@@ -283,12 +283,12 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="md:hidden flex items-center" data-oid="1dh8_xu">
-          <CartIcon data-oid="eu84igi" />
+        <div className="md:hidden flex items-center" data-oid="_qe6ns:">
+          <CartIcon data-oid="d00cnik" />
           <button
             className="ml-4 text-gray-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            data-oid="4q0_s9r"
+            data-oid="llsl28x"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -296,14 +296,14 @@ export default function Navbar() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              data-oid="75-psm8"
+              data-oid="40u21v2"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M4 6h16M4 12h16M4 18h16"
-                data-oid="ux8-m:r"
+                data-oid="num:cl."
               />
             </svg>
           </button>
@@ -311,28 +311,28 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg" data-oid="90xvfp9">
+        <div className="md:hidden bg-white shadow-lg" data-oid="cmv68e0">
           <div
             className="container mx-auto px-4 py-3 space-y-3"
-            data-oid="-_dlsl:"
+            data-oid=".olzd-b"
           >
-            <Link href="/courses" className="block py-2" data-oid="sgoky2.">
+            <Link href="/courses" className="block py-2" data-oid="8gdgtep">
               Courses
             </Link>
             <Link
               href="/learning-paths"
               className="block py-2"
-              data-oid="66udptu"
+              data-oid="krjo3k5"
             >
               Learning Paths
             </Link>
-            <Link href="/plb-book" className="block py-2" data-oid="dmborq9">
+            <Link href="/plb-book" className="block py-2" data-oid="0wzgccw">
               PLB Book
             </Link>
-            <Link href="/about" className="block py-2" data-oid="w1f6.:0">
+            <Link href="/about" className="block py-2" data-oid="5iy:96z">
               About
             </Link>
-            <Link href="/contact" className="block py-2" data-oid="4v:sw:s">
+            <Link href="/contact" className="block py-2" data-oid="iqujg6x">
               Contact
             </Link>
 
@@ -340,15 +340,15 @@ export default function Navbar() {
               <>
                 <div
                   className="py-2 border-t border-gray-100 mt-2"
-                  data-oid="375ic8j"
+                  data-oid="s3m67kd"
                 >
                   <div
                     className="flex items-center space-x-2 py-2"
-                    data-oid="2v56l6y"
+                    data-oid="zzwn71l"
                   >
                     <div
                       className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center overflow-hidden"
-                      data-oid="6ib1eig"
+                      data-oid="-ax83ef"
                     >
                       <Image
                         src="/professional-headshot.png"
@@ -356,10 +356,10 @@ export default function Navbar() {
                         width={32}
                         height={32}
                         className="object-cover"
-                        data-oid="g840u7i"
+                        data-oid="or6w-9u"
                       />
                     </div>
-                    <span className="font-medium" data-oid="zr3d44p">
+                    <span className="font-medium" data-oid="5nek-i6">
                       Paul Tan
                     </span>
                   </div>
@@ -367,40 +367,40 @@ export default function Navbar() {
                 <Link
                   href="/profile"
                   className="block py-2 pl-10"
-                  data-oid="e1qby5e"
+                  data-oid="6debh6g"
                 >
                   Profile
                 </Link>
                 <Link
                   href="/profile/settings"
                   className="block py-2 pl-10"
-                  data-oid="9_fv.:m"
+                  data-oid="tmq7eno"
                 >
                   Settings
                 </Link>
                 <Link
                   href="/help"
                   className="block py-2 pl-10"
-                  data-oid="xrjuosm"
+                  data-oid="1_j.e_n"
                 >
                   Help & Support
                 </Link>
                 <button
                   className="block py-2 pl-10 text-red-600"
-                  data-oid="y.zdqk0"
+                  data-oid="kmb8..u"
                 >
                   Log out
                 </button>
               </>
             ) : (
               <>
-                <Link href="/login" className="block py-2" data-oid="y7hoq44">
+                <Link href="/login" className="block py-2" data-oid="_4dp:j6">
                   Log In
                 </Link>
                 <Link
                   href="/signup"
                   className="block py-2 text-blue-600 font-medium"
-                  data-oid="mb6d4qu"
+                  data-oid="rhzu5d."
                 >
                   Sign Up
                 </Link>

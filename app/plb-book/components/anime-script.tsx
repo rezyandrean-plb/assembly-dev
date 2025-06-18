@@ -7,7 +7,7 @@ export default function AnimeScript() {
     <Script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       strategy="beforeInteractive"
-      data-oid=":_klbbn"
+      data-oid="xdpn:7j"
     />
   );
 }
