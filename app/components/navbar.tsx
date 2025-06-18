@@ -274,10 +274,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/signup"
-                className="btn btn-primary"
+                className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white px-4 py-2 rounded-md font-medium transition-colors"
                 data-oid="e5dt:ds"
               >
-                Sign Up
+                Get Started
               </Link>
             </div>
           )}
@@ -396,7 +396,8 @@ export default function Navbar() {
               <>
                 <Link href="/login" className="block py-2" data-oid="_4dp:j6">
                   Log In
-                </Link<Link
+                </Link>
+                <Link
                   href="/signup"
                   className="block py-2 bg-[#ff6b35] hover:bg-[#e55a2b] text-white px-4 rounded-md font-medium transition-colors text-center"
                   data-oid="rhzu5d."
