@@ -1,19 +1,25 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import NetworkBackground from "@/components/network-background";
-// Add the Navbar import at the top with the other imports
-import Navbar from "@/components/navbar";
+import {
+  Eye,
+  EyeOff,
+  Mail,
+  Lock,
+  ArrowRight,
+  Building2,
+  TrendingUp,
+  Users,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -29,15 +35,9 @@ export default function LoginPage() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
     try {
-      // In a real app, you would call your API here
       await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // Set login state in sessionStorage
       sessionStorage.setItem("fromLogin", "true");
-
-      // Redirect to home page after successful login
       router.push("/");
     } catch (err) {
       setError("Invalid email or password. Please try again.");
@@ -46,186 +46,233 @@ export default function LoginPage() {
     }
   };
 
-  // Update the return statement to include the Navbar component at the top
-  // Replace the entire return statement with:
   return (
     <div
-      className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white relative"
-      data-oid="xs0wetn"
+      className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex"
+      data-oid="pginm5r"
     >
-      <Navbar data-oid="38pixcm" />
-      <NetworkBackground
-        scrollY={0}
-        scrollSpeed={0}
-        windowHeight={0}
-        opacity={0.2}
-        data-oid="10wsqb-"
-      />
-
-      {/* Centered login form */}
+      {/* Left Side - Login Form */}
       <div
-        className="flex-grow flex items-center justify-center"
-        data-oid=".l79ce."
+        className="flex-1 flex items-center justify-center p-8"
+        data-oid="g0.e1yz"
       >
-        <div
-          className="w-full max-w-md mx-auto p-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 z-10"
-          data-oid="-1zu2pk"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full max-w-md"
+          data-oid="h47q3i3"
         >
-          <div className="mb-8" data-oid="67n1eaa">
+          {/* Logo */}
+          <div className="text-center mb-8" data-oid="x-o2v22">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-2xl font-bold text-primary"
+              data-oid="hqn5uhu"
+            >
+              <img
+                src="/images/assembly-logo.png"
+                alt="Assembly Logo"
+                className="w-40 h-auto"
+                style={{ maxHeight: "48px" }}
+                data-oid="g39wa5z"
+              />
+            </Link>
+          </div>
+
+          {/* Welcome Message */}
+          <div className="text-center mb-8" data-oid=":owdkwe">
             <h1
-              className="text-4xl font-bold text-gray-800 mb-2"
-              data-oid="fajci9m"
+              className="text-3xl font-bold text-neutral-900 mb-2"
+              data-oid="rleuib_"
             >
               Welcome Back
             </h1>
-            <p className="text-gray-500" data-oid="3rc6n3j">
-              Please log in to continue to your account
+            <p className="text-neutral-600" data-oid="6ieyowq">
+              Continue your real estate investment journey
             </p>
           </div>
 
-          {/* Google login button */}
+          {/* Social Login */}
           <button
             type="button"
-            className="w-full p-3 border border-gray-300 rounded-lg flex items-center justify-center mb-6 hover:bg-gray-50 transition-colors"
-            data-oid="ry-zxya"
+            className="w-full flex items-center justify-center gap-3 p-4 border-2 border-neutral-200 rounded-xl hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-200 mb-6"
+            data-oid="n6sxals"
           >
-            <svg
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              className="mr-2"
-              data-oid="itt8jdx"
-            >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" data-oid="c4k5aka">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                data-oid="v3a3wyw"
+                data-oid="89f1fyw"
               />
 
               <path
                 fill="#34A853"
                 d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                data-oid="-dz5lds"
+                data-oid="a4vh-vt"
               />
 
               <path
                 fill="#FBBC05"
                 d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                data-oid="7l91jye"
+                data-oid="1sqhlhx"
               />
 
               <path
                 fill="#EA4335"
                 d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                data-oid="oj_sav."
+                data-oid="7ax8.tr"
               />
             </svg>
-            Log in with Google
+            <span className="font-medium text-neutral-700" data-oid="59xoqy-">
+              Continue with Google
+            </span>
           </button>
 
+          {/* Divider */}
           <div
             className="relative flex items-center justify-center mb-6"
-            data-oid="v_518-g"
+            data-oid=".u8vwfa"
           >
             <div
-              className="border-t border-gray-300 absolute w-full"
-              data-oid="v14kpdu"
+              className="border-t border-neutral-200 w-full"
+              data-oid="rwih.b2"
             ></div>
-            <div
-              className="bg-white px-4 relative text-sm text-gray-400"
-              data-oid="_vd:v:x"
+            <span
+              className="bg-white px-4 text-sm text-neutral-500 font-medium"
+              data-oid="f4rvw3g"
             >
-              OR LOGIN WITH EMAIL
-            </div>
+              Or continue with email
+            </span>
           </div>
 
+          {/* Error Message */}
           {error && (
-            <div
-              className="bg-red-50 text-red-600 p-3 rounded-lg text-sm mb-4"
-              data-oid="bzvq5x1"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-sm mb-6"
+              data-oid="m7tl2u5"
             >
               {error}
-            </div>
+            </motion.div>
           )}
 
+          {/* Login Form */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-4"
-            data-oid="9ukvc.1"
+            className="space-y-6"
+            data-oid="un8vs0d"
           >
-            <div data-oid="eh_tz4q">
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Your Email"
-                required
-                data-oid="5rg709e"
-              />
-            </div>
-
-            <div data-oid="3_y0m6v">
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Your Password"
-                required
-                data-oid="xy_2sqr"
-              />
-            </div>
-
-            <div
-              className="flex items-center justify-between"
-              data-oid="6txyk1_"
-            >
-              <div className="flex items-center" data-oid="xqp4uri">
-                <input
-                  type="checkbox"
-                  id="remember-me"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  data-oid="bqq-3c_"
+            {/* Email Field */}
+            <div data-oid="wyznv3p">
+              <label
+                className="block text-sm font-medium text-neutral-700 mb-2"
+                data-oid="f-nc:nx"
+              >
+                Email Address
+              </label>
+              <div className="relative" data-oid="09v8f14">
+                <Mail
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
+                  data-oid="_9mr.v-"
                 />
 
-                <label
-                  htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-700"
-                  data-oid="92_aq23"
-                >
-                  Keep me logged in
-                </label>
-              </div>
-              <div data-oid="q2kubkt">
-                <Link
-                  href="/forgot-password"
-                  className="text-sm text-blue-600 hover:text-blue-800"
-                  data-oid="z:i5ns1"
-                >
-                  Forgot password?
-                </Link>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+                  placeholder="Enter your email"
+                  required
+                  data-oid="neawu6z"
+                />
               </div>
             </div>
 
+            {/* Password Field */}
+            <div data-oid="gmeu44a">
+              <label
+                className="block text-sm font-medium text-neutral-700 mb-2"
+                data-oid="9h9:k4_"
+              >
+                Password
+              </label>
+              <div className="relative" data-oid="e_xkcn8">
+                <Lock
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
+                  data-oid="ft6wg0c"
+                />
+
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full pl-12 pr-12 py-4 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+                  placeholder="Enter your password"
+                  required
+                  data-oid="kp1lq87"
+                />
+
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600"
+                  data-oid="r6752by"
+                >
+                  {showPassword ? (
+                    <EyeOff className="w-5 h-5" data-oid="qb2uyv3" />
+                  ) : (
+                    <Eye className="w-5 h-5" data-oid="ryq2b:r" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {/* Remember Me & Forgot Password */}
+            <div
+              className="flex items-center justify-between"
+              data-oid="me89j4f"
+            >
+              <label className="flex items-center" data-oid="asco2h4">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="w-4 h-4 text-primary border-neutral-300 rounded focus:ring-primary/20"
+                  data-oid="-vv8c3w"
+                />
+
+                <span
+                  className="ml-2 text-sm text-neutral-600"
+                  data-oid="95ppvfe"
+                >
+                  Remember me
+                </span>
+              </label>
+              <Link
+                href="/forgot-password"
+                className="text-sm text-primary hover:text-primary-dark font-medium"
+                data-oid="csqnrh2"
+              >
+                Forgot password?
+              </Link>
+            </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full flex items-center justify-center py-3 px-4 bg-[#123B79] hover:bg-[#0A2A5E] text-white font-medium rounded-lg transition-colors"
               disabled={isSubmitting}
-              data-oid="9k:046u"
+              className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white font-semibold py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              data-oid="noz77e6"
             >
               {isSubmitting ? (
-                <span className="flex items-center" data-oid="qgrr66-">
+                <>
                   <svg
-                    className="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className="animate-spin w-5 h-5"
                     fill="none"
                     viewBox="0 0 24 24"
-                    data-oid="z6qeps2"
+                    data-oid="0:jf.qp"
                   >
                     <circle
                       className="opacity-25"
@@ -234,43 +281,131 @@ export default function LoginPage() {
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
-                      data-oid="o7qg:bc"
+                      data-oid="3doyy.j"
                     ></circle>
                     <path
                       className="opacity-75"
                       fill="currentColor"
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      data-oid="j9t12v5"
+                      data-oid="rk0pmqp"
                     ></path>
                   </svg>
-                  Logging in...
-                </span>
+                  Signing in...
+                </>
               ) : (
-                <span
-                  className="flex items-center justify-center w-full"
-                  data-oid="rkki6zq"
-                >
-                  <span data-oid="e7j18p.">Log in</span>
-                  <ArrowRight className="w-4 h-4 ml-2" data-oid="r32-n87" />
-                </span>
+                <>
+                  Sign In
+                  <ArrowRight className="w-5 h-5" data-oid=".gr1mwr" />
+                </>
               )}
             </button>
           </form>
 
-          <div
-            className="mt-8 text-center text-gray-500 text-sm"
-            data-oid="npnodkn"
-          >
-            Don&apos;t have an account yet?{" "}
-            <Link
-              href="/signup"
-              className="text-blue-600 hover:text-blue-800"
-              data-oid="e69-8g3"
-            >
-              Sign up
-            </Link>
+          {/* Sign Up Link */}
+          <div className="text-center mt-8" data-oid="76qh8bj">
+            <p className="text-neutral-600" data-oid="22zgdt9">
+              Don't have an account?{" "}
+              <Link
+                href="/signup"
+                className="text-primary hover:text-primary-dark font-semibold"
+                data-oid="qecloq:"
+              >
+                Create account
+              </Link>
+            </p>
           </div>
+        </motion.div>
+      </div>
+
+      {/* Right Side - Feature Showcase */}
+      <div
+        className="hidden lg:flex flex-1 bg-primary text-white p-12 items-center justify-center relative overflow-hidden"
+        data-oid="gostvyi"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10" data-oid="7p.wv62">
+          <div
+            className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-xl"
+            data-oid="xo9jv1r"
+          ></div>
+          <div
+            className="absolute bottom-20 right-20 w-40 h-40 bg-accent rounded-full blur-xl"
+            data-oid="zv8zekd"
+          ></div>
+          <div
+            className="absolute top-1/2 left-1/4 w-24 h-24 bg-secondary rounded-full blur-xl"
+            data-oid="09qf0nr"
+          ></div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative z-10 max-w-md"
+          data-oid="ltw_9n8"
+        >
+          <h2 className="text-4xl font-bold mb-6" data-oid="r5tcvj4">
+            Master Real Estate Investment
+          </h2>
+          <p className="text-xl text-white/80 mb-8" data-oid=":yllwx5">
+            Join thousands of successful investors who've transformed their
+            financial future with our expert-led courses.
+          </p>
+
+          <div className="space-y-6" data-oid="nu6fb.-">
+            <div className="flex items-center gap-4" data-oid="f9_2l3.">
+              <div
+                className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
+                data-oid=".xvlr:3"
+              >
+                <TrendingUp className="w-6 h-6" data-oid="888dffl" />
+              </div>
+              <div data-oid=".65trev">
+                <h3 className="font-semibold" data-oid="v6:65jj">
+                  Expert-Led Courses
+                </h3>
+                <p className="text-white/70" data-oid="_3fqn94">
+                  Learn from industry professionals
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4" data-oid="gy475fr">
+              <div
+                className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
+                data-oid="fqsk7c7"
+              >
+                <Users className="w-6 h-6" data-oid="_.bv8u." />
+              </div>
+              <div data-oid="6pkynnj">
+                <h3 className="font-semibold" data-oid="xkt881e">
+                  Community Support
+                </h3>
+                <p className="text-white/70" data-oid="h2si3sy">
+                  Connect with fellow investors
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4" data-oid="5:4:xrg">
+              <div
+                className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
+                data-oid="wkyq3lo"
+              >
+                <Building2 className="w-6 h-6" data-oid="u6kxthu" />
+              </div>
+              <div data-oid="h3c0567">
+                <h3 className="font-semibold" data-oid="uqsy_e4">
+                  Real-World Strategies
+                </h3>
+                <p className="text-white/70" data-oid="tqep3.f">
+                  Practical investment techniques
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
