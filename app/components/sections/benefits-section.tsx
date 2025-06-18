@@ -1,45 +1,53 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Award, BarChart2, BookOpen, Compass, Shield, Zap } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Award, BarChart2, BookOpen, Compass, Shield, Zap } from "lucide-react";
 
 export default function BenefitsSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const benefits = [
     {
-      icon: <BookOpen className="h-6 w-6 text-orange-500" />,
+      icon: <BookOpen className="h-6 w-6 text-orange-500" data-oid="ms4r3gu" />,
       title: "Enhanced Knowledge",
-      description: "Gain deep insights into Singapore's property market dynamics and trends",
+      description:
+        "Gain deep insights into Singapore's property market dynamics and trends",
     },
     {
-      icon: <Compass className="h-6 w-6 text-orange-500" />,
+      icon: <Compass className="h-6 w-6 text-orange-500" data-oid="bg0knet" />,
       title: "Strategic Navigation",
-      description: "Learn to navigate complex regulations and market conditions with confidence",
+      description:
+        "Learn to navigate complex regulations and market conditions with confidence",
     },
     {
-      icon: <BarChart2 className="h-6 w-6 text-orange-500" />,
+      icon: (
+        <BarChart2 className="h-6 w-6 text-orange-500" data-oid="8z8n1-1" />
+      ),
       title: "Career Growth",
-      description: "Develop skills that can accelerate your professional advancement",
+      description:
+        "Develop skills that can accelerate your professional advancement",
     },
     {
-      icon: <Shield className="h-6 w-6 text-orange-500" />,
+      icon: <Shield className="h-6 w-6 text-orange-500" data-oid="gm7mio." />,
       title: "Risk Mitigation",
-      description: "Identify potential pitfalls and develop strategies to protect investments",
+      description:
+        "Identify potential pitfalls and develop strategies to protect investments",
     },
     {
-      icon: <Zap className="h-6 w-6 text-orange-500" />,
+      icon: <Zap className="h-6 w-6 text-orange-500" data-oid="239cgzq" />,
       title: "Competitive Edge",
-      description: "Stay ahead with exclusive insights and early access to market information",
+      description:
+        "Stay ahead with exclusive insights and early access to market information",
     },
     {
-      icon: <Award className="h-6 w-6 text-orange-500" />,
+      icon: <Award className="h-6 w-6 text-orange-500" data-oid="v6q5jl5" />,
       title: "Industry Recognition",
-      description: "Build your reputation as a knowledgeable professional in the field",
+      description:
+        "Build your reputation as a knowledgeable professional in the field",
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,7 +57,7 @@ export default function BenefitsSection() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -60,22 +68,32 @@ export default function BenefitsSection() {
         duration: 0.5,
       },
     },
-  }
+  };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="y68wbta">
+      <div className="container mx-auto px-4" data-oid="vrkcb:b">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
+          data-oid=":-3hxg9"
         >
-          <h2 className="text-4xl font-bold text-gray-900">What You'll Gain</h2>
-          <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            Tangible outcomes from engaging with Assembly's content and community
+          <h2 className="text-4xl font-bold text-gray-900" data-oid="-dwxb1.">
+            What You'll Gain
+          </h2>
+          <p
+            className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
+            data-oid="vqzv-o_"
+          >
+            Tangible outcomes from engaging with Assembly's content and
+            community
           </p>
-          <div className="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-orange-500 mx-auto mt-4"
+            data-oid="-rzfk:2"
+          ></div>
         </motion.div>
 
         <motion.div
@@ -83,22 +101,36 @@ export default function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
+          data-oid="d.:oppw"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               className="flex items-start p-6 bg-white rounded-lg shadow-md"
               variants={itemVariants}
+              data-oid="w_qq9xs"
             >
-              <div className="mr-4 p-3 bg-orange-100 rounded-full">{benefit.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+              <div
+                className="mr-4 p-3 bg-orange-100 rounded-full"
+                data-oid="p:-hl8e"
+              >
+                {benefit.icon}
+              </div>
+              <div data-oid="t3a0:se">
+                <h3
+                  className="text-xl font-bold text-gray-800 mb-2"
+                  data-oid="gsw6a9p"
+                >
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600" data-oid="fww0oy:">
+                  {benefit.description}
+                </p>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

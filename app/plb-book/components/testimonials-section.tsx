@@ -1,48 +1,57 @@
-"use client"
+"use client";
 
-import { useRef, useState, useEffect } from "react"
-import { useScrollAnimation } from "../hooks/use-scroll-animation"
-import anime from "animejs"
-import { Star } from "lucide-react"
+import { useRef, useState, useEffect } from "react";
+import { useScrollAnimation } from "../hooks/use-scroll-animation";
+import anime from "animejs";
+import { Star } from "lucide-react";
 
 interface TestimonialProps {
-  quote: string
-  author: string
-  title: string
-  rating: number
+  quote: string;
+  author: string;
+  title: string;
+  rating: number;
 }
 
 function Testimonial({ quote, author, title, rating }: TestimonialProps) {
   return (
-    <div className="testimonial-card">
-      <div className="rating">
+    <div className="testimonial-card" data-oid="v:xvz17">
+      <div className="rating" data-oid="ybs2w:v">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
             size={18}
             className={i < rating ? "star filled" : "star"}
             fill={i < rating ? "currentColor" : "none"}
+            data-oid=":g.79cq"
           />
         ))}
       </div>
-      <p className="testimonial-quote">{quote}</p>
-      <div className="testimonial-author">
-        <div className="author-avatar">{author.charAt(0)}</div>
-        <div className="author-info">
-          <h4 className="author-name">{author}</h4>
-          <p className="author-title">{title}</p>
+      <p className="testimonial-quote" data-oid="5xgyu:j">
+        {quote}
+      </p>
+      <div className="testimonial-author" data-oid="2stf6_5">
+        <div className="author-avatar" data-oid="cm1qs:m">
+          {author.charAt(0)}
+        </div>
+        <div className="author-info" data-oid="7:jl8j7">
+          <h4 className="author-name" data-oid="0l.kfbv">
+            {author}
+          </h4>
+          <p className="author-title" data-oid="fcv3xp0">
+            {title}
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default function TestimonialsSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [slideWidth, setSlideWidth] = useState(0)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const subtitleRef = useRef<HTMLParagraphElement>(null)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
 
   const titleAnimRef = useScrollAnimation(() => {
     return anime({
@@ -50,8 +59,8 @@ export default function TestimonialsSection() {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 800,
-    })
-  })
+    });
+  });
 
   const subtitleAnimRef = useScrollAnimation(() => {
     return anime({
@@ -60,23 +69,23 @@ export default function TestimonialsSection() {
       translateY: [20, 0],
       duration: 800,
       delay: 200,
-    })
-  })
+    });
+  });
 
   useEffect(() => {
     const updateSlideWidth = () => {
       if (containerRef.current) {
-        setSlideWidth(containerRef.current.offsetWidth)
+        setSlideWidth(containerRef.current.offsetWidth);
       }
-    }
+    };
 
-    updateSlideWidth()
-    window.addEventListener("resize", updateSlideWidth)
+    updateSlideWidth();
+    window.addEventListener("resize", updateSlideWidth);
 
     return () => {
-      window.removeEventListener("resize", updateSlideWidth)
-    }
-  }, [])
+      window.removeEventListener("resize", updateSlideWidth);
+    };
+  }, []);
 
   const testimonials = [
     {
@@ -100,59 +109,93 @@ export default function TestimonialsSection() {
       title: "Real Estate Agent",
       rating: 5,
     },
-  ]
+  ];
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
-  }
+    setCurrentSlide((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1,
+    );
+  };
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
-  }
+    setCurrentSlide((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1,
+    );
+  };
 
   return (
-    <section className="section testimonials-section bg-[#F0EAE2]" id="testimonials">
-      <div className="container">
+    <section
+      className="section testimonials-section bg-[#F0EAE2]"
+      id="testimonials"
+      data-oid=":8p.nhq"
+    >
+      <div className="container" data-oid="eu-vr69">
         <h2
           className="section-title text-center"
           ref={(el) => {
             if (titleRef.current === null && el !== null) {
-              titleRef.current = el
+              titleRef.current = el;
             }
             if (typeof titleAnimRef === "function") {
-              titleAnimRef(el)
+              titleAnimRef(el);
             }
           }}
+          data-oid="k1i74qr"
         >
-          What Our <span className="text-highlight">Readers Say</span>
+          What Our{" "}
+          <span className="text-highlight" data-oid="k6nk_1-">
+            Readers Say
+          </span>
         </h2>
 
         <p
           className="section-subtitle text-center"
           ref={(el) => {
             if (subtitleRef.current === null && el !== null) {
-              subtitleRef.current = el
+              subtitleRef.current = el;
             }
             if (typeof subtitleAnimRef === "function") {
-              subtitleAnimRef(el)
+              subtitleAnimRef(el);
             }
           }}
+          data-oid="tgt3dip"
         >
-          Join thousands of satisfied readers who have transformed their property investment journey
+          Join thousands of satisfied readers who have transformed their
+          property investment journey
         </p>
 
-        <div className="testimonials-slider">
-          <div className="navigation-buttons">
-            <button onClick={handlePrev} className="nav-button prev" aria-label="Previous testimonial">
+        <div className="testimonials-slider" data-oid="vkfl1rp">
+          <div className="navigation-buttons" data-oid="k:ec.lq">
+            <button
+              onClick={handlePrev}
+              className="nav-button prev"
+              aria-label="Previous testimonial"
+              data-oid="4_::mi2"
+            >
               &#10094;
             </button>
-            <button onClick={handleNext} className="nav-button next" aria-label="Next testimonial">
+            <button
+              onClick={handleNext}
+              className="nav-button next"
+              aria-label="Next testimonial"
+              data-oid="wmoqgw5"
+            >
               &#10095;
             </button>
           </div>
 
-          <div className="slider-container" ref={containerRef}>
-            <div className="slider-track" style={{ transform: `translateX(${-currentSlide * slideWidth}px)` }}>
+          <div
+            className="slider-container"
+            ref={containerRef}
+            data-oid="e4ey25."
+          >
+            <div
+              className="slider-track"
+              style={{
+                transform: `translateX(${-currentSlide * slideWidth}px)`,
+              }}
+              data-oid="32.er.f"
+            >
               {testimonials.map((testimonial, index) => (
                 <Testimonial
                   key={index}
@@ -160,23 +203,25 @@ export default function TestimonialsSection() {
                   author={testimonial.author}
                   title={testimonial.title}
                   rating={testimonial.rating}
+                  data-oid="g.u1:tj"
                 />
               ))}
             </div>
           </div>
 
-          <div className="slider-controls">
+          <div className="slider-controls" data-oid="24-lugv">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 className={`slider-dot ${currentSlide === index ? "active" : ""}`}
                 onClick={() => setCurrentSlide(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
+                data-oid="8s8.nyg"
               />
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type CartItem = {
   id: string;
   title: string;
   price: number;
-  type: 'course' | 'book';
+  type: "course" | "book";
   image?: string;
   slug?: string;
 };
@@ -25,25 +25,25 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
+    const savedCart = localStorage.getItem("cart");
     if (savedCart) {
       try {
         setCart(JSON.parse(savedCart));
       } catch (e) {
-        console.error('Failed to parse cart from localStorage:', e);
+        console.error("Failed to parse cart from localStorage:", e);
       }
     }
   }, []);
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (item: CartItem) => {
-    setCart(prevCart => {
+    setCart((prevCart) => {
       // Check if item already exists in cart
-      const exists = prevCart.some(cartItem => cartItem.id === item.id);
+      const exists = prevCart.some((cartItem) => cartItem.id === item.id);
       if (exists) {
         return prevCart;
       }
@@ -52,7 +52,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeFromCart = (id: string) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== id));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
   const clearCart = () => {
@@ -60,7 +60,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, clearCart }}
+      data-oid="l88.jzr"
+    >
       {children}
     </CartContext.Provider>
   );
@@ -69,7 +72,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 export function useCart() {
   const context = useContext(CartContext);
   if (context === undefined) {
-    throw new Error('useCart must be used within a CartProvider');
+    throw new Error("useCart must be used within a CartProvider");
   }
   return context;
-} 
+}

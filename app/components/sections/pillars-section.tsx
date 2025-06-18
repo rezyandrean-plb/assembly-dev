@@ -1,35 +1,47 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { BarChart3, BookOpen, Lightbulb, TrendingUp } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { BarChart3, BookOpen, Lightbulb, TrendingUp } from "lucide-react";
 
 export default function PillarsSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const pillars = [
     {
-      icon: <TrendingUp className="h-12 w-12 text-orange-500" />,
+      icon: (
+        <TrendingUp className="h-12 w-12 text-orange-500" data-oid="brf758z" />
+      ),
       title: "Market Trends",
-      description: "Stay informed with the latest data and analysis on Singapore's property market movements.",
+      description:
+        "Stay informed with the latest data and analysis on Singapore's property market movements.",
     },
     {
-      icon: <BookOpen className="h-12 w-12 text-orange-500" />,
+      icon: (
+        <BookOpen className="h-12 w-12 text-orange-500" data-oid="i81xs5j" />
+      ),
       title: "Regulations & Compliance",
-      description: "Navigate the complex regulatory landscape with our comprehensive guides and updates.",
+      description:
+        "Navigate the complex regulatory landscape with our comprehensive guides and updates.",
     },
     {
-      icon: <Lightbulb className="h-12 w-12 text-orange-500" />,
+      icon: (
+        <Lightbulb className="h-12 w-12 text-orange-500" data-oid="5yo1j-x" />
+      ),
       title: "Marketing Strategies",
-      description: "Learn effective techniques to market properties and build your personal brand.",
+      description:
+        "Learn effective techniques to market properties and build your personal brand.",
     },
     {
-      icon: <BarChart3 className="h-12 w-12 text-orange-500" />,
+      icon: (
+        <BarChart3 className="h-12 w-12 text-orange-500" data-oid="-sm3xvd" />
+      ),
       title: "Professional Development",
-      description: "Enhance your skills and knowledge with our curated learning resources and expert insights.",
+      description:
+        "Enhance your skills and knowledge with our curated learning resources and expert insights.",
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -39,7 +51,7 @@ export default function PillarsSection() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -52,22 +64,32 @@ export default function PillarsSection() {
         damping: 10,
       },
     },
-  }
+  };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="0md1b1p">
+      <div className="container mx-auto px-4" data-oid="dj0jopt">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
+          data-oid="njdtqsq"
         >
-          <h2 className="text-4xl font-bold text-gray-900">Pillars of Content</h2>
-          <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            Explore key areas of knowledge to build your expertise in Singapore's real estate market
+          <h2 className="text-4xl font-bold text-gray-900" data-oid="nkhxum-">
+            Pillars of Content
+          </h2>
+          <p
+            className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
+            data-oid="b6-ate4"
+          >
+            Explore key areas of knowledge to build your expertise in
+            Singapore's real estate market
           </p>
-          <div className="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-orange-500 mx-auto mt-4"
+            data-oid="t0dwejd"
+          ></div>
         </motion.div>
 
         <motion.div
@@ -75,22 +97,36 @@ export default function PillarsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
+          data-oid="dm_nbmv"
         >
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
               variants={itemVariants}
+              data-oid="po4a1hc"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-6">{pillar.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{pillar.title}</h3>
-                <p className="text-gray-600">{pillar.description}</p>
+              <div
+                className="flex flex-col items-center text-center"
+                data-oid="q4dd3tl"
+              >
+                <div className="mb-6" data-oid="1ae51yr">
+                  {pillar.icon}
+                </div>
+                <h3
+                  className="text-xl font-bold text-gray-800 mb-3"
+                  data-oid="w7wtzzn"
+                >
+                  {pillar.title}
+                </h3>
+                <p className="text-gray-600" data-oid="a_xfehk">
+                  {pillar.description}
+                </p>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

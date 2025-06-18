@@ -1,22 +1,30 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { usePathname, useSearchParams } from "next/navigation"
+import { useEffect, useState, Suspense } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 
-export default function ScrollToTop() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const [isMounted, setIsMounted] = useState(false)
+function ScrollToTopContent() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     if (isMounted) {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     }
-  }, [pathname, searchParams, isMounted])
+  }, [pathname, searchParams, isMounted]);
 
-  return null
+  return null;
+}
+
+export default function ScrollToTop() {
+  return (
+    <Suspense fallback={null} data-oid="dg3hln-">
+      <ScrollToTopContent data-oid="_m2726h" />
+    </Suspense>
+  );
 }

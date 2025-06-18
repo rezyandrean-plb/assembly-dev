@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { useScrollAnimation } from "../hooks/use-scroll-animation"
-import anime from "animejs"
+import { useRef } from "react";
+import { useScrollAnimation } from "../hooks/use-scroll-animation";
+import anime from "animejs";
 
 interface FeatureProps {
-  icon: string
-  title: string
-  description: string
+  icon: string;
+  title: string;
+  description: string;
 }
 
 function Feature({ icon, title, description }: FeatureProps) {
-  const featureRef = useRef<HTMLDivElement>(null)
+  const featureRef = useRef<HTMLDivElement>(null);
 
   const ref = useScrollAnimation(() => {
     return anime({
@@ -19,30 +19,37 @@ function Feature({ icon, title, description }: FeatureProps) {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 800,
-    })
-  })
+    });
+  });
 
   return (
     <div
       className="feature-card"
       ref={(el) => {
         if (featureRef.current === null && el !== null) {
-          featureRef.current = el
+          featureRef.current = el;
         }
         if (typeof ref === "function") {
-          ref(el)
+          ref(el);
         }
       }}
+      data-oid="ewwre4n"
     >
-      <div className="feature-icon">{icon}</div>
-      <h3 className="feature-title">{title}</h3>
-      <p className="feature-description">{description}</p>
+      <div className="feature-icon" data-oid="bknm6zv">
+        {icon}
+      </div>
+      <h3 className="feature-title" data-oid="d9w2.yo">
+        {title}
+      </h3>
+      <p className="feature-description" data-oid="m:rqix4">
+        {description}
+      </p>
     </div>
-  )
+  );
 }
 
 export default function BookOverviewSection() {
-  const titleRef = useRef<HTMLHeadingElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   const titleAnimRef = useScrollAnimation(() => {
     return anime({
@@ -50,65 +57,85 @@ export default function BookOverviewSection() {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 800,
-    })
-  })
+    });
+  });
 
   const features = [
     {
       icon: "📊",
       title: "Market Analysis",
-      description: "Comprehensive analysis of Singapore's property market trends and forecasts for 2025",
+      description:
+        "Comprehensive analysis of Singapore's property market trends and forecasts for 2025",
     },
     {
       icon: "💰",
       title: "Investment Strategies",
-      description: "Proven strategies for property investment in Singapore's dynamic market",
+      description:
+        "Proven strategies for property investment in Singapore's dynamic market",
     },
     {
       icon: "🤝",
       title: "Negotiation Tactics",
-      description: "Master the art of property negotiation with expert techniques from industry leaders",
+      description:
+        "Master the art of property negotiation with expert techniques from industry leaders",
     },
     {
       icon: "🏦",
       title: "Financing Options",
-      description: "Navigate complex financing options and optimize your property investment returns",
+      description:
+        "Navigate complex financing options and optimize your property investment returns",
     },
     {
       icon: "⏱️",
       title: "Market Timing",
-      description: "Learn when to enter and exit the market for maximum profit potential",
+      description:
+        "Learn when to enter and exit the market for maximum profit potential",
     },
     {
       icon: "⚖️",
       title: "Legal Insights",
-      description: "Essential legal knowledge for property transactions in Singapore",
+      description:
+        "Essential legal knowledge for property transactions in Singapore",
     },
-  ]
+  ];
 
   return (
-    <section className="section features-section" id="features">
-      <div className="container">
+    <section
+      className="section features-section"
+      id="features"
+      data-oid="q_30j0u"
+    >
+      <div className="container" data-oid="9syk1gx">
         <h2
           className="section-title text-center"
           ref={(el) => {
             if (titleRef.current === null && el !== null) {
-              titleRef.current = el
+              titleRef.current = el;
             }
             if (typeof titleAnimRef === "function") {
-              titleAnimRef(el)
+              titleAnimRef(el);
             }
           }}
+          data-oid="u8zvbqp"
         >
-          What's Inside The <span className="text-highlight">PLB Book</span>
+          What's Inside The{" "}
+          <span className="text-highlight" data-oid="h2yx10b">
+            PLB Book
+          </span>
         </h2>
 
-        <div className="features-grid">
+        <div className="features-grid" data-oid="2sjor0q">
           {features.map((feature, index) => (
-            <Feature key={index} icon={feature.icon} title={feature.title} description={feature.description} />
+            <Feature
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              data-oid="u10emdm"
+            />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,55 +1,58 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState, useRef, useEffect } from "react"
+import type React from "react";
+import { useState, useRef, useEffect } from "react";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface PathNode {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 interface LearningPathCardProps {
   path: {
-    id: string
-    title: string
-    description: string
-    color: string
-    iconComponent: React.ReactNode
-    courseCount: number
-    nodes: PathNode[]
-  }
-  index: number
+    id: string;
+    title: string;
+    description: string;
+    color: string;
+    iconComponent: React.ReactNode;
+    courseCount: number;
+    nodes: PathNode[];
+  };
+  index: number;
 }
 
-export default function LearningPathCard({ path, index }: LearningPathCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const cardRef = useRef<HTMLDivElement>(null)
+export default function LearningPathCard({
+  path,
+  index,
+}: LearningPathCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsInView(true)
+          setIsInView(true);
         }
       },
       { threshold: 0.3 },
-    )
+    );
 
     if (cardRef.current) {
-      observer.observe(cardRef.current)
+      observer.observe(cardRef.current);
     }
 
     return () => {
       if (cardRef.current) {
-        observer.unobserve(cardRef.current)
+        observer.unobserve(cardRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   // Get animation variants based on path type
   const getPathAnimation = () => {
@@ -65,7 +68,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               opacity: { duration: 0.5 },
             },
           },
-        }
+        };
       case "hdb-upgrader-strategist":
         return {
           hidden: { pathLength: 0, opacity: 0 },
@@ -77,7 +80,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               opacity: { duration: 0.5 },
             },
           },
-        }
+        };
       case "condo-investment-specialist":
         return {
           hidden: { pathLength: 0, opacity: 0 },
@@ -89,7 +92,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               opacity: { duration: 0.5 },
             },
           },
-        }
+        };
       default:
         return {
           hidden: { pathLength: 0, opacity: 0 },
@@ -98,13 +101,13 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
             opacity: 1,
             transition: { duration: 1 },
           },
-        }
+        };
     }
-  }
+  };
 
   // Get node animation variants based on path type
   const getNodeAnimation = (i: number) => {
-    const baseDelay = 0.1 * i
+    const baseDelay = 0.1 * i;
 
     switch (path.id) {
       case "beginner-property-investor":
@@ -120,7 +123,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               delay: baseDelay + 0.3,
             },
           },
-        }
+        };
       case "hdb-upgrader-strategist":
         return {
           hidden: { scale: 0, opacity: 0, y: 10 },
@@ -134,7 +137,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               delay: baseDelay + 0.5,
             },
           },
-        }
+        };
       case "condo-investment-specialist":
         return {
           hidden: { scale: 0, opacity: 0 },
@@ -147,7 +150,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               delay: baseDelay + 0.4,
             },
           },
-        }
+        };
       default:
         return {
           hidden: { scale: 0, opacity: 0 },
@@ -156,13 +159,13 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
             opacity: 1,
             transition: { delay: baseDelay },
           },
-        }
+        };
     }
-  }
+  };
 
   // Special effects for hover state
   const getHoverEffect = () => {
-    if (!isHovered) return null
+    if (!isHovered) return null;
 
     switch (path.id) {
       case "beginner-property-investor":
@@ -173,8 +176,14 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              x: [path.nodes[0].x, ...path.nodes.slice(1).map((node) => node.x)],
-              y: [path.nodes[0].y, ...path.nodes.slice(1).map((node) => node.y)],
+              x: [
+                path.nodes[0].x,
+                ...path.nodes.slice(1).map((node) => node.x),
+              ],
+              y: [
+                path.nodes[0].y,
+                ...path.nodes.slice(1).map((node) => node.y),
+              ],
             }}
             transition={{
               duration: 2,
@@ -182,8 +191,10 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
+            data-oid="hx_ikdp"
           />
-        )
+        );
+
       case "hdb-upgrader-strategist":
         return path.nodes.map((node, i) => (
           <motion.circle
@@ -204,8 +215,9 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               repeat: Number.POSITIVE_INFINITY,
               delay: i * 0.3,
             }}
+            data-oid="6k39pul"
           />
-        ))
+        ));
       case "condo-investment-specialist":
         return (
           <>
@@ -222,7 +234,9 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 1, delay: 0.2 }}
+                  data-oid="hv9ucga"
                 />
+
                 <motion.line
                   x1={path.nodes[1].x}
                   y1={path.nodes[1].y}
@@ -234,7 +248,9 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 1, delay: 0.4 }}
+                  data-oid="2oamq9f"
                 />
+
                 {path.nodes[4] && (
                   <motion.line
                     x1={path.nodes[2].x}
@@ -247,16 +263,18 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 0.5 }}
                     transition={{ duration: 1, delay: 0.6 }}
+                    data-oid="wrgvfib"
                   />
                 )}
               </>
             )}
           </>
-        )
+        );
+
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <motion.div
@@ -267,23 +285,41 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
       transition={{ duration: 0.5, delay: 0.1 * index }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      data-oid="g9e5wy4"
     >
-      <div className="h-3" style={{ backgroundColor: path.color }}></div>
-      <div className="p-6">
+      <div
+        className="h-3"
+        style={{ backgroundColor: path.color }}
+        data-oid="md0j1eh"
+      ></div>
+      <div className="p-6" data-oid="fy-uec-">
         <div
           className="rounded-full w-14 h-14 flex items-center justify-center mb-4"
           style={{ backgroundColor: path.color }}
+          data-oid="aozufkl"
         >
           {path.iconComponent}
         </div>
-        <h3 className="text-xl font-bold mb-3" style={{ color: path.color }}>
+        <h3
+          className="text-xl font-bold mb-3"
+          style={{ color: path.color }}
+          data-oid="_0_r33e"
+        >
           {path.title}
         </h3>
-        <p className="text-gray-600 mb-6">{path.description}</p>
+        <p className="text-gray-600 mb-6" data-oid="nez.l8.">
+          {path.description}
+        </p>
 
         {/* Path Visualization */}
-        <div className="mb-6 h-20 relative">
-          <svg width="100%" height="80" viewBox="0 0 300 80" preserveAspectRatio="xMidYMid meet">
+        <div className="mb-6 h-20 relative" data-oid="dlyjg:q">
+          <svg
+            width="100%"
+            height="80"
+            viewBox="0 0 300 80"
+            preserveAspectRatio="xMidYMid meet"
+            data-oid="llyhqf4"
+          >
             {/* Path line */}
             <motion.path
               d={generatePathLine(path.nodes)}
@@ -295,6 +331,7 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={getPathAnimation()}
+              data-oid="j48:iz2"
             />
 
             {/* Nodes */}
@@ -304,15 +341,36 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={getNodeAnimation(i)}
+                data-oid="sli90m0"
               >
-                <circle cx={node.x} cy={node.y} r={i === 0 || i === path.nodes.length - 1 ? 6 : 5} fill={path.color} />
+                <circle
+                  cx={node.x}
+                  cy={node.y}
+                  r={i === 0 || i === path.nodes.length - 1 ? 6 : 5}
+                  fill={path.color}
+                  data-oid="bj-.8._"
+                />
                 {i === 0 && (
-                  <text x={node.x} y={node.y + 20} textAnchor="middle" fill="#666" fontSize="12">
+                  <text
+                    x={node.x}
+                    y={node.y + 20}
+                    textAnchor="middle"
+                    fill="#666"
+                    fontSize="12"
+                    data-oid="gwgee0l"
+                  >
                     Start
                   </text>
                 )}
                 {i === path.nodes.length - 1 && (
-                  <text x={node.x} y={node.y + 20} textAnchor="middle" fill="#666" fontSize="12">
+                  <text
+                    x={node.x}
+                    y={node.y + 20}
+                    textAnchor="middle"
+                    fill="#666"
+                    fontSize="12"
+                    data-oid="544fop7"
+                  >
                     Expert
                   </text>
                 )}
@@ -324,28 +382,35 @@ export default function LearningPathCard({ path, index }: LearningPathCardProps)
           </svg>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-500">{path.courseCount} courses</span>
-          <Link href={`/learning-paths/${path.id}`}>
-            <Button variant="outline" className="text-sm" style={{ borderColor: path.color, color: path.color }}>
+        <div className="flex justify-between items-center" data-oid=":8kwy3v">
+          <span className="text-sm text-gray-500" data-oid="7ay_4_e">
+            {path.courseCount} courses
+          </span>
+          <Link href={`/learning-paths/${path.id}`} data-oid="9kel3b:">
+            <Button
+              variant="outline"
+              className="text-sm"
+              style={{ borderColor: path.color, color: path.color }}
+              data-oid="17l57o2"
+            >
               View Path
             </Button>
           </Link>
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
 // Helper function to generate the SVG path line
 function generatePathLine(nodes: PathNode[]): string {
-  if (nodes.length < 2) return ""
+  if (nodes.length < 2) return "";
 
-  let pathString = `M${nodes[0].x},${nodes[0].y}`
+  let pathString = `M${nodes[0].x},${nodes[0].y}`;
 
   for (let i = 1; i < nodes.length; i++) {
-    pathString += ` L${nodes[i].x},${nodes[i].y}`
+    pathString += ` L${nodes[i].x},${nodes[i].y}`;
   }
 
-  return pathString
+  return pathString;
 }

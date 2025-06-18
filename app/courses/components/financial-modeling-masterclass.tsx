@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "./course-detail-template"
-import { courseData } from "../data/financial-modeling-masterclass"
+import CourseDetailTemplate from "./course-detail-template";
+import { courseData } from "../data/financial-modeling-masterclass";
 
 export default function FinancialModelingMasterclass() {
-  return <CourseDetailTemplate courseData={courseData} />
+  return <CourseDetailTemplate courseData={courseData} data-oid="q8y65uu" />;
 }

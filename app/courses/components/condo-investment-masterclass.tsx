@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "./course-detail-template"
-import { courseData } from "../data/condo-investment-masterclass"
+import CourseDetailTemplate from "./course-detail-template";
+import { courseData } from "../data/condo-investment-masterclass";
 
 export default function CondoInvestmentMasterclass() {
-  return <CourseDetailTemplate courseData={courseData} />
+  return <CourseDetailTemplate courseData={courseData} data-oid="d5z:.ll" />;
 }

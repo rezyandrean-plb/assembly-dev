@@ -1,76 +1,76 @@
-"use client"
+"use client";
 
-import { useRef, useState, useEffect } from "react"
-import { motion, useInView, useScroll } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useScroll } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function CondoPathSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
   // State to store transformed values
-  const [headerOpacity, setHeaderOpacity] = useState(0)
-  const [headerY, setHeaderY] = useState(50)
-  const [pathProgress, setPathProgress] = useState(0)
-  const [clusterProgress, setClusterProgress] = useState(0)
-  const [exitPathProgress, setExitPathProgress] = useState(0)
+  const [headerOpacity, setHeaderOpacity] = useState(0);
+  const [headerY, setHeaderY] = useState(50);
+  const [pathProgress, setPathProgress] = useState(0);
+  const [clusterProgress, setClusterProgress] = useState(0);
+  const [exitPathProgress, setExitPathProgress] = useState(0);
 
   useEffect(() => {
     const updateValues = () => {
-      const progress = scrollYProgress.get()
+      const progress = scrollYProgress.get();
 
       // Header animations
       if (progress >= 0.1 && progress <= 0.9) {
-        setHeaderOpacity(1)
-        setHeaderY(0)
+        setHeaderOpacity(1);
+        setHeaderY(0);
       } else if (progress > 0.9) {
-        setHeaderOpacity(0)
-        setHeaderY(-50)
+        setHeaderOpacity(0);
+        setHeaderY(-50);
       } else {
-        setHeaderOpacity(0)
-        setHeaderY(50)
+        setHeaderOpacity(0);
+        setHeaderY(50);
       }
 
       // Path progress
       if (progress >= 0.1 && progress <= 0.3) {
-        setPathProgress((progress - 0.1) / 0.2)
+        setPathProgress((progress - 0.1) / 0.2);
       } else if (progress > 0.3) {
-        setPathProgress(1)
+        setPathProgress(1);
       } else {
-        setPathProgress(0)
+        setPathProgress(0);
       }
 
       // Cluster progress
       if (progress >= 0.3 && progress <= 0.7) {
-        setClusterProgress((progress - 0.3) / 0.4)
+        setClusterProgress((progress - 0.3) / 0.4);
       } else if (progress > 0.7) {
-        setClusterProgress(1)
+        setClusterProgress(1);
       } else {
-        setClusterProgress(0)
+        setClusterProgress(0);
       }
 
       // Exit path progress
       if (progress >= 0.7 && progress <= 0.9) {
-        setExitPathProgress((progress - 0.7) / 0.2)
+        setExitPathProgress((progress - 0.7) / 0.2);
       } else if (progress > 0.9) {
-        setExitPathProgress(1)
+        setExitPathProgress(1);
       } else {
-        setExitPathProgress(0)
+        setExitPathProgress(0);
       }
-    }
+    };
 
-    const unsubscribe = scrollYProgress.onChange(updateValues)
-    updateValues() // Initial call
+    const unsubscribe = scrollYProgress.onChange(updateValues);
+    updateValues(); // Initial call
 
     return () => {
-      unsubscribe()
-    }
-  }, [scrollYProgress])
+      unsubscribe();
+    };
+  }, [scrollYProgress]);
 
   // Specialized condo market segments
   const segments = [
@@ -79,7 +79,7 @@ export default function CondoPathSection() {
     { label: "Entry-level", x: 450, y: 500, size: 50, delay: 0.3 },
     { label: "Integrated", x: 550, y: 550, size: 55, delay: 0.4 },
     { label: "Waterfront", x: 650, y: 350, size: 45, delay: 0.5 },
-  ]
+  ];
 
   // Connection lines between segments
   const connections = [
@@ -90,13 +90,22 @@ export default function CondoPathSection() {
     { from: 2, to: 3 },
     { from: 3, to: 4 },
     { from: 3, to: 4 },
-  ]
+  ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+      data-oid="_k9qbl:"
+    >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+      <div className="absolute inset-0 pointer-events-none" data-oid="oj6wjk5">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+          data-oid="btqup6j"
+        >
           {/* Background network elements */}
           {Array(20)
             .fill(0)
@@ -114,6 +123,7 @@ export default function CondoPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
+                data-oid="eweo9sx"
               />
             ))}
 
@@ -127,6 +137,7 @@ export default function CondoPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="r5t8oce"
           />
 
           {/* Specialized cluster - central node */}
@@ -141,17 +152,18 @@ export default function CondoPathSection() {
               opacity: clusterProgress >= 0.1 ? 1 : 0,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="fn5jekv"
           />
 
           {/* Specialized cluster - segment nodes */}
           {segments.map((segment, index) => {
-            const segmentStart = 0.1 + index * 0.05
-            const segmentEnd = 0.2 + index * 0.05
-            const labelStart = 0.2 + index * 0.05
-            const labelEnd = 0.3 + index * 0.05
+            const segmentStart = 0.1 + index * 0.05;
+            const segmentEnd = 0.2 + index * 0.05;
+            const labelStart = 0.2 + index * 0.05;
+            const labelEnd = 0.3 + index * 0.05;
 
             return (
-              <motion.g key={`segment-${index}`}>
+              <motion.g key={`segment-${index}`} data-oid="d:psnvc">
                 {/* Segment circle */}
                 <motion.circle
                   cx={segment.x}
@@ -165,6 +177,7 @@ export default function CondoPathSection() {
                     opacity: clusterProgress >= segmentStart ? 0.63 : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay }}
+                  data-oid="ljj28._"
                 />
 
                 {/* Segment label */}
@@ -186,6 +199,7 @@ export default function CondoPathSection() {
                           : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay + 0.1 }}
+                  data-oid="w0pc43_"
                 >
                   {segment.label}
                 </motion.text>
@@ -204,6 +218,7 @@ export default function CondoPathSection() {
                     pathLength: clusterProgress >= segmentStart ? 1 : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay }}
+                  data-oid="ca4q2kz"
                 />
 
                 {/* Pulsing effect */}
@@ -228,9 +243,10 @@ export default function CondoPathSection() {
                   style={{
                     opacity: clusterProgress >= labelStart ? 0.3 : 0,
                   }}
+                  data-oid="y-a:30i"
                 />
               </motion.g>
-            )
+            );
           })}
 
           {/* Connections between segments */}
@@ -256,6 +272,7 @@ export default function CondoPathSection() {
                 opacity: clusterProgress >= 0.4 ? 0.45 : 0,
               }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
+              data-oid="axywu1a"
             />
           ))}
 
@@ -284,6 +301,7 @@ export default function CondoPathSection() {
                       ? 0.45
                       : 0,
               }}
+              data-oid="1wdn2-k"
             />
           ))}
 
@@ -297,52 +315,79 @@ export default function CondoPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: exitPathProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="qdn965l"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10" data-oid="ajy0-i7">
         <motion.div
           className="text-center mb-16"
           style={{
             opacity: headerOpacity,
             y: headerY,
           }}
+          data-oid="p735qvx"
         >
-          <h2 className="text-4xl font-bold text-[#79123B] mb-4">Condo Investment Specialist Path</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Master the art of investing in condominiums, from selection to portfolio building
+          <h2
+            className="text-4xl font-bold text-[#79123B] mb-4"
+            data-oid="72eij1-"
+          >
+            Condo Investment Specialist Path
+          </h2>
+          <p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-oid="1x1y8.1"
+          >
+            Master the art of investing in condominiums, from selection to
+            portfolio building
           </p>
-          <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
+            data-oid="jhmt.x."
+          ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto" data-oid="c.6n.45">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            data-oid="z-k-l40"
           >
-            <h3 className="text-2xl font-bold text-[#79123B] mb-4">Specialized Market Mastery</h3>
-            <p className="text-gray-700 mb-6">
-              The Condo Investment Specialist Path takes you deep into the specialized world of condominium investments
-              in Singapore. This focused learning journey helps you develop expertise in analyzing, selecting, and
-              building a portfolio of condominium properties across different market segments.
+            <h3
+              className="text-2xl font-bold text-[#79123B] mb-4"
+              data-oid="oosz44p"
+            >
+              Specialized Market Mastery
+            </h3>
+            <p className="text-gray-700 mb-6" data-oid="9jnlpvc">
+              The Condo Investment Specialist Path takes you deep into the
+              specialized world of condominium investments in Singapore. This
+              focused learning journey helps you develop expertise in analyzing,
+              selecting, and building a portfolio of condominium properties
+              across different market segments.
             </p>
-            <p className="text-gray-700 mb-6">
-              Through advanced courses covering entry price analysis, selection frameworks, market comparisons, and
-              portfolio building strategies, you'll gain the specialized knowledge needed to make informed decisions in
-              this competitive market segment and maximize your investment returns.
+            <p className="text-gray-700 mb-6" data-oid="lc6d8gs">
+              Through advanced courses covering entry price analysis, selection
+              frameworks, market comparisons, and portfolio building strategies,
+              you'll gain the specialized knowledge needed to make informed
+              decisions in this competitive market segment and maximize your
+              investment returns.
             </p>
-            <div className="flex justify-center mt-8">
-              <Button className="bg-[#79123B] hover:bg-[#5A0E2C] text-white">
+            <div className="flex justify-center mt-8" data-oid="1-.j166">
+              <Button
+                className="bg-[#79123B] hover:bg-[#5A0E2C] text-white"
+                data-oid="9dychk5"
+              >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid="vgv3c:0" />
               </Button>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

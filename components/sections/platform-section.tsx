@@ -1,81 +1,112 @@
-"use client"
+"use client";
 
-import { useRef, useState, useEffect } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useNetwork } from "@/context/network-context"
-import { Compass, Map, Navigation } from "lucide-react"
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useNetwork } from "@/context/network-context";
+import { Compass, Map, Navigation } from "lucide-react";
 
 export default function PlatformSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const { networkState } = useNetwork()
-  const [activeFeature, setActiveFeature] = useState(-1)
+  const { networkState } = useNetwork();
+  const [activeFeature, setActiveFeature] = useState(-1);
 
   // Transform values based on scroll
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const contentY = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50])
+  const contentOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 1, 1, 0],
+  );
+  const contentY = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [50, 0, 0, -50],
+  );
 
   // Update active feature based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return
+      if (!sectionRef.current) return;
 
-      const sectionTop = sectionRef.current.getBoundingClientRect().top
-      const sectionHeight = sectionRef.current.getBoundingClientRect().height
-      const scrollPosition = window.scrollY
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionHeight = sectionRef.current.getBoundingClientRect().height;
+      const scrollPosition = window.scrollY;
 
       // Calculate relative position within the section (0 to 1)
-      const relativePosition = Math.min(Math.max((window.innerHeight - sectionTop) / sectionHeight, 0), 1)
+      const relativePosition = Math.min(
+        Math.max((window.innerHeight - sectionTop) / sectionHeight, 0),
+        1,
+      );
 
       // Set active feature based on scroll position
       if (relativePosition < 0.4) {
-        setActiveFeature(-1) // No feature active yet
+        setActiveFeature(-1); // No feature active yet
       } else if (relativePosition < 0.6) {
-        setActiveFeature(0) // First feature
+        setActiveFeature(0); // First feature
       } else if (relativePosition < 0.8) {
-        setActiveFeature(1) // Second feature
+        setActiveFeature(1); // Second feature
       } else {
-        setActiveFeature(2) // Third feature
+        setActiveFeature(2); // Third feature
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    handleScroll() // Initial check
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const features = [
     {
-      icon: <Compass className="h-8 w-8 text-[#123B79]" />,
+      icon: <Compass className="h-8 w-8 text-[#123B79]" data-oid="f5tdt:u" />,
       title: "Navigate Complexity",
-      description: "Find your way through Singapore's intricate real estate landscape with expert guidance.",
+      description:
+        "Find your way through Singapore's intricate real estate landscape with expert guidance.",
     },
     {
-      icon: <Map className="h-8 w-8 text-[#123B79]" />,
+      icon: <Map className="h-8 w-8 text-[#123B79]" data-oid="rtk7fqh" />,
       title: "Map Your Journey",
-      description: "Visualize your path to success with our structured learning approach.",
+      description:
+        "Visualize your path to success with our structured learning approach.",
     },
     {
-      icon: <Navigation className="h-8 w-8 text-[#123B79]" />,
+      icon: (
+        <Navigation className="h-8 w-8 text-[#123B79]" data-oid="hf-xwv4" />
+      ),
       title: "Connect the Dots",
-      description: "Discover how real estate, finance, and learning interconnect to create opportunities.",
+      description:
+        "Discover how real estate, finance, and learning interconnect to create opportunities.",
     },
-  ]
+  ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
-      <div className="absolute inset-0 bg-white/30 z-[1]"></div>
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+      data-oid="3lyznxh"
+    >
+      <div
+        className="absolute inset-0 bg-white/30 z-[1]"
+        data-oid="xtl72:f"
+      ></div>
       {/* Dynamic Network Background */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+      <div
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        data-oid="_gjd.kr"
+      >
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+          data-oid="b0of8pc"
+        >
           {/* Base network - complex background */}
           {[...Array(30)].map((_, i) => (
             <motion.path
@@ -91,6 +122,7 @@ export default function PlatformSection() {
                 opacity: isInView ? 0.18 : 0,
               }}
               transition={{ duration: 1.5, delay: i * 0.05 }}
+              data-oid="8lo5vmu"
             />
           ))}
 
@@ -101,6 +133,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 0 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
+            data-oid="7vtj0b8"
           >
             <motion.path
               d="M100,500 C250,400 400,550 600,450 S800,500 900,400"
@@ -114,6 +147,7 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 0 ? 0.8 : 0,
               }}
               transition={{ duration: 1.5, delay: 0.3 }}
+              data-oid="1yz:.ia"
             />
 
             {/* Glowing effect for the path */}
@@ -131,8 +165,13 @@ export default function PlatformSection() {
               }}
               transition={{
                 pathLength: { duration: 1.5, delay: 0.3 },
-                opacity: { duration: 2, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" },
+                opacity: {
+                  duration: 2,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
+                },
               }}
+              data-oid="w8y2zdn"
             />
 
             {/* Particles flowing along the path */}
@@ -152,8 +191,10 @@ export default function PlatformSection() {
                   delay: i * 0.6,
                 }}
                 style={{
-                  offsetPath: "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
+                  offsetPath:
+                    "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
                 }}
+                data-oid="w-_fof3"
               />
             ))}
           </motion.g>
@@ -165,6 +206,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 1 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
+            data-oid=":_1dkyf"
           >
             {/* Map nodes */}
             {[
@@ -186,6 +228,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 1 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                data-oid="yi8_pik"
               />
             ))}
 
@@ -201,6 +244,7 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 1 ? 0.57 : 0,
               }}
               transition={{ duration: 1.8, delay: 0.7 }}
+              data-oid="ju5fd0k"
             />
 
             {/* "You are here" indicator */}
@@ -221,6 +265,7 @@ export default function PlatformSection() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "reverse",
               }}
+              data-oid="wflhs12"
             />
           </motion.g>
 
@@ -231,6 +276,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 2 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
+            data-oid="vof5s8e"
           >
             {/* Additional nodes */}
             {[
@@ -252,6 +298,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                data-oid="8i8ujrp"
               />
             ))}
 
@@ -275,6 +322,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.7 : 0,
                 }}
                 transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
+                data-oid="c09q924"
               />
             ))}
 
@@ -298,6 +346,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.49 : 0,
                 }}
                 transition={{ duration: 1, delay: 0.5 + i * 0.15 }}
+                data-oid="ao0f0xh"
               />
             ))}
 
@@ -324,31 +373,61 @@ export default function PlatformSection() {
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                 }}
+                data-oid="5cl-:0f"
               />
             ))}
           </motion.g>
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-20">
-        <motion.div className="text-center mb-16" style={{ opacity: contentOpacity, y: contentY }}>
-          <h2 className="text-4xl font-bold text-[#123B79] mb-4">Your Platform for Mastery</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Assembly guides you through the interwoven network of opportunity in Singapore's real estate ecosystem
+      <div className="container mx-auto px-4 relative z-20" data-oid="wlu85n3">
+        <motion.div
+          className="text-center mb-16"
+          style={{ opacity: contentOpacity, y: contentY }}
+          data-oid="v99vopv"
+        >
+          <h2
+            className="text-4xl font-bold text-[#123B79] mb-4"
+            data-oid="6:pyjui"
+          >
+            Your Platform for Mastery
+          </h2>
+          <p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-oid="b7a8uye"
+          >
+            Assembly guides you through the interwoven network of opportunity in
+            Singapore's real estate ecosystem
           </p>
-          <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
+            data-oid=":j-hazh"
+          ></div>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-12">
-          <motion.div className="w-full max-w-3xl" style={{ opacity: contentOpacity, y: contentY }}>
-            <h3 className="text-3xl font-bold text-[#123B79] mb-6 text-center">Navigating the Network</h3>
-            <p className="text-lg text-gray-700 mb-12 text-center">
-              In today's complex real estate landscape, success comes from understanding the interconnected nature of
-              property, finance, and continuous learning. Assembly provides the tools, knowledge, and community to help
-              you navigate this network with confidence.
+        <div className="flex flex-col items-center gap-12" data-oid="tsym94_">
+          <motion.div
+            className="w-full max-w-3xl"
+            style={{ opacity: contentOpacity, y: contentY }}
+            data-oid="ion_qk."
+          >
+            <h3
+              className="text-3xl font-bold text-[#123B79] mb-6 text-center"
+              data-oid="px0-tu2"
+            >
+              Navigating the Network
+            </h3>
+            <p
+              className="text-lg text-gray-700 mb-12 text-center"
+              data-oid="5r9vtk9"
+            >
+              In today's complex real estate landscape, success comes from
+              understanding the interconnected nature of property, finance, and
+              continuous learning. Assembly provides the tools, knowledge, and
+              community to help you navigate this network with confidence.
             </p>
 
-            <div className="space-y-16">
+            <div className="space-y-16" data-oid=".wo8gky">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -360,6 +439,7 @@ export default function PlatformSection() {
                     scale: activeFeature === index ? 1.05 : 1,
                   }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  data-oid="fbcyoc:"
                 >
                   <motion.div
                     className="p-5 bg-[#F0A500]/10 rounded-full"
@@ -375,14 +455,23 @@ export default function PlatformSection() {
                     }}
                     transition={{
                       duration: 2,
-                      repeat: activeFeature === index ? Number.POSITIVE_INFINITY : 0,
+                      repeat:
+                        activeFeature === index ? Number.POSITIVE_INFINITY : 0,
                     }}
+                    data-oid="ma4-sn9"
                   >
                     {feature.icon}
                   </motion.div>
-                  <div className="text-center md:text-left">
-                    <h4 className="text-2xl font-semibold text-[#123B79] mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 max-w-xl">{feature.description}</p>
+                  <div className="text-center md:text-left" data-oid="-:rr7c5">
+                    <h4
+                      className="text-2xl font-semibold text-[#123B79] mb-2"
+                      data-oid="rw4ot:4"
+                    >
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 max-w-xl" data-oid="qh4bjkp">
+                      {feature.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -391,5 +480,5 @@ export default function PlatformSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

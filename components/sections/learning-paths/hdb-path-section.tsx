@@ -1,25 +1,37 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HdbPathSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
   // Transform values based on scroll
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0])
-  const headerY = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [50, 0, 0, -50])
+  const headerOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.9, 1],
+    [0, 1, 1, 0],
+  );
+  const headerY = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.9, 1],
+    [50, 0, 0, -50],
+  );
 
-  const pathProgress = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
-  const optimizationProgress = useTransform(scrollYProgress, [0.3, 0.7], [0, 1])
-  const exitPathProgress = useTransform(scrollYProgress, [0.7, 0.9], [0, 1])
+  const pathProgress = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
+  const optimizationProgress = useTransform(
+    scrollYProgress,
+    [0.3, 0.7],
+    [0, 1],
+  );
+  const exitPathProgress = useTransform(scrollYProgress, [0.7, 0.9], [0, 1]);
 
   // Decision points along the path
   const decisionPoints = [
@@ -28,20 +40,29 @@ export default function HdbPathSection() {
     { label: "Timing", x: 500, y: 400, delay: 0.3 },
     { label: "Upgrading", x: 600, y: 300, delay: 0.4 },
     { label: "Portfolio Balance", x: 700, y: 400, delay: 0.5 },
-  ]
+  ];
 
   // Property types for visualization
   const propertyTypes = [
     { type: "BTO", x: 350, y: 450, color: "#794B12" },
     { type: "Resale HDB", x: 450, y: 350, color: "#794B12" },
     { type: "Condo", x: 650, y: 350, color: "#79123B" },
-  ]
+  ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+      data-oid="cdj6rib"
+    >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+      <div className="absolute inset-0 pointer-events-none" data-oid="jypuo:a">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+          data-oid="bxxgqgc"
+        >
           {/* Background network elements */}
           {Array(20)
             .fill(0)
@@ -59,6 +80,7 @@ export default function HdbPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
+                data-oid="a9zh.2s"
               />
             ))}
 
@@ -72,6 +94,7 @@ export default function HdbPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="vhl2bax"
           />
 
           {/* Main optimized pathway */}
@@ -84,6 +107,7 @@ export default function HdbPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: optimizationProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="zc0w67t"
           />
 
           {/* Alternative paths (less optimal) */}
@@ -96,10 +120,19 @@ export default function HdbPathSection() {
             fill="none"
             initial={{ pathLength: 0 }}
             style={{
-              pathLength: useTransform(optimizationProgress, [0.1, 0.3], [0, 1]),
-              opacity: useTransform(optimizationProgress, [0.1, 0.3, 0.5, 0.7], [0, 0.36, 0.18, 0]),
+              pathLength: useTransform(
+                optimizationProgress,
+                [0.1, 0.3],
+                [0, 1],
+              ),
+              opacity: useTransform(
+                optimizationProgress,
+                [0.1, 0.3, 0.5, 0.7],
+                [0, 0.36, 0.18, 0],
+              ),
             }}
             transition={{ duration: 0.5 }}
+            data-oid="ri_6mhr"
           />
 
           <motion.path
@@ -111,15 +144,24 @@ export default function HdbPathSection() {
             fill="none"
             initial={{ pathLength: 0 }}
             style={{
-              pathLength: useTransform(optimizationProgress, [0.2, 0.4], [0, 1]),
-              opacity: useTransform(optimizationProgress, [0.2, 0.4, 0.6, 0.8], [0, 0.36, 0.18, 0]),
+              pathLength: useTransform(
+                optimizationProgress,
+                [0.2, 0.4],
+                [0, 1],
+              ),
+              opacity: useTransform(
+                optimizationProgress,
+                [0.2, 0.4, 0.6, 0.8],
+                [0, 0.36, 0.18, 0],
+              ),
             }}
             transition={{ duration: 0.5 }}
+            data-oid="a20jx4o"
           />
 
           {/* Decision points along the path */}
           {decisionPoints.map((point, index) => (
-            <motion.g key={`decision-${index}`}>
+            <motion.g key={`decision-${index}`} data-oid="2asg0j3">
               {/* Decision point node */}
               <motion.circle
                 cx={point.x}
@@ -130,16 +172,23 @@ export default function HdbPathSection() {
                 animate={{
                   scale: isInView
                     ? scrollYProgress.get() > 0.2 + index * 0.1
-                      ? Math.min((scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1, 1)
+                      ? Math.min(
+                          (scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1,
+                          1,
+                        )
                       : 0
                     : 0,
                   opacity: isInView
                     ? scrollYProgress.get() > 0.2 + index * 0.1
-                      ? Math.min((scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1, 1)
+                      ? Math.min(
+                          (scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1,
+                          1,
+                        )
                       : 0
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: point.delay }}
+                data-oid="_2khc_r"
               />
 
               {/* Decision point label */}
@@ -153,19 +202,30 @@ export default function HdbPathSection() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{
                   opacity: isInView
-                    ? scrollYProgress.get() > 0.2 + index * 0.1 && scrollYProgress.get() < 0.9
-                      ? Math.min((scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1, 1)
+                    ? scrollYProgress.get() > 0.2 + index * 0.1 &&
+                      scrollYProgress.get() < 0.9
+                      ? Math.min(
+                          (scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1,
+                          1,
+                        )
                       : scrollYProgress.get() >= 0.9
                         ? Math.max(1 - (scrollYProgress.get() - 0.9) / 0.1, 0)
                         : 0
                     : 0,
                   y: isInView
                     ? scrollYProgress.get() > 0.2 + index * 0.1
-                      ? Math.max(-10 + ((scrollYProgress.get() - (0.2 + index * 0.1)) / 0.1) * 10, -10)
+                      ? Math.max(
+                          -10 +
+                            ((scrollYProgress.get() - (0.2 + index * 0.1)) /
+                              0.1) *
+                              10,
+                          -10,
+                        )
                       : -10
                     : -10,
                 }}
                 transition={{ duration: 0.5, delay: point.delay }}
+                data-oid="qe-.erd"
               >
                 {point.label}
               </motion.text>
@@ -183,25 +243,38 @@ export default function HdbPathSection() {
                 animate={{
                   scale: isInView
                     ? scrollYProgress.get() > 0.3 + index * 0.1
-                      ? Math.min((scrollYProgress.get() - (0.3 + index * 0.1)) / 0.1, 1)
+                      ? Math.min(
+                          (scrollYProgress.get() - (0.3 + index * 0.1)) / 0.1,
+                          1,
+                        )
                       : 0
                     : 0,
                   opacity: isInView
-                    ? scrollYProgress.get() > 0.3 + index * 0.1 && scrollYProgress.get() < 0.8
-                      ? Math.min(((scrollYProgress.get() - (0.3 + index * 0.1)) / 0.1) * 0.7, 0.7)
+                    ? scrollYProgress.get() > 0.3 + index * 0.1 &&
+                      scrollYProgress.get() < 0.8
+                      ? Math.min(
+                          ((scrollYProgress.get() - (0.3 + index * 0.1)) /
+                            0.1) *
+                            0.7,
+                          0.7,
+                        )
                       : scrollYProgress.get() >= 0.8
-                        ? Math.max(0.7 - ((scrollYProgress.get() - 0.8) / 0.1) * 0.7, 0)
+                        ? Math.max(
+                            0.7 - ((scrollYProgress.get() - 0.8) / 0.1) * 0.7,
+                            0,
+                          )
                         : 0
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: point.delay + 0.2 }}
+                data-oid="dzfkmh9"
               />
             </motion.g>
           ))}
 
           {/* Property type representations */}
           {propertyTypes.map((property, index) => (
-            <motion.g key={`property-${index}`}>
+            <motion.g key={`property-${index}`} data-oid="_pw643y">
               {/* Property shape */}
               <motion.rect
                 x={property.x - 20}
@@ -220,13 +293,20 @@ export default function HdbPathSection() {
                     : 0,
                   opacity: isInView
                     ? scrollYProgress.get() > 0.4 && scrollYProgress.get() < 0.9
-                      ? Math.min(((scrollYProgress.get() - 0.4) / 0.1) * 0.6, 0.6)
+                      ? Math.min(
+                          ((scrollYProgress.get() - 0.4) / 0.1) * 0.6,
+                          0.6,
+                        )
                       : scrollYProgress.get() >= 0.9
-                        ? Math.max(0.6 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.6, 0)
+                        ? Math.max(
+                            0.6 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.6,
+                            0,
+                          )
                         : 0
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+                data-oid="oyrf4ow"
               />
 
               {/* Property label */}
@@ -241,13 +321,20 @@ export default function HdbPathSection() {
                 animate={{
                   opacity: isInView
                     ? scrollYProgress.get() > 0.4 && scrollYProgress.get() < 0.9
-                      ? Math.min(((scrollYProgress.get() - 0.4) / 0.1) * 0.6, 0.6)
+                      ? Math.min(
+                          ((scrollYProgress.get() - 0.4) / 0.1) * 0.6,
+                          0.6,
+                        )
                       : scrollYProgress.get() >= 0.9
-                        ? Math.max(0.6 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.6, 0)
+                        ? Math.max(
+                            0.6 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.6,
+                            0,
+                          )
                         : 0
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+                data-oid="ty3sdu3"
               >
                 {property.type}
               </motion.text>
@@ -272,11 +359,15 @@ export default function HdbPathSection() {
                 ? scrollYProgress.get() > 0.5 && scrollYProgress.get() < 0.9
                   ? Math.min(((scrollYProgress.get() - 0.5) / 0.1) * 0.8, 0.8)
                   : scrollYProgress.get() >= 0.9
-                    ? Math.max(0.8 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.8, 0)
+                    ? Math.max(
+                        0.8 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.8,
+                        0,
+                      )
                     : 0
                 : 0,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="au4rxc6"
           />
 
           <motion.path
@@ -296,17 +387,33 @@ export default function HdbPathSection() {
                 ? scrollYProgress.get() > 0.6 && scrollYProgress.get() < 0.9
                   ? Math.min(((scrollYProgress.get() - 0.6) / 0.1) * 0.8, 0.8)
                   : scrollYProgress.get() >= 0.9
-                    ? Math.max(0.8 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.8, 0)
+                    ? Math.max(
+                        0.8 - ((scrollYProgress.get() - 0.9) / 0.1) * 0.8,
+                        0,
+                      )
                     : 0
                 : 0,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="s0a-pi4"
           />
 
           {/* Arrow marker definition */}
-          <defs>
-            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-              <polygon points="0 0, 10 3.5, 0 7" fill="#F0A500" />
+          <defs data-oid="a1bitaf">
+            <marker
+              id="arrowhead"
+              markerWidth="10"
+              markerHeight="7"
+              refX="9"
+              refY="3.5"
+              orient="auto"
+              data-oid="bgbkuvc"
+            >
+              <polygon
+                points="0 0, 10 3.5, 0 7"
+                fill="#F0A500"
+                data-oid="h-95zdv"
+              />
             </marker>
           </defs>
 
@@ -322,46 +429,76 @@ export default function HdbPathSection() {
               pathLength: exitPathProgress,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="y1bz6pl"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-16" style={{ opacity: headerOpacity, y: headerY }}>
-          <h2 className="text-4xl font-bold text-[#794B12] mb-4">HDB Upgrader & Strategist Path</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            For HDB owners or upgraders aiming to move to condos or optimize their property journey
+      <div className="container mx-auto px-4 relative z-10" data-oid=".pcfoq2">
+        <motion.div
+          className="text-center mb-16"
+          style={{ opacity: headerOpacity, y: headerY }}
+          data-oid="i10_wzg"
+        >
+          <h2
+            className="text-4xl font-bold text-[#794B12] mb-4"
+            data-oid="rzl6wq0"
+          >
+            HDB Upgrader & Strategist Path
+          </h2>
+          <p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-oid="0km1dkp"
+          >
+            For HDB owners or upgraders aiming to move to condos or optimize
+            their property journey
           </p>
-          <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
+            data-oid="p-f9isv"
+          ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto" data-oid="t9brdiv">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            data-oid="0i1vygu"
           >
-            <h3 className="text-2xl font-bold text-[#794B12] mb-4">Strategic Optimization</h3>
-            <p className="text-gray-700 mb-6">
-              The HDB Upgrader & Strategist Path guides you through making strategic decisions to optimize your property
-              journey. Whether you're starting with your first HDB flat or planning to upgrade to a condominium, this
-              learning path helps you navigate the complex choices and transitions in Singapore's property market.
+            <h3
+              className="text-2xl font-bold text-[#794B12] mb-4"
+              data-oid="om:3zg8"
+            >
+              Strategic Optimization
+            </h3>
+            <p className="text-gray-700 mb-6" data-oid="jn4zzcv">
+              The HDB Upgrader & Strategist Path guides you through making
+              strategic decisions to optimize your property journey. Whether
+              you're starting with your first HDB flat or planning to upgrade to
+              a condominium, this learning path helps you navigate the complex
+              choices and transitions in Singapore's property market.
             </p>
-            <p className="text-gray-700 mb-6">
-              Through courses covering common mistakes to avoid, upgrading secrets, comparative analysis between
-              property types, and investment maximization strategies, you'll develop the strategic thinking needed to
-              make optimal decisions at each stage of your property ownership journey.
+            <p className="text-gray-700 mb-6" data-oid="zjxznky">
+              Through courses covering common mistakes to avoid, upgrading
+              secrets, comparative analysis between property types, and
+              investment maximization strategies, you'll develop the strategic
+              thinking needed to make optimal decisions at each stage of your
+              property ownership journey.
             </p>
-            <div className="flex justify-center mt-8">
-              <Button className="bg-[#794B12] hover:bg-[#5A380D] text-white">
+            <div className="flex justify-center mt-8" data-oid="eh9x-35">
+              <Button
+                className="bg-[#794B12] hover:bg-[#5A380D] text-white"
+                data-oid="-ysq:rq"
+              >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid="8mbr:nd" />
               </Button>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

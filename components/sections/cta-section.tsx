@@ -1,18 +1,25 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, BookOpen } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 export default function CtaSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-[#f0f4f8] relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-gray-800">
+    <section
+      ref={sectionRef}
+      className="py-24 bg-[#f0f4f8] relative overflow-hidden"
+      data-oid="9rmvq4m"
+    >
+      <div className="container mx-auto px-4 relative z-10" data-oid="4bbanuk">
+        <div
+          className="max-w-4xl mx-auto text-center text-gray-800"
+          data-oid=".j0m-0e"
+        >
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
@@ -21,6 +28,7 @@ export default function CtaSection() {
               y: isInView ? 0 : 30,
             }}
             transition={{ duration: 0.8 }}
+            data-oid="199fibv"
           >
             Can't Find What You're Looking For?
           </motion.h2>
@@ -33,11 +41,13 @@ export default function CtaSection() {
               y: isInView ? 0 : 30,
             }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            data-oid=".x0-kp6"
           >
-            There's so much to learn that it doesn't all fit into one page. Click below to access our content.
+            There's so much to learn that it doesn't all fit into one page.
+            Click below to access our content.
           </motion.p>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center" data-oid="zw1v6-p">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{
@@ -48,19 +58,21 @@ export default function CtaSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex justify-center"
+              data-oid="_d1gn:2"
             >
               <Button
                 size="lg"
                 className="bg-[#123B79] text-white hover:bg-[#0A2A5E] px-8 py-6 text-lg rounded-full flex items-center"
+                data-oid="5vk0i-h"
               >
-                <BookOpen className="mr-2 h-5 w-5" />
+                <BookOpen className="mr-2 h-5 w-5" data-oid="y14hf4a" />
                 Explore Courses
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" data-oid=":.hfiwe" />
               </Button>
             </motion.div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

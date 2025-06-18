@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { Search, Filter, Star, Edit, Trash } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Search, Filter, Star, Edit, Trash } from "lucide-react";
 
 // Mock reviews data
 const reviewsData = [
@@ -57,79 +57,104 @@ const reviewsData = [
       "A solid introduction to Python programming. The course covers all the basics and includes some interesting projects to work on. I would have liked more advanced topics toward the end, but it's a great starting point for beginners.",
     image: "/images/property-strategies-2025.jpg",
   },
-]
+];
 
 export default function ReviewsPage() {
-  const [activeTab, setActiveTab] = useState("all")
-  const [searchQuery, setSearchQuery] = useState("")
+  const [activeTab, setActiveTab] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Get reviews from the last 30 days
-  const thirtyDaysAgo = new Date()
-  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 
   const recentReviews = reviewsData.filter((review, index) => {
     // This is a simplified approach for demo purposes
     // In a real app, you would parse the date string and compare properly
-    return index < 2
-  })
+    return index < 2;
+  });
 
   // Filter reviews based on active tab and search query
   const filteredReviews = reviewsData.filter((review) => {
-    const matchesTab = activeTab === "all" || (activeTab === "recent" && recentReviews.some((r) => r.id === review.id))
+    const matchesTab =
+      activeTab === "all" ||
+      (activeTab === "recent" && recentReviews.some((r) => r.id === review.id));
 
-    const matchesSearch = review.course.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesSearch = review.course
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
 
-    return matchesTab && matchesSearch
-  })
+    return matchesTab && matchesSearch;
+  });
 
   return (
-    <div className="p-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-800">My Reviews</h1>
-          <p className="text-gray-500 mt-1">Reviews you've left for courses</p>
+    <div className="p-6" data-oid="1-1edxf">
+      <div
+        className="flex flex-col md:flex-row md:items-center justify-between mb-6"
+        data-oid="_:jqelu"
+      >
+        <div data-oid="9_a39t-">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="z038shg">
+            My Reviews
+          </h1>
+          <p className="text-gray-500 mt-1" data-oid="d8e42m2">
+            Reviews you've left for courses
+          </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3">
-          <div className="relative">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid=":i53lhh">
+          <div className="relative" data-oid="k-qe9ev">
             <input
               type="text"
               placeholder="Search reviews..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              data-oid="zzbj7z3"
             />
-            <Search className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+
+            <Search
+              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              data-oid="t:9c:sj"
+            />
           </div>
-          <button className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50">
-            <Filter className="h-4 w-4" />
-            <span>Filter</span>
+          <button
+            className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
+            data-oid="k6o58zh"
+          >
+            <Filter className="h-4 w-4" data-oid="bog9b:_" />
+            <span data-oid="7whljva">Filter</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="388q.dp">
         <button
           className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "all" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500 hover:text-gray-700"
+            activeTab === "all"
+              ? "text-blue-600 border-b-2 border-blue-600"
+              : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
+          data-oid="p3bkdyx"
         >
           All Reviews ({reviewsData.length})
         </button>
         <button
           className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "recent" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500 hover:text-gray-700"
+            activeTab === "recent"
+              ? "text-blue-600 border-b-2 border-blue-600"
+              : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("recent")}
+          data-oid="z8sf7rf"
         >
           Recent ({recentReviews.length})
         </button>
       </div>
 
       {/* Reviews List */}
-      <div className="space-y-6">
+      <div className="space-y-6" data-oid="xbde1:i">
         {filteredReviews.map((review) => (
           <motion.div
             key={review.id}
@@ -137,45 +162,77 @@ export default function ReviewsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
+            data-oid="r35bcz_"
           >
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+            <div className="flex items-start gap-4" data-oid="yh6nlj0">
+              <div
+                className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
+                data-oid="ii4ccal"
+              >
                 <Image
                   src={review.image || "/placeholder.svg"}
                   alt={review.course}
                   width={64}
                   height={64}
                   className="object-cover"
+                  data-oid="prm4ls7"
                 />
               </div>
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h2 className="text-lg font-bold text-gray-800">{review.course}</h2>
-                  <div className="flex items-center mt-2 md:mt-0">
-                    <div className="flex">
+              <div className="flex-1" data-oid="r2y2hm.">
+                <div
+                  className="flex flex-col md:flex-row md:items-center justify-between mb-2"
+                  data-oid="dq.cm26"
+                >
+                  <h2
+                    className="text-lg font-bold text-gray-800"
+                    data-oid="84zrjkr"
+                  >
+                    {review.course}
+                  </h2>
+                  <div
+                    className="flex items-center mt-2 md:mt-0"
+                    data-oid="beexj_c"
+                  >
+                    <div className="flex" data-oid="d76k-p8">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={`h-4 w-4 ${i < review.rating ? "text-yellow-500 fill-current" : "text-gray-300"}`}
+                          data-oid="icxt:u3"
                         />
                       ))}
                     </div>
-                    <span className="ml-2 text-sm text-gray-500">{review.date}</span>
+                    <span
+                      className="ml-2 text-sm text-gray-500"
+                      data-oid="p3gj-h."
+                    >
+                      {review.date}
+                    </span>
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 mb-2">Instructor: {review.instructor}</p>
+                <p className="text-sm text-gray-600 mb-2" data-oid="lrnye8_">
+                  Instructor: {review.instructor}
+                </p>
 
-                <p className="text-gray-700 mb-4">{review.content}</p>
+                <p className="text-gray-700 mb-4" data-oid="1:3omwo">
+                  {review.content}
+                </p>
 
-                <div className="flex justify-end space-x-3">
-                  <button className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-1">
-                    <Edit className="h-3.5 w-3.5" />
-                    <span>Edit</span>
+                <div className="flex justify-end space-x-3" data-oid="go944rd">
+                  <button
+                    className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-1"
+                    data-oid="po71.gv"
+                  >
+                    <Edit className="h-3.5 w-3.5" data-oid=".d66aqp" />
+                    <span data-oid="9nf8bi9">Edit</span>
                   </button>
-                  <button className="px-3 py-1.5 border border-red-200 text-red-600 rounded-lg text-sm font-medium hover:bg-red-50 flex items-center gap-1">
-                    <Trash className="h-3.5 w-3.5" />
-                    <span>Delete</span>
+                  <button
+                    className="px-3 py-1.5 border border-red-200 text-red-600 rounded-lg text-sm font-medium hover:bg-red-50 flex items-center gap-1"
+                    data-oid="sa.uflj"
+                  >
+                    <Trash className="h-3.5 w-3.5" data-oid="p27jlz5" />
+                    <span data-oid="::2sln6">Delete</span>
                   </button>
                 </div>
               </div>
@@ -184,5 +241,5 @@ export default function ReviewsPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

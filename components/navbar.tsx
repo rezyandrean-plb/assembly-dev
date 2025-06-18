@@ -1,64 +1,79 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { Menu, ShoppingCart, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useCart } from "@/components/cart-context"
-import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, ShoppingCart, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useCart } from "@/components/cart-context";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
-  const { cart } = useCart()
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const { cart } = useCart();
+  const pathname = usePathname();
 
   useEffect(() => {
-    setIsMounted(true)
+    setIsMounted(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  if (!isMounted) return null
+  if (!isMounted) return null;
 
-  const navItems = ["Courses", "About", "PLB Book", "Contact"]
+  const navItems = ["Courses", "About", "PLB Book", "Contact"];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-md py-3"
+          : "bg-transparent py-5"
       }`}
+      data-oid="1dd4-32"
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center z-10">
+      <div
+        className="container mx-auto px-4 flex justify-between items-center"
+        data-oid="_k9np43"
+      >
+        <Link href="/" className="flex items-center z-10" data-oid="27q4mdz">
           <Image
             src="/images/assembly-logo.png"
             alt="Assembly.sg Logo"
             width={180}
             height={50}
             className="h-10 w-auto"
+            data-oid="jk0n:cf"
           />
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8">
-          <nav className={`flex space-x-6 ${isScrolled ? "text-gray-700" : "text-gray-700"}`}>
+        <div
+          className="hidden md:flex items-center space-x-8"
+          data-oid="zs4npod"
+        >
+          <nav
+            className={`flex space-x-6 ${isScrolled ? "text-gray-700" : "text-gray-700"}`}
+            data-oid="s6zdh3i"
+          >
             {navItems.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                data-oid="fm46q3a"
               >
                 <Link
-                  href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/${item.toLowerCase().replace("plb book", "plb-book").replace(/\s+/g, "-")}`}
                   className="font-medium hover:text-[#F0A500] transition-colors"
+                  data-oid="z0djzi3"
                 >
                   {item}
                 </Link>
@@ -71,26 +86,33 @@ export default function Navbar() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
+            data-oid="fd5i9x3"
           >
-            <Link href="/cart">
-              <span className="relative inline-block">
+            <Link href="/cart" data-oid="6rrd4iy">
+              <span className="relative inline-block" data-oid="jutl._p">
                 <ShoppingCart
                   className={`h-6 w-6 ${isScrolled ? "text-gray-700" : "text-gray-700"} hover:text-[#F0A500] transition-colors`}
+                  data-oid="81w9qyr"
                 />
-                <span className="absolute -top-2 -right-2 bg-[#F0A500] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+
+                <span
+                  className="absolute -top-2 -right-2 bg-[#F0A500] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                  data-oid="8te54of"
+                >
                   {cart.length}
                 </span>
               </span>
             </Link>
           </motion.div>
 
-          <div className="flex space-x-3">
+          <div className="flex space-x-3" data-oid=":z.-9:_">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
+              data-oid="o2zs-.u"
             >
-              <Link href="/login">
+              <Link href="/login" data-oid="o0n-ug:">
                 <Button
                   variant="outline"
                   className={`${
@@ -98,6 +120,7 @@ export default function Navbar() {
                       ? "border-gray-300 text-gray-700 hover:bg-gray-100"
                       : "border-gray-300 text-gray-700 hover:bg-gray-100"
                   }`}
+                  data-oid="4di44tm"
                 >
                   Log In
                 </Button>
@@ -107,8 +130,16 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
+              data-oid="-xwv3np"
             >
-              <Button className="bg-[#123B79] text-white hover:bg-[#0A2A5E]">Sign Up</Button>
+              <Link href="/signup" data-oid="2u69166">
+                <Button
+                  className="bg-[#123B79] text-white hover:bg-[#0A2A5E]"
+                  data-oid="o3_vnf4"
+                >
+                  Sign Up
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -116,13 +147,18 @@ export default function Navbar() {
         <button
           className={`md:hidden ${isScrolled ? "text-gray-900" : "text-gray-900"}`}
           onClick={() => setIsOpen(!isOpen)}
+          data-oid="crzgwl_"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? (
+            <X className="h-6 w-6" data-oid="gpsawyb" />
+          ) : (
+            <Menu className="h-6 w-6" data-oid="gx05tt5" />
+          )}
         </button>
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
+      <AnimatePresence data-oid="9mdosr5">
         {isOpen && (
           <motion.div
             className="md:hidden bg-white"
@@ -130,33 +166,44 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            data-oid="bhqe62z"
           >
-            <div className="container mx-auto px-4 py-4">
-              <nav className="flex flex-col space-y-4">
+            <div className="container mx-auto px-4 py-4" data-oid="cbb0wwy">
+              <nav className="flex flex-col space-y-4" data-oid="77eggki">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
+                    data-oid="m21lcfg"
                   >
                     <Link
-                      href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/${item.toLowerCase().replace("plb book", "plb-book").replace(/\s+/g, "-")}`}
                       className="font-medium text-gray-800 py-2 hover:text-[#F0A500] transition-colors"
                       onClick={() => setIsOpen(false)}
+                      data-oid="15l83px"
                     >
                       {item}
                     </Link>
                   </motion.div>
                 ))}
-                <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+                <div
+                  className="flex flex-col space-y-3 pt-4 border-t border-gray-100"
+                  data-oid="0l-o8bi"
+                >
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.5 }}
+                    data-oid="ogycbyb"
                   >
-                    <Link href="/login" className="w-full">
-                      <Button variant="outline" className="w-full">
+                    <Link href="/login" className="w-full" data-oid="5p3c5bs">
+                      <Button
+                        variant="outline"
+                        className="w-full"
+                        data-oid=".bkmdbf"
+                      >
                         Log In
                       </Button>
                     </Link>
@@ -165,8 +212,16 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.6 }}
+                    data-oid="22ziqo."
                   >
-                    <Button className="w-full bg-[#123B79] text-white hover:bg-[#0A2A5E]">Sign Up</Button>
+                    <Link href="/signup" data-oid="3j8_m67">
+                      <Button
+                        className="w-full bg-[#123B79] text-white hover:bg-[#0A2A5E]"
+                        data-oid="acgh_-0"
+                      >
+                        Sign Up
+                      </Button>
+                    </Link>
                   </motion.div>
                 </div>
               </nav>
@@ -175,5 +230,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }
