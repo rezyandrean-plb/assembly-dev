@@ -11,15 +11,15 @@ function AddressForm({ address, setAddress, title }) {
   };
 
   return (
-    <div data-oid="9:o0dom">
-      <h3 className="text-2xl font-bold mb-6" data-oid="g_j1c.i">
+    <div data-oid="ww1c9:-">
+      <h3 className="text-2xl font-bold mb-6" data-oid=":_4j2_3">
         {title}
       </h3>
-      <div className="space-y-4" data-oid="su1f_f0">
-        <div className="grid grid-cols-2 gap-4" data-oid="e_0hw70">
-          <div className="form-control" data-oid="lpeom03">
-            <label className="label" data-oid="pj7ncwr">
-              <span className="label-text" data-oid="m5o6usp">
+      <div className="space-y-4" data-oid="fgpm_qu">
+        <div className="grid grid-cols-2 gap-4" data-oid="rqbbggz">
+          <div className="form-control" data-oid="mt-toh0">
+            <label className="label" data-oid="d.-qn5h">
+              <span className="label-text" data-oid="bso56sz">
                 First Name*
               </span>
             </label>
@@ -29,12 +29,12 @@ function AddressForm({ address, setAddress, title }) {
               value={address.firstName}
               onChange={handleChange}
               className="input input-bordered w-full"
-              data-oid="sn-u.ih"
+              data-oid="v05so7l"
             />
           </div>
-          <div className="form-control" data-oid="h6y8bfi">
-            <label className="label" data-oid=".o5emsx">
-              <span className="label-text" data-oid="k3.xy1x">
+          <div className="form-control" data-oid="qe2fj._">
+            <label className="label" data-oid="z1.iw_l">
+              <span className="label-text" data-oid="88mjyzx">
                 Last Name*
               </span>
             </label>
@@ -44,13 +44,13 @@ function AddressForm({ address, setAddress, title }) {
               value={address.lastName}
               onChange={handleChange}
               className="input input-bordered w-full"
-              data-oid="r5e04ia"
+              data-oid="s3oyvsp"
             />
           </div>
         </div>
-        <div className="form-control" data-oid="_inxna:">
-          <label className="label" data-oid="x26-4iw">
-            <span className="label-text" data-oid="9r99kkd">
+        <div className="form-control" data-oid="2oks_lk">
+          <label className="label" data-oid="6suy3_x">
+            <span className="label-text" data-oid="dbtvo.1">
               Email Address*
             </span>
           </label>
@@ -60,12 +60,12 @@ function AddressForm({ address, setAddress, title }) {
             value={address.email}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="v:pya3n"
+            data-oid="le8v3qr"
           />
         </div>
-        <div className="form-control" data-oid="lxqlzfn">
-          <label className="label" data-oid="-l64i4-">
-            <span className="label-text" data-oid="ieb-3k5">
+        <div className="form-control" data-oid="f.0as9c">
+          <label className="label" data-oid="q:6ufdz">
+            <span className="label-text" data-oid="89hdfh5">
               Mobile*
             </span>
           </label>
@@ -75,12 +75,12 @@ function AddressForm({ address, setAddress, title }) {
             value={address.mobile}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="lt4kgbm"
+            data-oid="6u44yk."
           />
         </div>
-        <div className="form-control" data-oid="xf6199a">
-          <label className="label" data-oid="6kp-vzi">
-            <span className="label-text" data-oid="28261w1">
+        <div className="form-control" data-oid="3i:mpgp">
+          <label className="label" data-oid="ozb7q14">
+            <span className="label-text" data-oid="5uvw7r-">
               Country*
             </span>
           </label>
@@ -90,12 +90,12 @@ function AddressForm({ address, setAddress, title }) {
             value={address.country}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="zh9tbez"
+            data-oid="h34154o"
           />
         </div>
-        <div className="form-control" data-oid="k9wi3di">
-          <label className="label" data-oid="3pri.wc">
-            <span className="label-text" data-oid="1gnlqzu">
+        <div className="form-control" data-oid="ndktipz">
+          <label className="label" data-oid="xb-9p.5">
+            <span className="label-text" data-oid="b8.686w">
               Company
             </span>
           </label>
@@ -105,12 +105,12 @@ function AddressForm({ address, setAddress, title }) {
             value={address.company}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="-b0tf_o"
+            data-oid="qsra5pm"
           />
         </div>
-        <div className="form-control" data-oid="-9z27a6">
-          <label className="label" data-oid="p71ktj-">
-            <span className="label-text" data-oid="6zk5qx4">
+        <div className="form-control" data-oid="c:yjtl0">
+          <label className="label" data-oid="d.vkvo:">
+            <span className="label-text" data-oid="41n6t:n">
               Street Address*
             </span>
           </label>
@@ -120,13 +120,13 @@ function AddressForm({ address, setAddress, title }) {
             value={address.streetAddress}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="3bgctq2"
+            data-oid="o:zc_v5"
           />
         </div>
-        <div className="grid grid-cols-2 gap-4" data-oid="ch5-xqb">
-          <div className="form-control" data-oid=":i30czv">
-            <label className="label" data-oid="tnbwztd">
-              <span className="label-text" data-oid=":d8st1p">
+        <div className="grid grid-cols-2 gap-4" data-oid="r:6zcb7">
+          <div className="form-control" data-oid="pacfhdf">
+            <label className="label" data-oid="qb-1zz0">
+              <span className="label-text" data-oid="02jyhmf">
                 Suburb*
               </span>
             </label>
@@ -136,12 +136,12 @@ function AddressForm({ address, setAddress, title }) {
               value={address.suburb}
               onChange={handleChange}
               className="input input-bordered w-full"
-              data-oid="6nld9pm"
+              data-oid="d4gapy8"
             />
           </div>
-          <div className="form-control" data-oid="bt3k1e1">
-            <label className="label" data-oid="y3lm.u0">
-              <span className="label-text" data-oid="hbt:n7v">
+          <div className="form-control" data-oid="jddao7j">
+            <label className="label" data-oid="siqzgnx">
+              <span className="label-text" data-oid="3:o_a0y">
                 State*
               </span>
             </label>
@@ -151,13 +151,13 @@ function AddressForm({ address, setAddress, title }) {
               value={address.state}
               onChange={handleChange}
               className="input input-bordered w-full"
-              data-oid="vb_87oh"
+              data-oid="2n-rg8j"
             />
           </div>
         </div>
-        <div className="form-control" data-oid="r7xf5a-">
-          <label className="label" data-oid="gdujjss">
-            <span className="label-text" data-oid="pqojtf9">
+        <div className="form-control" data-oid="4aiom:5">
+          <label className="label" data-oid="7bogv.7">
+            <span className="label-text" data-oid="22.4:6b">
               Postcode*
             </span>
           </label>
@@ -167,7 +167,7 @@ function AddressForm({ address, setAddress, title }) {
             value={address.postcode}
             onChange={handleChange}
             className="input input-bordered w-full"
-            data-oid="1q__bg5"
+            data-oid="cbxll83"
           />
         </div>
       </div>
@@ -198,37 +198,37 @@ export default function AddressPage() {
     <>
       <div
         className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start"
-        data-oid="ph99svw"
+        data-oid="79gc-c_"
       >
         {/* Delivery Address + Authority to Leave */}
-        <div data-oid="1zu.2vb">
+        <div data-oid="v6sa.8v">
           {deliveryOption === "delivery" && (
             <>
               <AddressForm
                 address={deliveryAddress}
                 setAddress={setDeliveryAddress}
                 title="Delivery Address"
-                data-oid="7:w3rm2"
+                data-oid="o8332qt"
               />
 
-              <div className="text-sm space-y-4 mt-8" data-oid="n.yzhn5">
-                <h4 className="font-semibold" data-oid="ozxa3g2">
+              <div className="text-sm space-y-4 mt-8" data-oid="_4yc.2x">
+                <h4 className="font-semibold" data-oid="mg-:3_d">
                   Authority to Leave
                 </h4>
-                <p data-oid="3m5hg16">
+                <p data-oid="vdvfu.i">
                   Your order may be left in a safe place, if not, it will be
                   taken to your local Australia Post collection point.
                 </p>
-                <p data-oid="hrl8igc">
+                <p data-oid="q9ib6-c">
                   Track and manage your delivery via the{" "}
-                  <a href="#" className="underline" data-oid="59pgux:">
+                  <a href="#" className="underline" data-oid="mocxn4t">
                     AusPost app
                   </a>
                   .
                 </p>
-                <p data-oid="sd6m0e0">
+                <p data-oid="ceq9zf1">
                   Please see our{" "}
-                  <a href="#" className="underline" data-oid="jh1_38t">
+                  <a href="#" className="underline" data-oid="wgv374s">
                     privacy policy
                   </a>{" "}
                   for more information about how we deal with your information.
@@ -238,25 +238,25 @@ export default function AddressPage() {
           )}
         </div>
         {/* Billing Address */}
-        <div data-oid="76f34x7">
-          <h3 className="text-2xl font-bold mb-6" data-oid="97r56c-">
+        <div data-oid="rspk3z3">
+          <h3 className="text-2xl font-bold mb-6" data-oid="jgg404p">
             Billing Address
           </h3>
           {deliveryOption === "delivery" && (
-            <div className="flex items-center mb-4" data-oid="n92k_wy">
+            <div className="flex items-center mb-4" data-oid="-of9mzb">
               <input
                 type="checkbox"
                 checked={billingSameAsDelivery}
                 onChange={(e) => setBillingSameAsDelivery(e.target.checked)}
                 id="sameAsDelivery"
                 className="checkbox"
-                data-oid="e.gh3vj"
+                data-oid=".p2nj96"
               />
 
               <label
                 htmlFor="sameAsDelivery"
                 className="ml-2 font-semibold"
-                data-oid="34bfwd3"
+                data-oid="1owmgs2"
               >
                 Same as Delivery Address
               </label>
@@ -267,33 +267,33 @@ export default function AddressPage() {
               address={billingAddress}
               setAddress={setBillingAddress}
               title=""
-              data-oid="06.x2k:"
+              data-oid="_rnh:6n"
             />
           )}
         </div>
         {/* Order Summary */}
-        <div data-oid="pwz9.xl">
-          <OrderSummary data-oid="r1y03ec" />
+        <div data-oid="y28n_jj">
+          <OrderSummary data-oid="bog9-f6" />
           <button
             onClick={handleNext}
             className="btn btn-primary w-full mt-6"
-            data-oid="7_6nrl9"
+            data-oid="7rbvisf"
           >
             Continue to Payment
           </button>
         </div>
       </div>
-      <div className="text-center py-12 border-t mt-12" data-oid="867cec:">
-        <h3 className="text-xl font-semibold" data-oid="lihg::-">
+      <div className="text-center py-12 border-t mt-12" data-oid="ybrpulk">
+        <h3 className="text-xl font-semibold" data-oid="7mqspcx">
           Need Help?
         </h3>
-        <p className="mt-2 text-gray-600" data-oid="rlwa1-6">
+        <p className="mt-2 text-gray-600" data-oid="vbxgvdl">
           Perhaps our{" "}
-          <a href="#" className="underline font-semibold" data-oid="865nw3-">
+          <a href="#" className="underline font-semibold" data-oid="w:lqhf8">
             FAQs
           </a>{" "}
           page can answer your question. Alternatively, use our{" "}
-          <a href="#" className="underline font-semibold" data-oid="_yoqbn4">
+          <a href="#" className="underline font-semibold" data-oid="38fpu78">
             Contact Us
           </a>{" "}
           page to speak to a member of our customer service team

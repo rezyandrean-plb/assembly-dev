@@ -36,16 +36,16 @@ export default function DeliveryPage() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16" data-oid="oark0x0">
-      <div data-oid="m0fu7-z">
-        <h2 className="text-2xl font-bold mb-6" data-oid="scnqi2i">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-16" data-oid=".kmsy::">
+      <div data-oid="q4fdl0i">
+        <h2 className="text-2xl font-bold mb-6" data-oid="w60nohd">
           Select click & collect or delivery for each item
         </h2>
 
-        <div className="space-y-4" data-oid="lb:05je">
+        <div className="space-y-4" data-oid="m_4w6wx">
           <label
             className={`flex items-center p-4 border rounded-lg cursor-pointer ${deliveryOption === "self-collect" ? "border-primary ring-2 ring-primary" : "border-gray-300"}`}
-            data-oid="s_1_n5e"
+            data-oid="rcd-fcr"
           >
             <input
               type="radio"
@@ -54,30 +54,30 @@ export default function DeliveryPage() {
               checked={deliveryOption === "self-collect"}
               onChange={() => setDeliveryOption("self-collect")}
               className="mr-4"
-              data-oid="sovy5-e"
+              data-oid="m5bocsa"
             />
 
-            <div data-oid="sbclf5l">
-              <p className="font-semibold" data-oid=":8luo-9">
+            <div data-oid="w02y1bo">
+              <p className="font-semibold" data-oid="bbxyam0">
                 Click & Collect
               </p>
-              <p className="text-sm text-gray-500" data-oid="676o1xs">
+              <p className="text-sm text-gray-500" data-oid="t9f3pa0">
                 Collection from 62 Ubi Road 1, Oxley BizHub 2, #11-15/18,
                 Singapore, 408734
               </p>
             </div>
-            <p className="ml-auto font-semibold" data-oid="hrcues2">
+            <p className="ml-auto font-semibold" data-oid="ktw6t0c">
               FREE
             </p>
           </label>
 
           <label
             className={`p-4 border rounded-lg ${deliveryOption === "delivery" ? "border-primary ring-2 ring-primary" : "border-gray-300"}`}
-            data-oid=":iw13j_"
+            data-oid="3p765g_"
           >
             <div
               className="flex items-center cursor-pointer"
-              data-oid="nh8moa1"
+              data-oid="-a2s251"
             >
               <input
                 type="radio"
@@ -86,55 +86,55 @@ export default function DeliveryPage() {
                 checked={deliveryOption === "delivery"}
                 onChange={() => setDeliveryOption("delivery")}
                 className="mr-4"
-                data-oid="_y8r8nj"
+                data-oid="ncyw.-j"
               />
 
-              <p className="font-semibold" data-oid="9:p3ptb">
+              <p className="font-semibold" data-oid="5osal-9">
                 Delivery
               </p>
             </div>
             {deliveryOption === "delivery" && (
-              <div className="mt-4 pl-8" data-oid="4scj0b7">
-                <p className="font-semibold mb-2" data-oid="dvpn23x">
+              <div className="mt-4 pl-8" data-oid="4sxgg28">
+                <p className="font-semibold mb-2" data-oid="b33rz-5">
                   Delivers to
                 </p>
-                <div className="flex gap-2" data-oid="2r8jfsx">
+                <div className="flex gap-2" data-oid="0brnc7:">
                   <input
                     type="text"
                     value={postalCode}
                     onChange={(e) => setPostalCode(e.target.value)}
                     placeholder="Enter your postal code"
                     className="input input-bordered w-full"
-                    data-oid="x2o4zbh"
+                    data-oid="26lhx:7"
                   />
 
                   <button
                     onClick={handleCheckDelivery}
                     className="btn btn-primary"
-                    data-oid="xc0j33j"
+                    data-oid="5a0xl07"
                   >
                     Check
                   </button>
                 </div>
 
                 {showShipping && (
-                  <div className="mt-4 space-y-2" data-oid="yjc0vm1">
+                  <div className="mt-4 space-y-2" data-oid="_ac6i6t">
                     {shippingOptions.map((option) => (
                       <label
                         key={option.name}
                         className="flex items-center p-2 border rounded-md cursor-pointer"
-                        data-oid="r2zizar"
+                        data-oid="y.0bm3-"
                       >
                         <input
                           type="radio"
                           name="shipping"
                           onChange={() => handleSelectShipping(option.price)}
                           className="mr-3"
-                          data-oid="pvodv.7"
+                          data-oid="1111:dk"
                         />
 
-                        <p data-oid="535k7ub">{option.name}</p>
-                        <p className="ml-auto font-semibold" data-oid="1:c-lxa">
+                        <p data-oid="3_hsf9b">{option.name}</p>
+                        <p className="ml-auto font-semibold" data-oid="2k1jw-f">
                           ${option.price.toFixed(2)}
                         </p>
                       </label>
@@ -147,12 +147,12 @@ export default function DeliveryPage() {
         </div>
       </div>
 
-      <div className="space-y-8" data-oid="tdqlux5">
-        <OrderSummary data-oid="62es6i2" />
+      <div className="space-y-8" data-oid="2jj2_.3">
+        <OrderSummary data-oid="qgxl8xq" />
         <button
           onClick={handleNext}
           className="btn btn-primary w-full mt-6"
-          data-oid="6yeauq:"
+          data-oid="fqv6xdh"
         >
           Next
         </button>

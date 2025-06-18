@@ -88,11 +88,11 @@ export default function CartPageContent() {
     return (
       <div
         className="min-h-screen bg-gray-50 flex items-center justify-center"
-        data-oid="gndbf:o"
+        data-oid="bnke479"
       >
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123B79]"
-          data-oid="ljlrwx3"
+          data-oid="pob6mr6"
         ></div>
       </div>
     );
@@ -106,40 +106,40 @@ export default function CartPageContent() {
           setIsLoginModalOpen(false);
           setTimeout(handleCheckout, 100);
         }}
-        data-oid="5d7kcbb"
+        data-oid="us7ga.m"
       />
 
-      <div className="bg-gray-50" data-oid="ut9u_y3">
-        <Navbar data-oid="iuj4l_i" />
+      <div className="bg-gray-50" data-oid="0u9-6fa">
+        <Navbar data-oid="g3n5g:b" />
         <div
           className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24"
-          data-oid="ae2nwfw"
+          data-oid="5m1zf.6"
         >
-          <Stepper currentStep={1} data-oid="s:6uw7z" />
+          <Stepper currentStep={1} data-oid="qq-cs5b" />
           <h1
             className="text-3xl font-bold text-gray-900 my-8"
-            data-oid="em3vs:w"
+            data-oid="jvyw7il"
           >
             Shopping Cart
           </h1>
           {cart.length === 0 ? (
             <div
               className="text-center py-20 bg-white rounded-lg shadow-sm"
-              data-oid="t3pmxeb"
+              data-oid="dqjo.4h"
             >
               <h2
                 className="text-2xl font-semibold text-gray-800 mb-2"
-                data-oid="-bicec7"
+                data-oid="y8a61j3"
               >
                 Your cart is empty
               </h2>
-              <p className="text-gray-600 mb-6" data-oid="59_wn01">
+              <p className="text-gray-600 mb-6" data-oid="riwlxn0">
                 Looks like you haven't added anything to your cart yet.
               </p>
               <Button
                 onClick={() => router.push("/courses")}
                 className="bg-[#123B79] hover:bg-[#0A2A5E]"
-                data-oid="0:gdrl6"
+                data-oid="24c1tce"
               >
                 Browse Courses
               </Button>
@@ -147,69 +147,69 @@ export default function CartPageContent() {
           ) : (
             <div
               className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start"
-              data-oid="rt4lry8"
+              data-oid="bq7yu.c"
             >
               <section
                 aria-labelledby="cart-heading"
                 className="lg:col-span-8"
-                data-oid="gel:mc-"
+                data-oid="em1kifn"
               >
                 <ul
                   role="list"
                   className="divide-y divide-gray-200 border-t border-b border-gray-200"
-                  data-oid="um5zksw"
+                  data-oid="c.dh_mv"
                 >
                   {cart.map((item) => (
                     <li
                       key={item.id}
                       className="flex py-6 px-4 bg-white"
-                      data-oid="jm-xrjb"
+                      data-oid="lcxv0gt"
                     >
-                      <div className="flex-shrink-0" data-oid="bsi97:e">
+                      <div className="flex-shrink-0" data-oid="xwyr82y">
                         <Image
                           src={item.image || "/placeholder.jpg"}
                           alt={item.title}
                           width={160}
                           height={160}
                           className="w-40 h-40 rounded-md object-contain"
-                          data-oid="wgpxrkt"
+                          data-oid="e3nzvii"
                         />
                       </div>
                       <div
                         className="ml-4 flex-1 flex flex-col justify-between sm:ml-6"
-                        data-oid="2ywwghi"
+                        data-oid="tfm23_0"
                       >
                         <div
                           className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6"
-                          data-oid=":.r.wmv"
+                          data-oid="4d101.o"
                         >
-                          <div data-oid=":ennnyj">
+                          <div data-oid="65wsx3k">
                             <h3
                               className="text-lg font-semibold text-gray-800"
-                              data-oid="xp8ws57"
+                              data-oid="rs-qoq."
                             >
                               <a
                                 href={`/courses/${item.slug}`}
                                 className="hover:text-[#123B79]"
-                                data-oid="jmlr4-_"
+                                data-oid="w2fagg."
                               >
                                 {item.title}
                               </a>
                             </h3>
                             <p
                               className="mt-1 text-sm text-gray-500"
-                              data-oid="n6_4v:z"
+                              data-oid="ycnso6i"
                             >
                               By {item.instructor}
                             </p>
                           </div>
                           <div
                             className="mt-4 sm:mt-0 sm:text-right"
-                            data-oid="5kba7m7"
+                            data-oid="..jr4u4"
                           >
                             <p
                               className="text-lg font-bold text-gray-900"
-                              data-oid="n12ty:z"
+                              data-oid="_i0kxck"
                             >
                               {formatPrice(item.price)}
                             </p>
@@ -217,13 +217,13 @@ export default function CartPageContent() {
                         </div>
                         <div
                           className="mt-4 flex items-center justify-between"
-                          data-oid="geb8s3y"
+                          data-oid="s0qgy9k"
                         >
-                          <div className="flex items-center" data-oid="9ufx3h.">
+                          <div className="flex items-center" data-oid=":_w0rps">
                             <label
                               htmlFor={`quantity-${item.id}`}
                               className="sr-only"
-                              data-oid="-seigkm"
+                              data-oid="8r.nt39"
                             >
                               Quantity
                             </label>
@@ -239,20 +239,20 @@ export default function CartPageContent() {
                               }
                               disabled={item.type !== "Book"}
                               className="block max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm disabled:bg-gray-100 disabled:cursor-not-allowed"
-                              data-oid="dj:40ex"
+                              data-oid="9oqp9ts"
                             >
                               {item.type === "Book" ? (
                                 [...Array(10).keys()].map((i) => (
                                   <option
                                     key={i + 1}
                                     value={i + 1}
-                                    data-oid="pmljsn7"
+                                    data-oid="rc4eqwk"
                                   >
                                     {i + 1}
                                   </option>
                                 ))
                               ) : (
-                                <option value="1" data-oid="o:f959l">
+                                <option value="1" data-oid="2ctd.zj">
                                   1
                                 </option>
                               )}
@@ -260,22 +260,22 @@ export default function CartPageContent() {
                           </div>
                           <div
                             className="flex items-center space-x-4"
-                            data-oid="w25wodk"
+                            data-oid="a_57z2y"
                           >
                             <button
                               type="button"
                               className="text-gray-400 hover:text-gray-600"
-                              data-oid="rdd._r0"
+                              data-oid="8r0ir2j"
                             >
-                              <Heart className="h-5 w-5" data-oid="dvdbetb" />
+                              <Heart className="h-5 w-5" data-oid="vjq5a1s" />
                             </button>
                             <button
                               onClick={() => removeFromCart(item.id)}
                               type="button"
                               className="text-red-500 hover:text-red-700 font-medium"
-                              data-oid="xtjronh"
+                              data-oid="5xn88r."
                             >
-                              <Trash className="h-5 w-5" data-oid="ert7swq" />
+                              <Trash className="h-5 w-5" data-oid="4f7p3hx" />
                             </button>
                           </div>
                         </div>
@@ -289,26 +289,26 @@ export default function CartPageContent() {
               <section
                 aria-labelledby="summary-heading"
                 className="mt-16 bg-white rounded-lg shadow-sm lg:col-span-4 lg:mt-0 lg:sticky lg:top-28 p-6"
-                data-oid="su7eaug"
+                data-oid="5e61l:z"
               >
                 <h2
                   id="summary-heading"
                   className="text-xl font-bold text-gray-900 border-b pb-4"
-                  data-oid="ozg-c-k"
+                  data-oid="_-hiw9f"
                 >
                   Order Summary
                 </h2>
-                <div className="py-4 space-y-4" data-oid="c27:7pm">
+                <div className="py-4 space-y-4" data-oid="jz.v0_r">
                   <div
                     className="flex items-center justify-between"
-                    data-oid="as9scup"
+                    data-oid="g-66lg4"
                   >
-                    <dt className="text-sm text-gray-600" data-oid="mc_n7zu">
+                    <dt className="text-sm text-gray-600" data-oid="m_elvb9">
                       Subtotal
                     </dt>
                     <dd
                       className="text-sm font-medium text-gray-900"
-                      data-oid="8.9z4sx"
+                      data-oid="h1i2x.."
                     >
                       {formatPrice(subtotal)}
                     </dd>
@@ -316,14 +316,14 @@ export default function CartPageContent() {
                   {discount > 0 && (
                     <div
                       className="flex items-center justify-between text-sm"
-                      data-oid="9t0j67u"
+                      data-oid="-wn3tyd"
                     >
-                      <dt className="text-red-600" data-oid="y9_pa9f">
+                      <dt className="text-red-600" data-oid="_fi66:s">
                         Discount
                       </dt>
                       <dd
                         className="font-medium text-red-600"
-                        data-oid="aq0ynpi"
+                        data-oid="sdoofo1"
                       >
                         -{formatPrice(discount)}
                       </dd>
@@ -331,14 +331,14 @@ export default function CartPageContent() {
                   )}
                   <div
                     className="flex items-center justify-between"
-                    data-oid="_yvxu4f"
+                    data-oid="_3glr5r"
                   >
-                    <dt className="text-sm text-gray-600" data-oid="s20y99u">
+                    <dt className="text-sm text-gray-600" data-oid="evv3q-7">
                       Shipping
                     </dt>
                     <dd
                       className="text-sm font-medium text-gray-900"
-                      data-oid="6usy-vg"
+                      data-oid="6rx2dfw"
                     >
                       {formatPrice(shippingCost)}
                     </dd>
@@ -346,37 +346,37 @@ export default function CartPageContent() {
                 </div>
                 <div
                   className="flex items-center justify-between border-t pt-4"
-                  data-oid="cjwq.vs"
+                  data-oid="q4whd74"
                 >
                   <dt
                     className="text-base font-bold text-gray-900"
-                    data-oid="9cdrlfm"
+                    data-oid="zyeqr3y"
                   >
                     Order Total
                   </dt>
                   <dd
                     className="text-base font-bold text-gray-900"
-                    data-oid="onm3ug_"
+                    data-oid="qhwmivc"
                   >
                     {formatPrice(orderTotal)}
                   </dd>
                 </div>
 
-                <div className="mt-6" data-oid="48p7cj.">
+                <div className="mt-6" data-oid="_ojnvj1">
                   <Button
                     onClick={handleCheckout}
                     className="w-full bg-red-600 hover:bg-red-700 text-white text-base font-bold py-3"
-                    data-oid="uffgoh3"
+                    data-oid="hlro:m6"
                   >
                     Checkout
                   </Button>
                 </div>
-                <div className="mt-4" data-oid="-xe9rkh">
+                <div className="mt-4" data-oid="gp4h7cv">
                   <Button
                     onClick={() => router.push("/courses")}
                     variant="outline"
                     className="w-full text-base font-bold py-3"
-                    data-oid="8h9aa2e"
+                    data-oid="pwpsfwj"
                   >
                     Continue Shopping
                   </Button>
@@ -386,22 +386,22 @@ export default function CartPageContent() {
           )}
 
           {/* Recommended Courses Section */}
-          <div className="mt-24" data-oid="bthpzhd">
+          <div className="mt-24" data-oid=":gy3bra">
             <h2
               className="text-2xl font-bold text-gray-900 mb-6 text-center"
-              data-oid="v5bf161"
+              data-oid="qnxx:9s"
             >
               Similar Course You May Like
             </h2>
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-              data-oid="ylfk_6s"
+              data-oid="qiho0r4"
             >
               {recommendedCourses.map((course) => (
                 <CourseCard
                   key={course.id}
                   course={course}
-                  data-oid="j4nwo-7"
+                  data-oid="w6trygu"
                 />
               ))}
             </div>

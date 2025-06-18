@@ -74,32 +74,32 @@ export default function JourneySection() {
     {
       name: "Awareness",
       description: "Discover the fundamentals",
-      icon: <BookOpen className="h-8 w-8" data-oid="o2di9h3" />,
+      icon: <BookOpen className="h-8 w-8" data-oid="iv7b43j" />,
     },
     {
       name: "Foundation",
       description: "Build your knowledge base",
-      icon: <Lightbulb className="h-8 w-8" data-oid="pr7w7em" />,
+      icon: <Lightbulb className="h-8 w-8" data-oid="awklj73" />,
     },
     {
       name: "Application",
       description: "Apply concepts to real scenarios",
-      icon: <Target className="h-8 w-8" data-oid="b-o-0nv" />,
+      icon: <Target className="h-8 w-8" data-oid="z6lp-wm" />,
     },
     {
       name: "Mastery",
       description: "Develop advanced expertise",
-      icon: <TrendingUp className="h-8 w-8" data-oid="4-0fcj0" />,
+      icon: <TrendingUp className="h-8 w-8" data-oid="7qz9kar" />,
     },
     {
       name: "Leadership",
       description: "Become an industry authority",
-      icon: <Award className="h-8 w-8" data-oid="xcpnrrn" />,
+      icon: <Award className="h-8 w-8" data-oid="7tha2.b" />,
     },
     {
       name: "Innovation",
       description: "Create new approaches",
-      icon: <Star className="h-8 w-8" data-oid="ctl-c69" />,
+      icon: <Star className="h-8 w-8" data-oid="49tlxmh" />,
     },
   ];
 
@@ -143,32 +143,32 @@ export default function JourneySection() {
     <section
       ref={sectionRef}
       className="py-32 bg-gray-900 text-white min-h-[100vh]"
-      data-oid="b76e04q"
+      data-oid=":pi1wco"
     >
-      <div className="container mx-auto px-4" data-oid="-aw:zmg">
+      <div className="container mx-auto px-4" data-oid="98yu218">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          data-oid="kmhorx7"
+          data-oid="f.n0vfm"
         >
-          <h2 className="text-5xl font-bold" data-oid="_myd04d">
+          <h2 className="text-5xl font-bold" data-oid="xxcywvx">
             The Learning Journey
           </h2>
           <p
             className="text-2xl text-gray-300 mt-4 max-w-3xl mx-auto"
-            data-oid="8fqv9aa"
+            data-oid="0t_b7:k"
           >
             Visualize your path to becoming a real estate expert in Singapore
           </p>
           <div
             className="w-24 h-1 bg-orange-500 mx-auto mt-6"
-            data-oid=".z5b1b4"
+            data-oid="pd87qe0"
           ></div>
         </motion.div>
 
-        <div className="relative max-w-5xl mx-auto" data-oid="a4p17mr">
+        <div className="relative max-w-5xl mx-auto" data-oid="2.r-u_y">
           {/* SVG Path */}
           <svg
             ref={svgRef}
@@ -176,7 +176,7 @@ export default function JourneySection() {
             viewBox="0 0 800 800"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            data-oid="-:aaek0"
+            data-oid="33p09d1"
           >
             {/* Background circles */}
             <circle
@@ -184,7 +184,7 @@ export default function JourneySection() {
               cy="400"
               r="340"
               fill="rgba(249, 115, 22, 0.05)"
-              data-oid="44xyza5"
+              data-oid="c8s-f0p"
             />
 
             <circle
@@ -194,7 +194,7 @@ export default function JourneySection() {
               stroke="rgba(249, 115, 22, 0.1)"
               strokeWidth="1"
               fill="none"
-              data-oid="w:k-.sb"
+              data-oid="_:zwo1f"
             />
 
             <circle
@@ -204,7 +204,7 @@ export default function JourneySection() {
               stroke="rgba(249, 115, 22, 0.1)"
               strokeWidth="1"
               fill="none"
-              data-oid="k4y1ilc"
+              data-oid="7jy_u:a"
             />
 
             {/* Tick marks around the circle */}
@@ -225,7 +225,7 @@ export default function JourneySection() {
                       : "rgba(249, 115, 22, 0.2)"
                   }
                   strokeWidth={i % 5 === 0 ? 2 : 1}
-                  data-oid="gych78-"
+                  data-oid="jx5yep6"
                 />
               );
             })}
@@ -238,7 +238,7 @@ export default function JourneySection() {
                 ease: "linear",
                 repeat: Number.POSITIVE_INFINITY,
               }}
-              data-oid="-ibgo.r"
+              data-oid="7kf47p2"
             >
               <circle
                 cx="400"
@@ -248,7 +248,7 @@ export default function JourneySection() {
                 strokeWidth="12"
                 strokeDasharray="5 10"
                 fill="none"
-                data-oid="xvyofje"
+                data-oid="-k-8z:1"
               />
 
               {/* Colored segments on the circle */}
@@ -257,7 +257,7 @@ export default function JourneySection() {
                 stroke="#f97316"
                 strokeWidth="12"
                 fill="none"
-                data-oid="il6pzep"
+                data-oid="9dhh301"
               />
 
               <path
@@ -265,7 +265,7 @@ export default function JourneySection() {
                 stroke="#84cc16"
                 strokeWidth="12"
                 fill="none"
-                data-oid="rj1s_p9"
+                data-oid="7kstzs7"
               />
             </motion.g>
 
@@ -286,7 +286,7 @@ export default function JourneySection() {
                 repeatType: "reverse",
                 ease: "easeInOut",
               }}
-              data-oid="d3bj4qr"
+              data-oid="_8nf0qq"
             />
 
             <text
@@ -296,7 +296,7 @@ export default function JourneySection() {
               fill="white"
               fontWeight="bold"
               fontSize="20"
-              data-oid="8me5z3u"
+              data-oid="qy:47lj"
             >
               YOU
             </text>
@@ -313,7 +313,7 @@ export default function JourneySection() {
               initial={{ pathLength: 0 }}
               animate={{ pathLength: pathProgress }}
               transition={{ duration: 0.5 }}
-              data-oid="k5h20-h"
+              data-oid="f2b25l."
             />
 
             {/* Milestones */}
@@ -326,7 +326,7 @@ export default function JourneySection() {
               const shouldShow = pathProgress > index / (milestones.length - 1);
 
               return (
-                <g key={index} data-oid="uwei97u">
+                <g key={index} data-oid=":kczde0">
                   <motion.circle
                     cx={pos.x}
                     cy={pos.y}
@@ -343,7 +343,7 @@ export default function JourneySection() {
                       type: "spring",
                       stiffness: 100,
                     }}
-                    data-oid="72:73m0"
+                    data-oid=":098cay"
                   />
 
                   <motion.foreignObject
@@ -363,11 +363,11 @@ export default function JourneySection() {
                       type: "spring",
                       stiffness: 100,
                     }}
-                    data-oid="duf9t3o"
+                    data-oid="8odvmyq"
                   >
                     <div
                       className="flex items-center justify-center text-white"
-                      data-oid=".aridtf"
+                      data-oid="hhs7sjy"
                     >
                       {milestone.icon}
                     </div>
@@ -398,25 +398,25 @@ export default function JourneySection() {
                   shouldShow ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                 }
                 transition={{ duration: 0.5, delay: 0.3 }}
-                data-oid="itm:xh1"
+                data-oid="v0obuef"
               >
                 <div
                   className={`bg-gray-800 p-5 rounded-lg shadow-lg border border-gray-700 w-64 text-center`}
-                  data-oid="qatjuve"
+                  data-oid="-y1036:"
                 >
                   <h4
                     className="font-bold text-orange-500 text-xl mb-1"
-                    data-oid="u5sefru"
+                    data-oid=".4y2aro"
                   >
                     {milestone.name}
                   </h4>
-                  <p className="text-gray-300 text-base" data-oid="ah9ld_:">
+                  <p className="text-gray-300 text-base" data-oid="bpvyi1-">
                     {milestone.description}
                   </p>
                 </div>
                 <div
                   className={`w-4 h-4 bg-gray-800 border border-gray-700 transform rotate-45 absolute ${isLeft ? "-right-2" : "-left-2"} top-1/2`}
-                  data-oid="_kwejdj"
+                  data-oid="nwwr9i4"
                 ></div>
               </motion.div>
             );
