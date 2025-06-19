@@ -156,7 +156,7 @@ export default function PaymentPage() {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
                       data-oid="ih4dc-n"
                     />
                   </div>
@@ -186,7 +186,7 @@ export default function PaymentPage() {
                         data-oid="it64423"
                       >
                         <select
-                          className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
                           data-oid="k0:b970"
                         >
                           <option data-oid="kw25_kj">MM</option>
@@ -278,7 +278,7 @@ export default function PaymentPage() {
               </h3>
               <button
                 onClick={() => router.push("/checkout/address")}
-                className="text-blue-600 text-sm hover:underline"
+                className="text-[#123b79] text-sm hover:underline"
                 data-oid="ero1b02"
               >
                 Edit
@@ -301,7 +301,7 @@ export default function PaymentPage() {
 
           <button
             onClick={() => alert("Order Placed!")}
-            className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors flex items-center justify-center gap-2"
             data-oid="r43kqne"
           >
             <Lock size={16} data-oid="2w84:3:" />
@@ -313,7 +313,7 @@ export default function PaymentPage() {
             understood and accept our{" "}
             <a
               href="#"
-              className="text-blue-600 hover:underline"
+              className="text-[#123b79] hover:underline"
               data-oid=":m:oacs"
             >
               terms and conditions

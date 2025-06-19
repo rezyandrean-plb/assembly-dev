@@ -50,7 +50,7 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             name="lastName"
             value={address.lastName}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
             data-oid="23x5qju"
           />
         </div>
@@ -162,7 +162,7 @@ export default function AddressPage() {
           data-oid="r1a8yqw"
         >
           <div
-            className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"
+            className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
             data-oid="_0mi.j-"
           ></div>
         </div>
@@ -203,7 +203,7 @@ export default function AddressPage() {
                   Track and manage your delivery via the{" "}
                   <a
                     href="#"
-                    className="text-blue-600 hover:underline"
+                    className="text-[#123b79] hover:underline"
                     data-oid="89xco0-"
                   >
                     SingPost app

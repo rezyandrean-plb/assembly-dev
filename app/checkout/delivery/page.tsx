@@ -50,7 +50,7 @@ export default function DeliveryPage() {
           data-oid="sbvreuy"
         >
           <div
-            className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"
+            className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
             data-oid="wneg4v_"
           ></div>
         </div>
@@ -186,7 +186,7 @@ export default function DeliveryPage() {
                         </p>
                       </div>
                       <button
-                        className="text-blue-600 text-sm hover:underline"
+                        className="text-[#123b79] text-sm hover:underline"
                         data-oid="bv4by92"
                       >
                         Change Delivery Type
@@ -222,7 +222,7 @@ export default function DeliveryPage() {
           Perhaps our{" "}
           <a
             href="#"
-            className="text-blue-600 hover:underline font-medium"
+            className="text-[#123b79] hover:underline font-medium"
             data-oid="xk11b-9"
           >
             FAQs
