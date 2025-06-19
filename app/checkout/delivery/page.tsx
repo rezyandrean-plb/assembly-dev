@@ -12,6 +12,7 @@ export default function DeliveryPage() {
   const { deliveryOption, setDeliveryOption, setShippingCost } = useCheckout();
   const [postalCode, setPostalCode] = useState("");
   const [selectedShipping, setSelectedShipping] = useState("delivery");
+  const [showDeliveryOptions, setShowDeliveryOptions] = useState(false);
 
   // Check if there are books in cart, redirect if not
   useEffect(() => {
@@ -39,22 +40,29 @@ export default function DeliveryPage() {
     if (option === "collect") {
       setDeliveryOption("self-collect");
       setShippingCost(0);
+      setShowDeliveryOptions(false);
     } else {
       setDeliveryOption("delivery");
+    }
+  };
+
+  const handleCheckDelivery = () => {
+    if (postalCode.trim()) {
+      setShowDeliveryOptions(true);
     }
   };
 
   // Don't render if no books (will redirect)
   if (bookItems.length === 0) {
     return (
-      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="lm_xbf.">
+      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="nthqmhd">
         <div
           className="flex items-center justify-center min-h-[400px]"
-          data-oid="sbvreuy"
+          data-oid="g-mhsxb"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-            data-oid="wneg4v_"
+            data-oid="zk__.:v"
           ></div>
         </div>
       </div>
@@ -62,56 +70,60 @@ export default function DeliveryPage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="kzd80fn">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="qs7_02p">
-        {/* Left Column - Items */}
-        <div className="lg:col-span-1" data-oid="-9is4:2">
-          <h2 className="text-2xl font-bold mb-6" data-oid="nscpyxi">
+    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="zu-tk0k">
+      <div
+        className="grid grid-cols-1 lg:grid-cols-3 gap-12"
+        data-oid="ajrxlbr"
+      >
+        {/* Left Column - Items (Same width as cart) */}
+        <div className="lg:col-span-2" data-oid="kuosav:">
+          <h2 className="text-2xl font-bold mb-6" data-oid="z8lx7z9">
             Your Items ({bookItems.length})
           </h2>
 
-          <h3 className="text-lg font-semibold mb-4" data-oid="veor1jb">
+          <h3 className="text-lg font-semibold mb-4" data-oid="lgufowt">
             Select click & collect or delivery for each item
           </h3>
 
           {bookItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white border rounded-lg p-4 mb-6"
-              data-oid="htv75ag"
+              className="bg-white border rounded-lg p-6 mb-6"
+              data-oid="0uog8-o"
             >
-              <div className="flex items-center gap-4" data-oid=":5ouael">
+              <div className="flex items-center gap-4 mb-6" data-oid="628ilza">
                 <div
                   className="w-16 h-16 bg-gray-200 rounded flex-shrink-0"
-                  data-oid="7k.2ayw"
+                  data-oid="ak-tzf1"
                 >
                   {item.image && (
                     <img
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover rounded"
-                      data-oid="r:ew6tj"
+                      data-oid="14b81oa"
                     />
                   )}
                 </div>
-                <div className="flex-1" data-oid=".hbnr3o">
-                  <h4 className="font-semibold" data-oid="ir1s27p">
+                <div className="flex-1" data-oid="k9:o992">
+                  <h4 className="font-semibold" data-oid="o6e2oe7">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-600" data-oid="ogdp3.j">
+                  <p className="text-sm text-gray-600" data-oid="4m_azpx">
                     By {item.instructor}
                   </p>
-                  <p className="text-sm text-gray-600" data-oid="jmm:mvv">
+                  <p className="text-sm text-gray-600" data-oid="eqiki77">
                     Quantity: {item.quantity}
                   </p>
-                  <p className="font-semibold" data-oid="5q7ub:v">
+                  <p className="font-semibold" data-oid="7p9la66">
                     {item.price}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-4 space-y-3" data-oid="a-s.vku">
-                <div className="flex items-center gap-3" data-oid="247v21:">
+              <div className="space-y-4" data-oid="nl0q1g.">
+                {/* Self Pickup Option */}
+                <div className="flex items-start gap-3" data-oid="ftooqzj">
                   <input
                     type="radio"
                     id="collect"
@@ -119,225 +131,206 @@ export default function DeliveryPage() {
                     value="collect"
                     checked={selectedShipping === "collect"}
                     onChange={(e) => handleDeliveryChange(e.target.value)}
-                    className="w-4 h-4"
-                    data-oid="1dlke3k"
+                    className="w-4 h-4 mt-1"
+                    data-oid="1.f4v.n"
                   />
 
                   <label
                     htmlFor="collect"
                     className="flex-1"
-                    data-oid="c4jakb0"
+                    data-oid="cwi-d6b"
                   >
                     <div
-                      className="flex justify-between items-center"
-                      data-oid="7_2o2s-"
+                      className="flex justify-between items-start"
+                      data-oid="l6ymfaj"
                     >
-                      <div data-oid="r_oc4ak">
-                        <p className="font-medium" data-oid="8ckjt_v">
-                          Click & Collect
+                      <div data-oid="ree7w6e">
+                        <p className="font-medium" data-oid="xg9joej">
+                          Self Pickup
                         </p>
-                        <p className="text-sm text-gray-600" data-oid="g1ma449">
+                        <p className="text-sm text-gray-600" data-oid="2j37woo">
                           Collection from 62 Ubi Road 1, Oxley BizHub 2,
                           #11-15/18, Singapore, 408734
                         </p>
                       </div>
-                      <span className="font-semibold" data-oid="u.d:aat">
+                      <span className="font-semibold" data-oid="zbqrbf_">
                         FREE
                       </span>
                     </div>
                   </label>
                 </div>
 
-                <div className="border rounded-lg" data-oid="uvv0oto">
-                  <div
-                    className="flex items-center gap-3 p-3"
-                    data-oid="2x-z3ih"
+                {/* Delivery Option */}
+                <div className="flex items-start gap-3" data-oid="mh-i:12">
+                  <input
+                    type="radio"
+                    id="delivery"
+                    name="deliveryMethod"
+                    value="delivery"
+                    checked={selectedShipping === "delivery"}
+                    onChange={(e) => handleDeliveryChange(e.target.value)}
+                    className="w-4 h-4 mt-1"
+                    data-oid="iltx6_h"
+                  />
+
+                  <label
+                    htmlFor="delivery"
+                    className="flex-1"
+                    data-oid="uob5ms9"
                   >
-                    <input
-                      type="radio"
-                      id="delivery"
-                      name="deliveryMethod"
-                      value="delivery"
-                      checked={selectedShipping === "delivery"}
-                      onChange={(e) => handleDeliveryChange(e.target.value)}
-                      className="w-4 h-4"
-                      data-oid="2_.i1ns"
-                    />
+                    <p className="font-medium" data-oid="6q4x4qz">
+                      Delivery
+                    </p>
+                  </label>
+                </div>
 
-                    <label
-                      htmlFor="delivery"
-                      className="flex-1"
-                      data-oid="yx:mdoa"
-                    >
-                      <p className="font-medium" data-oid="wl9q_5o">
-                        Delivery
-                      </p>
-                    </label>
-                  </div>
+                {/* Delivery Options Section */}
+                {selectedShipping === "delivery" && (
+                  <div className="ml-7 space-y-4" data-oid="nby2kk8">
+                    <div data-oid="lzoy2e1">
+                      <label
+                        className="block text-sm font-medium mb-2"
+                        data-oid="w51w-tx"
+                      >
+                        Enter your postal code to see delivery options
+                      </label>
+                      <div className="flex gap-2 mb-4" data-oid="gafjgdu">
+                        <input
+                          type="text"
+                          value={postalCode}
+                          onChange={(e) => setPostalCode(e.target.value)}
+                          placeholder="Enter postal code"
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
+                          data-oid="7j44cwh"
+                        />
 
-                  {selectedShipping === "delivery" && (
-                    <div className="border-t p-3" data-oid="qngnz:t">
-                      <div className="mb-4" data-oid="j0qem3u">
-                        <label
-                          className="block text-sm font-medium mb-2"
-                          data-oid="f_pk_0q"
+                        <button
+                          onClick={handleCheckDelivery}
+                          className="px-4 py-2 bg-[#123b79] text-white rounded-md hover:bg-[#0f2f63] transition-colors"
+                          data-oid="sdbyyj4"
                         >
-                          Enter your postal code to see delivery options
-                        </label>
-                        <div className="flex gap-2 mb-3" data-oid="g552_47">
-                          <input
-                            type="text"
-                            value={postalCode}
-                            onChange={(e) => setPostalCode(e.target.value)}
-                            placeholder="Enter postal code"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                            data-oid="r_azx:w"
-                          />
-
-                          <button
-                            onClick={() => {
-                              if (postalCode.trim()) {
-                                console.log(
-                                  "Checking delivery for:",
-                                  postalCode,
-                                );
-                              }
-                            }}
-                            className="px-4 py-2 bg-[#123b79] text-white rounded-md hover:bg-[#0f2f63] transition-colors"
-                            data-oid=".:kxpcp"
-                          >
-                            Check
-                          </button>
-                        </div>
-
-                        {postalCode.trim() && (
-                          <div className="space-y-3" data-oid="toaid_r">
-                            <p
-                              className="text-sm font-medium text-gray-700"
-                              data-oid="snt3iq4"
-                            >
-                              Delivery options for {postalCode}:
-                            </p>
-
-                            <div className="space-y-2" data-oid="o3hl96z">
-                              <label
-                                className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                data-oid="o8t1cp1"
-                              >
-                                <div
-                                  className="flex items-center"
-                                  data-oid="2c-y.t0"
-                                >
-                                  <input
-                                    type="radio"
-                                    name="shippingOption"
-                                    value="jnt"
-                                    className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
-                                    onChange={() => setShippingCost(3.75)}
-                                    data-oid="410t6m0"
-                                  />
-
-                                  <div className="ml-3" data-oid="utjwo:o">
-                                    <p
-                                      className="text-sm font-medium"
-                                      data-oid="ju2z:sq"
-                                    >
-                                      J&T Express [1-3 working day(s)]
-                                    </p>
-                                  </div>
-                                </div>
-                                <span
-                                  className="text-sm font-semibold"
-                                  data-oid=":35hsiy"
-                                >
-                                  $3.75
-                                </span>
-                              </label>
-
-                              <label
-                                className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                data-oid="6p7q1c2"
-                              >
-                                <div
-                                  className="flex items-center"
-                                  data-oid=":ee9-ng"
-                                >
-                                  <input
-                                    type="radio"
-                                    name="shippingOption"
-                                    value="aramex"
-                                    className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
-                                    onChange={() => setShippingCost(4.55)}
-                                    data-oid="wc9jfb7"
-                                  />
-
-                                  <div className="ml-3" data-oid="ucx5t98">
-                                    <p
-                                      className="text-sm font-medium"
-                                      data-oid="lzsdco4"
-                                    >
-                                      Aramex Domestic Delivery [1-3 working
-                                      day(s)]
-                                    </p>
-                                  </div>
-                                </div>
-                                <span
-                                  className="text-sm font-semibold"
-                                  data-oid="69pdsl3"
-                                >
-                                  $4.55
-                                </span>
-                              </label>
-
-                              <label
-                                className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                data-oid=":oqlu7y"
-                              >
-                                <div
-                                  className="flex items-center"
-                                  data-oid="r8cm5xq"
-                                >
-                                  <input
-                                    type="radio"
-                                    name="shippingOption"
-                                    value="tracx"
-                                    className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
-                                    onChange={() => setShippingCost(4.05)}
-                                    data-oid="c9a0biy"
-                                  />
-
-                                  <div className="ml-3" data-oid="61_rou8">
-                                    <p
-                                      className="text-sm font-medium"
-                                      data-oid="co:jxsl"
-                                    >
-                                      Tracx Logis [1-2 working day(s)]
-                                    </p>
-                                  </div>
-                                </div>
-                                <span
-                                  className="text-sm font-semibold"
-                                  data-oid="q4v739a"
-                                >
-                                  $4.05
-                                </span>
-                              </label>
-                            </div>
-                          </div>
-                        )}
+                          Check
+                        </button>
                       </div>
 
-                      {postalCode.trim() && (
-                        <button
-                          className="text-[#123b79] text-sm hover:underline"
-                          data-oid="bv4by92"
-                        >
-                          Change Delivery Type
-                        </button>
+                      {showDeliveryOptions && postalCode.trim() && (
+                        <div className="space-y-3" data-oid="pbs_rop">
+                          <p
+                            className="text-sm font-medium text-gray-700"
+                            data-oid="kmx.opo"
+                          >
+                            Delivery options for {postalCode}:
+                          </p>
+
+                          <div className="space-y-2" data-oid="n.p0mxc">
+                            <label
+                              className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
+                              data-oid="moh1dkx"
+                            >
+                              <div
+                                className="flex items-center"
+                                data-oid="nv5ro35"
+                              >
+                                <input
+                                  type="radio"
+                                  name="shippingOption"
+                                  value="jnt"
+                                  className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
+                                  onChange={() => setShippingCost(3.75)}
+                                  data-oid="18ouxti"
+                                />
+
+                                <div className="ml-3" data-oid="znal_-s">
+                                  <p
+                                    className="text-sm font-medium"
+                                    data-oid="0.tdlgo"
+                                  >
+                                    J&T Express [1-3 working day(s)]
+                                  </p>
+                                </div>
+                              </div>
+                              <span
+                                className="text-sm font-semibold"
+                                data-oid="r7ym5.u"
+                              >
+                                $3.75
+                              </span>
+                            </label>
+
+                            <label
+                              className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
+                              data-oid="nc47o0r"
+                            >
+                              <div
+                                className="flex items-center"
+                                data-oid="gtd8h0_"
+                              >
+                                <input
+                                  type="radio"
+                                  name="shippingOption"
+                                  value="aramex"
+                                  className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
+                                  onChange={() => setShippingCost(4.55)}
+                                  data-oid="b402k36"
+                                />
+
+                                <div className="ml-3" data-oid="5j..my8">
+                                  <p
+                                    className="text-sm font-medium"
+                                    data-oid="31:ew27"
+                                  >
+                                    Aramex Domestic Delivery [1-3 working
+                                    day(s)]
+                                  </p>
+                                </div>
+                              </div>
+                              <span
+                                className="text-sm font-semibold"
+                                data-oid="d:omw4f"
+                              >
+                                $4.55
+                              </span>
+                            </label>
+
+                            <label
+                              className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
+                              data-oid="2ry4s_i"
+                            >
+                              <div
+                                className="flex items-center"
+                                data-oid="q40r4oj"
+                              >
+                                <input
+                                  type="radio"
+                                  name="shippingOption"
+                                  value="tracx"
+                                  className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
+                                  onChange={() => setShippingCost(4.05)}
+                                  data-oid="inhxr88"
+                                />
+
+                                <div className="ml-3" data-oid="fia39ij">
+                                  <p
+                                    className="text-sm font-medium"
+                                    data-oid="8o87fii"
+                                  >
+                                    Tracx Logis [1-2 working day(s)]
+                                  </p>
+                                </div>
+                              </div>
+                              <span
+                                className="text-sm font-semibold"
+                                data-oid="gfzpr5p"
+                              >
+                                $4.05
+                              </span>
+                            </label>
+                          </div>
+                        </div>
                       )}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -345,29 +338,29 @@ export default function DeliveryPage() {
           <button
             onClick={handleNext}
             className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors"
-            data-oid="njusf9n"
+            data-oid="c-gqm4k"
           >
             Next
           </button>
         </div>
 
-        {/* Right Column - Order Summary */}
-        <div className="lg:col-span-2" data-oid="n4tdra6">
-          <OrderSummary data-oid="_3u5_ql" />
+        {/* Right Column - Order Summary (Same as cart) */}
+        <div className="lg:col-span-1" data-oid="dh..sf1">
+          <OrderSummary data-oid=".ao9gys" />
         </div>
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 text-center" data-oid="ywc8upb">
-        <h3 className="text-lg font-semibold mb-2" data-oid="pjxm8ad">
+      <div className="mt-12 text-center" data-oid="eq.2f00">
+        <h3 className="text-lg font-semibold mb-2" data-oid="qix79hk">
           Need Help?
         </h3>
-        <p className="text-gray-600" data-oid="::h2f_b">
+        <p className="text-gray-600" data-oid="7625bhp">
           Perhaps our{" "}
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="xk11b-9"
+            data-oid="t9ny_i_"
           >
             FAQs
           </a>{" "}
@@ -375,7 +368,7 @@ export default function DeliveryPage() {
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="5_6jjn6"
+            data-oid="95zmxky"
           >
             Contact Us
           </a>{" "}
