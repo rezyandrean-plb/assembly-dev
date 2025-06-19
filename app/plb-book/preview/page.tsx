@@ -108,7 +108,11 @@ export default function BookPreviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-2" data-oid="5q3vowk">
             {/* Book Cover Side */}
             <div
-              className="bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 p-8 flex flex-col justify-center items-center text-gray-800 relative overflow-hidden"
+              className="p-8 flex flex-col justify-center items-center text-gray-800 relative overflow-hidden"
+              style={{
+                background:
+                  "linear-gradient(to bottom right, #fffbeb, #fef3c7, #fde68a)",
+              }}
               data-oid="p9_hr01"
             >
               {/* Subtle pattern overlay */}
