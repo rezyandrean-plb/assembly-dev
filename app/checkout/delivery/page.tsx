@@ -10,7 +10,7 @@ export default function DeliveryPage() {
   const router = useRouter();
   const { cart } = useCart();
   const { deliveryOption, setDeliveryOption, setShippingCost } = useCheckout();
-  const [postalCode, setPostalCode] = useState("4000");
+  const [postalCode, setPostalCode] = useState("");
   const [selectedShipping, setSelectedShipping] = useState("delivery");
 
   // Check if there are books in cart, redirect if not
@@ -27,6 +27,9 @@ export default function DeliveryPage() {
   const handleNext = () => {
     if (deliveryOption === "self-collect") {
       setShippingCost(0);
+    } else if (deliveryOption === "delivery" && !postalCode.trim()) {
+      alert("Please enter a postal code and select a delivery option");
+      return;
     }
     router.push("/checkout/address");
   };
