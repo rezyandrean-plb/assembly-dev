@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useRef, useEffect, useState } from "react";
 
@@ -27,62 +27,31 @@ export function FAQItem({
 
   return (
     <div
-      className={cn(
-        "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md",
-        isOpen && "shadow-lg border-primary/20",
-      )}
-      data-oid="bj0ufbw"
+      className="bg-white rounded-lg shadow-md overflow-hidden"
+      data-oid="xojc2ya"
     >
       <button
-        className={cn(
-          "w-full p-6 flex items-start gap-4 focus:outline-none transition-all duration-300 text-left group",
-          isOpen ? "bg-primary/5" : "hover:bg-gray-50",
-        )}
+        className="w-full p-6 flex items-center focus:outline-none transition-colors duration-300 hover:bg-gray-50 min-h-[80px]"
         onClick={onClick}
         aria-expanded={isOpen}
-        data-oid="34zmnav"
+        data-oid="h:6zzm-"
       >
-        {/* Question icon */}
-        <div
-          className={cn(
-            "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300",
-            isOpen
-              ? "bg-primary text-white"
-              : "bg-primary/10 text-primary group-hover:bg-primary/20",
-          )}
-          data-oid="2xdb:m:"
-        >
-          <HelpCircle className="w-4 h-4" data-oid="3ug3n99" />
-        </div>
-
-        {/* Question text */}
-        <div className="flex-grow" data-oid="3prz:b-">
+        <div className="flex-grow flex items-center" data-oid="0kd3.bc">
           <h3
-            className={cn(
-              "text-lg font-semibold transition-colors duration-300",
-              isOpen
-                ? "text-primary"
-                : "text-gray-900 group-hover:text-primary",
-            )}
-            data-oid="kywum5b"
+            className="text-xl font-medium text-primary text-left w-full max-w-3xl px-4"
+            data-oid=":x94e9:"
           >
             {question}
           </h3>
         </div>
-
-        {/* Chevron icon */}
         <ChevronDown
           className={cn(
-            "h-5 w-5 transition-all duration-300 ease-in-out flex-shrink-0",
-            isOpen
-              ? "transform rotate-180 text-primary"
-              : "text-gray-400 group-hover:text-primary",
+            "h-5 w-5 text-primary transition-transform duration-300 ease-in-out flex-shrink-0",
+            isOpen && "transform rotate-180",
           )}
-          data-oid=".2hv_o9"
+          data-oid="yrvi8q_"
         />
       </button>
-
-      {/* Answer content */}
       <div
         ref={contentRef}
         style={{ height: height ? `${height}px` : "0px" }}
@@ -90,14 +59,18 @@ export function FAQItem({
           "overflow-hidden transition-all duration-300 ease-in-out",
           isOpen ? "opacity-100" : "opacity-0",
         )}
-        data-oid="jgbxdh6"
+        data-oid="myruet:"
       >
-        <div className="px-6 pb-6 pl-18" data-oid="t9_p.f0">
-          <div className="border-l-2 border-primary/20 pl-6" data-oid="63l7r_n">
-            <p className="text-gray-600 leading-relaxed" data-oid="2eluo0x">
-              {answer}
-            </p>
-          </div>
+        <div
+          className="p-6 pt-0 flex items-center min-h-[60px]"
+          data-oid="wyf.y4_"
+        >
+          <p
+            className="mx-auto max-w-3xl px-4 w-full text-left"
+            data-oid="sopglt9"
+          >
+            {answer}
+          </p>
         </div>
       </div>
     </div>

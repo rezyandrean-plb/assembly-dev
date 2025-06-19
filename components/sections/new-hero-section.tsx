@@ -14,23 +14,23 @@ export default function NewHeroSection() {
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-50"
-      data-oid="autfk40"
+      data-oid="nin5.6m"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5" data-oid="9drv2sh">
+      <div className="absolute inset-0 opacity-5" data-oid="_dh_:3g">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
-          data-oid="z.r4j55"
+          data-oid="im2e9k3"
         />
       </div>
 
       {/* Floating Elements */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
-        data-oid="ct89hu7"
+        data-oid="4femi0d"
       >
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl"
@@ -43,7 +43,7 @@ export default function NewHeroSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="48l-e.z"
+          data-oid="arb1pn8"
         />
 
         <motion.div
@@ -57,7 +57,7 @@ export default function NewHeroSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="c0qi0w5"
+          data-oid="y.trx_u"
         />
 
         <motion.div
@@ -71,26 +71,26 @@ export default function NewHeroSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="j6883ft"
+          data-oid="26_g0-x"
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="uo_fa5i">
-        <div className="max-w-6xl mx-auto" data-oid="k8805mm">
+      <div className="container mx-auto px-4 relative z-10" data-oid="1mau.kz">
+        <div className="max-w-6xl mx-auto" data-oid="r2:dstk">
           <div
             className="grid lg:grid-cols-2 gap-12 items-center"
-            data-oid="6re.uqm"
+            data-oid="ue709hw"
           >
             {/* Left Content */}
-            <div className="text-center lg:text-left" data-oid="tmfjejl">
+            <div className="text-center lg:text-left" data-oid="mgt708.">
               <motion.div
                 className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                data-oid="m8hnkky"
+                data-oid="1p3o355"
               >
-                <Star className="w-4 h-4 fill-current" data-oid="7ifsub_" />
+                <Star className="w-4 h-4 fill-current" data-oid="_ny.q73" />
                 Singapore's #1 Real Estate Education Platform
               </motion.div>
 
@@ -99,10 +99,10 @@ export default function NewHeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                data-oid="f.099kv"
+                data-oid="26vg0-f"
               >
                 Master Real Estate
-                <span className="block text-primary" data-oid="wl7yc_f">
+                <span className="block text-primary" data-oid="c068ii2">
                   Investment
                 </span>
               </motion.h1>
@@ -112,7 +112,7 @@ export default function NewHeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                data-oid="0af31wk"
+                data-oid="1-.gdr2"
               >
                 Join thousands of successful investors who've transformed their
                 financial future through our comprehensive real estate education
@@ -124,18 +124,18 @@ export default function NewHeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                data-oid="ilh1em7"
+                data-oid="zhjve:3"
               >
-                <Link href="/courses" data-oid="pizbgf6">
+                <Link href="/courses" data-oid="02do_00">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    data-oid="jhnskum"
+                    data-oid="x-f4klc"
                   >
                     Start Learning Today
                     <ArrowRight
                       className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                      data-oid="81zxhba"
+                      data-oid="2:6ur26"
                     />
                   </Button>
                 </Link>
@@ -143,11 +143,11 @@ export default function NewHeroSection() {
                   variant="outline"
                   size="lg"
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg rounded-xl group transition-all duration-300"
-                  data-oid="hfk0fk_"
+                  data-oid="pob-20v"
                 >
                   <Play
                     className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                    data-oid="yo.fmkv"
+                    data-oid="-4y2rlv"
                   />
                   Watch Demo
                 </Button>
@@ -159,55 +159,55 @@ export default function NewHeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                data-oid="hyb-uyn"
+                data-oid="7:_viik"
               >
-                <div className="text-center lg:text-left" data-oid="5j_-aih">
+                <div className="text-center lg:text-left" data-oid="m9vtirg">
                   <div
                     className="flex items-center gap-2 text-gray-600 mb-1"
-                    data-oid="g1uha--"
+                    data-oid="klmvzc."
                   >
-                    <Users className="w-5 h-5" data-oid="vfzd22i" />
-                    <span className="text-sm font-medium" data-oid="j673_9q">
+                    <Users className="w-5 h-5" data-oid="w0:mum8" />
+                    <span className="text-sm font-medium" data-oid="nkpj3dh">
                       Students
                     </span>
                   </div>
                   <div
                     className="text-2xl font-bold text-gray-900"
-                    data-oid="_ykt_3j"
+                    data-oid="7o_d_5f"
                   >
                     15,000+
                   </div>
                 </div>
-                <div className="text-center lg:text-left" data-oid="4qdo--x">
+                <div className="text-center lg:text-left" data-oid="az6:3a7">
                   <div
                     className="flex items-center gap-2 text-gray-600 mb-1"
-                    data-oid="zn66e-5"
+                    data-oid="8hc132t"
                   >
-                    <BookOpen className="w-5 h-5" data-oid="b5zc0ny" />
-                    <span className="text-sm font-medium" data-oid="8dpqcir">
+                    <BookOpen className="w-5 h-5" data-oid="1pptya9" />
+                    <span className="text-sm font-medium" data-oid="bqiceru">
                       Courses
                     </span>
                   </div>
                   <div
                     className="text-2xl font-bold text-gray-900"
-                    data-oid="ivugfgr"
+                    data-oid="0syvm7d"
                   >
                     50+
                   </div>
                 </div>
-                <div className="text-center lg:text-left" data-oid="7ogm3:4">
+                <div className="text-center lg:text-left" data-oid="wxbxn24">
                   <div
                     className="flex items-center gap-2 text-gray-600 mb-1"
-                    data-oid="5sgin80"
+                    data-oid="m:kk07x"
                   >
-                    <Star className="w-5 h-5" data-oid="aspvtyc" />
-                    <span className="text-sm font-medium" data-oid="x0z1t7c">
+                    <Star className="w-5 h-5" data-oid="vnj0-8z" />
+                    <span className="text-sm font-medium" data-oid="d2g0va9">
                       Rating
                     </span>
                   </div>
                   <div
                     className="text-2xl font-bold text-gray-900"
-                    data-oid="6ns1i88"
+                    data-oid="fe:.rzf"
                   >
                     4.9/5
                   </div>
@@ -221,89 +221,89 @@ export default function NewHeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.8 }}
               transition={{ duration: 1, delay: 0.3 }}
-              data-oid="jaoyzmi"
+              data-oid="evihmsl"
             >
-              <div className="relative" data-oid="5i.c5pb">
+              <div className="relative" data-oid="7dm0ueh">
                 {/* Main Card */}
                 <div
                   className="bg-white rounded-2xl shadow-2xl p-8 relative z-10"
-                  data-oid="kdxsc9."
+                  data-oid="i22w27i"
                 >
                   <div
                     className="flex items-center gap-4 mb-6"
-                    data-oid="g.na-m3"
+                    data-oid="3i_z2ju"
                   >
                     <div
                       className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center"
-                      data-oid="3wg706s"
+                      data-oid="1-9es.i"
                     >
                       <BookOpen
                         className="w-6 h-6 text-white"
-                        data-oid=".ij18el"
+                        data-oid="zqlsenh"
                       />
                     </div>
-                    <div data-oid="ydeue5f">
+                    <div data-oid="90ta4b8">
                       <h3
                         className="font-semibold text-gray-900"
-                        data-oid="rf9jv.u"
+                        data-oid="d548qwu"
                       >
                         Property Investment Masterclass
                       </h3>
-                      <p className="text-gray-500 text-sm" data-oid="2.3-vgp">
+                      <p className="text-gray-500 text-sm" data-oid="yhm7t6z">
                         By Melvin Lim
                       </p>
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6" data-oid="24uahw8">
+                  <div className="space-y-4 mb-6" data-oid="3gqid-a">
                     <div
                       className="flex justify-between items-center"
-                      data-oid="45ht_c8"
+                      data-oid="9tl4glm"
                     >
-                      <span className="text-gray-600" data-oid="4-:li47">
+                      <span className="text-gray-600" data-oid="l9ngkhc">
                         Progress
                       </span>
                       <span
                         className="text-primary font-semibold"
-                        data-oid="hc2tomm"
+                        data-oid="04_smth"
                       >
                         75%
                       </span>
                     </div>
                     <div
                       className="w-full bg-gray-200 rounded-full h-2"
-                      data-oid="b5:absl"
+                      data-oid="ptfuprw"
                     >
                       <motion.div
                         className="bg-primary h-2 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: isInView ? "75%" : 0 }}
                         transition={{ duration: 1.5, delay: 1 }}
-                        data-oid="bk.w43r"
+                        data-oid="wyce4-b"
                       />
                     </div>
                   </div>
 
                   <div
                     className="flex items-center justify-between"
-                    data-oid="bt0sii5"
+                    data-oid="su0-h_j"
                   >
-                    <div className="flex items-center gap-2" data-oid="glnzw8s">
+                    <div className="flex items-center gap-2" data-oid="ad3vqw7">
                       <Star
                         className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                        data-oid="lcu-ait"
+                        data-oid="87_fg93"
                       />
 
                       <span
                         className="text-gray-600 text-sm"
-                        data-oid=".45-:kt"
+                        data-oid=".ywmvaz"
                       >
                         4.9 (1,234 reviews)
                       </span>
                     </div>
                     <span
                       className="text-2xl font-bold text-gray-900"
-                      data-oid="6s18p0t"
+                      data-oid="8.y-ga9"
                     >
                       $299
                     </span>
@@ -321,12 +321,12 @@ export default function NewHeroSection() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  data-oid="svul6ha"
+                  data-oid="rfq77ts"
                 >
-                  <div className="text-sm font-medium" data-oid="z0m1up3">
+                  <div className="text-sm font-medium" data-oid="0r-8ylw">
                     ROI Achieved
                   </div>
-                  <div className="text-2xl font-bold" data-oid="9a6u03g">
+                  <div className="text-2xl font-bold" data-oid="64oipwn">
                     +127%
                   </div>
                 </motion.div>
@@ -341,28 +341,28 @@ export default function NewHeroSection() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  data-oid="-6cc:zi"
+                  data-oid="fe5l.bh"
                 >
-                  <div className="flex items-center gap-2" data-oid="u7rhgfc">
+                  <div className="flex items-center gap-2" data-oid="p_srjps">
                     <div
                       className="w-8 h-8 bg-accent rounded-full flex items-center justify-center"
-                      data-oid="c80ybmt"
+                      data-oid="9148dvq"
                     >
                       <Users
                         className="w-4 h-4 text-white"
-                        data-oid="zlit-nx"
+                        data-oid=":-tx9gu"
                       />
                     </div>
-                    <div data-oid=".boupw_">
+                    <div data-oid="5048u8o">
                       <div
                         className="text-sm font-medium text-gray-900"
-                        data-oid="400gko3"
+                        data-oid="7nt_xxm"
                       >
                         Live Students
                       </div>
                       <div
                         className="text-lg font-bold text-gray-900"
-                        data-oid=":m3zkdv"
+                        data-oid="u_173c2"
                       >
                         2,847
                       </div>

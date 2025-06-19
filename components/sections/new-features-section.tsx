@@ -20,42 +20,42 @@ export default function NewFeaturesSection() {
 
   const features = [
     {
-      icon: <BookOpen className="w-8 h-8" data-oid="qd2v5uc" />,
+      icon: <BookOpen className="w-8 h-8" data-oid="uf279kb" />,
       title: "Expert-Led Courses",
       description:
         "Learn from Singapore's top real estate professionals with proven track records.",
       color: "from-primary to-primary-light",
     },
     {
-      icon: <Users className="w-8 h-8" data-oid="0jsx1-k" />,
+      icon: <Users className="w-8 h-8" data-oid="y14durl" />,
       title: "Community Learning",
       description:
         "Join a vibrant community of investors sharing insights and experiences.",
       color: "from-primary-light to-primary-lighter",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" data-oid="l4thw.m" />,
+      icon: <TrendingUp className="w-8 h-8" data-oid="50r1v7g" />,
       title: "Market Analysis",
       description:
         "Get real-time market insights and trends to make informed investment decisions.",
       color: "from-success to-primary",
     },
     {
-      icon: <Shield className="w-8 h-8" data-oid="b6yr77l" />,
+      icon: <Shield className="w-8 h-8" data-oid="uxftt5f" />,
       title: "Risk Management",
       description:
         "Learn proven strategies to minimize risks and maximize returns on your investments.",
       color: "from-accent to-primary",
     },
     {
-      icon: <Clock className="w-8 h-8" data-oid="xspue.:" />,
+      icon: <Clock className="w-8 h-8" data-oid="a99of_z" />,
       title: "Flexible Learning",
       description:
         "Study at your own pace with lifetime access to all course materials.",
       color: "from-primary-dark to-primary",
     },
     {
-      icon: <Award className="w-8 h-8" data-oid="g.e28l1" />,
+      icon: <Award className="w-8 h-8" data-oid="cxr3rrz" />,
       title: "Certification",
       description:
         "Earn recognized certificates to validate your real estate investment expertise.",
@@ -65,19 +65,19 @@ export default function NewFeaturesSection() {
 
   const stats = [
     {
-      icon: <Target className="w-6 h-6" data-oid="j6.knc5" />,
+      icon: <Target className="w-6 h-6" data-oid="80acdnu" />,
       value: "95%",
       label: "Success Rate",
       description: "Of our students achieve their investment goals",
     },
     {
-      icon: <Lightbulb className="w-6 h-6" data-oid="1qy.6xm" />,
+      icon: <Lightbulb className="w-6 h-6" data-oid="ig1alyo" />,
       value: "50+",
       label: "Expert Instructors",
       description: "Industry professionals sharing their knowledge",
     },
     {
-      icon: <BarChart3 className="w-6 h-6" data-oid="_vn-_lf" />,
+      icon: <BarChart3 className="w-6 h-6" data-oid="_xsivcl" />,
       value: "$2.5B+",
       label: "Portfolio Value",
       description: "Combined value of student portfolios",
@@ -85,25 +85,25 @@ export default function NewFeaturesSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="4.:salp">
-      <div className="container mx-auto px-4" data-oid="qthqofi">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="9hbs17z">
+      <div className="container mx-auto px-4" data-oid="rcwe8up">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="zeb3esq"
+          data-oid="qjjmvu7"
         >
           <h2
             className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-primary bg-clip-text text-transparent"
-            data-oid="w36qhz_"
+            data-oid="iuk8qor"
           >
             Why Choose Assembly.sg?
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="zcef4o7"
+            data-oid="bdq044w"
           >
             We provide comprehensive real estate education that transforms
             beginners into confident investors
@@ -113,7 +113,7 @@ export default function NewFeaturesSection() {
         {/* Features Grid */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
-          data-oid="h1s7s27"
+          data-oid="_7oo196"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -123,21 +123,21 @@ export default function NewFeaturesSection() {
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              data-oid="o6fecy-"
+              data-oid="6nvx.0m"
             >
               <div
                 className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
-                data-oid="0q2bbhq"
+                data-oid="wb3c_23"
               >
                 {feature.icon}
               </div>
               <h3
                 className="text-xl font-semibold text-gray-900 mb-3"
-                data-oid="t7y1elf"
+                data-oid="932p74f"
               >
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed" data-oid="fhndos.">
+              <p className="text-gray-600 leading-relaxed" data-oid=":lhv_j4">
                 {feature.description}
               </p>
             </motion.div>
@@ -150,22 +150,22 @@ export default function NewFeaturesSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          data-oid="2t17m81"
+          data-oid="ngudjw0"
         >
-          <div className="text-center mb-12" data-oid="1z-7gyh">
+          <div className="text-center mb-12" data-oid="el12ejl">
             <h3
               className="text-3xl font-bold text-gray-900 mb-4"
-              data-oid="lpj3hnd"
+              data-oid="wf-q9t."
             >
               Proven Results That Speak for Themselves
             </h3>
-            <p className="text-gray-600 text-lg" data-oid="u51xsqr">
+            <p className="text-gray-600 text-lg" data-oid="ii0m0j2">
               Join thousands of successful investors who've transformed their
               financial future
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8" data-oid="1w5b4xd">
+          <div className="grid md:grid-cols-3 gap-8" data-oid="llev60u">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -176,29 +176,29 @@ export default function NewFeaturesSection() {
                   scale: isInView ? 1 : 0.8,
                 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                data-oid="b5glite"
+                data-oid="x9d_vja"
               >
                 <div
                   className="inline-flex p-4 bg-white rounded-2xl shadow-lg mb-4"
-                  data-oid="drko:1e"
+                  data-oid="ic1qj6v"
                 >
-                  <div className="text-primary" data-oid="7ezk2c5">
+                  <div className="text-primary" data-oid=".gh_q6v">
                     {stat.icon}
                   </div>
                 </div>
                 <div
                   className="text-4xl font-bold text-gray-900 mb-2"
-                  data-oid=".gjd8zw"
+                  data-oid="1t2z9dz"
                 >
                   {stat.value}
                 </div>
                 <div
                   className="text-lg font-semibold text-gray-800 mb-2"
-                  data-oid="id.nzgo"
+                  data-oid="b8l6ik3"
                 >
                   {stat.label}
                 </div>
-                <div className="text-gray-600" data-oid="ax.d-hm">
+                <div className="text-gray-600" data-oid="m3f90xq">
                   {stat.description}
                 </div>
               </motion.div>

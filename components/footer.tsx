@@ -5,145 +5,145 @@ export default function Footer() {
   return (
     <footer
       className="relative bg-gray-900 text-white pt-12 pb-8 global-footer z-10"
-      data-oid="ptjwqy-"
+      data-oid="0wy828d"
     >
       {/* Additional background layer for better contrast */}
       <div
         className="absolute inset-0 bg-gray-900 opacity-95 z-0"
-        data-oid="gtv_4p0"
+        data-oid="fgnr-3."
       ></div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="dw3l_nt">
+      <div className="container mx-auto px-4 relative z-10" data-oid="0_ey:0:">
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
-          data-oid="iw80f8m"
+          data-oid="4nzutkg"
         >
-          <div className="md:col-span-1" data-oid="cdd5m.:">
+          <div className="md:col-span-1" data-oid="-eyfzwd">
             <Link
               href="/"
               className="flex items-center mb-4"
-              data-oid="wkqgw6e"
+              data-oid="2gegibg"
             >
               <Image
                 src="/images/assembly-logo.png"
                 alt="Assembly SG Logo"
                 width={180}
                 height={50}
-                data-oid="y7m33l0"
+                data-oid="jq3n.xq"
               />
             </Link>
-            <p className="text-gray-400 text-sm mb-4" data-oid="v2zy3fj">
+            <p className="text-gray-400 text-sm mb-4" data-oid="392ef1a">
               Singapore's premier knowledge hub for real estate professionals.
             </p>
-            <div className="flex space-x-4" data-oid="w1cz-2q">
+            <div className="flex space-x-4" data-oid="78odnlg">
               <a
                 href="#"
                 className="text-gray-400 hover:text-white"
-                data-oid="k21862o"
+                data-oid="cvpw1vk"
               >
                 <svg
                   className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  data-oid="3271dcc"
+                  data-oid="43f5d0h"
                 >
                   <path
                     d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
-                    data-oid="l3l1qyq"
+                    data-oid="mcwhms:"
                   />
                 </svg>
               </a>
               <a
                 href="#"
                 className="text-gray-400 hover:text-white"
-                data-oid="465y60d"
+                data-oid="wwjvxkm"
               >
                 <svg
                   className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  data-oid="tilnyvc"
+                  data-oid="tha6qxt"
                 >
                   <path
                     d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    data-oid="v6j1zyc"
+                    data-oid="v7mbykr"
                   />
                 </svg>
               </a>
               <a
                 href="#"
                 className="text-gray-400 hover:text-white"
-                data-oid="myc8vg."
+                data-oid=":sofj8n"
               >
                 <svg
                   className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  data-oid="vwkd9gz"
+                  data-oid="1_tuq0z"
                 >
                   <path
                     d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102.144-6.784.144-8.883 0C5.282 16.736 5.017 15.622 5 12c.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0C18.718 7.264 18.982 8.378 19 12c-.018 3.629-.285 4.736-2.559 4.892zM10 9.658l4.917 2.338L10 14.342V9.658z"
-                    data-oid="sxoglwd"
+                    data-oid="ijmi6ua"
                   />
                 </svg>
               </a>
               <a
                 href="#"
                 className="text-gray-400 hover:text-white"
-                data-oid="0hqtzbj"
+                data-oid="e--jtkr"
               >
                 <svg
                   className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  data-oid="0mvhs.e"
+                  data-oid=":fnkg0n"
                 >
                   <path
                     d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 16h4v-4h-4v4zm0-6h4V6h-4v4z"
-                    data-oid="6tmr9s-"
+                    data-oid="00pegfr"
                   />
                 </svg>
               </a>
             </div>
           </div>
 
-          <div className="md:col-span-1" data-oid="u958q0l">
-            <h3 className="text-lg font-semibold mb-4" data-oid="3b2t3ie">
+          <div className="md:col-span-1" data-oid="63k.vjt">
+            <h3 className="text-lg font-semibold mb-4" data-oid="xorn_y2">
               Courses
             </h3>
-            <ul className="space-y-2" data-oid="pgmkqgn">
-              <li data-oid="_2fly9h">
+            <ul className="space-y-2" data-oid="yfo30jl">
+              <li data-oid="s8-klje">
                 <Link
                   href="/courses"
                   className="text-gray-400 hover:text-white"
-                  data-oid="u3t-1t_"
+                  data-oid=".x97jou"
                 >
                   All Courses
                 </Link>
               </li>
-              <li data-oid="u7i5m_d">
+              <li data-oid="cn5ytld">
                 <Link
                   href="/courses/hdb-investment-masterclass"
                   className="text-gray-400 hover:text-white"
-                  data-oid="ta2:jvn"
+                  data-oid="q7vs-kz"
                 >
                   HDB Investment
                 </Link>
               </li>
-              <li data-oid="v0njtlg">
+              <li data-oid="k8igxf.">
                 <Link
                   href="/courses/condo-investment-masterclass"
                   className="text-gray-400 hover:text-white"
-                  data-oid="-xc88f."
+                  data-oid="kwqebz5"
                 >
                   Condo Investment
                 </Link>
               </li>
-              <li data-oid="n5y7dg3">
+              <li data-oid="nw-5d5.">
                 <Link
                   href="/courses/strategic-property-investment"
                   className="text-gray-400 hover:text-white"
-                  data-oid="e2b_jto"
+                  data-oid="-9ycpz_"
                 >
                   Strategic Investment
                 </Link>
@@ -151,43 +151,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-1" data-oid="kjb0q5b">
-            <h3 className="text-lg font-semibold mb-4" data-oid="51w6g9-">
+          <div className="md:col-span-1" data-oid="kczyps8">
+            <h3 className="text-lg font-semibold mb-4" data-oid="ag499o-">
               Learning Paths
             </h3>
-            <ul className="space-y-2" data-oid="53g47z_">
-              <li data-oid="m97sqzi">
+            <ul className="space-y-2" data-oid="aj-i3z3">
+              <li data-oid=":.iu7vz">
                 <Link
                   href="/learning-paths"
                   className="text-gray-400 hover:text-white"
-                  data-oid="i2h9zu_"
+                  data-oid="xqx6jvt"
                 >
                   All Learning Paths
                 </Link>
               </li>
-              <li data-oid="_k.7a6a">
+              <li data-oid="5j4cjjo">
                 <Link
                   href="/learning-paths/beginner"
                   className="text-gray-400 hover:text-white"
-                  data-oid="jxvza-7"
+                  data-oid="ckqc8oj"
                 >
                   Beginner Path
                 </Link>
               </li>
-              <li data-oid="tpgmdn6">
+              <li data-oid="buv6c1r">
                 <Link
                   href="/learning-paths/hdb"
                   className="text-gray-400 hover:text-white"
-                  data-oid="w:9u0j7"
+                  data-oid="4q4u9s3"
                 >
                   HDB Specialist
                 </Link>
               </li>
-              <li data-oid="53dtfvz">
+              <li data-oid="at5:d:3">
                 <Link
                   href="/learning-paths/condo"
                   className="text-gray-400 hover:text-white"
-                  data-oid="ca.c34_"
+                  data-oid="hs.qvjc"
                 >
                   Condo Specialist
                 </Link>
@@ -195,43 +195,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-1" data-oid="dtfq7iz">
-            <h3 className="text-lg font-semibold mb-4" data-oid="ewazl2g">
+          <div className="md:col-span-1" data-oid="ycv7pec">
+            <h3 className="text-lg font-semibold mb-4" data-oid="iwcl_lk">
               Company
             </h3>
-            <ul className="space-y-2" data-oid="3p-4-rj">
-              <li data-oid="1_5y0dn">
+            <ul className="space-y-2" data-oid="h.r4e_m">
+              <li data-oid="bsxucyy">
                 <Link
                   href="/about"
                   className="text-gray-400 hover:text-white"
-                  data-oid="f4pwmp."
+                  data-oid="h367gnt"
                 >
                   About Us
                 </Link>
               </li>
-              <li data-oid="r.b78_r">
+              <li data-oid="kd96jbf">
                 <Link
                   href="/contact"
                   className="text-gray-400 hover:text-white"
-                  data-oid="hwtagxl"
+                  data-oid="k3eydal"
                 >
                   Contact Us
                 </Link>
               </li>
-              <li data-oid="j4lk7n2">
+              <li data-oid="gh72pol">
                 <Link
                   href="/plb-book"
                   className="text-gray-400 hover:text-white"
-                  data-oid="dcjkr_p"
+                  data-oid="a1222su"
                 >
                   Property Launch Bible
                 </Link>
               </li>
-              <li data-oid="_j6_-6m">
+              <li data-oid="stzpwvk">
                 <Link
                   href="/cart"
                   className="text-gray-400 hover:text-white"
-                  data-oid="btx7.:b"
+                  data-oid="y.n0ffi"
                 >
                   Shopping Cart
                 </Link>
@@ -240,34 +240,34 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8" data-oid="ye1acov">
+        <div className="border-t border-gray-800 mt-8 pt-8" data-oid="lqhx7bt">
           <div
             className="flex flex-col md:flex-row justify-between items-center"
-            data-oid="aqapyjn"
+            data-oid="yx2jix6"
           >
-            <p className="text-gray-400 text-sm" data-oid="wudp0d_">
+            <p className="text-gray-400 text-sm" data-oid="l8jhojc">
               &copy; {new Date().getFullYear()} Assembly SG. All rights
               reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0" data-oid="2hz64ym">
+            <div className="flex space-x-6 mt-4 md:mt-0" data-oid="n.6p536">
               <Link
                 href="/terms"
                 className="text-gray-400 hover:text-white text-sm"
-                data-oid=".w74pm."
+                data-oid="66q4_g0"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white text-sm"
-                data-oid="34m.o3w"
+                data-oid="vksbyc:"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/cookies"
                 className="text-gray-400 hover:text-white text-sm"
-                data-oid=":802q4h"
+                data-oid="m7:4dz1"
               >
                 Cookie Policy
               </Link>

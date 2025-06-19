@@ -19,7 +19,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   return (
     <AuthContext.Provider
       value={{ isLoggedIn, login, logout }}
-      data-oid=":yylu35"
+      data-oid="eukzshg"
     >
       {children}
     </AuthContext.Provider>

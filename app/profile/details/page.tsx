@@ -61,16 +61,16 @@ export default function LearningPreferencesPage() {
   };
 
   return (
-    <div className="p-6" data-oid="o45mrxt">
+    <div className="p-6" data-oid="5ioriqw">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="b508fdt"
+        data-oid="5t1js7a"
       >
-        <div data-oid=".0469xb">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="c-6hu0p">
+        <div data-oid="4o.5pn.">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="0fnzlgn">
             Learning Preferences
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="7e58fe5">
+          <p className="text-gray-500 mt-1" data-oid="xm765-o">
             Customize your learning experience and notification settings
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function LearningPreferencesPage() {
               ? "bg-blue-600 text-white hover:bg-blue-700"
               : "border border-gray-200 text-gray-700 hover:bg-gray-50"
           }`}
-          data-oid="qsk.2om"
+          data-oid="_y5pyyu"
         >
           {isEditing ? (
             <>
@@ -92,17 +92,17 @@ export default function LearningPreferencesPage() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                data-oid="qo4--ft"
+                data-oid="ar3nv4_"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M5 13l4 4L19 7"
-                  data-oid="j-5zdrq"
+                  data-oid="cf7iyfd"
                 />
               </svg>
-              <span data-oid="xott2am">Save Preferences</span>
+              <span data-oid="4h6m9kt">Save Preferences</span>
             </>
           ) : (
             <>
@@ -112,43 +112,43 @@ export default function LearningPreferencesPage() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                data-oid="nns4o6o"
+                data-oid="oakjqhy"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                  data-oid="9itb5xb"
+                  data-oid="q-6_pk6"
                 />
               </svg>
-              <span data-oid="1v154uf">Edit Preferences</span>
+              <span data-oid=".nmkcg0">Edit Preferences</span>
             </>
           )}
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="gqvgvq.">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="qrlze_h">
         {/* Notification Banner */}
         <motion.div
           className="lg:col-span-3 bg-blue-50 rounded-xl p-6 border border-blue-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          data-oid="knn0mq4"
+          data-oid="an9z8th"
         >
-          <div className="flex items-start gap-4" data-oid="_71jeza">
-            <div className="bg-blue-100 p-3 rounded-full" data-oid="f_sq6yz">
-              <Bell className="h-6 w-6 text-blue-600" data-oid="k_wflzp" />
+          <div className="flex items-start gap-4" data-oid="d6z9:0g">
+            <div className="bg-blue-100 p-3 rounded-full" data-oid="g8h0jwy">
+              <Bell className="h-6 w-6 text-blue-600" data-oid="xb_jhfc" />
             </div>
-            <div data-oid="dbf:h6u">
+            <div data-oid="vxczjit">
               <h3
                 className="text-lg font-semibold text-blue-800"
-                data-oid="ush6lma"
+                data-oid="calo9mw"
               >
                 Course Matching Notifications
               </h3>
-              <p className="text-blue-700 mt-1" data-oid="h.dzwiz">
+              <p className="text-blue-700 mt-1" data-oid="pdl3019">
                 We'll notify you when new courses match your learning
                 preferences. Set your interests and experience level below to
                 receive personalized recommendations.
@@ -163,39 +163,39 @@ export default function LearningPreferencesPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
-          data-oid="_j2k.cj"
+          data-oid="d32cnbk"
         >
-          <div className="flex items-center gap-3 mb-4" data-oid="_s-an.b">
-            <div className="bg-orange-100 p-2 rounded-full" data-oid="9rca0kv">
-              <Target className="h-5 w-5 text-orange-600" data-oid="v9ivw7j" />
+          <div className="flex items-center gap-3 mb-4" data-oid="n:xhupe">
+            <div className="bg-orange-100 p-2 rounded-full" data-oid="z:bu6qa">
+              <Target className="h-5 w-5 text-orange-600" data-oid="qvdoy:." />
             </div>
             <h3
               className="text-lg font-medium text-gray-800"
-              data-oid="kr0yl_n"
+              data-oid="a-i2o5e"
             >
               Areas of Interest
             </h3>
           </div>
 
-          <p className="text-gray-600 mb-4" data-oid="kdtt1iz">
+          <p className="text-gray-600 mb-4" data-oid="keycfx7">
             Select topics you're interested in learning about
           </p>
 
-          <div className="space-y-4" data-oid="9vo70b9">
+          <div className="space-y-4" data-oid="yzniu67">
             {/* Display selected interests as tags */}
-            <div className="flex flex-wrap gap-2 mb-4" data-oid="yh2.2i:">
+            <div className="flex flex-wrap gap-2 mb-4" data-oid="nsi_s-7">
               {userData.interests.map((interest, index) => (
                 <div
                   key={index}
                   className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm flex items-center"
-                  data-oid="0elsi-a"
+                  data-oid="b4.8agp"
                 >
                   {interest}
                   {isEditing && (
                     <button
                       className="ml-2 text-red-500 hover:text-red-700"
                       onClick={() => handleInterestChange(interest)}
-                      data-oid="5959taa"
+                      data-oid="h9ula_y"
                     >
                       &times;
                     </button>
@@ -203,7 +203,7 @@ export default function LearningPreferencesPage() {
                 </div>
               ))}
               {userData.interests.length === 0 && !isEditing && (
-                <div className="text-gray-500 text-sm" data-oid="qlq9p1a">
+                <div className="text-gray-500 text-sm" data-oid="t5b.nb4">
                   No interests selected
                 </div>
               )}
@@ -213,35 +213,35 @@ export default function LearningPreferencesPage() {
             {isEditing && (
               <div
                 className="border border-gray-200 rounded-lg p-4 bg-gray-50"
-                data-oid="q:1_wa0"
+                data-oid="tzujpxl"
               >
                 <h4
                   className="text-sm font-medium text-gray-700 mb-3"
-                  data-oid="x5oxzid"
+                  data-oid="_8vhwo4"
                 >
                   Select your interests:
                 </h4>
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-2"
-                  data-oid="qi6gb.o"
+                  data-oid="i2rq103"
                 >
                   {availableInterests.map((interest) => (
                     <label
                       key={interest}
                       className="flex items-center p-2 hover:bg-gray-100 rounded"
-                      data-oid="ba8b1r9"
+                      data-oid="s5ya035"
                     >
                       <input
                         type="checkbox"
                         checked={userData.interests.includes(interest)}
                         onChange={() => handleInterestChange(interest)}
                         className="h-4 w-4 text-blue-600 rounded"
-                        data-oid="51m9m:8"
+                        data-oid="uq8tjoh"
                       />
 
                       <span
                         className="ml-2 text-sm text-gray-700"
-                        data-oid="vd0pr3v"
+                        data-oid="47e2on7"
                       >
                         {interest}
                       </span>
@@ -252,31 +252,31 @@ export default function LearningPreferencesPage() {
             )}
           </div>
 
-          <div className="mt-8" data-oid="z5.d.m-">
-            <div className="flex items-center gap-3 mb-4" data-oid="u5tyexz">
-              <div className="bg-green-100 p-2 rounded-full" data-oid="-4lgwwy">
+          <div className="mt-8" data-oid="-al0y3h">
+            <div className="flex items-center gap-3 mb-4" data-oid="rzvjgqu">
+              <div className="bg-green-100 p-2 rounded-full" data-oid="v1cq24f">
                 <Sliders
                   className="h-5 w-5 text-green-600"
-                  data-oid="ah-ffgc"
+                  data-oid="6h-2v5m"
                 />
               </div>
               <h3
                 className="text-lg font-medium text-gray-800"
-                data-oid="0sk6yr2"
+                data-oid="5o6t:ro"
               >
                 Experience Level
               </h3>
             </div>
 
-            <p className="text-gray-600 mb-4" data-oid="wk0bca5">
+            <p className="text-gray-600 mb-4" data-oid="8f:rfw.">
               Select your current knowledge level
             </p>
 
             {isEditing ? (
-              <div className="flex flex-col space-y-2" data-oid="759drpe">
+              <div className="flex flex-col space-y-2" data-oid="w6s7r47">
                 <label
                   className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
-                  data-oid="x-0yzib"
+                  data-oid="qq91mmp"
                 >
                   <input
                     type="radio"
@@ -287,19 +287,19 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, experience: "Beginner" })
                     }
                     className="h-4 w-4 text-blue-600"
-                    data-oid="fqjzjww"
+                    data-oid=".oq8ch_"
                   />
 
-                  <div className="ml-3" data-oid="n07sfbd">
+                  <div className="ml-3" data-oid="a-6ld8_">
                     <span
                       className="block text-sm font-medium text-gray-700"
-                      data-oid="3wcbgyr"
+                      data-oid="uzmta.d"
                     >
                       Beginner
                     </span>
                     <span
                       className="block text-xs text-gray-500"
-                      data-oid="7uz5gbt"
+                      data-oid="8zd.ny_"
                     >
                       New to property investment
                     </span>
@@ -307,7 +307,7 @@ export default function LearningPreferencesPage() {
                 </label>
                 <label
                   className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
-                  data-oid=".f5v6_."
+                  data-oid="oq.xvbr"
                 >
                   <input
                     type="radio"
@@ -318,19 +318,19 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, experience: "Intermediate" })
                     }
                     className="h-4 w-4 text-blue-600"
-                    data-oid="jffokj4"
+                    data-oid="lkj-c.7"
                   />
 
-                  <div className="ml-3" data-oid="02ju:1b">
+                  <div className="ml-3" data-oid="v5b6.z8">
                     <span
                       className="block text-sm font-medium text-gray-700"
-                      data-oid="ts6a3tl"
+                      data-oid="fn_wb:p"
                     >
                       Intermediate
                     </span>
                     <span
                       className="block text-xs text-gray-500"
-                      data-oid="ip9_huf"
+                      data-oid="h3gsrxm"
                     >
                       Some experience with property investment
                     </span>
@@ -338,7 +338,7 @@ export default function LearningPreferencesPage() {
                 </label>
                 <label
                   className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
-                  data-oid="eneeuvf"
+                  data-oid="2vwsx:d"
                 >
                   <input
                     type="radio"
@@ -349,19 +349,19 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, experience: "Advanced" })
                     }
                     className="h-4 w-4 text-blue-600"
-                    data-oid="d:k8mz1"
+                    data-oid="mor1sez"
                   />
 
-                  <div className="ml-3" data-oid="yvchsra">
+                  <div className="ml-3" data-oid="s_nd9n:">
                     <span
                       className="block text-sm font-medium text-gray-700"
-                      data-oid="u2:dcpy"
+                      data-oid="-04578-"
                     >
                       Advanced
                     </span>
                     <span
                       className="block text-xs text-gray-500"
-                      data-oid="d:tenfv"
+                      data-oid="d4b5m7:"
                     >
                       Experienced property investor
                     </span>
@@ -369,34 +369,34 @@ export default function LearningPreferencesPage() {
                 </label>
               </div>
             ) : (
-              <div className="bg-gray-50 p-4 rounded-lg" data-oid="u.uj7se">
-                <span className="font-medium text-gray-700" data-oid="j3uomzv">
+              <div className="bg-gray-50 p-4 rounded-lg" data-oid="ky3:o_l">
+                <span className="font-medium text-gray-700" data-oid="_kuhand">
                   {userData.experience}
                 </span>
               </div>
             )}
           </div>
 
-          <div className="mt-8" data-oid="---kcpq">
-            <div className="flex items-center gap-3 mb-4" data-oid="0d4:6ru">
+          <div className="mt-8" data-oid="f4ql1ev">
+            <div className="flex items-center gap-3 mb-4" data-oid="oa.7iwt">
               <div
                 className="bg-purple-100 p-2 rounded-full"
-                data-oid="8ymstb1"
+                data-oid="dm9czf0"
               >
                 <Target
                   className="h-5 w-5 text-purple-600"
-                  data-oid="_kw49q_"
+                  data-oid="_9o1710"
                 />
               </div>
               <h3
                 className="text-lg font-medium text-gray-800"
-                data-oid=":zq9f4l"
+                data-oid="cb8bihx"
               >
                 Learning Goals
               </h3>
             </div>
 
-            <p className="text-gray-600 mb-4" data-oid="--9-363">
+            <p className="text-gray-600 mb-4" data-oid="j_u7:2h">
               What do you want to achieve through our courses?
             </p>
 
@@ -409,11 +409,11 @@ export default function LearningPreferencesPage() {
                 rows={4}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Describe your learning goals..."
-                data-oid="06udmjz"
+                data-oid="0ggzb8o"
               />
             ) : (
-              <div className="bg-gray-50 p-4 rounded-lg" data-oid="6q4ql27">
-                <p className="text-gray-700" data-oid="qbl0jq.">
+              <div className="bg-gray-50 p-4 rounded-lg" data-oid="bgu:o5b">
+                <p className="text-gray-700" data-oid="l_pu3ym">
                   {userData.learningGoals}
                 </p>
               </div>
@@ -427,35 +427,35 @@ export default function LearningPreferencesPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          data-oid="p38alwj"
+          data-oid="l69aftx"
         >
           {/* Preferred Learning Format */}
           <div
             className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
-            data-oid="hu258k5"
+            data-oid="hfxkypb"
           >
-            <div className="flex items-center gap-3 mb-4" data-oid="5c8j3i9">
-              <div className="bg-blue-100 p-2 rounded-full" data-oid="o6i9p6k">
+            <div className="flex items-center gap-3 mb-4" data-oid="shkfgzd">
+              <div className="bg-blue-100 p-2 rounded-full" data-oid="meej8p8">
                 <BookOpen
                   className="h-5 w-5 text-blue-600"
-                  data-oid="kgxyz0_"
+                  data-oid="_c88gtm"
                 />
               </div>
               <h3
                 className="text-lg font-medium text-gray-800"
-                data-oid="1gub1wa"
+                data-oid="5qx2url"
               >
                 Preferred Format
               </h3>
             </div>
 
-            <p className="text-gray-600 mb-4" data-oid=".o..e.8">
+            <p className="text-gray-600 mb-4" data-oid="j8_vspg">
               How do you prefer to learn?
             </p>
 
             {isEditing ? (
-              <div className="space-y-2" data-oid="m6zp.by">
-                <label className="flex items-center" data-oid="75_-wqa">
+              <div className="space-y-2" data-oid="_e662a2">
+                <label className="flex items-center" data-oid=".jo38rl">
                   <input
                     type="checkbox"
                     checked={userData.preferredFormat.includes("Video Courses")}
@@ -468,17 +468,17 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, preferredFormat: newFormats });
                     }}
                     className="h-4 w-4 text-blue-600"
-                    data-oid="f1i5h5b"
+                    data-oid=":6s4pd7"
                   />
 
                   <span
                     className="ml-2 text-sm text-gray-700"
-                    data-oid="wbkjw6a"
+                    data-oid="o7a5qdq"
                   >
                     Video Courses
                   </span>
                 </label>
-                <label className="flex items-center" data-oid="0vntq8s">
+                <label className="flex items-center" data-oid="-eljgzs">
                   <input
                     type="checkbox"
                     checked={userData.preferredFormat.includes("Text Articles")}
@@ -491,17 +491,17 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, preferredFormat: newFormats });
                     }}
                     className="h-4 w-4 text-blue-600"
-                    data-oid="e:uhuja"
+                    data-oid="br8xnji"
                   />
 
                   <span
                     className="ml-2 text-sm text-gray-700"
-                    data-oid="nkorpz-"
+                    data-oid="lr1:87t"
                   >
                     Text Articles
                   </span>
                 </label>
-                <label className="flex items-center" data-oid="0384i3d">
+                <label className="flex items-center" data-oid="hrxd6:7">
                   <input
                     type="checkbox"
                     checked={userData.preferredFormat.includes(
@@ -516,17 +516,17 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, preferredFormat: newFormats });
                     }}
                     className="h-4 w-4 text-blue-600"
-                    data-oid="mpd1a_j"
+                    data-oid="0-ikubq"
                   />
 
                   <span
                     className="ml-2 text-sm text-gray-700"
-                    data-oid="6svuwds"
+                    data-oid="g2943nm"
                   >
                     Interactive Workshops
                   </span>
                 </label>
-                <label className="flex items-center" data-oid="2citk2y">
+                <label className="flex items-center" data-oid="8r6-anr">
                   <input
                     type="checkbox"
                     checked={userData.preferredFormat.includes("Case Studies")}
@@ -539,17 +539,17 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, preferredFormat: newFormats });
                     }}
                     className="h-4 w-4 text-blue-600"
-                    data-oid="jo7l8qv"
+                    data-oid="c28vfp9"
                   />
 
                   <span
                     className="ml-2 text-sm text-gray-700"
-                    data-oid="lv6vt_9"
+                    data-oid="-xvornu"
                   >
                     Case Studies
                   </span>
                 </label>
-                <label className="flex items-center" data-oid="hk:ukat">
+                <label className="flex items-center" data-oid="k_5sj1.">
                   <input
                     type="checkbox"
                     checked={userData.preferredFormat.includes("Live Webinars")}
@@ -562,24 +562,24 @@ export default function LearningPreferencesPage() {
                       setUserData({ ...userData, preferredFormat: newFormats });
                     }}
                     className="h-4 w-4 text-blue-600"
-                    data-oid="ekghmc7"
+                    data-oid="j0.mytx"
                   />
 
                   <span
                     className="ml-2 text-sm text-gray-700"
-                    data-oid="2atp7vb"
+                    data-oid="wb_d5j7"
                   >
                     Live Webinars
                   </span>
                 </label>
               </div>
             ) : (
-              <div className="flex flex-wrap gap-2" data-oid="asnbqlr">
+              <div className="flex flex-wrap gap-2" data-oid="u7bten_">
                 {userData.preferredFormat.map((format, index) => (
                   <div
                     key={index}
                     className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm"
-                    data-oid="33-wq2o"
+                    data-oid="k3be2ln"
                   >
                     {format}
                   </div>

@@ -55,15 +55,15 @@ function Calendar({
       }}
       components={{
         IconLeft: ({ ...props }) => (
-          <ChevronLeft className="h-4 w-4" data-oid="1r87jr6" />
+          <ChevronLeft className="h-4 w-4" data-oid="zd4slqc" />
         ),
 
         IconRight: ({ ...props }) => (
-          <ChevronRight className="h-4 w-4" data-oid="pa5ki8c" />
+          <ChevronRight className="h-4 w-4" data-oid="s4o9_59" />
         ),
       }}
       {...props}
-      data-oid="tv_ye16"
+      data-oid="7g96:xf"
     />
   );
 }
