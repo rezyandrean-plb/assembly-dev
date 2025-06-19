@@ -426,66 +426,69 @@ export default function PLBBookPage() {
 
                 <div className="max-w-6xl mx-auto" data-oid="tciay34">
                   <div
-                    className="bg-white rounded-xl shadow-lg p-8 mb-8"
-                    data-oid="72_z-x7"
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8"
+                    data-oid="zi6c8v-"
                   >
+                    {/* Book image on the left - outside white container */}
                     <div
-                      className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
-                      data-oid="gd5olzp"
+                      className="lg:col-span-4 fade-in relative"
+                      data-oid="5vcfxam"
                     >
-                      {/* Book image on the left */}
-                      <div className="lg:col-span-4 fade-in" data-oid="5vcfxam">
-                        <div
-                          className="relative w-48 h-64 mx-auto lg:mx-0"
-                          data-oid="w5rajm2"
-                        >
-                          <img
-                            src="/images/PLB Book Front Cover_FA.jpg"
-                            alt="PropertyLimBrothers Book Cover"
-                            className="w-full h-full object-cover rounded-lg shadow-xl"
-                            data-oid="ps06acd"
-                          />
+                      <div
+                        className="absolute w-[120%] -left-[10%]"
+                        data-oid="w5rajm2"
+                      >
+                        <img
+                          src="/images/PLB Book Mockup Cover & Content.png"
+                          alt="PropertyLimBrothers Book Cover"
+                          className="w-full h-full object-contain"
+                          data-oid="ps06acd"
+                        />
 
-                          <div
-                            className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
-                            data-oid="k8h31eh"
-                          >
-                            <div data-oid="u_zi2t1">
-                              <div
-                                className="text-xs font-bold"
-                                data-oid="4xtwk3j"
-                              >
-                                Limited
-                              </div>
-                              <div className="text-xs" data-oid="uhrfego">
-                                Edition
-                              </div>
+                        <div
+                          className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
+                          data-oid="k8h31eh"
+                        >
+                          <div data-oid="u_zi2t1">
+                            <div
+                              className="text-xs font-bold"
+                              data-oid="4xtwk3j"
+                            >
+                              Limited
+                            </div>
+                            <div className="text-xs" data-oid="uhrfego">
+                              Edition
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      {/* List on the right */}
-                      <div className="lg:col-span-8 fade-in" data-oid="6uw5118">
+                    {/* List on the right - in white container */}
+                    <div className="lg:col-span-8 fade-in" data-oid="6uw5118">
+                      <div
+                        className="bg-white rounded-xl shadow-lg p-8"
+                        data-oid="c3.2y4l"
+                      >
                         <div
                           className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                          data-oid="g9i147d"
+                          data-oid="i96a-8t"
                         >
-                          <div className="space-y-3" data-oid="ae7scve">
+                          <div className="space-y-3" data-oid="7j963yk">
                             <div
                               className="flex items-start"
-                              data-oid="6oz_1df"
+                              data-oid="-.7clqi"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="fp82ldw"
+                                data-oid="2dhucm3"
                               >
                                 01
                               </div>
-                              <div data-oid="mhrhff2">
+                              <div data-oid="8gx3:6a">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="b09.ep1"
+                                  data-oid="o:p51mw"
                                 >
                                   The mindset of successful property sellers
                                 </h3>
@@ -494,18 +497,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="valrzb6"
+                              data-oid="nyvxn_g"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid=".wyr42m"
+                                data-oid="y:au3ze"
                               >
                                 02
                               </div>
-                              <div data-oid="12-tvc_">
+                              <div data-oid="304zjtc">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="-3.4k.p"
+                                  data-oid="_ut2-y8"
                                 >
                                   The Singapore Buy and Sell Pattern
                                 </h3>
@@ -514,18 +517,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="xz-jg_o"
+                              data-oid="l7f:dl1"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="k1i82hh"
+                                data-oid="5bmx1z4"
                               >
                                 03
                               </div>
-                              <div data-oid="1qx9lx2">
+                              <div data-oid="vdr7hpx">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="t43_rwe"
+                                  data-oid="_1tz09a"
                                 >
                                   How to build empathy and connection with your
                                   eventual buyer
@@ -535,18 +538,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="i:hkpcr"
+                              data-oid="o9regk1"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="t4kktji"
+                                data-oid="mjwdqu2"
                               >
                                 04
                               </div>
-                              <div data-oid="1fgzhv1">
+                              <div data-oid="8lmyi_o">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="j4crd92"
+                                  data-oid="k4h6m3:"
                                 >
                                   Step-by-step guide to preparing for a home
                                   sale
@@ -556,18 +559,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="7s:7dlo"
+                              data-oid="cs7xwex"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="brzthz4"
+                                data-oid="3-vg41s"
                               >
                                 05
                               </div>
-                              <div data-oid="3swp4s_">
+                              <div data-oid="p_xyag9">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="n93fs8o"
+                                  data-oid="n3bndpd"
                                 >
                                   How to prepare and dress your house for the
                                   sale
@@ -577,18 +580,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="6z7pka5"
+                              data-oid="l.52ao1"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="pqeay-q"
+                                data-oid="-8nkrpk"
                               >
                                 06
                               </div>
-                              <div data-oid="uo_vn.:">
+                              <div data-oid="4bs_hvy">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="v1l-c5b"
+                                  data-oid="1yoovy_"
                                 >
                                   How to leverage on and harness the power of
                                   social media
@@ -597,21 +600,21 @@ export default function PLBBookPage() {
                             </div>
                           </div>
 
-                          <div className="space-y-3" data-oid=".atp:6o">
+                          <div className="space-y-3" data-oid="ix36rz0">
                             <div
                               className="flex items-start"
-                              data-oid="4ies32s"
+                              data-oid="yuxp3rh"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="ut68se5"
+                                data-oid="p508eo8"
                               >
                                 07
                               </div>
-                              <div data-oid="lhqo3a6">
+                              <div data-oid="y83hd7g">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="ctictak"
+                                  data-oid="1o3lc:7"
                                 >
                                   The four pillars of social media content
                                   creation
@@ -621,18 +624,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="a6o0y3-"
+                              data-oid="g-ju5on"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="y8r.2ze"
+                                data-oid="fnat814"
                               >
                                 08
                               </div>
-                              <div data-oid="-276c9g">
+                              <div data-oid="nx:-7zd">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="itp2v89"
+                                  data-oid="qamubdi"
                                 >
                                   How to create a comprehensive Home Tour
                                 </h3>
@@ -641,18 +644,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="8qvrh8:"
+                              data-oid="rn8lg_-"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="l-n9.go"
+                                data-oid="vuhjkea"
                               >
                                 09
                               </div>
-                              <div data-oid="bu2oblf">
+                              <div data-oid="e5-nctq">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="lj.9_uf"
+                                  data-oid="k5h-43b"
                                 >
                                   How to advertise and distribute your content
                                   to maximise attention
@@ -662,18 +665,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="f5g719q"
+                              data-oid="7itfj49"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="k:eqa1:"
+                                data-oid="1i-pwcg"
                               >
                                 10
                               </div>
-                              <div data-oid="9d7r374">
+                              <div data-oid="vhubsjc">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="dxzkajh"
+                                  data-oid="g9fabsl"
                                 >
                                   Pricing techniques for your home
                                 </h3>
@@ -682,18 +685,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="2p6wg5f"
+                              data-oid="fclh.3n"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="r:f6h1k"
+                                data-oid="i:lx0j5"
                               >
                                 11
                               </div>
-                              <div data-oid="mas1f4y">
+                              <div data-oid="z7:pe_m">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="dfckut_"
+                                  data-oid="aqyn0l."
                                 >
                                   Graphic guides to timeline and financial
                                   calculations
