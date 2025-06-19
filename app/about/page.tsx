@@ -22,6 +22,9 @@ import {
   Mic,
   Video,
   PenTool,
+  Star,
+  Zap,
+  TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -492,12 +495,12 @@ const ValuesInActionSection = () => {
 
   const values = [
     {
-      icon: Lightbulb,
+      icon: Star,
       title: "Excellence",
       description: "Commitment to high-quality education and training.",
     },
     {
-      icon: Handshake,
+      icon: Zap,
       title: "Innovation",
       description: "Adapting to modern real estate trends and technologies.",
     },
@@ -507,7 +510,7 @@ const ValuesInActionSection = () => {
       description: "Building a strong network of real estate professionals.",
     },
     {
-      icon: Target,
+      icon: TrendingUp,
       title: "Growth",
       description:
         "Equipping individuals with the tools for long-term success.",
@@ -529,7 +532,7 @@ const ValuesInActionSection = () => {
               className="text-3xl md:text-4xl font-bold text-white mb-6"
               data-oid="x2y8bl0"
             >
-              Our Values in Action
+              Our Core Values
             </h2>
             <p
               className="text-xl text-gray-300 max-w-3xl mx-auto"
