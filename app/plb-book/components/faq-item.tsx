@@ -56,7 +56,7 @@ export function FAQItem({
         </div>
 
         {/* Question text */}
-        <div className="flex-grow" data-oid="3prz:b-">
+        <div className="flex-grow flex items-center" data-oid="3prz:b-">
           <h3
             className={cn(
               "text-lg font-semibold transition-colors duration-300",
