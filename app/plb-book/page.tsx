@@ -219,13 +219,20 @@ export default function PLBBookPage() {
                       </div>
                     </div>
                     <div className="mt-8 flex space-x-4" data-oid="zrn.bvx">
-                      <Button
-                        size="lg"
-                        className="bg-primary text-white"
-                        data-oid=".o_vdp-"
+                      <a
+                        href="https://www.amazon.com/dp/B0F1CMZ9MQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-oid="un:jjvh"
                       >
-                        Get the E-book
-                      </Button>
+                        <Button
+                          size="lg"
+                          className="bg-primary text-white"
+                          data-oid=".o_vdp-"
+                        >
+                          Get the E-book
+                        </Button>
+                      </a>
                       <Button
                         size="lg"
                         variant="outline"
