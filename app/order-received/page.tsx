@@ -12,6 +12,7 @@ import {
   Clock,
   MapPin,
 } from "lucide-react";
+import Navbar from "@/app/components/navbar";
 
 interface OrderItem {
   id: string;
@@ -75,48 +76,54 @@ export default function OrderReceivedPage() {
 
   if (isLoading) {
     return (
-      <div
-        className="min-h-screen bg-gray-50 flex items-center justify-center"
-        data-oid="ep:alsp"
-      >
+      <>
+        <Navbar />
         <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-          data-oid="n4yh6lr"
-        ></div>
-      </div>
+          className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
+          data-oid="ep:alsp"
+        >
+          <div
+            className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
+            data-oid="n4yh6lr"
+          ></div>
+        </div>
+      </>
     );
   }
 
   if (!orderDetails) {
     return (
-      <div
-        className="min-h-screen bg-gray-50 flex items-center justify-center"
-        data-oid="wjjizob"
-      >
-        <div className="text-center" data-oid="ybvxx4c">
-          <CheckCircle
-            className="mx-auto h-16 w-16 text-gray-400 mb-4"
-            data-oid="..0w3.b"
-          />
+      <>
+        <Navbar />
+        <div
+          className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
+          data-oid="wjjizob"
+        >
+          <div className="text-center" data-oid="ybvxx4c">
+            <CheckCircle
+              className="mx-auto h-16 w-16 text-gray-400 mb-4"
+              data-oid="..0w3.b"
+            />
 
-          <h1
-            className="text-2xl font-bold text-gray-900 mb-2"
-            data-oid="a5tczee"
-          >
-            Order Not Found
-          </h1>
-          <p className="text-gray-600 mb-6" data-oid="wvm5s:5">
-            We couldn't find your order details.
-          </p>
-          <button
-            onClick={() => router.push("/")}
-            className="bg-[#123b79] text-white px-6 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors"
-            data-oid=":ek7oau"
-          >
-            Return Home
-          </button>
+            <h1
+              className="text-2xl font-bold text-gray-900 mb-2"
+              data-oid="a5tczee"
+            >
+              Order Not Found
+            </h1>
+            <p className="text-gray-600 mb-6" data-oid="wvm5s:5">
+              We couldn't find your order details.
+            </p>
+            <button
+              onClick={() => router.push("/")}
+              className="bg-[#123b79] text-white px-6 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors"
+              data-oid=":ek7oau"
+            >
+              Return Home
+            </button>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -144,8 +151,10 @@ export default function OrderReceivedPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8" data-oid="xhh9h7x">
-      <div className="max-w-4xl mx-auto px-4" data-oid="1ojkk7u">
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="xhh9h7x">
+        <div className="max-w-4xl mx-auto px-4" data-oid="1ojkk7u">
         {/* Header */}
         <div
           className="bg-white rounded-lg shadow-sm p-8 mb-6 text-center"
@@ -586,6 +595,6 @@ export default function OrderReceivedPage() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
