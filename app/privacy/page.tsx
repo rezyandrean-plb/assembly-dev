@@ -421,11 +421,11 @@ export default function PrivacyPolicyPage() {
               questions, or if you would like to make a complaint, please
               contact us by e-mail at{" "}
               <a
-                href="mailto:hello@propertylimbrothers.com"
+                href="mailto:hello@assembly.sg"
                 className="text-blue-600 hover:underline"
                 data-oid="3_3:9px"
               >
-                hello@propertylimbrothers.com
+                hello@assembly.sg
               </a>{" "}
               or by mail using the details provided below:
             </p>
@@ -435,16 +435,13 @@ export default function PrivacyPolicyPage() {
                 className="text-gray-700 font-semibold mb-2"
                 data-oid="4yav622"
               >
-                Property Lim Brothers Pte Ltd
+                Assembly SG
               </p>
               <p className="text-gray-700 mb-1" data-oid="0lyg-3z">
                 62 Ubi Road 1, Oxley BizHub 2, #11-15/18, Singapore, 408734
               </p>
-              <p className="text-gray-700 mb-1" data-oid="86b_wzf">
-                Phone: +65 6909 7990
-              </p>
               <p className="text-gray-700" data-oid="pvt676k">
-                Email: hello@propertylimbrothers.com
+                Email: hello@assembly.sg
               </p>
             </div>
           </div>

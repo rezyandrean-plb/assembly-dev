@@ -151,7 +151,7 @@ export default function OrderReceivedPage() {
   );
 
   return (
-    <>
+     <>
       <Navbar />
       <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="xhh9h7x">
         <div className="max-w-4xl mx-auto px-4" data-oid="1ojkk7u">
@@ -416,8 +416,6 @@ export default function OrderReceivedPage() {
                 </div>
               </div>
             </div>
-          </div>
-        )}
 
         {/* Courses Section */}
         {courseItems.length > 0 && (
