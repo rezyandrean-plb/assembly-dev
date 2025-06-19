@@ -600,6 +600,7 @@ const WhyChooseSection = () => {
                       className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5"
                       data-oid="4k81ndf"
                     />
+
                     <span className="text-gray-700" data-oid="o45r4m8">
                       {benefit}
                     </span>
