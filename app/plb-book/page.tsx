@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import NetworkBackground from "@/components/network-background";
 import Link from "next/link";
 import { FAQItem } from "./components/faq-item";
 import { AutoScrollCarousel } from "./components/auto-scroll-carousel";
@@ -8,20 +9,16 @@ import Navbar from "@/components/navbar";
 import { useCart } from "@/components/cart-context";
 import { toast } from "react-hot-toast";
 import { Button } from "@/components/ui/button";
-import {
-  Download,
-  ShoppingCart,
-  Star,
-  Users,
-  Award,
-  ChevronDown,
-  HelpCircle,
-} from "lucide-react";
 
 export default function PLBBookPage() {
   const { addToCart } = useCart();
+  const [scrollY, setScrollY] = useState(0);
+  const [scrollSpeed, setScrollSpeed] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const lastScrollY = useRef(0);
+  const animationFrameId = useRef<number | null>(null);
 
   // FAQ data
   const faqItems = [
@@ -38,7 +35,7 @@ export default function PLBBookPage() {
     {
       question: "What format is the book available in?",
       answer:
-        "The book is available in both digital (e-book) and physical (paperback) formats. The e-book is available on Amazon Kindle, while the paperback can be ordered through our website.",
+        "The book is available in print. A digital format will be made available for Kindle on Amazon soon.",
     },
     {
       question: "Can I take look at the content before purchasing?",
@@ -68,6 +65,39 @@ export default function PLBBookPage() {
   const toggleFAQ = (index: number) => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
+
+  // Handle scroll events for network background
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+
+      animationFrameId.current = requestAnimationFrame(() => {
+        setScrollY(currentScrollY);
+        setScrollSpeed(currentScrollY - lastScrollY.current);
+        lastScrollY.current = currentScrollY;
+      });
+    };
+
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    setWindowHeight(window.innerHeight);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+    };
+  }, []);
 
   // Set up intersection observer for fade-in animations
   useEffect(() => {
@@ -116,281 +146,120 @@ export default function PLBBookPage() {
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PLBook-Quote27.jpg-Jlu8Ak7cvuwWxbQpnMciLbN3qUQdZG.jpeg", // PLBook-Quote27
   ];
 
-  const handleGetEbook = () => {
-    // Redirect to Amazon
-    window.open("https://www.amazon.com/dp/B0F1CMZ9MQ", "_blank");
-  };
-
-  const handleGetPaperback = () => {
+  const handleAddToCart = () => {
     const bookItem = {
-      id: "property-leverage-blueprint-paperback",
-      title: "Property Leverage Blueprint (Paperback)",
-      slug: "property-leverage-blueprint-paperback",
-      price: "29.00",
+      id: "property-leverage-blueprint",
+      title: "Property Leverage Blueprint",
+      price: "29.00", // Discounted price
       instructor: "Assembly SG",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-02%20at%209.03.38%E2%80%AFpm-EzqCO8JB6tjTccn8gq9St2vGkBsqG0.png",
-      type: "Book" as const,
+      image: "/images/plb-book-cover.png",
+      type: "Book",
     };
     addToCart(bookItem);
-    toast.success("Property Leverage Blueprint (Paperback) added to cart!");
+    toast.success("Property Leverage Blueprint added to cart!");
   };
 
   return (
     <>
-      <main
-        className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50"
-        data-oid="oqhqx.v"
-      >
-        <Navbar data-oid="582sgf9" />
-        <div className="pt-24 pb-16" data-oid="u2b0nhw">
-          <div className="plb-book-page relative" data-oid="hbq8qp4">
-            {/* Hero Section - Simplified Design */}
+      <main className="min-h-screen bg-white" data-oid="c3_5yxt">
+        {/* Page Content */}
+        <div className="pt-24 pb-16" data-oid="218jqya">
+          <Navbar data-oid="hn3broi" />
+          <div className="plb-book-page relative" data-oid="3j3hhgp">
+            <NetworkBackground
+              scrollY={scrollY}
+              scrollSpeed={scrollSpeed}
+              windowHeight={windowHeight}
+              data-oid="6_4jm8s"
+            />
+
+            {/* Semi-transparent overlay to improve text readability across the entire page */}
+            <div
+              className="absolute inset-0 bg-white opacity-30 z-0"
+              data-oid="di_k3ac"
+            ></div>
+
+            {/* Hero Section */}
             <section
-              className="section relative"
+              className="section"
               style={{ paddingTop: "120px" }}
-              data-oid="k:v3y7x"
+              data-oid="vn6md5u"
             >
-              <div className="container" data-oid="gh6r0kk">
+              <div className="container relative z-10" data-oid="bdvx.q.">
                 <div
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-                  data-oid="y61nvu-"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+                  data-oid="ywhmdcx"
                 >
-                  {/* Left Column - Content */}
-                  <div className="fade-in space-y-8" data-oid="vx:ecn8">
-                    <div className="space-y-4" data-oid="u6v.wzk">
+                  <div className="fade-in" data-oid="0_94i7m">
+                    <h1 className="text-primary mb-4" data-oid="u0.mmge">
+                      Property Leverage Blueprint
+                    </h1>
+                    <p className="text-xl mb-6" data-oid="b4r9bz7">
+                      Your comprehensive guide to mastering property investment
+                      in Singapore's dynamic market
+                    </p>
+                    <div className="mb-6" data-oid="von4_.0">
                       <div
-                        className="flex items-center space-x-2 text-sm text-primary font-medium"
-                        data-oid="_lwzovv"
+                        className="flex items-center mb-2"
+                        data-oid="b:rjxz3"
                       >
-                        <Award className="w-4 h-4" data-oid="x8b7-og" />
-                        <span data-oid="9i9udo9">
-                          BESTSELLING PROPERTY GUIDE
-                        </span>
-                      </div>
-                      <h1
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
-                        data-oid="a.y29i1"
-                      >
-                        Property Leverage
-                        <span className="block text-primary" data-oid="9c1a0-.">
-                          Blueprint
-                        </span>
-                      </h1>
-                      <p
-                        className="text-xl text-gray-600 leading-relaxed"
-                        data-oid="hsv8mbl"
-                      >
-                        Your comprehensive guide to mastering property
-                        investment in Singapore's dynamic market
-                      </p>
-                    </div>
-
-                    {/* Social Proof */}
-                    <div
-                      className="flex items-center space-x-6"
-                      data-oid="-wxhrtl"
-                    >
-                      <div
-                        className="flex items-center space-x-1"
-                        data-oid=":cy4k44"
-                      >
-                        <div className="flex" data-oid="txg9c.a">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                              data-oid="6aplw3u"
-                            />
-                          ))}
-                        </div>
                         <span
-                          className="text-sm text-gray-600 ml-2"
-                          data-oid="kdvv82w"
+                          className="text-gray-500 line-through mr-2"
+                          data-oid="n8zyuyk"
                         >
-                          4.9/5 (500+ reviews)
+                          $39
+                        </span>
+                        <span
+                          className="text-2xl font-bold text-primary"
+                          data-oid=".28-ec3"
+                        >
+                          $29
                         </span>
                       </div>
-                      <div
-                        className="flex items-center space-x-2 text-sm text-gray-600"
-                        data-oid="7:.-612"
-                      >
-                        <Users className="w-4 h-4" data-oid="-pj0105" />
-                        <span data-oid="nznny9l">10,000+ readers</span>
-                      </div>
-                    </div>
-
-                    {/* Pricing */}
-                    <div
-                      className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
-                      data-oid="9_38jq3"
-                    >
-                      <div
-                        className="flex items-center justify-between mb-4"
-                        data-oid="tvhi0gn"
-                      >
-                        <div
-                          className="flex items-baseline space-x-2"
-                          data-oid="ocb_npo"
-                        >
-                          <span
-                            className="text-gray-500 line-through text-lg"
-                            data-oid="abfzz-h"
-                          >
-                            $39
-                          </span>
-                          <span
-                            className="text-3xl font-bold text-primary"
-                            data-oid="gjvc3bn"
-                          >
-                            $29
-                          </span>
-                          <span
-                            className="text-sm text-gray-500"
-                            data-oid="44-cex."
-                          >
-                            SGD
-                          </span>
-                        </div>
-                        <div
-                          className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium"
-                          data-oid="c.xlfbu"
-                        >
-                          Limited Time Offer
-                        </div>
-                      </div>
                       <p
-                        className="text-sm text-gray-500 mb-6"
-                        data-oid="w-z7z4_"
+                        className="text-sm text-gray-500 mt-2"
+                        data-oid="neknf42"
                       >
                         Free shipping for all physical copies within Singapore
                       </p>
-
-                      {/* Simple Buttons */}
-                      <div className="space-y-3" data-oid="j-.-k34">
-                        <Button
-                          onClick={handleGetEbook}
-                          className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                          size="lg"
-                          data-oid="6pw0_w_"
-                        >
-                          <Download
-                            className="w-4 h-4 mr-2"
-                            data-oid="l8t-4t7"
-                          />
-                          Get the E-book
-                        </Button>
-                        <Button
-                          onClick={handleGetPaperback}
-                          variant="outline"
-                          className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                          size="lg"
-                          data-oid="j8a1m9t"
-                        >
-                          <ShoppingCart
-                            className="w-4 h-4 mr-2"
-                            data-oid="y52csbl"
-                          />
-                          Get the Paperback
-                        </Button>
-                      </div>
                     </div>
-
-                    {/* Trust Indicators */}
-                    <div
-                      className="flex flex-wrap items-center gap-4 text-sm text-gray-500"
-                      data-oid="f0mtnwh"
-                    >
-                      <div
-                        className="flex items-center space-x-1"
-                        data-oid="gzj0qqv"
+                    <div className="mt-8 flex space-x-4" data-oid="zrn.bvx">
+                      <Button
+                        size="lg"
+                        className="bg-primary text-white"
+                        data-oid=".o_vdp-"
                       >
-                        <div
-                          className="w-2 h-2 bg-green-500 rounded-full"
-                          data-oid=":ag09ih"
-                        ></div>
-                        <span data-oid="1m-f9by">Secure payment</span>
-                      </div>
-                      <div
-                        className="flex items-center space-x-1"
-                        data-oid="bhl9zj."
+                        Get the E-book
+                      </Button>
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        onClick={handleAddToCart}
+                        data-oid="aal3j1c"
                       >
-                        <div
-                          className="w-2 h-2 bg-green-500 rounded-full"
-                          data-oid="2z4p3vt"
-                        ></div>
-                        <span data-oid="64e:z:d">Free shipping (SG)</span>
-                      </div>
-                      <div
-                        className="flex items-center space-x-1"
-                        data-oid="lo9qn0s"
-                      >
-                        <div
-                          className="w-2 h-2 bg-green-500 rounded-full"
-                          data-oid="o2-qc.8"
-                        ></div>
-                        <span data-oid="k8k2.ni">Expert support</span>
-                      </div>
+                        Get the Paperback
+                      </Button>
                     </div>
                   </div>
-
-                  {/* Right Column - Book Visual */}
                   <div
-                    className="fade-in flex justify-center lg:justify-end"
-                    data-oid="8b6ac1m"
+                    className="fade-in flex justify-center"
+                    data-oid="ls8_1q5"
                   >
-                    <div className="relative" data-oid="axcyvw:">
-                      {/* Background decoration */}
+                    <div
+                      className="relative w-64 h-80 bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
+                      data-oid="vmbpa3h"
+                    >
                       <div
-                        className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary-dark/20 blur-2xl rounded-full"
-                        data-oid="lthc3h7"
-                      ></div>
-
-                      {/* Book cover */}
-                      <div className="relative" data-oid="71ya6rn">
-                        <img
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-02%20at%209.03.38%E2%80%AFpm-EzqCO8JB6tjTccn8gq9St2vGkBsqG0.png"
-                          alt="Property Leverage Blueprint Book Cover"
-                          className="w-80 h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                          data-oid="zxth3_t"
-                        />
-
-                        {/* Floating badges */}
-                        <div
-                          className="absolute -top-4 -right-4 bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center text-center p-2 shadow-lg transform rotate-12 z-20"
-                          data-oid="wry11sb"
-                        >
-                          <div data-oid="pbxbq_4">
-                            <div
-                              className="text-xs font-medium"
-                              data-oid="3opi4j3"
-                            >
-                              Limited
-                            </div>
-                            <div
-                              className="text-sm font-bold"
-                              data-oid="789xgnv"
-                            >
-                              Edition
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          className="absolute -bottom-4 -left-4 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transform -rotate-12"
-                          data-oid="xnmrlam"
-                        >
-                          <div className="text-center" data-oid="f79s:f0">
-                            <div className="text-xs" data-oid="euqvhk4">
-                              Best
-                            </div>
-                            <div
-                              className="text-sm font-bold"
-                              data-oid="_rvb9dm"
-                            >
-                              Seller
-                            </div>
-                          </div>
+                        className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center"
+                        data-oid="4vwnbe5"
+                      >
+                        <div className="text-center p-4" data-oid="78ldznk">
+                          <h3 className="text-primary" data-oid="48b5_-g">
+                            Property Leverage Blueprint
+                          </h3>
+                          <p className="text-sm" data-oid="x3fmk2p">
+                            By Assembly SG
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -399,42 +268,55 @@ export default function PLBBookPage() {
               </div>
             </section>
 
-            {/* Book Overview Section */}
+            {/* Book Overview Section - Redesigned */}
             <section
-              className="section bg-gradient-to-r from-blue-50 to-indigo-50 relative overflow-hidden"
-              data-oid="uvf.7c7"
+              className="section bg-highlight relative overflow-hidden"
+              data-oid="_7xo2mm"
             >
-              <div className="container relative z-10" data-oid="ezmvz2i">
-                <div className="text-center mb-12" data-oid="d1beeuc">
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-5"
+                data-oid="q44m5w3"
+              >
+                <div
+                  className="absolute top-10 right-10 w-40 h-40 rounded-full bg-primary"
+                  data-oid=".w:nm3a"
+                ></div>
+                <div
+                  className="absolute bottom-20 left-10 w-60 h-60 rounded-full bg-primary-dark"
+                  data-oid="7vze5hq"
+                ></div>
+              </div>
+              <div className="container relative z-10" data-oid="rsfh_ye">
+                <div className="text-center mb-12" data-oid="hpem0-m">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="cod4z93"
+                    data-oid="7qv_zs1"
                   >
                     In a crowded real estate marketplace,{" "}
-                    <span className="text-primary-dark" data-oid="g8x7g32">
+                    <span className="text-primary-dark" data-oid="z1_4k23">
                       Positioning is Everything
                     </span>
                     .
                   </h2>
                   <div
                     className="flex flex-wrap justify-center gap-3 mt-4 mb-8"
-                    data-oid="1zyn08w"
+                    data-oid="326faog"
                   >
                     <span
                       className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="cc34zd:"
+                      data-oid="v3s1fxf"
                     >
                       Real Estate
                     </span>
                     <span
-                      className="bg-primary-dark text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="zpr8:px"
+                      className="bg-primary-dark text-[#123b79] px-5 py-2 rounded-full text-sm font-bold shadow-md"
+                      data-oid="baago68"
                     >
                       Selling
                     </span>
                     <span
-                      className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="vmt09tq"
+                      className="bg-[#123b79] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
+                      data-oid="2a29.y6"
                     >
                       Property Investing Mindset
                     </span>
@@ -443,9 +325,9 @@ export default function PLBBookPage() {
 
                 <div
                   className="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto"
-                  data-oid="dqt47:f"
+                  data-oid=":6rv0fb"
                 >
-                  <p className="mb-6 text-lg" data-oid="_xuq32q">
+                  <p className="mb-6 text-lg" data-oid="-mfq:t4">
                     The moment you list your property in the resale market, it
                     becomes a unique product that needs to attract that one
                     right buyer to make the offer you desire. How do you stand
@@ -456,9 +338,9 @@ export default function PLBBookPage() {
 
                   <div
                     className="bg-primary text-white p-5 mb-6 rounded-lg shadow-inner"
-                    data-oid="hr1rw96"
+                    data-oid="5nbl8vl"
                   >
-                    <p className="font-medium text-lg" data-oid="vuq2x.g">
+                    <p className="font-medium text-lg" data-oid="vlig_4h">
                       It's about attracting genuine buyers by positioning your
                       property with content and maximum exposure.
                     </p>
@@ -466,23 +348,23 @@ export default function PLBBookPage() {
 
                   <div
                     className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-6"
-                    data-oid="omfpsli"
+                    data-oid="pxbvq60"
                   >
-                    <div className="md:col-span-2" data-oid="xet-d0y">
-                      <p className="mb-4" data-oid="eweb-7i">
+                    <div className="md:col-span-2" data-oid="usuygic">
+                      <p className="mb-4" data-oid="ku.ucrt">
                         For the first time ever,{" "}
-                        <strong data-oid="88a609x">Melvin Lim</strong> and{" "}
-                        <strong data-oid="7plctfj">Adrian Lim</strong>—more
+                        <strong data-oid="34kjf6f">Melvin Lim</strong> and{" "}
+                        <strong data-oid="z-ld5vo">Adrian Lim</strong>—more
                         popularly known as PropertyLimBrothers, Singapore's most
                         successful real estate duo that revolutionalise how
                         properties are being marketed with video home tours in
                         Singapore—have assembled an unrivaled playbook on
                         property marketing, designed to take your home from{" "}
-                        <strong data-oid="lga62_j">"listed"</strong> to{" "}
-                        <strong data-oid="a0c1bpf">"sold"</strong>.
+                        <strong data-oid="_.qbmx5">"listed"</strong> to{" "}
+                        <strong data-oid="4rlfx.q">"sold"</strong>.
                       </p>
 
-                      <p data-oid="8id9nlf">
+                      <p data-oid="3q0t:js">
                         More than just a guide, this is a blueprint for
                         uncovering the unique potential of every real estate you
                         touch and finding the perfect buyer for every home.
@@ -491,17 +373,17 @@ export default function PLBBookPage() {
                         Your Property to its Maximum Potential.
                       </p>
                     </div>
-                    <div className="hidden md:block" data-oid="9bsoec1">
+                    <div className="hidden md:block" data-oid="5q-.irc">
                       <div
                         className="w-full aspect-square bg-gradient-to-br from-primary/10 to-primary-dark/20 rounded-full flex items-center justify-center"
-                        data-oid="h3_olw2"
+                        data-oid="u4u5a0a"
                       >
                         <div
                           className="w-3/4 h-3/4 bg-gradient-to-tr from-primary to-primary-dark rounded-full flex items-center justify-center text-white text-5xl font-bold"
-                          data-oid="w3eg8-i"
+                          data-oid="2wui3ne"
                         >
                           17+
-                          <span className="text-sm ml-1" data-oid=".20gt9y">
+                          <span className="text-sm ml-1" data-oid="cn4py0s">
                             years
                           </span>
                         </div>
@@ -513,18 +395,22 @@ export default function PLBBookPage() {
             </section>
 
             {/* Quote Carousel Section */}
-            <section className="section py-16 bg-gray-100" data-oid="7bqp2mi">
-              <div className="container-fluid px-0" data-oid="uy3wmi6">
-                <div className="text-center mb-8 px-4" data-oid="wd2y3u2">
+            <section
+              className="section py-16"
+              style={{ backgroundColor: "#E8E8E8" }}
+              data-oid="bn1eg.."
+            >
+              <div className="container-fluid px-0" data-oid="1lcwo9o">
+                <div className="text-center mb-8 px-4" data-oid="::-:sbn">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="z6mit__"
+                    data-oid="d.pkkqt"
                   >
                     Key Insights from the Book
                   </h2>
                   <p
                     className="text-lg text-gray-700 max-w-2xl mx-auto"
-                    data-oid="3g2oss0"
+                    data-oid="4mqdg6m"
                   >
                     Discover powerful strategies and insights that will
                     transform your approach to property selling
@@ -535,33 +421,33 @@ export default function PLBBookPage() {
                   images={quoteImages}
                   visibleCount={4}
                   autoScrollInterval={4000}
-                  data-oid=".xkz7me"
+                  data-oid="ub5ji:l"
                 />
               </div>
             </section>
 
-            {/* Book Content Section */}
+            {/* Book Content Section - Redesigned for Full Width */}
             <section
-              className="section relative overflow-hidden bg-white py-16"
-              data-oid="e7ajdvo"
+              className="section relative overflow-hidden bg-secondary py-16"
+              data-oid="x1m62.2"
             >
               <div
                 className="container-fluid px-4 md:px-8 lg:px-12 relative z-10 max-w-[1600px] mx-auto"
-                data-oid="nm:.-jg"
+                data-oid="zrdrwts"
               >
-                <div className="text-center mb-12" data-oid="ro1bd25">
+                <div className="text-center mb-12" data-oid="mc::tel">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="bd-mwsa"
+                    data-oid="rp77-sa"
                   >
                     Discover the Art of{" "}
-                    <span className="text-primary-dark" data-oid="dplbr5c">
+                    <span className="text-primary-dark" data-oid="er:vu5n">
                       Home Selling
                     </span>
                   </h2>
                   <p
                     className="text-lg mb-8 max-w-2xl mx-auto"
-                    data-oid="oruyag3"
+                    data-oid="sq6ssl0"
                   >
                     A comprehensive playbook that transforms ordinary sellers
                     into market masters
@@ -570,37 +456,37 @@ export default function PLBBookPage() {
 
                 <div
                   className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center"
-                  data-oid="1njc_47"
+                  data-oid="tciay34"
                 >
-                  {/* Book image */}
+                  {/* Book image - now in a 4-column space */}
                   <div
                     className="xl:col-span-4 fade-in order-2 xl:order-1"
-                    data-oid="lo089c8"
+                    data-oid="5vcfxam"
                   >
                     <div
                       className="relative mx-auto max-w-md"
-                      data-oid="q6d86bv"
+                      data-oid="w5rajm2"
                     >
                       <div
                         className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-primary-dark/30 blur-2xl rounded-full transform -translate-y-4 translate-x-4"
-                        data-oid="4jdyhv4"
+                        data-oid="oboq88p"
                       ></div>
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-02%20at%209.03.38%E2%80%AFpm-EzqCO8JB6tjTccn8gq9St2vGkBsqG0.png"
                         alt="Property Positioning Book Cover"
                         className="relative z-10 w-full h-auto rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform rotate-3 hover:rotate-0 transition-all duration-500"
-                        data-oid="ap_zqw-"
+                        data-oid="ps06acd"
                       />
 
                       <div
                         className="absolute -bottom-6 -right-6 bg-primary text-white rounded-full w-24 h-24 flex items-center justify-center text-center p-2 shadow-lg transform rotate-12 z-20"
-                        data-oid="5g0g7uo"
+                        data-oid="k8h31eh"
                       >
-                        <div data-oid="o9tqbko">
-                          <div className="text-xs" data-oid="96o0063">
+                        <div data-oid="u_zi2t1">
+                          <div className="text-xs" data-oid="4xtwk3j">
                             Limited
                           </div>
-                          <div className="text-lg font-bold" data-oid="31qewru">
+                          <div className="text-lg font-bold" data-oid="uhrfego">
                             Edition
                           </div>
                         </div>
@@ -608,167 +494,167 @@ export default function PLBBookPage() {
                     </div>
                   </div>
 
-                  {/* Content cards */}
+                  {/* Content cards - now in an 8-column space with 3 cards per row */}
                   <div
                     className="xl:col-span-8 fade-in order-1 xl:order-2"
-                    data-oid="ww:2kie"
+                    data-oid="6uw5118"
                   >
                     <div
                       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                      data-oid="exqw.iu"
+                      data-oid="3hpk._t"
                     >
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="iat:v7w"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid="osf5.k."
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="mghei-9"
+                          data-oid="hgavi6c"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid=":55qtwa"
+                            data-oid="4vwm9z4"
                           >
                             01
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="39n2o_x"
+                            data-oid="ier-do7"
                           >
                             Seller Mindset
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="i4t3xv2">
+                        <p className="text-gray-600 pl-14" data-oid="953466k">
                           Master the psychology of successful property sellers
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="eel:u_2"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid="w4qu29z"
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="5rc6ow7"
+                          data-oid="4.14sdz"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid="e-45zlz"
+                            data-oid="qb.qgxg"
                           >
                             02
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="5xzx-lp"
+                            data-oid="jwrc.8p"
                           >
                             Market Patterns
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="g19trtw">
+                        <p className="text-gray-600 pl-14" data-oid="2af0f1k">
                           Understand the Singapore Buy and Sell Pattern
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="tca_az8"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid="b8p581e"
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="462v0-p"
+                          data-oid="8qn7ssf"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid="x3y:eq9"
+                            data-oid="im_lt2s"
                           >
                             03
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="hj4pjva"
+                            data-oid="m85r-48"
                           >
                             Buyer Connection
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="bsx-u63">
+                        <p className="text-gray-600 pl-14" data-oid="x1d:bpt">
                           Build empathy with your eventual buyer
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="bsbao-l"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid="x0d939:"
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="-7hfzzd"
+                          data-oid="k.warpk"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid="o4xpx2c"
+                            data-oid="q:.3y26"
                           >
                             04
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="va954mg"
+                            data-oid="ls9t6ul"
                           >
                             Home Preparation
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="z:y_0ed">
+                        <p className="text-gray-600 pl-14" data-oid="7cib6ij">
                           Prepare and dress your house for maximum appeal
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="unr-.sv"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid=".anmrmb"
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="sll8xs1"
+                          data-oid="f6ssmdj"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid="gpu80qq"
+                            data-oid="2exh7:3"
                           >
                             05
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="p2w_.8t"
+                            data-oid="m5sn3:-"
                           >
                             Social Media
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="e0u2lh9">
+                        <p className="text-gray-600 pl-14" data-oid="94kcj:h">
                           Leverage the power of digital marketing
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100"
-                        data-oid="65ps227"
+                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        data-oid="4k-ub-t"
                       >
                         <div
                           className="flex items-center mb-3"
-                          data-oid="6mdmdya"
+                          data-oid="chtj.ib"
                         >
                           <div
                             className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
-                            data-oid="3z7g7tf"
+                            data-oid="qkb4on4"
                           >
                             06
                           </div>
                           <h3
                             className="text-primary text-lg font-semibold"
-                            data-oid="k32q5l7"
+                            data-oid="4us8weh"
                           >
                             Pricing Strategy
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="ji2ozd6">
+                        <p className="text-gray-600 pl-14" data-oid=".v97y-r">
                           Set the right price with financial calculations
                         </p>
                       </div>
@@ -776,14 +662,14 @@ export default function PLBBookPage() {
 
                     <div
                       className="mt-8 text-center lg:text-left"
-                      data-oid="2_abirt"
+                      data-oid="ed8wkul"
                     >
                       <Link
                         href="/plb-book/preview"
                         className="inline-block"
-                        data-oid="y2nfz.s"
+                        data-oid="u0ja7-c"
                       >
-                        <button className="btn btn-primary" data-oid="sw1vaot">
+                        <button className="btn btn-primary" data-oid="orda2cg">
                           Preview Free Chapter →
                         </button>
                       </Link>
@@ -796,21 +682,21 @@ export default function PLBBookPage() {
             {/* Chapter Topics Section */}
             <section
               className="section bg-gradient-to-br from-slate-800 to-slate-700 text-white"
-              data-oid="te7rnrr"
+              data-oid="j56s:ce"
             >
-              <div className="container relative z-10" data-oid="0sdp_a0">
+              <div className="container relative z-10" data-oid="j4n7mo0">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="9xlwb82"
+                  data-oid="wznvg.c"
                 >
-                  <div className="fade-in" data-oid="de3._6h">
+                  <div className="fade-in" data-oid="w79zcki">
                     <h2
                       className="text-2xl md:text-3xl font-bold mb-4"
-                      data-oid="e4_82ft"
+                      data-oid="437oek0"
                     >
                       Unlock Your Property's Maximum Potential
                     </h2>
-                    <p className="mb-6" data-oid="pj:q_3d">
+                    <p className="mb-6" data-oid="8l.7-d3">
                       Delve into a comprehensive guide to optimising property
                       value, blending market insights, data analysis, and buyer
                       psychology.
@@ -818,115 +704,115 @@ export default function PLBBookPage() {
                     <Link
                       href="/plb-book/preview"
                       className="inline-block"
-                      data-oid="8c.8dra"
+                      data-oid="clmndmn"
                     >
                       <button
                         className="btn bg-transparent border-2 border-white text-white hover:bg-white/10"
-                        data-oid="ujdabr."
+                        data-oid=":5uh54l"
                       >
                         Preview Free Chapter →
                       </button>
                     </Link>
                   </div>
-                  <div className="fade-in" data-oid="4zpp3rn">
-                    <div className="space-y-4" data-oid="l5bqzhs">
+                  <div className="fade-in" data-oid="nqtqjsn">
+                    <div className="space-y-4" data-oid="oj83rkf">
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="7ww58v7"
+                        data-oid=".5il:_b"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="y2vunwc"
+                          data-oid="agtx_qh"
                         >
                           01
                         </span>
-                        <span className="text-lg" data-oid="8xgl.ec">
+                        <span className="text-lg" data-oid="4.xfxxt">
                           The Most Common Reasons for Selling
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid=".c-i9:e"
+                        data-oid="_l-t_d5"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="qics5qr"
+                          data-oid="brga5oz"
                         >
                           02
                         </span>
-                        <span className="text-lg" data-oid="0._xm3b">
+                        <span className="text-lg" data-oid="u2s7e:0">
                           12 Steps to Selling Your Home
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="-fjvw1s"
+                        data-oid="3_ge_b9"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="dll8mgh"
+                          data-oid="yaotjjy"
                         >
                           03
                         </span>
-                        <span className="text-lg" data-oid="4dvr_5i">
+                        <span className="text-lg" data-oid="cmtguu.">
                           Product Positioning: Transforming the home
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="sfhn6sk"
+                        data-oid="ha.3nrv"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="3g1kmk6"
+                          data-oid="a60f78t"
                         >
                           04
                         </span>
-                        <span className="text-lg" data-oid="7frbyhq">
+                        <span className="text-lg" data-oid="r-xm-16">
                           Marketing in the 21st Century: Real Estate Content
                           Creation
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="60u_lts"
+                        data-oid="ys1p8.b"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="a20a8ja"
+                          data-oid="tra-i_s"
                         >
                           05
                         </span>
-                        <span className="text-lg" data-oid="p_1.0.r">
+                        <span className="text-lg" data-oid="o:i.g.a">
                           Advertising and Distribution of Content: The Often
                           Neglected Part
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="8em1ok4"
+                        data-oid="100:yxg"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="p:qyva5"
+                          data-oid="gsxz7h2"
                         >
                           06
                         </span>
-                        <span className="text-lg" data-oid="n-lr:f8">
+                        <span className="text-lg" data-oid="ns62kic">
                           Viewings: The Art of Showmanship
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="tgrucgs"
+                        data-oid="w_j-pst"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="7phjmrx"
+                          data-oid="7zl0oc0"
                         >
                           07
                         </span>
-                        <span className="text-lg" data-oid="iw3hr5m">
+                        <span className="text-lg" data-oid="uf70byw">
                           Sealing the Deal: How to Price Your Property Correctly
                         </span>
                       </div>
@@ -937,32 +823,32 @@ export default function PLBBookPage() {
             </section>
 
             {/* Author Section */}
-            <section className="section bg-white" data-oid=".z2qr2p">
-              <div className="container relative z-10" data-oid="62_duuw">
+            <section className="section" data-oid="-44txfx">
+              <div className="container relative z-10" data-oid="0novn2b">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="0p0may5"
+                  data-oid="v3od2w6"
                 >
-                  <div className="fade-in" data-oid="tda0l_2">
+                  <div className="fade-in" data-oid="cgibbar">
                     <div
                       className="w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0"
-                      data-oid="_hd3:i3"
+                      data-oid="qmt2uoh"
                     ></div>
                   </div>
-                  <div className="fade-in" data-oid="...ghbs">
-                    <h2 className="text-primary" data-oid="unc49kq">
+                  <div className="fade-in" data-oid="iga12aa">
+                    <h2 className="text-primary" data-oid="_v7-x6j">
                       About the Author
                     </h2>
-                    <p className="feature-text text-xl mb-4" data-oid="h7_ic86">
+                    <p className="feature-text text-xl mb-4" data-oid="pb2u-21">
                       With over 15 years of experience in Singapore's property
                       market
                     </p>
-                    <p data-oid="w1mxq-r">
+                    <p data-oid="h-4ol.z">
                       The author brings unparalleled insights into the local
                       property landscape, having helped hundreds of clients
                       build wealth through strategic property investments.
                     </p>
-                    <p data-oid="v.-j6bi">
+                    <p data-oid="uw31jf6">
                       As the founder of Assembly SG, they have developed a
                       proven system for property investment success that works
                       in any market condition.
@@ -972,115 +858,27 @@ export default function PLBBookPage() {
               </div>
             </section>
 
-            {/* Redesigned FAQ Section */}
-            <section
-              className="section bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
-              data-oid="qgdzsd."
-            >
-              <div className="container relative z-10" data-oid="tyvhpd-">
-                <div className="text-center mb-16" data-oid="o:g-8nd">
-                  <div
-                    className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4"
-                    data-oid="2g1mg7o"
-                  >
-                    <HelpCircle
-                      className="w-8 h-8 text-primary"
-                      data-oid="48ye1jx"
+            {/* FAQ Section */}
+            <section className="section bg-highlight" data-oid="-tiq_b0">
+              <div className="container relative z-10" data-oid="gevs7ob">
+                <h2
+                  className="text-center text-primary mb-12 fade-in"
+                  data-oid="in8c-wk"
+                >
+                  Frequently Asked Questions
+                </h2>
+                <div className="max-w-3xl mx-auto space-y-2" data-oid="qvw.jd6">
+                  {faqItems.map((item, index) => (
+                    <FAQItem
+                      key={index}
+                      question={item.question}
+                      answer={item.answer}
+                      isOpen={activeIndex === index}
+                      onClick={() => toggleFAQ(index)}
+                      className="py-2"
+                      data-oid="q9ums93"
                     />
-                  </div>
-                  <h2
-                    className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in"
-                    data-oid="f5qg4ne"
-                  >
-                    Frequently Asked Questions
-                  </h2>
-                  <p
-                    className="text-lg text-gray-600 max-w-2xl mx-auto"
-                    data-oid="9dl5etz"
-                  >
-                    Everything you need to know about the Property Leverage
-                    Blueprint
-                  </p>
-                </div>
-
-                <div className="max-w-4xl mx-auto" data-oid="xks1-pi">
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                    data-oid="ovniy5r"
-                  >
-                    {faqItems.map((item, index) => (
-                      <div
-                        key={index}
-                        className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300"
-                        data-oid="3zzxbah"
-                      >
-                        <button
-                          onClick={() => toggleFAQ(index)}
-                          className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                          data-oid="66fx5o3"
-                        >
-                          <h3
-                            className="text-lg font-semibold text-gray-900 pr-4"
-                            data-oid="t45fzqn"
-                          >
-                            {item.question}
-                          </h3>
-                          <ChevronDown
-                            className={`w-5 h-5 text-primary transition-transform duration-200 flex-shrink-0 ${
-                              activeIndex === index ? "rotate-180" : ""
-                            }`}
-                            data-oid="tx0-c3w"
-                          />
-                        </button>
-                        <div
-                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                            activeIndex === index
-                              ? "max-h-96 opacity-100"
-                              : "max-h-0 opacity-0"
-                          }`}
-                          data-oid="2zoy7jv"
-                        >
-                          <div className="px-6 pb-5" data-oid="8axn50b">
-                            <div
-                              className="h-px bg-gray-100 mb-4"
-                              data-oid="5poyyz2"
-                            ></div>
-                            <p
-                              className="text-gray-600 leading-relaxed"
-                              data-oid="mj5onub"
-                            >
-                              {item.answer}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Contact Support */}
-                <div className="text-center mt-12" data-oid=".g9j:ri">
-                  <div
-                    className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-md mx-auto"
-                    data-oid="ru3lqvo"
-                  >
-                    <h3
-                      className="text-xl font-semibold text-gray-900 mb-2"
-                      data-oid="t0y0t2w"
-                    >
-                      Still have questions?
-                    </h3>
-                    <p className="text-gray-600 mb-4" data-oid="8291m-_">
-                      Our friendly team is here to help you with any inquiries.
-                    </p>
-                    <a
-                      href="mailto:hello@assembly.sg"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200"
-                      data-oid="3pwnn8_"
-                    >
-                      Contact Support
-                    </a>
-                  </div>
+                  ))}
                 </div>
               </div>
             </section>
