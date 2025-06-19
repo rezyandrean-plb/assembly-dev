@@ -111,7 +111,7 @@ export default function BookPreviewPage() {
               className="p-8 flex flex-col justify-center items-center text-gray-800 relative overflow-hidden"
               style={{
                 background:
-                  "linear-gradient(to bottom right, #fffbeb, #fef3c7, #fde68a)",
+                  "linear-gradient(to bottom right, #fffbeb, #fdfdfd, #d1e1f8)",
               }}
               data-oid="p9_hr01"
             >

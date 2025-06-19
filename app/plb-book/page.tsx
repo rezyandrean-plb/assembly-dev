@@ -244,19 +244,12 @@ export default function PLBBookPage() {
                       className="relative w-64 h-80 bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
                       data-oid="vmbpa3h"
                     >
-                      <div
-                        className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center"
-                        data-oid="4vwnbe5"
-                      >
-                        <div className="text-center p-4" data-oid="78ldznk">
-                          <h3 className="text-primary" data-oid="48b5_-g">
-                            Property Leverage Blueprint
-                          </h3>
-                          <p className="text-sm" data-oid="x3fmk2p">
-                            By Assembly SG
-                          </p>
-                        </div>
-                      </div>
+                      <img
+                        src="/images/PLB Book Front Cover_FA.jpg"
+                        alt="PropertyLimBrothers Book Cover"
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                        data-oid="plb-cover-float"
+                      />
                     </div>
                   </div>
                 </div>
@@ -342,49 +335,28 @@ export default function PLBBookPage() {
                     </p>
                   </div>
 
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-6"
-                    data-oid="pxbvq60"
-                  >
-                    <div className="md:col-span-2" data-oid="usuygic">
-                      <p className="mb-4" data-oid="ku.ucrt">
-                        For the first time ever,{" "}
-                        <strong data-oid="34kjf6f">Melvin Lim</strong> and{" "}
-                        <strong data-oid="z-ld5vo">Adrian Lim</strong>—more
-                        popularly known as PropertyLimBrothers, Singapore's most
-                        successful real estate duo that revolutionalise how
-                        properties are being marketed with video home tours in
-                        Singapore—have assembled an unrivaled playbook on
-                        property marketing, designed to take your home from{" "}
-                        <strong data-oid="_.qbmx5">"listed"</strong> to{" "}
-                        <strong data-oid="4rlfx.q">"sold"</strong>.
-                      </p>
+                  <div className="mb-6" data-oid="pxbvq60">
+                    <p className="mb-4" data-oid="ku.ucrt">
+                      For the first time ever,{" "}
+                      <strong data-oid="34kjf6f">Melvin Lim</strong> and{" "}
+                      <strong data-oid="z-ld5vo">Adrian Lim</strong>—more
+                      popularly known as PropertyLimBrothers, Singapore's most
+                      successful real estate duo that revolutionalise how
+                      properties are being marketed with video home tours in
+                      Singapore—have assembled an unrivaled playbook on property
+                      marketing, designed to take your home from{" "}
+                      <strong data-oid="_.qbmx5">"listed"</strong> to{" "}
+                      <strong data-oid="4rlfx.q">"sold"</strong>.
+                    </p>
 
-                      <p data-oid="3q0t:js">
-                        More than just a guide, this is a blueprint for
-                        uncovering the unique potential of every real estate you
-                        touch and finding the perfect buyer for every home.
-                        Backed by wisdom and 17 years of industry experience,
-                        this book is your key to mastering the Art of Selling
-                        Your Property to its Maximum Potential.
-                      </p>
-                    </div>
-                    <div className="hidden md:block" data-oid="5q-.irc">
-                      <div
-                        className="w-full aspect-square bg-gradient-to-br from-primary/10 to-primary-dark/20 rounded-full flex items-center justify-center"
-                        data-oid="u4u5a0a"
-                      >
-                        <div
-                          className="w-3/4 h-3/4 bg-gradient-to-tr from-primary to-primary-light rounded-full flex items-center justify-center text-white text-5xl font-bold"
-                          data-oid="2wui3ne"
-                        >
-                          17+
-                          <span className="text-sm ml-1" data-oid="cn4py0s">
-                            years
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    <p data-oid="3q0t:js">
+                      More than just a guide, this is a blueprint for uncovering
+                      the unique potential of every real estate you touch and
+                      finding the perfect buyer for every home. Backed by wisdom
+                      and 17 years of industry experience, this book is your key
+                      to mastering the Art of Selling Your Property to its
+                      Maximum Potential.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -461,7 +433,7 @@ export default function PLBBookPage() {
                     data-oid="5vcfxam"
                   >
                     <div
-                      className="relative mx-auto max-w-md"
+                      className="relative mx-auto w-60 h-82"
                       data-oid="w5rajm2"
                     >
                       <div
@@ -471,12 +443,12 @@ export default function PLBBookPage() {
                       <img
                         src="/images/PLB Book Front Cover_FA.jpg"
                         alt="PropertyLimBrothers Book Cover"
-                        className="relative z-10 w-full h-auto rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform rotate-3 hover:rotate-0 transition-all duration-500"
+                        className="relative z-10 w-full h-full object-cover rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform rotate-3 hover:rotate-0 transition-all duration-500"
                         data-oid="ps06acd"
                       />
 
                       <div
-                        className="absolute -bottom-6 -right-6 bg-primary text-white rounded-full w-24 h-24 flex items-center justify-center text-center p-2 shadow-lg transform rotate-12 z-20"
+                        className="absolute -bottom-6 -right-6 bg-white text-primary border-2 border-primary rounded-full w-20 h-20 flex items-center justify-center text-center p-2 shadow-lg transform rotate-12 z-20"
                         data-oid="k8h31eh"
                       >
                         <div data-oid="u_zi2t1">
