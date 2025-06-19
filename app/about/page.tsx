@@ -1,677 +1,777 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-import { ChevronUp } from "lucide-react";
-import "./about.css";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  Users,
+  Target,
+  Lightbulb,
+  Award,
+  BookOpen,
+  Rocket,
+  Heart,
+  Star,
+  ArrowRight,
+  Building,
+  Palette,
+  TrendingUp,
+  CheckCircle,
+} from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
 
-// Section components
-const HeroSection = () => (
-  <section
-    id="hero-section"
-    className="section-container mb-24"
-    data-oid="arjvm-j"
-  >
-    <div
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="8qr:j:8"
-    >
-      <div data-oid="e7ghseb">
-        <h2
-          className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="v0xuj-."
-        >
-          Creating Creators, Empowering Realtors
-        </h2>
-        <p
-          className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="w8wo.tp"
-        >
-          In a world where information is readily available at our fingertips,
-          success is defined by the ability to innovate, adapt, and connect.
-          Assembly is built on the foundation of cultivating the next generation
-          of creators and empowering real estate professionals with the skills
-          and mindset needed to thrive in a dynamic market. We believe in
-          blending creative thinking with practical application to shape the
-          future of the industry.
-        </p>
-      </div>
-      <div
-        className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="7fke2ga"
-      >
-        <img
-          src="/images/about-us-hero.jpg"
-          alt="Real estate professionals collaborating"
-          className="w-full h-full object-cover"
-          loading="eager"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error("Image failed to load:", target.src);
-            target.src =
-              "/placeholder.svg?height=384&width=576&text=Real+Estate+Professionals";
-          }}
-          data-oid="jov79a0"
-        />
-      </div>
-    </div>
-  </section>
-);
-
-const AimSection = () => (
-  <section
-    id="aim-section"
-    className="section-container mb-24"
-    data-oid="hj7kol8"
-  >
-    <div
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="b-mdj7n"
-    >
-      <div
-        className="order-2 lg:order-1 section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="o.h0fm5"
-      >
-        <img
-          src="/images/about-us-aim.jpg"
-          alt="Community of professionals networking"
-          className="w-full h-full object-cover"
-          loading="eager"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error("Image failed to load:", target.src);
-            target.src =
-              "/placeholder.svg?height=384&width=576&text=Community+Networking";
-          }}
-          data-oid="8-5f59p"
-        />
-      </div>
-      <div className="order-1 lg:order-2" data-oid="ta8jnni">
-        <h2
-          className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="ryef57:"
-        >
-          Our Aim
-        </h2>
-        <p
-          className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="0wx41-k"
-        >
-          More than just education, Assembly is dedicated to building a vibrant
-          community of like-minded individuals. We provide a platform where
-          members can gather, share valuable experiences, forge meaningful
-          connections, and leverage each other's diverse skills and expertise.
-          This collaborative environment is designed to foster growth, spark
-          innovation, and create opportunities that go beyond traditional
-          learning.
-        </p>
-      </div>
-    </div>
-  </section>
-);
-
-const StructureSection = () => (
-  <section
-    id="structure-section"
-    className="section-container mb-24"
-    data-oid="2rvt72k"
-  >
-    <div
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="::4tx.c"
-    >
-      <div data-oid="vy.df_e">
-        <h2
-          className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid=".-69uxs"
-        >
-          Our Structure
-        </h2>
-        <p
-          className="section-paragraph text-lg text-gray-700 leading-relaxed mb-6"
-          data-oid="c_iv47e"
-        >
-          Assembly is structured to address the multifaceted needs of the modern
-          professional through specialized schools designed for forward-thinking
-          development:
-        </p>
-        <ul className="space-y-4 text-lg text-gray-700" data-oid="6govp4r">
-          <li className="section-list-item flex items-start" data-oid="ox9b.69">
-            <span
-              className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="nkwu4b-"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                data-oid="kl1j-sw"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                  data-oid="7rv65fo"
-                />
-              </svg>
-            </span>
-            <span data-oid="4oqc_wr">
-              <strong data-oid="octtous">School of Real Estate</strong>{" "}
-              (Launching at a Later Date): Focused on innovative approaches and
-              advanced strategies for property professionals.
-            </span>
-          </li>
-          <li className="section-list-item flex items-start" data-oid="qw2s2-f">
-            <span
-              className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="n2n53t."
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                data-oid="3tjqmqp"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                  data-oid="ot5ef7m"
-                />
-              </svg>
-            </span>
-            <span data-oid="4v-w0d_">
-              <strong data-oid="0erf_8w">School of Creative Media</strong>{" "}
-              (Launching at a Later Date): Cultivating skills in content
-              creation, digital storytelling, and brand building.
-            </span>
-          </li>
-          <li className="section-list-item flex items-start" data-oid="5:7h.i9">
-            <span
-              className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 mr-3 mt-1 flex-shrink-0"
-              data-oid="jae4w6h"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                data-oid="ae80r0z"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                  data-oid="-x_x3m9"
-                />
-              </svg>
-            </span>
-            <span data-oid="xkh2c6g">
-              <strong data-oid="i6g2oju">School of Entrepreneurship</strong>{" "}
-              (Launching at a Later Date): Empowering individuals with the
-              knowledge and tools to build and scale successful ventures.
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div
-        className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="v1j93xg"
-      >
-        <img
-          src="/images/structure-image.jpg"
-          alt="Instructor teaching at a chalkboard"
-          className="w-full h-full object-cover"
-          loading="eager"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error("Image failed to load:", target.src);
-            target.src =
-              "/placeholder.svg?height=384&width=576&text=Educational+Structure";
-          }}
-          data-oid="b4iyrh_"
-        />
-      </div>
-    </div>
-  </section>
-);
-
-const PhilosophySection = () => (
-  <section
-    id="philosophy-section"
-    className="section-container mb-24"
-    data-oid="94.n4cc"
-  >
-    <div
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="4366v2-"
-    >
-      <div
-        className="order-2 lg:order-1 section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="9p6oxuj"
-      >
-        <img
-          src="/images/philosophy-image.jpg"
-          alt="Educational playbooks and materials"
-          className="w-full h-full object-cover"
-          loading="eager"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error("Image failed to load:", target.src);
-            target.src =
-              "/placeholder.svg?height=384&width=576&text=Core+Values";
-          }}
-          data-oid="elh0-ym"
-        />
-      </div>
-      <div className="order-1 lg:order-2" data-oid="gqnxxti">
-        <h2
-          className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="g1dmoki"
-        >
-          Our Philosophy
-        </h2>
-        <p
-          className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="2mgzfso"
-        >
-          At the heart of Assembly are core values that guide our community and
-          curriculum: Innovation, Collaboration, Empowerment, and
-          Future-Readiness. We are committed to providing practical, relevant
-          knowledge and fostering a supportive ecosystem where everyone is
-          equipped to create their own success and positively impact their
-          field.
-        </p>
-      </div>
-    </div>
-  </section>
-);
-
-const ChooseSection = () => (
-  <section
-    id="choose-section"
-    className="section-container mb-24"
-    data-oid="x185d7m"
-  >
-    <div
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      data-oid="fjv5vx6"
-    >
-      <div data-oid="mu5s99d">
-        <h2
-          className="section-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          data-oid="_axghia"
-        >
-          Why Choose Assembly?
-        </h2>
-        <p
-          className="section-paragraph text-lg text-gray-700 leading-relaxed"
-          data-oid="306z6w2"
-        >
-          Assembly offers a unique synthesis of real estate expertise and
-          creative/entrepreneurial skills. We provide not just education, but a
-          transformative community experience focused on practical application
-          and future growth. Join us to gain the edge needed to become a leading
-          creator and empowered professional in your industry.
-        </p>
-      </div>
-      <div
-        className="section-image relative h-96 rounded-xl overflow-hidden shadow-xl"
-        data-oid="eredpqz"
-      >
-        <img
-          src="/images/choose-image.jpg"
-          alt="Student taking notes at a property investment seminar"
-          className="w-full h-full object-cover"
-          loading="eager"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error("Image failed to load:", target.src);
-            target.src =
-              "/placeholder.svg?height=384&width=576&text=Professionals+Celebrating";
-          }}
-          data-oid=":zg1rr1"
-        />
-      </div>
-    </div>
-  </section>
-);
-
-// Scroll to top button component
-const ScrollToTopButton = ({ visible }: { visible: boolean }) => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+// Hero Section with modern design
+const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <button
-      onClick={scrollToTop}
-      aria-label="Scroll to top"
-      className={`scroll-to-top-button ${visible ? "visible" : ""}`}
-      data-oid="d.p86ba"
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50"
+      data-oid="_b28bpu"
     >
-      <ChevronUp size={24} data-oid="lqgrjic" />
-      <span className="sr-only" data-oid="37wpcwb">
-        Scroll to top
-      </span>
-    </button>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5" data-oid="8h69bf0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+          data-oid="ux6r77t"
+        />
+      </div>
+
+      {/* Floating Elements */}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        data-oid="ioq_fo_"
+      >
+        <motion.div
+          className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          data-oid="q_4eawi"
+        />
+
+        <motion.div
+          className="absolute top-40 right-20 w-32 h-32 bg-orange-500/15 rounded-full blur-xl"
+          animate={{
+            y: [0, 30, 0],
+            x: [0, -15, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          data-oid="n4qog2q"
+        />
+
+        <motion.div
+          className="absolute bottom-20 left-1/4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"
+          animate={{
+            y: [0, -25, 0],
+            x: [0, 20, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          data-oid="09e9k6t"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10" data-oid="w8_vt:w">
+        <div className="max-w-6xl mx-auto text-center" data-oid=":88ly8j">
+          <motion.div
+            className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-200"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            data-oid="l28g.bj"
+          >
+            <Star className="w-4 h-4 fill-current" data-oid="bg15s.h" />
+            About Assembly Singapore
+          </motion.div>
+
+          <motion.h1
+            className="text-5xl lg:text-7xl font-bold mb-8 text-gray-900 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            data-oid="7dq1zg2"
+          >
+            Creating Creators,
+            <span
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500"
+              data-oid="u7t.1ji"
+            >
+              Empowering Realtors
+            </span>
+          </motion.h1>
+
+          <motion.p
+            className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            data-oid="7p-l3i0"
+          >
+            We're building Singapore's premier knowledge hub where innovation
+            meets expertise, fostering a community of forward-thinking
+            professionals ready to shape the future of real estate and beyond.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            data-oid="vpu9sti"
+          >
+            <Link href="/courses" data-oid="md.ts97">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                data-oid="pl8wrvf"
+              >
+                Explore Our Courses
+                <ArrowRight
+                  className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                  data-oid="oq97.v_"
+                />
+              </Button>
+            </Link>
+            <Link href="/contact" data-oid="29pdq-9">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                data-oid="7mjgrfc"
+              >
+                Get in Touch
+              </Button>
+            </Link>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            data-oid="ilkyzsb"
+          >
+            <div className="text-center" data-oid="a7o4y__">
+              <div
+                className="text-3xl font-bold text-gray-900 mb-2"
+                data-oid="5ufdg3m"
+              >
+                15,000+
+              </div>
+              <div className="text-gray-600" data-oid="q1ywwm7">
+                Students Empowered
+              </div>
+            </div>
+            <div className="text-center" data-oid="et1nx-j">
+              <div
+                className="text-3xl font-bold text-gray-900 mb-2"
+                data-oid="qlasdeh"
+              >
+                50+
+              </div>
+              <div className="text-gray-600" data-oid="7qq:jkb">
+                Expert Courses
+              </div>
+            </div>
+            <div className="text-center" data-oid="p_6ye9y">
+              <div
+                className="text-3xl font-bold text-gray-900 mb-2"
+                data-oid="4acfpx_"
+              >
+                4.9/5
+              </div>
+              <div className="text-gray-600" data-oid="roczvu.">
+                Student Rating
+              </div>
+            </div>
+            <div className="text-center" data-oid="7neeaup">
+              <div
+                className="text-3xl font-bold text-gray-900 mb-2"
+                data-oid="brue_3l"
+              >
+                98%
+              </div>
+              <div className="text-gray-600" data-oid="oe:u:u8">
+                Success Rate
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Mission & Vision Section
+const MissionVisionSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+  return (
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="2a595-k">
+      <div className="container mx-auto px-4" data-oid="h2w37i2">
+        <div className="max-w-6xl mx-auto" data-oid="jirpn0s">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
+            data-oid="sajvgpd"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              data-oid="85y8dkh"
+            >
+              Our Mission & Vision
+            </h2>
+            <p
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              data-oid="ez-:w9z"
+            >
+              Driving transformation through education, innovation, and
+              community
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12" data-oid="rx-hu2q">
+            <motion.div
+              className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              data-oid="3e-qdb0"
+            >
+              <div
+                className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                data-oid="sh2j8t5"
+              >
+                <Target className="w-8 h-8 text-white" data-oid="ub3e5is" />
+              </div>
+              <h3
+                className="text-2xl font-bold text-gray-900 mb-4"
+                data-oid="8d0bv30"
+              >
+                Our Mission
+              </h3>
+              <p className="text-gray-700 leading-relaxed" data-oid="5in2939">
+                To democratize access to high-quality real estate education and
+                create a thriving ecosystem where professionals can learn, grow,
+                and succeed together. We believe in empowering individuals with
+                practical knowledge and innovative strategies that drive real
+                results.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              data-oid="4l_fl4a"
+            >
+              <div
+                className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mb-6"
+                data-oid="yb9bv2h"
+              >
+                <Lightbulb className="w-8 h-8 text-white" data-oid="-gm.k25" />
+              </div>
+              <h3
+                className="text-2xl font-bold text-gray-900 mb-4"
+                data-oid="3w79c7b"
+              >
+                Our Vision
+              </h3>
+              <p className="text-gray-700 leading-relaxed" data-oid="w0t1cu9">
+                To be Singapore's leading platform for professional development,
+                fostering a new generation of creative, innovative, and
+                successful real estate professionals who shape the future of the
+                industry through collaboration and continuous learning.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Core Values Section
+const CoreValuesSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+  const values = [
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description:
+        "Embracing cutting-edge approaches and creative solutions to traditional challenges.",
+      color: "from-yellow-500 to-orange-500",
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description:
+        "Building meaningful connections and fostering a supportive community ecosystem.",
+      color: "from-blue-500 to-purple-500",
+    },
+    {
+      icon: Rocket,
+      title: "Empowerment",
+      description:
+        "Providing tools, knowledge, and confidence to achieve professional excellence.",
+      color: "from-green-500 to-teal-500",
+    },
+    {
+      icon: TrendingUp,
+      title: "Future-Ready",
+      description:
+        "Preparing professionals for tomorrow's challenges with today's insights.",
+      color: "from-purple-500 to-pink-500",
+    },
+  ];
+
+  return (
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="uj2phxu">
+      <div className="container mx-auto px-4" data-oid="57kd1_3">
+        <div className="max-w-6xl mx-auto" data-oid="rfag:1s">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
+            data-oid="_sr1cry"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              data-oid="ta.foy."
+            >
+              Our Core Values
+            </h2>
+            <p
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              data-oid="ceshbrr"
+            >
+              The principles that guide everything we do and shape our community
+            </p>
+          </motion.div>
+
+          <div
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            data-oid="76iipt."
+          >
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}
+                data-oid="bv7k6mt"
+              >
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  data-oid="9fe39.s"
+                >
+                  <value.icon
+                    className="w-8 h-8 text-white"
+                    data-oid="0x9wcpr"
+                  />
+                </div>
+                <h3
+                  className="text-xl font-bold text-gray-900 mb-4"
+                  data-oid="zo3wm:w"
+                >
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed" data-oid="ra5b1_:">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Schools Section
+const SchoolsSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+  const schools = [
+    {
+      icon: Building,
+      title: "School of Real Estate",
+      description:
+        "Advanced strategies and innovative approaches for property professionals, covering investment analysis, market trends, and portfolio optimization.",
+      status: "Coming Soon",
+      color: "from-blue-600 to-blue-700",
+    },
+    {
+      icon: Palette,
+      title: "School of Creative Media",
+      description:
+        "Master content creation, digital storytelling, and brand building to stand out in today's competitive marketplace.",
+      status: "Coming Soon",
+      color: "from-purple-600 to-purple-700",
+    },
+    {
+      icon: TrendingUp,
+      title: "School of Entrepreneurship",
+      description:
+        "Build and scale successful ventures with proven frameworks, business strategies, and entrepreneurial mindset development.",
+      status: "Coming Soon",
+      color: "from-green-600 to-green-700",
+    },
+  ];
+
+  return (
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="tcgkhhq">
+      <div className="container mx-auto px-4" data-oid="zp9n.1l">
+        <div className="max-w-6xl mx-auto" data-oid="cbd0t:7">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
+            data-oid="6tdzm2t"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              data-oid="bmyv0zg"
+            >
+              Our Specialized Schools
+            </h2>
+            <p
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              data-oid="gxo7m8s"
+            >
+              Comprehensive education programs designed for the modern
+              professional
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8" data-oid=":0-85py">
+            {schools.map((school, index) => (
+              <motion.div
+                key={school.title}
+                className="relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}
+                data-oid="z7ziou7"
+              >
+                <div className="absolute top-4 right-4" data-oid="-7ds:ot">
+                  <span
+                    className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium"
+                    data-oid="3wnlu2:"
+                  >
+                    {school.status}
+                  </span>
+                </div>
+
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${school.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  data-oid="fbwr__k"
+                >
+                  <school.icon
+                    className="w-8 h-8 text-white"
+                    data-oid="hgw57ju"
+                  />
+                </div>
+
+                <h3
+                  className="text-2xl font-bold text-gray-900 mb-4"
+                  data-oid="cidlw1x"
+                >
+                  {school.title}
+                </h3>
+                <p
+                  className="text-gray-600 leading-relaxed mb-6"
+                  data-oid="ndr3ghr"
+                >
+                  {school.description}
+                </p>
+
+                <div
+                  className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors"
+                  data-oid="hj09aoi"
+                >
+                  Learn More
+                  <ArrowRight
+                    className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
+                    data-oid="c6hopz9"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Why Choose Assembly Section
+const WhyChooseSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+  const benefits = [
+    "Expert-led courses from industry professionals",
+    "Practical, real-world applications and case studies",
+    "Vibrant community of like-minded professionals",
+    "Cutting-edge curriculum updated with market trends",
+    "Flexible learning options to fit your schedule",
+    "Ongoing support and mentorship opportunities",
+  ];
+
+  return (
+    <section
+      ref={sectionRef}
+      className="py-24 bg-gradient-to-br from-blue-50 via-white to-orange-50"
+      data-oid=".6qnn.5"
+    >
+      <div className="container mx-auto px-4" data-oid="-.kyomm">
+        <div className="max-w-6xl mx-auto" data-oid="gw9iwmi">
+          <div
+            className="grid lg:grid-cols-2 gap-16 items-center"
+            data-oid="x6umg2h"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
+              transition={{ duration: 0.8 }}
+              data-oid="y8watwl"
+            >
+              <h2
+                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                data-oid="25fz-da"
+              >
+                Why Choose Assembly?
+              </h2>
+              <p
+                className="text-xl text-gray-600 mb-8 leading-relaxed"
+                data-oid="ar2nic5"
+              >
+                We're more than just an education platform. We're a
+                transformative community experience that combines cutting-edge
+                knowledge with practical application and meaningful connections.
+              </p>
+
+              <div className="space-y-4 mb-8" data-oid="c3nag4m">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start gap-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{
+                      opacity: isInView ? 1 : 0,
+                      x: isInView ? 0 : -20,
+                    }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    data-oid="lp_0rk:"
+                  >
+                    <CheckCircle
+                      className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5"
+                      data-oid="4k81ndf"
+                    />
+                    <span className="text-gray-700" data-oid="o45r4m8">
+                      {benefit}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Link href="/courses" data-oid="qrym7ev">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  data-oid="tol_cwu"
+                >
+                  Start Your Journey
+                  <ArrowRight
+                    className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                    data-oid="ge5c.s7"
+                  />
+                </Button>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              data-oid="nz3ap6r"
+            >
+              <div className="relative" data-oid="9ali3ll">
+                {/* Main Image Placeholder */}
+                <div
+                  className="bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl p-8 shadow-2xl"
+                  data-oid="a-nzu1-"
+                >
+                  <div
+                    className="bg-white rounded-xl p-6 mb-6"
+                    data-oid="g6:_hic"
+                  >
+                    <div
+                      className="flex items-center gap-4 mb-4"
+                      data-oid="oofp63."
+                    >
+                      <div
+                        className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center"
+                        data-oid="g.5cjla"
+                      >
+                        <BookOpen
+                          className="w-6 h-6 text-white"
+                          data-oid="1cok1mw"
+                        />
+                      </div>
+                      <div data-oid="es0b::w">
+                        <h4
+                          className="font-semibold text-gray-900"
+                          data-oid=".te:z8y"
+                        >
+                          Success Stories
+                        </h4>
+                        <p className="text-gray-500 text-sm" data-oid="8v6tjx:">
+                          Real results from our community
+                        </p>
+                      </div>
+                    </div>
+                    <div className="space-y-3" data-oid="cidf-c4">
+                      <div
+                        className="flex justify-between items-center"
+                        data-oid="4pl46oj"
+                      >
+                        <span className="text-gray-600" data-oid="q.k4679">
+                          Portfolio Growth
+                        </span>
+                        <span
+                          className="font-semibold text-green-600"
+                          data-oid="8_ub.cb"
+                        >
+                          +127%
+                        </span>
+                      </div>
+                      <div
+                        className="w-full bg-gray-200 rounded-full h-2"
+                        data-oid=".meiank"
+                      >
+                        <motion.div
+                          className="bg-green-500 h-2 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: isInView ? "85%" : 0 }}
+                          transition={{ duration: 1.5, delay: 0.5 }}
+                          data-oid="vx964um"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4" data-oid="x38n3_0">
+                    <div
+                      className="bg-white rounded-xl p-4 text-center"
+                      data-oid="mf2nqdm"
+                    >
+                      <div
+                        className="text-2xl font-bold text-gray-900"
+                        data-oid="vgzznm2"
+                      >
+                        15K+
+                      </div>
+                      <div className="text-gray-600 text-sm" data-oid="cdb75r6">
+                        Students
+                      </div>
+                    </div>
+                    <div
+                      className="bg-white rounded-xl p-4 text-center"
+                      data-oid="xh-kxrm"
+                    >
+                      <div
+                        className="text-2xl font-bold text-gray-900"
+                        data-oid="epbutsx"
+                      >
+                        4.9★
+                      </div>
+                      <div className="text-gray-600 text-sm" data-oid="8fw1gnq">
+                        Rating
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <motion.div
+                  className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-xl shadow-lg"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  data-oid="5735fvu"
+                >
+                  <Award className="w-6 h-6" data-oid="zj5zv3e" />
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-4 -left-4 bg-blue-500 text-white p-4 rounded-xl shadow-lg"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  data-oid="sa4ua9-"
+                >
+                  <Heart className="w-6 h-6" data-oid="vk3ywn-" />
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 // Main About Page component
 export default function AboutPage() {
-  // Main container ref to track when sections come into view
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [scrollY, setScrollY] = useState(0);
-  const [scrollSpeed, setScrollSpeed] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [documentHeight, setDocumentHeight] = useState(0);
-  const lastScrollY = useRef(0);
-  const lastScrollTime = useRef(Date.now());
-  const sectionsRef = useRef<Map<string, HTMLElement>>(new Map());
-  const [isInitialized, setIsInitialized] = useState(false);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
-  const [isAtBottom, setIsAtBottom] = useState(false);
-
-  // Function to check if user has scrolled to bottom
-  const checkIfAtBottom = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const bottomThreshold = document.documentElement.scrollHeight - 100; // 100px from bottom
-    return scrollPosition >= bottomThreshold;
-  };
-
-  // Function to calculate section visibility based on position
-  const getSectionVisibility = (element: HTMLElement): number => {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const isLastSection = element.id === "choose-section";
-
-    // If we're at the bottom of the page and this is the last section, always show it
-    if (isLastSection && isAtBottom) {
-      return 1;
-    }
-
-    // Special case for hero section when at the top of the page
-    if (element.id === "hero-section" && window.scrollY < 100) {
-      return 1; // Always show hero section when at the top
-    }
-
-    // Calculate visibility thresholds
-    // These values control when sections start to appear and disappear
-    const appearThreshold = windowHeight * 0.9; // When section starts to appear (90% down viewport)
-    const fullVisibleThreshold = windowHeight * 0.5; // When section is fully visible (50% down viewport)
-    const startFadingThreshold = windowHeight * 0.2; // When section starts to fade (20% down viewport)
-    const disappearThreshold = -rect.height * 0.7; // When section is completely gone (70% of its height above viewport)
-
-    // Calculate visibility based on section position
-    if (rect.top >= appearThreshold) {
-      // Section is below the viewport or just starting to enter
-      // Map position from [appearThreshold, windowHeight] to [0, 0.3]
-      return Math.max(
-        0,
-        Math.min(
-          0.3,
-          1 - (rect.top - appearThreshold) / (windowHeight - appearThreshold),
-        ),
-      );
-    } else if (rect.top >= fullVisibleThreshold) {
-      // Section is entering the viewport
-      // Map position from [fullVisibleThreshold, appearThreshold] to [0.3, 1]
-      return (
-        0.3 +
-        0.7 *
-          (1 -
-            (rect.top - fullVisibleThreshold) /
-              (appearThreshold - fullVisibleThreshold))
-      );
-    } else if (rect.top >= startFadingThreshold) {
-      // Section is in the prime visibility zone
-      return 1;
-    } else if (rect.top >= disappearThreshold) {
-      // Section is leaving the viewport
-      // Map position from [disappearThreshold, startFadingThreshold] to [0, 1]
-      return Math.max(
-        0,
-        (rect.top - disappearThreshold) /
-          (startFadingThreshold - disappearThreshold),
-      );
-    } else {
-      // Section is above the viewport
-      return 0;
-    }
-  };
-
-  // Function to animate sections based on scroll position
-  const animateSections = () => {
-    // Check if we're at the bottom of the page
-    const atBottom = checkIfAtBottom();
-    setIsAtBottom(atBottom);
-
-    // Get all sections and their visibility values
-    const sectionVisibility = new Map<string, number>();
-    sectionsRef.current.forEach((section, id) => {
-      sectionVisibility.set(id, getSectionVisibility(section));
-    });
-
-    // Apply animations based on visibility
-    sectionsRef.current.forEach((section, id) => {
-      const visibility = sectionVisibility.get(id) || 0;
-      const isLastSection = id === "choose-section";
-
-      // If at bottom and this is the last section, force full visibility
-      const finalVisibility = isLastSection && atBottom ? 1 : visibility;
-
-      // Apply main section visibility
-      section.style.opacity = `${finalVisibility}`;
-      section.style.transform = `translateY(${Math.max(0, 30 - finalVisibility * 30)}px)`;
-
-      // Animate child elements with slight delay
-      const heading = section.querySelector(".section-heading") as HTMLElement;
-      const paragraphs = section.querySelectorAll(".section-paragraph");
-      const image = section.querySelector(".section-image") as HTMLElement;
-      const listItems = section.querySelectorAll(".section-list-item");
-
-      // Only animate children if section has significant visibility
-      const childVisibility = Math.max(0, (finalVisibility - 0.2) * 1.25); // Remap 0.2-1.0 to 0-1
-
-      // If at bottom and this is the last section, force full visibility for all children
-      const finalChildVisibility =
-        isLastSection && atBottom ? 1 : childVisibility;
-
-      if (heading) {
-        heading.style.opacity = `${finalChildVisibility}`;
-        heading.style.transform = `scale(${0.95 + finalChildVisibility * 0.05})`;
-
-        // Special case for hero section
-        if (id === "hero-section" && window.scrollY < 100) {
-          heading.style.opacity = "1";
-          heading.style.transform = "scale(1)";
-        }
-      }
-
-      // REMOVED: Paragraph animations are now removed
-      // Make paragraphs always fully visible
-      paragraphs.forEach((p) => {
-        const el = p as HTMLElement;
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
-      });
-
-      if (image) {
-        const imageVisibility =
-          isLastSection && atBottom
-            ? 1
-            : Math.max(0, (childVisibility - 0.05) * 1.05); // Slight delay
-        image.style.opacity = `${imageVisibility}`;
-        image.style.transform = `scale(${0.9 + imageVisibility * 0.1})`;
-
-        // Special case for hero section
-        if (id === "hero-section" && window.scrollY < 100) {
-          image.style.opacity = "1";
-          image.style.transform = "scale(1)";
-        }
-      }
-
-      listItems.forEach((item, index) => {
-        const el = item as HTMLElement;
-        const delay = 0.1 * index; // Staggered delay based on index
-        const listItemVisibility =
-          isLastSection && atBottom
-            ? 1
-            : Math.max(0, (childVisibility - delay) * 1.0); // Staggered delay
-        el.style.opacity = `${listItemVisibility}`;
-        el.style.transform = `translateX(${Math.max(0, 20 - listItemVisibility * 20)}px)`;
-
-        // Special case for hero section
-        if (
-          id === "hero-section" &&
-          window.scrollY < 100 &&
-          section.contains(el)
-        ) {
-          el.style.opacity = "1";
-          el.style.transform = "translateX(0)";
-        }
-      });
-    });
-  };
-
-  // Initialize animations on first render
-  useEffect(() => {
-    if (!isInitialized && containerRef.current) {
-      // Store references to all sections
-      const sections = containerRef.current.querySelectorAll("section");
-      sections.forEach((section) => {
-        sectionsRef.current.set(section.id, section as HTMLElement);
-      });
-
-      // Force initial animation for hero section
-      const heroSection = document.getElementById("hero-section");
-      if (heroSection) {
-        heroSection.style.opacity = "1";
-        heroSection.style.transform = "translateY(0)";
-
-        const heading = heroSection.querySelector(
-          ".section-heading",
-        ) as HTMLElement;
-        const paragraphs = heroSection.querySelectorAll(".section-paragraph");
-        const image = heroSection.querySelector(
-          ".section-image",
-        ) as HTMLElement;
-
-        if (heading) {
-          heading.style.opacity = "1";
-          heading.style.transform = "scale(1)";
-        }
-
-        // Make paragraphs always fully visible
-        paragraphs.forEach((p) => {
-          const el = p as HTMLElement;
-          el.style.opacity = "1";
-          el.style.transform = "translateY(0)";
-        });
-
-        if (image) {
-          image.style.opacity = "1";
-          image.style.transform = "scale(1)";
-        }
-      }
-
-      setIsInitialized(true);
-    }
-  }, [isInitialized]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentTime = Date.now();
-      const timeDelta = currentTime - lastScrollTime.current;
-
-      if (timeDelta > 0) {
-        // Calculate scroll speed (pixels per millisecond)
-        const currentScrollY = window.scrollY;
-        const scrollDelta = Math.abs(currentScrollY - lastScrollY.current);
-        const speed = scrollDelta / timeDelta;
-
-        setScrollY(currentScrollY);
-        setScrollSpeed(speed * 100); // Scale for better usability
-
-        // Update scroll to top button visibility
-        setShowScrollToTop(currentScrollY > 300);
-
-        // Check if at bottom
-        setIsAtBottom(checkIfAtBottom());
-
-        lastScrollY.current = currentScrollY;
-        lastScrollTime.current = currentTime;
-
-        // Animate sections based on scroll position
-        animateSections();
-      }
-    };
-
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-      setDocumentHeight(document.documentElement.scrollHeight);
-    };
-
-    // Set initial values
-    handleResize();
-
-    // Add event listeners
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    // Add a small timeout to reset scroll speed when scrolling stops
-    const scrollTimeout = setInterval(() => {
-      if (Date.now() - lastScrollTime.current > 100) {
-        setScrollSpeed(0);
-      }
-    }, 100);
-
-    // Store references to all sections
-    if (containerRef.current) {
-      const sections = containerRef.current.querySelectorAll("section");
-      sections.forEach((section) => {
-        sectionsRef.current.set(section.id, section as HTMLElement);
-      });
-
-      // Initial animation
-      animateSections();
-    }
-
-    // Clean up
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-      clearInterval(scrollTimeout);
-    };
-  }, []);
-
   return (
     <>
-      <Navbar data-oid="pm1__ak" />
-      <div ref={containerRef} className="bg-white pt-24" data-oid="9ouy_4:">
-        <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-          data-oid="wvtc:1e"
-        >
-          <HeroSection data-oid="erk4fdx" />
-          <AimSection data-oid="cf:csl7" />
-          <StructureSection data-oid="x8_llos" />
-          <PhilosophySection data-oid="8ydyxlt" />
-          <ChooseSection data-oid="svdz7s4" />
-        </div>
-        <ScrollToTopButton visible={showScrollToTop} data-oid="91gte.v" />
+      <Navbar data-oid="7c4f_.e" />
+      <div className="bg-white" data-oid="e5bc8p1">
+        <HeroSection data-oid="o.-jgpd" />
+        <MissionVisionSection data-oid="spze6v5" />
+        <CoreValuesSection data-oid="nckl3d1" />
+        <SchoolsSection data-oid="i9iq7x3" />
+        <WhyChooseSection data-oid="2m1rld2" />
       </div>
     </>
   );
