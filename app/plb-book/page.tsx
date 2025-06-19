@@ -469,161 +469,179 @@ export default function PLBBookPage() {
                     data-oid="6uw5118"
                   >
                     <div
-                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
                       data-oid="3hpk._t"
                     >
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid="osf5.k."
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="hgavi6c"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="4vwm9z4"
                           >
                             01
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="ier-do7"
                           >
                             Seller Mindset
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="953466k">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid="953466k"
+                        >
                           Master the psychology of successful property sellers
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid="w4qu29z"
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="4.14sdz"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="qb.qgxg"
                           >
                             02
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="jwrc.8p"
                           >
                             Market Patterns
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="2af0f1k">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid="2af0f1k"
+                        >
                           Understand the Singapore Buy and Sell Pattern
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid="b8p581e"
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="8qn7ssf"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="im_lt2s"
                           >
                             03
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="m85r-48"
                           >
                             Buyer Connection
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="x1d:bpt">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid="x1d:bpt"
+                        >
                           Build empathy with your eventual buyer
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid="x0d939:"
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="k.warpk"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="q:.3y26"
                           >
                             04
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="ls9t6ul"
                           >
                             Home Preparation
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="7cib6ij">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid="7cib6ij"
+                        >
                           Prepare and dress your house for maximum appeal
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid=".anmrmb"
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="f6ssmdj"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="2exh7:3"
                           >
                             05
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="m5sn3:-"
                           >
                             Social Media
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid="94kcj:h">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid="94kcj:h"
+                        >
                           Leverage the power of digital marketing
                         </p>
                       </div>
 
                       <div
-                        className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                         data-oid="4k-ub-t"
                       >
                         <div
-                          className="flex items-center mb-3"
+                          className="flex items-center mb-2"
                           data-oid="chtj.ib"
                         >
                           <div
-                            className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3 group-hover:scale-110 transition-transform"
+                            className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-2 text-sm group-hover:scale-110 transition-transform"
                             data-oid="qkb4on4"
                           >
                             06
                           </div>
                           <h3
-                            className="text-primary text-lg font-semibold"
+                            className="text-primary text-base font-semibold"
                             data-oid="4us8weh"
                           >
                             Pricing Strategy
                           </h3>
                         </div>
-                        <p className="text-gray-600 pl-14" data-oid=".v97y-r">
+                        <p
+                          className="text-gray-600 pl-10 text-sm"
+                          data-oid=".v97y-r"
+                        >
                           Set the right price with financial calculations
                         </p>
                       </div>
