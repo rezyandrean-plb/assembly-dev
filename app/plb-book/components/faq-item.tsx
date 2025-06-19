@@ -36,7 +36,7 @@ export function FAQItem({
       <button
         className={cn(
           "w-full p-6 flex items-center gap-4 focus:outline-none transition-all duration-300 text-left group flex-1 min-h-24",
-          isOpen ? "bg-primary/5 items-start" : "hover:bg-gray-50",
+          isOpen ? "bg-primary/5" : "hover:bg-gray-50",
         )}
         onClick={onClick}
         aria-expanded={isOpen}
