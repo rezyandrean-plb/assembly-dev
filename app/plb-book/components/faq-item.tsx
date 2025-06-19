@@ -28,14 +28,14 @@ export function FAQItem({
   return (
     <div
       className={cn(
-        "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md h-24 flex flex-col",
-        isOpen && "shadow-lg border-primary/20 h-auto",
+        "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md",
+        isOpen && "shadow-lg border-primary/20",
       )}
       data-oid="bj0ufbw"
     >
       <button
         className={cn(
-          "w-full p-6 flex items-center gap-4 focus:outline-none transition-all duration-300 text-left group flex-1 min-h-24",
+          "w-full p-6 flex items-center gap-4 focus:outline-none transition-all duration-300 text-left group h-24",
           isOpen ? "bg-primary/5" : "hover:bg-gray-50",
         )}
         onClick={onClick}
@@ -56,7 +56,7 @@ export function FAQItem({
         </div>
 
         {/* Question text */}
-        <div className="flex-grow flex items-center" data-oid="3prz:b-">
+        <div className="flex-grow" data-oid="3prz:b-">
           <h3
             className={cn(
               "text-lg font-semibold transition-colors duration-300",
