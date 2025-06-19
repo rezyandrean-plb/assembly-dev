@@ -226,122 +226,259 @@ const FounderStorySection = () => {
   );
 };
 
-// Behind the Scenes Section
-const BehindScenesSection = () => {
+// Our Purpose Section
+const OurPurposeSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
-  const behindScenes = [
+  const stats = [
     {
-      icon: Coffee,
-      title: "Early Morning Brainstorms",
-      description:
-        "Our team starts each day at 7 AM, discussing market trends and how to better serve our students.",
-      image: "Team meeting",
+      icon: BookOpen,
+      number: "xxx",
+      label: "Webinars Done",
     },
     {
-      icon: Mic,
-      title: "Recording Sessions",
-      description:
-        "Hundreds of hours go into creating each course, ensuring every detail is perfect for our learners.",
-      image: "Recording studio",
+      icon: Award,
+      number: "xxx",
+      label: "Awards",
     },
     {
       icon: Heart,
-      title: "Student Success Calls",
-      description:
-        "Nothing beats the joy of hearing about our students' property investment wins and life changes.",
-      image: "Success celebration",
+      number: "xxx",
+      label: "Likes",
     },
     {
-      icon: Building2,
-      title: "Property Site Visits",
-      description:
-        "Our instructors regularly visit properties to bring real-world insights into our courses.",
-      image: "Property visit",
+      icon: Users,
+      number: "xxx",
+      label: "Attendees",
     },
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid=":xzy8fy">
-      <div className="container mx-auto px-4" data-oid="d38g8xn">
-        <div className="max-w-6xl mx-auto" data-oid="22acfxw">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="0tcm_9p">
+      <div className="container mx-auto px-4" data-oid="85lgsyr">
+        <div className="max-w-7xl mx-auto" data-oid="7:mhpe8">
+          {/* Section Header */}
           <motion.div
-            className="text-center mb-16"
+            className="mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid=":hh4s84"
+            data-oid="fwu5csd"
           >
-            <h2
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-              data-oid="0jeeoks"
-            >
-              Behind the Scenes at Assembly
-            </h2>
-            <p
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
-              data-oid="..4z.vi"
-            >
-              Ever wondered what goes on behind the curtain? Here's a glimpse
-              into our daily life and the passion that drives everything we do.
-            </p>
+            <div className="flex items-center gap-4 mb-6" data-oid="y4fnub3">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-gray-900"
+                data-oid="q1nkip0"
+              >
+                Our Purpose
+              </h2>
+              <div className="flex gap-1" data-oid="eqyffv1">
+                <div
+                  className="w-8 h-1 bg-blue-600 rounded"
+                  data-oid="nfihghw"
+                ></div>
+                <div
+                  className="w-8 h-1 bg-orange-500 rounded"
+                  data-oid="ivf1q1s"
+                ></div>
+                <div
+                  className="w-8 h-1 bg-green-500 rounded"
+                  data-oid="w.xk7hf"
+                ></div>
+              </div>
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8" data-oid="2o_gcem">
-            {behindScenes.map((item, index) => (
-              <motion.div
-                key={item.title}
-                className="group"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                data-oid="0gfq0l3"
-              >
+          {/* Main Content Grid */}
+          <div
+            className="grid lg:grid-cols-3 gap-12 items-center"
+            data-oid="l_ns-0l"
+          >
+            {/* Left Image */}
+            <motion.div
+              className="lg:col-span-1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              data-oid="inidzmo"
+            >
+              <div className="relative" data-oid="yta1h9a">
                 <div
-                  className="bg-gray-50 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300"
-                  data-oid="p72-2il"
+                  className="aspect-[4/5] bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl overflow-hidden shadow-xl"
+                  data-oid="imslhox"
                 >
-                  <div className="flex items-start gap-6" data-oid="o2-17mv">
+                  <Image
+                    src="/images/NLC24-43.jpg"
+                    alt="Assembly Workshop"
+                    width={500}
+                    height={625}
+                    className="w-full h-full object-cover"
+                    data-oid="2oczphr"
+                  />
+                </div>
+
+                {/* Floating Badge */}
+                <motion.div
+                  className="absolute -top-4 -right-4 bg-white px-4 py-2 rounded-full shadow-lg border-2 border-blue-100"
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  data-oid="sst1hav"
+                >
+                  <div className="flex items-center gap-2" data-oid="hdcn.-w">
                     <div
-                      className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
-                      data-oid="bkfd-gg"
+                      className="w-3 h-3 bg-blue-600 rounded-full"
+                      data-oid="kjkk_o1"
+                    ></div>
+                    <span
+                      className="text-sm font-semibold text-gray-900"
+                      data-oid="7ikjjv4"
                     >
-                      <item.icon
-                        className="w-8 h-8 text-blue-600"
-                        data-oid="qu75:w:"
+                      ASSEMBLY
+                    </span>
+                  </div>
+                  <p
+                    className="text-xs text-gray-600 text-center"
+                    data-oid="jz2zu65"
+                  >
+                    BY PROPERTYLIMBROTHERS
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Center Content */}
+            <motion.div
+              className="lg:col-span-1 space-y-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              data-oid="pt4ycya"
+            >
+              <div
+                className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 shadow-lg"
+                data-oid="fsnii2a"
+              >
+                <p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  data-oid="qpdgo7x"
+                >
+                  We go beyond education. Our aim is to build a thriving
+                  community of like-minded professionals—people who aren't just
+                  here to learn, but to connect and grow together. Through
+                  mutual support and shared experience, we create a network
+                  where knowledge turns into action, and potential turns into
+                  progress.
+                </p>
+              </div>
+
+              {/* Mission Statement */}
+              <div
+                className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600"
+                data-oid="3ot5cfg"
+              >
+                <h3
+                  className="font-bold text-gray-900 mb-2 flex items-center gap-2"
+                  data-oid="7d:-hlq"
+                >
+                  <Target
+                    className="w-5 h-5 text-blue-600"
+                    data-oid="zjxeo9k"
+                  />
+                  Our Mission
+                </h3>
+                <p className="text-gray-700" data-oid="-kp2-xk">
+                  We don’t just want to educate, we want to build up a community
+                  where like-minded people can gather, share experiences, and
+                  leverage on each other’s experiences and expertise. We don’t
+                  just want to educate, we want to build up a community where
+                  like-minded people can gather, share experiences, and leverage
+                  on each other’s experiences and expertise.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              className="lg:col-span-1"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              data-oid="utku89l"
+            >
+              <div className="relative" data-oid=".m3wc0h">
+                <div
+                  className="aspect-[4/5] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl"
+                  data-oid="9lxpnv:"
+                >
+                  <Image
+                    src="/images/NLC24-137.jpg"
+                    alt="Speaking Engagement"
+                    width={500}
+                    height={625}
+                    className="w-full h-full object-cover"
+                    data-oid="ii9yfl5"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Stats Section */}
+          <motion.div
+            className="mt-20"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            data-oid="g3n6pdm"
+          >
+            <div
+              className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 rounded-3xl p-12 text-white"
+              data-oid="ryxfuql"
+            >
+              <div className="grid md:grid-cols-4 gap-8" data-oid="td9t-03">
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    className="text-center group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{
+                      opacity: isInView ? 1 : 0,
+                      y: isInView ? 0 : 20,
+                    }}
+                    transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                    data-oid="-dr_qii"
+                  >
+                    <div
+                      className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                      data-oid="8g1jzc8"
+                    >
+                      <stat.icon
+                        className="w-8 h-8 text-white"
+                        data-oid="24dsa7:"
                       />
                     </div>
-                    <div className="flex-1" data-oid="xlmmft7">
-                      <h3
-                        className="text-xl font-bold text-gray-900 mb-3"
-                        data-oid="awe6209"
-                      >
-                        {item.title}
-                      </h3>
-                      <p
-                        className="text-gray-600 leading-relaxed mb-4"
-                        data-oid="dmgws1r"
-                      >
-                        {item.description}
-                      </p>
-                      <div
-                        className="w-full h-32 bg-gradient-to-br from-blue-100 to-orange-100 rounded-lg flex items-center justify-center"
-                        data-oid="mhnytyl"
-                      >
-                        <span
-                          className="text-gray-500 text-sm"
-                          data-oid="h069ya-"
-                        >
-                          {item.image}
-                        </span>
-                      </div>
+                    <div className="text-3xl font-bold mb-2" data-oid="g5kz7-5">
+                      {stat.number}
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    <div
+                      className="text-lg font-semibold mb-1"
+                      data-oid=".kpbt69"
+                    >
+                      {stat.label}
+                    </div>
+                    <div className="text-sm text-gray-300" data-oid="o-4xkxf">
+                      {stat.description}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -356,32 +493,24 @@ const ValuesInActionSection = () => {
   const values = [
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description:
-        "We constantly evolve our teaching methods and course content to stay ahead of market changes.",
-      example: "Recently launched AR property tours for remote learning",
+      title: "Excellence",
+      description: "Commitment to high-quality education and training.",
     },
     {
       icon: Handshake,
-      title: "Integrity",
-      description:
-        "We only teach strategies we've personally tested and proven in real market conditions.",
-      example:
-        "Our instructors invest alongside students using the same strategies",
+      title: "Innovation",
+      description: "Adapting to modern real estate trends and technologies.",
     },
     {
       icon: Users,
       title: "Community",
-      description:
-        "We believe in the power of collective learning and peer support.",
-      example: "Monthly networking events connect students across Singapore",
+      description: "Building a strong network of real estate professionals.",
     },
     {
       icon: Target,
-      title: "Results",
+      title: "Growth",
       description:
-        "Every course is designed with measurable outcomes and real-world application.",
-      example: "Average student ROI of 127% within 24 months",
+        "Equipping individuals with the tools for long-term success.",
     },
   ];
 
@@ -444,23 +573,6 @@ const ValuesInActionSection = () => {
                     >
                       {value.description}
                     </p>
-                    <div
-                      className="bg-blue-900/50 rounded-lg p-4"
-                      data-oid="h9cv-:9"
-                    >
-                      <p
-                        className="text-blue-200 text-sm font-medium"
-                        data-oid="z07up61"
-                      >
-                        Example in Action:
-                      </p>
-                      <p
-                        className="text-blue-100 text-sm mt-1"
-                        data-oid="k5v97jr"
-                      >
-                        {value.example}
-                      </p>
-                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -755,7 +867,7 @@ export default function AboutPage() {
       <div className="bg-white" data-oid="v32dwv5">
         <StoryHeroSection data-oid="s5udr.k" />
         <FounderStorySection data-oid="4eyjvq." />
-        <BehindScenesSection data-oid="khzd-eg" />
+        <OurPurposeSection data-oid="khzd-eg" />
         <ValuesInActionSection data-oid="iftj55z" />
         <MeetTeamSection data-oid="q-5afye" />
         <FutureVisionSection data-oid="jppro4f" />
