@@ -8,18 +8,18 @@ export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState("notifications");
 
   return (
-    <div className="p-6" data-oid="76eut8v">
-      <div className="mb-6" data-oid="11v4ctp">
-        <h1 className="text-2xl font-bold text-gray-800" data-oid="ci6ij9w">
+    <div className="p-6" data-oid="7rar7.i">
+      <div className="mb-6" data-oid="ke:a3vx">
+        <h1 className="text-2xl font-bold text-gray-800" data-oid="vocq301">
           Settings
         </h1>
-        <p className="text-gray-500 mt-1" data-oid="h78lo6l">
+        <p className="text-gray-500 mt-1" data-oid="v-nv29z">
           Manage your preferences
         </p>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="p8soz-5">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="ljnfpkt">
         <button
           className={`px-4 py-2 font-medium text-sm flex items-center gap-2 ${
             activeTab === "notifications"
@@ -27,9 +27,9 @@ export default function SettingsPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("notifications")}
-          data-oid="dw6q6ge"
+          data-oid="aqt9yv4"
         >
-          <Bell className="h-4 w-4" data-oid="e.:aqn." />
+          <Bell className="h-4 w-4" data-oid="mr1su6_" />
           Notifications
         </button>
         <button
@@ -39,9 +39,9 @@ export default function SettingsPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("appearance")}
-          data-oid="t_wwkp1"
+          data-oid="hwuax-c"
         >
-          <Palette className="h-4 w-4" data-oid="_wzc4o4" />
+          <Palette className="h-4 w-4" data-oid="9aypr3i" />
           Appearance
         </button>
       </div>
@@ -49,203 +49,203 @@ export default function SettingsPage() {
       {/* Content */}
       <div
         className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
-        data-oid="i3z:nnm"
+        data-oid="ooq2_f0"
       >
         {activeTab === "notifications" && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            data-oid="io9y37e"
+            data-oid=".j-b2qd"
           >
             <h2
               className="text-xl font-bold text-gray-800 mb-6"
-              data-oid="10_gnoo"
+              data-oid="fgeb5k9"
             >
               Notification Settings
             </h2>
-            <div className="space-y-6" data-oid="-c_qz6w">
+            <div className="space-y-6" data-oid="vfz.l2q">
               <div
                 className="flex items-center justify-between"
-                data-oid="cxwwuby"
+                data-oid="j8ah6n7"
               >
-                <div data-oid="3db4e33">
+                <div data-oid="p-o5zqi">
                   <p
                     className="text-sm font-medium text-gray-700"
-                    data-oid="4lpm-2n"
+                    data-oid="sltopxy"
                   >
                     Email Notifications
                   </p>
-                  <p className="text-xs text-gray-500" data-oid="dfsrglu">
+                  <p className="text-xs text-gray-500" data-oid="2rlrjn3">
                     Receive notifications via email
                   </p>
                 </div>
                 <label
                   className="relative inline-flex items-center cursor-pointer"
-                  data-oid="1.0x14b"
+                  data-oid="oevcdq0"
                 >
                   <input
                     type="checkbox"
                     className="sr-only peer"
                     defaultChecked
-                    data-oid="p3m466f"
+                    data-oid="e0fsx7v"
                   />
 
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                    data-oid="35_x5ii"
+                    data-oid="_muy:cc"
                   ></div>
                 </label>
               </div>
 
-              <div data-oid="9mm5x8k">
+              <div data-oid="y-r9uq-">
                 <h3
                   className="text-lg font-medium text-gray-800 mb-3"
-                  data-oid="3nll3o4"
+                  data-oid="gv99kz4"
                 >
                   Email Preferences
                 </h3>
-                <div className="space-y-4" data-oid="o-yfwtn">
+                <div className="space-y-4" data-oid="hc6r9t2">
                   <div
                     className="flex items-center justify-between"
-                    data-oid="ye73co8"
+                    data-oid="3te0uok"
                   >
-                    <div data-oid="u:oa7xk">
+                    <div data-oid="uo..lx-">
                       <p
                         className="text-sm font-medium text-gray-700"
-                        data-oid="-:-qo2s"
+                        data-oid="1rk7ag:"
                       >
                         Course Updates
                       </p>
-                      <p className="text-xs text-gray-500" data-oid="l00j4mm">
+                      <p className="text-xs text-gray-500" data-oid="r.3wwrg">
                         Updates about courses you're enrolled in
                       </p>
                     </div>
                     <label
                       className="relative inline-flex items-center cursor-pointer"
-                      data-oid="hsrdlqn"
+                      data-oid="9l64e3a"
                     >
                       <input
                         type="checkbox"
                         className="sr-only peer"
                         defaultChecked
-                        data-oid="sb9u0sj"
+                        data-oid="dsydc7z"
                       />
 
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                        data-oid="8lc-7du"
+                        data-oid="xznn74a"
                       ></div>
                     </label>
                   </div>
 
                   <div
                     className="flex items-center justify-between"
-                    data-oid="k4fda7m"
+                    data-oid="jeyufp:"
                   >
-                    <div data-oid="4e:crmn">
+                    <div data-oid="8iiquft">
                       <p
                         className="text-sm font-medium text-gray-700"
-                        data-oid="whzwc8q"
+                        data-oid="w9:-qqe"
                       >
                         New Course Announcements
                       </p>
-                      <p className="text-xs text-gray-500" data-oid="3z8wf1n">
+                      <p className="text-xs text-gray-500" data-oid="elckro:">
                         Notifications about new course releases
                       </p>
                     </div>
                     <label
                       className="relative inline-flex items-center cursor-pointer"
-                      data-oid="txs1-lo"
+                      data-oid="zn6z7:f"
                     >
                       <input
                         type="checkbox"
                         className="sr-only peer"
                         defaultChecked
-                        data-oid="7j8zn.a"
+                        data-oid="ic888j_"
                       />
 
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                        data-oid="kcot_ui"
+                        data-oid="0.3_xwy"
                       ></div>
                     </label>
                   </div>
 
                   <div
                     className="flex items-center justify-between"
-                    data-oid="43njxyd"
+                    data-oid="b64.7ok"
                   >
-                    <div data-oid="0v6:bqm">
+                    <div data-oid="l96-uzm">
                       <p
                         className="text-sm font-medium text-gray-700"
-                        data-oid="8yasfv4"
+                        data-oid="cwb_rk4"
                       >
                         Promotions and Discounts
                       </p>
-                      <p className="text-xs text-gray-500" data-oid="autr2_n">
+                      <p className="text-xs text-gray-500" data-oid="1.8xgwj">
                         Special offers and discounts on courses
                       </p>
                     </div>
                     <label
                       className="relative inline-flex items-center cursor-pointer"
-                      data-oid="vgivtlv"
+                      data-oid="e4-4.v-"
                     >
                       <input
                         type="checkbox"
                         className="sr-only peer"
-                        data-oid="31ewrf5"
+                        data-oid="ya482sn"
                       />
 
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                        data-oid="mp61x5l"
+                        data-oid="qsq3o9w"
                       ></div>
                     </label>
                   </div>
 
                   <div
                     className="flex items-center justify-between"
-                    data-oid="tn114t8"
+                    data-oid="myh2um5"
                   >
-                    <div data-oid="u_r2pg.">
+                    <div data-oid="51yj9-l">
                       <p
                         className="text-sm font-medium text-gray-700"
-                        data-oid="uyrhksy"
+                        data-oid="ensu_oi"
                       >
                         Learning Reminders
                       </p>
-                      <p className="text-xs text-gray-500" data-oid="snylrxm">
+                      <p className="text-xs text-gray-500" data-oid="7c1xbcd">
                         Reminders to continue your learning
                       </p>
                     </div>
                     <label
                       className="relative inline-flex items-center cursor-pointer"
-                      data-oid="hne90ow"
+                      data-oid="c8ntqjt"
                     >
                       <input
                         type="checkbox"
                         className="sr-only peer"
                         defaultChecked
-                        data-oid="4by3c:o"
+                        data-oid="wmh:-pk"
                       />
 
                       <div
                         className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                        data-oid="6w612j5"
+                        data-oid="00thcls"
                       ></div>
                     </label>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4" data-oid="cnrsez_">
+              <div className="pt-4" data-oid="-zf.g3z">
                 <button
                   type="button"
                   className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex items-center gap-2"
-                  data-oid="ttz8bss"
+                  data-oid="_4b_1uc"
                 >
-                  <Save className="h-4 w-4" data-oid="k3.whbw" />
+                  <Save className="h-4 w-4" data-oid="wrx:y68" />
                   Save Notification Settings
                 </button>
               </div>
@@ -258,144 +258,144 @@ export default function SettingsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            data-oid="-y1rdd:"
+            data-oid="mbqd5dj"
           >
             <h2
               className="text-xl font-bold text-gray-800 mb-6"
-              data-oid="s:4:jsv"
+              data-oid="rf-9a1:"
             >
               Appearance Settings
             </h2>
-            <div className="space-y-6" data-oid="txj7y_4">
-              <div data-oid="v6o23je">
+            <div className="space-y-6" data-oid="a7.1wg2">
+              <div data-oid="01m.gi6">
                 <p
                   className="text-sm font-medium text-gray-700 mb-2"
-                  data-oid="yldb-9k"
+                  data-oid="_ldvn.-"
                 >
                   Theme
                 </p>
-                <div className="grid grid-cols-3 gap-4" data-oid="1uopfsx">
+                <div className="grid grid-cols-3 gap-4" data-oid=":awyx3-">
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="rn-qsjb"
+                    data-oid="dn9rvjl"
                   >
                     <input
                       type="radio"
                       name="theme"
                       className="sr-only"
                       defaultChecked
-                      data-oid="b5rubg."
+                      data-oid="7y4nt0l"
                     />
 
                     <div
                       className="w-full h-16 bg-white border border-gray-200 rounded-md mb-2"
-                      data-oid="fho3hkr"
+                      data-oid="_68jz8f"
                     ></div>
-                    <span className="text-sm text-gray-700" data-oid="l3e-lhg">
+                    <span className="text-sm text-gray-700" data-oid="ndt1pgz">
                       Light
                     </span>
                   </label>
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="v9llo21"
+                    data-oid="bb7pxk:"
                   >
                     <input
                       type="radio"
                       name="theme"
                       className="sr-only"
-                      data-oid="i0okpmx"
+                      data-oid="9c0zlfp"
                     />
 
                     <div
                       className="w-full h-16 bg-gray-800 border border-gray-700 rounded-md mb-2"
-                      data-oid="8gk8fhy"
+                      data-oid="jhggpf4"
                     ></div>
-                    <span className="text-sm text-gray-700" data-oid="lsyew3:">
+                    <span className="text-sm text-gray-700" data-oid="8xcb6tb">
                       Dark
                     </span>
                   </label>
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="s:dq3db"
+                    data-oid="u25656x"
                   >
                     <input
                       type="radio"
                       name="theme"
                       className="sr-only"
-                      data-oid="na722wn"
+                      data-oid=":w_gspr"
                     />
 
                     <div
                       className="w-full h-16 bg-gradient-to-b from-white to-gray-800 border border-gray-200 rounded-md mb-2"
-                      data-oid=":ut7cds"
+                      data-oid="b-qg-rs"
                     ></div>
-                    <span className="text-sm text-gray-700" data-oid="y0_qrur">
+                    <span className="text-sm text-gray-700" data-oid="gic6q_q">
                       System
                     </span>
                   </label>
                 </div>
               </div>
 
-              <div data-oid=":87199s">
+              <div data-oid="1inszkh">
                 <p
                   className="text-sm font-medium text-gray-700 mb-2"
-                  data-oid="nancyx6"
+                  data-oid="98i466c"
                 >
                   Font Size
                 </p>
-                <div className="grid grid-cols-3 gap-4" data-oid="jef:ot_">
+                <div className="grid grid-cols-3 gap-4" data-oid="mv4p0es">
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="c6xzwkk"
+                    data-oid="j5o.60-"
                   >
                     <input
                       type="radio"
                       name="fontSize"
                       className="sr-only"
-                      data-oid="tl:myc_"
+                      data-oid="a47bb52"
                     />
 
-                    <span className="text-xs mb-2" data-oid="uhmeg4z">
+                    <span className="text-xs mb-2" data-oid="4ob-am2">
                       Aa
                     </span>
-                    <span className="text-sm text-gray-700" data-oid="9ildn3u">
+                    <span className="text-sm text-gray-700" data-oid="tgxyo89">
                       Small
                     </span>
                   </label>
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="gk6mzp8"
+                    data-oid=":xt7h5p"
                   >
                     <input
                       type="radio"
                       name="fontSize"
                       className="sr-only"
                       defaultChecked
-                      data-oid="fab_ix_"
+                      data-oid="44yf8t5"
                     />
 
-                    <span className="text-sm mb-2" data-oid="8bkrozs">
+                    <span className="text-sm mb-2" data-oid="0qmvbbj">
                       Aa
                     </span>
-                    <span className="text-sm text-gray-700" data-oid="nc80r5_">
+                    <span className="text-sm text-gray-700" data-oid="r5fs1xx">
                       Medium
                     </span>
                   </label>
                   <label
                     className="flex flex-col items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                    data-oid="fq:9rc8"
+                    data-oid="ko_rtc2"
                   >
                     <input
                       type="radio"
                       name="fontSize"
                       className="sr-only"
-                      data-oid="6.u4wu4"
+                      data-oid="l..pynp"
                     />
 
-                    <span className="text-base mb-2" data-oid="6uqi1cm">
+                    <span className="text-base mb-2" data-oid="12n3tgy">
                       Aa
                     </span>
-                    <span className="text-sm text-gray-700" data-oid="ivy:iid">
+                    <span className="text-sm text-gray-700" data-oid="cwz1b.0">
                       Large
                     </span>
                   </label>
@@ -404,75 +404,75 @@ export default function SettingsPage() {
 
               <div
                 className="flex items-center justify-between"
-                data-oid=".rhb2ix"
+                data-oid="s6u-a2m"
               >
-                <div data-oid="9464p40">
+                <div data-oid="ygwpyho">
                   <p
                     className="text-sm font-medium text-gray-700"
-                    data-oid="bbbwzs8"
+                    data-oid="7weajs_"
                   >
                     Reduce Animations
                   </p>
-                  <p className="text-xs text-gray-500" data-oid="wei.kvy">
+                  <p className="text-xs text-gray-500" data-oid="iswg6i2">
                     Minimize motion effects throughout the interface
                   </p>
                 </div>
                 <label
                   className="relative inline-flex items-center cursor-pointer"
-                  data-oid="sp4qgc1"
+                  data-oid="it0_zx9"
                 >
                   <input
                     type="checkbox"
                     className="sr-only peer"
-                    data-oid="f14:d0q"
+                    data-oid="-gk72hj"
                   />
 
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                    data-oid="59iwozs"
+                    data-oid="y874o50"
                   ></div>
                 </label>
               </div>
 
               <div
                 className="flex items-center justify-between"
-                data-oid="-4agm7d"
+                data-oid="ci1sy9q"
               >
-                <div data-oid="t7pzwrn">
+                <div data-oid="xzzqr78">
                   <p
                     className="text-sm font-medium text-gray-700"
-                    data-oid="5poqkfs"
+                    data-oid="bm1p-vw"
                   >
                     High Contrast Mode
                   </p>
-                  <p className="text-xs text-gray-500" data-oid="ez:u2qj">
+                  <p className="text-xs text-gray-500" data-oid="rdm8xl0">
                     Increase contrast for better visibility
                   </p>
                 </div>
                 <label
                   className="relative inline-flex items-center cursor-pointer"
-                  data-oid="jpibltp"
+                  data-oid="k4v:cny"
                 >
                   <input
                     type="checkbox"
                     className="sr-only peer"
-                    data-oid="o7g_370"
+                    data-oid="42h0x1w"
                   />
 
                   <div
                     className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-                    data-oid="doupm-:"
+                    data-oid="wkd_sp-"
                   ></div>
                 </label>
               </div>
 
-              <div className="pt-4" data-oid="ov9m.y:">
+              <div className="pt-4" data-oid="ay28azj">
                 <button
                   type="button"
                   className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex items-center gap-2"
-                  data-oid="1qhrkzd"
+                  data-oid="tla6cu0"
                 >
-                  <Save className="h-4 w-4" data-oid="dazc36q" />
+                  <Save className="h-4 w-4" data-oid="n6:m3m3" />
                   Save Appearance Settings
                 </button>
               </div>

@@ -91,31 +91,31 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar data-oid="_r9-q5y" />
+      <Navbar data-oid="79vrf55" />
       <main
         className="relative min-h-screen overflow-hidden bg-gradient-to-b from-blue-50 to-white"
-        data-oid="zsjo5-i"
+        data-oid="_g08p_g"
       >
         {/* Background */}
-        <div className="absolute inset-0 z-0 opacity-20" data-oid="sdpiyfq">
-          <NetworkBackground data-oid="2jbhz.9" />
+        <div className="absolute inset-0 z-0 opacity-20" data-oid="izif57f">
+          <NetworkBackground data-oid="8g8m1hh" />
         </div>
 
         {/* Hero Section */}
         <section
           className="relative pt-24 pb-12 md:pt-32 md:pb-16"
-          data-oid="cw:r3yz"
+          data-oid="aea547y"
         >
           <div
             className="container px-4 mx-auto text-center"
-            data-oid="t:feh2i"
+            data-oid="cstfwf-"
           >
             <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              data-oid="cz12gqr"
+              data-oid="i65jba_"
             >
               Get In Touch
             </motion.h1>
@@ -124,7 +124,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              data-oid="9iqmgzh"
+              data-oid="rhb_3vh"
             >
               Got a question? We're here 25/8.
             </motion.p>
@@ -132,11 +132,11 @@ export default function ContactPage() {
         </section>
 
         {/* Main Content */}
-        <section className="relative py-12 md:py-16" data-oid="p40pvcb">
-          <div className="container px-4 mx-auto" data-oid="1_m597:">
+        <section className="relative py-12 md:py-16" data-oid="e9m76o-">
+          <div className="container px-4 mx-auto" data-oid="9xklkk1">
             <div
               className="flex flex-col lg:flex-row gap-12 items-center"
-              data-oid="5:ij_v_"
+              data-oid="x1fj03l"
             >
               {/* Left Column - Animation and Contact Info */}
               <motion.div
@@ -144,92 +144,92 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                data-oid="xtqzs1e"
+                data-oid="-91-x0y"
               >
                 <div
                   className="relative h-[400px] md:h-[500px] mb-8"
-                  data-oid="uj7cwe:"
+                  data-oid="rzluqp."
                 >
-                  <ContactAnimation data-oid="stwrq::" />
+                  <ContactAnimation data-oid="nw.o2m1" />
                 </div>
 
                 <div
                   className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg"
-                  data-oid="y1kp0fm"
+                  data-oid="grhqr.9"
                 >
                   <h3
                     className="text-2xl font-bold text-blue-900 mb-6"
-                    data-oid="8a5r7mk"
+                    data-oid="0_s46l9"
                   >
                     Contact Information
                   </h3>
 
-                  <div className="space-y-4" data-oid="uejg:01">
-                    <div className="flex items-start gap-4" data-oid="7pu-zly">
+                  <div className="space-y-4" data-oid="kl-vv7d">
+                    <div className="flex items-start gap-4" data-oid="34q8mzv">
                       <div
                         className="bg-blue-100 p-3 rounded-full"
-                        data-oid=".f6xh14"
+                        data-oid="j3digl4"
                       >
                         <MapPin
                           className="h-6 w-6 text-blue-600"
-                          data-oid="92nop2d"
+                          data-oid="x_5gogx"
                         />
                       </div>
-                      <div data-oid="uqq.u77">
+                      <div data-oid="71a:_-m">
                         <h4
                           className="font-semibold text-gray-900"
-                          data-oid="j4rwvmb"
+                          data-oid="u2p57cq"
                         >
                           Our Location
                         </h4>
-                        <p className="text-gray-600" data-oid="yb.vbzh">
+                        <p className="text-gray-600" data-oid="2g2ytag">
                           Oxley Bizhub 2, #11-15, 62 Ubi Road 1, Singapore
                           408734
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4" data-oid="7-n7gi:">
+                    <div className="flex items-start gap-4" data-oid="p.mzr56">
                       <div
                         className="bg-blue-100 p-3 rounded-full"
-                        data-oid="vutds14"
+                        data-oid="wu:egbc"
                       >
                         <Phone
                           className="h-6 w-6 text-blue-600"
-                          data-oid="9h.tbfn"
+                          data-oid="eqmi4.y"
                         />
                       </div>
-                      <div data-oid="q-s8q5k">
+                      <div data-oid="fv:5t.z">
                         <h4
                           className="font-semibold text-gray-900"
-                          data-oid="s002b40"
+                          data-oid="9.:e0t8"
                         >
                           Phone Number
                         </h4>
-                        <p className="text-gray-600" data-oid="rn9gw.y">
+                        <p className="text-gray-600" data-oid="shf3d9q">
                           +65 6232 6719
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4" data-oid="sm2o0q2">
+                    <div className="flex items-start gap-4" data-oid="llar7_o">
                       <div
                         className="bg-blue-100 p-3 rounded-full"
-                        data-oid="24u8miz"
+                        data-oid="fdp-odp"
                       >
                         <Mail
                           className="h-6 w-6 text-blue-600"
-                          data-oid="-j1u1lh"
+                          data-oid="y53l5q5"
                         />
                       </div>
-                      <div data-oid=".-rk0c3">
+                      <div data-oid="yn7_k7y">
                         <h4
                           className="font-semibold text-gray-900"
-                          data-oid="9xgeacu"
+                          data-oid="lqg_n:z"
                         >
                           Email Address
                         </h4>
-                        <p className="text-gray-600" data-oid="b_9u9-h">
+                        <p className="text-gray-600" data-oid="rqb9uh6">
                           hello@assembly.sg
                         </p>
                       </div>
@@ -244,40 +244,40 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                data-oid="crd5xcm"
+                data-oid="47_9oyi"
               >
                 <div
                   className="bg-white backdrop-blur-md rounded-xl p-6 md:p-8 shadow-xl border border-gray-200"
-                  data-oid="hbjaq_f"
+                  data-oid="5vb.:8b"
                 >
                   <h2
                     className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent mb-6"
-                    data-oid="4yy0zif"
+                    data-oid="rnot:0g"
                   >
                     Ask us anything!
                   </h2>
 
-                  <AnimatePresence data-oid=":hssww5">
+                  <AnimatePresence data-oid="nhxow1w">
                     {isSubmitted ? (
                       <motion.div
                         className="bg-green-50 border border-green-200 rounded-lg p-6 text-center"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        data-oid=":fuadh-"
+                        data-oid="ux2o.bd"
                       >
                         <CheckCircle
                           className="h-16 w-16 text-green-500 mx-auto mb-4"
-                          data-oid="upi4ogq"
+                          data-oid="l7ql1-7"
                         />
 
                         <h3
                           className="text-xl font-semibold text-green-800 mb-2"
-                          data-oid="q-qsi3p"
+                          data-oid="s-6cf3a"
                         >
                           Thank You!
                         </h3>
-                        <p className="text-green-700" data-oid="hg:nf2:">
+                        <p className="text-green-700" data-oid="jzfv_s9">
                           Your message has been sent successfully. We'll get
                           back to you shortly.
                         </p>
@@ -288,16 +288,16 @@ export default function ContactPage() {
                         className="space-y-6"
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        data-oid="lap-9f3"
+                        data-oid="thix46x"
                       >
-                        <div data-oid="2ltb:7s">
+                        <div data-oid="9.nnznk">
                           <label
                             htmlFor="name"
                             className="block text-sm font-medium text-gray-700 mb-1"
-                            data-oid="tj7ozdm"
+                            data-oid="anwt3za"
                           >
                             Full Name{" "}
-                            <span className="text-red-500" data-oid="h64cgxf">
+                            <span className="text-red-500" data-oid="i-ga._d">
                               *
                             </span>
                           </label>
@@ -309,27 +309,27 @@ export default function ContactPage() {
                             {...register("name", {
                               required: "Name is required",
                             })}
-                            data-oid=":3s117j"
+                            data-oid="lwe-lws"
                           />
 
                           {errors.name && (
                             <p
                               className="mt-1 text-sm text-red-600"
-                              data-oid="-ikh3rr"
+                              data-oid="c5_3bff"
                             >
                               {errors.name.message}
                             </p>
                           )}
                         </div>
 
-                        <div data-oid="j0.k27f">
+                        <div data-oid="yaurdz9">
                           <label
                             htmlFor="email"
                             className="block text-sm font-medium text-gray-700 mb-1"
-                            data-oid="pm_d6_a"
+                            data-oid="s-o_bkq"
                           >
                             Email Address{" "}
-                            <span className="text-red-500" data-oid="pnjyby1">
+                            <span className="text-red-500" data-oid="9cprv8k">
                               *
                             </span>
                           </label>
@@ -346,36 +346,36 @@ export default function ContactPage() {
                                 message: "Invalid email address",
                               },
                             })}
-                            data-oid="fay2xoa"
+                            data-oid="sm8znv3"
                           />
 
                           {errors.email && (
                             <p
                               className="mt-1 text-sm text-red-600"
-                              data-oid="hbinnum"
+                              data-oid="7to9_ef"
                             >
                               {errors.email.message}
                             </p>
                           )}
                         </div>
 
-                        <div data-oid="8hmvuxh">
+                        <div data-oid="3t5w-a:">
                           <label
                             htmlFor="phone"
                             className="block text-sm font-medium text-gray-700 mb-1"
-                            data-oid=".1lj:zt"
+                            data-oid="f:911rh"
                           >
                             Phone Number{" "}
-                            <span className="text-red-500" data-oid="xq4tho8">
+                            <span className="text-red-500" data-oid="lgdrndo">
                               *
                             </span>
                           </label>
-                          <div className="relative" data-oid=".u8ixz:">
+                          <div className="relative" data-oid="fnauol2">
                             {/* Country code selector - redesigned to be more compact */}
-                            <div className="flex" data-oid="xs.lann">
+                            <div className="flex" data-oid="q0wrsln">
                               <div
                                 className="relative inline-block"
-                                data-oid=":kjbkp5"
+                                data-oid="nq5g6_y"
                               >
                                 <button
                                   type="button"
@@ -385,23 +385,23 @@ export default function ContactPage() {
                                       !isCountryDropdownOpen,
                                     )
                                   }
-                                  data-oid="_yyi9en"
+                                  data-oid="2yajp9l"
                                 >
                                   <span
                                     className="text-base"
-                                    data-oid="nii7-ra"
+                                    data-oid="qz9woak"
                                   >
                                     {selectedCountry.flag}
                                   </span>
                                   <span
                                     className="text-sm whitespace-nowrap"
-                                    data-oid="u.q7jss"
+                                    data-oid="c-o1q75"
                                   >
                                     {selectedCountry.code}
                                   </span>
                                   <ChevronDown
                                     className="h-3 w-3 text-gray-500"
-                                    data-oid="8bn9m-k"
+                                    data-oid=":6wpkbx"
                                   />
                                 </button>
 
@@ -410,11 +410,11 @@ export default function ContactPage() {
                                   <div
                                     className="absolute z-10 left-0 mt-1 w-60 max-h-60 overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200"
                                     style={{ maxWidth: "calc(100vw - 3rem)" }}
-                                    data-oid="sv97na4"
+                                    data-oid="ca._3w0"
                                   >
                                     <div
                                       className="sticky top-0 bg-white p-2 border-b border-gray-200"
-                                      data-oid="org9z8v"
+                                      data-oid="p.4db2-"
                                     >
                                       <input
                                         type="text"
@@ -424,33 +424,33 @@ export default function ContactPage() {
                                         onChange={(e) => {
                                           // Filter countries logic would go here
                                         }}
-                                        data-oid="_x_91gq"
+                                        data-oid="z1rbz.."
                                       />
                                     </div>
-                                    <div className="py-1" data-oid="n0g71ij">
+                                    <div className="py-1" data-oid="jhuj8yh">
                                       {countries.map((country) => (
                                         <button
                                           key={country.code}
                                           type="button"
                                           className="w-full text-left px-3 py-1.5 hover:bg-blue-50 flex items-center gap-2 text-sm"
                                           onClick={() => selectCountry(country)}
-                                          data-oid="ibd4cc7"
+                                          data-oid="05ucj_s"
                                         >
                                           <span
                                             className="text-base"
-                                            data-oid="5b6b8:y"
+                                            data-oid="4u2eg2n"
                                           >
                                             {country.flag}
                                           </span>
                                           <span
                                             className="truncate"
-                                            data-oid=":n478uu"
+                                            data-oid="91okunk"
                                           >
                                             {country.name}
                                           </span>
                                           <span
                                             className="text-gray-500 ml-auto text-xs"
-                                            data-oid="4m36_8n"
+                                            data-oid=":liyxaj"
                                           >
                                             {country.code}
                                           </span>
@@ -474,13 +474,13 @@ export default function ContactPage() {
                                 {...register("phone", {
                                   required: "Phone number is required",
                                 })}
-                                data-oid="903hiz:"
+                                data-oid="k9gb0gp"
                               />
                             </div>
                             {errors.phone && (
                               <p
                                 className="mt-1 text-sm text-red-600"
-                                data-oid="r8z1ap3"
+                                data-oid="i4-h2y7"
                               >
                                 {errors.phone.message}
                               </p>
@@ -491,25 +491,25 @@ export default function ContactPage() {
                               <div
                                 className="fixed inset-0 z-0"
                                 onClick={() => setIsCountryDropdownOpen(false)}
-                                data-oid="j.dvbm_"
+                                data-oid="14w5d-_"
                               ></div>
                             )}
                           </div>
                         </div>
 
-                        <div data-oid="d86y11j">
+                        <div data-oid="sbwreto">
                           <label
                             className="block text-sm font-medium text-gray-700 mb-3"
-                            data-oid="fjpri-:"
+                            data-oid="r95.z2:"
                           >
                             What can we help you with?{" "}
-                            <span className="text-red-500" data-oid="5fmhq_8">
+                            <span className="text-red-500" data-oid="j_en0ct">
                               *
                             </span>
                           </label>
                           <div
                             className="grid grid-cols-2 gap-3"
-                            data-oid="mckdlrj"
+                            data-oid="q8nsbiq"
                           >
                             {interestOptions.map((option) => (
                               <motion.div
@@ -522,11 +522,11 @@ export default function ContactPage() {
                                 onClick={() => toggleInterest(option.id)}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                data-oid="bjthqe2"
+                                data-oid="v.ap0_y"
                               >
                                 <div
                                   className="flex items-center"
-                                  data-oid="ay02chw"
+                                  data-oid="p7jnaim"
                                 >
                                   <div
                                     className={`w-5 h-5 rounded-full border flex items-center justify-center ${
@@ -534,7 +534,7 @@ export default function ContactPage() {
                                         ? "border-blue-500 bg-blue-500"
                                         : "border-gray-300"
                                     }`}
-                                    data-oid="0a:7xhd"
+                                    data-oid="-xgdeuk"
                                   >
                                     {selectedInterests.includes(option.id) && (
                                       <motion.div
@@ -542,13 +542,13 @@ export default function ContactPage() {
                                         initial={{ scale: 0 }}
                                         animate={{ scale: 1 }}
                                         transition={{ duration: 0.2 }}
-                                        data-oid="2j6a1xt"
+                                        data-oid="64kf936"
                                       />
                                     )}
                                   </div>
                                   <span
                                     className="ml-2 text-sm"
-                                    data-oid="dhsk8yb"
+                                    data-oid="h1xtajx"
                                   >
                                     {option.label}
                                   </span>
@@ -559,21 +559,21 @@ export default function ContactPage() {
                           {selectedInterests.length === 0 && (
                             <p
                               className="mt-1 text-sm text-red-600"
-                              data-oid=":b.kds2"
+                              data-oid="cfvudb8"
                             >
                               Please select at least one option
                             </p>
                           )}
                         </div>
 
-                        <div data-oid="z1147nu">
+                        <div data-oid="qzo.h-z">
                           <label
                             htmlFor="message"
                             className="block text-sm font-medium text-gray-700 mb-1"
-                            data-oid="aet9goi"
+                            data-oid="0kpt3ai"
                           >
                             Message{" "}
-                            <span className="text-red-500" data-oid="ouo3q_j">
+                            <span className="text-red-500" data-oid="j638cgw">
                               *
                             </span>
                           </label>
@@ -585,13 +585,13 @@ export default function ContactPage() {
                             {...register("message", {
                               required: "Message is required",
                             })}
-                            data-oid="::0bsv."
+                            data-oid="j09bo76"
                           />
 
                           {errors.message && (
                             <p
                               className="mt-1 text-sm text-red-600"
-                              data-oid="8u9b0z5"
+                              data-oid="z9yekf1"
                             >
                               {errors.message.message}
                             </p>
@@ -600,7 +600,7 @@ export default function ContactPage() {
 
                         <div
                           className="text-xs text-gray-500"
-                          data-oid="s4gw_75"
+                          data-oid="4jgkf9s"
                         >
                           By submitting this form, you agree to receive future
                           marketing materials from Assembly SG. Your personal
@@ -614,7 +614,7 @@ export default function ContactPage() {
                           disabled={
                             isSubmitting || selectedInterests.length === 0
                           }
-                          data-oid="yo.91.e"
+                          data-oid="857r0ef"
                         >
                           {isSubmitting ? (
                             <>
@@ -623,7 +623,7 @@ export default function ContactPage() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                data-oid="qmak3d4"
+                                data-oid="lv2ow47"
                               >
                                 <circle
                                   className="opacity-25"
@@ -632,13 +632,13 @@ export default function ContactPage() {
                                   r="10"
                                   stroke="currentColor"
                                   strokeWidth="4"
-                                  data-oid="pvm6u-:"
+                                  data-oid="o59a:-:"
                                 ></circle>
                                 <path
                                   className="opacity-75"
                                   fill="currentColor"
                                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                  data-oid="0kea447"
+                                  data-oid=".rq8p.e"
                                 ></path>
                               </svg>
                               Submitting...
@@ -648,7 +648,7 @@ export default function ContactPage() {
                               Submit{" "}
                               <Send
                                 className="ml-2 h-5 w-5"
-                                data-oid="pxs69se"
+                                data-oid="_jjf3yz"
                               />
                             </>
                           )}
@@ -663,16 +663,16 @@ export default function ContactPage() {
         </section>
 
         {/* Map Section */}
-        <section className="relative py-12 md:py-16" data-oid="co:8siq">
-          <div className="container px-4 mx-auto" data-oid="0snui2a">
+        <section className="relative py-12 md:py-16" data-oid="ndals9n">
+          <div className="container px-4 mx-auto" data-oid="2sefg8f">
             <motion.div
               className="rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              data-oid="p_g5qhr"
+              data-oid="wt1bfht"
             >
-              <ContactMap data-oid="1c_5w8r" />
+              <ContactMap data-oid="3rm:ezz" />
             </motion.div>
           </div>
         </section>

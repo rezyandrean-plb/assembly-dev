@@ -49,14 +49,14 @@ export default function TestOrderCoursesOnlyPage() {
   return (
     <div
       className="min-h-screen bg-gray-50 flex items-center justify-center"
-      data-oid="s_qh4jp"
+      data-oid="yrml9kd"
     >
-      <div className="text-center" data-oid="6q9sumf">
+      <div className="text-center" data-oid="y01.d19">
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79] mx-auto mb-4"
-          data-oid="ju7w-sl"
+          data-oid="2rjogtd"
         ></div>
-        <p className="text-gray-600" data-oid="bx3ezg5">
+        <p className="text-gray-600" data-oid="6mpb3q7">
           Setting up courses-only test order...
         </p>
       </div>

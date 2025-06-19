@@ -186,19 +186,19 @@ export default function HeroSection() {
     <section
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      data-oid="be0px.e"
+      data-oid="h52tk:z"
     >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
-        data-oid="wrwdt5h"
+        data-oid="h_qqa87"
       />
 
       {/* Abstract animated lines */}
       <svg
         className="absolute inset-0 z-10 w-full h-full"
         preserveAspectRatio="none"
-        data-oid="58i9ob6"
+        data-oid="k6-.2io"
       >
         <line
           className="abstract-line"
@@ -208,7 +208,7 @@ export default function HeroSection() {
           y2="30%"
           stroke="rgba(249, 115, 22, 0.3)"
           strokeWidth="2"
-          data-oid="ma4nv-2"
+          data-oid="bpbp5o."
         />
 
         <line
@@ -219,7 +219,7 @@ export default function HeroSection() {
           y2="100%"
           stroke="rgba(249, 115, 22, 0.2)"
           strokeWidth="1"
-          data-oid=".09h0p5"
+          data-oid="j87u79t"
         />
 
         <line
@@ -230,18 +230,18 @@ export default function HeroSection() {
           y2="100%"
           stroke="rgba(249, 115, 22, 0.2)"
           strokeWidth="1"
-          data-oid="khssgq7"
+          data-oid="2b0n3it"
         />
       </svg>
 
       <div
         className="container relative z-20 text-center px-4"
-        data-oid="pu8tmbe"
+        data-oid=".ha7l_:"
       >
         <h1
           ref={textRef}
           className="hero-title text-5xl md:text-7xl font-bold text-white mb-6"
-          data-oid="7b29_ps"
+          data-oid="dd4-5kx"
         >
           Unlock Your Potential in Singapore Real Estate
         </h1>
@@ -249,17 +249,17 @@ export default function HeroSection() {
         <p
           ref={subTextRef}
           className="hero-subtitle text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto opacity-0"
-          data-oid="v8uiehg"
+          data-oid="k0-7b-s"
         >
           Navigate the dynamic Singapore property market with expert insights
           and community support
         </p>
 
-        <div ref={ctaRef} className="hero-cta opacity-0" data-oid="qq::zyf">
+        <div ref={ctaRef} className="hero-cta opacity-0" data-oid="t718t.8">
           <Button
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full hover:shadow-lg transition-all"
-            data-oid="h4kpzch"
+            data-oid="1y8pn18"
           >
             Start Your Journey
           </Button>
@@ -268,14 +268,14 @@ export default function HeroSection() {
 
       <div
         className="scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 opacity-0 text-white text-center"
-        data-oid="yc9ebb7"
+        data-oid="eyeb0oq"
       >
-        <p className="text-sm mb-2" data-oid="e-jcg6s">
+        <p className="text-sm mb-2" data-oid="5r.ep2f">
           Scroll to explore
         </p>
         <ArrowDown
           className="h-6 w-6 mx-auto animate-bounce"
-          data-oid="xgw6a75"
+          data-oid="boot6op"
         />
       </div>
     </section>

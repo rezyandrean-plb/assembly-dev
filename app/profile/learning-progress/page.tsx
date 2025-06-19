@@ -31,48 +31,48 @@ export default function LearningProgressPage() {
   });
 
   return (
-    <div className="p-6" data-oid="osp7cv:">
+    <div className="p-6" data-oid="mvlylg3">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="u.-ms9a"
+        data-oid="i26n2ae"
       >
-        <div data-oid="7ny_auh">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="vhy10cr">
+        <div data-oid="3-do32_">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="tpewv68">
             Learning Progress
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="7s.37po">
+          <p className="text-gray-500 mt-1" data-oid="4l47-6p">
             Track your progress across all enrolled courses
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="o3b1biq">
-          <div className="relative" data-oid="-db:9as">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid="nuzaej6">
+          <div className="relative" data-oid="cm09ttz">
             <input
               type="text"
               placeholder="Search courses..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="cs-_4a9"
+              data-oid="eohr9b3"
             />
 
             <Search
               className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="nqpb7ak"
+              data-oid="tz8766f"
             />
           </div>
           <button
             className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="i57qk_6"
+            data-oid="c-4ixq1"
           >
-            <Filter className="h-4 w-4" data-oid="y6uztxn" />
-            <span data-oid=":ig6rb0">Filter</span>
+            <Filter className="h-4 w-4" data-oid="5gmn6er" />
+            <span data-oid="f1irdrx">Filter</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="s57czv2">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="qa_29sv">
         <button
           className={`px-4 py-2 font-medium text-sm ${
             activeTab === "all"
@@ -80,7 +80,7 @@ export default function LearningProgressPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
-          data-oid="15qejtc"
+          data-oid="djlynup"
         >
           All Courses ({enrolledCourses.length})
         </button>
@@ -91,7 +91,7 @@ export default function LearningProgressPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("inProgress")}
-          data-oid="1b1a0b2"
+          data-oid="njfnb5g"
         >
           In Progress (
           {
@@ -107,14 +107,14 @@ export default function LearningProgressPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("notStarted")}
-          data-oid="qes_z0p"
+          data-oid="xr1qtho"
         >
           Not Started ({enrolledCourses.filter((c) => c.progress === 0).length})
         </button>
       </div>
 
       {/* Course List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="hpbb3jq">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="-95dvki">
         {filteredCourses.map((course) => (
           <motion.div
             key={course.id}
@@ -122,13 +122,13 @@ export default function LearningProgressPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            data-oid="gqbp_qe"
+            data-oid=":qn3nui"
           >
-            <div className="p-6" data-oid="-j8sns9">
-              <div className="flex gap-4" data-oid="mv2mgjs">
+            <div className="p-6" data-oid="bmi6li8">
+              <div className="flex gap-4" data-oid="u_eer5l">
                 <div
                   className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                  data-oid="h1i53.:"
+                  data-oid="l8dlfj2"
                 >
                   <Image
                     src={course.image || "/placeholder.svg"}
@@ -136,34 +136,34 @@ export default function LearningProgressPage() {
                     width={64}
                     height={64}
                     className="object-cover"
-                    data-oid="ds8a-ig"
+                    data-oid="s8h.u85"
                   />
                 </div>
-                <div className="flex-1" data-oid="typdp-t">
+                <div className="flex-1" data-oid="a493hcm">
                   <h2
                     className="text-lg font-bold text-gray-800"
-                    data-oid="-2tl.:g"
+                    data-oid="xigr6kb"
                   >
                     {course.title}
                   </h2>
-                  <p className="text-sm text-gray-600 mb-1" data-oid="1v92fdq">
+                  <p className="text-sm text-gray-600 mb-1" data-oid="q-av06g">
                     {course.categories.join(", ")}
                   </p>
-                  <p className="text-sm text-gray-700" data-oid="n_5ncwo">
+                  <p className="text-sm text-gray-700" data-oid="uwe.r_:">
                     {course.instructor}
                   </p>
 
                   <div
                     className="flex justify-between items-center mt-3 mb-2"
-                    data-oid="cvgie-m"
+                    data-oid="8k4ytev"
                   >
-                    <span className="text-sm text-gray-500" data-oid="p8xukc0">
+                    <span className="text-sm text-gray-500" data-oid="f2izp8-">
                       {course.totalHours} hours
                     </span>
                     {course.lastAccessed && (
                       <span
                         className="text-sm text-gray-500"
-                        data-oid="1.7:jo6"
+                        data-oid="qp2ufmr"
                       >
                         Last Accessed: {course.lastAccessed}
                       </span>
@@ -171,27 +171,27 @@ export default function LearningProgressPage() {
                   </div>
 
                   {course.progress > 0 && (
-                    <div className="mt-3 mb-4" data-oid="1ru-ad-">
+                    <div className="mt-3 mb-4" data-oid="vdhta-g">
                       <div
                         className="flex justify-between items-center mb-1"
-                        data-oid="nc8cnvf"
+                        data-oid="tbmybjb"
                       >
                         <span
                           className="text-xs text-gray-500"
-                          data-oid="vuxwlzi"
+                          data-oid="15grnc_"
                         >
                           Progress
                         </span>
                         <span
                           className="text-xs font-medium text-green-600"
-                          data-oid="cj4urag"
+                          data-oid="k081gmt"
                         >
                           {course.progress}%
                         </span>
                       </div>
                       <div
                         className="w-full bg-gray-100 rounded-full h-2"
-                        data-oid="f:yur3e"
+                        data-oid="ec9u98q"
                       >
                         <div
                           className={`h-2 rounded-full ${
@@ -202,17 +202,17 @@ export default function LearningProgressPage() {
                                 : "bg-green-600"
                           }`}
                           style={{ width: `${course.progress}%` }}
-                          data-oid="pat:j:b"
+                          data-oid="_s:-jwq"
                         ></div>
                       </div>
                     </div>
                   )}
 
-                  <div className="flex justify-end mt-4" data-oid="xnl6mkc">
+                  <div className="flex justify-end mt-4" data-oid="v8o9wlg">
                     <Link
                       href={`/courses/${course.slug}/learn`}
                       className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700"
-                      data-oid="nuzini2"
+                      data-oid="zm:2r_h"
                     >
                       {course.progress > 0 ? "Continue" : "Start"}
                     </Link>

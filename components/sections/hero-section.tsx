@@ -30,15 +30,15 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      data-oid="dvxad6b"
+      data-oid="eb6d8sx"
     >
       <div
         className="absolute inset-0 bg-white/5 z-[1]"
-        data-oid="s-s___x"
+        data-oid="-fza6u0"
       ></div>
       <div
         className="container relative z-10 text-center px-4 mt-20"
-        data-oid="6v6-3zh"
+        data-oid="kdur8e9"
       >
         <motion.h1
           className="text-5xl md:text-7xl font-bold text-[#123B79] mb-6"
@@ -46,7 +46,7 @@ export default function HeroSection() {
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ opacity: titleOpacity }}
-          data-oid="5-4ti0k"
+          data-oid="848gwe4"
         >
           The Interwoven Network of Opportunity
         </motion.h1>
@@ -57,7 +57,7 @@ export default function HeroSection() {
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ opacity: subtitleOpacity }}
-          data-oid="syfefhx"
+          data-oid="7v7czdf"
         >
           Where Real Estate, Finance, and Learning converge to create a powerful
           ecosystem for your success
@@ -69,12 +69,12 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           style={{ opacity: buttonOpacity }}
           className="flex justify-center"
-          data-oid="kr1fcez"
+          data-oid="7_sx0gj"
         >
           <Button
             size="lg"
             className="bg-[#123B79] hover:bg-[#0A2A5E] text-white px-8 py-6 text-lg rounded-full hover:shadow-lg transition-all"
-            data-oid="hch6kg0"
+            data-oid="fy_7umd"
           >
             Explore The Network
           </Button>
@@ -86,10 +86,10 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        data-oid="c:nmh59"
+        data-oid="d6d:z2f"
       >
-        <div className="container mx-auto px-4" data-oid="fm-:m50">
-          <p className="text-sm mb-2" data-oid="2lydm_l">
+        <div className="container mx-auto px-4" data-oid="fx5vm:l">
+          <p className="text-sm mb-2" data-oid="z5_2o2-">
             Scroll to explore
           </p>
           <motion.div
@@ -101,9 +101,9 @@ export default function HeroSection() {
               ease: "easeInOut",
             }}
             className="mx-auto w-fit"
-            data-oid="5f1hz.c"
+            data-oid="2ht9glv"
           >
-            <ArrowDown className="h-6 w-6" data-oid="yrlj-o9" />
+            <ArrowDown className="h-6 w-6" data-oid="_xnnrl6" />
           </motion.div>
         </div>
       </motion.div>
@@ -111,23 +111,23 @@ export default function HeroSection() {
       {/* Network Visualization Indicators */}
       <div
         className="absolute bottom-4 right-4 z-10 flex items-center space-x-2 text-xs text-gray-500"
-        data-oid="b9vdsjd"
+        data-oid="vwo4x4p"
       >
         <div
           className="w-2 h-2 rounded-full bg-[#794B12]"
-          data-oid=".-qg75f"
+          data-oid="gtqzwy:"
         ></div>
-        <span data-oid="g8-do6w">Real Estate</span>
+        <span data-oid="1ig0dq4">Real Estate</span>
         <div
           className="w-2 h-2 rounded-full bg-[#F0A500] ml-2"
-          data-oid="8vvrlxg"
+          data-oid="huq1wog"
         ></div>
-        <span data-oid="jui8whc">Finance</span>
+        <span data-oid="brqnkft">Finance</span>
         <div
           className="w-2 h-2 rounded-full bg-[#79123B] ml-2"
-          data-oid="r6yitqg"
+          data-oid="0er_46p"
         ></div>
-        <span data-oid="abwlmo2">Learning</span>
+        <span data-oid="sq2uvbr">Learning</span>
       </div>
     </section>
   );

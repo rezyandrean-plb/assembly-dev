@@ -93,29 +93,29 @@ export function AutoScrollCarousel({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       ref={containerRef}
-      data-oid="ouiuxb3"
+      data-oid="81byv13"
     >
       {/* Navigation buttons */}
       <button
         onClick={scrollToPrev}
         className="absolute left-8 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition-all"
         aria-label="Previous image"
-        data-oid="y.09dun"
+        data-oid="eifcwcs"
       >
-        <ChevronLeft className="h-6 w-6" data-oid="2c1y7ki" />
+        <ChevronLeft className="h-6 w-6" data-oid="_xo7u_6" />
       </button>
 
       <button
         onClick={scrollToNext}
         className="absolute right-8 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition-all"
         aria-label="Next image"
-        data-oid="hdf6o80"
+        data-oid="66ubqaw"
       >
-        <ChevronRight className="h-6 w-6" data-oid="1zrxuy5" />
+        <ChevronRight className="h-6 w-6" data-oid="ewdeu.w" />
       </button>
 
       {/* Carousel container with consistent padding */}
-      <div className="px-8" data-oid="p3fpd19">
+      <div className="px-8" data-oid="zt2_i7m">
         {/* Carousel track */}
         <div
           className="flex flex-nowrap gap-8 transition-transform duration-500 ease-in-out"
@@ -123,28 +123,28 @@ export function AutoScrollCarousel({
             transform: `translateX(calc(-${(currentIndex - startIndex) * 25}% - ${(currentIndex - startIndex) * 2}rem))`,
             willChange: "transform",
           }}
-          data-oid="iom70ei"
+          data-oid="xmdh1v5"
         >
           {extendedImages.map((image, index) => (
             <div
               key={index}
               className="w-[calc(25%-1.5rem)] flex-shrink-0"
               style={{ minWidth: "calc(25% - 1.5rem)" }}
-              data-oid="derpwn4"
+              data-oid="7myc.s7"
             >
               <div
                 className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white p-2"
-                data-oid=":hhjjay"
+                data-oid="0o1_s9_"
               >
                 <div
                   className="w-full h-full flex items-center justify-center"
-                  data-oid="zr4:sbq"
+                  data-oid="dj96xvr"
                 >
                   <img
                     src={image || "/placeholder.svg"}
                     alt={`Property Quote ${(index % totalImages) + 1}`}
                     className="max-w-full max-h-full object-contain"
-                    data-oid="e8bjozl"
+                    data-oid="8a-u2qh"
                   />
                 </div>
               </div>
@@ -154,7 +154,7 @@ export function AutoScrollCarousel({
       </div>
 
       {/* Navigation dots */}
-      <div className="flex justify-center mt-6 gap-2" data-oid="5785bnk">
+      <div className="flex justify-center mt-6 gap-2" data-oid="ydatvy6">
         {Array.from({ length: totalImages }).map((_, index) => {
           const normalizedIndex =
             ((currentIndex % totalImages) + totalImages) % totalImages;
@@ -172,7 +172,7 @@ export function AutoScrollCarousel({
               }}
               className={`w-2 h-2 rounded-full transition-all ${isActive ? "bg-primary w-6" : "bg-gray-300"}`}
               aria-label={`Go to image ${index + 1}`}
-              data-oid="0p2ia0:"
+              data-oid="wh-5c8n"
             />
           );
         })}

@@ -10,18 +10,18 @@ export default function FeaturedSection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="en8p:qo">
-      <div className="container mx-auto px-4" data-oid="14j5htq">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="_2zu8ba">
+      <div className="container mx-auto px-4" data-oid="p5c_n8u">
         <div
           className="flex flex-col md:flex-row items-center gap-12"
-          data-oid="e1h-5o0"
+          data-oid="4ut9s5l"
         >
           <motion.div
             className="md:w-1/2 relative overflow-hidden rounded-lg"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            data-oid="j-u:fvq"
+            data-oid="_1v0_dn"
           >
             <motion.div
               className="absolute top-0 left-0 w-full h-full bg-orange-500 z-10"
@@ -29,41 +29,41 @@ export default function FeaturedSection() {
               animate={isInView ? { width: "100%" } : {}}
               transition={{ duration: 1.2, ease: "easeInOut" }}
               style={{ originX: 0 }}
-              data-oid="--z7le2"
+              data-oid="_e2r7d6"
             />
 
             <div
               className="relative w-full aspect-[4/3] overflow-hidden"
-              data-oid="o:_ggsq"
+              data-oid="bidn2f9"
             >
               <Image
                 src="/singapore-skyline-day.png"
                 alt="Niche Positioning Masterclass"
                 fill
                 className="object-cover"
-                data-oid="7k1zd6n"
+                data-oid="5.ike0j"
               />
 
               <div
                 className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"
-                data-oid="hc00-70"
+                data-oid="_68zqsl"
               ></div>
               <div
                 className="absolute bottom-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold"
-                data-oid="c57sn._"
+                data-oid="3ovcjh4"
               >
                 Featured Course
               </div>
             </div>
           </motion.div>
 
-          <div className="md:w-1/2" data-oid="s5tz_cr">
+          <div className="md:w-1/2" data-oid="ngljv_8">
             <motion.h3
               className="text-3xl font-bold text-gray-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
-              data-oid="1rssyy3"
+              data-oid="t260_4z"
             >
               Niche Positioning Masterclass
             </motion.h3>
@@ -72,14 +72,14 @@ export default function FeaturedSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="f7et3h8"
+              data-oid="i95_wpw"
             >
               Stand out in a crowded market by identifying and dominating your
               unique niche. This masterclass teaches real estate professionals
               how to position themselves as specialists rather than generalists,
               attracting higher-value clients and commanding premium fees.
             </motion.p>
-            <div className="relative h-24 w-full mb-6" data-oid="kx:7e4f">
+            <div className="relative h-24 w-full mb-6" data-oid="-icbpbf">
               {[0, 1, 2, 3].map((i) => (
                 <motion.div
                   key={i}
@@ -99,12 +99,12 @@ export default function FeaturedSection() {
                     type: "spring",
                     stiffness: 100,
                   }}
-                  data-oid="0.9m7jb"
+                  data-oid=":e2i9s7"
                 />
               ))}
               <Target
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-white z-10"
-                data-oid="kby.o7i"
+                data-oid="k1hto2b"
               />
             </div>
             <motion.a
@@ -113,10 +113,10 @@ export default function FeaturedSection() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.8 }}
-              data-oid="zf7ze2z"
+              data-oid="_q39r78"
             >
               Learn more about this course
-              <ArrowRight className="ml-2 h-4 w-4" data-oid="iw4kcpr" />
+              <ArrowRight className="ml-2 h-4 w-4" data-oid="bp7jnb6" />
             </motion.a>
           </div>
         </div>

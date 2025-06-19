@@ -14,7 +14,7 @@ const Textarea = React.forwardRef<
       )}
       ref={ref}
       {...props}
-      data-oid="s1228ik"
+      data-oid="-t_xvu_"
     />
   );
 });

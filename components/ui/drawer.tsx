@@ -12,7 +12,7 @@ const Drawer = ({
   <DrawerPrimitive.Root
     shouldScaleBackground={shouldScaleBackground}
     {...props}
-    data-oid="mdamq1u"
+    data-oid="b:dsk.c"
   />
 );
 
@@ -32,7 +32,7 @@ const DrawerOverlay = React.forwardRef<
     ref={ref}
     className={cn("fixed inset-0 z-50 bg-black/80", className)}
     {...props}
-    data-oid="ab.lx0c"
+    data-oid="iym0wii"
   />
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
@@ -41,8 +41,8 @@ const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
-  <DrawerPortal data-oid="3lg3stu">
-    <DrawerOverlay data-oid="6pz4qtm" />
+  <DrawerPortal data-oid="9m4_zfl">
+    <DrawerOverlay data-oid="slab.63" />
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
@@ -50,11 +50,11 @@ const DrawerContent = React.forwardRef<
         className,
       )}
       {...props}
-      data-oid="1ew0h_8"
+      data-oid="r5-awju"
     >
       <div
         className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-greyFriends"
-        data-oid="9::nf:_"
+        data-oid="93ye8j_"
       />
 
       {children}
@@ -70,7 +70,7 @@ const DrawerHeader = ({
   <div
     className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
     {...props}
-    data-oid=":og4z89"
+    data-oid="p02r4he"
   />
 );
 
@@ -83,7 +83,7 @@ const DrawerFooter = ({
   <div
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}
     {...props}
-    data-oid="744xwl3"
+    data-oid="1fe532:"
   />
 );
 
@@ -100,7 +100,7 @@ const DrawerTitle = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="-b9ivcf"
+    data-oid="ye2gm7."
   />
 ));
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
@@ -113,7 +113,7 @@ const DrawerDescription = React.forwardRef<
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
-    data-oid="cej3btb"
+    data-oid="l5o2w-8"
   />
 ));
 DrawerDescription.displayName = DrawerPrimitive.Description.displayName;

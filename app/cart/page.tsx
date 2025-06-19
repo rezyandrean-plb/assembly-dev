@@ -224,27 +224,27 @@ export default function CartPage() {
       fallback={
         <div
           className="min-h-screen flex items-center justify-center"
-          data-oid="2jnt:yc"
+          data-oid="fd82_e3"
         >
-          <div className="animate-pulse" data-oid="2usq_29">
+          <div className="animate-pulse" data-oid="jw-mpap">
             <div
               className="h-12 w-32 bg-gray-200 rounded mb-4"
-              data-oid="5vppih6"
+              data-oid="b04dfyw"
             ></div>
             <div
               className="h-8 w-48 bg-gray-200 rounded mb-4"
-              data-oid="xwcwws0"
+              data-oid="7by7988"
             ></div>
             <div
               className="h-4 w-64 bg-gray-200 rounded"
-              data-oid="uebz0yk"
+              data-oid="2si1u43"
             ></div>
           </div>
         </div>
       }
-      data-oid="41e2wt:"
+      data-oid="369k30f"
     >
-      <CartPageContent data-oid="8bgnw7g" />
+      <CartPageContent data-oid="t2tmke5" />
     </Suspense>
   );
 }

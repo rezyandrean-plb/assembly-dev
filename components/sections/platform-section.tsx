@@ -65,20 +65,20 @@ export default function PlatformSection() {
 
   const features = [
     {
-      icon: <Compass className="h-8 w-8 text-[#123B79]" data-oid="m9xpr28" />,
+      icon: <Compass className="h-8 w-8 text-[#123B79]" data-oid="st.76wk" />,
       title: "Navigate Complexity",
       description:
         "Find your way through Singapore's intricate real estate landscape with expert guidance.",
     },
     {
-      icon: <Map className="h-8 w-8 text-[#123B79]" data-oid="8iuvfqx" />,
+      icon: <Map className="h-8 w-8 text-[#123B79]" data-oid="j62a4dx" />,
       title: "Map Your Journey",
       description:
         "Visualize your path to success with our structured learning approach.",
     },
     {
       icon: (
-        <Navigation className="h-8 w-8 text-[#123B79]" data-oid="rnbpa84" />
+        <Navigation className="h-8 w-8 text-[#123B79]" data-oid="zpimpe3" />
       ),
 
       title: "Connect the Dots",
@@ -91,22 +91,22 @@ export default function PlatformSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white overflow-hidden min-h-screen"
-      data-oid="hlbfe5f"
+      data-oid="9-0j94n"
     >
       <div
         className="absolute inset-0 bg-white/30 z-[1]"
-        data-oid="vjenjq."
+        data-oid="y3gf46e"
       ></div>
       {/* Dynamic Network Background */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none"
-        data-oid="5hwfoer"
+        data-oid="8trx:jz"
       >
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid slice"
-          data-oid="p7td75_"
+          data-oid="msvcrz9"
         >
           {/* Base network - complex background */}
           {[...Array(30)].map((_, i) => (
@@ -123,7 +123,7 @@ export default function PlatformSection() {
                 opacity: isInView ? 0.18 : 0,
               }}
               transition={{ duration: 1.5, delay: i * 0.05 }}
-              data-oid="x8r6zx5"
+              data-oid="06jb5a5"
             />
           ))}
 
@@ -134,7 +134,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 0 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="5i6uwmw"
+            data-oid="7gepy-t"
           >
             <motion.path
               d="M100,500 C250,400 400,550 600,450 S800,500 900,400"
@@ -148,7 +148,7 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 0 ? 0.8 : 0,
               }}
               transition={{ duration: 1.5, delay: 0.3 }}
-              data-oid=".9r_8ru"
+              data-oid="rc.tx97"
             />
 
             {/* Glowing effect for the path */}
@@ -172,7 +172,7 @@ export default function PlatformSection() {
                   repeatType: "reverse",
                 },
               }}
-              data-oid="v1q9443"
+              data-oid="q92yn6z"
             />
 
             {/* Particles flowing along the path */}
@@ -195,7 +195,7 @@ export default function PlatformSection() {
                   offsetPath:
                     "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
                 }}
-                data-oid="iwpz1lo"
+                data-oid="xrfhvlo"
               />
             ))}
           </motion.g>
@@ -207,7 +207,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 1 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="cs4fgxq"
+            data-oid="28vskwl"
           >
             {/* Map nodes */}
             {[
@@ -229,7 +229,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 1 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                data-oid="k8ed6:o"
+                data-oid="bwrwyyy"
               />
             ))}
 
@@ -245,7 +245,7 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 1 ? 0.57 : 0,
               }}
               transition={{ duration: 1.8, delay: 0.7 }}
-              data-oid="bdt6gg1"
+              data-oid="jrsv7wo"
             />
 
             {/* "You are here" indicator */}
@@ -266,7 +266,7 @@ export default function PlatformSection() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "reverse",
               }}
-              data-oid="ahlzcqs"
+              data-oid="t91osnk"
             />
           </motion.g>
 
@@ -277,7 +277,7 @@ export default function PlatformSection() {
               opacity: activeFeature >= 2 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="_hvgpx0"
+            data-oid="7q:8.yn"
           >
             {/* Additional nodes */}
             {[
@@ -299,7 +299,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                data-oid="tu__zh5"
+                data-oid="5u-hj52"
               />
             ))}
 
@@ -323,7 +323,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.7 : 0,
                 }}
                 transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
-                data-oid="ly:ocmy"
+                data-oid="1_gronu"
               />
             ))}
 
@@ -347,7 +347,7 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.49 : 0,
                 }}
                 transition={{ duration: 1, delay: 0.5 + i * 0.15 }}
-                data-oid="uwngz:3"
+                data-oid=":bhrag6"
               />
             ))}
 
@@ -374,53 +374,53 @@ export default function PlatformSection() {
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                 }}
-                data-oid="pxsi:9_"
+                data-oid="n20j_ua"
               />
             ))}
           </motion.g>
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-20" data-oid="hwm3yj3">
+      <div className="container mx-auto px-4 relative z-20" data-oid="v60r206">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: contentOpacity, y: contentY }}
-          data-oid="6ibs1nj"
+          data-oid="99cv5k5"
         >
           <h2
             className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="7ujhw_u"
+            data-oid="arvpesn"
           >
             Your Platform for Mastery
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="5i8xk-0"
+            data-oid="4atbyau"
           >
             Assembly guides you through the interwoven network of opportunity in
             Singapore's real estate ecosystem
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="z6cieju"
+            data-oid="z4wc-pj"
           ></div>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-12" data-oid="265antb">
+        <div className="flex flex-col items-center gap-12" data-oid="0umxosm">
           <motion.div
             className="w-full max-w-3xl"
             style={{ opacity: contentOpacity, y: contentY }}
-            data-oid="n7h.d6x"
+            data-oid="potaky_"
           >
             <h3
               className="text-3xl font-bold text-[#123B79] mb-6 text-center"
-              data-oid="1k.43_4"
+              data-oid="xl47pfj"
             >
               Navigating the Network
             </h3>
             <p
               className="text-lg text-gray-700 mb-12 text-center"
-              data-oid="dmar-qu"
+              data-oid="r-xjfik"
             >
               In today's complex real estate landscape, success comes from
               understanding the interconnected nature of property, finance, and
@@ -428,7 +428,7 @@ export default function PlatformSection() {
               community to help you navigate this network with confidence.
             </p>
 
-            <div className="space-y-16" data-oid="_eoegxp">
+            <div className="space-y-16" data-oid="m5vaiqj">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -440,7 +440,7 @@ export default function PlatformSection() {
                     scale: activeFeature === index ? 1.05 : 1,
                   }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  data-oid="6dlclcl"
+                  data-oid="_g9je3b"
                 >
                   <motion.div
                     className="p-5 bg-[#F0A500]/10 rounded-full"
@@ -459,18 +459,18 @@ export default function PlatformSection() {
                       repeat:
                         activeFeature === index ? Number.POSITIVE_INFINITY : 0,
                     }}
-                    data-oid="-3-igit"
+                    data-oid="iakj0vh"
                   >
                     {feature.icon}
                   </motion.div>
-                  <div className="text-center md:text-left" data-oid="cmofr31">
+                  <div className="text-center md:text-left" data-oid="3k13h1c">
                     <h4
                       className="text-2xl font-semibold text-[#123B79] mb-2"
-                      data-oid="d5jme6e"
+                      data-oid=".p3ap.q"
                     >
                       {feature.title}
                     </h4>
-                    <p className="text-gray-600 max-w-xl" data-oid="83n029f">
+                    <p className="text-gray-600 max-w-xl" data-oid="ymx8ndf">
                       {feature.description}
                     </p>
                   </div>
