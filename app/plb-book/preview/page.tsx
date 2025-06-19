@@ -112,14 +112,14 @@ export default function BookPreviewPage() {
               data-oid="p9_hr01"
             >
               {/* Subtle pattern overlay */}
-              <div className="absolute inset-0 opacity-10" data-oid="teyj.:2">
+              <div className="absolute inset-0 opacity-5" data-oid="het8971">
                 <div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-12"
-                  data-oid="o._xkdq"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/10 to-transparent transform -skew-y-12"
+                  data-oid="4sdlak-"
                 ></div>
                 <div
-                  className="absolute inset-0 bg-gradient-to-l from-transparent via-white/3 to-transparent transform skew-y-12"
-                  data-oid="kdrv9py"
+                  className="absolute inset-0 bg-gradient-to-l from-transparent via-gray-300/8 to-transparent transform skew-y-12"
+                  data-oid="7dhetuv"
                 ></div>
               </div>
               <div className="max-w-md relative z-10" data-oid="91:zlqj">
