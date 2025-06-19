@@ -74,7 +74,7 @@ export default function PurchaseSection() {
       slug: "plb-book-paperback",
       price: "$29.99",
       image: "/images/plb-book-paperback.jpg",
-      instructor: "Assembly SG",
+      author: "PropertyLimBrothers",
       type: "paperback",
     });
     toast.success("Paperback added to your cart!");

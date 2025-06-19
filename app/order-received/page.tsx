@@ -21,7 +21,7 @@ interface OrderItem {
   type: "course" | "book" | "Course" | "Book";
   quantity: number;
   image?: string;
-  instructor?: string;
+  author?: string;
 }
 
 interface OrderDetails {
@@ -335,10 +335,13 @@ export default function OrderReceivedPage() {
                     >
                       {item.title}
                     </h3>
-                    {item.instructor && (
-                      <p className="text-sm text-gray-600" data-oid=".o-lb8q">
-                        by {item.instructor}
-                      </p>
+                    {item.author && (
+                      <span
+                        className="text-xs text-gray-500 ml-2"
+                        data-oid="beddw_z"
+                      >
+                        by {item.author}
+                      </span>
                     )}
                     <div
                       className="flex items-center gap-2 mt-1"

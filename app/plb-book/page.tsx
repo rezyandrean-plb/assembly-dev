@@ -148,13 +148,14 @@ export default function PLBBookPage() {
 
   const handleAddToCart = () => {
     const bookItem = {
-      id: "property-leverage-blueprint",
-      title: "Property Leverage Blueprint",
+      id: "plb-book",
+      title:
+        "Positioning: PropertyLimBrothers on the Art of Selling Your Property to its Maximum Potential",
       price: "29.00", // Discounted price
-      instructor: "Assembly SG",
-      image: "/images/plb-book-cover.png",
+      author: "PropertyLimBrothers",
+      image: "/images/PLB Book Front Cover_FA.jpg",
       type: "Book" as const,
-      slug: "property-leverage-blueprint",
+      slug: "propertylimbrothers-on-the-art-of-selling-your-property-to-its-maximum-potential",
     };
     addToCart(bookItem);
     toast.success("Property Leverage Blueprint added to cart!");
@@ -186,12 +187,17 @@ export default function PLBBookPage() {
                   data-oid="ywhmdcx"
                 >
                   <div className="fade-in" data-oid="0_94i7m">
-                    <h1 className="text-primary mb-4" data-oid="u0.mmge">
-                      Property Leverage Blueprint
+                    <h1
+                      className="text-primary mb-4 text-3xl"
+                      data-oid="u0.mmge"
+                    >
+                      Positioning: PropertyLimBrothers on the Art of Selling
+                      Your Property to its Maximum Potential
                     </h1>
-                    <p className="text-xl mb-6" data-oid="b4r9bz7">
-                      Your comprehensive guide to mastering property investment
-                      in Singapore's dynamic market
+                    <p className="text-md mb-6" data-oid="b4r9bz7">
+                      When you truly understand how to sell and see through the
+                      lens of a buyer, you gain charity on what, where and which
+                      property to buy and invest in next.
                     </p>
                     <div className="mb-6" data-oid="von4_.0">
                       <div
@@ -202,21 +208,15 @@ export default function PLBBookPage() {
                           className="text-gray-500 line-through mr-2"
                           data-oid="n8zyuyk"
                         >
-                          $39
+                          $39.00
                         </span>
                         <span
                           className="text-2xl font-bold text-primary"
                           data-oid=".28-ec3"
                         >
-                          $29
+                          $29.00
                         </span>
                       </div>
-                      <p
-                        className="text-sm text-gray-500 mt-2"
-                        data-oid="neknf42"
-                      >
-                        Free shipping for all physical copies within Singapore
-                      </p>
                     </div>
                     <div className="mt-8 flex space-x-4" data-oid="zrn.bvx">
                       <Button
@@ -265,7 +265,8 @@ export default function PLBBookPage() {
 
             {/* Book Overview Section - Redesigned */}
             <section
-              className="section bg-highlight relative overflow-hidden"
+              className="section relative overflow-hidden"
+              style={{ backgroundColor: "#eff5fd" }}
               data-oid="_7xo2mm"
             >
               <div
@@ -304,7 +305,7 @@ export default function PLBBookPage() {
                       Real Estate
                     </span>
                     <span
-                      className="bg-primary-dark text-[#123b79] px-5 py-2 rounded-full text-sm font-bold shadow-md"
+                      className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
                       data-oid="baago68"
                     >
                       Selling
@@ -374,7 +375,7 @@ export default function PLBBookPage() {
                         data-oid="u4u5a0a"
                       >
                         <div
-                          className="w-3/4 h-3/4 bg-gradient-to-tr from-primary to-primary-dark rounded-full flex items-center justify-center text-white text-5xl font-bold"
+                          className="w-3/4 h-3/4 bg-gradient-to-tr from-primary to-primary-light rounded-full flex items-center justify-center text-white text-5xl font-bold"
                           data-oid="2wui3ne"
                         >
                           17+
@@ -392,7 +393,7 @@ export default function PLBBookPage() {
             {/* Quote Carousel Section */}
             <section
               className="section py-16"
-              style={{ backgroundColor: "#E8E8E8" }}
+              style={{ backgroundColor: "#ffffff" }}
               data-oid="bn1eg.."
             >
               <div className="container-fluid px-0" data-oid="1lcwo9o">
@@ -423,7 +424,8 @@ export default function PLBBookPage() {
 
             {/* Book Content Section - Redesigned for Full Width */}
             <section
-              className="section relative overflow-hidden bg-secondary py-16"
+              className="section relative overflow-hidden py-16"
+              style={{ backgroundColor: "#e7ebf1" }}
               data-oid="x1m62.2"
             >
               <div
@@ -467,8 +469,8 @@ export default function PLBBookPage() {
                         data-oid="oboq88p"
                       ></div>
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-02%20at%209.03.38%E2%80%AFpm-EzqCO8JB6tjTccn8gq9St2vGkBsqG0.png"
-                        alt="Property Positioning Book Cover"
+                        src="/images/PLB Book Front Cover_FA.jpg"
+                        alt="PropertyLimBrothers Book Cover"
                         className="relative z-10 w-full h-auto rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform rotate-3 hover:rotate-0 transition-all duration-500"
                         data-oid="ps06acd"
                       />
@@ -676,9 +678,14 @@ export default function PLBBookPage() {
 
             {/* Chapter Topics Section */}
             <section
-              className="section bg-gradient-to-br from-slate-800 to-slate-700 text-white"
+              className="section relative overflow-hidden text-white"
+              style={{ backgroundColor: "#123b79" }}
               data-oid="j56s:ce"
             >
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-blue-900/20"
+                data-oid="8fj-qoi"
+              ></div>
               <div className="container relative z-10" data-oid="j4n7mo0">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
@@ -818,7 +825,19 @@ export default function PLBBookPage() {
             </section>
 
             {/* Author Section */}
-            <section className="section" data-oid="-44txfx">
+            <section
+              className="section relative overflow-hidden"
+              style={{ backgroundColor: "#ffffff" }}
+              data-oid="-44txfx"
+            >
+              <div
+                className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full -translate-y-32 translate-x-32"
+                data-oid="oiplo4b"
+              ></div>
+              <div
+                className="absolute bottom-0 left-0 w-48 h-48 bg-white/20 rounded-full translate-y-24 -translate-x-24"
+                data-oid="cx74vkc"
+              ></div>
               <div className="container relative z-10" data-oid="0novn2b">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
@@ -855,13 +874,10 @@ export default function PLBBookPage() {
 
             {/* Guarantee Section - New */}
             <section
-              className="section bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden"
+              className="section relative overflow-hidden"
+              style={{ backgroundColor: "#e1e7ee" }}
               data-oid="guarantee-section"
             >
-              <div
-                className="absolute inset-0 bg-black/10"
-                data-oid="jthfptj"
-              ></div>
               <div
                 className="container relative z-10"
                 data-oid="guarantee-container"
@@ -1021,7 +1037,7 @@ export default function PLBBookPage() {
             {/* FAQ Section - Redesigned */}
             <section
               className="section relative overflow-hidden"
-              style={{ backgroundColor: "#eff5fd" }}
+              style={{ backgroundColor: "#fdfdfd" }}
               data-oid="-tiq_b0"
             >
               {/* Decorative elements */}

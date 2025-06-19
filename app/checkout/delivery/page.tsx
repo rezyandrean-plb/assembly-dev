@@ -121,7 +121,7 @@ export default function DeliveryPage() {
                         {item.title}
                       </h4>
                       <p className="text-sm text-gray-600" data-oid="4m_azpx">
-                        By {item.instructor}
+                        By {item.author}
                       </p>
                       <p className="text-sm text-gray-600" data-oid="eqiki77">
                         Quantity: {item.quantity}

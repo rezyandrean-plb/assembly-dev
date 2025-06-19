@@ -120,8 +120,15 @@ export default function BookPreviewPage() {
                     className="relative w-64 h-80 bg-blue-900 rounded-lg shadow-xl transform rotate-3 mx-auto"
                     data-oid="62iqv.1"
                   >
+                    <img
+                      src="/images/PLB Book Front Cover_FA.jpg"
+                      alt="PropertyLimBrothers Book Cover"
+                      className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      data-oid="7:emflj"
+                    />
+
                     <div
-                      className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center"
+                      className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center opacity-0"
                       data-oid="c4.iet:"
                     >
                       <div className="text-center p-4" data-oid="ehx4qh:">

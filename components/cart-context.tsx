@@ -15,7 +15,7 @@ export interface CartItem {
   slug: string;
   price: string;
   image: string;
-  instructor: string;
+  author: string;
   quantity: number;
   type?: "Course" | "Book";
 }

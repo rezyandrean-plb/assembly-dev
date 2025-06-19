@@ -186,6 +186,7 @@ export default function CartPageContent() {
                 className="w-6 h-6 text-primary"
                 data-oid="65n:hq:"
               />
+
               <span
                 className="font-semibold text-neutral-700"
                 data-oid="v2n:470"
@@ -338,7 +339,7 @@ export default function CartPageContent() {
                                     className="text-neutral-600 mb-3"
                                     data-oid="dgx44h0"
                                   >
-                                    By {item.instructor || "Assembly.sg"}
+                                    By {item.author || "Assembly.sg"}
                                   </p>
 
                                   {/* Course Features */}
@@ -354,6 +355,7 @@ export default function CartPageContent() {
                                         className="w-4 h-4"
                                         data-oid=".-q-f1x"
                                       />
+
                                       <span data-oid="5uljg21">2-3 hours</span>
                                     </div>
                                     <div
@@ -364,6 +366,7 @@ export default function CartPageContent() {
                                         className="w-4 h-4"
                                         data-oid="era:f.g"
                                       />
+
                                       <span data-oid="y5spsj4">
                                         1,200+ students
                                       </span>
@@ -376,6 +379,7 @@ export default function CartPageContent() {
                                         className="w-4 h-4 fill-yellow-400 text-yellow-400"
                                         data-oid="n-b71dv"
                                       />
+
                                       <span data-oid="qpb0.um">4.8</span>
                                     </div>
                                   </div>
@@ -473,6 +477,7 @@ export default function CartPageContent() {
                                         className="w-4 h-4"
                                         data-oid=".0lwkp2"
                                       />
+
                                       <span data-oid="3ir86gb">
                                         Lifetime Access
                                       </span>
@@ -617,6 +622,7 @@ export default function CartPageContent() {
                             className="w-5 h-5 text-green-500"
                             data-oid="it7gk.k"
                           />
+
                           <span
                             className="font-semibold text-neutral-900"
                             data-oid="cuyv4do"
@@ -683,6 +689,7 @@ export default function CartPageContent() {
                     className="w-5 h-5 text-yellow-500"
                     data-oid="6w7w4h3"
                   />
+
                   <span
                     className="font-semibold text-neutral-700"
                     data-oid="6-uqf2q"
