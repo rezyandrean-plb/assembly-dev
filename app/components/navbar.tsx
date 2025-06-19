@@ -80,10 +80,10 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center" data-oid="puu98cm">
           <Image
-            src="/public/images/assembly-logo.png"
+            src="/images/assembly-logo.png"
             alt="Assembly SG Logo"
-            width={60}
-            height={60}
+            width={170}
+            height={170}
             data-oid="98rb_y5"
           />
         </Link>

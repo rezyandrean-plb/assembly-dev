@@ -17,18 +17,13 @@ export default function PaymentPage() {
     ? deliveryAddress
     : billingAddress;
 
-  const paymentMethods = [
-    { id: "rewards", name: "David Jones Rewards", icon: "💳" },
-    { id: "points", name: "David Jones Points", icon: "🎯" },
-    { id: "giftcard", name: "David Jones Gift Card", icon: "🎁" },
-  ];
+  const paymentMethods: { id: string; name: string; icon: string }[] = [];
 
   const otherPaymentMethods = [
+    { id: "grabpay", name: "GrabPay", icon: "🟩" },
+    { id: "applepay", name: "Apple Pay", icon: "" },
     { id: "paypal", name: "PayPal", icon: "🅿️" },
-    { id: "afterpay", name: "Afterpay", icon: "🔄" },
-    { id: "clicktopay", name: "Click to Pay", icon: "👆" },
-    { id: "alipay", name: "Alipay", icon: "💰" },
-    { id: "unionpay", name: "Union Pay", icon: "🏦" },
+    { id: "stripe", name: "Stripe", icon: "💳" },
   ];
 
   return (
