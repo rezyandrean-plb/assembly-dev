@@ -425,254 +425,297 @@ export default function PLBBookPage() {
                 </div>
 
                 <div className="max-w-6xl mx-auto" data-oid="tciay34">
-                  {/* Book image centered */}
-                  <div className="text-center mb-12 fade-in" data-oid="5vcfxam">
+                  <div
+                    className="bg-white rounded-xl shadow-lg p-8 mb-8"
+                    data-oid="72_z-x7"
+                  >
                     <div
-                      className="relative inline-block w-48 h-64"
-                      data-oid="w5rajm2"
+                      className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+                      data-oid="gd5olzp"
                     >
-                      <img
-                        src="/images/PLB Book Front Cover_FA.jpg"
-                        alt="PropertyLimBrothers Book Cover"
-                        className="w-full h-full object-cover rounded-lg shadow-xl"
-                        data-oid="ps06acd"
-                      />
+                      {/* Book image on the left */}
+                      <div className="lg:col-span-4 fade-in" data-oid="5vcfxam">
+                        <div
+                          className="relative w-48 h-64 mx-auto lg:mx-0"
+                          data-oid="w5rajm2"
+                        >
+                          <img
+                            src="/images/PLB Book Front Cover_FA.jpg"
+                            alt="PropertyLimBrothers Book Cover"
+                            className="w-full h-full object-cover rounded-lg shadow-xl"
+                            data-oid="ps06acd"
+                          />
 
-                      <div
-                        className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
-                        data-oid="k8h31eh"
-                      >
-                        <div data-oid="u_zi2t1">
-                          <div className="text-xs font-bold" data-oid="4xtwk3j">
-                            Limited
+                          <div
+                            className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
+                            data-oid="k8h31eh"
+                          >
+                            <div data-oid="u_zi2t1">
+                              <div
+                                className="text-xs font-bold"
+                                data-oid="4xtwk3j"
+                              >
+                                Limited
+                              </div>
+                              <div className="text-xs" data-oid="uhrfego">
+                                Edition
+                              </div>
+                            </div>
                           </div>
-                          <div className="text-xs" data-oid="uhrfego">
-                            Edition
+                        </div>
+                      </div>
+
+                      {/* List on the right */}
+                      <div className="lg:col-span-8 fade-in" data-oid="6uw5118">
+                        <div
+                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                          data-oid="g9i147d"
+                        >
+                          <div className="space-y-3" data-oid="ae7scve">
+                            <div
+                              className="flex items-start"
+                              data-oid="6oz_1df"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="fp82ldw"
+                              >
+                                01
+                              </div>
+                              <div data-oid="mhrhff2">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="b09.ep1"
+                                >
+                                  The mindset of successful property sellers
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="valrzb6"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid=".wyr42m"
+                              >
+                                02
+                              </div>
+                              <div data-oid="12-tvc_">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="-3.4k.p"
+                                >
+                                  The Singapore Buy and Sell Pattern
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="xz-jg_o"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="k1i82hh"
+                              >
+                                03
+                              </div>
+                              <div data-oid="1qx9lx2">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="t43_rwe"
+                                >
+                                  How to build empathy and connection with your
+                                  eventual buyer
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="i:hkpcr"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="t4kktji"
+                              >
+                                04
+                              </div>
+                              <div data-oid="1fgzhv1">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="j4crd92"
+                                >
+                                  Step-by-step guide to preparing for a home
+                                  sale
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="7s:7dlo"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="brzthz4"
+                              >
+                                05
+                              </div>
+                              <div data-oid="3swp4s_">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="n93fs8o"
+                                >
+                                  How to prepare and dress your house for the
+                                  sale
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="6z7pka5"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="pqeay-q"
+                              >
+                                06
+                              </div>
+                              <div data-oid="uo_vn.:">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="v1l-c5b"
+                                >
+                                  How to leverage on and harness the power of
+                                  social media
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="space-y-3" data-oid=".atp:6o">
+                            <div
+                              className="flex items-start"
+                              data-oid="4ies32s"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="ut68se5"
+                              >
+                                07
+                              </div>
+                              <div data-oid="lhqo3a6">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="ctictak"
+                                >
+                                  The four pillars of social media content
+                                  creation
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="a6o0y3-"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="y8r.2ze"
+                              >
+                                08
+                              </div>
+                              <div data-oid="-276c9g">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="itp2v89"
+                                >
+                                  How to create a comprehensive Home Tour
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="8qvrh8:"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="l-n9.go"
+                              >
+                                09
+                              </div>
+                              <div data-oid="bu2oblf">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="lj.9_uf"
+                                >
+                                  How to advertise and distribute your content
+                                  to maximise attention
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="f5g719q"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="k:eqa1:"
+                              >
+                                10
+                              </div>
+                              <div data-oid="9d7r374">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="dxzkajh"
+                                >
+                                  Pricing techniques for your home
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              className="flex items-start"
+                              data-oid="2p6wg5f"
+                            >
+                              <div
+                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
+                                data-oid="r:f6h1k"
+                              >
+                                11
+                              </div>
+                              <div data-oid="mas1f4y">
+                                <h3
+                                  className="text-primary font-semibold text-sm"
+                                  data-oid="dfckut_"
+                                >
+                                  Graphic guides to timeline and financial
+                                  calculations
+                                </h3>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Simple list layout */}
-                  <div className="fade-in" data-oid="6uw5118">
-                    <div
-                      className="bg-white rounded-xl shadow-lg p-8 mb-8"
-                      data-oid="n6z.j5s"
+                  <div className="text-center" data-oid="ed8wkul">
+                    <Link
+                      href="/plb-book/preview"
+                      className="inline-block"
+                      data-oid="u0ja7-c"
                     >
-                      <div
-                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                        data-oid="2_oiooa"
-                      >
-                        <div className="space-y-4" data-oid="een4fm-">
-                          <div className="flex items-start" data-oid="p7j67td">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="llqik3k"
-                            >
-                              01
-                            </div>
-                            <div data-oid="l-ws_0v">
-                              <h3
-                                className="text-primary font-semibold mb-1 text-md"
-                                data-oid="1f7e16:"
-                              >
-                                The mindset of successful property sellers
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="q7v8wzx">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="p6ads2m"
-                            >
-                              02
-                            </div>
-                            <div data-oid="j4mjb_h">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="9d418_o"
-                              >
-                                The Singapore Buy and Sell Pattern
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="jiyk6a:">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="felhmg2"
-                            >
-                              03
-                            </div>
-                            <div data-oid=":.4-n-1">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="b2k90bg"
-                              >
-                                How to build empathy and connection with your
-                                eventual buyer
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="le6-3og">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="y_lxg78"
-                            >
-                              04
-                            </div>
-                            <div data-oid=".-llig9">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="g:oxq9:"
-                              >
-                                Step-by-step guide to preparing for a home sale
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="r164gmu">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="z16b7z6"
-                            >
-                              05
-                            </div>
-                            <div data-oid=":9ll:z_">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="9fd4vdi"
-                              >
-                                How to prepare and dress your house for the sale
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="za809zd">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="6xkho2w"
-                            >
-                              06
-                            </div>
-                            <div data-oid="r2q2lbs">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="l0qjj3z"
-                              >
-                                How to leverage on and harness the power of
-                                social media
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="space-y-4" data-oid="qbge8l7">
-                          <div className="flex items-start" data-oid="zua8br0">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="we705qq"
-                            >
-                              07
-                            </div>
-                            <div data-oid="46iiwr6">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="q8mjerm"
-                              >
-                                The four pillars of social media content
-                                creation
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="0g488p5">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="7477n6l"
-                            >
-                              08
-                            </div>
-                            <div data-oid="v-:4hv0">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="7_ht_:i"
-                              >
-                                How to create a comprehensive Home Tour
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="dxv23zd">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="ztas6bi"
-                            >
-                              09
-                            </div>
-                            <div data-oid="2e4gs:s">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="dfajck0"
-                              >
-                                How to advertise and distribute your content to
-                                maximise attention
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="ytah-ij">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid="r4prn9i"
-                            >
-                              10
-                            </div>
-                            <div data-oid="rd8pxoa">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid=".nuy.l_"
-                              >
-                                Pricing techniques for your home
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start" data-oid="47u93bf">
-                            <div
-                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
-                              data-oid=".l_aaoo"
-                            >
-                              11
-                            </div>
-                            <div data-oid="jbzvkki">
-                              <h3
-                                className="text-primary font-semibold mb-1"
-                                data-oid="mvzwmqf"
-                              >
-                                Graphic guides to timeline and financial
-                                calculations
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="text-center" data-oid="ed8wkul">
-                      <Link
-                        href="/plb-book/preview"
-                        className="inline-block"
-                        data-oid="u0ja7-c"
-                      >
-                        <button className="btn btn-primary" data-oid="orda2cg">
-                          Preview Free Chapter →
-                        </button>
-                      </Link>
-                    </div>
+                      <button className="btn btn-primary" data-oid="orda2cg">
+                        Preview Free Chapter →
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
