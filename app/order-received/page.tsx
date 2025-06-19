@@ -552,7 +552,7 @@ export default function OrderReceivedPage() {
         >
           <button
             onClick={() => router.push("/profile/purchase-history")}
-            className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
             data-oid="ryajvn2"
           >
             View Order History
@@ -560,7 +560,7 @@ export default function OrderReceivedPage() {
 
           <button
             onClick={() => router.push("/contact")}
-            className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
             data-oid="ozke33w"
           >
             Contact Support
