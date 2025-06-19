@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCheckout } from "@/context/checkout-context";
-import { useCart } from "@/components/cart-context";
-import { useTracking } from "@/context/tracking-context";
 import OrderSummary from "../components/order-summary";
 import { Lock, ChevronDown } from "lucide-react";
 
@@ -12,60 +10,12 @@ export default function PaymentPage() {
   const router = useRouter();
   const { deliveryAddress, billingAddress, billingSameAsDelivery } =
     useCheckout();
-  const { cart, clearCart } = useCart();
-  const { createTrackingInfo } = useTracking();
   const [selectedPayment, setSelectedPayment] = useState("Credit / Debit");
   const [expandedSection, setExpandedSection] = useState("Credit / Debit");
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const finalBillingAddress = billingSameAsDelivery
     ? deliveryAddress
     : billingAddress;
-
-  const hasBooks = cart.some(
-    (item) => item.type === "book" || item.type === "Book",
-  );
-
-  const handleOrderCompletion = async () => {
-    setIsProcessing(true);
-
-    try {
-      // Simulate payment processing
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Generate order ID
-      const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
-
-      if (hasBooks) {
-        // Create tracking information for orders with books
-        const recipientInfo = {
-          name: `${finalBillingAddress.firstName} ${finalBillingAddress.lastName}`,
-          address: `${finalBillingAddress.streetAddress}, ${finalBillingAddress.suburb}, ${finalBillingAddress.state} ${finalBillingAddress.postcode}`,
-          phone: finalBillingAddress.mobile,
-        };
-
-        const trackingInfo = createTrackingInfo(orderId, recipientInfo);
-
-        // Clear cart
-        clearCart();
-
-        // Redirect to tracking page
-        router.push(`/tracking?tracking=${trackingInfo.trackingNumber}`);
-      } else {
-        // For courses only, show success message and redirect to courses
-        clearCart();
-        alert(
-          "Order placed successfully! You can now access your courses in your profile.",
-        );
-        router.push("/profile/completed-courses");
-      }
-    } catch (error) {
-      console.error("Order processing failed:", error);
-      alert("There was an error processing your order. Please try again.");
-    } finally {
-      setIsProcessing(false);
-    }
-  };
 
   const paymentMethods: { id: string; name: string; icon: string }[] = [];
 
@@ -389,27 +339,11 @@ export default function PaymentPage() {
 
               {/* Proceed to Checkout Button */}
               <button
-                onClick={handleOrderCompletion}
-                disabled={isProcessing}
-                className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
+                onClick={() => alert("Order Placed!")}
+                className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
                 data-oid="r43kqne"
               >
-                {isProcessing ? (
-                  <>
-                    <div
-                      className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"
-                      data-oid="wig0dt2"
-                    ></div>
-                    Processing Order...
-                  </>
-                ) : (
-                  <>
-                    {hasBooks
-                      ? "Complete Order & Track Delivery"
-                      : "Complete Order"}{" "}
-                    →
-                  </>
-                )}
+                Proceed to Checkout →
               </button>
 
               {/* Continue Shopping */}
