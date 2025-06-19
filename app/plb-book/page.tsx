@@ -241,7 +241,7 @@ export default function PLBBookPage() {
                     data-oid="ls8_1q5"
                   >
                     <div
-                      className="relative w-64 h-80 bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
+                      className="relative w-[300px] h-[390px] bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
                       data-oid="vmbpa3h"
                     >
                       <img
@@ -435,32 +435,15 @@ export default function PLBBookPage() {
                       data-oid="5vcfxam"
                     >
                       <div
-                        className="absolute w-[120%] -left-[10%]"
+                        className="absolute w-[165%] -left-[30%]"
                         data-oid="w5rajm2"
                       >
                         <img
                           src="/images/PLB Book Mockup Cover & Content.png"
                           alt="PropertyLimBrothers Book Cover"
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-contain scale-150"
                           data-oid="ps06acd"
                         />
-
-                        <div
-                          className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
-                          data-oid="k8h31eh"
-                        >
-                          <div data-oid="u_zi2t1">
-                            <div
-                              className="text-xs font-bold"
-                              data-oid="4xtwk3j"
-                            >
-                              Limited
-                            </div>
-                            <div className="text-xs" data-oid="uhrfego">
-                              Edition
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -707,18 +690,6 @@ export default function PLBBookPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div className="text-center" data-oid="ed8wkul">
-                    <Link
-                      href="/plb-book/preview"
-                      className="inline-block"
-                      data-oid="u0ja7-c"
-                    >
-                      <button className="btn btn-primary" data-oid="orda2cg">
-                        Preview Free Chapter →
-                      </button>
-                    </Link>
                   </div>
                 </div>
               </div>
