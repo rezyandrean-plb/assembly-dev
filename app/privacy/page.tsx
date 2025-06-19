@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
               className="text-4xl font-bold text-gray-900 mb-4"
               data-oid=".olhi.m"
             >
-              Privacy Policy
+              DATA PROTECTION NOTICE FOR CUSTOMERS
             </h1>
             <p className="text-gray-600" data-oid="rdlzqxg">
               Last updated: 1 January 2024

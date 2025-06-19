@@ -121,7 +121,7 @@ export default function OrderReceivedPage() {
   }
 
   const formatPrice = (price: number) => {
-    return `${price.toFixed(2)}`;
+    return `$${price.toFixed(2)}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -309,10 +309,10 @@ export default function OrderReceivedPage() {
 
                 <div className="text-right" data-oid="m0dl9aq">
                   <p className="font-semibold text-gray-900" data-oid="r7jnqw_">
-                    ${(item.price * item.quantity).toFixed(2)}
+                  ${(item.price * item.quantity).toFixed(2)}
                   </p>
                   <p className="text-sm text-gray-500" data-oid="_pfhk0q">
-                    ${item.price.toFixed(2)} each
+                  ${item.price.toFixed(2)} each
                   </p>
                 </div>
               </div>
@@ -363,60 +363,49 @@ export default function OrderReceivedPage() {
               </div>
             </div>
 
-            <div
-              className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
-              data-oid="k0l:lft"
-            >
               <div
-                className="flex items-center justify-between"
-                data-oid="r1bde.8"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
+                data-oid="k0l:lft"
               >
-                <div className="flex-1" data-oid="k5iw7s9">
-                  <h3
-                    className="font-semibold text-gray-900 mb-1"
-                    data-oid="ruhkt22"
+                <div
+                  className="flex items-center justify-between"
+                  data-oid="r1bde.8"
+                >
+                  <div className="flex-1" data-oid="k5iw7s9">
+                    <h3
+                      className="font-semibold text-gray-900 mb-1"
+                      data-oid="ruhkt22"
+                    >
+                      Tracking Number
+                    </h3>
+                    {orderDetails.trackingNumber ? (
+                    <div className="flex items-center gap-3">
+                    <p
+                      className="text-gray-600 font-mono text-lg"
+                      data-oid="jq88g7_"
+                    >
+                      {orderDetails.trackingNumber}
+                    </p>
+                  <button
+                    onClick={() =>
+                      router.push(
+                        `/tracking?tracking=${orderDetails.trackingNumber}`,
+                      )
+                    }
+                    className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2 text-sm"
+                    data-oid="wdj_ont"
                   >
-                    Tracking Number
-                  </h3>
-                  {orderDetails.trackingNumber ? (
-                    <div className="flex items-center gap-3" data-oid="-rr.qxg">
-                      <p
-                        className="text-gray-600 font-mono text-lg"
-                        data-oid="jq88g7_"
-                      >
-                        {orderDetails.trackingNumber}
-                      </p>
-                      <button
-                        onClick={() =>
-                          router.push(
-                            `/tracking?tracking=${orderDetails.trackingNumber}`,
-                          )
-                        }
-                        className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2 text-sm"
-                        data-oid="wdj_ont"
-                      >
-                        <ExternalLink className="h-4 w-4" data-oid="tta9jm4" />
-                        Track Package
-                      </button>
-                    </div>
+                    <ExternalLink className="h-4 w-4" data-oid="tta9jm4" />
+                    Track Package
+                  </button>
+                  </div>
                   ) : (
-                    <p className="text-gray-500 italic" data-oid="izbgj:s">
-                      Tracking number will be updated once the order is ready to
-                      ship.
+                    <p className="text-gray-500 italic">
+                      Tracking number will be updated once the order is ready to ship.
                     </p>
                   )}
                 </div>
               </div>
-            </div>
-
-            <div
-              className="flex items-center gap-2 text-sm text-gray-600"
-              data-oid="eqr2jrt"
-            >
-              <Clock className="h-4 w-4" data-oid="cq1ne8p" />
-              <span data-oid="4s8ukjo">
-                Estimated delivery: 3-5 business days
-              </span>
             </div>
           </div>
         )}
@@ -567,11 +556,11 @@ export default function OrderReceivedPage() {
           </button>
 
           <button
-            onClick={() => router.push("/")}
-            className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors"
+            onClick={() => router.push("/courses")}
+            className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors whitespace-nowrap"
             data-oid="9zmuwms"
           >
-            Continue Browin{" "}
+            Continue Browsing Courses
           </button>
         </div>
 
