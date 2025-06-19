@@ -263,8 +263,7 @@ export default function PLBBookPage() {
 
             {/* Book Overview Section - Redesigned */}
             <section
-              className="section relative overflow-hidden"
-              style={{ backgroundColor: "#e0f2fe" }}
+              className="section bg-highlight relative overflow-hidden"
               data-oid="_7xo2mm"
             >
               <div
@@ -391,7 +390,7 @@ export default function PLBBookPage() {
             {/* Quote Carousel Section */}
             <section
               className="section py-16"
-              style={{ backgroundColor: "#fef7ed" }}
+              style={{ backgroundColor: "#E8E8E8" }}
               data-oid="bn1eg.."
             >
               <div className="container-fluid px-0" data-oid="1lcwo9o">
@@ -422,8 +421,7 @@ export default function PLBBookPage() {
 
             {/* Book Content Section - Redesigned for Full Width */}
             <section
-              className="section relative overflow-hidden py-16"
-              style={{ backgroundColor: "#f3e8ff" }}
+              className="section relative overflow-hidden bg-secondary py-16"
               data-oid="x1m62.2"
             >
               <div
@@ -676,14 +674,9 @@ export default function PLBBookPage() {
 
             {/* Chapter Topics Section */}
             <section
-              className="section relative overflow-hidden"
-              style={{ backgroundColor: "#0f766e" }}
+              className="section bg-gradient-to-br from-slate-800 to-slate-700 text-white"
               data-oid="j56s:ce"
             >
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-teal-600/90 to-teal-700/90"
-                data-oid="widt3ex"
-              ></div>
               <div className="container relative z-10" data-oid="j4n7mo0">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
@@ -691,12 +684,12 @@ export default function PLBBookPage() {
                 >
                   <div className="fade-in" data-oid="w79zcki">
                     <h2
-                      className="text-2xl md:text-3xl font-bold mb-4 text-white"
+                      className="text-2xl md:text-3xl font-bold mb-4"
                       data-oid="437oek0"
                     >
                       Unlock Your Property's Maximum Potential
                     </h2>
-                    <p className="mb-6 text-white/90" data-oid="8l.7-d3">
+                    <p className="mb-6" data-oid="8l.7-d3">
                       Delve into a comprehensive guide to optimising property
                       value, blending market insights, data analysis, and buyer
                       psychology.
@@ -823,19 +816,7 @@ export default function PLBBookPage() {
             </section>
 
             {/* Author Section */}
-            <section
-              className="section relative overflow-hidden"
-              style={{ backgroundColor: "#fafafa" }}
-              data-oid="-44txfx"
-            >
-              <div
-                className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-32 translate-x-32"
-                data-oid="iyp3-8o"
-              ></div>
-              <div
-                className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full translate-y-24 -translate-x-24"
-                data-oid="ac.u4r0"
-              ></div>
+            <section className="section" data-oid="-44txfx">
               <div className="container relative z-10" data-oid="0novn2b">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
@@ -870,245 +851,11 @@ export default function PLBBookPage() {
               </div>
             </section>
 
-            {/* Customer Reviews Section - New */}
-            <section
-              className="section bg-white relative overflow-hidden"
-              data-oid="reviews-section"
-            >
-              <div
-                className="container relative z-10"
-                data-oid="reviews-container"
-              >
-                <div
-                  className="text-center mb-12 fade-in"
-                  data-oid="reviews-header"
-                >
-                  <h2
-                    className="text-3xl md:text-4xl font-bold text-primary mb-4"
-                    data-oid="kjk56t2"
-                  >
-                    What Our Readers Say
-                  </h2>
-                  <p
-                    className="text-lg text-gray-600 max-w-2xl mx-auto"
-                    data-oid="2xl7epp"
-                  >
-                    Join thousands of successful property investors who have
-                    transformed their approach
-                  </p>
-                </div>
-
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-                  data-oid="reviews-grid"
-                >
-                  {/* Review 1 */}
-                  <div
-                    className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 fade-in"
-                    data-oid="iwgmcfr"
-                  >
-                    <div className="flex items-center mb-4" data-oid="vbe9r3q">
-                      <div className="flex text-yellow-400" data-oid="fb5nx36">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-5 h-5 fill-current"
-                            viewBox="0 0 20 20"
-                            data-oid="s-p69qf"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                              data-oid="ntkl7ij"
-                            />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-gray-700 mb-4 italic" data-oid="iuezrt6">
-                      "This book completely changed how I approach property
-                      selling. The positioning strategies are game-changing!"
-                    </p>
-                    <div className="flex items-center" data-oid="sl7vdjv">
-                      <div
-                        className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3"
-                        data-oid="11sa4c2"
-                      >
-                        S
-                      </div>
-                      <div data-oid="bh1yxxq">
-                        <p
-                          className="font-semibold text-gray-900"
-                          data-oid=":q-v88m"
-                        >
-                          Sarah Chen
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="i0qk3dv">
-                          Property Investor
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Review 2 */}
-                  <div
-                    className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100 fade-in"
-                    style={{ animationDelay: "0.1s" }}
-                    data-oid="cgmrf.u"
-                  >
-                    <div className="flex items-center mb-4" data-oid="oqen4ij">
-                      <div className="flex text-yellow-400" data-oid="a.fqm2g">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-5 h-5 fill-current"
-                            viewBox="0 0 20 20"
-                            data-oid="62le49-"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                              data-oid="9_0rxqs"
-                            />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-gray-700 mb-4 italic" data-oid="b-rut.d">
-                      "Practical, actionable advice that actually works. Sold my
-                      property 20% above asking price!"
-                    </p>
-                    <div className="flex items-center" data-oid="9evziwe">
-                      <div
-                        className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3"
-                        data-oid="go0l5qg"
-                      >
-                        M
-                      </div>
-                      <div data-oid="wui6s_q">
-                        <p
-                          className="font-semibold text-gray-900"
-                          data-oid="dd2nkgs"
-                        >
-                          Michael Tan
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="2p9cxqs">
-                          Homeowner
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Review 3 */}
-                  <div
-                    className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 fade-in md:col-span-2 lg:col-span-1"
-                    style={{ animationDelay: "0.2s" }}
-                    data-oid="0fnrtqh"
-                  >
-                    <div className="flex items-center mb-4" data-oid="_w5za33">
-                      <div className="flex text-yellow-400" data-oid="ox8x35-">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-5 h-5 fill-current"
-                            viewBox="0 0 20 20"
-                            data-oid="-ki7:n0"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                              data-oid="mkdnzt6"
-                            />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-gray-700 mb-4 italic" data-oid="00ihl13">
-                      "The PropertyLimBrothers know their stuff. This book is a
-                      must-read for anyone serious about property."
-                    </p>
-                    <div className="flex items-center" data-oid="umcbh.o">
-                      <div
-                        className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3"
-                        data-oid="5ahggy9"
-                      >
-                        L
-                      </div>
-                      <div data-oid=":20:-a5">
-                        <p
-                          className="font-semibold text-gray-900"
-                          data-oid="q1_pf:0"
-                        >
-                          Linda Wong
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="sqa77jy">
-                          Real Estate Agent
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Stats section */}
-                <div
-                  className="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in"
-                  data-oid="stats-grid"
-                >
-                  <div className="text-center" data-oid="f6-s:gd">
-                    <div
-                      className="text-3xl font-bold text-primary mb-2"
-                      data-oid="6zj_67x"
-                    >
-                      5000+
-                    </div>
-                    <div className="text-gray-600" data-oid="d-tk37d">
-                      Copies Sold
-                    </div>
-                  </div>
-                  <div className="text-center" data-oid="x_1oc.g">
-                    <div
-                      className="text-3xl font-bold text-primary mb-2"
-                      data-oid="5f-d60j"
-                    >
-                      4.9
-                    </div>
-                    <div className="text-gray-600" data-oid="vrcj-l6">
-                      Average Rating
-                    </div>
-                  </div>
-                  <div className="text-center" data-oid="5715-gt">
-                    <div
-                      className="text-3xl font-bold text-primary mb-2"
-                      data-oid="ivud0t3"
-                    >
-                      17+
-                    </div>
-                    <div className="text-gray-600" data-oid="wup8a2o">
-                      Years Experience
-                    </div>
-                  </div>
-                  <div className="text-center" data-oid="wz7_8m1">
-                    <div
-                      className="text-3xl font-bold text-primary mb-2"
-                      data-oid="71w9a2."
-                    >
-                      95%
-                    </div>
-                    <div className="text-gray-600" data-oid="yvw1rjk">
-                      Success Rate
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
             {/* Guarantee Section - New */}
             <section
-              className="section relative overflow-hidden text-white"
-              style={{ backgroundColor: "#0891b2" }}
+              className="section bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden"
               data-oid="guarantee-section"
             >
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-cyan-600/90 to-sky-700/90"
-                data-oid="g0qkm3d"
-              ></div>
               <div
                 className="absolute inset-0 bg-black/10"
                 data-oid="jthfptj"
