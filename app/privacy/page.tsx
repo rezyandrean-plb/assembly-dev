@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
       {/* Navigation */}
       <Navbar data-oid="iz441zm" />
       {/* Header Section */}
-      <div className="bg-[#123b79] text-white py-16 pt-30" data-oid=".o5m:-k">
+      <div className="bg-[#123b79] text-white py-16 mt-20" data-oid=".o5m:-k">
         <div className="max-w-7xl mx-auto px-4" data-oid="tkvtynm">
           <div className="flex items-center gap-3 mb-4" data-oid="f75f_yq">
             <Shield className="w-8 h-8" data-oid="wvmjy_7" />
