@@ -171,108 +171,129 @@ export default function AddressPage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="1uet0sj">
-      <div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12"
-        data-oid="uwae3_z"
-      >
-        {/* Left Column - Address Forms */}
-        <div className="space-y-8" data-oid="uw666n6">
-          {/* Delivery Address */}
-          {deliveryOption === "delivery" && (
-            <div data-oid="ir__idl">
-              <AddressForm
-                address={deliveryAddress}
-                setAddress={setDeliveryAddress}
-                title="Delivery Address"
-                data-oid="3lkogbo"
-              />
-
-              <div
-                className="mt-6 p-4 bg-gray-50 rounded-lg"
-                data-oid="7hgw00u"
+    <div className="min-h-screen bg-gray-50" data-oid="1uet0sj">
+      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="ctf1v9s">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          data-oid="uwae3_z"
+        >
+          {/* Left Column - Address Forms */}
+          <div className="lg:col-span-2" data-oid="uw666n6">
+            <div
+              className="bg-white rounded-lg shadow-sm p-6"
+              data-oid="rmt9ts_"
+            >
+              <h2
+                className="text-2xl font-bold mb-2 text-gray-900"
+                data-oid="address-title"
               >
-                <h4 className="font-semibold mb-2" data-oid="2n2x7jx">
-                  Authority to Leave
-                </h4>
-                <p className="text-sm text-gray-600 mb-2" data-oid="sbauz2f">
-                  Your order may be left in a safe place, if not, it will be
-                  taken to your local Singapore Post collection point.
-                </p>
-                <p className="text-sm text-gray-600 mb-2" data-oid="jhc_gj7">
-                  Track and manage your delivery via the{" "}
-                  <a
-                    href="#"
-                    className="text-[#123b79] hover:underline"
-                    data-oid="89xco0-"
-                  >
-                    SingPost app
-                  </a>
-                  .
-                </p>
-                <p className="text-sm text-gray-600" data-oid="irxow6b">
-                  Please see our{" "}
-                  <a
-                    href="#"
-                    className="text-blue-600 hover:underline"
-                    data-oid="et-b-my"
-                  >
-                    privacy policy
-                  </a>{" "}
-                  for more information about how we deal with your information.
-                </p>
+                Address Information
+              </h2>
+              <p className="text-gray-600 mb-6" data-oid="address-subtitle">
+                Please provide your delivery and billing details
+              </p>
+
+              <div className="space-y-8" data-oid="adfty2f">
+                {/* Delivery Address */}
+                {deliveryOption === "delivery" && (
+                  <div data-oid="ir__idl">
+                    <AddressForm
+                      address={deliveryAddress}
+                      setAddress={setDeliveryAddress}
+                      title="Delivery Address"
+                      data-oid="3lkogbo"
+                    />
+
+                    <div
+                      className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200"
+                      data-oid="7hgw00u"
+                    >
+                      <h4
+                        className="font-semibold mb-2 text-blue-900"
+                        data-oid="2n2x7jx"
+                      >
+                        Authority to Leave
+                      </h4>
+                      <p
+                        className="text-sm text-blue-800 mb-2"
+                        data-oid="sbauz2f"
+                      >
+                        Your order may be left in a safe place. Contact us if
+                        you preferred to have it delivered when someone is home.
+                      </p>
+                      <p className="text-sm text-blue-800" data-oid="irxow6b">
+                        Please see our{" "}
+                        <a
+                          href="/privacy"
+                          className="text-[#123b79] hover:underline font-medium"
+                          data-oid="et-b-my"
+                        >
+                          privacy policy
+                        </a>{" "}
+                        for more information about how we deal with your
+                        information.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Billing Address */}
+                <div data-oid="7fu3lps">
+                  <h3 className="text-xl font-bold mb-6" data-oid="u91wm7-">
+                    Billing Address
+                  </h3>
+
+                  {deliveryOption === "delivery" && (
+                    <div className="flex items-center mb-4" data-oid="ze6iks6">
+                      <input
+                        type="checkbox"
+                        checked={billingSameAsDelivery}
+                        onChange={(e) =>
+                          setBillingSameAsDelivery(e.target.checked)
+                        }
+                        id="sameAsDelivery"
+                        className="w-4 h-4 text-[#123b79] rounded focus:ring-[#123b79]"
+                        data-oid="y00kykg"
+                      />
+
+                      <label
+                        htmlFor="sameAsDelivery"
+                        className="ml-2 text-sm font-medium"
+                        data-oid="lb6cxmr"
+                      >
+                        Same as Delivery Address
+                      </label>
+                    </div>
+                  )}
+
+                  {(!billingSameAsDelivery ||
+                    deliveryOption !== "delivery") && (
+                    <AddressForm
+                      address={billingAddress}
+                      setAddress={setBillingAddress}
+                      title=""
+                      data-oid="xvrnfhv"
+                    />
+                  )}
+                </div>
+
+                <button
+                  onClick={handleNext}
+                  className="w-full bg-[#123b79] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#0f2f63] transition-colors text-lg mt-8"
+                  data-oid="o116:hq"
+                >
+                  Continue to Payment →
+                </button>
               </div>
             </div>
-          )}
-
-          {/* Billing Address */}
-          <div data-oid="7fu3lps">
-            <h3 className="text-xl font-bold mb-6" data-oid="u91wm7-">
-              Billing Address
-            </h3>
-
-            {deliveryOption === "delivery" && (
-              <div className="flex items-center mb-4" data-oid="ze6iks6">
-                <input
-                  type="checkbox"
-                  checked={billingSameAsDelivery}
-                  onChange={(e) => setBillingSameAsDelivery(e.target.checked)}
-                  id="sameAsDelivery"
-                  className="w-4 h-4 text-[#123b79] rounded focus:ring-[#123b79]"
-                  data-oid="y00kykg"
-                />
-
-                <label
-                  htmlFor="sameAsDelivery"
-                  className="ml-2 text-sm font-medium"
-                  data-oid="lb6cxmr"
-                >
-                  Same as Delivery Address
-                </label>
-              </div>
-            )}
-
-            {(!billingSameAsDelivery || deliveryOption !== "delivery") && (
-              <AddressForm
-                address={billingAddress}
-                setAddress={setBillingAddress}
-                title=""
-                data-oid="xvrnfhv"
-              />
-            )}
           </div>
-        </div>
 
-        {/* Right Column - Order Summary */}
-        <div data-oid="xqptmt8">
-          <OrderSummary data-oid="ep5thyd" />
-          <button
-            onClick={handleNext}
-            className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors mt-6"
-            data-oid="o116:hq"
-          >
-            Continue to Payment
-          </button>
+          {/* Right Column - Order Summary */}
+          <div className="lg:col-span-1" data-oid="xqptmt8">
+            <div className="sticky top-8" data-oid="qg0h:u9">
+              <OrderSummary data-oid="ep5thyd" />
+            </div>
+          </div>
         </div>
       </div>
 

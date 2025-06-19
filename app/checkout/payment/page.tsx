@@ -32,310 +32,367 @@ export default function PaymentPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="v9ewazq">
-      <div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12"
-        data-oid="07nim88"
-      >
-        {/* Left Column - Payment Methods */}
-        <div className="space-y-6" data-oid="77km7zo">
-          <h2 className="text-xl font-bold" data-oid="3569deu">
-            Payment Method
-          </h2>
-
-          {/* Redeem Rewards/Points Section */}
-          <div className="border rounded-lg" data-oid="r4.s:5e">
+    <div className="min-h-screen bg-gray-50" data-oid="v9ewazq">
+      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="pish9:b">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          data-oid="07nim88"
+        >
+          {/* Left Column - Payment Methods */}
+          <div className="lg:col-span-2" data-oid="77km7zo">
             <div
-              className="flex justify-between items-center p-4 cursor-pointer"
-              onClick={() =>
-                setExpandedSection(
-                  expandedSection === "rewards" ? "" : "rewards",
-                )
-              }
-              data-oid=":.h7lov"
+              className="bg-white rounded-lg shadow-sm p-6"
+              data-oid="7ypqsv9"
             >
-              <h3 className="font-semibold" data-oid="oh_36-w">
-                Redeem Rewards / Points
-              </h3>
-              <ChevronDown
-                className={`transition-transform ${expandedSection === "rewards" ? "rotate-180" : ""}`}
-                data-oid="27g.m6s"
-              />
-            </div>
-            {expandedSection === "rewards" && (
-              <div className="border-t p-4 space-y-3" data-oid="6lw5o8w">
-                {paymentMethods.map((method) => (
+              <h2
+                className="text-2xl font-bold mb-2 text-gray-900"
+                data-oid="3569deu"
+              >
+                Payment Method
+              </h2>
+              <p className="text-gray-600 mb-6" data-oid="payment-subtitle">
+                Choose your preferred payment method
+              </p>
+
+              <div className="space-y-6" data-oid="58qmqt0">
+                {/* Redeem Rewards/Points Section */}
+                <div
+                  className="border border-gray-200 rounded-lg"
+                  data-oid="r4.s:5e"
+                >
                   <div
-                    key={method.id}
-                    className="flex items-center justify-between p-3 border rounded"
-                    data-oid="92f6dlj"
+                    className="flex justify-between items-center p-4 cursor-pointer"
+                    onClick={() =>
+                      setExpandedSection(
+                        expandedSection === "rewards" ? "" : "rewards",
+                      )
+                    }
+                    data-oid=":.h7lov"
                   >
-                    <div className="flex items-center gap-3" data-oid="oum9ft-">
+                    <h3 className="font-semibold" data-oid="oh_36-w">
+                      Redeem Rewards / Points
+                    </h3>
+                    <ChevronDown
+                      className={`transition-transform ${expandedSection === "rewards" ? "rotate-180" : ""}`}
+                      data-oid="27g.m6s"
+                    />
+                  </div>
+                  {expandedSection === "rewards" && (
+                    <div className="border-t p-4 space-y-3" data-oid="6lw5o8w">
+                      {paymentMethods.map((method) => (
+                        <div
+                          key={method.id}
+                          className="flex items-center justify-between p-3 border rounded"
+                          data-oid="92f6dlj"
+                        >
+                          <div
+                            className="flex items-center gap-3"
+                            data-oid="oum9ft-"
+                          >
+                            <input
+                              type="radio"
+                              name="rewardPayment"
+                              value={method.id}
+                              className="w-4 h-4"
+                              data-oid="qgeln7g"
+                            />
+
+                            <span data-oid="rbu85zm">{method.name}</span>
+                          </div>
+                          <span className="text-2xl" data-oid="ks1.__b">
+                            {method.icon}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Credit/Debit Card Section */}
+                <div
+                  className="border border-gray-200 rounded-lg"
+                  data-oid="licc0zz"
+                >
+                  <div
+                    className="flex justify-between items-center p-4 cursor-pointer"
+                    onClick={() =>
+                      setExpandedSection(
+                        expandedSection === "Credit / Debit"
+                          ? ""
+                          : "Credit / Debit",
+                      )
+                    }
+                    data-oid="kzcmvge"
+                  >
+                    <div className="flex items-center gap-3" data-oid="vzo_nn.">
                       <input
                         type="radio"
-                        name="rewardPayment"
-                        value={method.id}
+                        name="paymentMethod"
+                        value="Credit / Debit"
+                        checked={selectedPayment === "Credit / Debit"}
+                        onChange={() => setSelectedPayment("Credit / Debit")}
                         className="w-4 h-4"
-                        data-oid="qgeln7g"
+                        data-oid="nzbrari"
                       />
 
-                      <span data-oid="rbu85zm">{method.name}</span>
+                      <span className="font-semibold" data-oid="6ikj0n6">
+                        Debit or Credit Card
+                      </span>
                     </div>
-                    <span className="text-2xl" data-oid="ks1.__b">
+                    <div className="flex items-center gap-2" data-oid="0t4ki.0">
+                      <div className="flex gap-1" data-oid="xftma5o">
+                        <div
+                          className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center"
+                          data-oid="9ib:3qn"
+                        >
+                          VISA
+                        </div>
+                        <div
+                          className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center"
+                          data-oid="a3txps9"
+                        >
+                          MC
+                        </div>
+                        <div
+                          className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center"
+                          data-oid="b5c3anj"
+                        >
+                          AE
+                        </div>
+                      </div>
+                      <ChevronDown
+                        className={`transition-transform ${expandedSection === "Credit / Debit" ? "rotate-180" : ""}`}
+                        data-oid="n9l.y29"
+                      />
+                    </div>
+                  </div>
+
+                  {expandedSection === "Credit / Debit" &&
+                    selectedPayment === "Credit / Debit" && (
+                      <div
+                        className="border-t p-4 space-y-4"
+                        data-oid="3uddh0v"
+                      >
+                        <div data-oid="ggsyljy">
+                          <label
+                            className="block text-sm font-medium mb-1"
+                            data-oid="6a_fj2."
+                          >
+                            Card Number *
+                          </label>
+                          <input
+                            type="text"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
+                            data-oid="ih4dc-n"
+                          />
+                        </div>
+                        <div data-oid="xv4fpt6">
+                          <label
+                            className="block text-sm font-medium mb-1"
+                            data-oid="ou49fgk"
+                          >
+                            Card Name *
+                          </label>
+                          <input
+                            type="text"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            data-oid="pz9f139"
+                          />
+                        </div>
+                        <div
+                          className="grid grid-cols-2 gap-4"
+                          data-oid="ft3h.gi"
+                        >
+                          <div data-oid="w4zi6-_">
+                            <label
+                              className="block text-sm font-medium mb-1"
+                              data-oid="pao9ip_"
+                            >
+                              Expiry Date *
+                            </label>
+                            <div
+                              className="grid grid-cols-2 gap-2"
+                              data-oid="it64423"
+                            >
+                              <select
+                                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
+                                data-oid="k0:b970"
+                              >
+                                <option data-oid="kw25_kj">MM</option>
+                                {Array.from(
+                                  { length: 12 },
+                                  (_, i) => i + 1,
+                                ).map((m) => (
+                                  <option
+                                    key={m}
+                                    value={m.toString().padStart(2, "0")}
+                                    data-oid="y09r73c"
+                                  >
+                                    {m.toString().padStart(2, "0")}
+                                  </option>
+                                ))}
+                              </select>
+                              <select
+                                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                data-oid="4drq92z"
+                              >
+                                <option data-oid="-nvis:0">YYYY</option>
+                                {Array.from(
+                                  { length: 10 },
+                                  (_, i) => new Date().getFullYear() + i,
+                                ).map((y) => (
+                                  <option key={y} value={y} data-oid="oy_xj8-">
+                                    {y}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          </div>
+                          <div data-oid="jchyg_1">
+                            <label
+                              className="block text-sm font-medium mb-1"
+                              data-oid="evlf-ih"
+                            >
+                              CVC *
+                            </label>
+                            <input
+                              type="text"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              data-oid="8wo1xoz"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                </div>
+
+                {/* Other Payment Methods */}
+                {otherPaymentMethods.map((method) => (
+                  <div
+                    key={method.id}
+                    className="border border-gray-200 rounded-lg p-4 flex items-center justify-between"
+                    data-oid="8bizlpq"
+                  >
+                    <div className="flex items-center gap-3" data-oid="4amoaqf">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value={method.id}
+                        checked={selectedPayment === method.id}
+                        onChange={() => setSelectedPayment(method.id)}
+                        className="w-4 h-4"
+                        data-oid="wh.ft34"
+                      />
+
+                      <span className="font-semibold" data-oid="j0o3m0c">
+                        {method.name}
+                      </span>
+                    </div>
+                    <span className="text-2xl" data-oid="ywzm2to">
                       {method.icon}
                     </span>
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Credit/Debit Card Section */}
-          <div className="border rounded-lg" data-oid="licc0zz">
-            <div
-              className="flex justify-between items-center p-4 cursor-pointer"
-              onClick={() =>
-                setExpandedSection(
-                  expandedSection === "Credit / Debit" ? "" : "Credit / Debit",
-                )
-              }
-              data-oid="kzcmvge"
-            >
-              <div className="flex items-center gap-3" data-oid="vzo_nn.">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="Credit / Debit"
-                  checked={selectedPayment === "Credit / Debit"}
-                  onChange={() => setSelectedPayment("Credit / Debit")}
-                  className="w-4 h-4"
-                  data-oid="nzbrari"
-                />
+          {/* Right Column - Order Summary & Review */}
+          <div className="lg:col-span-1" data-oid="78fijca">
+            <div className="sticky top-8 space-y-6" data-oid="c8yt3k.">
+              <OrderSummary data-oid=":qykfnh" />
 
-                <span className="font-semibold" data-oid="6ikj0n6">
-                  Debit or Credit Card
-                </span>
-              </div>
-              <div className="flex items-center gap-2" data-oid="0t4ki.0">
-                <div className="flex gap-1" data-oid="xftma5o">
-                  <div
-                    className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center"
-                    data-oid="9ib:3qn"
-                  >
-                    VISA
-                  </div>
-                  <div
-                    className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center"
-                    data-oid="a3txps9"
-                  >
-                    MC
-                  </div>
-                  <div
-                    className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center"
-                    data-oid="b5c3anj"
-                  >
-                    AE
-                  </div>
-                </div>
-                <ChevronDown
-                  className={`transition-transform ${expandedSection === "Credit / Debit" ? "rotate-180" : ""}`}
-                  data-oid="n9l.y29"
-                />
-              </div>
-            </div>
-
-            {expandedSection === "Credit / Debit" &&
-              selectedPayment === "Credit / Debit" && (
-                <div className="border-t p-4 space-y-4" data-oid="3uddh0v">
-                  <div data-oid="ggsyljy">
-                    <label
-                      className="block text-sm font-medium mb-1"
-                      data-oid="6a_fj2."
-                    >
-                      Card Number *
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                      data-oid="ih4dc-n"
-                    />
-                  </div>
-                  <div data-oid="xv4fpt6">
-                    <label
-                      className="block text-sm font-medium mb-1"
-                      data-oid="ou49fgk"
-                    >
-                      Card Name *
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      data-oid="pz9f139"
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4" data-oid="ft3h.gi">
-                    <div data-oid="w4zi6-_">
-                      <label
-                        className="block text-sm font-medium mb-1"
-                        data-oid="pao9ip_"
-                      >
-                        Expiry Date *
-                      </label>
-                      <div
-                        className="grid grid-cols-2 gap-2"
-                        data-oid="it64423"
-                      >
-                        <select
-                          className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                          data-oid="k0:b970"
-                        >
-                          <option data-oid="kw25_kj">MM</option>
-                          {Array.from({ length: 12 }, (_, i) => i + 1).map(
-                            (m) => (
-                              <option
-                                key={m}
-                                value={m.toString().padStart(2, "0")}
-                                data-oid="y09r73c"
-                              >
-                                {m.toString().padStart(2, "0")}
-                              </option>
-                            ),
-                          )}
-                        </select>
-                        <select
-                          className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                          data-oid="4drq92z"
-                        >
-                          <option data-oid="-nvis:0">YYYY</option>
-                          {Array.from(
-                            { length: 10 },
-                            (_, i) => new Date().getFullYear() + i,
-                          ).map((y) => (
-                            <option key={y} value={y} data-oid="oy_xj8-">
-                              {y}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                    <div data-oid="jchyg_1">
-                      <label
-                        className="block text-sm font-medium mb-1"
-                        data-oid="evlf-ih"
-                      >
-                        CVC *
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        data-oid="8wo1xoz"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-          </div>
-
-          {/* Other Payment Methods */}
-          {otherPaymentMethods.map((method) => (
-            <div
-              key={method.id}
-              className="border rounded-lg p-4 flex items-center justify-between"
-              data-oid="8bizlpq"
-            >
-              <div className="flex items-center gap-3" data-oid="4amoaqf">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value={method.id}
-                  checked={selectedPayment === method.id}
-                  onChange={() => setSelectedPayment(method.id)}
-                  className="w-4 h-4"
-                  data-oid="wh.ft34"
-                />
-
-                <span className="font-semibold" data-oid="j0o3m0c">
-                  {method.name}
-                </span>
-              </div>
-              <span className="text-2xl" data-oid="ywzm2to">
-                {method.icon}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Right Column - Review & Order Summary */}
-        <div className="space-y-6" data-oid="78fijca">
-          {/* Review Address */}
-          <div className="bg-gray-50 p-6 rounded-lg" data-oid="u3:0jlq">
-            <div
-              className="flex justify-between items-center mb-4"
-              data-oid="c7bzqiq"
-            >
-              <h3 className="text-lg font-semibold" data-oid="ibbq2kl">
-                Review Address
-              </h3>
-              <button
-                onClick={() => router.push("/checkout/address")}
-                className="text-[#123b79] text-sm hover:underline"
-                data-oid="ero1b02"
+              {/* Review Address */}
+              <div
+                className="bg-white rounded-lg shadow-sm p-6"
+                data-oid="u3:0jlq"
               >
-                Edit
+                <div
+                  className="flex justify-between items-center mb-4"
+                  data-oid="c7bzqiq"
+                >
+                  <h3 className="text-lg font-semibold" data-oid="ibbq2kl">
+                    Review Address
+                  </h3>
+                  <button
+                    onClick={() => router.push("/checkout/address")}
+                    className="text-[#123b79] text-sm hover:underline font-medium"
+                    data-oid="ero1b02"
+                  >
+                    Edit
+                  </button>
+                </div>
+                <div className="text-sm space-y-1" data-oid="17owv8m">
+                  <h4 className="font-bold text-gray-900" data-oid="jks21kl">
+                    Delivery & Billing Address
+                  </h4>
+                  <p className="font-semibold text-gray-800" data-oid="14g-neq">
+                    {finalBillingAddress.firstName}{" "}
+                    {finalBillingAddress.lastName}
+                  </p>
+                  <p className="text-gray-600" data-oid="36cayzu">
+                    {finalBillingAddress.email}
+                  </p>
+                  <p className="text-gray-600" data-oid="axhxtjw">
+                    {finalBillingAddress.mobile}
+                  </p>
+                  <p className="text-gray-600" data-oid="bcp06fn">
+                    72 Hebe St, QLD, BARDON, 4065
+                  </p>
+                </div>
+              </div>
+
+              {/* Proceed to Checkout Button */}
+              <button
+                onClick={() => alert("Order Placed!")}
+                className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
+                data-oid="r43kqne"
+              >
+                Proceed to Checkout →
               </button>
-            </div>
-            <div className="text-sm space-y-1" data-oid="17owv8m">
-              <h4 className="font-bold" data-oid="jks21kl">
-                Delivery & Billing Address
-              </h4>
-              <p className="font-bold" data-oid="14g-neq">
-                {finalBillingAddress.firstName} {finalBillingAddress.lastName}
+
+              {/* Continue Shopping */}
+              <button
+                onClick={() => router.push("/courses")}
+                className="w-full bg-white border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                data-oid="continue-shopping"
+              >
+                Continue Shopping
+              </button>
+
+              <p
+                className="text-xs text-gray-500 text-center leading-relaxed"
+                data-oid="fslxcoo"
+              >
+                By clicking Proceed to Checkout you confirm that you have read,
+                understood and accept our{" "}
+                <a
+                  href="#"
+                  className="text-[#123b79] hover:underline"
+                  data-oid=":m:oacs"
+                >
+                  terms and conditions
+                </a>
+                ,{" "}
+                <a
+                  href="#"
+                  className="text-[#123b79] hover:underline"
+                  data-oid="i66t83-"
+                >
+                  returns policy
+                </a>{" "}
+                and{" "}
+                <a
+                  href="#"
+                  className="text-[#123b79] hover:underline"
+                  data-oid="i0x2.s1"
+                >
+                  privacy policy
+                </a>
+                .
               </p>
-              <p data-oid="36cayzu">{finalBillingAddress.email}</p>
-              <p data-oid="axhxtjw">{finalBillingAddress.mobile}</p>
-              <p data-oid="bcp06fn">72 Hebe St, QLD, BARDON, 4065</p>
             </div>
           </div>
-
-          <OrderSummary data-oid=":qykfnh" />
-
-          <button
-            onClick={() => alert("Order Placed!")}
-            className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors flex items-center justify-center gap-2"
-            data-oid="r43kqne"
-          >
-            <Lock size={16} data-oid="2w84:3:" />
-            Place Order Securely
-          </button>
-
-          <p className="text-xs text-gray-500 text-center" data-oid="fslxcoo">
-            By clicking Place Order Securely you confirm that you have read,
-            understood and accept our{" "}
-            <a
-              href="#"
-              className="text-[#123b79] hover:underline"
-              data-oid=":m:oacs"
-            >
-              terms and conditions
-            </a>
-            ,{" "}
-            <a
-              href="#"
-              className="text-blue-600 hover:underline"
-              data-oid="i66t83-"
-            >
-              returns policy
-            </a>{" "}
-            and{" "}
-            <a
-              href="#"
-              className="text-blue-600 hover:underline"
-              data-oid="i0x2.s1"
-            >
-              privacy policy
-            </a>
-            .
-          </p>
         </div>
       </div>
 
