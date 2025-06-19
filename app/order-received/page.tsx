@@ -98,6 +98,7 @@ export default function OrderReceivedPage() {
             className="mx-auto h-16 w-16 text-gray-400 mb-4"
             data-oid="..0w3.b"
           />
+
           <h1
             className="text-2xl font-bold text-gray-900 mb-2"
             data-oid="a5tczee"
@@ -344,6 +345,7 @@ export default function OrderReceivedPage() {
                   className="h-5 w-5 text-blue-600 mt-0.5"
                   data-oid="oo1csfo"
                 />
+
                 <div data-oid="dzsrq9a">
                   <h3
                     className="font-semibold text-blue-900 mb-1"
@@ -437,6 +439,7 @@ export default function OrderReceivedPage() {
                   className="h-5 w-5 text-green-600 mt-0.5"
                   data-oid="q1x5kls"
                 />
+
                 <div data-oid="1wsv2si">
                   <h3
                     className="font-semibold text-green-900 mb-1"
@@ -561,7 +564,7 @@ export default function OrderReceivedPage() {
             className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors"
             data-oid="9zmuwms"
           >
-            Continue Shopping
+            Continue Browin{" "}
           </button>
         </div>
 
