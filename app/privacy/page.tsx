@@ -2,13 +2,16 @@
 
 import React from "react";
 import { Shield, FileText, Mail, Phone, MapPin } from "lucide-react";
+import Navbar from "../components/navbar";
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="bo6pavt">
+    <div className="min-h-screen bg-gray-50" data-oid="lkqnqgb">
+      {/* Navigation */}
+      <Navbar data-oid="iz441zm" />
       {/* Header Section */}
-      <div className="bg-[#123b79] text-white py-16" data-oid="7dbxv8.">
-        <div className="max-w-4xl mx-auto px-4" data-oid="lwm2tau">
+      <div className="bg-[#123b79] text-white py-16" data-oid="9ncigrk">
+        <div className="max-w-7xl mx-auto px-4" data-oid="tkvtynm">
           <div className="flex items-center gap-3 mb-4" data-oid="f75f_yq">
             <Shield className="w-8 h-8" data-oid="wvmjy_7" />
             <h1 className="text-4xl font-bold" data-oid="nz96--f">
@@ -26,7 +29,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 py-12" data-oid="jyv7g1x">
+      <div className="max-w-7xl mx-auto px-4 py-12" data-oid="n52u:ec">
         <div className="bg-white rounded-lg shadow-sm p-8" data-oid="np4es:3">
           {/* Introduction */}
           <section className="mb-12" data-oid="0idsn4s">
