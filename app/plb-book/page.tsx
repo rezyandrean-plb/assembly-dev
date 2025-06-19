@@ -843,7 +843,7 @@ export default function PLBBookPage() {
               </div>
             </section>
 
-            {/* Author Section */}
+            {/* Authors Section */}
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#ffffff" }}
@@ -859,33 +859,210 @@ export default function PLBBookPage() {
               ></div>
               <div className="container relative z-10" data-oid="0novn2b">
                 <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="v3od2w6"
+                  className="text-center mb-12 fade-in"
+                  data-oid="authors-header"
                 >
-                  <div className="fade-in" data-oid="cgibbar">
+                  <h2
+                    className="text-3xl md:text-4xl font-bold mb-3 text-primary"
+                    data-oid="_v7-x6j"
+                  >
+                    About the Authors
+                  </h2>
+                  <p
+                    className="text-lg text-gray-700 max-w-2xl mx-auto"
+                    data-oid="authors-subtitle"
+                  >
+                    Meet the PropertyLimBrothers team - Singapore's leading
+                    property experts with over 17 years of combined experience
+                  </p>
+                </div>
+
+                {/* Authors Grid */}
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
+                  data-oid="authors-grid"
+                >
+                  {/* Melvin Lim */}
+                  <div
+                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                    data-oid="melvin-card"
+                  >
                     <div
-                      className="w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0"
-                      data-oid="qmt2uoh"
-                    ></div>
+                      className="text-center mb-6"
+                      data-oid="melvin-image-container"
+                    >
+                      <div
+                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
+                        data-oid="melvin-image-wrapper"
+                      >
+                        <img
+                          src="/images/Melvin_01.png"
+                          alt="Melvin Lim"
+                          className="w-full h-full object-cover"
+                          data-oid="melvin-image"
+                        />
+                      </div>
+                      <h3
+                        className="text-xl font-bold text-primary mb-1"
+                        data-oid="melvin-name"
+                      >
+                        Melvin Lim
+                      </h3>
+                      <p
+                        className="text-sm text-gray-600 font-medium"
+                        data-oid="melvin-title"
+                      >
+                        Co-Founder and CEO
+                      </p>
+                    </div>
+                    <div
+                      className="text-sm text-gray-700 leading-relaxed"
+                      data-oid="melvin-bio"
+                    >
+                      <p className="mb-3" data-oid="nmkx7fe">
+                        Co-Founder and CEO of PropertyLimBrothers (PLB), brings
+                        17 years of real estate expertise to the forefront of
+                        Singapore's property market. Under his thoughtful
+                        leadership, PLB has successfully sold over 1,800 homes,
+                        setting a new benchmark for real estate in Singapore.
+                      </p>
+                      <p className="mb-3" data-oid="mrccj1-">
+                        In 2017, Melvin introduced presenter-led home tour
+                        videos to Singapore—a groundbreaking move that redefined
+                        property marketing. With over 3,300 videos now under his
+                        belt, his innovative strategies have become a standard
+                        others aspire to achieve.
+                      </p>
+                      <p data-oid="2thznd2">
+                        Melvin remains committed to his core values of integrity
+                        and innovation, leading the PLB team with the vision to
+                        elevate real estate marketing across Singapore and the
+                        ASEAN region.
+                      </p>
+                    </div>
                   </div>
-                  <div className="fade-in" data-oid="iga12aa">
-                    <h2 className="text-primary" data-oid="_v7-x6j">
-                      About the Author
-                    </h2>
-                    <p className="feature-text text-xl mb-4" data-oid="pb2u-21">
-                      With over 15 years of experience in Singapore's property
-                      market
-                    </p>
-                    <p data-oid="h-4ol.z">
-                      The author brings unparalleled insights into the local
-                      property landscape, having helped hundreds of clients
-                      build wealth through strategic property investments.
-                    </p>
-                    <p data-oid="uw31jf6">
-                      As the founder of Assembly SG, they have developed a
-                      proven system for property investment success that works
-                      in any market condition.
-                    </p>
+
+                  {/* Adrian Lim */}
+                  <div
+                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                    data-oid="adrian-card"
+                  >
+                    <div
+                      className="text-center mb-6"
+                      data-oid="adrian-image-container"
+                    >
+                      <div
+                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
+                        data-oid="adrian-image-wrapper"
+                      >
+                        <img
+                          src="/images/Adrian_01-600x600.png"
+                          alt="Adrian Lim"
+                          className="w-full h-full object-cover"
+                          data-oid="adrian-image"
+                        />
+                      </div>
+                      <h3
+                        className="text-xl font-bold text-primary mb-1"
+                        data-oid="adrian-name"
+                      >
+                        Adrian Lim
+                      </h3>
+                      <p
+                        className="text-sm text-gray-600 font-medium"
+                        data-oid="adrian-title"
+                      >
+                        Co-Founder and Managing Director
+                      </p>
+                    </div>
+                    <div
+                      className="text-sm text-gray-700 leading-relaxed"
+                      data-oid="adrian-bio"
+                    >
+                      <p className="mb-3" data-oid="d:b:21e">
+                        Co-Founder and Managing Director of PropertyLimBrothers,
+                        has 17 years of real estate experience in the industry
+                        and has transacted over 1,800 with the PLB team till
+                        date. Adrian's expert communication skills and
+                        experience in selling homes has solved many complex
+                        situations for our clients over the past years.
+                      </p>
+                      <p className="mb-3" data-oid="jkyme3_">
+                        He constantly spearheads the Realty Team in PLB. His
+                        passion is driven by a relentless pursuit of what lies
+                        ahead. This dedication to serve effortlessly connects
+                        realtors and clients, inspiring others to thrive under
+                        his leadership.
+                      </p>
+                      <p data-oid="ilga80y">
+                        A family man who enjoys the company of his wife, four
+                        children and their dogs Coffee and Mocha, Adrian is
+                        known for his passion, dedication and achievements in
+                        real estate.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Grayce Tan */}
+                  <div
+                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                    data-oid="grayce-card"
+                  >
+                    <div
+                      className="text-center mb-6"
+                      data-oid="grayce-image-container"
+                    >
+                      <div
+                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
+                        data-oid="grayce-image-wrapper"
+                      >
+                        <img
+                          src="/images/Grayce_02-600x600.png"
+                          alt="Grayce Tan"
+                          className="w-full h-full object-cover"
+                          data-oid="grayce-image"
+                        />
+                      </div>
+                      <h3
+                        className="text-xl font-bold text-primary mb-1"
+                        data-oid="grayce-name"
+                      >
+                        Grayce Tan
+                      </h3>
+                      <p
+                        className="text-sm text-gray-600 font-medium"
+                        data-oid="grayce-title"
+                      >
+                        Senior Marketing and Business Development Manager
+                      </p>
+                    </div>
+                    <div
+                      className="text-sm text-gray-700 leading-relaxed"
+                      data-oid="grayce-bio"
+                    >
+                      <p className="mb-3" data-oid="b2peey-">
+                        Senior Marketing and Business Development Manager at
+                        PropertyLimBrothers, with a rich background in Real
+                        Estate, Sociology, and Educational Pedagogy. Leading the
+                        Business Development, Brand Marketing, and Editorial
+                        teams at PropertyLimBrothers, she excels in boosting
+                        brand visibility and customer engagement.
+                      </p>
+                      <p className="mb-3" data-oid="km16331">
+                        A passionate lifelong learner, Grayce's deep curiosity
+                        for people and market dynamics drives her approach to
+                        real estate. She spearheads strategic content
+                        initiatives, manages real-time market analysis, and
+                        ensures her teams stay at the forefront of industry
+                        trends.
+                      </p>
+                      <p data-oid="9ed120l">
+                        Grounded in a commitment to delivering insightful,
+                        data-driven content, Grayce is dedicated to helping
+                        clients and readers alike navigate the ever-evolving
+                        property landscape with clarity and confidence.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
