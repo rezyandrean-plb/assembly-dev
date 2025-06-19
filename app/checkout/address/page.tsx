@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCheckout } from "@/context/checkout-context";
+import { useCart } from "@/components/cart-context";
 import OrderSummary from "../components/order-summary";
 
 interface AddressFormProps {
@@ -125,6 +126,7 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
 
 export default function AddressPage() {
   const router = useRouter();
+  const { cart } = useCart();
   const {
     deliveryOption,
     deliveryAddress,
@@ -135,12 +137,38 @@ export default function AddressPage() {
     setBillingSameAsDelivery,
   } = useCheckout();
 
+  // Check if there are books in cart, redirect if not
+  useEffect(() => {
+    const hasBook = cart.some((item) => item.type === "Book");
+    if (!hasBook) {
+      router.replace("/checkout/payment");
+    }
+  }, [cart, router]);
+
   const handleNext = () => {
     if (billingSameAsDelivery) {
       setBillingAddress(deliveryAddress);
     }
     router.push("/checkout/payment");
   };
+
+  // Don't render if no books (will redirect)
+  const hasBook = cart.some((item) => item.type === "Book");
+  if (!hasBook) {
+    return (
+      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="8t-:lc8">
+        <div
+          className="flex items-center justify-center min-h-[400px]"
+          data-oid="r1a8yqw"
+        >
+          <div
+            className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"
+            data-oid="_0mi.j-"
+          ></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8" data-oid="1uet0sj">
@@ -169,7 +197,7 @@ export default function AddressPage() {
                 </h4>
                 <p className="text-sm text-gray-600 mb-2" data-oid="sbauz2f">
                   Your order may be left in a safe place, if not, it will be
-                  taken to your local Australia Post collection point.
+                  taken to your local Singapore Post collection point.
                 </p>
                 <p className="text-sm text-gray-600 mb-2" data-oid="jhc_gj7">
                   Track and manage your delivery via the{" "}
@@ -178,7 +206,7 @@ export default function AddressPage() {
                     className="text-blue-600 hover:underline"
                     data-oid="89xco0-"
                   >
-                    AusPost app
+                    SingPost app
                   </a>
                   .
                 </p>

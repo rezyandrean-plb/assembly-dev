@@ -9,9 +9,9 @@ const BOOK_ORIGINAL_PRICE = 39;
 const BOOK_DISCOUNTED_PRICE = 29;
 
 function formatPrice(price: number) {
-  return new Intl.NumberFormat("en-AU", {
+  return new Intl.NumberFormat("en-SG", {
     style: "currency",
-    currency: "AUD",
+    currency: "SGD",
   }).format(price);
 }
 
@@ -19,11 +19,29 @@ export default function OrderSummary() {
   const { cart } = useCart();
   const { shippingCost } = useCheckout();
 
-  // Mock data for demonstration - replace with actual cart data
-  const subtotal = 129.0;
-  const totalShipping = 0; // FREE shipping
-  const total = subtotal;
-  const gst = total * 0.1; // 10% GST for Australia
+  const bookInCart = cart.find((item) => item.id === BOOK_ID);
+  const discount = bookInCart
+    ? (BOOK_ORIGINAL_PRICE - BOOK_DISCOUNTED_PRICE) * bookInCart.quantity
+    : 0;
+
+  const subtotal = cart.reduce((sum, item) => {
+    let price = 0;
+    if (item.id === BOOK_ID) {
+      price = BOOK_ORIGINAL_PRICE;
+    } else if (item.price.toString().toLowerCase() !== "free") {
+      const parsedPrice = parseFloat(
+        item.price.toString().replace(/[^0-9.]/g, ""),
+      );
+      price = isNaN(parsedPrice) ? 0 : parsedPrice;
+    }
+    return sum + price * item.quantity;
+  }, 0);
+
+  const hasBook = cart.some((item) => item.type === "Book");
+  const finalShippingCost = hasBook ? shippingCost : 0;
+  const orderTotalBeforeGst = subtotal - discount + finalShippingCost;
+  const gst = orderTotalBeforeGst * 0.09; // 9% GST for Singapore
+  const orderTotal = orderTotalBeforeGst + gst;
 
   return (
     <div className="bg-white border rounded-lg p-6" data-oid="h5-5tnl">
@@ -37,16 +55,29 @@ export default function OrderSummary() {
           <span data-oid="-mw4gdt">{formatPrice(subtotal)}</span>
         </div>
 
+        {discount > 0 && (
+          <div
+            className="flex justify-between text-red-600"
+            data-oid="discount-row"
+          >
+            <span data-oid="gabr65u">Discount</span>
+            <span data-oid="wxm14_-">-{formatPrice(discount)}</span>
+          </div>
+        )}
+
         <div className="flex justify-between" data-oid="6-.sa:t">
           <span data-oid="bp_-w2z">Estimated Shipping</span>
           <span data-oid="1iw52e7">
-            {totalShipping > 0 ? formatPrice(totalShipping) : "FREE"}
+            {finalShippingCost > 0 ? formatPrice(finalShippingCost) : "FREE"}
           </span>
         </div>
 
-        <p className="text-xs text-gray-500" data-oid="byq_qvm">
-          Actual shipping cost is calculated once we know your delivery details
-        </p>
+        {hasBook && (
+          <p className="text-xs text-gray-500" data-oid="byq_qvm">
+            Actual shipping cost is calculated once we know your delivery
+            details
+          </p>
+        )}
 
         <div className="border-t pt-3 mt-3" data-oid="r:yc3jv">
           <div
@@ -54,13 +85,13 @@ export default function OrderSummary() {
             data-oid="cuf1thg"
           >
             <span data-oid="l9r_a-3">Total</span>
-            <span data-oid="m01kh66">{formatPrice(total)}</span>
+            <span data-oid="m01kh66">{formatPrice(orderTotal)}</span>
           </div>
           <div
             className="text-right text-sm text-gray-500 mt-1"
             data-oid="g3w8gky"
           >
-            Including GST
+            Including {formatPrice(gst)} GST
           </div>
         </div>
       </div>

@@ -3,18 +3,27 @@
 import React from "react";
 import { Check } from "lucide-react";
 
-const steps = [
-  { id: 1, name: "Cart", label: "Step 1" },
-  { id: 2, name: "Deliver/Collect", label: "Step 2" },
-  { id: 3, name: "Address", label: "Step 3" },
-  { id: 4, name: "Payment", label: "Step 4" },
-];
-
 interface StepperProps {
   currentStep: number;
+  hasBook: boolean;
 }
 
-export default function Stepper({ currentStep }: StepperProps) {
+export default function Stepper({ currentStep, hasBook }: StepperProps) {
+  // Define steps based on whether there's a book in cart
+  const allSteps = [
+    { id: 1, name: "Cart", label: "Step 1" },
+    { id: 2, name: "Deliver/Collect", label: "Step 2" },
+    { id: 3, name: "Address", label: "Step 3" },
+    { id: 4, name: "Payment", label: "Step 4" },
+  ];
+
+  const coursesOnlySteps = [
+    { id: 1, name: "Cart", label: "Step 1" },
+    { id: 2, name: "Payment", label: "Step 2" },
+  ];
+
+  const steps = hasBook ? allSteps : coursesOnlySteps;
+
   return (
     <div className="w-full py-8 bg-white border-b" data-oid="thy.ci2">
       <div className="max-w-6xl mx-auto px-4" data-oid="_3ih1cc">
@@ -64,7 +73,7 @@ export default function Stepper({ currentStep }: StepperProps) {
                       index + 1 < currentStep ? "bg-blue-600" : "bg-gray-200"
                     }`}
                     style={{ minWidth: "60px" }}
-                    data-oid="pivl3d8"
+                    data-oid="giatqfb"
                   />
                 )}
               </React.Fragment>
