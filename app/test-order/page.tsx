@@ -40,7 +40,7 @@ export default function TestOrderPage() {
         address: "123 Example Street, Singapore 123456",
       },
       hasBooks: true,
-      trackingNumber: "ASG12345678TEST",
+      // trackingNumber will be added later when order is ready to ship,
     };
 
     // Store in sessionStorage

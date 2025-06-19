@@ -208,7 +208,7 @@ export default function OrderReceivedPage() {
                   className="text-gray-600 font-semibold text-lg"
                   data-oid="8hiar9x"
                 >
-                  {formatPrice(orderDetails.totalAmount)}
+                  ${orderDetails.totalAmount.toFixed(2)}
                 </p>
               </div>
               <div data-oid="uehkxpp">
@@ -309,10 +309,10 @@ export default function OrderReceivedPage() {
 
                 <div className="text-right" data-oid="m0dl9aq">
                   <p className="font-semibold text-gray-900" data-oid="r7jnqw_">
-                    {formatPrice(item.price * item.quantity)}
+                    ${(item.price * item.quantity).toFixed(2)}
                   </p>
                   <p className="text-sm text-gray-500" data-oid="_pfhk0q">
-                    {formatPrice(item.price)} each
+                    ${item.price.toFixed(2)} each
                   </p>
                 </div>
               </div>
@@ -363,44 +363,51 @@ export default function OrderReceivedPage() {
               </div>
             </div>
 
-            {orderDetails.trackingNumber && (
+            <div
+              className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
+              data-oid="k0l:lft"
+            >
               <div
-                className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
-                data-oid="k0l:lft"
+                className="flex items-center justify-between"
+                data-oid="r1bde.8"
               >
-                <div
-                  className="flex items-center justify-between"
-                  data-oid="r1bde.8"
-                >
-                  <div data-oid="k5iw7s9">
-                    <h3
-                      className="font-semibold text-gray-900 mb-1"
-                      data-oid="ruhkt22"
-                    >
-                      Tracking Number
-                    </h3>
-                    <p
-                      className="text-gray-600 font-mono text-lg"
-                      data-oid="jq88g7_"
-                    >
-                      {orderDetails.trackingNumber}
-                    </p>
-                  </div>
-                  <button
-                    onClick={() =>
-                      router.push(
-                        `/tracking?tracking=${orderDetails.trackingNumber}`,
-                      )
-                    }
-                    className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2"
-                    data-oid="wdj_ont"
+                <div className="flex-1" data-oid="k5iw7s9">
+                  <h3
+                    className="font-semibold text-gray-900 mb-1"
+                    data-oid="ruhkt22"
                   >
-                    <ExternalLink className="h-4 w-4" data-oid="tta9jm4" />
-                    Track Package
-                  </button>
+                    Tracking Number
+                  </h3>
+                  {orderDetails.trackingNumber ? (
+                    <div className="flex items-center gap-3" data-oid="-rr.qxg">
+                      <p
+                        className="text-gray-600 font-mono text-lg"
+                        data-oid="jq88g7_"
+                      >
+                        {orderDetails.trackingNumber}
+                      </p>
+                      <button
+                        onClick={() =>
+                          router.push(
+                            `/tracking?tracking=${orderDetails.trackingNumber}`,
+                          )
+                        }
+                        className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2 text-sm"
+                        data-oid="wdj_ont"
+                      >
+                        <ExternalLink className="h-4 w-4" data-oid="tta9jm4" />
+                        Track Package
+                      </button>
+                    </div>
+                  ) : (
+                    <p className="text-gray-500 italic" data-oid="izbgj:s">
+                      Tracking number will be updated once the order is ready to
+                      ship.
+                    </p>
+                  )}
                 </div>
               </div>
-            )}
+            </div>
 
             <div
               className="flex items-center gap-2 text-sm text-gray-600"
@@ -458,7 +465,7 @@ export default function OrderReceivedPage() {
             <div className="flex flex-col sm:flex-row gap-3" data-oid="dl8e_40">
               <button
                 onClick={() => router.push("/profile/completed-courses")}
-                className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center justify-center gap-2"
+                className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
                 data-oid="g:-kuia"
               >
                 <User className="h-4 w-4" data-oid="707mxaw" />
@@ -467,7 +474,7 @@ export default function OrderReceivedPage() {
 
               <button
                 onClick={() => router.push("/profile")}
-                className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+                className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
                 data-oid="_m2:w5q"
               >
                 <ArrowRight className="h-4 w-4" data-oid="7o:_je9" />
