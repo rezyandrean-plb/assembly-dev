@@ -844,6 +844,7 @@ export default function PLBBookPage() {
             </section>
 
             {/* Authors Section */}
+            {/* Authors Section */}
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#ffffff" }}
@@ -859,7 +860,7 @@ export default function PLBBookPage() {
               ></div>
               <div className="container relative z-10" data-oid="0novn2b">
                 <div
-                  className="text-center mb-12 fade-in"
+                  className="text-center mb-16 fade-in"
                   data-oid="authors-header"
                 >
                   <h2
@@ -877,23 +878,19 @@ export default function PLBBookPage() {
                   </p>
                 </div>
 
-                {/* Authors Grid */}
+                {/* Melvin Lim - Image Left, Bio Right */}
                 <div
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
-                  data-oid="authors-grid"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
+                  data-oid="melvin-section"
                 >
-                  {/* Melvin Lim */}
                   <div
-                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
-                    data-oid="melvin-card"
+                    className="order-1 md:order-1"
+                    data-oid="melvin-image-container"
                   >
-                    <div
-                      className="text-center mb-6"
-                      data-oid="melvin-image-container"
-                    >
+                    <div className="relative" data-oid="melvin-image-wrapper">
                       <div
-                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
-                        data-oid="melvin-image-wrapper"
+                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                        data-oid="melvin-image-frame"
                       >
                         <img
                           src="/images/Melvin_01.png"
@@ -902,58 +899,128 @@ export default function PLBBookPage() {
                           data-oid="melvin-image"
                         />
                       </div>
+                      <div
+                        className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10"
+                        data-oid="melvin-decoration"
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    className="order-2 md:order-2"
+                    data-oid="melvin-bio-container"
+                  >
+                    <div
+                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+                      data-oid="melvin-bio-card"
+                    >
                       <h3
-                        className="text-xl font-bold text-primary mb-1"
+                        className="text-2xl font-bold text-primary mb-2"
                         data-oid="melvin-name"
                       >
                         Melvin Lim
                       </h3>
                       <p
-                        className="text-sm text-gray-600 font-medium"
+                        className="text-primary-dark font-semibold mb-4"
                         data-oid="melvin-title"
                       >
                         Co-Founder and CEO
                       </p>
-                    </div>
-                    <div
-                      className="text-sm text-gray-700 leading-relaxed"
-                      data-oid="melvin-bio"
-                    >
-                      <p className="mb-3" data-oid="nmkx7fe">
-                        Co-Founder and CEO of PropertyLimBrothers (PLB), brings
-                        17 years of real estate expertise to the forefront of
-                        Singapore's property market. Under his thoughtful
-                        leadership, PLB has successfully sold over 1,800 homes,
-                        setting a new benchmark for real estate in Singapore.
-                      </p>
-                      <p className="mb-3" data-oid="mrccj1-">
-                        In 2017, Melvin introduced presenter-led home tour
-                        videos to Singapore—a groundbreaking move that redefined
-                        property marketing. With over 3,300 videos now under his
-                        belt, his innovative strategies have become a standard
-                        others aspire to achieve.
-                      </p>
-                      <p data-oid="2thznd2">
-                        Melvin remains committed to his core values of integrity
-                        and innovation, leading the PLB team with the vision to
-                        elevate real estate marketing across Singapore and the
-                        ASEAN region.
-                      </p>
+                      <div
+                        className="text-gray-700 leading-relaxed space-y-4"
+                        data-oid="melvin-bio"
+                      >
+                        <p data-oid="gycqrm:">
+                          Co-Founder and CEO of PropertyLimBrothers (PLB),
+                          brings 17 years of real estate expertise to the
+                          forefront of Singapore's property market. Under his
+                          thoughtful leadership, PLB has successfully sold over
+                          1,800 homes, setting a new benchmark for real estate
+                          in Singapore.
+                        </p>
+                        <p data-oid="ykvpda:">
+                          In 2017, Melvin introduced presenter-led home tour
+                          videos to Singapore—a groundbreaking move that
+                          redefined property marketing by showcasing each home's
+                          unique story. With over 3,300 videos now under his
+                          belt across YouTube and other platforms, his
+                          innovative strategies have become a standard others
+                          aspire to achieve.
+                        </p>
+                        <p data-oid="tw-xbpy">
+                          Melvin remains committed to his core values of
+                          integrity and innovation. His passion for uncovering
+                          the true character of every home drives his success,
+                          and he leads the PLB team with the same vision: to
+                          elevate real estate marketing across Singapore and the
+                          ASEAN region.
+                        </p>
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  {/* Adrian Lim */}
+                {/* Adrian Lim - Bio Left, Image Right */}
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
+                  data-oid="adrian-section"
+                >
                   <div
-                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
-                    data-oid="adrian-card"
+                    className="order-2 md:order-1"
+                    data-oid="adrian-bio-container"
                   >
                     <div
-                      className="text-center mb-6"
-                      data-oid="adrian-image-container"
+                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+                      data-oid="adrian-bio-card"
                     >
+                      <h3
+                        className="text-2xl font-bold text-primary mb-2"
+                        data-oid="adrian-name"
+                      >
+                        Adrian Lim
+                      </h3>
+                      <p
+                        className="text-primary-dark font-semibold mb-4"
+                        data-oid="adrian-title"
+                      >
+                        Co-Founder and Managing Director
+                      </p>
                       <div
-                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
-                        data-oid="adrian-image-wrapper"
+                        className="text-gray-700 leading-relaxed space-y-4"
+                        data-oid="adrian-bio"
+                      >
+                        <p data-oid="qp5r2fw">
+                          Co-Founder and Managing Director of
+                          PropertyLimBrothers, has 17 years of real estate
+                          experience in the industry and has transacted over
+                          1,800 with the PLB team till date. Adrian's expert
+                          communication skills and experience in selling homes
+                          has solved many complex situations for our clients
+                          over the past years.
+                        </p>
+                        <p data-oid="jxxlc6p">
+                          He constantly spearheads the Realty Team in PLB. His
+                          passion is driven by a relentless pursuit of what lies
+                          ahead. This dedication to serve effortlessly connects
+                          realtors and clients, inspiring others to thrive under
+                          his leadership.
+                        </p>
+                        <p data-oid="olnmh0l">
+                          A family man who enjoys the company of his wife, four
+                          children and their dogs Coffee and Mocha, Adrian is
+                          known for his passion, dedication and achievements in
+                          real estate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="order-1 md:order-2"
+                    data-oid="adrian-image-container"
+                  >
+                    <div className="relative" data-oid="adrian-image-wrapper">
+                      <div
+                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300"
+                        data-oid="adrian-image-frame"
                       >
                         <img
                           src="/images/Adrian_01-600x600.png"
@@ -962,59 +1029,27 @@ export default function PLBBookPage() {
                           data-oid="adrian-image"
                         />
                       </div>
-                      <h3
-                        className="text-xl font-bold text-primary mb-1"
-                        data-oid="adrian-name"
-                      >
-                        Adrian Lim
-                      </h3>
-                      <p
-                        className="text-sm text-gray-600 font-medium"
-                        data-oid="adrian-title"
-                      >
-                        Co-Founder and Managing Director
-                      </p>
-                    </div>
-                    <div
-                      className="text-sm text-gray-700 leading-relaxed"
-                      data-oid="adrian-bio"
-                    >
-                      <p className="mb-3" data-oid="d:b:21e">
-                        Co-Founder and Managing Director of PropertyLimBrothers,
-                        has 17 years of real estate experience in the industry
-                        and has transacted over 1,800 with the PLB team till
-                        date. Adrian's expert communication skills and
-                        experience in selling homes has solved many complex
-                        situations for our clients over the past years.
-                      </p>
-                      <p className="mb-3" data-oid="jkyme3_">
-                        He constantly spearheads the Realty Team in PLB. His
-                        passion is driven by a relentless pursuit of what lies
-                        ahead. This dedication to serve effortlessly connects
-                        realtors and clients, inspiring others to thrive under
-                        his leadership.
-                      </p>
-                      <p data-oid="ilga80y">
-                        A family man who enjoys the company of his wife, four
-                        children and their dogs Coffee and Mocha, Adrian is
-                        known for his passion, dedication and achievements in
-                        real estate.
-                      </p>
+                      <div
+                        className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary-dark/10 rounded-full -z-10"
+                        data-oid="adrian-decoration"
+                      ></div>
                     </div>
                   </div>
+                </div>
 
-                  {/* Grayce Tan */}
+                {/* Grayce Tan - Image Left, Bio Right */}
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 fade-in"
+                  data-oid="grayce-section"
+                >
                   <div
-                    className="fade-in bg-white rounded-xl shadow-lg p-6 border border-gray-100"
-                    data-oid="grayce-card"
+                    className="order-1 md:order-1"
+                    data-oid="grayce-image-container"
                   >
-                    <div
-                      className="text-center mb-6"
-                      data-oid="grayce-image-container"
-                    >
+                    <div className="relative" data-oid="grayce-image-wrapper">
                       <div
-                        className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg"
-                        data-oid="grayce-image-wrapper"
+                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300"
+                        data-oid="grayce-image-frame"
                       >
                         <img
                           src="/images/Grayce_02-600x600.png"
@@ -1023,52 +1058,67 @@ export default function PLBBookPage() {
                           data-oid="grayce-image"
                         />
                       </div>
+                      <div
+                        className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10"
+                        data-oid="grayce-decoration"
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    className="order-2 md:order-2"
+                    data-oid="grayce-bio-container"
+                  >
+                    <div
+                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+                      data-oid="grayce-bio-card"
+                    >
                       <h3
-                        className="text-xl font-bold text-primary mb-1"
+                        className="text-2xl font-bold text-primary mb-2"
                         data-oid="grayce-name"
                       >
                         Grayce Tan
                       </h3>
                       <p
-                        className="text-sm text-gray-600 font-medium"
+                        className="text-primary-dark font-semibold mb-4"
                         data-oid="grayce-title"
                       >
                         Senior Marketing and Business Development Manager
                       </p>
-                    </div>
-                    <div
-                      className="text-sm text-gray-700 leading-relaxed"
-                      data-oid="grayce-bio"
-                    >
-                      <p className="mb-3" data-oid="b2peey-">
-                        Senior Marketing and Business Development Manager at
-                        PropertyLimBrothers, with a rich background in Real
-                        Estate, Sociology, and Educational Pedagogy. Leading the
-                        Business Development, Brand Marketing, and Editorial
-                        teams at PropertyLimBrothers, she excels in boosting
-                        brand visibility and customer engagement.
-                      </p>
-                      <p className="mb-3" data-oid="km16331">
-                        A passionate lifelong learner, Grayce's deep curiosity
-                        for people and market dynamics drives her approach to
-                        real estate. She spearheads strategic content
-                        initiatives, manages real-time market analysis, and
-                        ensures her teams stay at the forefront of industry
-                        trends.
-                      </p>
-                      <p data-oid="9ed120l">
-                        Grounded in a commitment to delivering insightful,
-                        data-driven content, Grayce is dedicated to helping
-                        clients and readers alike navigate the ever-evolving
-                        property landscape with clarity and confidence.
-                      </p>
+                      <div
+                        className="text-gray-700 leading-relaxed space-y-4"
+                        data-oid="grayce-bio"
+                      >
+                        <p data-oid="4lwzfuo">
+                          Senior Marketing and Business Development Manager at
+                          PropertyLimBrothers, with a rich background in Real
+                          Estate, Sociology, and Educational Pedagogy. Leading
+                          the Business Development, Brand Marketing, and
+                          Editorial teams at PropertyLimBrothers, she excels in
+                          boosting brand visibility and customer engagement
+                          through innovative strategies and key partnerships.
+                        </p>
+                        <p data-oid="xw45k3h">
+                          A passionate lifelong learner, Grayce's deep curiosity
+                          for people and market dynamics drives her approach to
+                          real estate. She spearheads strategic content
+                          initiatives, manages real-time market analysis, and
+                          ensures her teams stay at the forefront of industry
+                          trends.
+                        </p>
+                        <p data-oid="863e4l:">
+                          Grounded in a commitment to delivering insightful,
+                          data-driven content, Grayce is dedicated to helping
+                          clients and readers alike navigate the ever-evolving
+                          property landscape with clarity and confidence.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Guarantee Section - New */}
+            {/* FAQ Section (formerly Guarantee Section) */}
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#e1e7ee" }}
@@ -1081,185 +1131,6 @@ export default function PLBBookPage() {
                 <div
                   className="max-w-4xl mx-auto text-center fade-in"
                   data-oid="80befgc"
-                >
-                  <div
-                    className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6"
-                    data-oid="i4q7hga"
-                  >
-                    <svg
-                      className="w-10 h-10 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      data-oid="97:5_q6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        data-oid="dlknzmb"
-                      />
-                    </svg>
-                  </div>
-                  <h2
-                    className="text-3xl md:text-4xl font-bold mb-6 text-primary"
-                    data-oid="my9ybqc"
-                  >
-                    Our Promise to You
-                  </h2>
-                  <p
-                    className="text-xl mb-8 text-gray-700 leading-relaxed"
-                    data-oid="xn:3lo4"
-                  >
-                    We're so confident in the value of the Property Leverage
-                    Blueprint that we stand behind every strategy and insight
-                    shared. This isn't just theory—it's proven methodology from
-                    17+ years of real-world success.
-                  </p>
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
-                    data-oid="r29dzqd"
-                  >
-                    <div
-                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
-                      data-oid="ddhpq:m"
-                    >
-                      <div
-                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                        data-oid="w-15clz"
-                      >
-                        <svg
-                          className="w-6 h-6 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          data-oid="n_y-0kq"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                            data-oid="0jgi2no"
-                          />
-                        </svg>
-                      </div>
-                      <h3
-                        className="text-lg font-semibold mb-2 text-gray-900"
-                        data-oid="blhgsts"
-                      >
-                        Proven Strategies
-                      </h3>
-                      <p className="text-gray-600 text-sm" data-oid="bmp0bi0">
-                        Battle-tested methods used by Singapore's top property
-                        professionals
-                      </p>
-                    </div>
-                    <div
-                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
-                      data-oid="i4jm_a1"
-                    >
-                      <div
-                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                        data-oid="id895g:"
-                      >
-                        <svg
-                          className="w-6 h-6 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          data-oid="5h7meas"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                            data-oid="skh_yx4"
-                          />
-                        </svg>
-                      </div>
-                      <h3
-                        className="text-lg font-semibold mb-2 text-gray-900"
-                        data-oid="sa_cx3e"
-                      >
-                        Expert Knowledge
-                      </h3>
-                      <p className="text-gray-600 text-sm" data-oid="zf:n4nu">
-                        Insights from PropertyLimBrothers' extensive market
-                        experience
-                      </p>
-                    </div>
-                    <div
-                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
-                      data-oid="buixmum"
-                    >
-                      <div
-                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                        data-oid="p4abhmd"
-                      >
-                        <svg
-                          className="w-6 h-6 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          data-oid="p1gzats"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75A9.75 9.75 0 0112 2.25z"
-                            data-oid="5hhdft1"
-                          />
-                        </svg>
-                      </div>
-                      <h3
-                        className="text-lg font-semibold mb-2 text-gray-900"
-                        data-oid="hdrvdmu"
-                      >
-                        Actionable Content
-                      </h3>
-                      <p className="text-gray-600 text-sm" data-oid="nhfer-4">
-                        Step-by-step guidance you can implement immediately
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* FAQ Section - Redesigned */}
-            <section
-              className="section relative overflow-hidden"
-              style={{ backgroundColor: "#fdfdfd" }}
-              data-oid="-tiq_b0"
-            >
-              {/* Decorative elements */}
-              <div
-                className="absolute top-0 left-0 w-full h-full opacity-5"
-                data-oid="faq-decorative"
-              >
-                <div
-                  className="absolute top-20 right-20 w-32 h-32 rounded-full bg-primary"
-                  data-oid="faq-circle-1"
-                ></div>
-                <div
-                  className="absolute bottom-32 left-16 w-24 h-24 rounded-full bg-accent"
-                  data-oid="faq-circle-2"
-                ></div>
-                <div
-                  className="absolute top-1/2 left-1/3 w-16 h-16 rounded-full bg-secondary"
-                  data-oid="faq-circle-3"
-                ></div>
-              </div>
-
-              <div className="container relative z-10" data-oid="gevs7ob">
-                {/* Enhanced header section */}
-                <div
-                  className="text-center mb-16 fade-in"
-                  data-oid="faq-header"
                 >
                   <div
                     className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6"
@@ -1297,7 +1168,10 @@ export default function PLBBookPage() {
                 </div>
 
                 {/* FAQ Grid Layout */}
-                <div className="max-w-6xl mx-auto" data-oid="faq-container">
+                <div
+                  className="max-w-6xl mx-auto mt-12"
+                  data-oid="faq-container"
+                >
                   <div
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6"
                     data-oid="faq-grid"
@@ -1320,12 +1194,18 @@ export default function PLBBookPage() {
                     ))}
                   </div>
                 </div>
+              </div>
+            </section>
 
+            {/* Contact Support Section */}
+            <section
+              className="section relative overflow-hidden"
+              style={{ backgroundColor: "#fdfdfd" }}
+              data-oid="-tiq_b0"
+            >
+              <div className="container relative z-10" data-oid="gevs7ob">
                 {/* Contact support section */}
-                <div
-                  className="mt-16 text-center fade-in"
-                  data-oid="faq-support"
-                >
+                <div className="text-center fade-in" data-oid="faq-support">
                   <div
                     className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100"
                     data-oid="6l7rru0"
