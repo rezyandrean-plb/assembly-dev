@@ -166,16 +166,9 @@ export default function PLBBookPage() {
         <div className="pt-24 pb-16" data-oid="218jqya">
           <Navbar data-oid="hn3broi" />
           <div className="plb-book-page relative" data-oid="3j3hhgp">
-            <NetworkBackground
-              scrollY={scrollY}
-              scrollSpeed={scrollSpeed}
-              windowHeight={windowHeight}
-              data-oid="6_4jm8s"
-            />
-
-            {/* Semi-transparent overlay to improve text readability across the entire page */}
+            {/* Light gradient background instead of network */}
             <div
-              className="absolute inset-0 bg-white opacity-30 z-0"
+              className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 z-0"
               data-oid="di_k3ac"
             ></div>
 
@@ -858,27 +851,324 @@ export default function PLBBookPage() {
               </div>
             </section>
 
-            {/* FAQ Section */}
-            <section className="section bg-highlight" data-oid="-tiq_b0">
-              <div className="container relative z-10" data-oid="gevs7ob">
-                <h2
-                  className="text-center text-primary mb-12 fade-in"
-                  data-oid="in8c-wk"
+            {/* Guarantee Section - New */}
+            <section
+              className="section bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden"
+              data-oid="guarantee-section"
+            >
+              <div
+                className="absolute inset-0 bg-black/10"
+                data-oid="jthfptj"
+              ></div>
+              <div
+                className="container relative z-10"
+                data-oid="guarantee-container"
+              >
+                <div
+                  className="max-w-4xl mx-auto text-center fade-in"
+                  data-oid="80befgc"
                 >
-                  Frequently Asked Questions
-                </h2>
-                <div className="max-w-3xl mx-auto space-y-2" data-oid="qvw.jd6">
-                  {faqItems.map((item, index) => (
-                    <FAQItem
-                      key={index}
-                      question={item.question}
-                      answer={item.answer}
-                      isOpen={activeIndex === index}
-                      onClick={() => toggleFAQ(index)}
-                      className="py-2"
-                      data-oid="q9ums93"
-                    />
-                  ))}
+                  <div
+                    className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6"
+                    data-oid="i4q7hga"
+                  >
+                    <svg
+                      className="w-10 h-10 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      data-oid="97:5_q6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        data-oid="dlknzmb"
+                      />
+                    </svg>
+                  </div>
+                  <h2
+                    className="text-3xl md:text-4xl font-bold mb-6"
+                    data-oid="my9ybqc"
+                  >
+                    Our Promise to You
+                  </h2>
+                  <p
+                    className="text-xl mb-8 text-white/90 leading-relaxed"
+                    data-oid="xn:3lo4"
+                  >
+                    We're so confident in the value of the Property Leverage
+                    Blueprint that we stand behind every strategy and insight
+                    shared. This isn't just theory—it's proven methodology from
+                    17+ years of real-world success.
+                  </p>
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+                    data-oid="r29dzqd"
+                  >
+                    <div
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      data-oid="ddhpq:m"
+                    >
+                      <div
+                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        data-oid="w-15clz"
+                      >
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          data-oid="n_y-0kq"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                            data-oid="0jgi2no"
+                          />
+                        </svg>
+                      </div>
+                      <h3
+                        className="text-lg font-semibold mb-2"
+                        data-oid="blhgsts"
+                      >
+                        Proven Strategies
+                      </h3>
+                      <p className="text-white/80 text-sm" data-oid="bmp0bi0">
+                        Battle-tested methods used by Singapore's top property
+                        professionals
+                      </p>
+                    </div>
+                    <div
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      data-oid="i4jm_a1"
+                    >
+                      <div
+                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        data-oid="id895g:"
+                      >
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          data-oid="5h7meas"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                            data-oid="skh_yx4"
+                          />
+                        </svg>
+                      </div>
+                      <h3
+                        className="text-lg font-semibold mb-2"
+                        data-oid="sa_cx3e"
+                      >
+                        Expert Knowledge
+                      </h3>
+                      <p className="text-white/80 text-sm" data-oid="zf:n4nu">
+                        Insights from PropertyLimBrothers' extensive market
+                        experience
+                      </p>
+                    </div>
+                    <div
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      data-oid="buixmum"
+                    >
+                      <div
+                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        data-oid="p4abhmd"
+                      >
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          data-oid="p1gzats"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75A9.75 9.75 0 0112 2.25z"
+                            data-oid="5hhdft1"
+                          />
+                        </svg>
+                      </div>
+                      <h3
+                        className="text-lg font-semibold mb-2"
+                        data-oid="hdrvdmu"
+                      >
+                        Actionable Content
+                      </h3>
+                      <p className="text-white/80 text-sm" data-oid="nhfer-4">
+                        Step-by-step guidance you can implement immediately
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* FAQ Section - Redesigned */}
+            <section
+              className="section relative overflow-hidden"
+              style={{ backgroundColor: "#f8fafc" }}
+              data-oid="-tiq_b0"
+            >
+              {/* Decorative elements */}
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-5"
+                data-oid="faq-decorative"
+              >
+                <div
+                  className="absolute top-20 right-20 w-32 h-32 rounded-full bg-primary"
+                  data-oid="faq-circle-1"
+                ></div>
+                <div
+                  className="absolute bottom-32 left-16 w-24 h-24 rounded-full bg-accent"
+                  data-oid="faq-circle-2"
+                ></div>
+                <div
+                  className="absolute top-1/2 left-1/3 w-16 h-16 rounded-full bg-secondary"
+                  data-oid="faq-circle-3"
+                ></div>
+              </div>
+
+              <div className="container relative z-10" data-oid="gevs7ob">
+                {/* Enhanced header section */}
+                <div
+                  className="text-center mb-16 fade-in"
+                  data-oid="faq-header"
+                >
+                  <div
+                    className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6"
+                    data-oid="6qgst9r"
+                  >
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      data-oid="x5lu2hh"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        data-oid="yvh0k9r"
+                      />
+                    </svg>
+                  </div>
+                  <h2
+                    className="text-4xl md:text-5xl font-bold text-primary mb-4"
+                    data-oid="in8c-wk"
+                  >
+                    Frequently Asked Questions
+                  </h2>
+                  <p
+                    className="text-xl text-gray-600 max-w-2xl mx-auto"
+                    data-oid=":1q989t"
+                  >
+                    Everything you need to know about the Property Leverage
+                    Blueprint
+                  </p>
+                </div>
+
+                {/* FAQ Grid Layout */}
+                <div className="max-w-6xl mx-auto" data-oid="faq-container">
+                  <div
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                    data-oid="faq-grid"
+                  >
+                    {faqItems.map((item, index) => (
+                      <div
+                        key={index}
+                        className="fade-in"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                        data-oid="ams0_gj"
+                      >
+                        <FAQItem
+                          question={item.question}
+                          answer={item.answer}
+                          isOpen={activeIndex === index}
+                          onClick={() => toggleFAQ(index)}
+                          data-oid="q9ums93"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Contact support section */}
+                <div
+                  className="mt-16 text-center fade-in"
+                  data-oid="faq-support"
+                >
+                  <div
+                    className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100"
+                    data-oid="6l7rru0"
+                  >
+                    <div
+                      className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-4"
+                      data-oid="3bvh6iq"
+                    >
+                      <svg
+                        className="w-6 h-6 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        data-oid="c:q9.kp"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          data-oid="qj56o2w"
+                        />
+                      </svg>
+                    </div>
+                    <h3
+                      className="text-2xl font-bold text-primary mb-3"
+                      data-oid="vo2mvqr"
+                    >
+                      Still have questions?
+                    </h3>
+                    <p className="text-gray-600 mb-6" data-oid="2w3ehy0">
+                      Can't find the answer you're looking for? Our friendly
+                      team is here to help.
+                    </p>
+                    <a
+                      href="mailto:hello@assembly.sg"
+                      className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium"
+                      data-oid="vahv9z_"
+                    >
+                      <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        data-oid="ntxglql"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          data-oid="fepvbqu"
+                        />
+                      </svg>
+                      Contact Support
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>
