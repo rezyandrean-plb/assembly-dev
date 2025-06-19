@@ -29,7 +29,7 @@ export default function CheckoutPage() {
         data-oid="lq98cdo"
       >
         <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"
+          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
           data-oid="0u61:yb"
         ></div>
       </div>

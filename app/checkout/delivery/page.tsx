@@ -200,7 +200,7 @@ export default function DeliveryPage() {
 
           <button
             onClick={handleNext}
-            className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+            className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors"
             data-oid="njusf9n"
           >
             Next

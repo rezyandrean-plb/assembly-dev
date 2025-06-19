@@ -36,7 +36,7 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             name="firstName"
             value={address.firstName}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
             data-oid="69imxw5"
           />
         </div>
@@ -238,7 +238,7 @@ export default function AddressPage() {
                   checked={billingSameAsDelivery}
                   onChange={(e) => setBillingSameAsDelivery(e.target.checked)}
                   id="sameAsDelivery"
-                  className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-[#123b79] rounded focus:ring-[#123b79]"
                   data-oid="y00kykg"
                 />
 
@@ -268,7 +268,7 @@ export default function AddressPage() {
           <OrderSummary data-oid="ep5thyd" />
           <button
             onClick={handleNext}
-            className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors mt-6"
+            className="w-full bg-[#123b79] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#0f2f63] transition-colors mt-6"
             data-oid="o116:hq"
           >
             Continue to Payment
@@ -285,7 +285,7 @@ export default function AddressPage() {
           Perhaps our{" "}
           <a
             href="#"
-            className="text-blue-600 hover:underline font-medium"
+            className="text-[#123b79] hover:underline font-medium"
             data-oid="atc_apo"
           >
             FAQs
@@ -293,7 +293,7 @@ export default function AddressPage() {
           page can answer your question. Alternatively, use our{" "}
           <a
             href="#"
-            className="text-blue-600 hover:underline font-medium"
+            className="text-[#123b79] hover:underline font-medium"
             data-oid="giqdcga"
           >
             Contact Us
