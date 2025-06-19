@@ -56,10 +56,13 @@ export function FAQItem({
         </div>
 
         {/* Question text */}
-        <div className="flex-grow" data-oid="3prz:b-">
+        <div
+          className="flex-grow flex items-center min-h-[32px]"
+          data-oid="3prz:b-"
+        >
           <h3
             className={cn(
-              "text-lg font-semibold transition-colors duration-300",
+              "text-lg font-semibold transition-colors duration-300 leading-tight",
               isOpen
                 ? "text-primary"
                 : "text-gray-900 group-hover:text-primary",
