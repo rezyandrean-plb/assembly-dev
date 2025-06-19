@@ -108,18 +108,18 @@ export default function BookPreviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-2" data-oid="5q3vowk">
             {/* Book Cover Side */}
             <div
-              className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden"
+              className="bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 p-8 flex flex-col justify-center items-center text-gray-800 relative overflow-hidden"
               data-oid="p9_hr01"
             >
               {/* Subtle pattern overlay */}
-              <div className="absolute inset-0 opacity-5" data-oid="het8971">
+              <div className="absolute inset-0 opacity-10" data-oid="y-4emaq">
                 <div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/10 to-transparent transform -skew-y-12"
-                  data-oid="4sdlak-"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent transform -skew-y-12"
+                  data-oid="z1_hqfv"
                 ></div>
                 <div
-                  className="absolute inset-0 bg-gradient-to-l from-transparent via-gray-300/8 to-transparent transform skew-y-12"
-                  data-oid="7dhetuv"
+                  className="absolute inset-0 bg-gradient-to-l from-transparent via-orange-200/15 to-transparent transform skew-y-12"
+                  data-oid="e9n64de"
                 ></div>
               </div>
               <div className="max-w-md relative z-10" data-oid="91:zlqj">
