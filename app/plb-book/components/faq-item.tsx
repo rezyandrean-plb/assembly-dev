@@ -28,15 +28,15 @@ export function FAQItem({
   return (
     <div
       className={cn(
-        "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md",
-        isOpen && "shadow-lg border-primary/20",
+        "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md h-24 flex flex-col",
+        isOpen && "shadow-lg border-primary/20 h-auto",
       )}
       data-oid="bj0ufbw"
     >
       <button
         className={cn(
-          "w-full p-6 flex items-start gap-4 focus:outline-none transition-all duration-300 text-left group",
-          isOpen ? "bg-primary/5" : "hover:bg-gray-50",
+          "w-full p-6 flex items-center gap-4 focus:outline-none transition-all duration-300 text-left group flex-1 min-h-24",
+          isOpen ? "bg-primary/5 items-start" : "hover:bg-gray-50",
         )}
         onClick={onClick}
         aria-expanded={isOpen}

@@ -1173,13 +1173,13 @@ export default function PLBBookPage() {
                   data-oid="faq-container"
                 >
                   <div
-                    className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start"
                     data-oid="faq-grid"
                   >
                     {faqItems.map((item, index) => (
                       <div
                         key={index}
-                        className="fade-in"
+                        className="fade-in h-full"
                         style={{ animationDelay: `${index * 0.1}s` }}
                         data-oid="ams0_gj"
                       >
