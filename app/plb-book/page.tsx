@@ -153,7 +153,8 @@ export default function PLBBookPage() {
       price: "29.00", // Discounted price
       instructor: "Assembly SG",
       image: "/images/plb-book-cover.png",
-      type: "Book",
+      type: "Book" as const,
+      slug: "property-leverage-blueprint",
     };
     addToCart(bookItem);
     toast.success("Property Leverage Blueprint added to cart!");
@@ -168,7 +169,8 @@ export default function PLBBookPage() {
           <div className="plb-book-page relative" data-oid="3j3hhgp">
             {/* Light gradient background instead of network */}
             <div
-              className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 z-0"
+              className="absolute inset-0 z-0"
+              style={{ backgroundColor: "#ffffff" }}
               data-oid="di_k3ac"
             ></div>
 
@@ -869,11 +871,11 @@ export default function PLBBookPage() {
                   data-oid="80befgc"
                 >
                   <div
-                    className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6"
+                    className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6"
                     data-oid="i4q7hga"
                   >
                     <svg
-                      className="w-10 h-10 text-white"
+                      className="w-10 h-10 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -889,13 +891,13 @@ export default function PLBBookPage() {
                     </svg>
                   </div>
                   <h2
-                    className="text-3xl md:text-4xl font-bold mb-6"
+                    className="text-3xl md:text-4xl font-bold mb-6 text-primary"
                     data-oid="my9ybqc"
                   >
                     Our Promise to You
                   </h2>
                   <p
-                    className="text-xl mb-8 text-white/90 leading-relaxed"
+                    className="text-xl mb-8 text-gray-700 leading-relaxed"
                     data-oid="xn:3lo4"
                   >
                     We're so confident in the value of the Property Leverage
@@ -908,15 +910,15 @@ export default function PLBBookPage() {
                     data-oid="r29dzqd"
                   >
                     <div
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
                       data-oid="ddhpq:m"
                     >
                       <div
-                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
                         data-oid="w-15clz"
                       >
                         <svg
-                          className="w-6 h-6 text-white"
+                          className="w-6 h-6 text-primary"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -932,26 +934,26 @@ export default function PLBBookPage() {
                         </svg>
                       </div>
                       <h3
-                        className="text-lg font-semibold mb-2"
+                        className="text-lg font-semibold mb-2 text-gray-900"
                         data-oid="blhgsts"
                       >
                         Proven Strategies
                       </h3>
-                      <p className="text-white/80 text-sm" data-oid="bmp0bi0">
+                      <p className="text-gray-600 text-sm" data-oid="bmp0bi0">
                         Battle-tested methods used by Singapore's top property
                         professionals
                       </p>
                     </div>
                     <div
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
                       data-oid="i4jm_a1"
                     >
                       <div
-                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
                         data-oid="id895g:"
                       >
                         <svg
-                          className="w-6 h-6 text-white"
+                          className="w-6 h-6 text-primary"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -967,26 +969,26 @@ export default function PLBBookPage() {
                         </svg>
                       </div>
                       <h3
-                        className="text-lg font-semibold mb-2"
+                        className="text-lg font-semibold mb-2 text-gray-900"
                         data-oid="sa_cx3e"
                       >
                         Expert Knowledge
                       </h3>
-                      <p className="text-white/80 text-sm" data-oid="zf:n4nu">
+                      <p className="text-gray-600 text-sm" data-oid="zf:n4nu">
                         Insights from PropertyLimBrothers' extensive market
                         experience
                       </p>
                     </div>
                     <div
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                      className="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm"
                       data-oid="buixmum"
                     >
                       <div
-                        className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
                         data-oid="p4abhmd"
                       >
                         <svg
-                          className="w-6 h-6 text-white"
+                          className="w-6 h-6 text-primary"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -1002,12 +1004,12 @@ export default function PLBBookPage() {
                         </svg>
                       </div>
                       <h3
-                        className="text-lg font-semibold mb-2"
+                        className="text-lg font-semibold mb-2 text-gray-900"
                         data-oid="hdrvdmu"
                       >
                         Actionable Content
                       </h3>
-                      <p className="text-white/80 text-sm" data-oid="nhfer-4">
+                      <p className="text-gray-600 text-sm" data-oid="nhfer-4">
                         Step-by-step guidance you can implement immediately
                       </p>
                     </div>
@@ -1019,7 +1021,7 @@ export default function PLBBookPage() {
             {/* FAQ Section - Redesigned */}
             <section
               className="section relative overflow-hidden"
-              style={{ backgroundColor: "#f8fafc" }}
+              style={{ backgroundColor: "#eff5fd" }}
               data-oid="-tiq_b0"
             >
               {/* Decorative elements */}
