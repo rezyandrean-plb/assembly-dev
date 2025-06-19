@@ -424,39 +424,29 @@ export default function PLBBookPage() {
                   </p>
                 </div>
 
-                <div
-                  className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start"
-                  data-oid="tciay34"
-                >
-                  {/* Book image - now in a 3-column space */}
-                  <div
-                    className="xl:col-span-3 fade-in order-2 xl:order-1"
-                    data-oid="5vcfxam"
-                  >
+                <div className="max-w-6xl mx-auto" data-oid="tciay34">
+                  {/* Book image centered */}
+                  <div className="text-center mb-12 fade-in" data-oid="5vcfxam">
                     <div
-                      className="relative mx-auto w-48 h-64"
+                      className="relative inline-block w-48 h-64"
                       data-oid="w5rajm2"
                     >
-                      <div
-                        className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-primary-dark/30 blur-2xl rounded-full transform -translate-y-4 translate-x-4"
-                        data-oid="oboq88p"
-                      ></div>
                       <img
                         src="/images/PLB Book Front Cover_FA.jpg"
                         alt="PropertyLimBrothers Book Cover"
-                        className="relative z-10 w-full h-full object-cover rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform rotate-3 hover:rotate-0 transition-all duration-500"
+                        className="w-full h-full object-cover rounded-lg shadow-xl"
                         data-oid="ps06acd"
                       />
 
                       <div
-                        className="absolute -bottom-4 -right-4 bg-white text-primary border-2 border-primary rounded-full w-16 h-16 flex items-center justify-center text-center p-1 shadow-lg transform rotate-12 z-20"
+                        className="absolute -bottom-3 -right-3 bg-white text-primary border-2 border-primary rounded-full w-14 h-14 flex items-center justify-center text-center shadow-lg"
                         data-oid="k8h31eh"
                       >
                         <div data-oid="u_zi2t1">
-                          <div className="text-xs" data-oid="4xtwk3j">
+                          <div className="text-xs font-bold" data-oid="4xtwk3j">
                             Limited
                           </div>
-                          <div className="text-sm font-bold" data-oid="uhrfego">
+                          <div className="text-xs" data-oid="uhrfego">
                             Edition
                           </div>
                         </div>
@@ -464,342 +454,215 @@ export default function PLBBookPage() {
                     </div>
                   </div>
 
-                  {/* Content cards - now in a 9-column space with 4 cards per row */}
-                  <div
-                    className="xl:col-span-9 fade-in order-1 xl:order-2"
-                    data-oid="6uw5118"
-                  >
+                  {/* Simple list layout */}
+                  <div className="fade-in" data-oid="6uw5118">
                     <div
-                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3"
-                      data-oid="3hpk._t"
+                      className="bg-white rounded-xl shadow-lg p-8 mb-8"
+                      data-oid="n6z.j5s"
                     >
                       <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-1"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        data-oid="2_oiooa"
                       >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="k62ikbg"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="f53s.73"
-                          >
-                            01
+                        <div className="space-y-4" data-oid="een4fm-">
+                          <div className="flex items-start" data-oid="p7j67td">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="llqik3k"
+                            >
+                              01
+                            </div>
+                            <div data-oid="l-ws_0v">
+                              <h3
+                                className="text-primary font-semibold mb-1 text-md"
+                                data-oid="1f7e16:"
+                              >
+                                The mindset of successful property sellers
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="eukilau"
-                          >
-                            Seller Mindset
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="z_7.f_k"
-                        >
-                          The mindset of successful property sellers
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-2"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="h1j4x_k"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="80xvmy0"
-                          >
-                            02
+                          <div className="flex items-start" data-oid="q7v8wzx">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="p6ads2m"
+                            >
+                              02
+                            </div>
+                            <div data-oid="j4mjb_h">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="9d418_o"
+                              >
+                                The Singapore Buy and Sell Pattern
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="fe:gnh5"
-                          >
-                            Market Patterns
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="31e.805"
-                        >
-                          The Singapore Buy and Sell Pattern
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-3"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="jq5fk8b"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="osw877w"
-                          >
-                            03
+                          <div className="flex items-start" data-oid="jiyk6a:">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="felhmg2"
+                            >
+                              03
+                            </div>
+                            <div data-oid=":.4-n-1">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="b2k90bg"
+                              >
+                                How to build empathy and connection with your
+                                eventual buyer
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid=".tshla8"
-                          >
-                            Buyer Connection
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="iuuzrq7"
-                        >
-                          How to build empathy and connection with your eventual
-                          buyer
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-4"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="9og88h4"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="kv5yi:o"
-                          >
-                            04
+                          <div className="flex items-start" data-oid="le6-3og">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="y_lxg78"
+                            >
+                              04
+                            </div>
+                            <div data-oid=".-llig9">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="g:oxq9:"
+                              >
+                                Step-by-step guide to preparing for a home sale
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="o-i0kpn"
-                          >
-                            Home Preparation
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="5:2pf-e"
-                        >
-                          Step-by-step guide to preparing for a home sale
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-5"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="0j:akzb"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="eloe8mj"
-                          >
-                            05
+                          <div className="flex items-start" data-oid="r164gmu">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="z16b7z6"
+                            >
+                              05
+                            </div>
+                            <div data-oid=":9ll:z_">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="9fd4vdi"
+                              >
+                                How to prepare and dress your house for the sale
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="drhof5e"
-                          >
-                            House Dressing
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="-cku6v0"
-                        >
-                          How to prepare and dress your house for the sale
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-6"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="69c1z:x"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="s.1mogr"
-                          >
-                            06
+                          <div className="flex items-start" data-oid="za809zd">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="6xkho2w"
+                            >
+                              06
+                            </div>
+                            <div data-oid="r2q2lbs">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="l0qjj3z"
+                              >
+                                How to leverage on and harness the power of
+                                social media
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="o3eb6co"
-                          >
-                            Social Media
-                          </h3>
                         </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="3-.7-s:"
-                        >
-                          How to leverage on and harness the power of social
-                          media
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-7"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="sat07ny"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="0-bj:q-"
-                          >
-                            07
+                        <div className="space-y-4" data-oid="qbge8l7">
+                          <div className="flex items-start" data-oid="zua8br0">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="we705qq"
+                            >
+                              07
+                            </div>
+                            <div data-oid="46iiwr6">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="q8mjerm"
+                              >
+                                The four pillars of social media content
+                                creation
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="dr_cao2"
-                          >
-                            Content Creation
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="q22xzsp"
-                        >
-                          The four pillars of social media content creation
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-8"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="ds_3cva"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="rbvekb0"
-                          >
-                            08
+                          <div className="flex items-start" data-oid="0g488p5">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="7477n6l"
+                            >
+                              08
+                            </div>
+                            <div data-oid="v-:4hv0">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="7_ht_:i"
+                              >
+                                How to create a comprehensive Home Tour
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="d4jn948"
-                          >
-                            Home Tour
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="gz1ex.8"
-                        >
-                          How to create a comprehensive Home Tour
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-9"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid=".r8p8-a"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="gpfm_mh"
-                          >
-                            09
+                          <div className="flex items-start" data-oid="dxv23zd">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="ztas6bi"
+                            >
+                              09
+                            </div>
+                            <div data-oid="2e4gs:s">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="dfajck0"
+                              >
+                                How to advertise and distribute your content to
+                                maximise attention
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="qpgirhq"
-                          >
-                            Content Distribution
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="cqbh0e4"
-                        >
-                          How to advertise and distribute your content to
-                          maximise attention
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-10"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="0_c57r."
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="qsut3o4"
-                          >
-                            10
+                          <div className="flex items-start" data-oid="ytah-ij">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid="r4prn9i"
+                            >
+                              10
+                            </div>
+                            <div data-oid="rd8pxoa">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid=".nuy.l_"
+                              >
+                                Pricing techniques for your home
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="o6gnpry"
-                          >
-                            Pricing Strategy
-                          </h3>
-                        </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid="0j5.ny0"
-                        >
-                          Pricing techniques for your home
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-                        data-oid="card-11"
-                      >
-                        <div
-                          className="flex items-center mb-2"
-                          data-oid="46d.s2e"
-                        >
-                          <div
-                            className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-2 text-xs group-hover:scale-110 transition-transform"
-                            data-oid="cx1s9u8"
-                          >
-                            11
+                          <div className="flex items-start" data-oid="47u93bf">
+                            <div
+                              className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 text-sm flex-shrink-0 mt-1"
+                              data-oid=".l_aaoo"
+                            >
+                              11
+                            </div>
+                            <div data-oid="jbzvkki">
+                              <h3
+                                className="text-primary font-semibold mb-1"
+                                data-oid="mvzwmqf"
+                              >
+                                Graphic guides to timeline and financial
+                                calculations
+                              </h3>
+                            </div>
                           </div>
-                          <h3
-                            className="text-primary text-sm font-semibold"
-                            data-oid="n9ey0ss"
-                          >
-                            Financial Calculations
-                          </h3>
                         </div>
-                        <p
-                          className="text-gray-600 pl-9 text-xs"
-                          data-oid=".._u3w1"
-                        >
-                          Graphic guides to timeline and financial calculations
-                        </p>
                       </div>
                     </div>
 
-                    <div
-                      className="mt-8 text-center lg:text-left"
-                      data-oid="ed8wkul"
-                    >
+                    <div className="text-center" data-oid="ed8wkul">
                       <Link
                         href="/plb-book/preview"
                         className="inline-block"
