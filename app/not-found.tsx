@@ -7,28 +7,28 @@ function NotFoundContent() {
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-gray-50"
-      data-oid="m4d9iy1"
+      data-oid="pimiqx1"
     >
-      <div className="text-center" data-oid="_prk:uo">
+      <div className="text-center" data-oid="mrgeq--">
         <h1
           className="text-6xl font-bold text-[#123B79] mb-4"
-          data-oid="v531wch"
+          data-oid="vrhbi8e"
         >
           404
         </h1>
         <h2
           className="text-2xl font-semibold text-gray-700 mb-4"
-          data-oid="6n-alu9"
+          data-oid="9ru1vab"
         >
           Page Not Found
         </h2>
-        <p className="text-gray-600 mb-8" data-oid="-yt0_c0">
+        <p className="text-gray-600 mb-8" data-oid="7c0b5m1">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <Link
           href="/"
           className="inline-flex items-center px-6 py-3 bg-[#123B79] text-white rounded-md hover:bg-[#0A2A5E] transition-colors"
-          data-oid="ar5bbm3"
+          data-oid="6pkbd1t"
         >
           Return Home
         </Link>
@@ -43,27 +43,27 @@ export default function NotFound() {
       fallback={
         <div
           className="min-h-screen flex items-center justify-center bg-gray-50"
-          data-oid="cy:xsoc"
+          data-oid="_6s45h9"
         >
-          <div className="animate-pulse" data-oid="az39c_h">
+          <div className="animate-pulse" data-oid="_:i7-q.">
             <div
               className="h-12 w-32 bg-gray-200 rounded mb-4"
-              data-oid="62q:0o4"
+              data-oid="8y54ai1"
             ></div>
             <div
               className="h-8 w-48 bg-gray-200 rounded mb-4"
-              data-oid="90erlg0"
+              data-oid="7zcu-.s"
             ></div>
             <div
               className="h-4 w-64 bg-gray-200 rounded"
-              data-oid=".f-:m--"
+              data-oid="t41kj3j"
             ></div>
           </div>
         </div>
       }
-      data-oid="j56x_:_"
+      data-oid="9c4can."
     >
-      <NotFoundContent data-oid="2a..wec" />
+      <NotFoundContent data-oid="5mgr05f" />
     </Suspense>
   );
 }

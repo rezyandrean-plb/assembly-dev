@@ -102,13 +102,13 @@ export default function CoursesPage() {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          data-oid="l89gau:"
+          data-oid="injp17d"
         >
-          <rect x="3" y="3" width="18" height="18" rx="2" data-oid="3b6nsze" />
-          <path d="M9 3v18" data-oid="x91uu5w" />
-          <path d="M14 8h.01" data-oid="whgajqi" />
-          <path d="M14 12h.01" data-oid="0.5hidj" />
-          <path d="M14 16h.01" data-oid="k3emv0v" />
+          <rect x="3" y="3" width="18" height="18" rx="2" data-oid="0dh1yof" />
+          <path d="M9 3v18" data-oid="yihk9xc" />
+          <path d="M14 8h.01" data-oid="km:y36u" />
+          <path d="M14 12h.01" data-oid="1me24.g" />
+          <path d="M14 16h.01" data-oid="ba9y.3n" />
         </svg>
       ),
 
@@ -135,16 +135,16 @@ export default function CoursesPage() {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          data-oid="u3w7q6n"
+          data-oid="ngr7nra"
         >
-          <path d="M2 12h6" data-oid="6qri266" />
-          <path d="M22 12h-6" data-oid="kzpnkf7" />
-          <path d="M12 2v2" data-oid="ek9mhs2" />
-          <path d="M12 8v2" data-oid="t05m5e3" />
-          <path d="M12 14v2" data-oid="de8-nb5" />
-          <path d="M12 20v2" data-oid="qv6oesm" />
-          <path d="M19 9l-7 3-7-3" data-oid="9sd5n68" />
-          <path d="M19 15l-7-3-7 3" data-oid="7q9cei." />
+          <path d="M2 12h6" data-oid="o.s2nnt" />
+          <path d="M22 12h-6" data-oid="v70iase" />
+          <path d="M12 2v2" data-oid="5rt84bj" />
+          <path d="M12 8v2" data-oid="zyhsr5m" />
+          <path d="M12 14v2" data-oid="z1iicw8" />
+          <path d="M12 20v2" data-oid="avq8ft." />
+          <path d="M19 9l-7 3-7-3" data-oid="szg7gqv" />
+          <path d="M19 15l-7-3-7 3" data-oid="chymleb" />
         </svg>
       ),
 
@@ -171,9 +171,9 @@ export default function CoursesPage() {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          data-oid="kuzb847"
+          data-oid="z1tt8pg"
         >
-          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" data-oid="gzclqk7" />
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" data-oid="1sa00aw" />
         </svg>
       ),
 
@@ -722,27 +722,27 @@ export default function CoursesPage() {
 
   return (
     <>
-      <Navbar data-oid="qomxt_8" />
-      <main className="min-h-screen bg-white" data-oid="49o3bdg">
+      <Navbar data-oid="ot1jetq" />
+      <main className="min-h-screen bg-white" data-oid="0mm8n2k">
         {/* Page Content */}
-        <div className="pt-24 pb-16" data-oid="5tnge::">
-          <div className="container mx-auto px-4" data-oid="llwrwp0">
+        <div className="pt-24 pb-16" data-oid="4mq7atz">
+          <div className="container mx-auto px-4" data-oid="-tuid8u">
             {/* Page Header */}
-            <div className="mb-8" data-oid="qx.11lw">
+            <div className="mb-8" data-oid="ig585ha">
               <h1
                 className="text-3xl font-bold text-gray-900"
-                data-oid="e6qakp3"
+                data-oid="hm.gko3"
               >
                 Real Estate Courses
               </h1>
-              <p className="text-gray-600 mt-2" data-oid=".j--.1_">
+              <p className="text-gray-600 mt-2" data-oid="ijfktms">
                 Master Singapore's property market with expert-led courses
               </p>
             </div>
 
             {/* Tab Navigation */}
-            <div className="mb-8 border-b border-gray-200" data-oid="v6eos4x">
-              <div className="flex space-x-8" data-oid="q5ou25r">
+            <div className="mb-8 border-b border-gray-200" data-oid="o5ci2tw">
+              <div className="flex space-x-8" data-oid="14z0ah_">
                 <button
                   className={`pb-4 px-1 font-medium text-lg transition-colors ${
                     activeTab === "courses"
@@ -750,7 +750,7 @@ export default function CoursesPage() {
                       : "text-gray-600 hover:text-gray-900"
                   }`}
                   onClick={() => setActiveTab("courses")}
-                  data-oid="75zv43."
+                  data-oid="sa0rqaj"
                 >
                   Individual Courses
                 </button>
@@ -761,7 +761,7 @@ export default function CoursesPage() {
                       : "text-gray-600 hover:text-gray-900"
                   }`}
                   onClick={() => setActiveTab("paths")}
-                  data-oid="rblw.-i"
+                  data-oid="u5z8nmr"
                 >
                   Learning Paths
                 </button>
@@ -773,26 +773,26 @@ export default function CoursesPage() {
                 {/* Main Content Area with Sidebar */}
                 <div
                   className="flex flex-col lg:flex-row gap-8"
-                  data-oid="kyuhn4r"
+                  data-oid="e..zn2q"
                 >
                   {/* Sidebar Filters (Desktop) */}
                   <div
                     className="hidden lg:block w-64 flex-shrink-0"
-                    data-oid="gvb1ioz"
+                    data-oid="o4wv:7j"
                   >
-                    <div className="sticky top-24" data-oid="6q.4gy3">
-                      <div className="mb-6" data-oid="v-r1_vp">
+                    <div className="sticky top-24" data-oid="jk7o9j_">
+                      <div className="mb-6" data-oid="hxhla:4">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="aiq1hwb"
+                          data-oid="t4j.y2b"
                         >
                           Filters
                         </h3>
-                        <div className="relative" data-oid="7id0zcw">
+                        <div className="relative" data-oid="rj64amf">
                           <Search
                             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
                             size={16}
-                            data-oid="x31gduv"
+                            data-oid="qkj4qkl"
                           />
 
                           <input
@@ -801,37 +801,37 @@ export default function CoursesPage() {
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-[#123B79]"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            data-oid=".ns27l4"
+                            data-oid="49jl:b_"
                           />
                         </div>
                       </div>
 
                       {/* Type Filter */}
-                      <div className="mb-6" data-oid="3nmy8h1">
+                      <div className="mb-6" data-oid="nm.mf7l">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="adofgkc"
+                          data-oid="sga7b-f"
                         >
                           Type
                         </h3>
-                        <div className="space-y-2" data-oid="ymb:s33">
+                        <div className="space-y-2" data-oid="mk_3w:x">
                           {filterOptions.type.map((type) => (
                             <label
                               key={type}
                               className="flex items-center"
-                              data-oid="a6g39t7"
+                              data-oid="5_r0why"
                             >
                               <input
                                 type="checkbox"
                                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                                 checked={selectedFilters.type.includes(type)}
                                 onChange={() => toggleFilter("type", type)}
-                                data-oid="0xebz2k"
+                                data-oid="aue9z8."
                               />
 
                               <span
                                 className="ml-2 text-sm text-gray-700"
-                                data-oid="o9qpa2v"
+                                data-oid="xjumdye"
                               >
                                 {type}
                               </span>
@@ -841,22 +841,22 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Category Filter */}
-                      <div className="mb-6" data-oid="eo3xkxz">
+                      <div className="mb-6" data-oid="2.y2a18">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="i006cc9"
+                          data-oid="mr68q0y"
                         >
                           Category
                         </h3>
                         <div
                           className="space-y-2 max-h-60 overflow-y-auto"
-                          data-oid="c_tvw28"
+                          data-oid="tox7poc"
                         >
                           {filterOptions.category.map((category) => (
                             <label
                               key={category}
                               className="flex items-center"
-                              data-oid="dk:upvn"
+                              data-oid="x6in516"
                             >
                               <input
                                 type="checkbox"
@@ -867,12 +867,12 @@ export default function CoursesPage() {
                                 onChange={() =>
                                   toggleFilter("category", category)
                                 }
-                                data-oid="mtoiw1u"
+                                data-oid="o0hs8tk"
                               />
 
                               <span
                                 className="ml-2 text-sm text-gray-700"
-                                data-oid="a:xadkc"
+                                data-oid="e2uk6ca"
                               >
                                 {category}
                               </span>
@@ -882,31 +882,31 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Level Filter */}
-                      <div className="mb-6" data-oid="ft4f6ol">
+                      <div className="mb-6" data-oid="3xsub2b">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="p13q_y0"
+                          data-oid="vl9qgx2"
                         >
                           Level
                         </h3>
-                        <div className="space-y-2" data-oid="a4h2i8l">
+                        <div className="space-y-2" data-oid="fktexzq">
                           {filterOptions.level.map((level) => (
                             <label
                               key={level}
                               className="flex items-center"
-                              data-oid="baj310y"
+                              data-oid="uk1-0n8"
                             >
                               <input
                                 type="checkbox"
                                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                                 checked={selectedFilters.level.includes(level)}
                                 onChange={() => toggleFilter("level", level)}
-                                data-oid="4oh2cjp"
+                                data-oid="bhew::x"
                               />
 
                               <span
                                 className="ml-2 text-sm text-gray-700"
-                                data-oid=".fcm1_q"
+                                data-oid="1.9h30b"
                               >
                                 {level}
                               </span>
@@ -916,31 +916,31 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Price Filter */}
-                      <div className="mb-6" data-oid="mqkh1oj">
+                      <div className="mb-6" data-oid="k2-5m10">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="qnt_sfn"
+                          data-oid="huz7xar"
                         >
                           Price
                         </h3>
-                        <div className="space-y-2" data-oid="-b6r:h2">
+                        <div className="space-y-2" data-oid="rzxxms7">
                           {filterOptions.price.map((price) => (
                             <label
                               key={price}
                               className="flex items-center"
-                              data-oid="o_010sg"
+                              data-oid="q:piguw"
                             >
                               <input
                                 type="checkbox"
                                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                                 checked={selectedFilters.price.includes(price)}
                                 onChange={() => toggleFilter("price", price)}
-                                data-oid="vsx8j.u"
+                                data-oid="ss1rghl"
                               />
 
                               <span
                                 className="ml-2 text-sm text-gray-700"
-                                data-oid="wg40-n9"
+                                data-oid="t3c8scp"
                               >
                                 {price}
                               </span>
@@ -961,7 +961,7 @@ export default function CoursesPage() {
                           variant="outline"
                           className="w-full text-sm"
                           onClick={clearFilters}
-                          data-oid="kb_dyaz"
+                          data-oid="q2vy:t0"
                         >
                           Clear all filters
                         </Button>
@@ -972,9 +972,9 @@ export default function CoursesPage() {
                   {/* Mobile Filter Button */}
                   <div
                     className="lg:hidden mb-4 flex items-center justify-between"
-                    data-oid="6oiggz-"
+                    data-oid="au6k.lz"
                   >
-                    <div className="text-sm text-gray-500" data-oid="4bjgnwh">
+                    <div className="text-sm text-gray-500" data-oid="eu.2re8">
                       {sortedCourses.length}{" "}
                       {sortedCourses.length === 1 ? "course" : "courses"}
                     </div>
@@ -983,9 +983,9 @@ export default function CoursesPage() {
                       size="sm"
                       className="flex items-center gap-2"
                       onClick={() => setShowMobileFilters(!showMobileFilters)}
-                      data-oid="4w4pk39"
+                      data-oid="imjsc0y"
                     >
-                      <Filter size={16} data-oid="p1jojx5" />
+                      <Filter size={16} data-oid="h18r9b6" />
                       Filters
                       {(selectedFilters.level.length > 0 ||
                         selectedFilters.duration.length > 0 ||
@@ -994,7 +994,7 @@ export default function CoursesPage() {
                         selectedFilters.price.length > 0) && (
                         <span
                           className="bg-[#123B79] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                          data-oid="9xfk1gg"
+                          data-oid="zu81pbu"
                         >
                           {selectedFilters.level.length +
                             selectedFilters.duration.length +
@@ -1010,36 +1010,36 @@ export default function CoursesPage() {
                   {showMobileFilters && (
                     <div
                       className="lg:hidden fixed inset-0 bg-white z-50 overflow-y-auto p-4"
-                      data-oid="l.yi22:"
+                      data-oid="aidzj3w"
                     >
                       <div
                         className="flex justify-between items-center mb-6"
-                        data-oid="qkhi9o9"
+                        data-oid="f7y3fg."
                       >
-                        <h2 className="text-xl font-bold" data-oid="rf0x2nc">
+                        <h2 className="text-xl font-bold" data-oid=".qv_0b0">
                           Filters
                         </h2>
                         <button
                           onClick={() => setShowMobileFilters(false)}
-                          data-oid="3tz.5:m"
+                          data-oid="to.7cu7"
                         >
-                          <X size={24} data-oid="99:by47" />
+                          <X size={24} data-oid="8xa8n2d" />
                         </button>
                       </div>
 
                       {/* Search */}
-                      <div className="mb-6" data-oid="72uhx56">
+                      <div className="mb-6" data-oid="dvztru:">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="g418b-6"
+                          data-oid="630foag"
                         >
                           Search
                         </h3>
-                        <div className="relative" data-oid=".vdd94m">
+                        <div className="relative" data-oid="uopluvt">
                           <Search
                             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
                             size={16}
-                            data-oid="qiyb81t"
+                            data-oid="2em.5xl"
                           />
 
                           <input
@@ -1048,22 +1048,22 @@ export default function CoursesPage() {
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-[#123B79]"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            data-oid="5uchkt_"
+                            data-oid="e67.df8"
                           />
                         </div>
                       </div>
 
                       {/* Type Filter */}
-                      <div className="mb-6" data-oid="j7xcswk">
+                      <div className="mb-6" data-oid="85cvoor">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="6a3e.-q"
+                          data-oid="nitco:q"
                         >
                           Type
                         </h3>
                         <div
                           className="flex flex-wrap gap-2"
-                          data-oid=".wnv5kq"
+                          data-oid="nt95gz6"
                         >
                           {filterOptions.type.map((type) => (
                             <Button
@@ -1080,7 +1080,7 @@ export default function CoursesPage() {
                                   : ""
                               }
                               onClick={() => toggleFilter("type", type)}
-                              data-oid="_5w3rtb"
+                              data-oid="qkrwp10"
                             >
                               {type}
                             </Button>
@@ -1089,16 +1089,16 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Category Filter */}
-                      <div className="mb-6" data-oid="9mox2_t">
+                      <div className="mb-6" data-oid="kn8lxjl">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="cizmpzb"
+                          data-oid="5oh-4:2"
                         >
                           Category
                         </h3>
                         <div
                           className="flex flex-wrap gap-2 max-h-60 overflow-y-auto"
-                          data-oid="s62kw8h"
+                          data-oid="ybxmzj_"
                         >
                           {filterOptions.category.map((category) => (
                             <Button
@@ -1115,7 +1115,7 @@ export default function CoursesPage() {
                                   : ""
                               }
                               onClick={() => toggleFilter("category", category)}
-                              data-oid="0vbkxl_"
+                              data-oid="fu4ze1."
                             >
                               {category}
                             </Button>
@@ -1124,16 +1124,16 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Level Filter */}
-                      <div className="mb-6" data-oid="asoc24v">
+                      <div className="mb-6" data-oid="u98zilu">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="rtl3.48"
+                          data-oid="3j3q3:c"
                         >
                           Level
                         </h3>
                         <div
                           className="flex flex-wrap gap-2"
-                          data-oid="a367qeb"
+                          data-oid="_3xuzwh"
                         >
                           {filterOptions.level.map((level) => (
                             <Button
@@ -1150,7 +1150,7 @@ export default function CoursesPage() {
                                   : ""
                               }
                               onClick={() => toggleFilter("level", level)}
-                              data-oid="lt7btb7"
+                              data-oid="a4fu5do"
                             >
                               {level}
                             </Button>
@@ -1159,16 +1159,16 @@ export default function CoursesPage() {
                       </div>
 
                       {/* Price Filter */}
-                      <div className="mb-6" data-oid=".sju-ob">
+                      <div className="mb-6" data-oid="ca5:zc-">
                         <h3
                           className="font-medium text-gray-900 mb-3"
-                          data-oid="-f_ze.g"
+                          data-oid="t3athjk"
                         >
                           Price
                         </h3>
                         <div
                           className="flex flex-wrap gap-2"
-                          data-oid="q_1brq1"
+                          data-oid="9jp38y1"
                         >
                           {filterOptions.price.map((price) => (
                             <Button
@@ -1185,7 +1185,7 @@ export default function CoursesPage() {
                                   : ""
                               }
                               onClick={() => toggleFilter("price", price)}
-                              data-oid=":u4x8f-"
+                              data-oid="ch7h4pa"
                             >
                               {price}
                             </Button>
@@ -1193,7 +1193,7 @@ export default function CoursesPage() {
                         </div>
                       </div>
 
-                      <div className="flex gap-4 mt-6" data-oid="--a8tck">
+                      <div className="flex gap-4 mt-6" data-oid="br5gx9e">
                         {(selectedFilters.level.length > 0 ||
                           selectedFilters.duration.length > 0 ||
                           selectedFilters.category.length > 0 ||
@@ -1205,7 +1205,7 @@ export default function CoursesPage() {
                             variant="outline"
                             className="flex-1"
                             onClick={clearFilters}
-                            data-oid=".z-6uo8"
+                            data-oid="y559llk"
                           >
                             Clear all
                           </Button>
@@ -1213,7 +1213,7 @@ export default function CoursesPage() {
                         <Button
                           className="flex-1 bg-[#123B79]"
                           onClick={() => setShowMobileFilters(false)}
-                          data-oid="y:.302x"
+                          data-oid="7l8cy2x"
                         >
                           See {sortedCourses.length} results
                         </Button>
@@ -1222,57 +1222,57 @@ export default function CoursesPage() {
                   )}
 
                   {/* Course Grid */}
-                  <div className="flex-1" data-oid="-pxt-o2">
+                  <div className="flex-1" data-oid="ztaldkk">
                     {/* Sort Options */}
                     <div
                       className="flex justify-between items-center mb-6"
-                      data-oid="shv2oio"
+                      data-oid="ls2ojfl"
                     >
                       <div
                         className="hidden lg:block text-sm text-gray-500"
-                        data-oid="jaecxfu"
+                        data-oid=".n-otg9"
                       >
                         {sortedCourses.length}{" "}
                         {sortedCourses.length === 1 ? "course" : "courses"}
                       </div>
-                      <div className="ml-auto" data-oid="qdj5oml">
+                      <div className="ml-auto" data-oid="wwpjeq1">
                         <div
                           className="flex items-center gap-2"
-                          data-oid="0bcc3zg"
+                          data-oid="tfcqypm"
                         >
                           <span
                             className="text-sm text-gray-500"
-                            data-oid="fag:6e4"
+                            data-oid="b2hvv:c"
                           >
                             Sort by:
                           </span>
-                          <div className="relative" data-oid="7jo2ym7">
+                          <div className="relative" data-oid="wul59.6">
                             <select
                               className="appearance-none bg-transparent border border-gray-300 rounded-md py-1 pl-3 pr-8 text-sm focus:outline-none focus:ring-1 focus:ring-[#123B79]"
                               value={sortBy}
                               onChange={(e) => setSortBy(e.target.value)}
-                              data-oid="7prjf.g"
+                              data-oid="dfh3.el"
                             >
-                              <option value="popular" data-oid="_dmsi-z">
+                              <option value="popular" data-oid="19zcug6">
                                 Popular
                               </option>
-                              <option value="newest" data-oid="vnm3qrl">
+                              <option value="newest" data-oid="_5iwobb">
                                 Newest
                               </option>
-                              <option value="highest-rated" data-oid="vz7q15s">
+                              <option value="highest-rated" data-oid="jw_3r-t">
                                 Highest Rated
                               </option>
-                              <option value="price-low-high" data-oid="7t08xpe">
+                              <option value="price-low-high" data-oid=":6:39el">
                                 Price: Low to High
                               </option>
-                              <option value="price-high-low" data-oid="6ojbdoy">
+                              <option value="price-high-low" data-oid="qv9chu9">
                                 Price: High to Low
                               </option>
                             </select>
                             <ChevronDown
                               size={16}
                               className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none"
-                              data-oid="lv_-1sm"
+                              data-oid="koppq9k"
                             />
                           </div>
                         </div>
@@ -1283,33 +1283,33 @@ export default function CoursesPage() {
                     {loading ? (
                       <div
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                        data-oid="6gdff7:"
+                        data-oid="ifc-x:c"
                       >
                         {[...Array(6)].map((_, i) => (
                           <div
                             key={i}
                             className="bg-white rounded-lg overflow-hidden h-full flex flex-col border border-gray-200 shadow-sm"
-                            data-oid="r3yef4o"
+                            data-oid="l47ivmv"
                           >
                             <div
                               className="relative aspect-video bg-gray-200 animate-pulse"
-                              data-oid="1qswc9z"
+                              data-oid="k0bnic6"
                             ></div>
                             <div
                               className="p-4 flex-1 flex flex-col"
-                              data-oid="q0xnawr"
+                              data-oid="n4nzlh8"
                             >
                               <div
                                 className="h-4 bg-gray-200 rounded animate-pulse mb-2"
-                                data-oid="0xaoaec"
+                                data-oid=".o2.pxd"
                               ></div>
                               <div
                                 className="h-6 bg-gray-200 rounded animate-pulse mb-2"
-                                data-oid="p3itbr7"
+                                data-oid="5pmcfrb"
                               ></div>
                               <div
                                 className="h-4 bg-gray-200 rounded animate-pulse w-2/3"
-                                data-oid="b8:o90g"
+                                data-oid="sj89p4-"
                               ></div>
                             </div>
                           </div>
@@ -1318,24 +1318,24 @@ export default function CoursesPage() {
                     ) : sortedCourses.length === 0 ? (
                       <div
                         className="text-center py-16 bg-gray-50 rounded-lg"
-                        data-oid="8vtxw6h"
+                        data-oid="_d9crob"
                       >
-                        <div className="text-5xl mb-4" data-oid="3k6.3m7">
+                        <div className="text-5xl mb-4" data-oid="hyzjadl">
                           🔍
                         </div>
                         <h3
                           className="text-xl font-semibold mb-2"
-                          data-oid="h3.jdkf"
+                          data-oid="o7e2ond"
                         >
                           No courses found
                         </h3>
-                        <p className="text-gray-500 mb-6" data-oid="9w6jzrj">
+                        <p className="text-gray-500 mb-6" data-oid="h-ol01g">
                           Try adjusting your filters or search query
                         </p>
                         <Button
                           variant="outline"
                           onClick={clearFilters}
-                          data-oid="xdgh3.l"
+                          data-oid="on1vh16"
                         >
                           Clear all filters
                         </Button>
@@ -1343,7 +1343,7 @@ export default function CoursesPage() {
                     ) : (
                       <div
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                        data-oid="nbk0qlc"
+                        data-oid="vcssjxz"
                       >
                         {sortedCourses
                           .slice(
@@ -1355,7 +1355,7 @@ export default function CoursesPage() {
                               key={course.id}
                               course={course}
                               delay={index * 0.1}
-                              data-oid="_oybtti"
+                              data-oid="33x.vzw"
                             />
                           ))}
                       </div>
@@ -1365,11 +1365,11 @@ export default function CoursesPage() {
                     {sortedCourses.length > 0 && (
                       <div
                         className="mt-12 flex justify-center"
-                        data-oid="fjtuv7_"
+                        data-oid="_a1r._r"
                       >
                         <nav
                           className="flex items-center gap-1"
-                          data-oid=":dtv8.s"
+                          data-oid="jz9qdvf"
                         >
                           <Button
                             variant="outline"
@@ -1378,7 +1378,7 @@ export default function CoursesPage() {
                             onClick={() =>
                               handlePageChange(Math.max(currentPage - 1, 1))
                             }
-                            data-oid="4wiei38"
+                            data-oid="c083k.v"
                           >
                             Previous
                           </Button>
@@ -1409,7 +1409,7 @@ export default function CoursesPage() {
                                         <span
                                           key={i}
                                           className="px-2 text-gray-500"
-                                          data-oid="emo00j8"
+                                          data-oid="ua45vnk"
                                         >
                                           ...
                                         </span>
@@ -1427,13 +1427,13 @@ export default function CoursesPage() {
                                           variant="outline"
                                           size="sm"
                                           onClick={() => handlePageChange(1)}
-                                          data-oid="2goeast"
+                                          data-oid="9w:9gfa"
                                         >
                                           1
                                         </Button>
                                         <span
                                           className="px-2 text-gray-500"
-                                          data-oid="084q:6t"
+                                          data-oid="k.od0e8"
                                         >
                                           ...
                                         </span>
@@ -1450,13 +1450,13 @@ export default function CoursesPage() {
                                           variant="outline"
                                           size="sm"
                                           onClick={() => handlePageChange(1)}
-                                          data-oid="2yrpibs"
+                                          data-oid="ln3c6_g"
                                         >
                                           1
                                         </Button>
                                         <span
                                           className="px-2 text-gray-500"
-                                          data-oid="aofsyvl"
+                                          data-oid="-1yqs7-"
                                         >
                                           ...
                                         </span>
@@ -1468,7 +1468,7 @@ export default function CoursesPage() {
                                       <>
                                         <span
                                           className="px-2 text-gray-500"
-                                          data-oid="93nhacu"
+                                          data-oid="athv19o"
                                         >
                                           ...
                                         </span>
@@ -1478,7 +1478,7 @@ export default function CoursesPage() {
                                           onClick={() =>
                                             handlePageChange(totalPages)
                                           }
-                                          data-oid="t:k8b4g"
+                                          data-oid="lz.-8:u"
                                         >
                                           {totalPages}
                                         </Button>
@@ -1499,7 +1499,7 @@ export default function CoursesPage() {
                                       : ""
                                   }
                                   onClick={() => handlePageChange(pageNum)}
-                                  data-oid="5ufujft"
+                                  data-oid="xr104l3"
                                 >
                                   {pageNum}
                                 </Button>
@@ -1524,7 +1524,7 @@ export default function CoursesPage() {
                                 ),
                               )
                             }
-                            data-oid="4nfe6_5"
+                            data-oid="h:xk:if"
                           >
                             Next
                           </Button>
@@ -1536,37 +1536,37 @@ export default function CoursesPage() {
               </>
             ) : (
               // Learning Paths Tab Content
-              <div data-oid="qscxxac">
-                <div className="text-center mb-12" data-oid="gm1kfwz">
+              <div data-oid="28qnhq-">
+                <div className="text-center mb-12" data-oid="uqi:k9r">
                   <h2
                     className="text-3xl font-bold text-[#123B79] mb-4"
-                    data-oid="xgvgmew"
+                    data-oid="6n4r2km"
                   >
                     Learning Paths
                   </h2>
                   <p
                     className="text-xl text-gray-600 max-w-3xl mx-auto"
-                    data-oid="11q9zg6"
+                    data-oid="xp9s3h5"
                   >
                     Structured course sequences designed to guide you from
                     beginner to expert in specific areas
                   </p>
                   <div
                     className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-                    data-oid="rxf7qxp"
+                    data-oid="r7b5p29"
                   ></div>
                 </div>
 
                 <div
                   className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                  data-oid="l5g.zrc"
+                  data-oid="m_1.0kg"
                 >
                   {learningPaths.map((path, index) => (
                     <LearningPathCard
                       key={path.id}
                       path={path}
                       index={index}
-                      data-oid="6ztv3b4"
+                      data-oid="2jf9i0u"
                     />
                   ))}
                 </div>

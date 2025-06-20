@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/freehold-property-investment-strategy";
 
 export default function FreeholdPropertyInvestmentStrategy() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="458mpm9" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="yr9okdd" />;
 }

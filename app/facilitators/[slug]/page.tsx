@@ -42,41 +42,41 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
 
   return (
     <>
-      <Navbar data-oid="nd5wcop" />
-      <div className="bg-white" data-oid="s0ga400">
+      <Navbar data-oid="xdtgdyf" />
+      <div className="bg-white" data-oid="o_eoe1-">
         {/* Back Navigation */}
-        <div className="bg-gray-50 py-4" data-oid="lm0quty">
-          <div className="container mx-auto px-4" data-oid="wn.spg6">
+        <div className="bg-gray-50 py-4" data-oid="xjwjtd6">
+          <div className="container mx-auto px-4" data-oid="8vkvz5w">
             <Link
               href="/facilitators"
               className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
-              data-oid="kcbk:pb"
+              data-oid="cnjudl2"
             >
-              <ArrowLeft className="w-4 h-4" data-oid="de09r-d" />
+              <ArrowLeft className="w-4 h-4" data-oid="dcbat:u" />
               Back to All Facilitators
             </Link>
           </div>
         </div>
 
-        <FacilitatorHero facilitator={facilitator} data-oid="lk-2n_7" />
-        <FacilitatorBio facilitator={facilitator} data-oid="5z:lu_u" />
-        <FacilitatorCourses facilitator={facilitator} data-oid="45i8wop" />
+        <FacilitatorHero facilitator={facilitator} data-oid="4-hwy31" />
+        <FacilitatorBio facilitator={facilitator} data-oid="36xx9sl" />
+        <FacilitatorCourses facilitator={facilitator} data-oid="6n.s2x_" />
 
         <section
           className="py-24 bg-gradient-to-br from-blue-50 to-orange-50"
-          data-oid="ozx8j4m"
+          data-oid="w--077g"
         >
-          <div className="container mx-auto px-4" data-oid="93adkbu">
-            <div className="max-w-4xl mx-auto text-center" data-oid="wko4yd.">
+          <div className="container mx-auto px-4" data-oid="9x.hl:s">
+            <div className="max-w-4xl mx-auto text-center" data-oid="is8zgl6">
               <h2
                 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-                data-oid="sge--lu"
+                data-oid="310ubxc"
               >
                 Ready to Learn from {facilitator.name}?
               </h2>
               <p
                 className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
-                data-oid="i73e7v:"
+                data-oid="pxq1hli"
               >
                 Join thousands of successful students who have transformed their
                 property investment journey under {facilitator.name}'s expert
@@ -84,23 +84,23 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                data-oid="1fmeoxq"
+                data-oid="u__ohdr"
               >
-                <Link href="/courses" data-oid="oyop9jv">
+                <Link href="/courses" data-oid="3j0qs77">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-xl transition-all duration-300"
-                    data-oid="_r0mqi7"
+                    data-oid="-6lubt7"
                   >
                     View {facilitator.name}'s Courses
                   </Button>
                 </Link>
-                <Link href="/contact" data-oid="a-xx8fb">
+                <Link href="/contact" data-oid="e-h.jb2">
                   <Button
                     variant="outline"
                     size="lg"
                     className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-xl transition-all duration-300"
-                    data-oid="z0d37_w"
+                    data-oid="cuclv:q"
                   >
                     Get in Touch
                   </Button>

@@ -4,5 +4,5 @@ import CourseDetailTemplate from "./course-detail-template";
 import { courseData } from "../data/financial-modeling-masterclass";
 
 export default function FinancialModelingMasterclass() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="d35-_h7" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="r9p07kh" />;
 }

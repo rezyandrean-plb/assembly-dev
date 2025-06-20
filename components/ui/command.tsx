@@ -19,21 +19,21 @@ const Command = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="_ial1n_"
+    data-oid="ixi8jad"
   />
 ));
 Command.displayName = CommandPrimitive.displayName;
 
 const CommandDialog = ({ children, ...props }: DialogProps) => {
   return (
-    <Dialog {...props} data-oid="gjzs_z7">
+    <Dialog {...props} data-oid="1dd:mst">
       <DialogContent
         className="overflow-hidden p-0 shadow-lg"
-        data-oid="1x2gyoz"
+        data-oid="urx5.cr"
       >
         <Command
           className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-matchingPalette-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5"
-          data-oid="r-d1j5x"
+          data-oid="wej0mcb"
         >
           {children}
         </Command>
@@ -49,9 +49,9 @@ const CommandInput = React.forwardRef<
   <div
     className="flex items-center border-b px-3"
     cmdk-input-wrapper=""
-    data-oid="dau:ol."
+    data-oid="yu9zuhq"
   >
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" data-oid="qiugwgz" />
+    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" data-oid="o5565__" />
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
@@ -59,7 +59,7 @@ const CommandInput = React.forwardRef<
         className,
       )}
       {...props}
-      data-oid="7071_f9"
+      data-oid="aj3mujw"
     />
   </div>
 ));
@@ -74,7 +74,7 @@ const CommandList = React.forwardRef<
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
-    data-oid="ktb7udh"
+    data-oid="cw3a.wy"
   />
 ));
 
@@ -88,7 +88,7 @@ const CommandEmpty = React.forwardRef<
     ref={ref}
     className="py-6 text-center text-sm"
     {...props}
-    data-oid="uml3gqi"
+    data-oid="hz5vl1d"
   />
 ));
 
@@ -105,7 +105,7 @@ const CommandGroup = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid=":yn4198"
+    data-oid="e3mg.vv"
   />
 ));
 
@@ -119,7 +119,7 @@ const CommandSeparator = React.forwardRef<
     ref={ref}
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
-    data-oid="zmcly3f"
+    data-oid="yvu8rgu"
   />
 ));
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
@@ -135,7 +135,7 @@ const CommandItem = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="n1ccvt."
+    data-oid="qxao:6l"
   />
 ));
 
@@ -152,7 +152,7 @@ const CommandShortcut = ({
         className,
       )}
       {...props}
-      data-oid="fr97ez4"
+      data-oid="7d8x6s-"
     />
   );
 };

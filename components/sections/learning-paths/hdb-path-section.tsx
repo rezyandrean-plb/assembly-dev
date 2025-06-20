@@ -53,15 +53,15 @@ export default function HdbPathSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white overflow-hidden min-h-screen"
-      data-oid="-ozuc9b"
+      data-oid="hybxegr"
     >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none" data-oid="z:.mdl-">
+      <div className="absolute inset-0 pointer-events-none" data-oid="o92m:8a">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid slice"
-          data-oid="lia1ks2"
+          data-oid=".0ty47-"
         >
           {/* Background network elements */}
           {Array(20)
@@ -80,7 +80,7 @@ export default function HdbPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
-                data-oid="3x6_-w8"
+                data-oid="r_cb-4p"
               />
             ))}
 
@@ -94,7 +94,7 @@ export default function HdbPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="9qf3mdq"
+            data-oid="2butiu6"
           />
 
           {/* Main optimized pathway */}
@@ -107,7 +107,7 @@ export default function HdbPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: optimizationProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="__ig2fd"
+            data-oid="aufj.ly"
           />
 
           {/* Alternative paths (less optimal) */}
@@ -132,7 +132,7 @@ export default function HdbPathSection() {
               ),
             }}
             transition={{ duration: 0.5 }}
-            data-oid=".cdlezw"
+            data-oid="ddb-l74"
           />
 
           <motion.path
@@ -156,12 +156,12 @@ export default function HdbPathSection() {
               ),
             }}
             transition={{ duration: 0.5 }}
-            data-oid="9d0pf_a"
+            data-oid="hu._mxe"
           />
 
           {/* Decision points along the path */}
           {decisionPoints.map((point, index) => (
-            <motion.g key={`decision-${index}`} data-oid="1_4:1b9">
+            <motion.g key={`decision-${index}`} data-oid="oo5gsro">
               {/* Decision point node */}
               <motion.circle
                 cx={point.x}
@@ -188,7 +188,7 @@ export default function HdbPathSection() {
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: point.delay }}
-                data-oid="us51xmq"
+                data-oid="jj_kioe"
               />
 
               {/* Decision point label */}
@@ -225,7 +225,7 @@ export default function HdbPathSection() {
                     : -10,
                 }}
                 transition={{ duration: 0.5, delay: point.delay }}
-                data-oid="aa3td5u"
+                data-oid="ycc4q8i"
               >
                 {point.label}
               </motion.text>
@@ -267,14 +267,14 @@ export default function HdbPathSection() {
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: point.delay + 0.2 }}
-                data-oid="1k1rn9j"
+                data-oid="bc.himb"
               />
             </motion.g>
           ))}
 
           {/* Property type representations */}
           {propertyTypes.map((property, index) => (
-            <motion.g key={`property-${index}`} data-oid="duseeuh">
+            <motion.g key={`property-${index}`} data-oid="hzf2upb">
               {/* Property shape */}
               <motion.rect
                 x={property.x - 20}
@@ -306,7 +306,7 @@ export default function HdbPathSection() {
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
-                data-oid="9.mgc-n"
+                data-oid="-91sozh"
               />
 
               {/* Property label */}
@@ -334,7 +334,7 @@ export default function HdbPathSection() {
                     : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
-                data-oid="kmf5rb2"
+                data-oid="b950yv-"
               >
                 {property.type}
               </motion.text>
@@ -367,7 +367,7 @@ export default function HdbPathSection() {
                 : 0,
             }}
             transition={{ duration: 0.5 }}
-            data-oid="s384:hr"
+            data-oid="neq19ev"
           />
 
           <motion.path
@@ -395,11 +395,11 @@ export default function HdbPathSection() {
                 : 0,
             }}
             transition={{ duration: 0.5 }}
-            data-oid="1rokixo"
+            data-oid="7akbotw"
           />
 
           {/* Arrow marker definition */}
-          <defs data-oid="okylwkn">
+          <defs data-oid="o595r25">
             <marker
               id="arrowhead"
               markerWidth="10"
@@ -407,12 +407,12 @@ export default function HdbPathSection() {
               refX="9"
               refY="3.5"
               orient="auto"
-              data-oid="sy8psuk"
+              data-oid="5yq-4j3"
             >
               <polygon
                 points="0 0, 10 3.5, 0 7"
                 fill="#F0A500"
-                data-oid="13sggx4"
+                data-oid="sivr3vk"
               />
             </marker>
           </defs>
@@ -429,71 +429,71 @@ export default function HdbPathSection() {
               pathLength: exitPathProgress,
             }}
             transition={{ duration: 0.5 }}
-            data-oid="5tl:.d_"
+            data-oid="9pcbtxl"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="08uemt.">
+      <div className="container mx-auto px-4 relative z-10" data-oid="5tkh5ol">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: headerOpacity, y: headerY }}
-          data-oid="dv.cz2l"
+          data-oid="_fdu945"
         >
           <h2
             className="text-4xl font-bold text-[#794B12] mb-4"
-            data-oid="4r6da9j"
+            data-oid="zzm3n_t"
           >
             HDB Upgrader & Strategist Path
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid=":fzgmq_"
+            data-oid="-axiaw8"
           >
             For HDB owners or upgraders aiming to move to condos or optimize
             their property journey
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="1tm66wj"
+            data-oid="_1uybiu"
           ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto" data-oid="e_wwkn5">
+        <div className="max-w-4xl mx-auto" data-oid="1pc3hp.">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            data-oid="p9s:6mq"
+            data-oid="qt3re_n"
           >
             <h3
               className="text-2xl font-bold text-[#794B12] mb-4"
-              data-oid="ncoed5w"
+              data-oid="98a971x"
             >
               Strategic Optimization
             </h3>
-            <p className="text-gray-700 mb-6" data-oid="ssqqak5">
+            <p className="text-gray-700 mb-6" data-oid="1w8.:cd">
               The HDB Upgrader & Strategist Path guides you through making
               strategic decisions to optimize your property journey. Whether
               you're starting with your first HDB flat or planning to upgrade to
               a condominium, this learning path helps you navigate the complex
               choices and transitions in Singapore's property market.
             </p>
-            <p className="text-gray-700 mb-6" data-oid="3e78wk-">
+            <p className="text-gray-700 mb-6" data-oid="2a.hhtt">
               Through courses covering common mistakes to avoid, upgrading
               secrets, comparative analysis between property types, and
               investment maximization strategies, you'll develop the strategic
               thinking needed to make optimal decisions at each stage of your
               property ownership journey.
             </p>
-            <div className="flex justify-center mt-8" data-oid="k2uk3gk">
+            <div className="flex justify-center mt-8" data-oid="95mqz.n">
               <Button
                 className="bg-[#794B12] hover:bg-[#5A380D] text-white"
-                data-oid="tl80kxc"
+                data-oid="2skzkam"
               >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" data-oid="_6t021x" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid="n6e.wpp" />
               </Button>
             </div>
           </motion.div>

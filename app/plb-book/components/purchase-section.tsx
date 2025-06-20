@@ -85,9 +85,9 @@ export default function PurchaseSection() {
     <section
       className="section purchase-section"
       id="purchase"
-      data-oid="ory4nwf"
+      data-oid="z2fccqa"
     >
-      <div className="container" data-oid="2r.fgwz">
+      <div className="container" data-oid="lgc4av2">
         <h2
           className="section-title text-center"
           ref={(el) => {
@@ -98,7 +98,7 @@ export default function PurchaseSection() {
               titleAnimRef(el);
             }
           }}
-          data-oid="fk_p.ik"
+          data-oid=":b50ol0"
         >
           Get Your Copy Today
         </h2>
@@ -113,7 +113,7 @@ export default function PurchaseSection() {
               subtitleAnimRef(el);
             }
           }}
-          data-oid=":ny6fd5"
+          data-oid="6nz55rt"
         >
           Start your journey towards successful property investment in Singapore
         </p>
@@ -128,44 +128,44 @@ export default function PurchaseSection() {
               priceAnimRef(el);
             }
           }}
-          data-oid="ifymbyh"
+          data-oid="s_rwu5s"
         >
           <div
             className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8"
-            data-oid="xz2kj8e"
+            data-oid="8_8ufji"
           >
-            <div className="text-center" data-oid="bzs0b5-">
-              <h3 className="text-xl font-semibold mb-2" data-oid="-jrhhj5">
+            <div className="text-center" data-oid="u1znxab">
+              <h3 className="text-xl font-semibold mb-2" data-oid="1-o-yiy">
                 E-Book
               </h3>
               <div
                 className="flex items-center justify-center"
-                data-oid="15pzoda"
+                data-oid="md.6gdl"
               >
                 <span
                   className="original-price line-through text-gray-500 mr-2"
-                  data-oid="8-b_h0c"
+                  data-oid="-0_bmps"
                 >
                   $29
                 </span>
                 <span
                   className="price text-green-600 font-bold"
-                  data-oid="sy2pftv"
+                  data-oid="yihw7x0"
                 >
                   FREE
                 </span>
               </div>
             </div>
 
-            <div className="text-center" data-oid="16lel2f">
-              <h3 className="text-xl font-semibold mb-2" data-oid="1c:t79a">
+            <div className="text-center" data-oid="7z1mf7v">
+              <h3 className="text-xl font-semibold mb-2" data-oid="ek.-1xq">
                 Paperback
               </h3>
               <div
                 className="flex items-center justify-center"
-                data-oid="yl2c2dz"
+                data-oid="tvlu3vz"
               >
-                <span className="price font-bold" data-oid="o0hlds4">
+                <span className="price font-bold" data-oid="g:rmjxv">
                   $29.99
                 </span>
               </div>
@@ -183,11 +183,11 @@ export default function PurchaseSection() {
               buttonsAnimRef(el);
             }
           }}
-          data-oid="b42fn_6"
+          data-oid="k_d2l2u"
         >
           <div
             className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8"
-            data-oid="8ryfrv5"
+            data-oid="0dd8a-n"
           >
             {/* Direct anchor tag styled as a button */}
             <a
@@ -198,10 +198,10 @@ export default function PurchaseSection() {
               style={{ textDecoration: "none" }}
               role="button"
               aria-label="Get the E-book on Amazon"
-              data-oid="5hqun-x"
+              data-oid="k6.2_1_"
             >
-              <Download size={18} className="mr-2" data-oid="j_62kz5" />
-              <span data-oid="8ytc9sz">Get the E-book</span>
+              <Download size={18} className="mr-2" data-oid="2xbwbd6" />
+              <span data-oid="3l4__96">Get the E-book</span>
             </a>
 
             <button
@@ -209,13 +209,13 @@ export default function PurchaseSection() {
               disabled={isAddingToCart}
               className="bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center w-full md:w-auto disabled:opacity-70"
               aria-label="Add paperback to cart"
-              data-oid="3a5c6up"
+              data-oid="7q8f9lf"
             >
-              <ShoppingBag size={18} className="mr-2" data-oid="a-u_or8" />
+              <ShoppingBag size={18} className="mr-2" data-oid="lxqvv8d" />
               {isAddingToCart ? "Adding to Cart..." : "Get the Paperback"}
             </button>
           </div>
-          <p className="form-disclaimer mt-4 text-center" data-oid="-fm7rqw">
+          <p className="form-disclaimer mt-4 text-center" data-oid="4l1z3kh">
             E-book will redirect to Amazon in a new tab. Paperback will be added
             to your cart.
           </p>
@@ -231,12 +231,12 @@ export default function PurchaseSection() {
               guaranteeAnimRef(el);
             }
           }}
-          data-oid="z1js6x-"
+          data-oid="684_iu:"
         >
-          <h3 className="guarantee-title" data-oid=":sks.ko">
+          <h3 className="guarantee-title" data-oid="p:..3ya">
             Our Guarantee
           </h3>
-          <p className="guarantee-text" data-oid="xrya8:4">
+          <p className="guarantee-text" data-oid="pr6wwnl">
             We're confident that the Property Launch Bible will provide you with
             valuable insights and strategies. If you're not completely
             satisfied, simply let us know and we'll address any concerns.

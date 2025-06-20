@@ -5,50 +5,50 @@ import Navbar from "@/components/navbar";
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-white" data-oid="152ge_q">
+    <div className="min-h-screen bg-white" data-oid="vmctese">
       {/* Navigation */}
-      <Navbar data-oid="8e26tvd" />
+      <Navbar data-oid="870lluv" />
 
       {/* Main Content */}
-      <div className="pt-24 pb-16" data-oid=":kw8euo">
-        <div className="max-w-4xl mx-auto px-4" data-oid="7.07j_a">
+      <div className="pt-24 pb-16" data-oid="t0vkscm">
+        <div className="max-w-4xl mx-auto px-4" data-oid="9--m67v">
           {/* Header */}
-          <div className="text-center mb-12" data-oid="vrh-3ys">
+          <div className="text-center mb-12" data-oid="c.bt134">
             <h1
               className="text-4xl font-bold text-gray-900 mb-4"
-              data-oid="ao.3:we"
+              data-oid="nl1_7-5"
             >
               DATA PROTECTION NOTICE FOR CUSTOMERS
             </h1>
-            <p className="text-gray-600" data-oid="2o2ey6e">
+            <p className="text-gray-600" data-oid="2r085r8">
               Last updated: 1 January 2024
             </p>
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none" data-oid="rml1sed">
+          <div className="prose prose-lg max-w-none" data-oid="jhl4e77">
             {/* Introduction */}
             <p
               className="text-lg text-gray-700 leading-relaxed mb-8"
-              data-oid="wqh7b4g"
+              data-oid=".yzjrv_"
             >
               This Privacy Policy describes how your personal information is
               collected, used, and shared when you visit or make a purchase from{" "}
-              <strong data-oid="oec-xfd">www.propertylimbrothers.com</strong>{" "}
+              <strong data-oid="ony5g7.">www.propertylimbrothers.com</strong>{" "}
               (the "Site").
             </p>
 
             {/* Personal Information We Collect */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="zte5e9s"
+              data-oid="s-6r8fe"
             >
               PERSONAL INFORMATION WE COLLECT
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="lw6yueh"
+              data-oid="be3ooim"
             >
               When you visit the Site, we automatically collect certain
               information about your device, including information about your
@@ -63,18 +63,18 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="f2sl6eg"
+              data-oid="u-iz7l3"
             >
-              <strong data-oid="lmqpb7l">
+              <strong data-oid="66axi1o">
                 We collect Device Information using the following technologies:
               </strong>
             </p>
 
             <ul
               className="list-disc pl-6 mb-6 space-y-2 text-gray-700"
-              data-oid="tbmu7az"
+              data-oid="znmg_:-"
             >
-              <li data-oid="i.eaxvt">
+              <li data-oid="ju2bj87">
                 "Cookies" are data files that are placed on your device or
                 computer and often include an anonymous unique identifier. For
                 more information about cookies, and how to disable cookies,
@@ -82,18 +82,18 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="http://www.allaboutcookies.org"
                   className="text-blue-600 hover:underline"
-                  data-oid="j4l_ml."
+                  data-oid="4e1gthm"
                 >
                   http://www.allaboutcookies.org
                 </a>
                 .
               </li>
-              <li data-oid="6qkrn7i">
+              <li data-oid="mvfc8ec">
                 "Log files" track actions occurring on the Site, and collect
                 data including your IP address, browser type, Internet service
                 provider, referring/exit pages, and date/time stamps.
               </li>
-              <li data-oid="ouvi2nq">
+              <li data-oid="f3-g42r">
                 "Web beacons," "tags," and "pixels" are electronic files used to
                 record information about how you browse the Site.
               </li>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="jnmykhk"
+              data-oid=".top7a-"
             >
               Additionally when you make a purchase or attempt to make a
               purchase through the Site, we collect certain information from
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid=".ob:urx"
+              data-oid="ekuheln"
             >
               When we talk about "Personal Information" in this Privacy Policy,
               we are talking both about Device Information and Order
@@ -123,14 +123,14 @@ export default function PrivacyPolicyPage() {
             {/* How Do We Use Your Personal Information */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="i0gio3g"
+              data-oid="7svl8qk"
             >
               HOW DO WE USE YOUR PERSONAL INFORMATION?
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="tkenx-0"
+              data-oid="ycd-ior"
             >
               We use the Order Information that we collect generally to fulfill
               any orders placed through the Site (including processing your
@@ -141,13 +141,13 @@ export default function PrivacyPolicyPage() {
 
             <ul
               className="list-disc pl-6 mb-6 space-y-2 text-gray-700"
-              data-oid="3c6.u_v"
+              data-oid="o.6iwt9"
             >
-              <li data-oid="0:53xhw">Communicate with you;</li>
-              <li data-oid="rd0_ebn">
+              <li data-oid="_wjhd6s">Communicate with you;</li>
+              <li data-oid="zv8jqun">
                 Screen our orders for potential risk or fraud; and
               </li>
-              <li data-oid="yma-8.r">
+              <li data-oid=":.p_2re">
                 When in line with the preferences you have shared with us,
                 provide you with information or advertising relating to our
                 products or services.
@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="jrz7-3a"
+              data-oid="e.m86q_"
             >
               We use the Device Information that we collect to help us screen
               for potential risk and fraud (in particular, your IP address), and
@@ -169,14 +169,14 @@ export default function PrivacyPolicyPage() {
             {/* Sharing Your Personal Information */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="ic4gl7l"
+              data-oid="sm2qpex"
             >
               SHARING YOUR PERSONAL INFORMATION
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="1ikk.rb"
+              data-oid=":lwgs6g"
             >
               We share your Personal Information with third parties to help us
               use your Personal Information, as described above. For example, we
@@ -185,7 +185,7 @@ export default function PrivacyPolicyPage() {
               <a
                 href="https://www.shopify.com/legal/privacy"
                 className="text-blue-600 hover:underline"
-                data-oid="ex0tpbd"
+                data-oid="7-wfapx"
               >
                 https://www.shopify.com/legal/privacy
               </a>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
               <a
                 href="https://www.google.com/intl/en/policies/privacy/"
                 className="text-blue-600 hover:underline"
-                data-oid="l-ty2vo"
+                data-oid="fhv8jpl"
               >
                 https://www.google.com/intl/en/policies/privacy/
               </a>
@@ -203,7 +203,7 @@ export default function PrivacyPolicyPage() {
               <a
                 href="https://tools.google.com/dlpage/gaoptout"
                 className="text-blue-600 hover:underline"
-                data-oid="t_9awn5"
+                data-oid="3443uau"
               >
                 https://tools.google.com/dlpage/gaoptout
               </a>
@@ -212,7 +212,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="-apng25"
+              data-oid="424jlh0"
             >
               Finally, we may also share your Personal Information to comply
               with applicable laws and regulations, to respond to a subpoena,
@@ -223,14 +223,14 @@ export default function PrivacyPolicyPage() {
             {/* Behavioural Advertising */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="-ynzz.q"
+              data-oid="79gaqhy"
             >
               BEHAVIOURAL ADVERTISING
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="v53fqjw"
+              data-oid="3b1qigb"
             >
               As described above, we use your Personal Information to provide
               you with targeted advertisements or marketing communications we
@@ -240,7 +240,7 @@ export default function PrivacyPolicyPage() {
               <a
                 href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work"
                 className="text-blue-600 hover:underline"
-                data-oid="i3mppz9"
+                data-oid="eg_6n9t"
               >
                 http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work
               </a>
@@ -249,43 +249,43 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid=".xm74-:"
+              data-oid="6mrdb7m"
             >
-              <strong data-oid="ybmz04h">
+              <strong data-oid="imvc-qz">
                 You can opt out of targeted advertising by:
               </strong>
             </p>
 
             <ul
               className="list-disc pl-6 mb-8 space-y-2 text-gray-700"
-              data-oid="9sn9069"
+              data-oid="vbg29sg"
             >
-              <li data-oid="zq8o5ic">
+              <li data-oid="h0woj76">
                 FACEBOOK -{" "}
                 <a
                   href="https://www.facebook.com/settings/?tab=ads"
                   className="text-blue-600 hover:underline"
-                  data-oid="it40i2k"
+                  data-oid="4c8syzu"
                 >
                   https://www.facebook.com/settings/?tab=ads
                 </a>
               </li>
-              <li data-oid="5d3ssgj">
+              <li data-oid="mixs2xx">
                 GOOGLE -{" "}
                 <a
                   href="https://www.google.com/settings/ads/anonymous"
                   className="text-blue-600 hover:underline"
-                  data-oid="4rjrkef"
+                  data-oid="sg_k.9l"
                 >
                   https://www.google.com/settings/ads/anonymous
                 </a>
               </li>
-              <li data-oid="bbetgz3">
+              <li data-oid="cumbg14">
                 BING -{" "}
                 <a
                   href="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads"
                   className="text-blue-600 hover:underline"
-                  data-oid="c_-v2.6"
+                  data-oid="jfe_tf_"
                 >
                   https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads
                 </a>
@@ -294,14 +294,14 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="po7.efw"
+              data-oid="ep.y07."
             >
               Additionally, you can opt out of some of these services by
               visiting the Digital Advertising Alliance's opt-out portal at:{" "}
               <a
                 href="http://optout.aboutads.info/"
                 className="text-blue-600 hover:underline"
-                data-oid="4zngdsn"
+                data-oid="fsn7t6e"
               >
                 http://optout.aboutads.info/
               </a>
@@ -311,14 +311,14 @@ export default function PrivacyPolicyPage() {
             {/* Do Not Track */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="vjal0v3"
+              data-oid="kqt34zc"
             >
               DO NOT TRACK
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="n1cext6"
+              data-oid="8-rk7xf"
             >
               Please note that we do not alter our Site's data collection and
               use practices when we see a Do Not Track signal from your browser.
@@ -327,14 +327,14 @@ export default function PrivacyPolicyPage() {
             {/* Your Rights */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="vj9cl1:"
+              data-oid="qmvfoz1"
             >
               YOUR RIGHTS
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid=":26jj8i"
+              data-oid="rul-c1q"
             >
               If you are a European resident, you have the right to access
               personal information we hold about you and to ask that your
@@ -345,7 +345,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="raa77vv"
+              data-oid="-nev_g9"
             >
               Additionally, if you are a European resident we note that we are
               processing your information in order to fulfill contracts we might
@@ -359,14 +359,14 @@ export default function PrivacyPolicyPage() {
             {/* Data Retention */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="zn0.7wk"
+              data-oid="rvujh-8"
             >
               DATA RETENTION
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="4eoa1pf"
+              data-oid="si5o1el"
             >
               When you place an order through the Site, we will maintain your
               Order Information for our records unless and until you ask us to
@@ -376,14 +376,14 @@ export default function PrivacyPolicyPage() {
             {/* Minors */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="qneieih"
+              data-oid="_.q97r4"
             >
               MINORS
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="hj3yrrd"
+              data-oid="252atxs"
             >
               The Site is not intended for individuals under the age of 18.
             </p>
@@ -391,14 +391,14 @@ export default function PrivacyPolicyPage() {
             {/* Changes */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid="oya-isn"
+              data-oid="-vog10p"
             >
               CHANGES
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-8"
-              data-oid="3lhvfpg"
+              data-oid="d-jd7mi"
             >
               We may update this privacy policy from time to time in order to
               reflect, for example, changes to our practices or for other
@@ -408,14 +408,14 @@ export default function PrivacyPolicyPage() {
             {/* Contact Us */}
             <h2
               className="text-2xl font-bold text-gray-900 mt-12 mb-6"
-              data-oid=".25iq3g"
+              data-oid="jsr232k"
             >
               CONTACT US
             </h2>
 
             <p
               className="text-gray-700 leading-relaxed mb-4"
-              data-oid="c7z_xas"
+              data-oid="wk:6gvp"
             >
               For more information about our privacy practices, if you have
               questions, or if you would like to make a complaint, please
@@ -423,24 +423,24 @@ export default function PrivacyPolicyPage() {
               <a
                 href="mailto:hello@assembly.sg"
                 className="text-blue-600 hover:underline"
-                data-oid="p:nl5pz"
+                data-oid="xebx2_c"
               >
                 hello@assembly.sg
               </a>{" "}
               or by mail using the details provided below:
             </p>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-8" data-oid="gg51slq">
+            <div className="bg-gray-50 p-6 rounded-lg mb-8" data-oid="8zg:stu">
               <p
                 className="text-gray-700 font-semibold mb-2"
-                data-oid="-rhibxx"
+                data-oid="xn4-b1w"
               >
                 Assembly SG
               </p>
-              <p className="text-gray-700 mb-1" data-oid="qa-nwbk">
+              <p className="text-gray-700 mb-1" data-oid="61d_67p">
                 62 Ubi Road 1, Oxley BizHub 2, #11-15/18, Singapore, 408734
               </p>
-              <p className="text-gray-700" data-oid="_3p-vi0">
+              <p className="text-gray-700" data-oid="g647jl1">
                 Email: hello@assembly.sg
               </p>
             </div>

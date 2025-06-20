@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Toaster position="top-right" data-oid="1orof89" />
+      <Toaster position="top-right" data-oid="qz5_-y2" />
       {children}
     </>
   );

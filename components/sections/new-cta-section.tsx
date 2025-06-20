@@ -23,23 +23,23 @@ export default function NewCtaSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-primary relative overflow-hidden"
-      data-oid="dcnk.b7"
+      data-oid="wta8_:b"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10" data-oid="wetdopa">
+      <div className="absolute inset-0 opacity-10" data-oid="bw..c3_">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
-          data-oid="gkj8yej"
+          data-oid="5lruw_o"
         />
       </div>
 
       {/* Floating Elements */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
-        data-oid="q9ldzjk"
+        data-oid="1_nr.4v"
       >
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
@@ -52,7 +52,7 @@ export default function NewCtaSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="b7bug9-"
+          data-oid="cib.oxt"
         />
 
         <motion.div
@@ -66,7 +66,7 @@ export default function NewCtaSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="qjqmd25"
+          data-oid="i9474g2"
         />
 
         <motion.div
@@ -80,14 +80,14 @@ export default function NewCtaSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="1qp8c_k"
+          data-oid="blrin_e"
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid=".fet7f2">
+      <div className="container mx-auto px-4 relative z-10" data-oid="j1ivj-w">
         <div
           className="max-w-4xl mx-auto text-center text-white"
-          data-oid=".qysr_7"
+          data-oid="8o.k0wn"
         >
           {/* Header */}
           <motion.div
@@ -95,29 +95,29 @@ export default function NewCtaSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid="8bf7ipg"
+            data-oid="dc5dak_"
           >
             <div
               className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6"
-              data-oid=":56xmnf"
+              data-oid="t3ho-o."
             >
-              <Sparkles className="w-4 h-4" data-oid="-h_icra" />
+              <Sparkles className="w-4 h-4" data-oid="m6r4blj" />
               Limited Time Offer
             </div>
 
             <h2
               className="text-4xl lg:text-6xl font-bold mb-6 leading-tight"
-              data-oid="h:7khs0"
+              data-oid="1twm0ok"
             >
               Start Your Real Estate
-              <span className="block text-yellow-300" data-oid="9xagt6w">
+              <span className="block text-yellow-300" data-oid="q34m3k-">
                 Success Story Today
               </span>
             </h2>
 
             <p
               className="text-xl lg:text-2xl opacity-90 mb-8 leading-relaxed"
-              data-oid=":_fl:ln"
+              data-oid="pjwt.d2"
             >
               Join thousands of successful investors who've transformed their
               financial future. Get started with our comprehensive courses and
@@ -131,7 +131,7 @@ export default function NewCtaSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            data-oid="x.m53ux"
+            data-oid="bmbj.61"
           >
             {benefits.map((benefit, index) => (
               <motion.div
@@ -140,14 +140,14 @@ export default function NewCtaSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                data-oid="1j_0w62"
+                data-oid="pzsm0yz"
               >
                 <CheckCircle
                   className="w-6 h-6 text-success flex-shrink-0"
-                  data-oid="6o5pckp"
+                  data-oid="9:5315f"
                 />
 
-                <span className="text-left" data-oid="4z6kby6">
+                <span className="text-left" data-oid="stuaxez">
                   {benefit}
                 </span>
               </motion.div>
@@ -160,31 +160,31 @@ export default function NewCtaSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            data-oid="dv248qr"
+            data-oid="985c2hf"
           >
-            <Link href="/courses" data-oid="z-3f9np">
+            <Link href="/courses" data-oid="31504so">
               <Button
                 size="lg"
                 className="bg-white text-primary hover:bg-neutral-100 px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                data-oid="oj4i1_e"
+                data-oid="jmjnnd."
               >
                 <Zap
                   className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                  data-oid="3zv5685"
+                  data-oid="t64qq-j"
                 />
                 Start Learning Now
                 <ArrowRight
                   className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                  data-oid="8u-jqw9"
+                  data-oid="mqtyvpa"
                 />
               </Button>
             </Link>
-            <Link href="/contact" data-oid="hb93.ar">
+            <Link href="/contact" data-oid="ypdj1al">
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg rounded-xl transition-all duration-300"
-                data-oid="oyo7jw."
+                data-oid="_tcx14l"
               >
                 Speak to an Advisor
               </Button>
@@ -197,26 +197,26 @@ export default function NewCtaSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            data-oid="p2bfnn9"
+            data-oid="cid40mb"
           >
             <div
               className="flex items-center justify-center gap-2 mb-4"
-              data-oid="gnejtmz"
+              data-oid="rj2ou_x"
             >
-              <Sparkles className="w-6 h-6 text-accent" data-oid="b:5q8l8" />
+              <Sparkles className="w-6 h-6 text-accent" data-oid="0qclfz5" />
 
-              <span className="text-xl font-bold" data-oid="3_oxaqi">
+              <span className="text-xl font-bold" data-oid="cbfsm0.">
                 Special Launch Offer
               </span>
             </div>
-            <p className="text-lg mb-4" data-oid="0ksl8ks">
+            <p className="text-lg mb-4" data-oid="-bnlprl">
               Get 30% off your first course when you sign up this month!
             </p>
-            <div className="text-sm opacity-75" data-oid="lhr1t36">
+            <div className="text-sm opacity-75" data-oid="st_a7-h">
               Use code:{" "}
               <span
                 className="font-mono bg-white/20 px-2 py-1 rounded"
-                data-oid="5_:c2ao"
+                data-oid="tdl5j7z"
               >
                 LAUNCH30
               </span>{" "}
@@ -230,15 +230,15 @@ export default function NewCtaSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 0.75 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            data-oid="y572psh"
+            data-oid="2h:gxi5"
           >
-            <div className="text-sm" data-oid="26n:685">
+            <div className="text-sm" data-oid="ez2pgre">
               ✓ 30-day money-back guarantee
             </div>
-            <div className="text-sm" data-oid="d8n20zf">
+            <div className="text-sm" data-oid="qk-bckx">
               ✓ Trusted by 15,000+ students
             </div>
-            <div className="text-sm" data-oid="5rcf8ze">
+            <div className="text-sm" data-oid="mzan.wj">
               ✓ 4.9/5 average rating
             </div>
           </motion.div>

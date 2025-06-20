@@ -179,11 +179,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="-cgnnmi"
+            data-oid=":nxnum5"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="6o0vh21"
+              data-oid="xnoz1eu"
             ></div>
           </div>
         ),
@@ -195,11 +195,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="d11olz0"
+            data-oid="4w_r947"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="srps0td"
+              data-oid="vu1w30."
             ></div>
           </div>
         ),
@@ -211,11 +211,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="e2bpj5b"
+            data-oid="axwanf6"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="fs:tyta"
+              data-oid="p4bvud7"
             ></div>
           </div>
         ),
@@ -227,11 +227,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="uawe6it"
+            data-oid="2qk0d4-"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="rzwl0uh"
+              data-oid="6bpkuu5"
             ></div>
           </div>
         ),
@@ -243,11 +243,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="b1yrkra"
+            data-oid="ip9saf6"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="wi0ia4g"
+              data-oid="mz44.bm"
             ></div>
           </div>
         ),
@@ -259,11 +259,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="5otwhgn"
+            data-oid="6vzrf88"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="55gmlca"
+              data-oid="lwt5cpi"
             ></div>
           </div>
         ),
@@ -275,11 +275,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="gfco5ov"
+            data-oid="-vol0n1"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="n:opv4y"
+              data-oid="kjfka3y"
             ></div>
           </div>
         ),
@@ -295,11 +295,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="-jvm8dr"
+              data-oid="gze9.qj"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid=".uiplil"
+                data-oid=".g4xr.a"
               ></div>
             </div>
           ),
@@ -311,11 +311,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="s3a5x0z"
+            data-oid="4a6ct:u"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="csxv5du"
+              data-oid="3wgsfrl"
             ></div>
           </div>
         ),
@@ -327,11 +327,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="1n2ip2_"
+            data-oid=":21_cpp"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="kpb0wol"
+              data-oid="g1.t:mf"
             ></div>
           </div>
         ),
@@ -343,11 +343,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="bsn3n8s"
+            data-oid="yby11mi"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="l32lx6r"
+              data-oid="t_rp4m5"
             ></div>
           </div>
         ),
@@ -359,11 +359,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="_78s2y."
+            data-oid="rg_.6cx"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="bc7e3rb"
+              data-oid="kf0dan6"
             ></div>
           </div>
         ),
@@ -378,11 +378,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="jgq-jvn"
+            data-oid="qyoxjvb"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="ionig.f"
+              data-oid="n75kr56"
             ></div>
           </div>
         ),
@@ -394,11 +394,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="t8bm7la"
+            data-oid="wck-3tj"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid=":8e3tlg"
+              data-oid="qd.olcy"
             ></div>
           </div>
         ),
@@ -409,11 +409,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="md.5hi8"
+            data-oid="sxw-hvn"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="oo3nxb8"
+              data-oid="1vc0v4b"
             ></div>
           </div>
         ),
@@ -424,11 +424,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="_1aas-2"
+            data-oid="4d93z3s"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="024n1sy"
+              data-oid="hlco-1l"
             ></div>
           </div>
         ),
@@ -440,11 +440,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="4g3ku9o"
+            data-oid="1jd7x:1"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="3pfv3nf"
+              data-oid="6x9xl96"
             ></div>
           </div>
         ),
@@ -459,11 +459,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid=":w0ie0c"
+            data-oid="y.hdyjc"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="ws5zw17"
+              data-oid="7902rj5"
             ></div>
           </div>
         ),
@@ -476,11 +476,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="o9h2x5_"
+            data-oid="vghsk1l"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="vf-bm-4"
+              data-oid="2a-b9xi"
             ></div>
           </div>
         ),
@@ -495,11 +495,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="s8bav8q"
+            data-oid="ur29r6y"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="i7_11pb"
+              data-oid="ta.w9s6"
             ></div>
           </div>
         ),
@@ -511,11 +511,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid=".xci4t1"
+            data-oid="ods9zq-"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="65p70mv"
+              data-oid="47_ikl0"
             ></div>
           </div>
         ),
@@ -527,11 +527,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="1q2j43."
+            data-oid="4wilj.2"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="q:z02a6"
+              data-oid="nv_f0kc"
             ></div>
           </div>
         ),
@@ -543,11 +543,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="tpwifro"
+            data-oid="t.n7rq8"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="m_vomjj"
+              data-oid="9vo750k"
             ></div>
           </div>
         ),
@@ -559,11 +559,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="1v_xi8_"
+            data-oid="wf7z5k2"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="gdfism3"
+              data-oid=".f2jyxl"
             ></div>
           </div>
         ),
@@ -579,11 +579,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="1p2w_mq"
+              data-oid="-mkqg8y"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="x_1mj93"
+                data-oid="pj9ysmn"
               ></div>
             </div>
           ),
@@ -595,11 +595,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="t3lxnr3"
+            data-oid="hu6t1vo"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="ufcu7j."
+              data-oid="frn2v97"
             ></div>
           </div>
         ),
@@ -611,11 +611,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="2hecr0g"
+            data-oid="5eziui9"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="1t6g.eu"
+              data-oid="oe1ku86"
             ></div>
           </div>
         ),
@@ -630,11 +630,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="yb507i-"
+            data-oid="_o9xx81"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="rjx8b81"
+              data-oid="isua:du"
             ></div>
           </div>
         ),
@@ -649,11 +649,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="3decfgf"
+            data-oid="nhb-xhq"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="7hevpf8"
+              data-oid="kr:j07q"
             ></div>
           </div>
         ),
@@ -665,11 +665,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="4eq7pg6"
+            data-oid="j_fa4dl"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="-_gn.gp"
+              data-oid="gz1_46k"
             ></div>
           </div>
         ),
@@ -684,11 +684,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="99qtywq"
+            data-oid="p-1pcoc"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="1_1er_p"
+              data-oid="lhk0sm0"
             ></div>
           </div>
         ),
@@ -701,11 +701,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="uqqkon3"
+            data-oid="kcpqzql"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="kpevsph"
+              data-oid="w4.4qir"
             ></div>
           </div>
         ),
@@ -720,11 +720,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="r9s:rmu"
+            data-oid="1m_uvcj"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="ehuv7dy"
+              data-oid="r_yeboi"
             ></div>
           </div>
         ),
@@ -736,11 +736,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="tw-3424"
+            data-oid="rme3a91"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="fspdx46"
+              data-oid="io4z2dd"
             ></div>
           </div>
         ),
@@ -756,11 +756,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="_dosiii"
+              data-oid="gz-_lny"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="jcljwy8"
+                data-oid="r4ga8k:"
               ></div>
             </div>
           ),
@@ -776,11 +776,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="9vs33cf"
+              data-oid="rx2n-mh"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="emiikw3"
+                data-oid=".:frfu-"
               ></div>
             </div>
           ),
@@ -796,11 +796,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="cex8h0e"
+              data-oid="mo7i1:1"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="b2fb-sn"
+                data-oid="xwh5cnz"
               ></div>
             </div>
           ),
@@ -816,11 +816,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="zon7k14"
+              data-oid="_xuw:v0"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="oawb813"
+                data-oid="qj2hqju"
               ></div>
             </div>
           ),
@@ -832,11 +832,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="al8efa8"
+            data-oid=".0l2e7q"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="6v.a-hx"
+              data-oid="-rl6nch"
             ></div>
           </div>
         ),
@@ -852,11 +852,11 @@ export default function CourseDetailPage({
           loading: () => (
             <div
               className="flex items-center justify-center min-h-screen"
-              data-oid="lav_y52"
+              data-oid="q02f67x"
             >
               <div
                 className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="a1q2wfv"
+                data-oid="66h6ng:"
               ></div>
             </div>
           ),
@@ -871,11 +871,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="v5usj_u"
+            data-oid="3w-iosa"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="vhgxg22"
+              data-oid="mvnbvxj"
             ></div>
           </div>
         ),
@@ -890,11 +890,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="ho5gwrg"
+            data-oid="dvifden"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="btkk:ih"
+              data-oid="dis0f68"
             ></div>
           </div>
         ),
@@ -909,11 +909,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="mt_exfs"
+            data-oid="gx-qsye"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="qr-:o8q"
+              data-oid="2hjlza:"
             ></div>
           </div>
         ),
@@ -925,11 +925,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="3-dzfj1"
+            data-oid="itws:xv"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="wexi--v"
+              data-oid="ye:m1hi"
             ></div>
           </div>
         ),
@@ -944,11 +944,11 @@ export default function CourseDetailPage({
         loading: () => (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="xxk6lo:"
+            data-oid="fan.sp9"
           >
             <div
               className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="xinkwke"
+              data-oid="1-wlduu"
             ></div>
           </div>
         ),
@@ -962,5 +962,5 @@ export default function CourseDetailPage({
     return notFound();
   }
 
-  return <CourseComponent data-oid="z9gdiha" />;
+  return <CourseComponent data-oid="r.k9.fh" />;
 }

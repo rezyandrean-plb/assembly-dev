@@ -334,32 +334,32 @@ export default function LearningPathPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#F5F5F5]" data-oid="1mf:5ev">
-        <Navbar data-oid="e6vy6_t" />
-        <div className="pt-24 pb-16" data-oid="mwjx5m_">
-          <div className="container mx-auto px-4" data-oid="812ay2-">
-            <div className="animate-pulse" data-oid="tvhd3zx">
+      <div className="min-h-screen bg-[#F5F5F5]" data-oid="u-ue6mi">
+        <Navbar data-oid="7aqb64-" />
+        <div className="pt-24 pb-16" data-oid=".j_9wx2">
+          <div className="container mx-auto px-4" data-oid="2p_tc83">
+            <div className="animate-pulse" data-oid="45_e0gq">
               <div
                 className="h-8 bg-gray-200 rounded w-1/3 mb-4"
-                data-oid="5r-ymgg"
+                data-oid="guw8ve7"
               ></div>
               <div
                 className="h-4 bg-gray-200 rounded w-2/3 mb-8"
-                data-oid="n8qyrz8"
+                data-oid="mo-ad88"
               ></div>
               <div
                 className="h-64 bg-gray-200 rounded mb-8"
-                data-oid="ths5e8k"
+                data-oid="zmjd7y7"
               ></div>
               <div
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                data-oid="r.avjwd"
+                data-oid="7okqg0i"
               >
                 {[...Array(3)].map((_, i) => (
                   <div
                     key={i}
                     className="h-64 bg-gray-200 rounded"
-                    data-oid="3bzqvjq"
+                    data-oid=":y914gq"
                   ></div>
                 ))}
               </div>
@@ -372,26 +372,26 @@ export default function LearningPathPage() {
 
   if (!pathData) {
     return (
-      <div className="min-h-screen bg-[#F5F5F5]" data-oid="stck8xx">
-        <Navbar data-oid="uk3g5:a" />
-        <div className="pt-24 pb-16" data-oid="8:b99-5">
+      <div className="min-h-screen bg-[#F5F5F5]" data-oid="e4k5xgi">
+        <Navbar data-oid="_3aa40." />
+        <div className="pt-24 pb-16" data-oid="hkh:.qh">
           <div
             className="container mx-auto px-4 text-center"
-            data-oid="19.s.29"
+            data-oid="-wm4njt"
           >
             <h1
               className="text-3xl font-bold text-gray-900 mb-4"
-              data-oid="yb::3bf"
+              data-oid="e89mtyy"
             >
               Learning Path Not Found
             </h1>
-            <p className="text-gray-600 mb-8" data-oid="0s8ca_l">
+            <p className="text-gray-600 mb-8" data-oid="9_4e2jh">
               The learning path you're looking for doesn't exist or has been
               moved.
             </p>
-            <Link href="/courses" data-oid="a_dwd95">
-              <Button data-oid="5ep4nfi">
-                <ArrowLeft className="mr-2 h-4 w-4" data-oid="_x5s2eg" />
+            <Link href="/courses" data-oid="f6mndx1">
+              <Button data-oid="m.bh622">
+                <ArrowLeft className="mr-2 h-4 w-4" data-oid="a3yx5f:" />
                 Back to Courses
               </Button>
             </Link>
@@ -402,30 +402,30 @@ export default function LearningPathPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5]" data-oid="emngz0r">
-      <Navbar data-oid="nsb70_r" />
+    <div className="min-h-screen bg-[#F5F5F5]" data-oid="vj52lur">
+      <Navbar data-oid="vg7xwwb" />
 
-      <div className="pt-24 pb-16" data-oid="0n_zdqe">
-        <div className="container mx-auto px-4" data-oid="ul41ep.">
+      <div className="pt-24 pb-16" data-oid="bql8888">
+        <div className="container mx-auto px-4" data-oid="x3djuy3">
           {/* Back button */}
-          <div className="mb-6" data-oid="1aiotvx">
+          <div className="mb-6" data-oid="05cu98k">
             <Link
               href="/courses?tab=paths"
               className="inline-flex items-center text-[#123B79] hover:underline"
-              data-oid="2pezc15"
+              data-oid="ojfdlpr"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" data-oid="h5yoeci" />
+              <ArrowLeft className="h-4 w-4 mr-2" data-oid="lh3wgdl" />
               Back to Learning Paths
             </Link>
           </div>
 
           {/* Path Header */}
-          <div className="mb-12" data-oid=":r8iw:m">
-            <div className="flex items-center mb-4" data-oid="5t7u45v">
+          <div className="mb-12" data-oid="kkpw743">
+            <div className="flex items-center mb-4" data-oid="7ct33qv">
               <div
                 className="rounded-full w-14 h-14 flex items-center justify-center mr-4"
                 style={{ backgroundColor: pathData.color }}
-                data-oid="7wz17c2"
+                data-oid="vua2a4v"
               >
                 {pathData.id === "beginner-property-investor" ? (
                   <svg
@@ -435,7 +435,7 @@ export default function LearningPathPage() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    data-oid="d6ud48x"
+                    data-oid="l86u3:g"
                   >
                     <rect
                       x="3"
@@ -443,13 +443,13 @@ export default function LearningPathPage() {
                       width="18"
                       height="18"
                       rx="2"
-                      data-oid="ksgw3wu"
+                      data-oid="5b53f9v"
                     />
 
-                    <path d="M9 3v18" data-oid="i0.z6fz" />
-                    <path d="M14 8h.01" data-oid="6sbkxbp" />
-                    <path d="M14 12h.01" data-oid="0a.6mdm" />
-                    <path d="M14 16h.01" data-oid="700gmu0" />
+                    <path d="M9 3v18" data-oid="9yrqd:s" />
+                    <path d="M14 8h.01" data-oid="f6_0wwk" />
+                    <path d="M14 12h.01" data-oid="3ml_rf:" />
+                    <path d="M14 16h.01" data-oid="049xl9e" />
                   </svg>
                 ) : pathData.id === "hdb-upgrader-strategist" ? (
                   <svg
@@ -459,16 +459,16 @@ export default function LearningPathPage() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    data-oid="ijc94lu"
+                    data-oid="qaoe1j3"
                   >
-                    <path d="M2 12h6" data-oid="r0n-8h5" />
-                    <path d="M22 12h-6" data-oid="b_4vxdh" />
-                    <path d="M12 2v2" data-oid="0h7lg:o" />
-                    <path d="M12 8v2" data-oid="bw:s79q" />
-                    <path d="M12 14v2" data-oid="qjoedhc" />
-                    <path d="M12 20v2" data-oid="mth:avg" />
-                    <path d="M19 9l-7 3-7-3" data-oid="l:dsif2" />
-                    <path d="M19 15l-7-3-7 3" data-oid="w:t_cw." />
+                    <path d="M2 12h6" data-oid="jpjas9i" />
+                    <path d="M22 12h-6" data-oid="0:.6dn5" />
+                    <path d="M12 2v2" data-oid="m9har43" />
+                    <path d="M12 8v2" data-oid="dxstpqj" />
+                    <path d="M12 14v2" data-oid="p6:v_3h" />
+                    <path d="M12 20v2" data-oid="63-hga4" />
+                    <path d="M19 9l-7 3-7-3" data-oid="9a7_b-t" />
+                    <path d="M19 15l-7-3-7 3" data-oid="b4r5fa6" />
                   </svg>
                 ) : (
                   <svg
@@ -478,11 +478,11 @@ export default function LearningPathPage() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    data-oid="0j4k0fb"
+                    data-oid="q204xxm"
                   >
                     <path
                       d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
-                      data-oid="7pv5v6k"
+                      data-oid="8:b:ah8"
                     />
                   </svg>
                 )}
@@ -490,28 +490,28 @@ export default function LearningPathPage() {
               <h1
                 className="text-3xl font-bold"
                 style={{ color: pathData.color }}
-                data-oid="z510n-."
+                data-oid="wlz44ms"
               >
                 {pathData.title}
               </h1>
             </div>
             <p
               className="text-xl text-gray-600 mb-6 max-w-3xl"
-              data-oid="mle:07-"
+              data-oid="nkh8mvj"
             >
               {pathData.description}
             </p>
             <div
               className="flex items-center text-sm text-gray-500"
-              data-oid="0l0alr."
+              data-oid="7p.wb3o"
             >
-              <BookOpen className="h-4 w-4 mr-1" data-oid="726bct0" />
-              <span data-oid="vmp:hya">{pathCourses.length} courses</span>
-              <span className="mx-2" data-oid="68-7s2s">
+              <BookOpen className="h-4 w-4 mr-1" data-oid="zjy:fn1" />
+              <span data-oid="-_snm3a">{pathCourses.length} courses</span>
+              <span className="mx-2" data-oid="v18edvh">
                 •
               </span>
-              <Clock className="h-4 w-4 mr-1" data-oid="ib08zoq" />
-              <span data-oid="tobrv5g">
+              <Clock className="h-4 w-4 mr-1" data-oid="ntxfaz0" />
+              <span data-oid="hs2sr1r">
                 Approximately {pathCourses.length * 4} weeks to complete
               </span>
             </div>
@@ -520,36 +520,36 @@ export default function LearningPathPage() {
           {/* Path Description */}
           <div
             className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
-            data-oid="z6tqimh"
+            data-oid="q9pcsqy"
           >
-            <div className="lg:col-span-2" data-oid=".j0_m._">
+            <div className="lg:col-span-2" data-oid="ypjxyns">
               <h2
                 className="text-2xl font-bold mb-4"
                 style={{ color: pathData.color }}
-                data-oid="j2u8_3m"
+                data-oid="08:flaj"
               >
                 About This Learning Path
               </h2>
-              <p className="text-gray-700 mb-6" data-oid="b3jna-6">
+              <p className="text-gray-700 mb-6" data-oid="vjdqud0">
                 {pathData.longDescription}
               </p>
 
-              <h3 className="text-xl font-bold mb-4" data-oid="k7gq23.">
+              <h3 className="text-xl font-bold mb-4" data-oid="3565kvu">
                 What You'll Learn
               </h3>
-              <div className="space-y-2 mb-8" data-oid=".yq39m-">
+              <div className="space-y-2 mb-8" data-oid="c9:m.3l">
                 {pathData.outcomes.map((outcome, index) => (
                   <div
                     key={index}
                     className="flex items-start"
-                    data-oid="lnv7jvb"
+                    data-oid="mh7qzed"
                   >
                     <CheckCircle
                       className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5"
-                      data-oid="g.89zsg"
+                      data-oid="4x:vy5t"
                     />
 
-                    <p className="text-gray-700" data-oid="0:iyw:f">
+                    <p className="text-gray-700" data-oid="ocs66mx">
                       {outcome}
                     </p>
                   </div>
@@ -557,53 +557,53 @@ export default function LearningPathPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-1" data-oid="ri7kbc0">
-              <div className="bg-gray-50 rounded-xl p-6" data-oid=".6r_f8s">
-                <h3 className="text-xl font-bold mb-4" data-oid="72zdw3h">
+            <div className="lg:col-span-1" data-oid="l2hd5w5">
+              <div className="bg-gray-50 rounded-xl p-6" data-oid=".ri1dlt">
+                <h3 className="text-xl font-bold mb-4" data-oid="a.5.2ym">
                   Path Details
                 </h3>
-                <div className="space-y-4" data-oid="fcr7t1q">
-                  <div className="flex items-center" data-oid="zg_vfu:">
+                <div className="space-y-4" data-oid="kk65-_g">
+                  <div className="flex items-center" data-oid="6t41f:j">
                     <BookOpen
                       className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="d-r_ngw"
+                      data-oid="7g4w3l3"
                     />
 
-                    <div data-oid="xm2dx7n">
-                      <p className="font-semibold" data-oid="7z3jdf1">
+                    <div data-oid="yal0khw">
+                      <p className="font-semibold" data-oid="e-1z98:">
                         Courses
                       </p>
-                      <p className="text-sm text-gray-600" data-oid="vw4:2v-">
+                      <p className="text-sm text-gray-600" data-oid="cj5-rrd">
                         {pathCourses.length} courses
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center" data-oid="zo:-bvy">
+                  <div className="flex items-center" data-oid="ab4gorn">
                     <Clock
                       className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="-.qzz1k"
+                      data-oid="x7_4ff8"
                     />
 
-                    <div data-oid="1ich9sg">
-                      <p className="font-semibold" data-oid="cm9lk9j">
+                    <div data-oid="6f.fgae">
+                      <p className="font-semibold" data-oid="eljaoqw">
                         Duration
                       </p>
-                      <p className="text-sm text-gray-600" data-oid="v2nod_:">
+                      <p className="text-sm text-gray-600" data-oid="zxwvzbl">
                         Approximately {pathCourses.length * 4} weeks
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center" data-oid="sq12_n-">
+                  <div className="flex items-center" data-oid="k7qd5_.">
                     <Star
                       className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="dxrkrt_"
+                      data-oid="3i2i8ms"
                     />
 
-                    <div data-oid="b7em2o9">
-                      <p className="font-semibold" data-oid="15cw4kv">
+                    <div data-oid="ld4-1at">
+                      <p className="font-semibold" data-oid="9v5bd-j">
                         Level
                       </p>
-                      <p className="text-sm text-gray-600" data-oid="tasw9mo">
+                      <p className="text-sm text-gray-600" data-oid="2sbdh5y">
                         {pathData.id === "beginner-property-investor"
                           ? "Beginner to Intermediate"
                           : pathData.id === "hdb-upgrader-strategist"
@@ -616,12 +616,12 @@ export default function LearningPathPage() {
 
                 <div
                   className="mt-6 pt-6 border-t border-gray-200"
-                  data-oid="ot80rgp"
+                  data-oid="3if7_66"
                 >
                   <Button
                     className="w-full"
                     style={{ backgroundColor: pathData.color }}
-                    data-oid="12zuiin"
+                    data-oid="l8f0sdt"
                   >
                     Enroll in This Path
                   </Button>
@@ -631,65 +631,65 @@ export default function LearningPathPage() {
           </div>
 
           {/* Course Sequence */}
-          <div className="mb-16" data-oid="jlg:ch3">
-            <h2 className="text-2xl font-bold mb-6" data-oid="i5cyo:5">
+          <div className="mb-16" data-oid="wb78xrb">
+            <h2 className="text-2xl font-bold mb-6" data-oid="6d.q0g8">
               Course Sequence
             </h2>
-            <div className="space-y-6" data-oid="-sc8_2w">
+            <div className="space-y-6" data-oid="tztpeuf">
               {pathCourses.map((course, index) => (
                 <div
                   key={course.id}
                   className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm"
-                  data-oid="vekxxo1"
+                  data-oid="afnqjyb"
                 >
-                  <div className="flex flex-col md:flex-row" data-oid="_agb9mj">
-                    <div className="md:w-1/4 relative" data-oid="xk1g:vh">
+                  <div className="flex flex-col md:flex-row" data-oid="ntqfcdn">
+                    <div className="md:w-1/4 relative" data-oid="qfkz.y0">
                       <div
                         className="relative h-48 md:h-full"
-                        data-oid="rczkl.n"
+                        data-oid="mzdbr36"
                       >
                         <Image
                           src={course.image || "/placeholder.svg"}
                           alt={course.title}
                           fill
                           className="object-cover"
-                          data-oid="5bolvnm"
+                          data-oid="sj69psn"
                         />
 
                         <div
                           className="absolute inset-0 bg-black bg-opacity-20"
-                          data-oid="_gmok__"
+                          data-oid="-xf:q7q"
                         ></div>
                         <div
                           className="absolute top-4 left-4 bg-white text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center"
-                          data-oid="y515e-c"
+                          data-oid="vcf7wqe"
                         >
                           {index + 1}
                         </div>
                       </div>
                     </div>
-                    <div className="p-6 md:w-3/4" data-oid="hmxu_qa">
-                      <h3 className="text-xl font-bold mb-2" data-oid="8582iek">
+                    <div className="p-6 md:w-3/4" data-oid="at0ccfs">
+                      <h3 className="text-xl font-bold mb-2" data-oid="qs4cgno">
                         {course.title}
                       </h3>
                       <p
                         className="text-gray-500 text-sm mb-2"
-                        data-oid="trynpyh"
+                        data-oid="qkckzkj"
                       >
                         Instructor: {course.instructor} • {course.duration}
                       </p>
-                      <p className="text-gray-700 mb-4" data-oid="obm7a46">
+                      <p className="text-gray-700 mb-4" data-oid=":aj.sq4">
                         {course.description}
                       </p>
                       <div
                         className="flex flex-wrap gap-2 mb-4"
-                        data-oid="a-jo:39"
+                        data-oid="m::p7o4"
                       >
                         {course.categories.map((category, i) => (
                           <span
                             key={i}
                             className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 rounded-full"
-                            data-oid="myx-pmi"
+                            data-oid="qb9ngxa"
                           >
                             {category}
                           </span>
@@ -697,10 +697,10 @@ export default function LearningPathPage() {
                       </div>
                       <div
                         className="flex items-center justify-between"
-                        data-oid="44bua8f"
+                        data-oid="ti5:vl4"
                       >
-                        <div className="flex items-center" data-oid="z41l5j7">
-                          <div className="flex" data-oid="u4xnnv9">
+                        <div className="flex items-center" data-oid="3tb6ome">
+                          <div className="flex" data-oid="-zcxuqr">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
@@ -709,18 +709,18 @@ export default function LearningPathPage() {
                                     ? "text-yellow-400 fill-yellow-400"
                                     : "text-gray-300"
                                 }`}
-                                data-oid="vdc48y_"
+                                data-oid="f6-6c4j"
                               />
                             ))}
                           </div>
                           <span
                             className="ml-2 text-sm text-gray-600"
-                            data-oid="c:wpx5:"
+                            data-oid="td31yon"
                           >
                             {course.rating} ({course.reviewCount} reviews)
                           </span>
                         </div>
-                        <div className="text-lg font-bold" data-oid="34y:gil">
+                        <div className="text-lg font-bold" data-oid="g.-vkzt">
                           {course.price}
                         </div>
                       </div>
@@ -734,14 +734,14 @@ export default function LearningPathPage() {
           {/* Call to Action */}
           <div
             className="bg-gray-50 rounded-xl p-8 text-center"
-            data-oid="fviv9ur"
+            data-oid="nnhckmr"
           >
-            <h2 className="text-2xl font-bold mb-4" data-oid="1b41hfy">
+            <h2 className="text-2xl font-bold mb-4" data-oid="dhzyvld">
               Ready to Start Your Learning Journey?
             </h2>
             <p
               className="text-gray-600 mb-6 max-w-2xl mx-auto"
-              data-oid="zk264__"
+              data-oid="_lhdsui"
             >
               Enroll in this learning path to gain structured access to all
               courses and track your progress toward becoming an expert in{" "}
@@ -750,7 +750,7 @@ export default function LearningPathPage() {
             <Button
               size="lg"
               style={{ backgroundColor: pathData.color }}
-              data-oid="mchtgis"
+              data-oid="z.p3dyv"
             >
               Enroll Now
             </Button>

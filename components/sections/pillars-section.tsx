@@ -29,7 +29,7 @@ export default function PillarsSection() {
 
   const pillars = [
     {
-      icon: <Building2 className="h-12 w-12" data-oid="ushrk08" />,
+      icon: <Building2 className="h-12 w-12" data-oid="3m:wmwm" />,
       title: "Real Estate",
       description:
         "Navigate Singapore's dynamic property market with expert insights on trends, regulations, and opportunities.",
@@ -39,7 +39,7 @@ export default function PillarsSection() {
       delay: 0.2,
     },
     {
-      icon: <TrendingUp className="h-12 w-12" data-oid=".h0r3t1" />,
+      icon: <TrendingUp className="h-12 w-12" data-oid="z7hx721" />,
       title: "Finance",
       description:
         "Master the financial aspects of real estate with knowledge on investment strategies, mortgages, and market analysis.",
@@ -49,7 +49,7 @@ export default function PillarsSection() {
       delay: 0.4,
     },
     {
-      icon: <GraduationCap className="h-12 w-12" data-oid="y37wj2y" />,
+      icon: <GraduationCap className="h-12 w-12" data-oid="sr7n-id" />,
       title: "Learning",
       description:
         "Continuously develop your expertise through structured courses, workshops, and community knowledge sharing.",
@@ -64,36 +64,36 @@ export default function PillarsSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-[#F5F5F5]"
-      data-oid="539l6l3"
+      data-oid="1a-yuza"
     >
-      <div className="container mx-auto px-4" data-oid="kkagmri">
+      <div className="container mx-auto px-4" data-oid="227q_j_">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: headerOpacity, y: headerY }}
-          data-oid="au:vaji"
+          data-oid="w8g5vw."
         >
           <h2
             className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="4i6.rxa"
+            data-oid="yjuwuzt"
           >
             Pillars of the Network
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="jzu79p3"
+            data-oid="k.8z-zg"
           >
             Explore the three interconnected domains that form the foundation of
             your success
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="d8v7wex"
+            data-oid="olf4o6j"
           ></div>
         </motion.div>
 
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-          data-oid="_x-iqko"
+          data-oid="29t7b.6"
         >
           {pillars.map((pillar, index) => (
             <motion.div
@@ -110,7 +110,7 @@ export default function PillarsSection() {
                 type: "spring",
                 stiffness: 50,
               }}
-              data-oid="de6vpj3"
+              data-oid="9jkmk0i"
             >
               <div
                 className={`rounded-full p-4 inline-block mb-6 ${
@@ -120,30 +120,30 @@ export default function PillarsSection() {
                       ? "bg-[#fdf6e9]"
                       : "bg-[#f8eaef]"
                 }`}
-                data-oid="pmo3egl"
+                data-oid="dbswp19"
               >
-                <div className={pillar.textColor} data-oid="saftx-0">
+                <div className={pillar.textColor} data-oid="u5bmv6f">
                   {pillar.icon}
                 </div>
               </div>
               <h3
                 className={`text-2xl font-bold mb-4 ${pillar.textColor}`}
-                data-oid="pq-jtdc"
+                data-oid="k9sxar7"
               >
                 {pillar.title}
               </h3>
-              <p className="text-gray-600 mb-6" data-oid="ydtbinc">
+              <p className="text-gray-600 mb-6" data-oid="bdv-lzx">
                 {pillar.description}
               </p>
 
-              <div className="pt-4 border-t border-gray-100" data-oid="enr.u_4">
+              <div className="pt-4 border-t border-gray-100" data-oid="qfxo3-f">
                 <a
                   href={`/${pillar.title.toLowerCase().replace(" ", "-")}`}
                   className={`inline-flex items-center font-medium hover:opacity-80 transition-opacity ${pillar.textColor}`}
-                  data-oid="hy_e:1h"
+                  data-oid="384knjk"
                 >
                   Explore {pillar.title}
-                  <ArrowRight className="ml-2 h-4 w-4" data-oid="x18kiuy" />
+                  <ArrowRight className="ml-2 h-4 w-4" data-oid="qfn-dk0" />
                 </a>
               </div>
             </motion.div>
@@ -154,14 +154,14 @@ export default function PillarsSection() {
       {/* Network connection lines between pillars - visible on larger screens */}
       <div
         className="hidden md:block absolute top-1/2 left-0 w-full z-0 pointer-events-none"
-        data-oid="hlrwryh"
+        data-oid=":3azr7-"
       >
         <svg
           className="w-full h-20"
           viewBox="0 0 1200 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          data-oid="x9ewe:o"
+          data-oid=":tjxthn"
         >
           <motion.path
             d="M300,40 C400,0 500,80 600,40"
@@ -174,7 +174,7 @@ export default function PillarsSection() {
               opacity: isInView ? 0.6 : 0,
             }}
             transition={{ duration: 1.5, delay: 0.8 }}
-            data-oid="b3b6k8d"
+            data-oid="oqhc:zd"
           />
 
           <motion.path
@@ -188,7 +188,7 @@ export default function PillarsSection() {
               opacity: isInView ? 0.6 : 0,
             }}
             transition={{ duration: 1.5, delay: 1 }}
-            data-oid="t80ldwg"
+            data-oid="ni-atpu"
           />
         </svg>
       </div>

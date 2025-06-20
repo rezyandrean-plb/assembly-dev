@@ -23,16 +23,16 @@ export default function AboutPage() {
   });
 
   return (
-    <div ref={containerRef} className="bg-white" data-oid="me8voc.">
+    <div ref={containerRef} className="bg-white" data-oid="mss2lzh">
       <div
         className="max-w-7xl mx-auto px:4 sm:px-6 lg:px-8 py-16"
-        data-oid="s8kc0nr"
+        data-oid="1djw7yv"
       >
-        <HeroSection data-oid="em0_ym2" />
-        <AimSection data-oid="2al1zwt" />
-        <StructureSection data-oid=".wp_1fh" />
-        <PhilosophySection data-oid="hnnzkhy" />
-        <ChooseSection data-oid=":1rgilr" />
+        <HeroSection data-oid="_7-ra93" />
+        <AimSection data-oid="aqmii.r" />
+        <StructureSection data-oid="d31mor." />
+        <PhilosophySection data-oid="g1i-h5l" />
+        <ChooseSection data-oid="b:aa9pp" />
       </div>
     </div>
   );
