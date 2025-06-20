@@ -88,10 +88,45 @@ export default function CourseDetailTemplate({
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSidebarSticky, setIsSidebarSticky] = useState(false);
 
+  const sidebarRef = useRef<HTMLDivElement>(null);
+  const heroSectionRef = useRef<HTMLDivElement>(null);
   const relatedCoursesRef = useRef<HTMLDivElement>(null);
   const reviewsSectionRef = useRef<HTMLHeadingElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        !mainContentRef.current ||
+        !sidebarRef.current ||
+        !heroSectionRef.current ||
+        !relatedCoursesRef.current
+      ) {
+        return;
+      }
+
+      const heroBottom =
+        heroSectionRef.current.offsetTop + heroSectionRef.current.offsetHeight;
+      const relatedTop = relatedCoursesRef.current.offsetTop;
+      const sidebarHeight = sidebarRef.current.offsetHeight;
+      const scrollY = window.scrollY;
+
+      const shouldBeSticky =
+        scrollY > heroBottom - 100 &&
+        scrollY < relatedTop - sidebarHeight - 100;
+
+      setIsSidebarSticky(shouldBeSticky);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Toggle module expansion
   const toggleModule = (index: number) => {
@@ -173,7 +208,7 @@ export default function CourseDetailTemplate({
     <main className="relative bg-white min-h-screen" data-oid="cdscubq">
       <Navbar data-oid="lu0p77h" />
       {/* Hero Section */}
-      <section className="pt-32 pb-16" data-oid="ww75_6e">
+      <section ref={heroSectionRef} className="pt-32 pb-16" data-oid="ww75_6e">
         <div className="container mx-auto px-4" data-oid="2sq9:cr">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -657,166 +692,162 @@ export default function CourseDetailTemplate({
 
             {/* Sidebar - Takes up 1/3 of the space, no longer sticky */}
             <motion.div
-              className="lg:col-span-1"
+              ref={sidebarRef}
+              className={`lg:col-span-1 transition-all duration-300 ${
+                isSidebarSticky ? "lg:fixed lg:top-24 lg:right-24" : ""
+              }`}
+              style={{
+                width: isSidebarSticky
+                  ? sidebarRef.current?.parentElement?.clientWidth
+                    ? sidebarRef.current.parentElement.clientWidth / 3 - 32
+                    : "auto"
+                  : "auto",
+              }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               data-oid="5h_p_ci"
             >
-              <div data-oid=".rov3ui">
-                {/* Course Preview Image - Desktop Only */}
-                <div
-                  className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg"
-                  data-oid="d.xxasx"
-                >
-                  <div className="aspect-video relative" data-oid="rgs-wmn">
-                    <Image
-                      src={courseData.image || "/placeholder.svg"}
-                      alt={courseData.title}
-                      fill
-                      className="object-cover"
-                      data-oid="4q9-dd6"
-                    />
-                  </div>
+              {/* Course Preview Image - Desktop Only */}
+              <div
+                className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg"
+                data-oid="d.xxasx"
+              >
+                <div className="aspect-video relative" data-oid="rgs-wmn">
+                  <Image
+                    src={courseData.image || "/placeholder.svg"}
+                    alt={courseData.title}
+                    fill
+                    className="object-cover"
+                    data-oid="4q9-dd6"
+                  />
                 </div>
+              </div>
 
-                {/* Enrollment Card */}
-                <div
-                  className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6"
-                  data-oid="ut1o.om"
-                >
-                  <div className="p-6" data-oid="2z2vbeg">
+              {/* Enrollment Card */}
+              <div
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6"
+                data-oid="ut1o.om"
+              >
+                <div className="p-6" data-oid="2z2vbeg">
+                  <div
+                    className="flex justify-between items-center mb-4"
+                    data-oid="g.x.-8-"
+                  >
                     <div
-                      className="flex justify-between items-center mb-4"
-                      data-oid="g.x.-8-"
+                      className="text-3xl font-bold text-[#123B79]"
+                      data-oid="0:n2x42"
                     >
-                      <div
-                        className="text-3xl font-bold text-[#123B79]"
-                        data-oid="0:n2x42"
+                      {courseData.price}
+                    </div>
+                    <div className="flex space-x-2" data-oid="ekyew4h">
+                      <button
+                        onClick={handleBookmark}
+                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        aria-label={
+                          isBookmarked
+                            ? "Remove from wishlist"
+                            : "Add to wishlist"
+                        }
+                        data-oid="htr7878"
                       >
-                        {courseData.price}
-                      </div>
-                      <div className="flex space-x-2" data-oid="ekyew4h">
-                        <button
-                          onClick={handleBookmark}
-                          className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                          aria-label={
-                            isBookmarked
-                              ? "Remove from wishlist"
-                              : "Add to wishlist"
-                          }
-                          data-oid="htr7878"
-                        >
-                          {isBookmarked ? (
-                            <BookOpen
-                              className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                              data-oid="g-1xlwh"
-                            />
-                          ) : (
-                            <BookOpen
-                              className="h-5 w-5 text-gray-700"
-                              data-oid="sk5woe1"
-                            />
-                          )}
-                        </button>
-                        <button
-                          className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                          onClick={() => setIsShareModalOpen(true)}
-                          aria-label="Share course"
-                          data-oid="0ahrv9f"
-                        >
-                          <Share2
-                            className="h-5 w-5 text-gray-700"
-                            data-oid=":.z64yh"
+                        {isBookmarked ? (
+                          <BookOpen
+                            className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
+                            data-oid="g-1xlwh"
                           />
-                        </button>
+                        ) : (
+                          <BookOpen
+                            className="h-5 w-5 text-gray-700"
+                            data-oid="sk5woe1"
+                          />
+                        )}
+                      </button>
+                      <button
+                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onClick={() => setIsShareModalOpen(true)}
+                        aria-label="Share course"
+                        data-oid="0ahrv9f"
+                      >
+                        <Share2
+                          className="h-5 w-5 text-gray-700"
+                          data-oid=":.z64yh"
+                        />
+                      </button>
+                    </div>
+                  </div>
+
+                  <Button
+                    className="w-full bg-[#123B79] hover:bg-[#0A2A5E] mb-3"
+                    onClick={() => {
+                      if (
+                        courseData.price &&
+                        courseData.price.toLowerCase() !== "free"
+                      ) {
+                        addToCart({
+                          id: String(courseData.id),
+                          title: courseData.title,
+                          slug: courseData.slug,
+                          price: courseData.price,
+                          image: courseData.image,
+                          type: "Course",
+                        });
+                        router.push("/cart"); // Optionally navigate to cart
+                      } else {
+                        // Free course: enroll or redirect logic (if any)
+                        // For now, just show a message or redirect
+                      }
+                    }}
+                    data-oid="9wh-6x3"
+                  >
+                    <ShoppingCart className="mr-2 h-4 w-4" data-oid="on:bid9" />
+                    Enroll Now
+                  </Button>
+
+                  <div className="space-y-4 mt-6" data-oid="9gw2m9p">
+                    <div className="flex items-center" data-oid="iy.bg2_">
+                      <Clock
+                        className="h-5 w-5 text-[#123B79] mr-3"
+                        data-oid="1g:oplo"
+                      />
+
+                      <div data-oid=":t5p-b9">
+                        <p className="font-semibold" data-oid="fn6yauj">
+                          Course Duration
+                        </p>
+                        <p className="text-sm text-gray-600" data-oid="w70inux">
+                          {courseData.duration}
+                        </p>
                       </div>
                     </div>
-
-                    <Button
-                      className="w-full bg-[#123B79] hover:bg-[#0A2A5E] mb-3"
-                      onClick={() => {
-                        if (
-                          courseData.price &&
-                          courseData.price.toLowerCase() !== "free"
-                        ) {
-                          addToCart({
-                            id: courseData.id,
-                            title: courseData.title,
-                            slug: courseData.slug,
-                            price: courseData.price,
-                            image: courseData.image,
-                            instructor: courseData.instructors?.[0]?.name || "",
-                          });
-                          router.push("/cart"); // Optionally navigate to cart
-                        } else {
-                          // Free course: enroll or redirect logic (if any)
-                          // For now, just show a message or redirect
-                        }
-                      }}
-                      data-oid="9wh-6x3"
-                    >
-                      <ShoppingCart
-                        className="mr-2 h-4 w-4"
-                        data-oid="on:bid9"
+                    <div className="flex items-center" data-oid="pbmk6r.">
+                      <Users
+                        className="h-5 w-5 text-[#123B79] mr-3"
+                        data-oid="a:pnwfq"
                       />
-                      Enroll Now
-                    </Button>
 
-                    <div className="space-y-4 mt-6" data-oid="9gw2m9p">
-                      <div className="flex items-center" data-oid="iy.bg2_">
-                        <Clock
-                          className="h-5 w-5 text-[#123B79] mr-3"
-                          data-oid="1g:oplo"
-                        />
-
-                        <div data-oid=":t5p-b9">
-                          <p className="font-semibold" data-oid="fn6yauj">
-                            Course Duration
-                          </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="w70inux"
-                          >
-                            {courseData.duration}
-                          </p>
-                        </div>
+                      <div data-oid="v2-xf1j">
+                        <p className="font-semibold" data-oid="-ql1103">
+                          Total Enrolled
+                        </p>
+                        <p className="text-sm text-gray-600" data-oid="vu2665w">
+                          {courseData.students}
+                        </p>
                       </div>
-                      <div className="flex items-center" data-oid="pbmk6r.">
-                        <Users
-                          className="h-5 w-5 text-[#123B79] mr-3"
-                          data-oid="a:pnwfq"
-                        />
+                    </div>
+                    <div className="flex items-center" data-oid="aoa6cn-">
+                      <BarChart
+                        className="h-5 w-5 text-[#123B79] mr-3"
+                        data-oid="669f.sg"
+                      />
 
-                        <div data-oid="v2-xf1j">
-                          <p className="font-semibold" data-oid="-ql1103">
-                            Total Enrolled
-                          </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="vu2665w"
-                          >
-                            {courseData.students}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center" data-oid="aoa6cn-">
-                        <BarChart
-                          className="h-5 w-5 text-[#123B79] mr-3"
-                          data-oid="669f.sg"
-                        />
-
-                        <div data-oid="zrsuflj">
-                          <p className="font-semibold" data-oid="r10spoo">
-                            Course Level
-                          </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid=".35rv5j"
-                          >
-                            {courseData.level}
-                          </p>
-                        </div>
+                      <div data-oid="zrsuflj">
+                        <p className="font-semibold" data-oid="r10spoo">
+                          Course Level
+                        </p>
+                        <p className="text-sm text-gray-600" data-oid=".35rv5j">
+                          {courseData.level}
+                        </p>
                       </div>
                     </div>
                   </div>
