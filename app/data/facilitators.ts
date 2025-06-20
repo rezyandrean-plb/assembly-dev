@@ -7,7 +7,6 @@ export interface Facilitator {
   longBio: string;
   specialty: string;
   experience: string;
-  achievements: string[];
   courses: string[];
   socialLinks?: {
     linkedin?: string;
@@ -33,12 +32,6 @@ export const facilitators: Facilitator[] = [
       "Melvin Lim, Co-Founder and CEO of PropertyLimBrothers, one of Singapore's most recognisable property brands. With over 1,800 homes sold, Melvin has built a reputation for excellence in Singapore's real estate scene. His success is rooted in media savvy marketing, data-driven strategy, and a deep commitment to integrity. Melvin brings a unique blend of thought leadership and practical insight to Assembly.",
     specialty: "Property Investment Strategy",
     experience: "20+ years in property investment",
-    achievements: [
-      "Co-Founder and CEO of PropertyLimBrothers",
-      "Over 1,800 homes sold",
-      "Recognized property investment expert",
-      "Media personality and thought leader",
-    ],
     courses: [
       "Property Investment Masterclass",
       "New Launch Selection Strategies",
@@ -64,12 +57,6 @@ export const facilitators: Facilitator[] = [
       "Marc Chan is a seasoned property strategist with extensive experience in Singapore's real estate market. He specializes in market analysis, investment timing, and portfolio optimization. Marc's analytical approach and deep market insights have helped hundreds of investors make informed decisions in their property journey.",
     specialty: "Market Analysis & Investment Timing",
     experience: "15+ years in property analysis",
-    achievements: [
-      "Senior Property Strategist",
-      "Market Analysis Expert",
-      "Investment Timing Specialist",
-      "Portfolio Optimization Consultant",
-    ],
     courses: [
       "Market Trend Analysis",
       "Investment Timing Strategies",
@@ -94,12 +81,6 @@ export const facilitators: Facilitator[] = [
       "Ong Yu Rong is a property finance expert with deep knowledge of Singapore's banking and mortgage landscape. He helps investors navigate complex financing structures, optimize loan packages, and maximize their purchasing power. His expertise in financial modeling and risk assessment has been invaluable to countless property investors.",
     specialty: "Property Financing & Mortgage Strategies",
     experience: "12+ years in property finance",
-    achievements: [
-      "Property Finance Expert",
-      "Mortgage Strategy Specialist",
-      "Financial Modeling Expert",
-      "Risk Assessment Consultant",
-    ],
     courses: [
       "Property Financing Mastery",
       "Mortgage Optimization Strategies",
@@ -124,12 +105,6 @@ export const facilitators: Facilitator[] = [
       "Grayce Tan is a new launch specialist with extensive experience in Singapore's new development market. She has strong relationships with major developers and deep insights into upcoming projects. Grayce's expertise helps investors identify the best new launch opportunities and navigate the complexities of off-plan purchases.",
     specialty: "New Launch Properties & Developer Relations",
     experience: "10+ years in new launch properties",
-    achievements: [
-      "New Launch Specialist",
-      "Developer Relations Expert",
-      "Project Analysis Consultant",
-      "Off-plan Investment Advisor",
-    ],
     courses: [
       "New Launch Selection Mastery",
       "Developer Analysis Workshop",
@@ -155,12 +130,6 @@ export const facilitators: Facilitator[] = [
       "George Peng is a landed property expert with extensive experience in Singapore's luxury real estate market. He specializes in landed properties, including bungalows, semi-detached houses, and terrace houses. George's deep understanding of landed property dynamics and market trends makes him an invaluable resource for high-net-worth investors.",
     specialty: "Landed Properties & Luxury Real Estate",
     experience: "18+ years in luxury real estate",
-    achievements: [
-      "Landed Property Expert",
-      "Luxury Real Estate Specialist",
-      "High-Net-Worth Investment Advisor",
-      "Market Trend Analyst",
-    ],
     courses: [
       "Landed Property Investment Strategies",
       "Luxury Real Estate Mastery",
@@ -185,12 +154,6 @@ export const facilitators: Facilitator[] = [
       "Joan Loh is an HDB and upgrading specialist with comprehensive knowledge of Singapore's public housing system. She helps first-time buyers navigate HDB purchases and assists existing HDB owners in planning their upgrading journey to private properties. Joan's practical approach and deep understanding of housing policies make her an essential guide for many Singaporeans.",
     specialty: "HDB Properties & Upgrading Strategies",
     experience: "14+ years in HDB and upgrading",
-    achievements: [
-      "HDB Specialist",
-      "Upgrading Strategy Expert",
-      "Housing Policy Consultant",
-      "First-time Buyer Advisor",
-    ],
     courses: [
       "HDB Investment Masterclass",
       "Upgrading Strategies Workshop",

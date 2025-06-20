@@ -33,63 +33,22 @@ export default function FacilitatorsPage() {
         <FacilitatorHero data-oid="nrx3c1u" />
 
         {/* Main Facilitators Section */}
-        <section ref={sectionRef} className="py-24 bg-white" data-oid="q9otwpr">
+        <section
+          ref={sectionRef}
+          className="py-24 bg-gray-50"
+          data-oid="q9otwpr"
+        >
           <div className="container mx-auto px-4" data-oid="dedeund">
             <div className="max-w-7xl mx-auto" data-oid="jk3w079">
-              {/* Section Header */}
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-                transition={{ duration: 0.8 }}
-                data-oid="-3vh3sc"
-              >
-                <div
-                  className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
-                  data-oid="tdu8t-o"
-                >
-                  <Users className="w-4 h-4" data-oid="h2q95i." />
-                  Meet Our Expert Team
-                </div>
-                <h2
-                  className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-                  data-oid="-0wwfy."
-                >
-                  Learn from Industry Leaders
-                </h2>
-                <p
-                  className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-                  data-oid="e64m:yb"
-                >
-                  Our facilitators bring decades of combined experience in
-                  Singapore's property market. Each expert specializes in
-                  different aspects of real estate investment, ensuring you get
-                  comprehensive, practical knowledge from true industry
-                  veterans.
-                </p>
-              </motion.div>
-
-              {/* Facilitators Grid */}
-              <div
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-                data-oid="yo02vkj"
-              >
+              {/* Facilitators List */}
+              <div className="space-y-24 mb-16" data-oid="wdxa0iz">
                 {facilitators.map((facilitator, index) => (
-                  <motion.div
+                  <FacilitatorCard
                     key={facilitator.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{
-                      opacity: isInView ? 1 : 0,
-                      y: isInView ? 0 : 30,
-                    }}
-                    transition={{ duration: 0.8, delay: 0.1 * index }}
-                    data-oid="0hi_ffa"
-                  >
-                    <FacilitatorCard
-                      facilitator={facilitator}
-                      data-oid="4f01vu5"
-                    />
-                  </motion.div>
+                    facilitator={facilitator}
+                    index={index}
+                    data-oid="h.f8t_q"
+                  />
                 ))}
               </div>
 
