@@ -35,13 +35,12 @@ export function FacilitatorHero() {
       <div className="container mx-auto px-4 relative z-10" data-oid="a4:2y23">
         <div className="max-w-4xl mx-auto text-center" data-oid="fv7:t5n">
           <motion.div
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-100"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-950 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             data-oid="fo9fqvd"
           >
-            <Heart className="w-4 h-4 text-red-500" data-oid="k81xbrz" />
             The People Who Make It Happen
           </motion.div>
 
@@ -53,7 +52,7 @@ export function FacilitatorHero() {
             data-oid="os1ngp5"
           >
             Meet Your
-            <span className="block text-blue-600" data-oid="yztjxd3">
+            <span className="block text-blue-900" data-oid="yztjxd3">
               Property Investment Mentors
             </span>
           </motion.h1>
@@ -71,58 +70,6 @@ export function FacilitatorHero() {
             expertise, personality, and proven track record to guide your
             journey.
           </motion.p>
-
-          {/* Quick Stats */}
-          <motion.div
-            className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            data-oid="4kk_8rz"
-          >
-            <div className="text-center" data-oid="qpnm7ud">
-              <div
-                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
-                data-oid="cn-_ou_"
-              >
-                <Users className="w-8 h-8 text-white" data-oid="tfunbe9" />
-              </div>
-              <div className="text-3xl font-bold mb-2" data-oid="ln.y_.t">
-                15,000+
-              </div>
-              <div className="text-blue-200" data-oid="0djayqu">
-                Students Taught
-              </div>
-            </div>
-            <div className="text-center" data-oid="hp-1.-f">
-              <div
-                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
-                data-oid="zmd5orw"
-              >
-                <Award className="w-8 h-8 text-white" data-oid="23cw5at" />
-              </div>
-              <div className="text-3xl font-bold mb-2" data-oid="27kgc70">
-                80+
-              </div>
-              <div className="text-blue-200" data-oid="dmk30pi">
-                Years Combined Experience
-              </div>
-            </div>
-            <div className="text-center" data-oid="f1y0:57">
-              <div
-                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
-                data-oid="na9k1sr"
-              >
-                <BookOpen className="w-8 h-8 text-white" data-oid="tk.xun0" />
-              </div>
-              <div className="text-3xl font-bold mb-2" data-oid="-ibi1l2">
-                50+
-              </div>
-              <div className="text-blue-200" data-oid="qrrfb5l">
-                Courses Created
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

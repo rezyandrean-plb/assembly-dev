@@ -304,8 +304,6 @@ export default function LearningPathsPage() {
           </div>
         </div>
       </div>
-
-      <Footer data-oid="i:.sq1k" />
     </main>
   );
 }

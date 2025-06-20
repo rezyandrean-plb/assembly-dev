@@ -300,13 +300,29 @@ export default function CartPageContent() {
                                 className="relative w-32 h-32 rounded-xl overflow-hidden bg-neutral-100"
                                 data-oid="tyigq0o"
                               >
-                                <Image
-                                  src={item.image || "/placeholder.jpg"}
-                                  alt={item.title}
-                                  fill
-                                  className="object-cover"
-                                  data-oid="bqff735"
-                                />
+                                {item.type === "Book" ? (
+                                  <div
+                                    className="w-full h-full bg-gray-100 flex items-center justify-center rounded-lg"
+                                    data-oid="t9_n6r6"
+                                  >
+                                    <Image
+                                      src="/images/PLB Book Front Cover_FA.jpg"
+                                      alt="Book Cover"
+                                      width={80}
+                                      height={120}
+                                      className="object-contain"
+                                      data-oid="v5b1i:x"
+                                    />
+                                  </div>
+                                ) : (
+                                  <Image
+                                    src={item.image || "/placeholder.jpg"}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover"
+                                    data-oid="bqff735"
+                                  />
+                                )}
 
                                 <div
                                   className="absolute top-2 left-2"
@@ -540,7 +556,7 @@ export default function CartPageContent() {
                       <h2 className="text-xl font-bold mb-2" data-oid="2_qgdj4">
                         Order Summary
                       </h2>
-                      <p className="text-primary-light" data-oid="urnqjoe">
+                      <p className="text-grey-400" data-oid="urnqjoe">
                         Ready to start learning?
                       </p>
                     </div>

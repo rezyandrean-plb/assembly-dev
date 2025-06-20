@@ -87,23 +87,6 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
               </div>
             )}
           </div>
-
-          {/* Floating Quote */}
-          <motion.div
-            className={`absolute -bottom-6 ${isEven ? "-right-6" : "-left-6"} bg-white rounded-2xl p-6 shadow-xl max-w-xs border-l-4 border-blue-500`}
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            data-oid="i741cul"
-          >
-            <Quote className="w-5 h-5 text-blue-600 mb-2" data-oid="7mf508j" />
-            <p
-              className="text-sm text-gray-700 italic leading-relaxed"
-              data-oid="439o9v."
-            >
-              "Empowering investors with practical knowledge and proven
-              strategies."
-            </p>
-          </motion.div>
         </div>
       </div>
 
@@ -137,29 +120,11 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
             className="text-gray-600 leading-relaxed text-lg"
             data-oid="qmt0k2r"
           >
-            {facilitator.bio}
+            {facilitator.longBio}
           </p>
-        </div>
-
-        {/* Impact Stats */}
-        <div className="grid grid-cols-1 gap-4" data-oid="sba.2gb">
-          <div
-            className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl"
-            data-oid="9qaz-50"
-          >
-            <div
-              className="text-2xl font-bold text-green-900 mb-1"
-              data-oid="-u1orn2"
-            >
-              {facilitator.stats?.coursesCreated}
-            </div>
-            <div
-              className="text-xs text-green-700 font-medium"
-              data-oid="1x4zd:_"
-            >
-              Expert Courses
-            </div>
-          </div>
+          <p className="text-gray-500 text-lg" data-oid="scij3._">
+            {facilitator.stats?.coursesCreated} Expert Courses
+          </p>
         </div>
 
         {/* CTA */}

@@ -51,10 +51,13 @@ export default function FacilitatorsPage() {
                   />
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Stats Section */}
-              <FacilitatorStats data-oid="16.z3n-" />
-
+        <section data-oid="s62hcsn">
+          <div className="container mx-auto px-4" data-oid="ot3px5-">
+            <div className="max-w-7xl mx-auto" data-oid="9lagyn:">
               {/* CTA Section */}
               <motion.div
                 className="text-center mt-16"
@@ -64,7 +67,7 @@ export default function FacilitatorsPage() {
                 data-oid="ea2zk66"
               >
                 <div
-                  className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-3xl p-12"
+                  className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-3xl p-20"
                   data-oid="egobncy"
                 >
                   <h3
