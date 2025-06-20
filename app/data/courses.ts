@@ -3,6 +3,7 @@
 export interface Course {
   id: number
   title: string
+  description: string
   instructor: string
   level?: string
   duration?: string
@@ -28,6 +29,7 @@ export const courses: Course[] = [
   {
     id: 1,
     title: "Property Strategies in 2025 Amid Rate Cuts",
+    description: "This course explores the latest market trends and strategies for property investment in 2025.",
     instructor: "Melvin Lim, Nicole Ng",
     level: "All Levels",
     duration: "1 hour",
@@ -48,6 +50,7 @@ export const courses: Course[] = [
   {
     id: 2,
     title: "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence",
+    description: "A comprehensive workshop on building a profitable condo investment portfolio with confidence.",
     instructor: "Melvin Lim",
     level: "All Levels",
     duration: "Self-paced",
@@ -68,6 +71,7 @@ export const courses: Course[] = [
   {
     id: 3,
     title: "Master New Launch Selection: 6 Exclusive Frameworks to Select the Winning New Launch in 2024/2025",
+    description: "Learn exclusive frameworks to identify and select winning new launch properties in the current market.",
     instructor: "Melvin Lim, Marc Chan, Ong Yu Rong, Shawn Tay, George Peng, Jesley Lim",
     level: "All Levels",
     duration: "Self-paced",
@@ -88,6 +92,7 @@ export const courses: Course[] = [
   {
     id: 4,
     title: "Module 1 of Niche Positioning Masterclass",
+    description: "The first module of our masterclass on niche positioning for real estate professionals.",
     instructor: "Melvin Lim",
     level: "All Levels",
     duration: "Self-paced",
@@ -108,6 +113,7 @@ export const courses: Course[] = [
   {
     id: 5,
     title: "Property Summit 2024",
+    description: "Join us for the premier property summit of 2024, featuring industry experts and networking opportunities.",
     instructor:
       "Melvin Lim, Marc Chan, Grayce Tan, Ong Yu Rong, Shawn Tay, Jesley Lim, George Peng, Wayne Tang, Joan Loh",
     level: "All Levels",
@@ -129,6 +135,7 @@ export const courses: Course[] = [
   {
     id: 6,
     title: "Selling your Property Effectively as a DIY Property Seller",
+    description: "A guide for DIY property sellers to market and sell their properties effectively.",
     instructor: "TBD",
     level: "All Levels",
     duration: "Self-paced",
@@ -149,6 +156,7 @@ export const courses: Course[] = [
   {
     id: 7,
     title: "Property Financing Strategy Mastery",
+    description: "Master the art of property financing with our in-depth strategy course.",
     instructor: "TBD",
     level: "All Levels",
     duration: "Self-paced",
@@ -169,6 +177,7 @@ export const courses: Course[] = [
   {
     id: 8,
     title: "HTML & CSS Mastery",
+    description: "A beginner-friendly course on the fundamentals of web development with HTML and CSS.",
     instructor: "Michael Chen",
     level: "Beginner",
     duration: "Self-paced",
@@ -189,6 +198,7 @@ export const courses: Course[] = [
   {
     id: 9,
     title: "Responsive Web Design",
+    description: "Learn how to create websites that look great on all devices with responsive web design techniques.",
     instructor: "Jessica Lee",
     level: "Intermediate",
     duration: "Self-paced",
@@ -209,6 +219,7 @@ export const courses: Course[] = [
   {
     id: 10,
     title: "Git & GitHub Essentials",
+    description: "An essential guide to version control with Git and GitHub for developers.",
     instructor: "Robert Kim",
     level: "Beginner",
     duration: "Self-paced",
@@ -229,6 +240,7 @@ export const courses: Course[] = [
   {
     id: 11,
     title: "UI/UX Principles",
+    description: "Discover the core principles of UI/UX design to create user-friendly and engaging digital products.",
     instructor: "Emma Rodriguez",
     level: "Intermediate",
     duration: "Self-paced",

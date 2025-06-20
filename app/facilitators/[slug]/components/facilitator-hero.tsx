@@ -199,91 +199,23 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
 
                 <p
                   className="text-xl text-gray-600 leading-relaxed mb-8"
-                  data-oid="qmtickg"
+                  data-oid="pwpcy6p"
                 >
                   {facilitator.bio}
                 </p>
-              </div>
 
-              {/* Key Highlights */}
-              <div className="grid md:grid-cols-2 gap-6" data-oid=":1l0yuu">
+                {/* Long Bio */}
                 <div
-                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg"
-                  data-oid="949rg35"
+                  className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm mb-8"
+                  data-oid="1nxxi-w"
                 >
-                  <div
-                    className="flex items-center gap-3 mb-4"
-                    data-oid="6gsc93o"
+                  <p
+                    className="text-lg text-gray-700 leading-relaxed"
+                    data-oid="iesm0im"
                   >
-                    <div
-                      className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center"
-                      data-oid="e.qb:2p"
-                    >
-                      <Award
-                        className="w-5 h-5 text-blue-600"
-                        data-oid="2wzv-ti"
-                      />
-                    </div>
-                    <h3 className="font-bold text-gray-900" data-oid="n45cw.s">
-                      Expertise
-                    </h3>
-                  </div>
-                  <p className="text-gray-600" data-oid="z.cmrl5">
-                    {facilitator.specialty}
+                    {facilitator.longBio}
                   </p>
                 </div>
-
-                <div
-                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg"
-                  data-oid="19hkrq9"
-                >
-                  <div
-                    className="flex items-center gap-3 mb-4"
-                    data-oid="6n.tr3n"
-                  >
-                    <div
-                      className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"
-                      data-oid="ub8m.os"
-                    >
-                      <BookOpen
-                        className="w-5 h-5 text-green-600"
-                        data-oid="gch:0gc"
-                      />
-                    </div>
-                    <h3 className="font-bold text-gray-900" data-oid="z.sdhiw">
-                      Courses
-                    </h3>
-                  </div>
-                  <p className="text-gray-600" data-oid="4q1vlzl">
-                    {facilitator.stats?.coursesCreated} Expert Courses Created
-                  </p>
-                </div>
-              </div>
-
-              {/* Quote */}
-              <div
-                className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border-l-4 border-blue-500"
-                data-oid="kg.tkjw"
-              >
-                <Quote
-                  className="w-8 h-8 text-blue-600 mb-4"
-                  data-oid="5.fplnk"
-                />
-
-                <p
-                  className="text-lg text-gray-700 italic leading-relaxed mb-4"
-                  data-oid="bryz9n3"
-                >
-                  "My mission is to empower every investor with the knowledge
-                  and confidence to make informed property decisions that will
-                  transform their financial future."
-                </p>
-                <p
-                  className="text-sm text-gray-600 font-medium"
-                  data-oid="k-6oete"
-                >
-                  - {facilitator.name}
-                </p>
               </div>
 
               {/* Social Links */}

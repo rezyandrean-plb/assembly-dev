@@ -58,9 +58,8 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
           </div>
         </div>
 
-        <FacilitatorHero facilitator={facilitator} data-oid="4-hwy31" />
-        <FacilitatorBio facilitator={facilitator} data-oid="36xx9sl" />
-        <FacilitatorCourses facilitator={facilitator} data-oid="6n.s2x_" />
+        <FacilitatorHero facilitator={facilitator} data-oid=":-d7luf" />
+        <FacilitatorCourses facilitator={facilitator} data-oid="bs2196i" />
       </div>
     </>
   );

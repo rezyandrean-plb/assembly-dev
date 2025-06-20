@@ -6,6 +6,7 @@ import { BookOpen, ArrowRight, Clock, Users } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import type { Facilitator } from "@/app/data/facilitators";
+import { courses as allCourses, Course } from "@/app/data/courses";
 
 interface FacilitatorCoursesProps {
   facilitator: Facilitator;
@@ -14,6 +15,10 @@ interface FacilitatorCoursesProps {
 export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+  const facilitatorCourses = allCourses.filter((course: Course) =>
+    course.instructor.includes(facilitator.name),
+  );
 
   return (
     <section ref={sectionRef} className="py-24 bg-white" data-oid="0g7mz5z">
@@ -46,9 +51,9 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
             data-oid="b_gx2wo"
           >
-            {facilitator.courses.map((course, index) => (
+            {facilitatorCourses.map((course: Course, index: number) => (
               <motion.div
-                key={index}
+                key={course.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
@@ -74,7 +79,7 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
                         className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
                         data-oid="u9qcpz."
                       >
-                        {course}
+                        {course.title}
                       </h3>
                     </div>
                   </div>
@@ -83,9 +88,7 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
                     className="text-gray-600 mb-6 leading-relaxed"
                     data-oid="-ppp.-9"
                   >
-                    Comprehensive training program covering essential strategies
-                    and practical applications in{" "}
-                    {facilitator.specialty.toLowerCase()}.
+                    {course.description}
                   </p>
 
                   <div
@@ -102,7 +105,7 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
                     </div>
                   </div>
 
-                  <Link href="/courses" data-oid="l.n9w48">
+                  <Link href={`/courses/${course.slug}`} data-oid="l.n9w48">
                     <Button
                       className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white group"
                       data-oid="r0av-cn"
