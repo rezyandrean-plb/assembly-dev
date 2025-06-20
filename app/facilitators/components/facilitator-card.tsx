@@ -80,6 +80,7 @@ export function FacilitatorCard({ facilitator }: FacilitatorCardProps) {
               className="w-5 h-5 text-blue-600 mx-auto mb-1"
               data-oid="mg8wp9t"
             />
+
             <div className="text-lg font-bold text-gray-900" data-oid="nxmfuv-">
               {facilitator.stats?.studentsHelped.toLocaleString()}+
             </div>
@@ -95,6 +96,7 @@ export function FacilitatorCard({ facilitator }: FacilitatorCardProps) {
               className="w-5 h-5 text-blue-600 mx-auto mb-1"
               data-oid="wh78wqy"
             />
+
             <div className="text-lg font-bold text-gray-900" data-oid="wwme95-">
               {facilitator.stats?.coursesCreated}
             </div>

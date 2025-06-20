@@ -20,10 +20,12 @@ export function FacilitatorHero() {
           className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"
           data-oid="n43ishs"
         />
+
         <div
           className="absolute bottom-20 right-10 w-24 h-24 bg-orange-400/20 rounded-full blur-xl"
           data-oid="kzw7wq5"
         />
+
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-orange-400/10 rounded-full blur-3xl"
           data-oid="tv4vtym"
