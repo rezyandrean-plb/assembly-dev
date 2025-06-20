@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/condo-investment-workshop";
 
 export default function CondoInvestmentWorkshop() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="3fclqgg" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="sc-a1kb" />;
 }

@@ -13,7 +13,7 @@ export default function CtaSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden"
-      data-oid="qx9w44l"
+      data-oid="ipwhr2a"
     >
       {/* Animated background gradient */}
       <motion.div
@@ -21,29 +21,29 @@ export default function CtaSection() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
-        data-oid="6-79ck1"
+        data-oid="4l1nq5g"
       >
         <div
           className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-400/30 to-transparent"
-          data-oid="zq7:081"
+          data-oid="spp311_"
         ></div>
         <div
           className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-orange-700/20 to-transparent"
-          data-oid="o-t.x0a"
+          data-oid="iaby3zz"
         ></div>
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="v3__2oe">
+      <div className="container mx-auto px-4 relative z-10" data-oid="kvpzon7">
         <div
           className="max-w-4xl mx-auto text-center text-white"
-          data-oid="xol7dy2"
+          data-oid="ho7nqrc"
         >
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            data-oid="4kr9muo"
+            data-oid="wc0k3c3"
           >
             Explore Our Content & Join the Community
           </motion.h2>
@@ -53,7 +53,7 @@ export default function CtaSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            data-oid="t5moer_"
+            data-oid="1ff9wvp"
           >
             Take the next step in your real estate journey with Assembly's
             resources and network of professionals
@@ -61,7 +61,7 @@ export default function CtaSection() {
 
           <div
             className="flex flex-col sm:flex-row justify-center gap-6"
-            data-oid="aip9at0"
+            data-oid="17buyn6"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -69,16 +69,16 @@ export default function CtaSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="b6jqfwr"
+              data-oid="ekg83:1"
             >
               <Button
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-full flex items-center"
-                data-oid="bfu4hxp"
+                data-oid="kwdd:bb"
               >
-                <BookOpen className="mr-2 h-5 w-5" data-oid="hcov-ay" />
+                <BookOpen className="mr-2 h-5 w-5" data-oid="yx9tad6" />
                 Explore Content
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="skm__7k" />
+                <ArrowRight className="ml-2 h-5 w-5" data-oid="k4u3is9" />
               </Button>
             </motion.div>
 
@@ -88,17 +88,17 @@ export default function CtaSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="39v0dwh"
+              data-oid="m3-lol0"
             >
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full flex items-center"
-                data-oid="vc5itza"
+                data-oid="92-gigy"
               >
-                <Users className="mr-2 h-5 w-5" data-oid="edvm.xe" />
+                <Users className="mr-2 h-5 w-5" data-oid="3rkc00x" />
                 Join Community
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="0yo8wo3" />
+                <ArrowRight className="ml-2 h-5 w-5" data-oid="ae2pmyf" />
               </Button>
             </motion.div>
           </div>

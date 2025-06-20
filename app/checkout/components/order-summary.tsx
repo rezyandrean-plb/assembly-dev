@@ -47,27 +47,27 @@ export default function OrderSummary() {
   return (
     <div
       className="bg-white rounded-2xl shadow-lg overflow-hidden"
-      data-oid="h5-5tnl"
+      data-oid="45-1vik"
     >
       {/* Header */}
-      <div className="bg-[#2B4C8C] text-white p-6" data-oid="header-section">
-        <h2 className="text-xl font-bold" data-oid="ycwc7kk">
+      <div className="bg-[#2B4C8C] text-white p-6" data-oid="zdos5ac">
+        <h2 className="text-xl font-bold" data-oid=".9uhqqm">
           Order Summary
         </h2>
-        <p className="text-blue-100 text-sm mt-1" data-oid="header-subtitle">
+        <p className="text-blue-100 text-sm mt-1" data-oid="p4alkhz">
           Ready to start learning
         </p>
       </div>
 
       {/* Order Details */}
-      <div className="p-6" data-oid="order-details">
-        <div className="space-y-4" data-oid="71s..ax">
+      <div className="p-6" data-oid="85ffjly">
+        <div className="space-y-4" data-oid="vkj_lp2">
           <div
             className="flex justify-between text-gray-700"
-            data-oid="8r25zec"
+            data-oid="fk2e3el"
           >
-            <span data-oid="g-ok3xg">Subtotal</span>
-            <span className="font-semibold" data-oid="-mw4gdt">
+            <span data-oid="ci.sp8g">Subtotal</span>
+            <span className="font-semibold" data-oid="9rlb:ug">
               {formatPrice(subtotal)}
             </span>
           </div>
@@ -75,10 +75,10 @@ export default function OrderSummary() {
           {discount > 0 && (
             <div
               className="flex justify-between text-green-600"
-              data-oid="discount-row"
+              data-oid="g_j83bz"
             >
-              <span data-oid="gabr65u">Discount</span>
-              <span className="font-semibold" data-oid="wxm14_-">
+              <span data-oid="6_.l9sp">Discount</span>
+              <span className="font-semibold" data-oid="f736sbc">
                 -{formatPrice(discount)}
               </span>
             </div>
@@ -86,30 +86,30 @@ export default function OrderSummary() {
 
           <div
             className="flex justify-between text-gray-700"
-            data-oid="6-.sa:t"
+            data-oid="4b3osjo"
           >
-            <span data-oid="bp_-w2z">Shipping</span>
-            <span className="font-semibold" data-oid="1iw52e7">
+            <span data-oid="gampgy:">Shipping</span>
+            <span className="font-semibold" data-oid="j-017ku">
               {finalShippingCost > 0
                 ? formatPrice(finalShippingCost)
                 : "SGD 10.00"}
             </span>
           </div>
 
-          <div className="border-t border-gray-200 pt-4" data-oid="r:yc3jv">
+          <div className="border-t border-gray-200 pt-4" data-oid="va9htmd">
             <div
               className="flex justify-between items-center"
-              data-oid="cuf1thg"
+              data-oid="o6dk5np"
             >
               <span
                 className="text-lg font-bold text-gray-900"
-                data-oid="l9r_a-3"
+                data-oid="eil:_c4"
               >
                 Total
               </span>
               <span
                 className="text-2xl font-bold text-[#2B4C8C]"
-                data-oid="m01kh66"
+                data-oid="ec6irqb"
               >
                 {formatPrice(orderTotal)}
               </span>
@@ -118,35 +118,26 @@ export default function OrderSummary() {
         </div>
 
         {/* Security Features */}
-        <div
-          className="mt-6 pt-6 border-t border-gray-100"
-          data-oid="security-section"
-        >
-          <div
-            className="flex items-center gap-2 mb-4"
-            data-oid="secure-checkout"
-          >
-            <Shield className="w-5 h-5 text-green-600" data-oid="g714:rf" />
-            <span className="font-semibold text-gray-900" data-oid="we6itp1">
+        <div className="mt-6 pt-6 border-t border-gray-100" data-oid="3nleg44">
+          <div className="flex items-center gap-2 mb-4" data-oid="mc8.lmb">
+            <Shield className="w-5 h-5 text-green-600" data-oid="1k1td7-" />
+            <span className="font-semibold text-gray-900" data-oid="iv_ii9m">
               Secure Checkout
             </span>
           </div>
 
-          <div
-            className="space-y-2 text-sm text-gray-600"
-            data-oid="security-features"
-          >
-            <div className="flex items-center gap-2" data-oid="guarantee">
-              <Check className="w-4 h-4 text-green-600" data-oid="cczuv.8" />
-              <span data-oid=":mpuobj">30-day money-back guarantee</span>
+          <div className="space-y-2 text-sm text-gray-600" data-oid="ttwh6ip">
+            <div className="flex items-center gap-2" data-oid="4flz9gy">
+              <Check className="w-4 h-4 text-green-600" data-oid="dyc2s58" />
+              <span data-oid="n26wazf">30-day money-back guarantee</span>
             </div>
-            <div className="flex items-center gap-2" data-oid="lifetime-access">
-              <Check className="w-4 h-4 text-green-600" data-oid="snzlbjb" />
-              <span data-oid=".b30qby">Lifetime access to courses</span>
+            <div className="flex items-center gap-2" data-oid=":6d5rl9">
+              <Check className="w-4 h-4 text-green-600" data-oid="m4rwn7z" />
+              <span data-oid=".8.52wo">Lifetime access to courses</span>
             </div>
-            <div className="flex items-center gap-2" data-oid="ssl-encrypted">
-              <Check className="w-4 h-4 text-green-600" data-oid="5mx95ci" />
-              <span data-oid="xuzd5-h">SSL encrypted payment</span>
+            <div className="flex items-center gap-2" data-oid="fu6:kzr">
+              <Check className="w-4 h-4 text-green-600" data-oid="a1a:73q" />
+              <span data-oid="29ngj-8">SSL encrypted payment</span>
             </div>
           </div>
         </div>

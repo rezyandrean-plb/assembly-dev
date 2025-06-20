@@ -94,48 +94,48 @@ export default function PurchaseHistoryPage() {
   });
 
   return (
-    <div className="p-6" data-oid="ya0kyyu">
+    <div className="p-6" data-oid="_h1wdz0">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="__bikxe"
+        data-oid="tb5n40n"
       >
-        <div data-oid="3w:6.n3">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="cf_izci">
+        <div data-oid="-htg6q.">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="20nta.t">
             Purchase History
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="dsw5gwy">
+          <p className="text-gray-500 mt-1" data-oid="_fo:mo1">
             View and manage your course purchases
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="fs8-6os">
-          <div className="relative" data-oid="f.d.i_0">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid="xmtlh.n">
+          <div className="relative" data-oid="rsi3wd1">
             <input
               type="text"
               placeholder="Search purchases..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="99pvqzr"
+              data-oid="l_prqf_"
             />
 
             <Search
               className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="zq:ulm6"
+              data-oid="wzkvd.x"
             />
           </div>
           <button
             className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="69hpolt"
+            data-oid="rstab0l"
           >
-            <Download className="h-4 w-4" data-oid="tn.__xw" />
-            <span data-oid="lylhj7v">Export</span>
+            <Download className="h-4 w-4" data-oid="5lf-0hz" />
+            <span data-oid="rigif9_">Export</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="09gpab4">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="vrskalz">
         <button
           className={`px-4 py-2 font-medium text-sm ${
             activeTab === "all"
@@ -143,7 +143,7 @@ export default function PurchaseHistoryPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
-          data-oid="ty7cl11"
+          data-oid="kjx3pm4"
         >
           All Purchases
         </button>
@@ -154,7 +154,7 @@ export default function PurchaseHistoryPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("recent")}
-          data-oid="go.dzc3"
+          data-oid="ce5_r6-"
         >
           Recent (30 days)
         </button>
@@ -165,7 +165,7 @@ export default function PurchaseHistoryPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("subscriptions")}
-          data-oid="3ak88vf"
+          data-oid="olx7m9q"
         >
           Subscriptions
         </button>
@@ -177,59 +177,59 @@ export default function PurchaseHistoryPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        data-oid="hz6hwuj"
+        data-oid="ptilw.f"
       >
-        <div className="p-6" data-oid="panjicg">
+        <div className="p-6" data-oid="a9w0r_f">
           <h2
             className="text-lg font-bold text-gray-800 mb-4"
-            data-oid="3e1d-oj"
+            data-oid="_h9ebqz"
           >
             Transaction History
           </h2>
-          <p className="text-sm text-gray-500 mb-4" data-oid="kypx2_2">
+          <p className="text-sm text-gray-500 mb-4" data-oid="32jbrf5">
             A record of all your course purchases
           </p>
         </div>
 
-        <div className="overflow-x-auto" data-oid="ep6t7a8">
+        <div className="overflow-x-auto" data-oid="yza5_-r">
           <table
             className="min-w-full divide-y divide-gray-200"
-            data-oid="vs-zg6a"
+            data-oid=".hg9lku"
           >
-            <thead className="bg-gray-50" data-oid="vs9obev">
-              <tr data-oid="9241:wn">
+            <thead className="bg-gray-50" data-oid="sqk894z">
+              <tr data-oid="9f9576v">
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  data-oid="l8ds5i:"
+                  data-oid="qobk.xv"
                 >
                   Date
                 </th>
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  data-oid="h:kdk-v"
+                  data-oid="pjo_91v"
                 >
                   Course
                 </th>
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  data-oid="zgk9wuk"
+                  data-oid="i7fi286"
                 >
                   Payment Method
                 </th>
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  data-oid="uvecc94"
+                  data-oid="a-p-q5i"
                 >
                   Amount
                 </th>
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  data-oid="2_2a4rc"
+                  data-oid="1yhz6p5"
                 >
                   Actions
                 </th>
@@ -237,47 +237,47 @@ export default function PurchaseHistoryPage() {
             </thead>
             <tbody
               className="bg-white divide-y divide-gray-200"
-              data-oid="r718mfb"
+              data-oid="xrz9zbd"
             >
               {filteredPurchases.map((purchase) => (
                 <tr
                   key={purchase.id}
                   className="hover:bg-gray-50"
-                  data-oid="ep1.gw."
+                  data-oid="jt1844b"
                 >
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    data-oid="eh5pp3c"
+                    data-oid="c1s-vii"
                   >
                     {purchase.date}
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                    data-oid="g_d78gc"
+                    data-oid=".nib539"
                   >
                     {purchase.course}
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    data-oid="xkfs3st"
+                    data-oid="v51khd."
                   >
                     {purchase.paymentMethod}
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                    data-oid="bzmod6i"
+                    data-oid="0.td7gy"
                   >
                     {purchase.amount}
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    data-oid=".ulwqx2"
+                    data-oid="oq_sazk"
                   >
                     <button
                       className="text-blue-600 hover:text-blue-800"
-                      data-oid=".7g1jh-"
+                      data-oid="vfkz-8i"
                     >
-                      <ChevronDown className="h-5 w-5" data-oid="qqwak47" />
+                      <ChevronDown className="h-5 w-5" data-oid="5j8a7s0" />
                     </button>
                   </td>
                 </tr>

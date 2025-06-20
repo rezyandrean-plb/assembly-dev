@@ -263,46 +263,46 @@ export default function CourseDetailTemplate({
   const hasReviews = courseData.reviews && courseData.reviews.length > 0;
 
   return (
-    <NetworkProvider data-oid="05ys2d.">
+    <NetworkProvider data-oid=".s._y9a">
       <main
         className="relative overflow-hidden bg-[#F5F5F5] min-h-screen"
-        data-oid="m2eplml"
+        data-oid="cgt08w:"
       >
         <NetworkBackground
           scrollY={scrollY}
           scrollSpeed={scrollSpeed}
           windowHeight={windowHeight}
           opacity={0.3}
-          data-oid="atzdcdw"
+          data-oid="c_vo861"
         />
 
-        <Navbar data-oid="o3zd3:7" />
+        <Navbar data-oid="28zuojz" />
         {/* Hero Section */}
-        <section className="pt-32 pb-16 relative z-10" data-oid="517bbv2">
+        <section className="pt-32 pb-16 relative z-10" data-oid=":-l2oyd">
           <div
             className="container mx-auto px-4 relative z-10"
-            data-oid="9qqqvq2"
+            data-oid="0pusnrk"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="mb-6"
-              data-oid="5l_ne84"
+              data-oid="oyudh64"
             >
               <a
                 href="/courses"
                 className="inline-flex items-center text-[#123B79] hover:underline"
-                data-oid="va1c9zh"
+                data-oid="1mw6.s_"
               >
-                <ArrowLeft className="h-4 w-4 mr-2" data-oid="803a6sp" />
+                <ArrowLeft className="h-4 w-4 mr-2" data-oid="n.hkklf" />
                 Back to Courses
               </a>
             </motion.div>
 
             <div
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10"
-              data-oid="gt0xxgm"
+              data-oid=".j5bu9."
             >
               {/* Main Content - 8 columns on large screens */}
               <motion.div
@@ -311,94 +311,94 @@ export default function CourseDetailTemplate({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                data-oid="2b69s-l"
+                data-oid="h55abye"
               >
                 <h1
                   className="text-4xl font-bold text-[#123B79] mb-4 drop-shadow-sm"
-                  data-oid="j133j6q"
+                  data-oid="wmp.qea"
                 >
                   {courseData.title}
                 </h1>
 
                 <div
                   className="flex flex-wrap items-center gap-4 mb-6"
-                  data-oid="basyfel"
+                  data-oid="5wpgrnk"
                 >
-                  <div className="flex items-center" data-oid="7fe3b:e">
+                  <div className="flex items-center" data-oid="vcd-5cn">
                     <Star
                       className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                      data-oid="g.gi82:"
+                      data-oid="0ibrvll"
                     />
 
-                    <span className="ml-1 font-semibold" data-oid="h_4n8mu">
+                    <span className="ml-1 font-semibold" data-oid="xmf31h3">
                       {courseData.rating}
                     </span>
-                    <span className="ml-1 text-gray-500" data-oid="1f2gmlr">
+                    <span className="ml-1 text-gray-500" data-oid="4oljuie">
                       ({courseData.students} students)
                     </span>
                   </div>
                   <div
                     className="flex items-center text-gray-600"
-                    data-oid="weibd.t"
+                    data-oid="25gm4qe"
                   >
-                    <Clock className="h-4 w-4 mr-1" data-oid="-5o0t2d" />
-                    <span data-oid="vej3wo4">{courseData.duration}</span>
+                    <Clock className="h-4 w-4 mr-1" data-oid="1cdcchf" />
+                    <span data-oid="gmdirj-">{courseData.duration}</span>
                   </div>
                   <div
                     className="flex items-center text-gray-600"
-                    data-oid="ikdr_ng"
+                    data-oid="424i79f"
                   >
-                    <Calendar className="h-4 w-4 mr-1" data-oid="yf_lh6-" />
-                    <span data-oid="chq0d:0">
+                    <Calendar className="h-4 w-4 mr-1" data-oid="oqqc3nk" />
+                    <span data-oid="7kdd_2c">
                       Last updated: {courseData.lastUpdated}
                     </span>
                   </div>
                   <div
                     className="flex items-center text-gray-600"
-                    data-oid="1cm6d23"
+                    data-oid="6l32wjm"
                   >
-                    <Award className="h-4 w-4 mr-1" data-oid="v9oiykj" />
-                    <span data-oid="0n7bu5x">{courseData.level}</span>
+                    <Award className="h-4 w-4 mr-1" data-oid="pa1c0::" />
+                    <span data-oid="slhogl2">{courseData.level}</span>
                   </div>
                 </div>
 
                 {/* Course Image for Mobile */}
                 <div
                   className="lg:hidden mb-6 relative rounded-xl overflow-hidden"
-                  data-oid="s1wgcaf"
+                  data-oid="mw5w:zg"
                 >
-                  <div className="aspect-video relative" data-oid="j3z76:b">
+                  <div className="aspect-video relative" data-oid="cpgwhub">
                     <Image
                       src={courseData.image || "/placeholder.svg"}
                       alt={courseData.title}
                       fill
                       className="object-cover"
-                      data-oid="vnq02l2"
+                      data-oid="s:hwc21"
                     />
                   </div>
                 </div>
 
-                <div className="text-lg text-gray-700 mb-8" data-oid="-_x5gaj">
+                <div className="text-lg text-gray-700 mb-8" data-oid="21_iv3x">
                   {typeof courseData.description === "string"
                     ? courseData.description
                     : courseData.description}
                 </div>
 
                 {/* Instructors Section - Updated to display side by side */}
-                <div className="mb-8" data-oid="m-8uzgl">
+                <div className="mb-8" data-oid=":t.qgik">
                   <h2
                     className="font-semibold text-xl text-[#123B79] mb-4"
-                    data-oid="f6wyh8k"
+                    data-oid="n968vtn"
                   >
                     Course Instructors
                   </h2>
                   <div
                     className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
-                    data-oid="uhjlkmu"
+                    data-oid="cf0jqef"
                   >
                     <div
                       className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                      data-oid="in5gevg"
+                      data-oid="8l.0z4o"
                     >
                       {Array.isArray(courseData.instructors) &&
                       courseData.instructors.length > 0 ? (
@@ -407,13 +407,13 @@ export default function CourseDetailTemplate({
                             key={index}
                             name={instructor.name}
                             image={instructor.image}
-                            data-oid="4oyeok:"
+                            data-oid="oqh1e_5"
                           />
                         ))
                       ) : (
                         <div
                           className="text-gray-500 col-span-4"
-                          data-oid="i2dvj-h"
+                          data-oid="ubggkg."
                         >
                           Instructor information coming soon.
                         </div>
@@ -426,30 +426,30 @@ export default function CourseDetailTemplate({
                 {courseData.highlights && (
                   <div
                     className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                    data-oid="9se0sco"
+                    data-oid="sqfupfx"
                   >
                     <h2
                       className="text-xl font-bold text-[#123B79] mb-4"
-                      data-oid="klonyy1"
+                      data-oid="-lgebow"
                     >
                       Course Highlights
                     </h2>
                     <div
                       className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                      data-oid="1xwmepp"
+                      data-oid="1yno_8w"
                     >
                       {courseData.highlights.map((highlight, index) => (
                         <div
                           key={index}
                           className="flex items-start"
-                          data-oid="xruxuph"
+                          data-oid="x.5giga"
                         >
                           <CheckCircle
                             className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5"
-                            data-oid="16t3jci"
+                            data-oid="22-psn7"
                           />
 
-                          <p className="text-gray-700" data-oid="ktc1sy:">
+                          <p className="text-gray-700" data-oid="uaql6qg">
                             {highlight}
                           </p>
                         </div>
@@ -461,17 +461,17 @@ export default function CourseDetailTemplate({
                 {/* What You'll Learn */}
                 <div
                   className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="gh1:gm1"
+                  data-oid="u7vzso9"
                 >
                   <h2
                     className="text-xl font-bold text-[#123B79] mb-4"
-                    data-oid="e67.eht"
+                    data-oid="h3-j.vx"
                   >
                     What You'll Learn
                   </h2>
                   <div
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                    data-oid="oy5mj1v"
+                    data-oid="61me9ib"
                   >
                     {Array.isArray(courseData.whatYouWillLearn) &&
                     courseData.whatYouWillLearn.length > 0 ? (
@@ -479,20 +479,20 @@ export default function CourseDetailTemplate({
                         <div
                           key={index}
                           className="flex items-start"
-                          data-oid="l3v6cn3"
+                          data-oid="3rn_u49"
                         >
                           <CheckCircle
                             className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5"
-                            data-oid="si.2nvz"
+                            data-oid="n9n5rnq"
                           />
 
-                          <p className="text-gray-700" data-oid="tlvk:25">
+                          <p className="text-gray-700" data-oid="pxn-nfx">
                             {item}
                           </p>
                         </div>
                       ))
                     ) : (
-                      <div className="text-gray-500" data-oid="e2a37dm">
+                      <div className="text-gray-500" data-oid="65.15dz">
                         Learning outcomes will be updated soon.
                       </div>
                     )}
@@ -502,19 +502,19 @@ export default function CourseDetailTemplate({
                 {/* Course Content */}
                 <div
                   className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="4ivvk1y"
+                  data-oid="e.k3z-7"
                 >
                   <div
                     className="flex justify-between items-center mb-4"
-                    data-oid="::21p:m"
+                    data-oid="mzi:8-t"
                   >
                     <h2
                       className="text-xl font-bold text-[#123B79]"
-                      data-oid="i5d7cad"
+                      data-oid="2uh-4-_"
                     >
                       Course Content
                     </h2>
-                    <div className="text-sm text-gray-600" data-oid=".7:drm5">
+                    <div className="text-sm text-gray-600" data-oid="bobpnjd">
                       {Array.isArray(courseData.curriculum) &&
                       courseData.curriculum.length > 0
                         ? `${courseData.curriculum.length} modules • ${courseData.duration}`
@@ -525,39 +525,39 @@ export default function CourseDetailTemplate({
                     </div>
                   </div>
 
-                  <div className="space-y-4" data-oid="kzo326p">
+                  <div className="space-y-4" data-oid="_-7tvte">
                     {Array.isArray(courseData.curriculum) &&
                     courseData.curriculum.length > 0 ? (
                       courseData.curriculum.map((module, moduleIndex) => (
                         <div
                           key={moduleIndex}
                           className="border border-gray-200 rounded-lg overflow-hidden"
-                          data-oid="56qzw2h"
+                          data-oid="oi56mou"
                         >
                           <button
                             className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center hover:bg-gray-100 transition-colors"
                             onClick={() => toggleModule(moduleIndex)}
-                            data-oid="q36bxd9"
+                            data-oid="0fuw0p5"
                           >
                             <h3
                               className="font-bold text-[#123B79] text-left"
-                              data-oid="yiulyo2"
+                              data-oid="57txxf0"
                             >
                               Module {moduleIndex + 1}: {module.title}
                             </h3>
                             <div
                               className="flex items-center"
-                              data-oid="d4egsda"
+                              data-oid="-lqmt44"
                             >
                               {expandedModules.includes(moduleIndex) ? (
                                 <ChevronUp
                                   className="h-5 w-5 text-gray-600"
-                                  data-oid="u.0ab27"
+                                  data-oid="us2vq8_"
                                 />
                               ) : (
                                 <ChevronDown
                                   className="h-5 w-5 text-gray-600"
-                                  data-oid="ga:unwm"
+                                  data-oid="0umjx99"
                                 />
                               )}
                             </div>
@@ -566,26 +566,26 @@ export default function CourseDetailTemplate({
                           {expandedModules.includes(moduleIndex) && (
                             <div
                               className="divide-y divide-gray-200"
-                              data-oid="_9pi-u6"
+                              data-oid="my5z0p6"
                             >
                               {module.lessons.map((lesson, lessonIndex) => (
                                 <div
                                   key={lessonIndex}
                                   className="px-6 py-4 flex items-center"
-                                  data-oid="rzqtn0g"
+                                  data-oid="auadqdc"
                                 >
                                   <div
                                     className="flex items-center"
-                                    data-oid="hxi3-bg"
+                                    data-oid="c9.sfwi"
                                   >
                                     <BookOpen
                                       className="h-4 w-4 text-[#123B79] mr-3"
-                                      data-oid="xyjg1y7"
+                                      data-oid="yx_h1uk"
                                     />
 
                                     <span
                                       className="text-gray-700"
-                                      data-oid="hh7hsea"
+                                      data-oid="izz6x3t"
                                     >
                                       {lesson}
                                     </span>
@@ -602,28 +602,28 @@ export default function CourseDetailTemplate({
                         <div
                           key={sectionIndex}
                           className="border border-gray-200 rounded-lg overflow-hidden"
-                          data-oid="hplqcz0"
+                          data-oid="g9bsen-"
                         >
                           <div
                             className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center"
-                            data-oid="i6d:7cg"
+                            data-oid="7w5sta8"
                           >
                             <h3
                               className="font-bold text-[#123B79] text-left"
-                              data-oid="c1ik1n_"
+                              data-oid="31lqh.z"
                             >
                               Section {sectionIndex + 1}: {section.title}
                             </h3>
                           </div>
-                          <div className="px-6 py-4" data-oid="v-q8r0k">
-                            <span className="text-gray-700" data-oid="86rma4p">
+                          <div className="px-6 py-4" data-oid="67_a2ni">
+                            <span className="text-gray-700" data-oid="bkmgmoj">
                               {section.content}
                             </span>
                           </div>
                         </div>
                       ))
                     ) : (
-                      <div className="text-gray-500" data-oid="viz_8-2">
+                      <div className="text-gray-500" data-oid="z20-n-1">
                         No course content available.
                       </div>
                     )}
@@ -634,20 +634,20 @@ export default function CourseDetailTemplate({
                 {courseData.targetAudience && (
                   <div
                     className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                    data-oid="2e:aqbd"
+                    data-oid="qmsm3-1"
                   >
                     <h2
                       className="text-xl font-bold text-[#123B79] mb-4"
-                      data-oid="vl2cd_a"
+                      data-oid="afmzf.3"
                     >
                       Who This Course Is For
                     </h2>
                     <ul
                       className="list-disc pl-5 space-y-2 text-gray-700"
-                      data-oid="13p1205"
+                      data-oid="dl01n5_"
                     >
                       {courseData.targetAudience.map((audience, index) => (
-                        <li key={index} data-oid="a.9a3la">
+                        <li key={index} data-oid="8r731v1">
                           {audience}
                         </li>
                       ))}
@@ -658,12 +658,12 @@ export default function CourseDetailTemplate({
                 {/* Student Testimonials - Now part of the main content */}
                 <div
                   className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="6ifrs4o"
+                  data-oid="s6n._7i"
                 >
                   <h2
                     ref={reviewsSectionRef}
                     className="text-2xl font-bold text-[#123B79] mb-8"
-                    data-oid=":tx0azj"
+                    data-oid="o19f81o"
                   >
                     What Our Students Say
                   </h2>
@@ -671,7 +671,7 @@ export default function CourseDetailTemplate({
                   {hasReviews ? (
                     <div
                       className="grid grid-cols-1 md:grid-cols-2 gap-8"
-                      data-oid="wgofiqx"
+                      data-oid="r__gp5e"
                     >
                       {courseData.reviews!.map((review, index) => (
                         <motion.div
@@ -681,19 +681,19 @@ export default function CourseDetailTemplate({
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: 0.1 * index }}
                           viewport={{ once: true }}
-                          data-oid="7-d:q0h"
+                          data-oid="48a22lg"
                         >
                           <div
                             className="flex justify-between items-start mb-4"
-                            data-oid="tjkizr4"
+                            data-oid="ok7j8b7"
                           >
-                            <div data-oid="xb6qml4">
-                              <h4 className="font-bold" data-oid="6wzvvja">
+                            <div data-oid="gu5.9r_">
+                              <h4 className="font-bold" data-oid="u-gjb36">
                                 {review.name}
                               </h4>
                               <div
                                 className="flex items-center mt-1"
-                                data-oid="vl3qaxm"
+                                data-oid="nheli9v"
                               >
                                 {[...Array(5)].map((_, i) => (
                                   <Star
@@ -703,19 +703,19 @@ export default function CourseDetailTemplate({
                                         ? "text-[#F0A500] fill-[#F0A500]"
                                         : "text-gray-300"
                                     }`}
-                                    data-oid="qqoq6we"
+                                    data-oid="mair4ds"
                                   />
                                 ))}
                                 <span
                                   className="ml-2 text-sm text-gray-500"
-                                  data-oid=":ukk8gh"
+                                  data-oid="ulv1sgc"
                                 >
                                   {review.date}
                                 </span>
                               </div>
                             </div>
                           </div>
-                          <p className="text-gray-700" data-oid="s3p::os">
+                          <p className="text-gray-700" data-oid="0b9mf86">
                             {review.comment}
                           </p>
                         </motion.div>
@@ -727,28 +727,28 @@ export default function CourseDetailTemplate({
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
-                      data-oid="ewd2yse"
+                      data-oid="vb2hz9z"
                     >
-                      <div className="mb-6 text-gray-300" data-oid="rbk315k">
+                      <div className="mb-6 text-gray-300" data-oid="mai76jv">
                         <div
                           className="rounded-full bg-gray-100 w-24 h-24 flex items-center justify-center mb-2"
-                          data-oid=":4f1x_i"
+                          data-oid="itzzye."
                         >
                           <MessageCircle
                             className="h-12 w-12"
-                            data-oid="w_:bsex"
+                            data-oid="sotpdyt"
                           />
                         </div>
                       </div>
                       <h3
                         className="text-xl font-semibold text-gray-700 mb-2"
-                        data-oid="211-zz_"
+                        data-oid="3.of-m2"
                       >
                         No Reviews Yet
                       </h3>
                       <p
                         className="text-gray-500 text-center max-w-md mb-6"
-                        data-oid=".38cjtn"
+                        data-oid="92-u:9o"
                       >
                         Be the first to share your experience with this course
                         and help others make informed decisions.
@@ -757,7 +757,7 @@ export default function CourseDetailTemplate({
                         onClick={() => {}}
                         variant="outline"
                         className="text-[#123B79] border-[#123B79]"
-                        data-oid="alk6hc5"
+                        data-oid="hi2kihl"
                       >
                         Write a Review
                       </Button>
@@ -772,7 +772,7 @@ export default function CourseDetailTemplate({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                data-oid="e19.q92"
+                data-oid="7gtjwo1"
               >
                 <div
                   className={`transition-all duration-200 ${isScrolling ? "ease-out" : "ease-in"}`}
@@ -784,20 +784,20 @@ export default function CourseDetailTemplate({
                     right: 0,
                     left: 0,
                   }}
-                  data-oid="3-5ittq"
+                  data-oid="n0-wizz"
                 >
                   {/* Course Preview Image - Desktop Only */}
                   <div
                     className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg"
-                    data-oid="xbry:1a"
+                    data-oid="eurs926"
                   >
-                    <div className="aspect-video relative" data-oid="1an6z88">
+                    <div className="aspect-video relative" data-oid="vhl.kk3">
                       <Image
                         src={courseData.image || "/placeholder.svg"}
                         alt={courseData.title}
                         fill
                         className="object-cover"
-                        data-oid="u6cgruf"
+                        data-oid="nnnkk98"
                       />
                     </div>
                   </div>
@@ -805,20 +805,20 @@ export default function CourseDetailTemplate({
                   {/* Enrollment Card */}
                   <div
                     className="bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6"
-                    data-oid="asynqr."
+                    data-oid="a83o87w"
                   >
-                    <div className="p-6" data-oid="e:cdyqo">
+                    <div className="p-6" data-oid="u3-z0ah">
                       <div
                         className="flex justify-between items-center mb-4"
-                        data-oid="k.aks8k"
+                        data-oid="j-ivnho"
                       >
                         <div
                           className="text-3xl font-bold text-[#123B79]"
-                          data-oid="vapt2ye"
+                          data-oid="4_c8l6r"
                         >
                           {courseData.price}
                         </div>
-                        <div className="flex space-x-2" data-oid="wvaixli">
+                        <div className="flex space-x-2" data-oid=":pnnqra">
                           <button
                             onClick={handleBookmark}
                             className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
@@ -827,17 +827,17 @@ export default function CourseDetailTemplate({
                                 ? "Remove from wishlist"
                                 : "Add to wishlist"
                             }
-                            data-oid="4hmlbzu"
+                            data-oid="ho6256b"
                           >
                             {isBookmarked ? (
                               <BookOpen
                                 className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                                data-oid="ius6.xd"
+                                data-oid="u24:vum"
                               />
                             ) : (
                               <BookOpen
                                 className="h-5 w-5 text-gray-700"
-                                data-oid="b42c9tb"
+                                data-oid="jvk3hod"
                               />
                             )}
                           </button>
@@ -845,11 +845,11 @@ export default function CourseDetailTemplate({
                             className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                             onClick={() => setIsShareModalOpen(true)}
                             aria-label="Share course"
-                            data-oid="ma.o6tz"
+                            data-oid="gnk.axi"
                           >
                             <Share2
                               className="h-5 w-5 text-gray-700"
-                              data-oid="a83a3hk"
+                              data-oid="umx7-fd"
                             />
                           </button>
                         </div>
@@ -877,65 +877,65 @@ export default function CourseDetailTemplate({
                             // For now, just show a message or redirect
                           }
                         }}
-                        data-oid="8akeq16"
+                        data-oid="s5fk5gw"
                       >
                         <ShoppingCart
                           className="mr-2 h-4 w-4"
-                          data-oid="ppx-7l7"
+                          data-oid="wmtm0oh"
                         />
                         Enroll Now
                       </Button>
 
-                      <div className="space-y-4 mt-6" data-oid="a6evxxu">
-                        <div className="flex items-center" data-oid="3eoucxp">
+                      <div className="space-y-4 mt-6" data-oid="b:pak_c">
+                        <div className="flex items-center" data-oid="koxy2.8">
                           <Clock
                             className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="m1s-ne-"
+                            data-oid="jk:-lc4"
                           />
 
-                          <div data-oid="kosxpt.">
-                            <p className="font-semibold" data-oid="o9at-dp">
+                          <div data-oid="mw_hy0m">
+                            <p className="font-semibold" data-oid="m0cr31b">
                               Course Duration
                             </p>
                             <p
                               className="text-sm text-gray-600"
-                              data-oid="jok2iao"
+                              data-oid="dp7hajm"
                             >
                               {courseData.duration}
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center" data-oid="b:cvyhk">
+                        <div className="flex items-center" data-oid="5y884y4">
                           <Users
                             className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="eqah9ih"
+                            data-oid="w5q_nua"
                           />
 
-                          <div data-oid="puei-j6">
-                            <p className="font-semibold" data-oid="-p7-sij">
+                          <div data-oid="rql5tp_">
+                            <p className="font-semibold" data-oid="v7rqnkn">
                               Total Enrolled
                             </p>
                             <p
                               className="text-sm text-gray-600"
-                              data-oid="zo0:o1l"
+                              data-oid="evqwywk"
                             >
                               {courseData.students}
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center" data-oid="7367mjw">
+                        <div className="flex items-center" data-oid="r:la-_-">
                           <BarChart
                             className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="bj0m_kd"
+                            data-oid="znuaanh"
                           />
 
-                          <div data-oid="j6jfle9">
-                            <p className="font-semibold" data-oid="ws:bcti">
+                          <div data-oid="y6hmg59">
+                            <p className="font-semibold" data-oid="ii459:3">
                               Course Level
                             </p>
                             <p
                               className="text-sm text-gray-600"
-                              data-oid="lo:ehd2"
+                              data-oid=".y42gzi"
                             >
                               {courseData.level}
                             </p>
@@ -955,18 +955,18 @@ export default function CourseDetailTemplate({
         <section
           ref={relatedCoursesRef}
           className="py-16 bg-gray-50 relative z-10 border-y border-gray-100"
-          data-oid="h1xolfm"
+          data-oid="ueyci:v"
         >
-          <div className="container mx-auto px-4" data-oid="ssubed7">
+          <div className="container mx-auto px-4" data-oid="0n8z_bo">
             <h2
               className="text-2xl font-bold text-[#123B79] mb-8"
-              data-oid="j:oqg5f"
+              data-oid=".yo:65w"
             >
               Related Courses You Might Like
             </h2>
             <div
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              data-oid="7jiwf7s"
+              data-oid="ixbun6r"
             >
               {[
                 {
@@ -1001,50 +1001,50 @@ export default function CourseDetailTemplate({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  data-oid="nvb0mrv"
+                  data-oid="5e9:r7a"
                 >
-                  <div className="relative h-48" data-oid="7vriugl">
+                  <div className="relative h-48" data-oid="30vxflp">
                     <Image
                       src={relatedCourse.image || "/placeholder.svg"}
                       alt={relatedCourse.title}
                       fill
                       className="object-cover"
-                      data-oid="lzqwweb"
+                      data-oid="mb_55n2"
                     />
 
                     <div
                       className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-                      data-oid="rd0xrsw"
+                      data-oid="8bfedmi"
                     ></div>
                     <div
                       className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full"
-                      data-oid="orrl8u7"
+                      data-oid="195jrgs"
                     >
                       {relatedCourse.level}
                     </div>
                   </div>
-                  <div className="p-6" data-oid="s8w48kd">
+                  <div className="p-6" data-oid="7wsc8.g">
                     <h3
                       className="text-lg font-bold text-[#123B79] mb-2"
-                      data-oid="tqoezfx"
+                      data-oid="xuuoxx1"
                     >
                       {relatedCourse.title}
                     </h3>
                     <div
                       className="text-gray-500 text-sm mb-4"
-                      data-oid="i5wa-h0"
+                      data-oid="aa8sbmk"
                     >
-                      <span className="inline-block mr-4" data-oid="-b.se:o">
+                      <span className="inline-block mr-4" data-oid="vz40xhn">
                         ⏱️ {relatedCourse.duration}
                       </span>
                     </div>
                     <div
                       className="flex justify-between items-center"
-                      data-oid="0dpbyp0"
+                      data-oid="-ze3shb"
                     >
                       <span
                         className="font-bold text-[#123B79]"
-                        data-oid="nm2_fg2"
+                        data-oid="6yesw4-"
                       >
                         {relatedCourse.price}
                       </span>
@@ -1054,7 +1054,7 @@ export default function CourseDetailTemplate({
                         onClick={() =>
                           router.push(`/courses/${relatedCourse.slug}`)
                         }
-                        data-oid="v5rjmlw"
+                        data-oid="r03vjv."
                       >
                         View Course
                       </Button>
@@ -1068,22 +1068,22 @@ export default function CourseDetailTemplate({
         {/* Final CTA */}
         <section
           className="py-16 bg-[#123B79] text-white relative z-10 border-y border-gray-100"
-          data-oid="9_ftsvz"
+          data-oid="9c-hmzt"
         >
           <div
             className="container mx-auto px-4 text-center"
-            data-oid="np0-1vz"
+            data-oid="5nuxem9"
           >
-            <h2 className="text-3xl font-bold mb-4" data-oid="siucvti">
+            <h2 className="text-3xl font-bold mb-4" data-oid="zhjy.ri">
               Ready to advance your property investment knowledge?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" data-oid="fjoyyhm">
+            <p className="text-xl mb-8 max-w-2xl mx-auto" data-oid="-zh133:">
               Join {courseData.students}+ students who are already transforming
               their investment strategies with this course.
             </p>
             <Button
               className="bg-[#F0A500] hover:bg-[#D89400] text-[#123B79] font-bold text-lg px-8 py-6"
-              data-oid="34wi5io"
+              data-oid=".y4za5d"
             >
               Enroll Now for {courseData.price}
             </Button>
@@ -1094,80 +1094,80 @@ export default function CourseDetailTemplate({
         {isShareModalOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-            data-oid="vuh.z56"
+            data-oid="c7ocu77"
           >
             <div
               className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-              data-oid="yo:9-n:"
+              data-oid="who4pvb"
             >
               <div
                 className="flex justify-between items-center p-4 border-b"
-                data-oid="3z:wotm"
+                data-oid="4nix8j4"
               >
-                <h3 className="font-bold text-lg" data-oid="g2kf04t">
+                <h3 className="font-bold text-lg" data-oid=":je98gz">
                   Share Course
                 </h3>
                 <button
                   onClick={() => setIsShareModalOpen(false)}
                   className="p-1 rounded-full hover:bg-gray-100"
-                  data-oid="u481ive"
+                  data-oid="rq9372r"
                 >
-                  <X className="h-5 w-5" data-oid="n77bs76" />
+                  <X className="h-5 w-5" data-oid="8l1efug" />
                 </button>
               </div>
-              <div className="p-6" data-oid="fmcp5dd">
-                <div className="mb-6" data-oid="3bn8rj.">
-                  <p className="font-medium mb-2" data-oid="fk3iq4m">
+              <div className="p-6" data-oid="dq9neht">
+                <div className="mb-6" data-oid="4zewt:p">
+                  <p className="font-medium mb-2" data-oid="5l7meob">
                     Page Link
                   </p>
-                  <div className="flex" data-oid="ksgzudk">
+                  <div className="flex" data-oid="ajs39jq">
                     <input
                       type="text"
                       value={`https://assembly.sg/courses/${courseData.slug}`}
                       readOnly
                       className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 bg-gray-50"
-                      data-oid="dthtzjr"
+                      data-oid="3597p:y"
                     />
 
                     <button
                       onClick={copyToClipboard}
                       className="bg-[#123B79] text-white px-3 py-2 rounded-r-md hover:bg-[#0A2A5E] transition-colors"
-                      data-oid="e4inf3g"
+                      data-oid="_u119.-"
                     >
                       {copied ? (
-                        <Check className="h-5 w-5" data-oid="9n65yd1" />
+                        <Check className="h-5 w-5" data-oid="2-j.x1s" />
                       ) : (
-                        <Copy className="h-5 w-5" data-oid="vp-.6ur" />
+                        <Copy className="h-5 w-5" data-oid="oclthn1" />
                       )}
                     </button>
                   </div>
                 </div>
 
-                <div data-oid="_2n6g8y">
-                  <p className="font-medium mb-3" data-oid="daxwh43">
+                <div data-oid="2ctd.pj">
+                  <p className="font-medium mb-3" data-oid="zt7c3_b">
                     Share on social media
                   </p>
-                  <div className="flex space-x-4" data-oid="knf0oc_">
+                  <div className="flex space-x-4" data-oid="p_kjjp:">
                     <button
                       onClick={() => shareOnSocialMedia("facebook")}
                       className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid="-2tt3bn"
+                      data-oid="5f9en8i"
                     >
-                      <Facebook className="h-6 w-6" data-oid="_umes6:" />
+                      <Facebook className="h-6 w-6" data-oid="0dkilc8" />
                     </button>
                     <button
                       onClick={() => shareOnSocialMedia("twitter")}
                       className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid="artuhg7"
+                      data-oid="2ke-x-g"
                     >
-                      <X className="h-5 w-5" data-oid="c090z6s" />
+                      <X className="h-5 w-5" data-oid="zg:o:xl" />
                     </button>
                     <button
                       onClick={() => shareOnSocialMedia("linkedin")}
                       className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid="b7d3hem"
+                      data-oid="329o7ns"
                     >
-                      <Linkedin className="h-5 w-5" data-oid="_txhwn1" />
+                      <Linkedin className="h-5 w-5" data-oid="p-kimxo" />
                     </button>
                   </div>
                 </div>
@@ -1180,37 +1180,37 @@ export default function CourseDetailTemplate({
         {isLoginModalOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-            data-oid="ib1tdo3"
+            data-oid="e.x0t3i"
           >
             <div
               className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-              data-oid="xpik2v4"
+              data-oid="t7u.nu."
             >
               <div
                 className="flex justify-between items-center p-4 border-b"
-                data-oid="f1yrvgi"
+                data-oid="5wh67nt"
               >
-                <h3 className="font-bold text-lg" data-oid="t4ku-af">
+                <h3 className="font-bold text-lg" data-oid="4zes_tp">
                   Login Required
                 </h3>
                 <button
                   onClick={() => setIsLoginModalOpen(false)}
                   className="p-1 rounded-full hover:bg-gray-100"
-                  data-oid="mx4ht18"
+                  data-oid="8plfubc"
                 >
-                  <X className="h-5 w-5" data-oid="xnvfi:-" />
+                  <X className="h-5 w-5" data-oid="g053r8c" />
                 </button>
               </div>
-              <div className="p-6" data-oid="cabfuls">
-                <p className="mb-6" data-oid="r_.lssc">
+              <div className="p-6" data-oid="oo5d3cg">
+                <p className="mb-6" data-oid="db_dah.">
                   Please log in to add this course to your wishlist.
                 </p>
-                <div className="space-y-4" data-oid="2qm.:-.">
-                  <div data-oid="60eyoto">
+                <div className="space-y-4" data-oid="rwjen8z">
+                  <div data-oid="zk:4c9v">
                     <label
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid=".z0yy.i"
+                      data-oid="p:7t_10"
                     >
                       Email
                     </label>
@@ -1219,14 +1219,14 @@ export default function CourseDetailTemplate({
                       id="email"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md"
                       placeholder="your@email.com"
-                      data-oid="r:rehqj"
+                      data-oid="rc2y4vw"
                     />
                   </div>
-                  <div data-oid="ixn5n5l">
+                  <div data-oid="kw-uyno">
                     <label
                       htmlFor="password"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="i7rtdz2"
+                      data-oid="2-b:1.e"
                     >
                       Password
                     </label>
@@ -1235,34 +1235,34 @@ export default function CourseDetailTemplate({
                       id="password"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md"
                       placeholder="••••••••"
-                      data-oid="yb056jh"
+                      data-oid="q8.:.jq"
                     />
                   </div>
                   <Button
                     onClick={handleLogin}
                     className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
-                    data-oid="jvkrycg"
+                    data-oid="1.hvhnv"
                   >
                     Log In
                   </Button>
                   <div
                     className="text-center text-sm text-gray-500"
-                    data-oid="teyub:4"
+                    data-oid="7c3957v"
                   >
                     <a
                       href="/forgot-password"
                       className="text-[#123B79] hover:underline"
-                      data-oid="2qltv.w"
+                      data-oid="36e1km8"
                     >
                       Forgot password?
                     </a>
-                    <span className="mx-2" data-oid="kx0fac3">
+                    <span className="mx-2" data-oid=":pmz:pr">
                       •
                     </span>
                     <a
                       href="/signup"
                       className="text-[#123B79] hover:underline"
-                      data-oid="z2n0.qh"
+                      data-oid="exg2qo4"
                     >
                       Create account
                     </a>

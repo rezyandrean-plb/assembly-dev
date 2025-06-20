@@ -13,14 +13,14 @@ import Navbar from "@/components/navbar";
 export default function HomePage() {
   return (
     <>
-      <Navbar data-oid="97k9zd4" />
-      <NewHeroSection data-oid="fa59.t1" />
-      <NewFeaturesSection data-oid="6_4ht2r" />
-      <NewCoursesSection data-oid="snvf50:" />
-      <NewLearningPathsSection data-oid="xg-ce1g" />
-      <NewStatsSection data-oid="3cu0d03" />
-      <NewTestimonialsSection data-oid="_79gb75" />
-      <NewCtaSection data-oid="ugbn1z1" />
+      <Navbar data-oid="czetjyh" />
+      <NewHeroSection data-oid="qxc3wl3" />
+      <NewFeaturesSection data-oid="0q_txgy" />
+      <NewCoursesSection data-oid="fy9d66r" />
+      <NewLearningPathsSection data-oid="0ya4a_e" />
+      <NewStatsSection data-oid=":5xzs6z" />
+      <NewTestimonialsSection data-oid="wcifby3" />
+      <NewCtaSection data-oid="546:::n" />
     </>
   );
 }

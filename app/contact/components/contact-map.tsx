@@ -16,31 +16,31 @@ export default function ContactMap() {
   };
 
   return (
-    <div className="relative w-full h-full bg-blue-50" data-oid=":x13tmv">
+    <div className="relative w-full h-full bg-blue-50" data-oid="jq0_5ij">
       {/* Decorative background */}
-      <div className="absolute inset-0 overflow-hidden" data-oid="ci__1em">
+      <div className="absolute inset-0 overflow-hidden" data-oid="fost-_n">
         {/* Grid lines */}
         <div
           className="absolute inset-0 grid grid-cols-12 gap-4"
-          data-oid="sjfmmus"
+          data-oid="xglfi1k"
         >
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={`col-${i}`}
               className="h-full w-full border-r border-blue-100"
-              data-oid="8oa-jlj"
+              data-oid="fgtz43j"
             />
           ))}
         </div>
         <div
           className="absolute inset-0 grid grid-rows-12 gap-4"
-          data-oid="3j16ksz"
+          data-oid="_tn5scj"
         >
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={`row-${i}`}
               className="w-full h-full border-b border-blue-100"
-              data-oid=".uj8quy"
+              data-oid="i8su8ei"
             />
           ))}
         </div>
@@ -56,7 +56,7 @@ export default function ContactMap() {
             repeat: Number.POSITIVE_INFINITY,
             repeatType: "reverse",
           }}
-          data-oid="r4kvvnw"
+          data-oid="i:5g-pv"
         />
 
         <motion.div
@@ -70,14 +70,14 @@ export default function ContactMap() {
             repeatType: "reverse",
             delay: 1,
           }}
-          data-oid="-tx0:0p"
+          data-oid="yna_h5x"
         />
       </div>
 
       {/* Singapore map outline (simplified SVG) */}
       <div
         className="absolute inset-0 flex items-center justify-center opacity-20"
-        data-oid="ob1i8h4"
+        data-oid="3uowosc"
       >
         <svg
           width="60%"
@@ -85,7 +85,7 @@ export default function ContactMap() {
           viewBox="0 0 100 50"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          data-oid="_px_q-a"
+          data-oid="n5g-1.g"
         >
           <path
             d="M20.3,10.2c0,0,7.5-0.2,11.4,0.1c3.9,0.3,9.5,1.6,14.4,1.6c4.9,0,10.2-0.8,15.4-0.6c5.2,0.2,10.1,1.2,15.2,1.5
@@ -96,7 +96,7 @@ export default function ContactMap() {
             fill="#2563EB"
             stroke="#1E40AF"
             strokeWidth="0.5"
-            data-oid="i.:aw:c"
+            data-oid="12zvpxj"
           />
         </svg>
       </div>
@@ -107,7 +107,7 @@ export default function ContactMap() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        data-oid="3692r1:"
+        data-oid="okqyr8u"
       >
         <motion.div
           className="relative"
@@ -117,12 +117,12 @@ export default function ContactMap() {
             repeat: Number.POSITIVE_INFINITY,
             repeatType: "reverse",
           }}
-          data-oid="x-2q0v:"
+          data-oid="fniwi-e"
         >
-          <div className="relative" data-oid="iest:1b">
+          <div className="relative" data-oid="2cwskrx">
             <MapPin
               className="h-12 w-12 text-blue-600 drop-shadow-lg"
-              data-oid="zk1ezwk"
+              data-oid="ota4ug:"
             />
 
             <motion.div
@@ -133,7 +133,7 @@ export default function ContactMap() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "reverse",
               }}
-              data-oid="q.yf-06"
+              data-oid="td5dydf"
             />
           </div>
         </motion.div>
@@ -147,17 +147,17 @@ export default function ContactMap() {
         transition={{ duration: 0.5, delay: 0.4 }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        data-oid="pkuh_4h"
+        data-oid="nfnk1_8"
       >
-        <div className="flex items-start gap-3" data-oid="3k9am27">
-          <div className="bg-blue-100 p-2 rounded-full" data-oid="4:5rlmo">
-            <MapPin className="h-5 w-5 text-blue-600" data-oid="q3m0n7i" />
+        <div className="flex items-start gap-3" data-oid="vudno91">
+          <div className="bg-blue-100 p-2 rounded-full" data-oid="x8i4rhc">
+            <MapPin className="h-5 w-5 text-blue-600" data-oid="xxi0096" />
           </div>
-          <div className="flex-1" data-oid="-c.b9zs">
-            <h3 className="font-bold text-gray-900" data-oid="6xg2m8.">
+          <div className="flex-1" data-oid="kqmh2cy">
+            <h3 className="font-bold text-gray-900" data-oid="i1w8lby">
               {location.name}
             </h3>
-            <p className="text-gray-600 text-sm" data-oid="00:or.:">
+            <p className="text-gray-600 text-sm" data-oid="xzbasy3">
               {location.address}
             </p>
             <a
@@ -165,10 +165,10 @@ export default function ContactMap() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center mt-2 text-sm font-medium text-blue-600 hover:text-blue-800"
-              data-oid="pad3apt"
+              data-oid="y-9ntf5"
             >
               Get Directions
-              <ExternalLink className="ml-1 h-3 w-3" data-oid="va4tic0" />
+              <ExternalLink className="ml-1 h-3 w-3" data-oid="aj1h_jp" />
             </a>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function ContactMap() {
           initial={{ width: "0%" }}
           animate={{ width: isHovered ? "100%" : "30%" }}
           transition={{ duration: 0.3 }}
-          data-oid="d6f5z6g"
+          data-oid=":v.-q.1"
         />
       </motion.div>
     </div>

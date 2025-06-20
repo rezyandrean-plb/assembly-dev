@@ -38,48 +38,48 @@ export default function CompletedCoursesPage() {
   });
 
   return (
-    <div className="p-6" data-oid="aasb:-_">
+    <div className="p-6" data-oid="7c6eg5a">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="2wgdx9."
+        data-oid="8nj_3mo"
       >
-        <div data-oid="vu7.izz">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="vrvjh2-">
+        <div data-oid="tuptnlv">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="-_5tvxl">
             Completed Courses
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="7nrgarv">
+          <p className="text-gray-500 mt-1" data-oid="3v8w_bc">
             Courses you've successfully completed
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="igllhkh">
-          <div className="relative" data-oid="01y32jg">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid="m:7ryv_">
+          <div className="relative" data-oid=".gnh3oo">
             <input
               type="text"
               placeholder="Search courses..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="uoxxrj9"
+              data-oid="mhw82ip"
             />
 
             <Search
               className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="bj3g0cd"
+              data-oid="v4e0imv"
             />
           </div>
           <button
             className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="1t:i_on"
+            data-oid="9t36m27"
           >
-            <Filter className="h-4 w-4" data-oid="scf1jij" />
-            <span data-oid="pqsu8e.">Filter</span>
+            <Filter className="h-4 w-4" data-oid="-cafzii" />
+            <span data-oid="f_85-v9">Filter</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="oxoxi-8">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="qjqo8r1">
         <button
           className={`px-4 py-2 font-medium text-sm ${
             activeTab === "all"
@@ -87,7 +87,7 @@ export default function CompletedCoursesPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
-          data-oid="_qmcj3k"
+          data-oid="z2o3i1o"
         >
           All Completed ({completedCourses.length})
         </button>
@@ -98,14 +98,14 @@ export default function CompletedCoursesPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("recent")}
-          data-oid="1jyrk.v"
+          data-oid="3-b2i2k"
         >
           Recently Completed ({recentlyCompleted.length})
         </button>
       </div>
 
       {/* Course List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="ofl39m1">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="dd8u4-h">
         {filteredCourses.map((course) => (
           <motion.div
             key={course.id}
@@ -113,13 +113,13 @@ export default function CompletedCoursesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            data-oid="3vlw1:b"
+            data-oid="whufmkz"
           >
-            <div className="p-6" data-oid="wy3ufls">
-              <div className="flex items-start gap-4" data-oid="bsz8kq.">
+            <div className="p-6" data-oid="tqgvi14">
+              <div className="flex items-start gap-4" data-oid="0-8vevq">
                 <div
                   className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                  data-oid="1ni3rrw"
+                  data-oid="avehq1l"
                 >
                   <Image
                     src={course.image || "/placeholder.svg"}
@@ -127,42 +127,42 @@ export default function CompletedCoursesPage() {
                     width={64}
                     height={64}
                     className="object-cover"
-                    data-oid="mrhlxt0"
+                    data-oid="8xfepe1"
                   />
                 </div>
-                <div className="flex-1" data-oid="bro:1-:">
+                <div className="flex-1" data-oid="jbtt7td">
                   <h2
                     className="text-lg font-bold text-gray-800"
-                    data-oid="8lq81i8"
+                    data-oid="ctwgl7h"
                   >
                     {course.title}
                   </h2>
-                  <p className="text-sm text-gray-600 mb-2" data-oid="bxl28h1">
+                  <p className="text-sm text-gray-600 mb-2" data-oid="2h11mkt">
                     {course.categories.join(", ")}
                   </p>
 
-                  <div className="flex items-center mb-3" data-oid="aeriiin">
-                    <span className="text-xs text-gray-700" data-oid="fic714z">
+                  <div className="flex items-center mb-3" data-oid="7gxs2.v">
+                    <span className="text-xs text-gray-700" data-oid="a0yr8:-">
                       {course.instructor}
                     </span>
                   </div>
 
                   <div
                     className="flex items-center justify-between text-xs text-gray-500"
-                    data-oid="ejxpb8y"
+                    data-oid="jmw_lxz"
                   >
-                    <div className="flex items-center gap-4" data-oid="rauqnby">
-                      <span data-oid="1asuhbc">{course.totalHours} hours</span>
+                    <div className="flex items-center gap-4" data-oid="_rdi_qm">
+                      <span data-oid="_vpmv72">{course.totalHours} hours</span>
                     </div>
-                    <span data-oid="0uj4lz2">
+                    <span data-oid="9sc:3cu">
                       Completed: {course.completedDate}
                     </span>
                   </div>
 
-                  <div className="mt-4 flex justify-end" data-oid="ne43x9:">
+                  <div className="mt-4 flex justify-end" data-oid="5-li4_3">
                     <button
                       className="px-4 py-1.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700"
-                      data-oid="3-302-b"
+                      data-oid="uadcbl5"
                     >
                       Review Course
                     </button>

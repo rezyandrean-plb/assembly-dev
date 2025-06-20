@@ -11,7 +11,7 @@ export default function PillarsSection() {
   const pillars = [
     {
       icon: (
-        <TrendingUp className="h-12 w-12 text-orange-500" data-oid="cb51omk" />
+        <TrendingUp className="h-12 w-12 text-orange-500" data-oid="_wlj_op" />
       ),
 
       title: "Market Trends",
@@ -20,7 +20,7 @@ export default function PillarsSection() {
     },
     {
       icon: (
-        <BookOpen className="h-12 w-12 text-orange-500" data-oid="_uupkas" />
+        <BookOpen className="h-12 w-12 text-orange-500" data-oid="itt85wb" />
       ),
 
       title: "Regulations & Compliance",
@@ -29,7 +29,7 @@ export default function PillarsSection() {
     },
     {
       icon: (
-        <Lightbulb className="h-12 w-12 text-orange-500" data-oid="io7mvdr" />
+        <Lightbulb className="h-12 w-12 text-orange-500" data-oid="sx:2a.a" />
       ),
 
       title: "Marketing Strategies",
@@ -38,7 +38,7 @@ export default function PillarsSection() {
     },
     {
       icon: (
-        <BarChart3 className="h-12 w-12 text-orange-500" data-oid="jiyme0i" />
+        <BarChart3 className="h-12 w-12 text-orange-500" data-oid="21.4gzp" />
       ),
 
       title: "Professional Development",
@@ -71,28 +71,28 @@ export default function PillarsSection() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="yqp6m0e">
-      <div className="container mx-auto px-4" data-oid="rdkwpln">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="dxo4uz5">
+      <div className="container mx-auto px-4" data-oid="e1oryqz">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          data-oid="jafo_pt"
+          data-oid="dfy4zl4"
         >
-          <h2 className="text-4xl font-bold text-gray-900" data-oid="w9556wi">
+          <h2 className="text-4xl font-bold text-gray-900" data-oid="ua9bn5e">
             Pillars of Content
           </h2>
           <p
             className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
-            data-oid="50mj6xo"
+            data-oid="-26xcmx"
           >
             Explore key areas of knowledge to build your expertise in
             Singapore's real estate market
           </p>
           <div
             className="w-20 h-1 bg-orange-500 mx-auto mt-4"
-            data-oid="1pt6kel"
+            data-oid="g0wd32n"
           ></div>
         </motion.div>
 
@@ -101,29 +101,29 @@ export default function PillarsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          data-oid="o7sg.rs"
+          data-oid="vluehow"
         >
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
               variants={itemVariants}
-              data-oid="k4sp_tb"
+              data-oid="a.smnyv"
             >
               <div
                 className="flex flex-col items-center text-center"
-                data-oid="6bgqwz7"
+                data-oid="5.axvnh"
               >
-                <div className="mb-6" data-oid="xd5nyuv">
+                <div className="mb-6" data-oid="bk9kmul">
                   {pillar.icon}
                 </div>
                 <h3
                   className="text-xl font-bold text-gray-800 mb-3"
-                  data-oid="c1oz4in"
+                  data-oid="uhdfy56"
                 >
                   {pillar.title}
                 </h3>
-                <p className="text-gray-600" data-oid="me0n5na">
+                <p className="text-gray-600" data-oid="fed1p8.">
                   {pillar.description}
                 </p>
               </div>

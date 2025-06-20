@@ -12,7 +12,7 @@ import {
   Clock,
   MapPin,
 } from "lucide-react";
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/components/navbar";
 
 interface OrderItem {
   id: string;
@@ -77,14 +77,14 @@ export default function OrderReceivedPage() {
   if (isLoading) {
     return (
       <>
-        <Navbar data-oid="zjp8c7m" />
+        <Navbar data-oid=":26:kr6" />
         <div
           className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
-          data-oid="ep:alsp"
+          data-oid="osycgrg"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-            data-oid="n4yh6lr"
+            data-oid="786d9y7"
           ></div>
         </div>
       </>
@@ -94,30 +94,30 @@ export default function OrderReceivedPage() {
   if (!orderDetails) {
     return (
       <>
-        <Navbar data-oid="ibfej:0" />
+        <Navbar data-oid="xh-w.mf" />
         <div
           className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
-          data-oid="wjjizob"
+          data-oid="meq5c1i"
         >
-          <div className="text-center" data-oid="ybvxx4c">
+          <div className="text-center" data-oid="q-oev1n">
             <CheckCircle
               className="mx-auto h-16 w-16 text-gray-400 mb-4"
-              data-oid="..0w3.b"
+              data-oid="jf7bf3f"
             />
 
             <h1
               className="text-2xl font-bold text-gray-900 mb-2"
-              data-oid="a5tczee"
+              data-oid="kwvnie-"
             >
               Order Not Found
             </h1>
-            <p className="text-gray-600 mb-6" data-oid="wvm5s:5">
+            <p className="text-gray-600 mb-6" data-oid="yqs6pss">
               We couldn't find your order details.
             </p>
             <button
               onClick={() => router.push("/")}
               className="bg-[#123b79] text-white px-6 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors"
-              data-oid=":ek7oau"
+              data-oid="xgqgjr-"
             >
               Return Home
             </button>
@@ -152,82 +152,82 @@ export default function OrderReceivedPage() {
 
   return (
     <>
-      <Navbar data-oid="xp.bl0z" />
-      <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="sa21e.o">
-        <div className="max-w-4xl mx-auto px-4" data-oid=":2jdt3o">
+      <Navbar data-oid="_u5d:xi" />
+      <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="pkz91:_">
+        <div className="max-w-4xl mx-auto px-4" data-oid="r5_4cb.">
           {/* Header */}
           <div
             className="bg-white rounded-lg shadow-sm p-8 mb-6 text-center"
-            data-oid="3zcfrek"
+            data-oid="f9qluxi"
           >
             <CheckCircle
               className="mx-auto h-16 w-16 text-green-600 mb-6"
-              data-oid=":b-18r."
+              data-oid="jkmv.jo"
             />
 
             <h1
               className="text-3xl font-bold text-gray-900 mb-2"
-              data-oid="s6tz.rl"
+              data-oid="4027:11"
             >
               Order Received!
             </h1>
-            <p className="text-lg text-gray-600 mb-6" data-oid="7z0aq0_">
+            <p className="text-lg text-gray-600 mb-6" data-oid="jej4lg2">
               Thank you for your purchase. Your order has been successfully
               placed and confirmed.
             </p>
 
             <div
               className="bg-gray-50 rounded-lg p-6 max-w-2xl mx-auto"
-              data-oid="v0djoz:"
+              data-oid="1usvd9i"
             >
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left"
-                data-oid="ucghs2a"
+                data-oid=".r_.hp:"
               >
-                <div data-oid="mgvta7m">
+                <div data-oid="2-yt99x">
                   <h3
                     className="font-semibold text-gray-900 mb-1"
-                    data-oid="7o8tfq5"
+                    data-oid="38b3v3c"
                   >
                     Order ID
                   </h3>
-                  <p className="text-gray-600 font-mono" data-oid="rsfq5m2">
+                  <p className="text-gray-600 font-mono" data-oid="ydos2ux">
                     {orderDetails.orderId}
                   </p>
                 </div>
-                <div data-oid="64d2oqt">
+                <div data-oid="j0-i9u-">
                   <h3
                     className="font-semibold text-gray-900 mb-1"
-                    data-oid="m24gcg0"
+                    data-oid="d5:fr8j"
                   >
                     Order Date
                   </h3>
-                  <p className="text-gray-600" data-oid="x929v3e">
+                  <p className="text-gray-600" data-oid="l68z247">
                     {formatDate(orderDetails.orderDate)}
                   </p>
                 </div>
-                <div data-oid="xxfguei">
+                <div data-oid="31fum3n">
                   <h3
                     className="font-semibold text-gray-900 mb-1"
-                    data-oid="3o2.-jf"
+                    data-oid="xn418hd"
                   >
                     Total Amount
                   </h3>
                   <p
                     className="text-gray-600 font-semibold text-lg"
-                    data-oid="69yayvd"
+                    data-oid="melqoo0"
                   >
                     ${orderDetails.totalAmount.toFixed(2)}
                   </p>
                 </div>
-                <div data-oid="kk5gugn">
+                <div data-oid="qg99kge">
                   <h3
                     className="font-semibold text-gray-900 mb-1"
-                    data-oid="l6csnb5"
+                    data-oid="2g44on-"
                   >
                     Customer
                   </h3>
-                  <p className="text-gray-600" data-oid="i.5f07x">
+                  <p className="text-gray-600" data-oid="a337arh">
                     {orderDetails.customerInfo.name}
                   </p>
                 </div>
@@ -238,41 +238,41 @@ export default function OrderReceivedPage() {
           {/* Customer Information */}
           <div
             className="bg-white rounded-lg shadow-sm p-6 mb-6"
-            data-oid="c0tqtb3"
+            data-oid="k.-1u.:"
           >
             <h2
               className="text-xl font-bold text-gray-900 mb-4"
-              data-oid="7_1vonp"
+              data-oid="v8tnhd3"
             >
               Customer Information
             </h2>
 
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              data-oid="i57-haz"
+              data-oid="v2m3cnk"
             >
-              <div data-oid="9p-307u">
+              <div data-oid="qmv.z9i">
                 <h3
                   className="font-semibold text-gray-900 mb-2"
-                  data-oid="knuysep"
+                  data-oid="klap3jy"
                 >
                   Contact Details
                 </h3>
-                <div className="space-y-1 text-gray-600" data-oid="5dcu8x.">
-                  <p data-oid="5pm80g1">
-                    <span className="font-medium" data-oid="c7kg7o9">
+                <div className="space-y-1 text-gray-600" data-oid="r41w4pz">
+                  <p data-oid="q5056hx">
+                    <span className="font-medium" data-oid="1dytihq">
                       Name:
                     </span>{" "}
                     {orderDetails.customerInfo.name}
                   </p>
-                  <p data-oid=":4xfo3g">
-                    <span className="font-medium" data-oid="k8s.1l0">
+                  <p data-oid="msik9tb">
+                    <span className="font-medium" data-oid="517:gk9">
                       Email:
                     </span>{" "}
                     {orderDetails.customerInfo.email}
                   </p>
-                  <p data-oid="tww90_m">
-                    <span className="font-medium" data-oid="e0dxarg">
+                  <p data-oid="4aonq6v">
+                    <span className="font-medium" data-oid="15-6607">
                       Phone:
                     </span>{" "}
                     {orderDetails.customerInfo.phone}
@@ -281,14 +281,14 @@ export default function OrderReceivedPage() {
               </div>
 
               {orderDetails.hasBooks && (
-                <div data-oid="b200u9o">
+                <div data-oid="omua8.k">
                   <h3
                     className="font-semibold text-gray-900 mb-2"
-                    data-oid="nh9vvr."
+                    data-oid="1q0nbma"
                   >
                     Delivery Address
                   </h3>
-                  <p className="text-gray-600" data-oid="3s18jrc">
+                  <p className="text-gray-600" data-oid="pbijcmb">
                     {orderDetails.customerInfo.address}
                   </p>
                 </div>
@@ -299,53 +299,53 @@ export default function OrderReceivedPage() {
           {/* Order Items */}
           <div
             className="bg-white rounded-lg shadow-sm p-6 mb-6"
-            data-oid="51b6u8w"
+            data-oid="2l6j9cx"
           >
             <h2
               className="text-2xl font-bold text-gray-900 mb-6"
-              data-oid="ju8q38l"
+              data-oid="dn1-2mu"
             >
               Order Details
             </h2>
-            <div className="space-y-4" data-oid="c80fwt5">
+            <div className="space-y-4" data-oid="98tedvj">
               {orderDetails.items.map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
                   className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg"
-                  data-oid="-im-1gd"
+                  data-oid="m3tqcmw"
                 >
                   {item.image && (
                     <div
                       className="w-16 h-16 bg-gray-100 rounded-lg flex-shrink-0 overflow-hidden"
-                      data-oid="lwb_:eo"
+                      data-oid=":o.efwe"
                     >
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover"
-                        data-oid="ev9hhep"
+                        data-oid="vt21bb5"
                       />
                     </div>
                   )}
 
-                  <div className="flex-1" data-oid="e_3nfy7">
+                  <div className="flex-1" data-oid="mnzojff">
                     <h3
                       className="font-semibold text-gray-900"
-                      data-oid="zp8j5n1"
+                      data-oid="theig7f"
                     >
                       {item.title}
                     </h3>
                     {item.author && (
                       <span
                         className="text-xs text-gray-500 ml-2"
-                        data-oid="beddw_z"
+                        data-oid="5onqjn7"
                       >
                         by {item.author}
                       </span>
                     )}
                     <div
                       className="flex items-center gap-2 mt-1"
-                      data-oid="3o:z0v3"
+                      data-oid="6t42sxb"
                     >
                       <span
                         className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
@@ -353,13 +353,13 @@ export default function OrderReceivedPage() {
                             ? "bg-blue-100 text-blue-800"
                             : "bg-green-100 text-green-800"
                         }`}
-                        data-oid="_gwoiid"
+                        data-oid="e8-s1lz"
                       >
                         {item.type === "book" || item.type === "Book" ? (
                           <>
                             <Package
                               className="w-3 h-3 mr-1"
-                              data-oid="wd_bgv1"
+                              data-oid="q69kce."
                             />
                             Physical Book
                           </>
@@ -367,7 +367,7 @@ export default function OrderReceivedPage() {
                           <>
                             <Download
                               className="w-3 h-3 mr-1"
-                              data-oid="8dyij:c"
+                              data-oid="eyf.drx"
                             />
                             Digital Course
                           </>
@@ -375,21 +375,21 @@ export default function OrderReceivedPage() {
                       </span>
                       <span
                         className="text-sm text-gray-500"
-                        data-oid="-bh9dr0"
+                        data-oid="fzev:8u"
                       >
                         Qty: {item.quantity}
                       </span>
                     </div>
                   </div>
 
-                  <div className="text-right" data-oid="ycxd2m7">
+                  <div className="text-right" data-oid="gpgp:b5">
                     <p
                       className="font-semibold text-gray-900"
-                      data-oid="4pa12kz"
+                      data-oid="904.81i"
                     >
                       ${(item.price * item.quantity).toFixed(2)}
                     </p>
-                    <p className="text-sm text-gray-500" data-oid="exnernx">
+                    <p className="text-sm text-gray-500" data-oid="gd431q9">
                       ${item.price.toFixed(2)} each
                     </p>
                   </div>
@@ -402,13 +402,13 @@ export default function OrderReceivedPage() {
           {bookItems.length > 0 && (
             <div
               className="bg-white rounded-lg shadow-sm p-6 mb-6"
-              data-oid="nho9n4s"
+              data-oid="va1vmyt"
             >
-              <div className="flex items-center gap-3 mb-4" data-oid="5m0tkn8">
-                <Package className="h-6 w-6 text-blue-600" data-oid="msbxak:" />
+              <div className="flex items-center gap-3 mb-4" data-oid="pahqw9a">
+                <Package className="h-6 w-6 text-blue-600" data-oid="ujl_11x" />
                 <h2
                   className="text-xl font-bold text-gray-900"
-                  data-oid="9l0-.cb"
+                  data-oid="e95a4h0"
                 >
                   Physical Books - Shipping Information
                 </h2>
@@ -416,27 +416,27 @@ export default function OrderReceivedPage() {
 
               <div
                 className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4"
-                data-oid="p1ge_x6"
+                data-oid="oyj80ay"
               >
-                <div className="flex items-start gap-3" data-oid="h2d-i05">
+                <div className="flex items-start gap-3" data-oid="s0viqe4">
                   <MapPin
                     className="h-5 w-5 text-blue-600 mt-0.5"
-                    data-oid="kbdjg2y"
+                    data-oid="e70.39z"
                   />
 
-                  <div data-oid="n9vpefv">
+                  <div data-oid="7tu:hzb">
                     <h3
                       className="font-semibold text-blue-900 mb-1"
-                      data-oid="oy4krra"
+                      data-oid="ds9_v.:"
                     >
                       Shipping Address
                     </h3>
-                    <p className="text-blue-800" data-oid="j149iy1">
+                    <p className="text-blue-800" data-oid="v2nss9q">
                       {orderDetails.customerInfo.address}
                     </p>
                     <p
                       className="text-blue-700 text-sm mt-1"
-                      data-oid="0f-nhts"
+                      data-oid="4nlw045"
                     >
                       Phone: {orderDetails.customerInfo.phone}
                     </p>
@@ -446,27 +446,27 @@ export default function OrderReceivedPage() {
 
               <div
                 className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
-                data-oid="xgxui6-"
+                data-oid="y0-7c16"
               >
                 <div
                   className="flex items-center justify-between"
-                  data-oid="t3nbsa6"
+                  data-oid="h8mu6b4"
                 >
-                  <div className="flex-1" data-oid="ydacnm.">
+                  <div className="flex-1" data-oid="s9l:qc6">
                     <h3
                       className="font-semibold text-gray-900 mb-1"
-                      data-oid="gp1543i"
+                      data-oid="lcwh.ei"
                     >
                       Tracking Number
                     </h3>
                     {orderDetails.trackingNumber ? (
                       <div
                         className="flex items-center gap-3"
-                        data-oid="_mxne-o"
+                        data-oid="euwfcqk"
                       >
                         <p
                           className="text-gray-600 font-mono text-lg"
-                          data-oid="qyi77z1"
+                          data-oid="h8jeswd"
                         >
                           {orderDetails.trackingNumber}
                         </p>
@@ -477,17 +477,17 @@ export default function OrderReceivedPage() {
                             )
                           }
                           className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2 text-sm"
-                          data-oid="iy..kj2"
+                          data-oid="5pgkkxc"
                         >
                           <ExternalLink
                             className="h-4 w-4"
-                            data-oid="30cxr1v"
+                            data-oid="ddw77tq"
                           />
                           Track Package
                         </button>
                       </div>
                     ) : (
-                      <p className="text-gray-500 italic" data-oid="kd9mtld">
+                      <p className="text-gray-500 italic" data-oid="r4kt_hm">
                         Tracking number will be updated once the order is ready
                         to ship.
                       </p>
@@ -498,10 +498,10 @@ export default function OrderReceivedPage() {
 
               <div
                 className="flex items-center gap-2 text-sm text-gray-600"
-                data-oid="x--ezl."
+                data-oid="c.oi7vm"
               >
-                <Clock className="h-4 w-4" data-oid="q:nfo93" />
-                <span data-oid="itrjttl">
+                <Clock className="h-4 w-4" data-oid="m:1kr4z" />
+                <span data-oid="0bpgiyg">
                   Estimated delivery: 3-5 business days
                 </span>
               </div>
@@ -512,17 +512,17 @@ export default function OrderReceivedPage() {
           {courseItems.length > 0 && (
             <div
               className="bg-white rounded-lg shadow-sm p-6 mb-6"
-              data-oid="lyb22sf"
+              data-oid="jxyu5x6"
             >
-              <div className="flex items-center gap-3 mb-4" data-oid="envgtrh">
+              <div className="flex items-center gap-3 mb-4" data-oid="1v6tsgx">
                 <Download
                   className="h-6 w-6 text-green-600"
-                  data-oid="cgdinx7"
+                  data-oid="8vyt5l6"
                 />
 
                 <h2
                   className="text-xl font-bold text-gray-900"
-                  data-oid="zr4vqjz"
+                  data-oid="qf-c8tt"
                 >
                   Digital Courses - Ready to Access
                 </h2>
@@ -530,22 +530,22 @@ export default function OrderReceivedPage() {
 
               <div
                 className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4"
-                data-oid="2eb9ttu"
+                data-oid="4.9rzws"
               >
-                <div className="flex items-start gap-3" data-oid="97g_jmy">
+                <div className="flex items-start gap-3" data-oid=":vc693z">
                   <CheckCircle
                     className="h-5 w-5 text-green-600 mt-0.5"
-                    data-oid="zvfz:ec"
+                    data-oid="j_yyu88"
                   />
 
-                  <div data-oid="8xj9ioh">
+                  <div data-oid="z2je:93">
                     <h3
                       className="font-semibold text-green-900 mb-1"
-                      data-oid="n9pw:r3"
+                      data-oid="byfr_2o"
                     >
                       Courses Available Now
                     </h3>
-                    <p className="text-green-800" data-oid="88ox.kp">
+                    <p className="text-green-800" data-oid="pmo135h">
                       Your digital courses are now available in your profile.
                       Start learning immediately!
                     </p>
@@ -555,23 +555,23 @@ export default function OrderReceivedPage() {
 
               <div
                 className="flex flex-col sm:flex-row gap-3"
-                data-oid="ddcwm2k"
+                data-oid="-g__d8x"
               >
                 <button
                   onClick={() => router.push("/profile/completed-courses")}
                   className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                  data-oid="9rf4i:9"
+                  data-oid="-5u1:60"
                 >
-                  <User className="h-4 w-4" data-oid="pv-t73v" />
+                  <User className="h-4 w-4" data-oid="7o0nah6" />
                   Go to My Courses
                 </button>
 
                 <button
                   onClick={() => router.push("/profile")}
                   className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                  data-oid="snbaze6"
+                  data-oid="_b0kq6h"
                 >
-                  <ArrowRight className="h-4 w-4" data-oid="o1wahj:" />
+                  <ArrowRight className="h-4 w-4" data-oid="9ix:qaw" />
                   View Profile
                 </button>
               </div>
@@ -581,12 +581,12 @@ export default function OrderReceivedPage() {
           {/* Action Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-oid="7k6oe5e"
+            data-oid="135-s44"
           >
             <button
               onClick={() => router.push("/profile/purchase-history")}
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
-              data-oid="_n38nvm"
+              data-oid="-048fg2"
             >
               View Order History
             </button>
@@ -594,7 +594,7 @@ export default function OrderReceivedPage() {
             <button
               onClick={() => router.push("/contact")}
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
-              data-oid="p8hzj7."
+              data-oid="d953s5w"
             >
               Contact Support
             </button>
@@ -602,20 +602,20 @@ export default function OrderReceivedPage() {
             <button
               onClick={() => router.push("/courses")}
               className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors whitespace-nowrap"
-              data-oid="yuky43x"
+              data-oid="39v2uxa"
             >
               Continue Browsing Courses
             </button>
           </div>
 
           {/* Help Section */}
-          <div className="mt-8 text-center" data-oid=":wowfap">
-            <p className="text-sm text-gray-500" data-oid="gm37qia">
+          <div className="mt-8 text-center" data-oid="gip5oyi">
+            <p className="text-sm text-gray-500" data-oid="wwp:gwi">
               Questions about your order?{" "}
               <button
                 onClick={() => router.push("/contact")}
                 className="text-[#123b79] hover:underline font-medium"
-                data-oid="wg96jc5"
+                data-oid="v-ofo0e"
               >
                 Contact our support team
               </button>{" "}
@@ -623,7 +623,7 @@ export default function OrderReceivedPage() {
               <button
                 onClick={() => router.push("/help")}
                 className="text-[#123b79] hover:underline font-medium"
-                data-oid="f82q31z"
+                data-oid=":97wr16"
               >
                 help center
               </button>

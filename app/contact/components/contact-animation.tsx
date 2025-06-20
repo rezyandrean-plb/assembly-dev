@@ -7,10 +7,10 @@ export default function ContactAnimation() {
   return (
     <div
       className="relative w-full h-full flex items-center justify-center overflow-hidden"
-      data-oid="-51ww84"
+      data-oid="2_e80kk"
     >
       {/* Background elements */}
-      <div className="absolute inset-0" data-oid="16b.m9r">
+      <div className="absolute inset-0" data-oid="v8awqia">
         <motion.div
           className="absolute top-10 left-10 w-32 h-32 rounded-full bg-blue-100 opacity-40"
           animate={{
@@ -21,7 +21,7 @@ export default function ContactAnimation() {
             repeat: Number.POSITIVE_INFINITY,
             repeatType: "reverse",
           }}
-          data-oid="_s0-l5a"
+          data-oid=":4ylprj"
         />
 
         <motion.div
@@ -35,7 +35,7 @@ export default function ContactAnimation() {
             repeatType: "reverse",
             delay: 1,
           }}
-          data-oid="w7pq7fe"
+          data-oid=":_1fhqp"
         />
 
         <motion.div
@@ -49,7 +49,7 @@ export default function ContactAnimation() {
             repeatType: "reverse",
             delay: 2,
           }}
-          data-oid="di5p2c."
+          data-oid="31.:np2"
         />
       </div>
 
@@ -59,25 +59,25 @@ export default function ContactAnimation() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        data-oid="3-rh43."
+        data-oid="qur4x4a"
       >
         {/* Phone notch */}
         <div
           className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-xl z-10"
-          data-oid="qt8pmpl"
+          data-oid="i:9g1hy"
         ></div>
 
         {/* Screen content */}
         <div
           className="w-full h-full bg-gradient-to-b from-blue-50 to-white p-4 pt-8 flex flex-col"
-          data-oid="h1td8l3"
+          data-oid="qv_wl7b"
         >
           {/* App header */}
-          <div className="text-center mb-4" data-oid="591k96b">
-            <h3 className="font-bold text-blue-900" data-oid="j5vo6rr">
+          <div className="text-center mb-4" data-oid="r4brtz7">
+            <h3 className="font-bold text-blue-900" data-oid="t2aje_p">
               Assembly SG
             </h3>
-            <p className="text-xs text-gray-500" data-oid="chom.e0">
+            <p className="text-xs text-gray-500" data-oid="q7:ezuc">
               Contact Us
             </p>
           </div>
@@ -85,16 +85,16 @@ export default function ContactAnimation() {
           {/* Messages */}
           <div
             className="flex-1 overflow-hidden flex flex-col justify-end space-y-3"
-            data-oid="5s-hada"
+            data-oid="ayykc8y"
           >
             <motion.div
               className="bg-blue-100 rounded-tl-xl rounded-tr-xl rounded-br-xl p-3 ml-auto max-w-[80%] shadow-sm"
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              data-oid="4g1:68g"
+              data-oid="7b:e_cr"
             >
-              <p className="text-xs text-gray-700" data-oid="uzgokb0">
+              <p className="text-xs text-gray-700" data-oid="v5di-_m">
                 Hello! I'm interested in property investment courses.
               </p>
             </motion.div>
@@ -104,9 +104,9 @@ export default function ContactAnimation() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
-              data-oid="4hti1qu"
+              data-oid="osm0-ey"
             >
-              <p className="text-xs text-white" data-oid="996xwwl">
+              <p className="text-xs text-white" data-oid="8fqp:8o">
                 Hi there! We'd be happy to help you with our property investment
                 courses.
               </p>
@@ -117,9 +117,9 @@ export default function ContactAnimation() {
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.5, duration: 0.5 }}
-              data-oid="by7xx5f"
+              data-oid="d7.-thg"
             >
-              <p className="text-xs text-gray-700" data-oid=".7_f3hx">
+              <p className="text-xs text-gray-700" data-oid="axchf7v">
                 Great! When can we schedule a consultation?
               </p>
             </motion.div>
@@ -129,9 +129,9 @@ export default function ContactAnimation() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 2, duration: 0.5 }}
-              data-oid="qqstz0:"
+              data-oid="nuf6z5l"
             >
-              <p className="text-xs text-white" data-oid="w4vhst5">
+              <p className="text-xs text-white" data-oid=":_i4sie">
                 We're available Mon-Fri, 9am-6pm. Would you like us to call you?
               </p>
             </motion.div>
@@ -141,9 +141,9 @@ export default function ContactAnimation() {
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 2.5, duration: 0.5 }}
-              data-oid="zh7xijz"
+              data-oid="yn3lnwn"
             >
-              <p className="text-xs text-gray-700" data-oid=":jmesx0">
+              <p className="text-xs text-gray-700" data-oid="kh5ds9d">
                 Yes, please call me tomorrow at 10am.
               </p>
             </motion.div>
@@ -159,9 +159,9 @@ export default function ContactAnimation() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatDelay: 1,
               }}
-              data-oid="vx5ga2b"
+              data-oid="9tazyv6"
             >
-              <div className="flex space-x-1" data-oid="movlmrp">
+              <div className="flex space-x-1" data-oid="03bpgw:">
                 <motion.div
                   className="w-2 h-2 bg-gray-500 rounded-full"
                   animate={{ y: [0, -4, 0] }}
@@ -171,7 +171,7 @@ export default function ContactAnimation() {
                     repeatType: "loop",
                     delay: 0,
                   }}
-                  data-oid="jm3o-u:"
+                  data-oid="ukkd7s0"
                 />
 
                 <motion.div
@@ -183,7 +183,7 @@ export default function ContactAnimation() {
                     repeatType: "loop",
                     delay: 0.2,
                   }}
-                  data-oid="tad8t2:"
+                  data-oid="vfga73r"
                 />
 
                 <motion.div
@@ -195,7 +195,7 @@ export default function ContactAnimation() {
                     repeatType: "loop",
                     delay: 0.4,
                   }}
-                  data-oid="jmo25._"
+                  data-oid="qve4j.n"
                 />
               </div>
             </motion.div>
@@ -204,21 +204,21 @@ export default function ContactAnimation() {
           {/* Message input */}
           <div
             className="mt-3 bg-white rounded-full border border-gray-300 flex items-center p-1 shadow-sm"
-            data-oid="necy4u-"
+            data-oid="u6j6uqs"
           >
-            <div className="flex-1 px-2" data-oid="qpog2fp">
+            <div className="flex-1 px-2" data-oid="w66ooyq">
               <div
                 className="h-5 w-full bg-gray-100 rounded-full"
-                data-oid="an:0lm:"
+                data-oid="xghylab"
               ></div>
             </div>
             <motion.div
               className="w-7 h-7 bg-blue-600 rounded-full flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              data-oid="wcz5g7."
+              data-oid="yi44wha"
             >
-              <Send className="h-3 w-3 text-white" data-oid="y0w8wc1" />
+              <Send className="h-3 w-3 text-white" data-oid="i.pr.wj" />
             </motion.div>
           </div>
         </div>
@@ -231,9 +231,9 @@ export default function ContactAnimation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
         whileHover={{ y: -5, scale: 1.1 }}
-        data-oid="e02b0h."
+        data-oid="bfrl6fd"
       >
-        <Mail className="h-6 w-6 text-blue-600" data-oid="wo4veg." />
+        <Mail className="h-6 w-6 text-blue-600" data-oid="8b9bmxb" />
       </motion.div>
 
       <motion.div
@@ -242,9 +242,9 @@ export default function ContactAnimation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         whileHover={{ y: -5, scale: 1.1 }}
-        data-oid="i8p04eh"
+        data-oid="mticyg5"
       >
-        <Phone className="h-6 w-6 text-blue-600" data-oid="6pxvq9b" />
+        <Phone className="h-6 w-6 text-blue-600" data-oid="6plss2-" />
       </motion.div>
 
       <motion.div
@@ -253,9 +253,9 @@ export default function ContactAnimation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
         whileHover={{ y: -5, scale: 1.1 }}
-        data-oid=":x2_5-_"
+        data-oid="-79k4fv"
       >
-        <MessageSquare className="h-6 w-6 text-blue-600" data-oid="ukae5oc" />
+        <MessageSquare className="h-6 w-6 text-blue-600" data-oid="f7e345y" />
       </motion.div>
     </div>
   );

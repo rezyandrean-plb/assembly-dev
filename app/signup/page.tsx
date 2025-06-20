@@ -171,37 +171,37 @@ export default function SignupPage() {
     return (
       <div
         className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex items-center justify-center p-8"
-        data-oid=".dk1.hm"
+        data-oid="44bv7-o"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white rounded-2xl shadow-xl p-8 text-center max-w-md w-full"
-          data-oid="9lwo_t3"
+          data-oid="hc9_jnl"
         >
           <div
             className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6"
-            data-oid="wl4cm58"
+            data-oid="8uvldna"
           >
-            <Check className="w-8 h-8 text-success" data-oid="b9:ozt4" />
+            <Check className="w-8 h-8 text-success" data-oid="r9fae7b" />
           </div>
           <h2
             className="text-2xl font-bold text-neutral-900 mb-4"
-            data-oid="bti8bdz"
+            data-oid="freckr3"
           >
             Welcome to Assembly.sg!
           </h2>
-          <p className="text-neutral-600 mb-6" data-oid="fnj54th">
+          <p className="text-neutral-600 mb-6" data-oid="x8mviy6">
             Your account has been created successfully. You're being redirected
             to get started with your investment journey.
           </p>
           <div
             className="w-full bg-neutral-200 rounded-full h-2"
-            data-oid="p.dw.0s"
+            data-oid="8-ifh-e"
           >
             <div
               className="bg-success h-2 rounded-full animate-[progress_3s_ease-in-out]"
-              data-oid="1z6y.td"
+              data-oid="dziuctu"
             ></div>
           </div>
         </motion.div>
@@ -212,26 +212,26 @@ export default function SignupPage() {
   return (
     <div
       className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex"
-      data-oid="f33.eta"
+      data-oid="ltuvq0l"
     >
       {/* Left Side - Feature Showcase */}
       <div
         className="hidden lg:flex flex-1 bg-primary text-white p-12 items-center justify-center relative overflow-hidden"
-        data-oid="eysyd3k"
+        data-oid="u_b0s:3"
       >
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10" data-oid="5u_nlsw">
+        <div className="absolute inset-0 opacity-10" data-oid=":d0uez7">
           <div
             className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-xl"
-            data-oid="e2idclz"
+            data-oid="5a5lh-7"
           ></div>
           <div
             className="absolute bottom-20 right-20 w-40 h-40 bg-accent rounded-full blur-xl"
-            data-oid="iieokow"
+            data-oid="tz8ogiz"
           ></div>
           <div
             className="absolute top-1/2 left-1/4 w-24 h-24 bg-secondary rounded-full blur-xl"
-            data-oid="j:h.v69"
+            data-oid="-haw6jd"
           ></div>
         </div>
 
@@ -240,63 +240,63 @@ export default function SignupPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 max-w-md"
-          data-oid=".v7ux5z"
+          data-oid="v0jibm7"
         >
-          <h2 className="text-4xl font-bold mb-6" data-oid="_nlpyhu">
+          <h2 className="text-4xl font-bold mb-6" data-oid="pf8xno8">
             Start Your Investment Journey Today
           </h2>
-          <p className="text-xl text-white/80 mb-8" data-oid="sb_4w87">
+          <p className="text-xl text-white/80 mb-8" data-oid="ho7eqk:">
             Join thousands of successful investors and unlock your potential in
             real estate investment.
           </p>
 
-          <div className="space-y-6" data-oid=":4uk39e">
-            <div className="flex items-center gap-4" data-oid="74ze8q.">
+          <div className="space-y-6" data-oid="tc8kr6k">
+            <div className="flex items-center gap-4" data-oid="cjlqwwt">
               <div
                 className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
-                data-oid="ykavub9"
+                data-oid="ofchmrc"
               >
-                <Award className="w-6 h-6" data-oid="0qs06xb" />
+                <Award className="w-6 h-6" data-oid="1zmlwdl" />
               </div>
-              <div data-oid="t:wq.xu">
-                <h3 className="font-semibold" data-oid="fa4lwuq">
+              <div data-oid=":7bw28e">
+                <h3 className="font-semibold" data-oid="byg80m-">
                   Expert Certification
                 </h3>
-                <p className="text-white/70" data-oid="-4.31j5">
+                <p className="text-white/70" data-oid="e18fh_n">
                   Get certified by industry experts
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4" data-oid="c5gmu8h">
+            <div className="flex items-center gap-4" data-oid="c2odib_">
               <div
                 className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
-                data-oid="x3rpdqa"
+                data-oid="z5qc8gj"
               >
-                <Shield className="w-6 h-6" data-oid="4okrcmw" />
+                <Shield className="w-6 h-6" data-oid="pogdfdi" />
               </div>
-              <div data-oid="uintas2">
-                <h3 className="font-semibold" data-oid="9:ahbup">
+              <div data-oid="g4:d-zb">
+                <h3 className="font-semibold" data-oid="mx78w1_">
                   Secure Learning
                 </h3>
-                <p className="text-white/70" data-oid="vq1u7gl">
+                <p className="text-white/70" data-oid="zrqbwyo">
                   Safe and trusted platform
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4" data-oid=".2prj7t">
+            <div className="flex items-center gap-4" data-oid="e45tf57">
               <div
                 className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center"
-                data-oid="tokd45r"
+                data-oid="4zozsoz"
               >
-                <Globe className="w-6 h-6" data-oid=":j92n2-" />
+                <Globe className="w-6 h-6" data-oid="831az7s" />
               </div>
-              <div data-oid="m6sm8zm">
-                <h3 className="font-semibold" data-oid="140.5r6">
+              <div data-oid="ouhg_2j">
+                <h3 className="font-semibold" data-oid="px2ggch">
                   Global Community
                 </h3>
-                <p className="text-white/70" data-oid="hitiv3:">
+                <p className="text-white/70" data-oid="4avfmjw">
                   Connect with investors worldwide
                 </p>
               </div>
@@ -308,41 +308,41 @@ export default function SignupPage() {
       {/* Right Side - Signup Form */}
       <div
         className="flex-1 flex items-center justify-center p-8"
-        data-oid="jl.zpcq"
+        data-oid="puqd65m"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="w-full max-w-md"
-          data-oid="ho1rr2-"
+          data-oid="yu3p946"
         >
           {/* Logo */}
-          <div className="text-center mb-8" data-oid="fcjokbf">
+          <div className="text-center mb-8" data-oid="vsd9xjr">
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-2xl font-bold text-primary"
-              data-oid="brqq1nc"
+              data-oid="0m7h8lo"
             >
               <img
                 src="/images/assembly-logo.png"
                 alt="Assembly Logo"
                 className="w-40 h-auto"
                 style={{ maxHeight: "48px" }}
-                data-oid="462b426"
+                data-oid="m3r:84y"
               />
             </Link>
           </div>
 
           {/* Welcome Message */}
-          <div className="text-center mb-8" data-oid="r42v7cm">
+          <div className="text-center mb-8" data-oid="6xki7jf">
             <h1
               className="text-3xl font-bold text-neutral-900 mb-2"
-              data-oid="l0ykbwk"
+              data-oid="xu1:huq"
             >
               Create Your Account
             </h1>
-            <p className="text-neutral-600" data-oid="l4d07ka">
+            <p className="text-neutral-600" data-oid="uulmrd4">
               Start your real estate investment journey
             </p>
           </div>
@@ -351,34 +351,34 @@ export default function SignupPage() {
           <button
             type="button"
             className="w-full flex items-center justify-center gap-3 p-4 border-2 border-neutral-200 rounded-xl hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-200 mb-6"
-            data-oid="4ozsily"
+            data-oid="-c6axof"
           >
-            <svg className="w-5 h-5" viewBox="0 0 24 24" data-oid="b13j5z3">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" data-oid="0pu9xqr">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                data-oid="ojpsgr-"
+                data-oid="dg9p4h3"
               />
 
               <path
                 fill="#34A853"
                 d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                data-oid="ai5kfe8"
+                data-oid="fn11fz1"
               />
 
               <path
                 fill="#FBBC05"
                 d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                data-oid="cp.7qgs"
+                data-oid="5x5aw37"
               />
 
               <path
                 fill="#EA4335"
                 d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                data-oid=":.l:k0o"
+                data-oid="a:tz76x"
               />
             </svg>
-            <span className="font-medium text-neutral-700" data-oid="m1yuw.4">
+            <span className="font-medium text-neutral-700" data-oid="zc7-66j">
               Continue with Google
             </span>
           </button>
@@ -386,15 +386,15 @@ export default function SignupPage() {
           {/* Divider */}
           <div
             className="relative flex items-center justify-center mb-6"
-            data-oid="v:2c3e0"
+            data-oid="vrup6lu"
           >
             <div
               className="border-t border-neutral-200 w-full"
-              data-oid="asicewt"
+              data-oid="nr.5h03"
             ></div>
             <span
               className="bg-white px-4 text-sm text-neutral-500 font-medium"
-              data-oid="i3bqk6y"
+              data-oid="q6sqmsm"
             >
               Or create with email
             </span>
@@ -406,7 +406,7 @@ export default function SignupPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-sm mb-6"
-              data-oid="oh:o.wi"
+              data-oid="0n7ml0z"
             >
               {errors.general}
             </motion.div>
@@ -416,21 +416,21 @@ export default function SignupPage() {
           <form
             onSubmit={handleSubmit}
             className="space-y-4"
-            data-oid="xb4eryu"
+            data-oid="_lu--2e"
           >
             {/* Name Fields */}
-            <div className="grid grid-cols-2 gap-4" data-oid="ie10p7j">
-              <div data-oid="::y1oot">
+            <div className="grid grid-cols-2 gap-4" data-oid="3c9z6fd">
+              <div data-oid="t4618ko">
                 <label
                   className="block text-sm font-medium text-neutral-700 mb-2"
-                  data-oid="qckfecs"
+                  data-oid="ky_4h87"
                 >
                   First Name
                 </label>
-                <div className="relative" data-oid="b-80dln">
+                <div className="relative" data-oid="aq2_tmj">
                   <User
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                    data-oid="f14advq"
+                    data-oid="imzq7gf"
                   />
 
                   <input
@@ -441,27 +441,27 @@ export default function SignupPage() {
                     className={`w-full pl-12 pr-4 py-3 border ${errors.firstName ? "border-red-300" : "border-neutral-200"} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                     placeholder="John"
                     required
-                    data-oid="xdpxetq"
+                    data-oid=":8gfvx0"
                   />
                 </div>
                 {errors.firstName && (
-                  <p className="mt-1 text-sm text-red-600" data-oid="bec-phf">
+                  <p className="mt-1 text-sm text-red-600" data-oid="pbn.lg6">
                     {errors.firstName}
                   </p>
                 )}
               </div>
 
-              <div data-oid="8s7qxyh">
+              <div data-oid="uahqxli">
                 <label
                   className="block text-sm font-medium text-neutral-700 mb-2"
-                  data-oid="lh-z9uu"
+                  data-oid="-j4r17l"
                 >
                   Last Name
                 </label>
-                <div className="relative" data-oid="swwm6qo">
+                <div className="relative" data-oid="1sodguh">
                   <User
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                    data-oid="1.6p.w:"
+                    data-oid="shefdq."
                   />
 
                   <input
@@ -472,11 +472,11 @@ export default function SignupPage() {
                     className={`w-full pl-12 pr-4 py-3 border ${errors.lastName ? "border-red-300" : "border-neutral-200"} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                     placeholder="Doe"
                     required
-                    data-oid="w7a0idg"
+                    data-oid="ev-stef"
                   />
                 </div>
                 {errors.lastName && (
-                  <p className="mt-1 text-sm text-red-600" data-oid="07e1s7q">
+                  <p className="mt-1 text-sm text-red-600" data-oid="gsre8_p">
                     {errors.lastName}
                   </p>
                 )}
@@ -484,17 +484,17 @@ export default function SignupPage() {
             </div>
 
             {/* Email Field */}
-            <div data-oid="ldc9mkg">
+            <div data-oid="m6a2uoa">
               <label
                 className="block text-sm font-medium text-neutral-700 mb-2"
-                data-oid="b_078w:"
+                data-oid="8n1tp5:"
               >
                 Email Address
               </label>
-              <div className="relative" data-oid="h.ho6ol">
+              <div className="relative" data-oid="789v_ij">
                 <Mail
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                  data-oid="1fcjuxl"
+                  data-oid="tmc8gp-"
                 />
 
                 <input
@@ -505,50 +505,50 @@ export default function SignupPage() {
                   className={`w-full pl-12 pr-4 py-3 border ${errors.email ? "border-red-300" : "border-neutral-200"} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                   placeholder="john@example.com"
                   required
-                  data-oid="g2f3xzi"
+                  data-oid="o_nkila"
                 />
               </div>
               {errors.email && (
-                <p className="mt-1 text-sm text-red-600" data-oid="3-rtcuk">
+                <p className="mt-1 text-sm text-red-600" data-oid="iqmtza0">
                   {errors.email}
                 </p>
               )}
             </div>
 
             {/* Phone Field */}
-            <div data-oid="-yd60jm">
+            <div data-oid="36iq:vs">
               <label
                 className="block text-sm font-medium text-neutral-700 mb-2"
-                data-oid="kbtt.dc"
+                data-oid="6f4qfvz"
               >
                 Phone Number
               </label>
-              <div className="flex" data-oid="ot4fkqe">
-                <div className="relative" data-oid="pye1vvv">
+              <div className="flex" data-oid="jp_t6g8">
+                <div className="relative" data-oid="o1ic3fq">
                   <button
                     type="button"
                     className={`flex items-center justify-between px-4 py-3 border ${errors.phoneNumber ? "border-red-300" : "border-neutral-200"} border-r-0 rounded-l-xl bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary/20 w-[120px]`}
                     onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                    data-oid="h_hc1ag"
+                    data-oid="da641j4"
                   >
-                    <span className="flex items-center" data-oid="gd_74qt">
-                      <span className="mr-2 text-lg" data-oid="r_c9:._">
+                    <span className="flex items-center" data-oid="88kvcql">
+                      <span className="mr-2 text-lg" data-oid="wnduczo">
                         {selectedCountry.flag}
                       </span>
-                      <span className="text-sm" data-oid="dob6bcp">
+                      <span className="text-sm" data-oid="_6sog-s">
                         {selectedCountry.dialCode}
                       </span>
                     </span>
                     <ChevronDown
                       className="h-4 w-4 text-neutral-500"
-                      data-oid="3vzlmut"
+                      data-oid="_77nrz4"
                     />
                   </button>
 
                   {showCountryDropdown && (
                     <div
                       className="absolute z-10 mt-1 w-[240px] bg-white shadow-lg max-h-60 rounded-xl py-2 text-base overflow-auto border border-neutral-200"
-                      data-oid="-ucznj7"
+                      data-oid="o4_awra"
                     >
                       {countryCodes.map((country) => (
                         <button
@@ -558,15 +558,15 @@ export default function SignupPage() {
                           onClick={() =>
                             handleCountryCodeSelect(country.dialCode)
                           }
-                          data-oid=".d:v572"
+                          data-oid="36z8224"
                         >
-                          <span className="mr-3 text-lg" data-oid="uzxa5:l">
+                          <span className="mr-3 text-lg" data-oid="oskw4d8">
                             {country.flag}
                           </span>
-                          <span className="mr-3 font-medium" data-oid="8o4f6xs">
+                          <span className="mr-3 font-medium" data-oid="ymtyw3p">
                             {country.dialCode}
                           </span>
-                          <span className="text-neutral-500" data-oid="d9b98eh">
+                          <span className="text-neutral-500" data-oid="99yv9cu">
                             {country.name}
                           </span>
                         </button>
@@ -575,10 +575,10 @@ export default function SignupPage() {
                   )}
                 </div>
 
-                <div className="relative flex-1" data-oid="ivhdj5e">
+                <div className="relative flex-1" data-oid="pcp.k70">
                   <Phone
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                    data-oid="idnu6dy"
+                    data-oid="i9g0t5y"
                   />
 
                   <input
@@ -589,30 +589,30 @@ export default function SignupPage() {
                     className={`w-full pl-12 pr-4 py-3 border ${errors.phoneNumber ? "border-red-300" : "border-neutral-200"} rounded-r-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                     placeholder="81234567"
                     required
-                    data-oid="mgx9nzm"
+                    data-oid="eli2a.e"
                   />
                 </div>
               </div>
               {errors.phoneNumber && (
-                <p className="mt-1 text-sm text-red-600" data-oid="06zxv67">
+                <p className="mt-1 text-sm text-red-600" data-oid="v_jpjea">
                   {errors.phoneNumber}
                 </p>
               )}
             </div>
 
             {/* Password Fields */}
-            <div className="grid grid-cols-1 gap-4" data-oid="8-cb9k.">
-              <div data-oid="ar:jit:">
+            <div className="grid grid-cols-1 gap-4" data-oid="cb.j3eb">
+              <div data-oid="ioi0.9k">
                 <label
                   className="block text-sm font-medium text-neutral-700 mb-2"
-                  data-oid="0k9w0no"
+                  data-oid="a4yw0da"
                 >
                   Password
                 </label>
-                <div className="relative" data-oid="-jvk7d9">
+                <div className="relative" data-oid="nwnp:m1">
                   <Lock
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                    data-oid="85tdt1j"
+                    data-oid="6b-bfll"
                   />
 
                   <input
@@ -623,40 +623,40 @@ export default function SignupPage() {
                     className={`w-full pl-12 pr-12 py-3 border ${errors.password ? "border-red-300" : "border-neutral-200"} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                     placeholder="Create a strong password"
                     required
-                    data-oid="n0ytkyb"
+                    data-oid="gyg09je"
                   />
 
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600"
-                    data-oid="47m:fn-"
+                    data-oid="gitwt2m"
                   >
                     {showPassword ? (
-                      <EyeOff className="w-5 h-5" data-oid="s_eik28" />
+                      <EyeOff className="w-5 h-5" data-oid="jr921g7" />
                     ) : (
-                      <Eye className="w-5 h-5" data-oid="deil9g." />
+                      <Eye className="w-5 h-5" data-oid="45uyixe" />
                     )}
                   </button>
                 </div>
                 {errors.password && (
-                  <p className="mt-1 text-sm text-red-600" data-oid="beq.j5c">
+                  <p className="mt-1 text-sm text-red-600" data-oid="4cw-yby">
                     {errors.password}
                   </p>
                 )}
               </div>
 
-              <div data-oid="xa:h0_8">
+              <div data-oid="ja38svr">
                 <label
                   className="block text-sm font-medium text-neutral-700 mb-2"
-                  data-oid="su364bz"
+                  data-oid="btrh.5p"
                 >
                   Confirm Password
                 </label>
-                <div className="relative" data-oid="z8we4ly">
+                <div className="relative" data-oid="nv:pu3i">
                   <Lock
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400"
-                    data-oid="_nqe_yg"
+                    data-oid="fvvtj2g"
                   />
 
                   <input
@@ -667,24 +667,24 @@ export default function SignupPage() {
                     className={`w-full pl-12 pr-12 py-3 border ${errors.confirmPassword ? "border-red-300" : "border-neutral-200"} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200`}
                     placeholder="Confirm your password"
                     required
-                    data-oid="bkj:mi2"
+                    data-oid="rap7sq-"
                   />
 
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600"
-                    data-oid="j1:x2p."
+                    data-oid="kpv2wio"
                   >
                     {showConfirmPassword ? (
-                      <EyeOff className="w-5 h-5" data-oid="8l9fo:a" />
+                      <EyeOff className="w-5 h-5" data-oid="d_nzi0j" />
                     ) : (
-                      <Eye className="w-5 h-5" data-oid="75d0_h0" />
+                      <Eye className="w-5 h-5" data-oid="623hds." />
                     )}
                   </button>
                 </div>
                 {errors.confirmPassword && (
-                  <p className="mt-1 text-sm text-red-600" data-oid="5zjmitd">
+                  <p className="mt-1 text-sm text-red-600" data-oid="vz-ay.e">
                     {errors.confirmPassword}
                   </p>
                 )}
@@ -692,23 +692,23 @@ export default function SignupPage() {
             </div>
 
             {/* Terms Agreement */}
-            <div data-oid="y3bks41">
-              <label className="flex items-start gap-3" data-oid="bzxhgto">
+            <div data-oid="u0d255r">
+              <label className="flex items-start gap-3" data-oid="x83p5zo">
                 <input
                   type="checkbox"
                   name="agreeToTerms"
                   checked={formData.agreeToTerms}
                   onChange={handleChange}
                   className="w-5 h-5 text-primary border-neutral-300 rounded focus:ring-primary/20 mt-0.5"
-                  data-oid="7uep2po"
+                  data-oid="hj0.m89"
                 />
 
-                <span className="text-sm text-neutral-600" data-oid="0s4cav.">
+                <span className="text-sm text-neutral-600" data-oid="t1-q75w">
                   I agree to the{" "}
                   <Link
                     href="/terms"
                     className="text-primary hover:text-primary-dark font-medium"
-                    data-oid="iq14qso"
+                    data-oid="pb5dih2"
                   >
                     Terms of Service
                   </Link>{" "}
@@ -716,14 +716,14 @@ export default function SignupPage() {
                   <Link
                     href="/privacy"
                     className="text-primary hover:text-primary-dark font-medium"
-                    data-oid="_cm_7:4"
+                    data-oid="o78.3ck"
                   >
                     Privacy Policy
                   </Link>
                 </span>
               </label>
               {errors.agreeToTerms && (
-                <p className="mt-1 text-sm text-red-600" data-oid="dv2u8y8">
+                <p className="mt-1 text-sm text-red-600" data-oid="48of3ab">
                   {errors.agreeToTerms}
                 </p>
               )}
@@ -734,7 +734,7 @@ export default function SignupPage() {
               type="submit"
               disabled={isSubmitting}
               className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white font-semibold py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-              data-oid="suv32h3"
+              data-oid="mtyp-g1"
             >
               {isSubmitting ? (
                 <>
@@ -742,7 +742,7 @@ export default function SignupPage() {
                     className="animate-spin w-5 h-5"
                     fill="none"
                     viewBox="0 0 24 24"
-                    data-oid=":oj35lu"
+                    data-oid="burxf8o"
                   >
                     <circle
                       className="opacity-25"
@@ -751,13 +751,13 @@ export default function SignupPage() {
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
-                      data-oid="rz2:vkd"
+                      data-oid="g-93bo4"
                     ></circle>
                     <path
                       className="opacity-75"
                       fill="currentColor"
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      data-oid="ua3oo0a"
+                      data-oid=".toult6"
                     ></path>
                   </svg>
                   Creating account...
@@ -765,20 +765,20 @@ export default function SignupPage() {
               ) : (
                 <>
                   Create Account
-                  <ArrowRight className="w-5 h-5" data-oid="vo4rkdh" />
+                  <ArrowRight className="w-5 h-5" data-oid="zn0ikxv" />
                 </>
               )}
             </button>
           </form>
 
           {/* Login Link */}
-          <div className="text-center mt-6" data-oid="22g-d2:">
-            <p className="text-neutral-600" data-oid="pw7y2dt">
+          <div className="text-center mt-6" data-oid="edqmi2u">
+            <p className="text-neutral-600" data-oid=".:tkqbn">
               Already have an account?{" "}
               <Link
                 href="/login"
                 className="text-primary hover:text-primary-dark font-semibold"
-                data-oid="bvdrmrk"
+                data-oid="z38-irr"
               >
                 Sign in
               </Link>

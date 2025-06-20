@@ -24,52 +24,52 @@ export default function CourseCard({ course, delay }: CourseCardProps) {
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
       whileHover={{ y: -10 }}
-      data-oid="wddehoy"
+      data-oid="lmgsqtk"
     >
       <div
         className="bg-gray-800 rounded-xl overflow-hidden h-full flex flex-col"
-        data-oid="s63rnz6"
+        data-oid="ktmr2s7"
       >
-        <div className="relative h-48 overflow-hidden" data-oid="kbc13er">
+        <div className="relative h-48 overflow-hidden" data-oid=":5b4r57">
           <Image
             src={course.image || "/placeholder.svg"}
             alt={course.title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
-            data-oid="wef16il"
+            data-oid="b1mcbql"
           />
 
           <div
             className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"
-            data-oid="p5b_4nu"
+            data-oid="kl11g92"
           />
 
           <div
             className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-            data-oid="sfur8v4"
+            data-oid="kdlr:dv"
           >
             {course.level}
           </div>
         </div>
 
-        <div className="p-6 flex flex-col flex-grow" data-oid=".2rrzw4">
-          <h3 className="text-xl font-bold mb-3" data-oid="78a55lu">
+        <div className="p-6 flex flex-col flex-grow" data-oid="qcsv8z:">
+          <h3 className="text-xl font-bold mb-3" data-oid="5ndida5">
             {course.title}
           </h3>
-          <div className="text-gray-400 text-sm mb-4" data-oid="dfjk87j">
-            <span className="inline-block mr-4" data-oid="fv0q8:h">
+          <div className="text-gray-400 text-sm mb-4" data-oid="mkmagb6">
+            <span className="inline-block mr-4" data-oid="nhz_wgp">
               ⏱️ {course.duration}
             </span>
           </div>
 
-          <div className="mt-auto" data-oid="o989mcx">
+          <div className="mt-auto" data-oid="pbmk9j.">
             <Link
               href={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}
               className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium"
-              data-oid="sjefx9c"
+              data-oid="uoxoana"
             >
               Learn More
-              <ArrowRight className="ml-2 h-4 w-4" data-oid="x::zw1p" />
+              <ArrowRight className="ml-2 h-4 w-4" data-oid="i-ril:f" />
             </Link>
           </div>
         </div>

@@ -30,12 +30,12 @@ export default function SidebarFilter({
   isMobile = false,
 }: SidebarFilterProps) {
   return (
-    <div className={isMobile ? "" : "sticky top-24"} data-oid="tzod-k-">
+    <div className={isMobile ? "" : "sticky top-24"} data-oid="l_:siyu">
       <div
         className="mb-4 flex justify-between items-center"
-        data-oid=".f9uxsf"
+        data-oid="kl39_ph"
       >
-        <h3 className="font-medium text-gray-900" data-oid="4zrsxnu">
+        <h3 className="font-medium text-gray-900" data-oid="nubotb:">
           Filters
         </h3>
         {(selectedFilters.level.length > 0 ||
@@ -46,7 +46,7 @@ export default function SidebarFilter({
           <button
             className="text-sm text-[#123B79] hover:underline"
             onClick={clearFilters}
-            data-oid="k6r37-5"
+            data-oid="vnwg31c"
           >
             Clear all
           </button>
@@ -54,25 +54,25 @@ export default function SidebarFilter({
       </div>
 
       {/* Level Filter */}
-      <div className="mb-6" data-oid="xk.p9ir">
+      <div className="mb-6" data-oid="b1fa6-5">
         <h4
           className="font-medium text-gray-700 mb-2 text-sm"
-          data-oid=".t_f6w0"
+          data-oid="ews6ynq"
         >
           Level
         </h4>
-        <div className="space-y-2" data-oid="f:c15zn">
+        <div className="space-y-2" data-oid="d-tvaf1">
           {filterOptions.level.map((level) => (
-            <label key={level} className="flex items-center" data-oid="y5.-6sc">
+            <label key={level} className="flex items-center" data-oid="ff.liq_">
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                 checked={selectedFilters.level.includes(level)}
                 onChange={() => toggleFilter("level", level)}
-                data-oid="t2iq713"
+                data-oid=":4chws5"
               />
 
-              <span className="ml-2 text-sm text-gray-700" data-oid="ld24lpi">
+              <span className="ml-2 text-sm text-gray-700" data-oid="z_j:sx9">
                 {level}
               </span>
             </label>
@@ -81,25 +81,25 @@ export default function SidebarFilter({
       </div>
 
       {/* Type Filter - New */}
-      <div className="mb-6" data-oid="mrr_ser">
+      <div className="mb-6" data-oid="m06goa_">
         <h4
           className="font-medium text-gray-700 mb-2 text-sm"
-          data-oid="gpw7s-0"
+          data-oid="q3bzstz"
         >
           Type
         </h4>
-        <div className="space-y-2" data-oid="q:up3u9">
+        <div className="space-y-2" data-oid="4s-h-ab">
           {filterOptions.type.map((type) => (
-            <label key={type} className="flex items-center" data-oid="yqq0d--">
+            <label key={type} className="flex items-center" data-oid="-.qgvt6">
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                 checked={selectedFilters.type.includes(type)}
                 onChange={() => toggleFilter("type", type)}
-                data-oid="nlaf4ou"
+                data-oid="fso.-9s"
               />
 
-              <span className="ml-2 text-sm text-gray-700" data-oid="lmetj0-">
+              <span className="ml-2 text-sm text-gray-700" data-oid="tnf3j5a">
                 {type}
               </span>
             </label>
@@ -108,25 +108,25 @@ export default function SidebarFilter({
       </div>
 
       {/* Price Filter - New */}
-      <div className="mb-6" data-oid=":-zz2t8">
+      <div className="mb-6" data-oid="5yxypu.">
         <h4
           className="font-medium text-gray-700 mb-2 text-sm"
-          data-oid="ug1:ata"
+          data-oid="h9g96kr"
         >
           Price
         </h4>
-        <div className="space-y-2" data-oid="el46w1q">
+        <div className="space-y-2" data-oid="jk3r81t">
           {filterOptions.price.map((price) => (
-            <label key={price} className="flex items-center" data-oid=".rjj.ps">
+            <label key={price} className="flex items-center" data-oid="w9rquvp">
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                 checked={selectedFilters.price.includes(price)}
                 onChange={() => toggleFilter("price", price)}
-                data-oid="34xpafs"
+                data-oid="_l4et1-"
               />
 
-              <span className="ml-2 text-sm text-gray-700" data-oid="84tewiy">
+              <span className="ml-2 text-sm text-gray-700" data-oid="bgxkj5u">
                 {price}
               </span>
             </label>
@@ -135,29 +135,29 @@ export default function SidebarFilter({
       </div>
 
       {/* Duration Filter */}
-      <div className="mb-6" data-oid="01gnc47">
+      <div className="mb-6" data-oid=":blamos">
         <h4
           className="font-medium text-gray-700 mb-2 text-sm"
-          data-oid="mornhm0"
+          data-oid="x.5tymk"
         >
           Duration
         </h4>
-        <div className="space-y-2" data-oid="oh3g0_f">
+        <div className="space-y-2" data-oid="xb4q4fe">
           {filterOptions.duration.map((duration) => (
             <label
               key={duration}
               className="flex items-center"
-              data-oid="0prf9gc"
+              data-oid="_3cah22"
             >
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                 checked={selectedFilters.duration.includes(duration)}
                 onChange={() => toggleFilter("duration", duration)}
-                data-oid="v9324b7"
+                data-oid="d71_tef"
               />
 
-              <span className="ml-2 text-sm text-gray-700" data-oid="t6rkrp4">
+              <span className="ml-2 text-sm text-gray-700" data-oid="sm_natp">
                 {duration}
               </span>
             </label>
@@ -166,29 +166,29 @@ export default function SidebarFilter({
       </div>
 
       {/* Category Filter */}
-      <div className="mb-6" data-oid="0pf-flb">
+      <div className="mb-6" data-oid="mlls76v">
         <h4
           className="font-medium text-gray-700 mb-2 text-sm"
-          data-oid="wo5jaec"
+          data-oid="d6da-0f"
         >
           Category
         </h4>
-        <div className="space-y-2" data-oid="91yh5tm">
+        <div className="space-y-2" data-oid="8oo.2-0">
           {filterOptions.category.map((category) => (
             <label
               key={category}
               className="flex items-center"
-              data-oid="qjgrrop"
+              data-oid="46a4vaq"
             >
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-[#123B79] focus:ring-[#123B79]"
                 checked={selectedFilters.category.includes(category)}
                 onChange={() => toggleFilter("category", category)}
-                data-oid="heafch_"
+                data-oid="tiq:f_8"
               />
 
-              <span className="ml-2 text-sm text-gray-700" data-oid="wih8p1-">
+              <span className="ml-2 text-sm text-gray-700" data-oid="4g1u2fr">
                 {category}
               </span>
             </label>
@@ -196,7 +196,7 @@ export default function SidebarFilter({
         </div>
       </div>
 
-      <div className="text-sm text-gray-500" data-oid="ze_fm4w">
+      <div className="text-sm text-gray-500" data-oid="ihn4963">
         {totalResults} {totalResults === 1 ? "result" : "results"}
       </div>
     </div>
