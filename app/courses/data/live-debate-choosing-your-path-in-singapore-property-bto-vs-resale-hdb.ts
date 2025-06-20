@@ -1,5 +1,11 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const grayce = getFacilitator("grayce-tan");
+const joan = getFacilitator("joan-loh");
+const sebastian = getFacilitator("sebastian-lau");
+const lyndon = getFacilitator("lyndon-leong");
 
 export const courseData: CourseData = {
   id: 1001,
@@ -14,7 +20,40 @@ export const courseData: CourseData = {
   tags: ["Property Comparison", "HDB", "Live Debate"],
   rating: 0,
   students: 0,
-  instructors: getInstructors ? getInstructors(["melvin-lim"]) : [],
+  instructors: melvin && grayce && joan && sebastian && lyndon
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: grayce.name,
+          image: grayce.image,
+          title: grayce.role,
+          bio: grayce.bio,
+        },
+        {
+          name: joan.name,
+          image: joan.image,
+          title: joan.role,
+          bio: joan.bio,
+        },
+        {
+          name: sebastian.name,
+          image: sebastian.image,
+          title: sebastian.role,
+          bio: sebastian.bio,
+        },
+        {
+          name: lyndon.name,
+          image: lyndon.image,
+          title: lyndon.role,
+          bio: lyndon.bio,
+        },
+      ]
+    : [],
   lastUpdated: "2024-06-01",
   description: "A live debate exploring the pros and cons of BTO versus Resale HDB flats for Singaporean homebuyers.",
   whatYouWillLearn: [

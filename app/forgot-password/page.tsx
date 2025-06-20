@@ -42,50 +42,50 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <NetworkProvider data-oid="wnjv-:p">
+    <NetworkProvider data-oid="15jro4e">
       <main
         className="relative overflow-hidden bg-[#F5F5F5] min-h-screen"
-        data-oid="3279ch5"
+        data-oid="mto2k:j"
       >
         <NetworkBackground
           scrollY={0}
           scrollSpeed={0}
           windowHeight={0}
           opacity={0.3}
-          data-oid="jrux4rf"
+          data-oid=".gkagud"
         />
 
-        <Navbar data-oid="2wpqtqw" />
+        <Navbar data-oid="9n_isy-" />
 
-        <section className="pt-32 pb-16 relative z-10" data-oid="h76re6s">
+        <section className="pt-32 pb-16 relative z-10" data-oid="5j-j8_7">
           <div
             className="container mx-auto px-4 relative z-10"
-            data-oid="ijbmsdf"
+            data-oid="-mtm887"
           >
             <div
               className="max-w-md mx-auto bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200 p-6"
-              data-oid="nk6__0n"
+              data-oid="rifflt5"
             >
-              <div className="mb-6" data-oid="4-vci42">
+              <div className="mb-6" data-oid="ct.l:t8">
                 <button
                   onClick={() => router.back()}
                   className="inline-flex items-center text-[#123B79] hover:underline"
-                  data-oid="9_n:5bf"
+                  data-oid="vme-sd-"
                 >
-                  <ArrowLeft className="h-4 w-4 mr-2" data-oid="e4-.5sv" />
+                  <ArrowLeft className="h-4 w-4 mr-2" data-oid="9yov_nv" />
                   Back
                 </button>
               </div>
 
-              <div className="text-center mb-6" data-oid="_vrdm:f">
+              <div className="text-center mb-6" data-oid="-cjh78t">
                 <h1
                   className="text-2xl font-bold text-[#123B79]"
-                  data-oid="-7oz7lg"
+                  data-oid="pryyc2."
                 >
                   Reset Your Password
                 </h1>
                 {!isSubmitted && (
-                  <p className="text-gray-600 mt-2" data-oid=".ne_bbb">
+                  <p className="text-gray-600 mt-2" data-oid="1l26hsh">
                     Enter your email address and we'll send you instructions to
                     reset your password.
                   </p>
@@ -96,13 +96,13 @@ export default function ForgotPasswordPage() {
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-4"
-                  data-oid="n7gq:3d"
+                  data-oid="1udwqxf"
                 >
-                  <div data-oid="y0bcz1e">
+                  <div data-oid="ua6qk97">
                     <label
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="vyw-bl_"
+                      data-oid="zyxy9gp"
                     >
                       Email Address
                     </label>
@@ -114,13 +114,13 @@ export default function ForgotPasswordPage() {
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123B79]"
                       placeholder="your@email.com"
                       required
-                      data-oid="ln9id:v"
+                      data-oid="ydixvqh"
                     />
 
                     {error && (
                       <p
                         className="mt-1 text-sm text-red-600"
-                        data-oid="3gcew5l"
+                        data-oid="37.s24s"
                       >
                         {error}
                       </p>
@@ -131,16 +131,16 @@ export default function ForgotPasswordPage() {
                     type="submit"
                     className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
                     disabled={isSubmitting}
-                    data-oid="zcgyu3-"
+                    data-oid="4lo:0as"
                   >
                     {isSubmitting ? (
-                      <span className="flex items-center" data-oid="hti4eys">
+                      <span className="flex items-center" data-oid="ph5-d2j">
                         <svg
                           className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          data-oid="x5jh7qj"
+                          data-oid="wr8h8sm"
                         >
                           <circle
                             className="opacity-25"
@@ -149,20 +149,20 @@ export default function ForgotPasswordPage() {
                             r="10"
                             stroke="currentColor"
                             strokeWidth="4"
-                            data-oid="-.v1_zi"
+                            data-oid="8:a0s9-"
                           ></circle>
                           <path
                             className="opacity-75"
                             fill="currentColor"
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            data-oid="o5t_eh2"
+                            data-oid="6fgt7ya"
                           ></path>
                         </svg>
                         Processing...
                       </span>
                     ) : (
-                      <span className="flex items-center" data-oid="an.6w2f">
-                        <Send className="mr-2 h-4 w-4" data-oid="e:ca.kp" />
+                      <span className="flex items-center" data-oid="3p1sosx">
+                        <Send className="mr-2 h-4 w-4" data-oid="zim5xj4" />
                         Reset Password
                       </span>
                     )}
@@ -170,23 +170,23 @@ export default function ForgotPasswordPage() {
 
                   <div
                     className="text-center text-sm text-gray-500 pt-4"
-                    data-oid="rcnw-zu"
+                    data-oid="6nk8ghr"
                   >
                     Remember your password?{" "}
                     <a
                       href="/login"
                       className="text-[#123B79] hover:underline font-medium"
-                      data-oid="8i0to:u"
+                      data-oid="o15hahz"
                     >
                       Login instead
                     </a>
                   </div>
                 </form>
               ) : (
-                <div className="text-center py-6" data-oid="blu29_j">
+                <div className="text-center py-6" data-oid="g5hys-m">
                   <div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4"
-                    data-oid="hh1sgvm"
+                    data-oid="t3u22sa"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -194,26 +194,26 @@ export default function ForgotPasswordPage() {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      data-oid="dhne2i8"
+                      data-oid=":fhach1"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M5 13l4 4L19 7"
-                        data-oid="cp1da-r"
+                        data-oid=".p7uzvn"
                       />
                     </svg>
                   </div>
                   <h2
                     className="text-xl font-semibold text-gray-800 mb-2"
-                    data-oid="2cfzanv"
+                    data-oid="f50-pxk"
                   >
                     Check Your Email
                   </h2>
-                  <p className="text-gray-600 mb-3" data-oid="8wf7vcb">
+                  <p className="text-gray-600 mb-3" data-oid="_psvx45">
                     If{" "}
-                    <span className="font-medium" data-oid="uoxz1.q">
+                    <span className="font-medium" data-oid="x5amoab">
                       {email}
                     </span>{" "}
                     is associated with an existing account, you'll receive
@@ -221,24 +221,24 @@ export default function ForgotPasswordPage() {
                   </p>
                   <div
                     className="text-sm text-gray-500 mb-6"
-                    data-oid="lsu9jt8"
+                    data-oid="mewdp_d"
                   >
-                    <p className="mb-2" data-oid="hn:oi6r">
+                    <p className="mb-2" data-oid="xw-yq6-">
                       Haven't received an email?
                     </p>
-                    <ul className="space-y-1" data-oid="2q4s4rh">
-                      <li data-oid="4n819sm">
+                    <ul className="space-y-1" data-oid="zq9z_d6">
+                      <li data-oid="enbklnd">
                         • Please wait a few minutes and check your spam folder
                       </li>
-                      <li data-oid="t737.aa">
+                      <li data-oid="fqaiuyy">
                         • You may try again if the email doesn't arrive
                       </li>
-                      <li data-oid="qmawi0m">
+                      <li data-oid="13ajm5-">
                         • If you don't have an account with us, please{" "}
                         <a
                           href="/register"
                           className="text-[#123B79] hover:underline font-medium"
-                          data-oid="r0iagb_"
+                          data-oid="0-y3vjh"
                         >
                           register here
                         </a>
@@ -248,7 +248,7 @@ export default function ForgotPasswordPage() {
                   <Button
                     onClick={() => router.push("/login")}
                     className="bg-[#123B79] hover:bg-[#0A2A5E]"
-                    data-oid="kcdmq6e"
+                    data-oid="neu31z4"
                   >
                     Return to Login
                   </Button>
@@ -258,7 +258,7 @@ export default function ForgotPasswordPage() {
           </div>
         </section>
 
-        <Footer data-oid="ykburhm" />
+        <Footer data-oid="7.-:dyj" />
       </main>
     </NetworkProvider>
   );

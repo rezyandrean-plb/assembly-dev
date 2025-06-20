@@ -62,25 +62,25 @@ export default function CourseCard({
 
   if (size === "small") {
     return (
-      <Link href={courseLink} className="block h-full" data-oid="wgtn_:b">
+      <Link href={courseLink} className="block h-full" data-oid="086a:8a">
         <motion.div
           className="group h-full cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay }}
           viewport={{ once: true }}
-          data-oid=":iwz_9b"
+          data-oid="xl371ky"
         >
           <div
             className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full p-4 items-center"
-            data-oid="txon02i"
+            data-oid="iy3qzo."
           >
             {/* Image */}
-            <div className="w-full flex justify-center" data-oid="3zk8s1n">
+            <div className="w-full flex justify-center" data-oid="cdpbgc6">
               <div
                 className="rounded-xl overflow-hidden w-full"
                 style={{ height: 120, maxWidth: 220 }}
-                data-oid="e6xq.25"
+                data-oid="6wvp7z_"
               >
                 <Image
                   src={
@@ -91,7 +91,7 @@ export default function CourseCard({
                   width={220}
                   height={120}
                   className="object-contain w-full h-full"
-                  data-oid="pe:guo4"
+                  data-oid="_9m.0pb"
                 />
               </div>
             </div>
@@ -99,22 +99,22 @@ export default function CourseCard({
             {/* Instructor/Logo */}
             <div
               className="flex items-center mt-4 mb-2 w-full"
-              data-oid="p0f0h8e"
+              data-oid="uv2c46v"
             >
               {/* Optionally, you can show a logo or avatar here if available */}
               <span
                 className="text-xs text-gray-500 font-medium truncate"
-                data-oid="otferzv"
+                data-oid="0s:b8o1"
               >
                 {course.instructor}
               </span>
             </div>
 
             {/* Title */}
-            <div className="w-full mb-2" data-oid="sb5m9c2">
+            <div className="w-full mb-2" data-oid="21sepx5">
               <span
                 className="block font-semibold text-gray-900 text-sm line-clamp-2"
-                data-oid="pkj::ok"
+                data-oid="_7871vw"
               >
                 {course.title}
               </span>
@@ -123,61 +123,61 @@ export default function CourseCard({
             {/* Rating and reviews */}
             <div
               className="flex items-center w-full mb-2 text-xs text-gray-500"
-              data-oid="pd36ujh"
+              data-oid="ygkbf0u"
             >
               {course.rating && course.rating > 0 ? (
                 <>
                   <span
                     className="flex items-center text-[#F0A500] font-bold mr-1"
-                    data-oid="5xb.:vp"
+                    data-oid="uaxgzer"
                   >
                     <svg
                       className="w-4 h-4 mr-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
-                      data-oid=".40pger"
+                      data-oid="6wruix4"
                     >
                       <path
                         d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-.181h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        data-oid="7_6lpry"
+                        data-oid="vxx9qs5"
                       ></path>
                     </svg>
                     {course.rating.toFixed(1)}
                   </span>
-                  <span className="ml-1" data-oid="4q218uo">
+                  <span className="ml-1" data-oid="-1bk_0-">
                     {course.reviewCount
                       ? `${course.reviewCount} reviews`
                       : "No reviews"}
                   </span>
                 </>
               ) : (
-                <span data-oid="930yo5n">No Reviews Yet</span>
+                <span data-oid="hie704:">No Reviews Yet</span>
               )}
             </div>
 
             {/* Level and type */}
             <div
               className="flex items-center w-full text-xs text-gray-500 mb-2"
-              data-oid="n24h1j_"
+              data-oid="34qurk0"
             >
               {course.level && (
-                <span className="mr-2" data-oid="5rtlopl">
+                <span className="mr-2" data-oid="0qejx0:">
                   {course.level}
                 </span>
               )}
               {course.category && (
-                <span data-oid="ga-tl6z">• {course.category}</span>
+                <span data-oid="_9pgcxs">• {course.category}</span>
               )}
             </div>
 
             {/* Price and action button */}
             <div
               className="flex items-center justify-between w-full mt-auto pt-2"
-              data-oid="c5c9jbs"
+              data-oid="x65hi.c"
             >
               <span
                 className={`font-semibold ${isFree ? "text-green-600" : "text-gray-900"}`}
-                data-oid="dbc7s-:"
+                data-oid="tu0tidn"
               >
                 {displayPrice}
               </span>
@@ -185,7 +185,7 @@ export default function CourseCard({
                 <Button
                   disabled
                   className="bg-gray-200 text-gray-500 font-medium rounded px-3 py-1 text-xs cursor-not-allowed"
-                  data-oid="e2y7__a"
+                  data-oid="lauyhwn"
                 >
                   In Cart
                 </Button>
@@ -197,7 +197,7 @@ export default function CourseCard({
                     e.stopPropagation();
                     window.location.href = courseLink;
                   }}
-                  data-oid="57b3e.0"
+                  data-oid=".2viyjm"
                 >
                   Enroll Now
                 </Button>
@@ -217,7 +217,7 @@ export default function CourseCard({
                       instructor: course.instructor,
                     });
                   }}
-                  data-oid="atg:u0e"
+                  data-oid="h9q16dw"
                 >
                   Add to Cart
                 </Button>
@@ -236,17 +236,17 @@ export default function CourseCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      data-oid="ps4uw3w"
+      data-oid="q:p:cdn"
     >
       <div
         className={`bg-white rounded-lg overflow-hidden h-full flex flex-col border border-gray-200 shadow-sm hover:shadow-md transition-shadow ${cardPadding}`}
-        data-oid="7u4rjon"
+        data-oid="4nph8d_"
       >
-        <Link href={courseLink} className="block" data-oid="oc9g08t">
+        <Link href={courseLink} className="block" data-oid="3ukog7u">
           <div
             className="relative w-full"
             style={{ height: imageHeight }}
-            data-oid="bgyg3wx"
+            data-oid="0uxd63x"
           >
             <Image
               src={
@@ -283,19 +283,19 @@ export default function CourseCard({
               alt={course.title}
               fill
               className={`${size === "small" ? "object-contain" : "object-cover"} transition-transform duration-300 group-hover:scale-105`}
-              data-oid="66xf5tw"
+              data-oid="u_mu8df"
             />
 
             <div
               className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-opacity"
-              data-oid="rl4.utj"
+              data-oid="jmsjf9f"
             ></div>
 
             {/* FREE label on thumbnail for free courses */}
             {isFree && (
               <div
                 className="absolute top-3 right-3 bg-green-500 text-white py-1 px-3 rounded text-xs font-semibold uppercase"
-                data-oid="i:4-g.k"
+                data-oid="vff:l7k"
               >
                 Free
               </div>
@@ -305,7 +305,7 @@ export default function CourseCard({
             {course.level && (
               <div
                 className="absolute bottom-3 left-3 bg-[#E6EDF8] text-[#123B79] py-1 px-2 rounded-full text-xs font-medium"
-                data-oid="zr:1gjv"
+                data-oid="l41kb.9"
               >
                 {course.level}
               </div>
@@ -314,16 +314,16 @@ export default function CourseCard({
         </Link>
         <div
           className={`flex-1 flex flex-col ${cardPadding}`}
-          data-oid="mtbmm:q"
+          data-oid="ut0gkc1"
         >
           {/* Categories */}
           {course.categories && course.categories.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-2" data-oid="--cg4p_">
+            <div className="flex flex-wrap gap-1 mb-2" data-oid="8dp642q">
               {course.categories.map((category, index) => (
                 <span
                   key={index}
                   className="text-xs font-medium px-2 py-0.5 bg-[#E6EDF8] text-[#123B79] rounded-full"
-                  data-oid="iwlilih"
+                  data-oid="ycf6w5i"
                 >
                   {category}
                 </span>
@@ -331,14 +331,14 @@ export default function CourseCard({
             </div>
           )}
 
-          <Link href={courseLink} className="block" data-oid="k5leoh0">
+          <Link href={courseLink} className="block" data-oid="0r84tdp">
             <h3
               className={`font-medium text-gray-900 mb-2 line-clamp-2 group-hover:text-[#123B79] ${titleSize}`}
-              data-oid="g2wzr51"
+              data-oid="q9x09sb"
             >
               {course.title}
             </h3>
-            <p className={`text-gray-500 mb-2 ${fontSize}`} data-oid="9:f2d1v">
+            <p className={`text-gray-500 mb-2 ${fontSize}`} data-oid="-ciruma">
               By {course.instructor}
             </p>
           </Link>
@@ -346,59 +346,59 @@ export default function CourseCard({
           {/* Rating or No Reviews message */}
           <div
             className={`flex items-center text-gray-500 mb-4 ${fontSize}`}
-            data-oid="g7hxws7"
+            data-oid="bzw0vgb"
           >
             {course.rating && course.rating > 0 ? (
-              <span className="flex items-center" data-oid="_9t21pf">
+              <span className="flex items-center" data-oid="1l1j5i3">
                 <svg
                   className="w-4 h-4 text-yellow-400 mr-1"
                   fill="currentColor"
                   viewBox="0 0 20 20"
-                  data-oid="1r68i55"
+                  data-oid=".opn6nt"
                 >
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-.181h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    data-oid="nmvj5my"
+                    data-oid="w5phlm."
                   ></path>
                 </svg>
                 {course.rating.toFixed(1)}
                 {course.reviewCount && (
-                  <span className="ml-1" data-oid="mfyp8h0">
+                  <span className="ml-1" data-oid="-ic_wr3">
                     ({course.reviewCount})
                   </span>
                 )}
               </span>
             ) : (
-              <span data-oid="ngw8kmn">No Reviews Yet</span>
+              <span data-oid="qi07wwt">No Reviews Yet</span>
             )}
 
             {/* Show duration if available */}
             {course.duration && (
               <>
-                <span className="mx-2" data-oid="0jg.lu7">
+                <span className="mx-2" data-oid="z58:c9e">
                   •
                 </span>
-                <span data-oid="t1yrvw3">{course.duration}</span>
+                <span data-oid="vwwr4c-">{course.duration}</span>
               </>
             )}
           </div>
 
           {/* Subtle divider */}
-          <div className="mt-auto pt-3" data-oid="fz.bgry">
+          <div className="mt-auto pt-3" data-oid="1y_p__d">
             <div
               className="border-t border-gray-200 opacity-60 mx-2 mb-3"
-              data-oid="1j72nbi"
+              data-oid="kajb7tw"
             ></div>
 
             {/* Price and action button section */}
             <div
               className="flex items-center justify-between"
-              data-oid="655pfph"
+              data-oid="2nfpww1"
             >
               {/* Price display */}
               <div
                 className={`font-medium ${fontSize} ${isFree ? "text-green-600" : "text-gray-900"}`}
-                data-oid="91dth1z"
+                data-oid="k57056x"
               >
                 {displayPrice}
               </div>
@@ -408,7 +408,7 @@ export default function CourseCard({
                 <Button
                   disabled
                   className="bg-gray-200 text-gray-500 font-medium rounded px-3 py-1 text-xs cursor-not-allowed"
-                  data-oid="ndrc7-p"
+                  data-oid="ql74ops"
                 >
                   In Cart
                 </Button>
@@ -419,7 +419,7 @@ export default function CourseCard({
                     e.preventDefault();
                     window.location.href = courseLink;
                   }}
-                  data-oid="uoo-r:i"
+                  data-oid="urk6ta1"
                 >
                   Enroll Now
                 </Button>
@@ -438,7 +438,7 @@ export default function CourseCard({
                       instructor: course.instructor,
                     });
                   }}
-                  data-oid="-b-04xj"
+                  data-oid="r992chl"
                 >
                   Add to Cart
                 </Button>

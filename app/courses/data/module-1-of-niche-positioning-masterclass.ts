@@ -1,25 +1,32 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 5,
   title: "Module 1 of Niche Positioning Masterclass",
   slug: "module-1-of-niche-positioning-masterclass",
-  level: "Advanced",
-  duration: "20 hours",
+  level: "Intermediate",
+  duration: "3 hours 52 minutes",
   category: "Property Investment",
   price: "$2,999.00",
   image: "/module-1-of-niche-positioning-masterclass.jpg",
   featured: true,
   tags: ["Niche Positioning", "Property Investment", "Market Strategy"],
-  rating: 4.9,
-  students: 85,
-  instructors: getInstructors(["melvin-lim"]).map((instructor) => ({
-    ...instructor,
-    title: "Lead Property Investment Strategist",
-    bio: "Melvin Lim is a renowned property investment strategist with over 15 years of experience in the Singapore real estate market. He specializes in identifying niche property opportunities that outperform the general market.",
-  })),
-  lastUpdated: "May 2025",
+  rating: 0,
+  students: 7,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "09 June 2025",
   description: `Module 1 of our exclusive Niche Positioning Masterclass is designed for serious property investors who want to develop specialized expertise in high-growth property niches. This foundational module will help you identify lucrative property niches and develop a strategic positioning that sets you apart from the average investor.
 
 Led by Melvin Lim, one of Singapore's foremost property investment strategists, this intensive program combines theoretical frameworks with practical applications to help you develop a unique investment approach that targets underserved or emerging market segments.

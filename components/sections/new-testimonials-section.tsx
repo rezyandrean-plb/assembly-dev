@@ -77,26 +77,26 @@ export default function NewTestimonialsSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-gradient-to-br from-blue-50 to-purple-50"
-      data-oid="8n:hek8"
+      data-oid="y0i.cxv"
     >
-      <div className="container mx-auto px-4" data-oid="x9eu4n6">
+      <div className="container mx-auto px-4" data-oid="cch-a5c">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="gvwe-ku"
+          data-oid="c63hli1"
         >
           <h2
             className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent"
-            data-oid="nvgp53k"
+            data-oid="passf6_"
           >
             Success Stories
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="15vf7u0"
+            data-oid="p-6s:n:"
           >
             Hear from our students who've transformed their financial future
             through real estate investment
@@ -109,32 +109,32 @@ export default function NewTestimonialsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          data-oid="uxpd_17"
+          data-oid=".7o35i:"
         >
           <div
             className="bg-white rounded-3xl shadow-2xl p-12 relative overflow-hidden"
-            data-oid="4gyudhr"
+            data-oid="g-6dab5"
           >
             {/* Background Quote */}
             <div
               className="absolute top-8 right-8 opacity-10"
-              data-oid="tmvfh5l"
+              data-oid="khwlnjv"
             >
-              <Quote className="w-24 h-24 text-blue-600" data-oid="_g2je3v" />
+              <Quote className="w-24 h-24 text-blue-600" data-oid="_ljht8b" />
             </div>
 
-            <div className="relative z-10" data-oid="fu-2_12">
+            <div className="relative z-10" data-oid="f:4qjz6">
               {/* Rating */}
               <div
                 className="flex items-center justify-center mb-6"
-                data-oid="z4pkxmb"
+                data-oid="sx_x2na"
               >
                 {[...Array(testimonials[currentTestimonial].rating)].map(
                   (_, i) => (
                     <Star
                       key={i}
                       className="w-6 h-6 fill-yellow-400 text-yellow-400"
-                      data-oid="x5df3nt"
+                      data-oid="aiyl.qw"
                     />
                   ),
                 )}
@@ -143,16 +143,16 @@ export default function NewTestimonialsSection() {
               {/* Testimonial Text */}
               <blockquote
                 className="text-xl lg:text-2xl text-gray-700 text-center mb-8 leading-relaxed"
-                data-oid="z0v0.v-"
+                data-oid="10a2658"
               >
                 "{testimonials[currentTestimonial].text}"
               </blockquote>
 
               {/* Achievement Badge */}
-              <div className="text-center mb-8" data-oid="nspq:3x">
+              <div className="text-center mb-8" data-oid="3p.3x6b">
                 <div
                   className="inline-flex items-center bg-gradient-to-r from-green-100 to-blue-100 text-green-700 px-6 py-3 rounded-full font-semibold"
-                  data-oid="v8:d_lv"
+                  data-oid="sd0oq7k"
                 >
                   🎉 {testimonials[currentTestimonial].achievement}
                 </div>
@@ -161,22 +161,22 @@ export default function NewTestimonialsSection() {
               {/* Author Info */}
               <div
                 className="flex items-center justify-center gap-4"
-                data-oid="xe2zi:b"
+                data-oid="379.3zs"
               >
                 <div
                   className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl"
-                  data-oid="h-i7.q4"
+                  data-oid="nzmie1z"
                 >
                   {testimonials[currentTestimonial].name.charAt(0)}
                 </div>
-                <div className="text-center" data-oid="af66t8u">
+                <div className="text-center" data-oid="s4gwsjt">
                   <div
                     className="font-semibold text-gray-900 text-lg"
-                    data-oid="i-ku17h"
+                    data-oid="hjfa37f"
                   >
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-gray-600" data-oid="_-2sjum">
+                  <div className="text-gray-600" data-oid="sdm9l1f">
                     {testimonials[currentTestimonial].role} •{" "}
                     {testimonials[currentTestimonial].location}
                   </div>
@@ -188,20 +188,20 @@ export default function NewTestimonialsSection() {
           {/* Navigation */}
           <div
             className="flex items-center justify-center gap-4 mt-8"
-            data-oid="7wiaumm"
+            data-oid="0g5oi6l"
           >
             <Button
               variant="outline"
               size="sm"
               onClick={prevTestimonial}
               className="rounded-full w-12 h-12 p-0"
-              data-oid="-pry7g5"
+              data-oid="s_xk8jo"
             >
-              <ChevronLeft className="w-5 h-5" data-oid="t.q2a2v" />
+              <ChevronLeft className="w-5 h-5" data-oid="wag60_1" />
             </Button>
 
             {/* Dots */}
-            <div className="flex gap-2" data-oid="8gl0pr0">
+            <div className="flex gap-2" data-oid="hhcqb3h">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -211,7 +211,7 @@ export default function NewTestimonialsSection() {
                       ? "bg-blue-600 w-8"
                       : "bg-gray-300 hover:bg-gray-400"
                   }`}
-                  data-oid="-uhl0ll"
+                  data-oid="axwtjj5"
                 />
               ))}
             </div>
@@ -221,9 +221,9 @@ export default function NewTestimonialsSection() {
               size="sm"
               onClick={nextTestimonial}
               className="rounded-full w-12 h-12 p-0"
-              data-oid="syj.ndc"
+              data-oid="-_ax8e6"
             >
-              <ChevronRight className="w-5 h-5" data-oid="g2_t5a8" />
+              <ChevronRight className="w-5 h-5" data-oid="4h.1i:p" />
             </Button>
           </div>
         </motion.div>
@@ -234,46 +234,46 @@ export default function NewTestimonialsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          data-oid="w9fuzxe"
+          data-oid="0mfbw53"
         >
           {testimonials.slice(0, 3).map((testimonial, index) => (
             <div
               key={testimonial.id}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-              data-oid="nz1fcnw"
+              data-oid="e_e4_bw"
             >
               {/* Rating */}
-              <div className="flex items-center mb-4" data-oid="y_-3tcc">
+              <div className="flex items-center mb-4" data-oid="v:9xsx7">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
                     className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                    data-oid="4:ru9ym"
+                    data-oid="awz4c-e"
                   />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-gray-600 mb-4 line-clamp-4" data-oid="uore2z7">
+              <p className="text-gray-600 mb-4 line-clamp-4" data-oid="olsrz8l">
                 "{testimonial.text.substring(0, 120)}..."
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3" data-oid="jth6aqu">
+              <div className="flex items-center gap-3" data-oid=":5.7usr">
                 <div
                   className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold"
-                  data-oid="mw4igy4"
+                  data-oid="7nb:4e7"
                 >
                   {testimonial.name.charAt(0)}
                 </div>
-                <div data-oid="7lkekni">
+                <div data-oid="z5t-i4e">
                   <div
                     className="font-semibold text-gray-900 text-sm"
-                    data-oid="2jkou.n"
+                    data-oid="m7x9op9"
                   >
                     {testimonial.name}
                   </div>
-                  <div className="text-gray-500 text-xs" data-oid="j.n3s.c">
+                  <div className="text-gray-500 text-xs" data-oid="qew518p">
                     {testimonial.role}
                   </div>
                 </div>

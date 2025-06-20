@@ -1,5 +1,8 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const joan = getFacilitator("joan-loh");
 
 const courseData: CourseData = {
   id: 1003,
@@ -7,14 +10,29 @@ const courseData: CourseData = {
   slug: "the-ultimate-guide-to-making-the-best-property-decision",
   level: "All Levels",
   duration: "2 hours",
-  category: "Property Decision Making",
+  category: "Condo",
   price: "Free",
   image: "/images/courses/property-decision-guide.jpg",
   featured: false,
-  tags: ["Decision Making", "Property Investment", "Market Analysis"],
+  tags: ["Condo", "Webinar"],
   rating: 0,
   students: 0,
-  instructors: getInstructors ? getInstructors(["melvin-lim"]) : [],
+  instructors: melvin && joan 
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: joan.name,
+          image: joan.image,
+          title: joan.role,
+          bio: joan.bio,
+        },
+      ]
+    : [],
   lastUpdated: "2024-06-01",
   description: "A comprehensive guide to making informed and strategic property decisions in Singapore's real estate market.",
   whatYouWillLearn: [

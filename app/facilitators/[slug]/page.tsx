@@ -21,24 +21,24 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
 
   return (
     <>
-      <Navbar data-oid="cl8jk1e" />
-      <div className="bg-white" data-oid="8u97.f:">
+      <Navbar data-oid="d7ydkj6" />
+      <div className="bg-white" data-oid="6euh:ay">
         {/* Back Navigation */}
-        <div className="bg-gray-50 py-4" data-oid="mqh2_wz">
-          <div className="container mx-auto px-4" data-oid="ix-89zf">
+        <div className="bg-gray-50 py-4" data-oid="6_jrd3x">
+          <div className="container mx-auto px-4" data-oid="omsymju">
             <Link
               href="/facilitators"
               className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
-              data-oid="s1f:e2o"
+              data-oid="kb72y6n"
             >
-              <ArrowLeft className="w-4 h-4" data-oid="c90vzs7" />
+              <ArrowLeft className="w-4 h-4" data-oid="157iqq9" />
               Back to All Facilitators
             </Link>
           </div>
         </div>
 
-        <FacilitatorHero facilitator={facilitator} data-oid="i084nyh" />
-        <FacilitatorCourses facilitator={facilitator} data-oid="y7:xv5l" />
+        <FacilitatorHero facilitator={facilitator} data-oid="ycab7p5" />
+        <FacilitatorCourses facilitator={facilitator} data-oid="0codgs_" />
       </div>
     </>
   );

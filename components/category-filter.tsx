@@ -22,7 +22,7 @@ export default function CategoryFilter({
           : "text-gray-600 hover:text-gray-900"
       }`}
       onClick={onClick}
-      data-oid="jv7wqar"
+      data-oid="71:iq0h"
     >
       {category.name}
     </button>

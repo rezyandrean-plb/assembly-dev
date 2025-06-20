@@ -301,6 +301,134 @@ export const facilitators: Facilitator[] = [
     },
     showOnFacilitatorsPage: false,
   },
+  {
+    id: "sebastian-lau",
+    name: "Sebastian Lau",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2019/09/Sebastian-Headshot_900px.jpg",
+    bio: "Sebastian, an Analytical and a problem-solver from the PropertyLimBrothers Team.",
+    longBio: "Sebastian, our Listing Specialist from the PropertyLimBrothers Team. He brings an array of experiences ranging from Aerospace engineering during his time in the Republic of Singapore Airforce to Risk Management solutions in the insurance industry. Analytical and a problem-solver, he has adapted his skill sets to assist potential homeowners and investors to make an informed and prepared decision through in-depth analytics and thorough research.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Choosing Your Path in Singapore Property: BTO vs Resale HDB",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/sebastianlgs/",
+      instagram: "https://www.instagram.com/chapstick__/#",
+      whatsapp: "wa.me/6590927388",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "lyndon-leong",
+    name: "Lyndon Leong",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2020/04/Lyndon-Headshot_900px.jpg",
+    bio: "Knowing how important a home or the journey is, Lyndon always takes pride in putting himself in his clients’ shoes.",
+    longBio: "Having worked personally with clients for 8 years, everything has been very personal for him in his line of work, from Funeral Director to Real Estate. Knowing how important a home or the journey is, Lyndon always takes pride in putting himself in his clients’ shoes, treating each sale, purchase, or rental as if it were his own or for his family members’. With the pressure of such a significant move, he meticulously makes sure that everything goes off smoothly and problem-solves should the need arise. More importantly, he sees each experience not as a transaction but as a relationship with his extended family.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Choosing Your Path in Singapore Property: BTO vs Resale HDB",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/lyndon-leong-282b00113/",
+      instagram: "https://www.instagram.com/llyynnddoonn/",
+      whatsapp: "wa.me/6590994688",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "shawn-tay",
+    name: "Shawn Tay",
+    role: "Associate Senior Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/09/Shawn-Tay-Headshot_900px.jpg",
+    bio: "Knowing how important a home or the journey is, Lyndon always takes pride in putting himself in his clients’ shoes.",
+    longBio: "Being one of the youngest in the team, Shawn draws inspiration from his teammates’ commitment and drive, as well as his own observation of the human emotions behind his clients’ real estate decision drivers. Naturally empathetic, his strength lies in his ability to put himself in the clients’ shoes, and understand their motivations so as to act in their best interest.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Choosing Your Path in Singapore Property: Condo vs Landed",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/peoplecallmeshawnie/",
+      whatsapp: "wa.me/6583823988",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "gavin-chan",
+    name: "Gavin Chan",
+    role: "Nil",
+    image: "",
+    bio: "",
+    longBio: "",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Choosing Your Path in Singapore Property: Condo vs Landed",
+    ],
+    socialLinks: {
+      instagram: "",
+      whatsapp: "",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "jesley-lim",
+    name: "Jesley Lim",
+    role: "Associate Senior Consultant",
+    image: "https://plb-integrity1-media.propertylimbrothers.com/wp-content/uploads/2022/11/13035201/Jesley1.jpg",
+    bio: "A familiar name and voice to all our new enquiries, Jesley’s cheerful and friendly personality puts even the most worried clients at ease.",
+    longBio: "A familiar name and voice to all our new enquiries, Jesley’s cheerful and friendly personality puts even the most worried clients at ease. A sincere and listening ear proven from her tutoring and merchandising experience, her knack for numbers continues to help PropertyLimBrothers’s Inside Sales Team.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Property Summit 2024",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/jesleylyl/",
+      whatsapp: "wa.me/6590992488",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "nicole-ng",
+    name: "Nicole Ng",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2019/11/Nicole-Headshot_900px-V2.jpg",
+    bio: "Nicole Ng comes with years of experience in the advertising industry, specialisting in account management, which is entirely relevant in client servicing for property.",
+    longBio: "Nicole Ng, our Listing Executive in our PropertyLimBrothers Team. She comes with years of experience in the advertising industry, specialisting in account management, which is entirely relevant in client servicing for property. She believes in the importance of a dwelling, and now answers the calling to bring the right homes to the right folk.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Property Strategies in 2025 Amid Rate Cuts",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/nicolewookieng/",
+      whatsapp: "wa.me/6597404988",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
 ];
 
 // Helper functions

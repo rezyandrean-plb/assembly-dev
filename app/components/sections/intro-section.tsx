@@ -64,39 +64,39 @@ export default function IntroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="ot58.8c">
-      <div className="container mx-auto px-4" data-oid="_yr8.8a">
-        <div className="max-w-4xl mx-auto" data-oid="c:ty00e">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="0m_yq-6">
+      <div className="container mx-auto px-4" data-oid="mi4lob0">
+        <div className="max-w-4xl mx-auto" data-oid="x7g-ykk">
           <div
             ref={titleRef}
             className="intro-title text-center mb-8"
-            data-oid="uygn_xq"
+            data-oid="e:v6ht3"
           >
-            <h2 className="text-4xl font-bold text-gray-900" data-oid="j06ljy1">
+            <h2 className="text-4xl font-bold text-gray-900" data-oid="y3hpplg">
               Introducing Assembly
             </h2>
             <div
               className="w-20 h-1 bg-orange-500 mx-auto mt-4"
-              data-oid="75_a:lv"
+              data-oid="pb6dt2i"
             ></div>
           </div>
 
           <div
             className="flex flex-col md:flex-row items-center gap-12"
-            data-oid="gihq2dc"
+            data-oid=":w9lg48"
           >
             <div
               ref={contentRef}
               className="intro-content md:w-2/3"
-              data-oid="mand5jh"
+              data-oid="0bb2t-f"
             >
-              <p className="text-lg text-gray-700 mb-6" data-oid="j7xydgi">
+              <p className="text-lg text-gray-700 mb-6" data-oid="zj--cvt">
                 Assembly is your knowledge hub for gaining insights, skills, and
                 connecting with others in the Singapore real estate ecosystem.
                 We provide the resources and community you need to navigate the
                 complex property landscape with confidence.
               </p>
-              <p className="text-lg text-gray-700" data-oid="tpwd9.b">
+              <p className="text-lg text-gray-700" data-oid="q..nov:">
                 Whether you're a seasoned professional or just starting your
                 journey in real estate, our platform offers valuable content,
                 expert perspectives, and networking opportunities to help you
@@ -107,37 +107,37 @@ export default function IntroSection() {
             <div
               ref={iconRef}
               className="intro-icon md:w-1/3 flex justify-center"
-              data-oid="nch9hsc"
+              data-oid="z6h.xnu"
             >
-              <div className="relative w-48 h-48" data-oid="a20-vqn">
+              <div className="relative w-48 h-48" data-oid="_0cxwr6">
                 <div
                   className="absolute inset-0 bg-orange-100 rounded-full"
-                  data-oid="o1v3s2h"
+                  data-oid="yrnfaqf"
                 ></div>
                 <div
                   className="absolute inset-2 bg-orange-200 rounded-full"
-                  data-oid="4ztgveh"
+                  data-oid="1uz5cia"
                 ></div>
                 <div
                   className="absolute inset-4 bg-orange-300 rounded-full"
-                  data-oid="gvvwsbq"
+                  data-oid="hv-4cg5"
                 ></div>
                 <div
                   className="absolute inset-6 bg-orange-400 rounded-full flex items-center justify-center"
-                  data-oid="z2oiaty"
+                  data-oid="o9jyi01"
                 >
                   <svg
                     className="w-20 h-20 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
-                    data-oid="saq_rs9"
+                    data-oid="8hvoz7t"
                   >
                     <path
                       fillRule="evenodd"
                       d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
                       clipRule="evenodd"
-                      data-oid="oiiay0p"
+                      data-oid="zxki925"
                     ></path>
                   </svg>
                 </div>

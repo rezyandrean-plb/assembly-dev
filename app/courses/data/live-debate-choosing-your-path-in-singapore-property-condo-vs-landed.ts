@@ -1,5 +1,11 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
+const shawntay = getFacilitator("shawn-tay");
+const george = getFacilitator("george-peng");
+const gavin = getFacilitator("gavin-chan");
 
 export const courseData: CourseData = {
   id: 1006,
@@ -14,7 +20,40 @@ export const courseData: CourseData = {
   tags: ["Property Comparison", "Investment Strategy", "Live Debate"],
   rating: 0,
   students: 0,
-  instructors: getInstructors ? getInstructors(["melvin-lim"]) : [],
+  instructors: melvin && yurong && shawntay && george && gavin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+        {
+          name: shawntay.name,
+          image: shawntay.image,
+          title: shawntay.role,
+          bio: shawntay.bio,
+        },
+        {
+          name: george.name,
+          image: george.image,
+          title: george.role,
+          bio: george.bio,
+        },
+        {
+          name: gavin.name,
+          image: gavin.image,
+          title: gavin.role,
+          bio: gavin.bio,
+        },
+      ]
+    : [],
   lastUpdated: "2024-06-01",
   description: "An engaging debate comparing the pros and cons of investing in condominiums versus landed properties in Singapore.",
   whatYouWillLearn: [

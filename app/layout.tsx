@@ -20,24 +20,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-oid="c9o9dvi">
-      <body className="" data-oid="k._:jgx">
-        <ErrorBoundary data-oid="j0e_aj2">
-          <AuthProvider data-oid="g51iqn1">
-            <CartProvider data-oid="x.b0baa">
-              <NetworkProvider data-oid="4yisy69">
-                <ScrollToTop data-oid="wky2.jg" />
+    <html lang="en" data-oid="m7wzi0_">
+      <body className="" data-oid="8:6h3kj">
+        <ErrorBoundary data-oid="zhqy4ig">
+          <AuthProvider data-oid="yknhzjw">
+            <CartProvider data-oid="hmk8n6.">
+              <NetworkProvider data-oid="-:e92vz">
+                <ScrollToTop data-oid="n8b12dd" />
                 <div
                   className="relative min-h-screen flex flex-col bg-[#F5F5F5]"
-                  data-oid="civ4fh4"
+                  data-oid="o31vpkp"
                 >
-                  <main className="flex-grow" data-oid="0:_2_qm">
+                  <main className="flex-grow" data-oid="5h:grkm">
                     {children}
                   </main>
-                  <Footer data-oid="cmvq.tk" />
+                  <Footer data-oid="1.wd-wf" />
                 </div>
               </NetworkProvider>
-              <Toaster position="top-center" data-oid=".3hd861" />
+              <Toaster position="top-center" data-oid="gi:d9v6" />
             </CartProvider>
           </AuthProvider>
         </ErrorBoundary>

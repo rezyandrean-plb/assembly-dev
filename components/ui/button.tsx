@@ -49,7 +49,7 @@ function Button({
     <Comp
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-      data-oid="88:x7y3"
+      data-oid="_4xanjg"
     />
   );
 }

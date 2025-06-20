@@ -23,14 +23,14 @@ export default function CheckoutPage() {
 
   // Show loading while redirecting
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="2dn1y-3">
+    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="ncesbb8">
       <div
         className="flex items-center justify-center min-h-[400px]"
-        data-oid="fydeahu"
+        data-oid="mcg971v"
       >
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-          data-oid="m0m78rf"
+          data-oid="6zpk.tj"
         ></div>
       </div>
     </div>

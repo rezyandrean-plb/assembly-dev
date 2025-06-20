@@ -55,14 +55,14 @@ export default function DeliveryPage() {
   // Don't render if no books (will redirect)
   if (bookItems.length === 0) {
     return (
-      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="hxmjnbc">
+      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="e6o6od7">
         <div
           className="flex items-center justify-center min-h-[400px]"
-          data-oid="bqbybws"
+          data-oid="1rl8_:s"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-            data-oid=":hhmw.."
+            data-oid="j.4tejd"
           ></div>
         </div>
       </div>
@@ -70,25 +70,25 @@ export default function DeliveryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="a0cr_uj">
-      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="4u8u.3r">
+    <div className="min-h-screen bg-gray-50" data-oid="kn4e1rf">
+      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="gubhegt">
         <div
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          data-oid="ge0mv3f"
+          data-oid=":m.l_ae"
         >
           {/* Left Column - Items */}
-          <div className="lg:col-span-2" data-oid="5rub:4r">
+          <div className="lg:col-span-2" data-oid="xm5fwmn">
             <div
               className="bg-white rounded-lg shadow-sm p-6"
-              data-oid="yhzt84g"
+              data-oid="vqeeo3k"
             >
               <h2
                 className="text-2xl font-bold mb-2 text-gray-900"
-                data-oid="1xo.5bu"
+                data-oid="frstdd."
               >
                 Delivery Options
               </h2>
-              <p className="text-gray-600 mb-6" data-oid="fv7ndcs">
+              <p className="text-gray-600 mb-6" data-oid="bb38rx1">
                 Choose how you'd like to receive your items ({bookItems.length}{" "}
                 item{bookItems.length !== 1 ? "s" : ""})
               </p>
@@ -97,44 +97,44 @@ export default function DeliveryPage() {
                 <div
                   key={item.id}
                   className="border border-gray-200 rounded-lg p-6 mb-6"
-                  data-oid="cr5c0ii"
+                  data-oid="_snsb46"
                 >
                   <div
                     className="flex items-center gap-4 mb-6"
-                    data-oid="vh3h5i_"
+                    data-oid="7vec6ky"
                   >
                     <div
                       className="w-16 h-16 bg-gray-200 rounded flex-shrink-0"
-                      data-oid="hhnrvh."
+                      data-oid="q1yxha_"
                     >
                       {item.image && (
                         <img
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover rounded"
-                          data-oid="m-mdi_8"
+                          data-oid="5k3003l"
                         />
                       )}
                     </div>
-                    <div className="flex-1" data-oid="hn1pfnb">
-                      <h4 className="font-semibold" data-oid="46j_1xj">
+                    <div className="flex-1" data-oid="qwylcbg">
+                      <h4 className="font-semibold" data-oid="6-a-rl4">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-gray-600" data-oid="idciq_d">
+                      <p className="text-sm text-gray-600" data-oid="f6ttsf4">
                         By {item.author}
                       </p>
-                      <p className="text-sm text-gray-600" data-oid="hhd776y">
+                      <p className="text-sm text-gray-600" data-oid="7m.n.ny">
                         Quantity: {item.quantity}
                       </p>
-                      <p className="font-semibold" data-oid="o69jnv0">
+                      <p className="font-semibold" data-oid="o:-z.k8">
                         {item.price}
                       </p>
                     </div>
                   </div>
 
-                  <div className="space-y-4" data-oid="779vu.-">
+                  <div className="space-y-4" data-oid=":13nsqd">
                     {/* Self Pickup Option */}
-                    <div className="flex items-start gap-3" data-oid="3s3fjri">
+                    <div className="flex items-start gap-3" data-oid="04-06r6">
                       <input
                         type="radio"
                         id="collect"
@@ -143,31 +143,31 @@ export default function DeliveryPage() {
                         checked={selectedShipping === "collect"}
                         onChange={(e) => handleDeliveryChange(e.target.value)}
                         className="w-4 h-4 mt-1"
-                        data-oid="2agc8-j"
+                        data-oid="csw0ii:"
                       />
 
                       <label
                         htmlFor="collect"
                         className="flex-1"
-                        data-oid="qqoc9jd"
+                        data-oid="fnv3o84"
                       >
                         <div
                           className="flex justify-between items-start"
-                          data-oid="0zxnzd_"
+                          data-oid="bxb6c91"
                         >
-                          <div data-oid="h00va_1">
-                            <p className="font-medium" data-oid="f5t7fxx">
+                          <div data-oid="pa4jcw.">
+                            <p className="font-medium" data-oid="gjy7con">
                               Self Pickup
                             </p>
                             <p
                               className="text-sm text-gray-600"
-                              data-oid="1gol1hu"
+                              data-oid="6jmjiz:"
                             >
                               Collection from 62 Ubi Road 1, Oxley BizHub 2,
                               #11-15/18, Singapore, 408734
                             </p>
                           </div>
-                          <span className="font-semibold" data-oid="xk967du">
+                          <span className="font-semibold" data-oid="4u:mgf:">
                             FREE
                           </span>
                         </div>
@@ -175,7 +175,7 @@ export default function DeliveryPage() {
                     </div>
 
                     {/* Delivery Option */}
-                    <div className="flex items-start gap-3" data-oid="b4m3da:">
+                    <div className="flex items-start gap-3" data-oid="utxh2xo">
                       <input
                         type="radio"
                         id="delivery"
@@ -184,15 +184,15 @@ export default function DeliveryPage() {
                         checked={selectedShipping === "delivery"}
                         onChange={(e) => handleDeliveryChange(e.target.value)}
                         className="w-4 h-4 mt-1"
-                        data-oid="4o3vv2."
+                        data-oid="ia12ub."
                       />
 
                       <label
                         htmlFor="delivery"
                         className="flex-1"
-                        data-oid="ezmzfmx"
+                        data-oid="gvdw7nr"
                       >
-                        <p className="font-medium" data-oid="nvfs_ol">
+                        <p className="font-medium" data-oid="cpu07ok">
                           Delivery
                         </p>
                       </label>
@@ -200,50 +200,50 @@ export default function DeliveryPage() {
 
                     {/* Delivery Options Section */}
                     {selectedShipping === "delivery" && (
-                      <div className="ml-7 space-y-4" data-oid="eii7tsw">
-                        <div data-oid="d4dwcj0">
+                      <div className="ml-7 space-y-4" data-oid="5.rhn21">
+                        <div data-oid="4:7gr0i">
                           <label
                             className="block text-sm font-medium mb-2"
-                            data-oid="dpdru_v"
+                            data-oid="ohewei1"
                           >
                             Enter your postal code to see delivery options
                           </label>
-                          <div className="flex gap-2 mb-4" data-oid="y68vyq4">
+                          <div className="flex gap-2 mb-4" data-oid="wcy993f">
                             <input
                               type="text"
                               value={postalCode}
                               onChange={(e) => setPostalCode(e.target.value)}
                               placeholder="Enter postal code"
                               className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                              data-oid="hd0z.yy"
+                              data-oid="s2mu3xg"
                             />
 
                             <button
                               onClick={handleCheckDelivery}
                               className="px-4 py-2 bg-[#123b79] text-white rounded-md hover:bg-[#0f2f63] transition-colors"
-                              data-oid="9y4prv6"
+                              data-oid="8lsrh5f"
                             >
                               Check
                             </button>
                           </div>
 
                           {showDeliveryOptions && postalCode.trim() && (
-                            <div className="space-y-3" data-oid=".6itkqg">
+                            <div className="space-y-3" data-oid="00_0nvy">
                               <p
                                 className="text-sm font-medium text-gray-700"
-                                data-oid="5-:x3ax"
+                                data-oid="lf2n-2f"
                               >
                                 Delivery options for {postalCode}:
                               </p>
 
-                              <div className="space-y-2" data-oid="4mj8xc2">
+                              <div className="space-y-2" data-oid="sgboehp">
                                 <label
                                   className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                  data-oid="opf4_ma"
+                                  data-oid="oaxxh9x"
                                 >
                                   <div
                                     className="flex items-center"
-                                    data-oid="lf5i_qk"
+                                    data-oid="9u4zuxk"
                                   >
                                     <input
                                       type="radio"
@@ -251,13 +251,13 @@ export default function DeliveryPage() {
                                       value="jnt"
                                       className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
                                       onChange={() => setShippingCost(3.75)}
-                                      data-oid="7j7x.a7"
+                                      data-oid="-i19waj"
                                     />
 
-                                    <div className="ml-3" data-oid="y7lif92">
+                                    <div className="ml-3" data-oid="pp31v0e">
                                       <p
                                         className="text-sm font-medium"
-                                        data-oid="k46fcbr"
+                                        data-oid="7a:0xfs"
                                       >
                                         J&T Express [1-3 working day(s)]
                                       </p>
@@ -265,7 +265,7 @@ export default function DeliveryPage() {
                                   </div>
                                   <span
                                     className="text-sm font-semibold"
-                                    data-oid="koj-6k-"
+                                    data-oid="45yslgl"
                                   >
                                     $3.75
                                   </span>
@@ -273,11 +273,11 @@ export default function DeliveryPage() {
 
                                 <label
                                   className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                  data-oid="bxnh2t."
+                                  data-oid="a75wn01"
                                 >
                                   <div
                                     className="flex items-center"
-                                    data-oid="x8sk_p."
+                                    data-oid="ytt361-"
                                   >
                                     <input
                                       type="radio"
@@ -285,13 +285,13 @@ export default function DeliveryPage() {
                                       value="aramex"
                                       className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
                                       onChange={() => setShippingCost(4.55)}
-                                      data-oid="rfit9pe"
+                                      data-oid="biz.yub"
                                     />
 
-                                    <div className="ml-3" data-oid="wxd4pit">
+                                    <div className="ml-3" data-oid="l3vfu8d">
                                       <p
                                         className="text-sm font-medium"
-                                        data-oid="4bomryb"
+                                        data-oid="e45o1lt"
                                       >
                                         Aramex Domestic Delivery [1-3 working
                                         day(s)]
@@ -300,7 +300,7 @@ export default function DeliveryPage() {
                                   </div>
                                   <span
                                     className="text-sm font-semibold"
-                                    data-oid="u8n92z8"
+                                    data-oid="4_.sf9z"
                                   >
                                     $4.55
                                   </span>
@@ -308,11 +308,11 @@ export default function DeliveryPage() {
 
                                 <label
                                   className="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50"
-                                  data-oid="-tm2mu9"
+                                  data-oid="04o-yza"
                                 >
                                   <div
                                     className="flex items-center"
-                                    data-oid="ttf5fl."
+                                    data-oid="i:26rzy"
                                   >
                                     <input
                                       type="radio"
@@ -320,13 +320,13 @@ export default function DeliveryPage() {
                                       value="tracx"
                                       className="w-4 h-4 text-[#123b79] focus:ring-[#123b79]"
                                       onChange={() => setShippingCost(4.05)}
-                                      data-oid="3n0.fdm"
+                                      data-oid=":luysoo"
                                     />
 
-                                    <div className="ml-3" data-oid="8ckw_2k">
+                                    <div className="ml-3" data-oid="jjtd1um">
                                       <p
                                         className="text-sm font-medium"
-                                        data-oid="sln.ljn"
+                                        data-oid="2l:3yvs"
                                       >
                                         Tracx Logis [1-2 working day(s)]
                                       </p>
@@ -334,7 +334,7 @@ export default function DeliveryPage() {
                                   </div>
                                   <span
                                     className="text-sm font-semibold"
-                                    data-oid="6j1y0mr"
+                                    data-oid="8-8g.fa"
                                   >
                                     $4.05
                                   </span>
@@ -352,7 +352,7 @@ export default function DeliveryPage() {
               <button
                 onClick={handleNext}
                 className="w-full bg-[#123b79] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#0f2f63] transition-colors text-lg"
-                data-oid="78:s_cm"
+                data-oid="8bpjfrm"
               >
                 Continue to Address →
               </button>
@@ -360,25 +360,25 @@ export default function DeliveryPage() {
           </div>
 
           {/* Right Column - Order Summary */}
-          <div className="lg:col-span-1" data-oid="2ml874o">
-            <div className="sticky top-8" data-oid="w-qi3mn">
-              <OrderSummary data-oid="ak2ffta" />
+          <div className="lg:col-span-1" data-oid="kg4n-3v">
+            <div className="sticky top-8" data-oid="9f8j_ry">
+              <OrderSummary data-oid=":jyst1h" />
             </div>
           </div>
         </div>
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 text-center" data-oid="ellv7uw">
-        <h3 className="text-lg font-semibold mb-2" data-oid="xjd:4el">
+      <div className="mt-12 text-center" data-oid="pm0s92-">
+        <h3 className="text-lg font-semibold mb-2" data-oid="qzidjkz">
           Need Help?
         </h3>
-        <p className="text-gray-600" data-oid="b3w93ay">
+        <p className="text-gray-600" data-oid="kzogq.0">
           Perhaps our{" "}
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="43d2e1z"
+            data-oid="a9cqyht"
           >
             FAQs
           </a>{" "}
@@ -386,7 +386,7 @@ export default function DeliveryPage() {
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="myeotmt"
+            data-oid="g7909.2"
           >
             Contact Us
           </a>{" "}

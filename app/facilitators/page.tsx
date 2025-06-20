@@ -28,26 +28,26 @@ export default function FacilitatorsPage() {
 
   return (
     <>
-      <Navbar data-oid="4_0ch:p" />
-      <div className="bg-white" data-oid="weavtvu">
-        <FacilitatorHero data-oid="nrx3c1u" />
+      <Navbar data-oid="1e9quuq" />
+      <div className="bg-white" data-oid="q31swmj">
+        <FacilitatorHero data-oid="..:w-te" />
 
         {/* Main Facilitators Section */}
         <section
           ref={sectionRef}
           className="py-24 bg-gray-50"
-          data-oid="q9otwpr"
+          data-oid="t7:98gc"
         >
-          <div className="container mx-auto px-4" data-oid="dedeund">
-            <div className="max-w-7xl mx-auto" data-oid="jk3w079">
+          <div className="container mx-auto px-4" data-oid="v-dg61h">
+            <div className="max-w-7xl mx-auto" data-oid="ejs24m3">
               {/* Facilitators List */}
-              <div className="space-y-24 mb-16" data-oid="wdxa0iz">
+              <div className="space-y-24 mb-16" data-oid="a0-1tld">
                 {facilitators.map((facilitator, index) => (
                   <FacilitatorCard
                     key={facilitator.id}
                     facilitator={facilitator}
                     index={index}
-                    data-oid="h.f8t_q"
+                    data-oid="6sn2yg1"
                   />
                 ))}
               </div>
@@ -56,25 +56,25 @@ export default function FacilitatorsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-white" data-oid="9r3t99q">
-          <div className="container mx-auto px-4" data-oid="7_s5_b.">
-            <div className="max-w-4xl mx-auto text-center" data-oid="ww9-sjf">
+        <section className="py-24 bg-white" data-oid="z-ireff">
+          <div className="container mx-auto px-4" data-oid="_4701r3">
+            <div className="max-w-4xl mx-auto text-center" data-oid="9-dhq:p">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                data-oid="f9:ub.f"
+                data-oid="zgsi9u0"
               >
                 <h3
                   className="text-3xl font-bold text-gray-900 mb-4"
-                  data-oid="f7e.pwz"
+                  data-oid="5zvox6h"
                 >
                   Ready to Learn from the Best?
                 </h3>
                 <p
                   className="text-gray-600 mb-8 max-w-2xl mx-auto"
-                  data-oid="7u9d8ui"
+                  data-oid="4rsxeqi"
                 >
                   Join thousands of successful property investors who have
                   learned from our expert facilitators. Start your journey today
@@ -82,27 +82,27 @@ export default function FacilitatorsPage() {
                 </p>
                 <div
                   className="flex flex-col sm:flex-row gap-4 justify-center"
-                  data-oid="8zscd63"
+                  data-oid="mon4.5d"
                 >
-                  <Link href="/courses" data-oid="nfddmf-">
+                  <Link href="/courses" data-oid="sw03y15">
                     <Button
                       size="lg"
                       className="bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 px-8 py-3 rounded-xl transition-all duration-300 group"
-                      data-oid="6a6w07:"
+                      data-oid="g_9h5ku"
                     >
                       Browse Courses
                       <ArrowRight
                         className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                        data-oid="z2owbai"
+                        data-oid="zvg5m9d"
                       />
                     </Button>
                   </Link>
-                  <Link href="/contact" data-oid="7w055kn">
+                  <Link href="/contact" data-oid="q6mmolu">
                     <Button
                       variant="outline"
                       size="lg"
                       className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-xl transition-all duration-300"
-                      data-oid="237hikr"
+                      data-oid="..ehf49"
                     >
                       Get in Touch
                     </Button>

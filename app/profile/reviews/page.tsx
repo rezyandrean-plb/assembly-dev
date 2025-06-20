@@ -87,48 +87,48 @@ export default function ReviewsPage() {
   });
 
   return (
-    <div className="p-6" data-oid="jh:is5i">
+    <div className="p-6" data-oid="o7.tel5">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="vpuu7x8"
+        data-oid="mk9q1wr"
       >
-        <div data-oid="8iijy6l">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="2x_j8ps">
+        <div data-oid="dm3uogp">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="4-oheqj">
             My Reviews
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="9u.tqy-">
+          <p className="text-gray-500 mt-1" data-oid="nm.bpam">
             Reviews you've left for courses
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="cp0fqh6">
-          <div className="relative" data-oid="twu_htz">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid="5928p7v">
+          <div className="relative" data-oid="d:z0j:q">
             <input
               type="text"
               placeholder="Search reviews..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="82z9g.l"
+              data-oid="l_asp:9"
             />
 
             <Search
               className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="0hgex8."
+              data-oid="62v5u0o"
             />
           </div>
           <button
             className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="aay3xyk"
+            data-oid="3x33:6g"
           >
-            <Filter className="h-4 w-4" data-oid="1r:fifs" />
-            <span data-oid="9:gqa::">Filter</span>
+            <Filter className="h-4 w-4" data-oid="avyn-p2" />
+            <span data-oid="s3d0238">Filter</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="f7su235">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="jkrkl-x">
         <button
           className={`px-4 py-2 font-medium text-sm ${
             activeTab === "all"
@@ -136,7 +136,7 @@ export default function ReviewsPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
-          data-oid="l5rrmrp"
+          data-oid="uog7_zu"
         >
           All Reviews ({reviewsData.length})
         </button>
@@ -147,14 +147,14 @@ export default function ReviewsPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("recent")}
-          data-oid="2nhfob2"
+          data-oid="yenaxx9"
         >
           Recent ({recentReviews.length})
         </button>
       </div>
 
       {/* Reviews List */}
-      <div className="space-y-6" data-oid="6_hy8cn">
+      <div className="space-y-6" data-oid="9w8iurr">
         {filteredReviews.map((review) => (
           <motion.div
             key={review.id}
@@ -162,12 +162,12 @@ export default function ReviewsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            data-oid="_qn6ut9"
+            data-oid="yv:cvro"
           >
-            <div className="flex items-start gap-4" data-oid="b79.5yd">
+            <div className="flex items-start gap-4" data-oid="j_mbhl9">
               <div
                 className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                data-oid="wawqvd."
+                data-oid="4bjlbx9"
               >
                 <Image
                   src={review.image || "/placeholder.svg"}
@@ -175,64 +175,64 @@ export default function ReviewsPage() {
                   width={64}
                   height={64}
                   className="object-cover"
-                  data-oid="brl48v-"
+                  data-oid="u0jsmbe"
                 />
               </div>
-              <div className="flex-1" data-oid="3vd7s:b">
+              <div className="flex-1" data-oid="k_aboyd">
                 <div
                   className="flex flex-col md:flex-row md:items-center justify-between mb-2"
-                  data-oid="iwv8ccl"
+                  data-oid="at3-_-4"
                 >
                   <h2
                     className="text-lg font-bold text-gray-800"
-                    data-oid="p3xz90a"
+                    data-oid="_tstddn"
                   >
                     {review.course}
                   </h2>
                   <div
                     className="flex items-center mt-2 md:mt-0"
-                    data-oid="9.e:tzp"
+                    data-oid="ysig74b"
                   >
-                    <div className="flex" data-oid="rcako20">
+                    <div className="flex" data-oid="7-vh-zf">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={`h-4 w-4 ${i < review.rating ? "text-yellow-500 fill-current" : "text-gray-300"}`}
-                          data-oid="k.y81bn"
+                          data-oid="l-j.dmb"
                         />
                       ))}
                     </div>
                     <span
                       className="ml-2 text-sm text-gray-500"
-                      data-oid="5hy.zd_"
+                      data-oid="i03mm9u"
                     >
                       {review.date}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 mb-2" data-oid="b1-q86w">
+                <p className="text-sm text-gray-600 mb-2" data-oid="vozvsg1">
                   Instructor: {review.instructor}
                 </p>
 
-                <p className="text-gray-700 mb-4" data-oid="wnm21mm">
+                <p className="text-gray-700 mb-4" data-oid="5g9:q3u">
                   {review.content}
                 </p>
 
-                <div className="flex justify-end space-x-3" data-oid="zafbmh2">
+                <div className="flex justify-end space-x-3" data-oid="abjcv94">
                   <button
                     className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-1"
-                    data-oid="jd_8wpx"
+                    data-oid="e.2veak"
                   >
-                    <Edit className="h-3.5 w-3.5" data-oid="iskr:-q" />
-                    <span data-oid="bcb9w:c">Edit</span>
+                    <Edit className="h-3.5 w-3.5" data-oid="a5w841b" />
+                    <span data-oid="7n:map-">Edit</span>
                   </button>
                   <button
                     className="px-3 py-1.5 border border-red-200 text-red-600 rounded-lg text-sm font-medium hover:bg-red-50 flex items-center gap-1"
-                    data-oid="jb7jljw"
+                    data-oid="8xjw6fj"
                   >
-                    <Trash className="h-3.5 w-3.5" data-oid="ny0w:8e" />
-                    <span data-oid="m8nb4ip">Delete</span>
+                    <Trash className="h-3.5 w-3.5" data-oid="hf29ov7" />
+                    <span data-oid="24v0o.o">Delete</span>
                   </button>
                 </div>
               </div>

@@ -26,7 +26,7 @@ export default function NewLearningPathsSection() {
       subtitle: "Start Your Investment Journey",
       description:
         "Perfect for newcomers to real estate investment. Learn the fundamentals and build a solid foundation.",
-      icon: <TrendingUp className="w-8 h-8" data-oid="e8nmns2" />,
+      icon: <TrendingUp className="w-8 h-8" data-oid="y:o77zv" />,
       duration: "4-6 weeks",
       courses: 8,
       level: "Beginner",
@@ -47,7 +47,7 @@ export default function NewLearningPathsSection() {
       subtitle: "Master HDB Investments",
       description:
         "Comprehensive training on HDB regulations, upgrading strategies, and maximizing HDB investment returns.",
-      icon: <Home className="w-8 h-8" data-oid="shw88x9" />,
+      icon: <Home className="w-8 h-8" data-oid="znxzhw-" />,
       duration: "6-8 weeks",
       courses: 12,
       level: "Intermediate",
@@ -68,7 +68,7 @@ export default function NewLearningPathsSection() {
       subtitle: "Condominium Investment Mastery",
       description:
         "Advanced strategies for condo investments, new launches, and building a profitable condo portfolio.",
-      icon: <Building className="w-8 h-8" data-oid=":7awns7" />,
+      icon: <Building className="w-8 h-8" data-oid=".p36:bb" />,
       duration: "8-10 weeks",
       courses: 15,
       level: "Advanced",
@@ -89,7 +89,7 @@ export default function NewLearningPathsSection() {
       subtitle: "Luxury Property Investment",
       description:
         "Elite training for landed property investments, including terrace houses, semi-detached, and bungalows.",
-      icon: <MapPin className="w-8 h-8" data-oid="aormcbx" />,
+      icon: <MapPin className="w-8 h-8" data-oid="z7mqntb" />,
       duration: "10-12 weeks",
       courses: 18,
       level: "Expert",
@@ -107,25 +107,25 @@ export default function NewLearningPathsSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="oswiu7t">
-      <div className="container mx-auto px-4" data-oid="cs9i7vm">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="yir:9c.">
+      <div className="container mx-auto px-4" data-oid="o-i4q08">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="l8.r:zi"
+          data-oid="hhwk-26"
         >
           <h2
             className="text-4xl lg:text-5xl font-bold mb-6 text-neutral-900"
-            data-oid="5osl0r1"
+            data-oid="apyy29u"
           >
             Choose Your Learning Path
           </h2>
           <p
             className="text-xl text-neutral-600 max-w-3xl mx-auto"
-            data-oid="cw0vrad"
+            data-oid=".t9kz8a"
           >
             Structured learning journeys designed to take you from beginner to
             expert in your chosen specialization
@@ -133,7 +133,7 @@ export default function NewLearningPathsSection() {
         </motion.div>
 
         {/* Learning Paths Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16" data-oid="-77xdz1">
+        <div className="grid md:grid-cols-2 gap-8 mb-16" data-oid="20jj6yj">
           {learningPaths.map((path, index) => (
             <motion.div
               key={path.id}
@@ -142,23 +142,23 @@ export default function NewLearningPathsSection() {
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              data-oid="dkf_c_7"
+              data-oid="h:i.ws."
             >
               {/* Header */}
               <div
                 className="flex items-start justify-between mb-6"
-                data-oid="x2hc09u"
+                data-oid="gag95c7"
               >
                 <div
                   className={`p-4 rounded-2xl ${path.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                  data-oid="h_lu:9d"
+                  data-oid="xs43hb6"
                 >
                   {path.icon}
                 </div>
                 <Badge
                   variant="secondary"
                   className="bg-white/80 text-neutral-700"
-                  data-oid="pmmhxzs"
+                  data-oid="i2zzkhp"
                 >
                   {path.level}
                 </Badge>
@@ -166,19 +166,19 @@ export default function NewLearningPathsSection() {
 
               <h3
                 className="text-2xl font-bold text-neutral-900 mb-2"
-                data-oid="vga4td0"
+                data-oid="hh0u:m1"
               >
                 {path.title}
               </h3>
               <p
                 className="text-lg font-medium text-neutral-700 mb-4"
-                data-oid="cjx4ju:"
+                data-oid="8r.ujg1"
               >
                 {path.subtitle}
               </p>
               <p
                 className="text-neutral-600 mb-6 leading-relaxed"
-                data-oid="ar26b28"
+                data-oid="6-n9ogt"
               >
                 {path.description}
               </p>
@@ -186,32 +186,32 @@ export default function NewLearningPathsSection() {
               {/* Meta Info */}
               <div
                 className="flex items-center gap-6 mb-6 text-sm text-neutral-600"
-                data-oid="ax6buxm"
+                data-oid="-k4.1be"
               >
-                <div className="flex items-center gap-2" data-oid=":c94qvc">
-                  <Clock className="w-4 h-4" data-oid="b-g2._b" />
-                  <span data-oid="9wlkbvn">{path.duration}</span>
+                <div className="flex items-center gap-2" data-oid="bqv.-d6">
+                  <Clock className="w-4 h-4" data-oid="l59_itq" />
+                  <span data-oid="c-pa928">{path.duration}</span>
                 </div>
-                <div className="flex items-center gap-2" data-oid="mq976k_">
-                  <CheckCircle className="w-4 h-4" data-oid="gnw4z7z" />
-                  <span data-oid="gg7f7ct">{path.courses} courses</span>
+                <div className="flex items-center gap-2" data-oid="xva:hzh">
+                  <CheckCircle className="w-4 h-4" data-oid="bc5tb.c" />
+                  <span data-oid="h6o8rlx">{path.courses} courses</span>
                 </div>
               </div>
 
               {/* Features */}
-              <div className="space-y-3 mb-8" data-oid="5ktcvp3">
+              <div className="space-y-3 mb-8" data-oid="tc.k2dw">
                 {path.features.map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
                     className="flex items-center gap-3"
-                    data-oid="g2gn25v"
+                    data-oid="8x2txjz"
                   >
                     <CheckCircle
                       className="w-5 h-5 text-success flex-shrink-0"
-                      data-oid="jgoe7g3"
+                      data-oid="fao-1ru"
                     />
 
-                    <span className="text-neutral-700" data-oid="o2e4x_r">
+                    <span className="text-neutral-700" data-oid="3jq6_xu">
                       {feature}
                     </span>
                   </div>
@@ -219,16 +219,16 @@ export default function NewLearningPathsSection() {
               </div>
 
               {/* CTA */}
-              <Link href={`/learning-paths/${path.slug}`} data-oid="g.mv4sg">
+              <Link href={`/learning-paths/${path.slug}`} data-oid="0ib-2y_">
                 <Button
                   className={`w-full ${path.color} hover:shadow-lg text-white group-hover:scale-105 transition-all duration-300`}
                   size="lg"
-                  data-oid="t.jb0lf"
+                  data-oid="_b-pxa."
                 >
                   Start This Path
                   <ArrowRight
                     className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                    data-oid="7kyw8lp"
+                    data-oid="znk2c_-"
                   />
                 </Button>
               </Link>
@@ -242,24 +242,24 @@ export default function NewLearningPathsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          data-oid="x-iq9tj"
+          data-oid="gis_fs7"
         >
-          <h3 className="text-3xl font-bold mb-4" data-oid="bca0t92">
+          <h3 className="text-3xl font-bold mb-4" data-oid="-43lp2z">
             Not Sure Which Path to Choose?
           </h3>
-          <p className="text-xl mb-8 opacity-90" data-oid="8b56wbd">
+          <p className="text-xl mb-8 opacity-90" data-oid="5xjx27i">
             Take our quick assessment to find the perfect learning path for your
             goals and experience level.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-oid="udvp3fn"
+            data-oid="4-llgfd"
           >
             <Button
               size="lg"
               variant="secondary"
               className="bg-white text-primary hover:bg-neutral-100 px-8 py-3"
-              data-oid="1s48a3e"
+              data-oid="cozokb."
             >
               Take Assessment
             </Button>
@@ -267,7 +267,7 @@ export default function NewLearningPathsSection() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3"
-              data-oid="fy.4e.a"
+              data-oid="_wk8db8"
             >
               Speak to Advisor
             </Button>

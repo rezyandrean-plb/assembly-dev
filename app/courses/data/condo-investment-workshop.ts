@@ -1,25 +1,32 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 3,
   title: "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence",
   slug: "condo-investment-workshop",
   level: "All Levels",
-  duration: "8 weeks",
-  category: "Condo Investment",
+  duration: "7 hours 33 minutes",
+  category: "Condo",
   price: "$899.00",
   image: "/images/condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence.jpg",
   featured: true,
-  tags: ["Investment", "Condo", "Portfolio"],
-  rating: 4.7,
-  students: 156,
-  instructors: getInstructors(["melvin-lim"]).map((instructor) => ({
-    ...instructor,
-    title: "Lead Property Investment Strategist",
-    bio: "Melvin Lim is a renowned property investment strategist with over 15 years of experience in the Singapore real estate market. He specializes in condominium investments and portfolio building strategies.",
-  })),
-  lastUpdated: "May 2025",
+  tags: ["Condo"],
+  rating: 0,
+  students: 22,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+      : [],
+  lastUpdated: "20 June 2025",
   description: `This comprehensive workshop is designed for property investors looking to build or expand their condominium portfolio in Singapore's competitive market. Through a combination of expert instruction, case studies, and hands-on exercises, you'll develop the skills and confidence to identify, analyze, and acquire profitable condo investments.
 
 The workshop covers everything from market analysis and property valuation to financing strategies and portfolio management. You'll learn how to evaluate potential investments, negotiate effectively, and build a diversified portfolio that generates consistent returns.

@@ -53,48 +53,48 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
     <section
       ref={sectionRef}
       className="relative py-20 bg-white overflow-hidden"
-      data-oid="808o-l:"
+      data-oid="lo4-ovj"
     >
       {/* Background Pattern */}
       <div
         className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20"
-        data-oid=":fykm.o"
+        data-oid="c9:q090"
       />
 
       <div
         className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl"
-        data-oid=":q7y-zb"
+        data-oid="mofy30y"
       />
 
       <div
         className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100/40 to-transparent rounded-full blur-3xl"
-        data-oid="e:admc0"
+        data-oid="pgbqfvv"
       />
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="qfgl-tz">
-        <div className="max-w-7xl mx-auto" data-oid="j0od1pd">
+      <div className="container mx-auto px-4 relative z-10" data-oid="ifo_0sy">
+        <div className="max-w-7xl mx-auto" data-oid="y7_8rh7">
           <div
             className="grid lg:grid-cols-5 gap-12 items-center"
-            data-oid="iabrnve"
+            data-oid="mrbtfr9"
           >
             {/* Image Section - Takes 2 columns */}
-            <div className="lg:col-span-2 relative" data-oid="_2punyr">
-              <div className="relative" data-oid="f::8fj-">
+            <div className="lg:col-span-2 relative" data-oid="7yjk0g3">
+              <div className="relative" data-oid="4f2zcal">
                 {/* Main Image */}
                 <div
                   className="relative w-full max-w-md mx-auto"
-                  data-oid="egaes7o"
+                  data-oid="43vixf:"
                 >
                   <div
                     className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200"
-                    data-oid="ov5eij9"
+                    data-oid="e2j18i:"
                   >
                     <Image
                       src={facilitator.image}
                       alt={facilitator.name}
                       fill
                       className="object-cover"
-                      data-oid="0ql4ni6"
+                      data-oid="ejoen2e"
                     />
                   </div>
                 </div>
@@ -102,34 +102,34 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
             </div>
 
             {/* Content Section - Takes 3 columns */}
-            <div className="lg:col-span-3 space-y-8" data-oid="a1-fe6n">
+            <div className="lg:col-span-3 space-y-8" data-oid="xci8h8k">
               {/* Header */}
-              <div data-oid="ywybxm.">
+              <div data-oid="im7fgpz">
                 <div
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-blue-100"
-                  data-oid="us9dxkk"
+                  data-oid="ax2svm6"
                 >
-                  <Star className="w-4 h-4" data-oid="gvtdop2" />
+                  <Star className="w-4 h-4" data-oid="3tv:ofq" />
                   {facilitator.specialty}
                 </div>
 
                 <h1
                   className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight"
-                  data-oid="_d9s05e"
+                  data-oid="euz1plm"
                 >
                   {facilitator.name}
                 </h1>
 
                 <p
                   className="text-2xl text-blue-600 font-semibold mb-6"
-                  data-oid="urs_tlo"
+                  data-oid="vi28y6a"
                 >
                   {facilitator.role}
                 </p>
 
                 <p
                   className="text-xl text-gray-600 leading-relaxed mb-8"
-                  data-oid="pwpcy6p"
+                  data-oid="qwv98p9"
                 >
                   {facilitator.bio}
                 </p>
@@ -137,11 +137,11 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                 {/* Long Bio */}
                 <div
                   className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm mb-8"
-                  data-oid="1nxxi-w"
+                  data-oid="poxah5v"
                 >
                   <p
                     className="text-lg text-gray-700 leading-relaxed"
-                    data-oid="iesm0im"
+                    data-oid="nb6.pl."
                   >
                     {facilitator.longBio}
                   </p>
@@ -150,14 +150,14 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
 
               {/* Social Links */}
               {facilitator.socialLinks && (
-                <div className="flex items-center gap-4" data-oid=":t:qu8c">
+                <div className="flex items-center gap-4" data-oid="dgcmh1m">
                   <span
                     className="text-gray-600 font-medium"
-                    data-oid="c4_jbfd"
+                    data-oid="9oohz3u"
                   >
                     Connect with {facilitator.name.split(" ")[0]}:
                   </span>
-                  <div className="flex gap-3" data-oid="3eoazi5">
+                  <div className="flex gap-3" data-oid="d8ty0q9">
                     {Object.entries(facilitator.socialLinks).map(
                       ([platform, url]) => {
                         const Icon = getSocialIcon(platform);
@@ -172,11 +172,11 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                               platform === "email" ? "" : "noopener noreferrer"
                             }
                             className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 group shadow-sm"
-                            data-oid="d8yvcjc"
+                            data-oid=":f3-ybn"
                           >
                             <Icon
                               className="w-5 h-5 text-gray-600 group-hover:text-gray-800 group-hover:scale-110 transition-all duration-300"
-                              data-oid="g_m8bv7"
+                              data-oid="g-sr8l4"
                             />
                           </Link>
                         );

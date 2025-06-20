@@ -77,45 +77,45 @@ export default function HeroSection() {
       ref={heroRef}
       className="section hero-section"
       id="hero"
-      data-oid="pleo.2x"
+      data-oid="aq963i8"
     >
-      <div className="container" data-oid="kf:1qhv">
-        <div className="hero-content" data-oid=":vvbqwb">
-          <div className="hero-text" data-oid="lg4fkvm">
-            <h1 ref={titleRef} className="hero-title" data-oid="su.917q">
+      <div className="container" data-oid="g:91ym3">
+        <div className="hero-content" data-oid="dgl:740">
+          <div className="hero-text" data-oid="0zz4_d7">
+            <h1 ref={titleRef} className="hero-title" data-oid="5t_bml9">
               Property Launch{" "}
-              <span className="text-highlight" data-oid="4eqc4q7">
+              <span className="text-highlight" data-oid="7y78el-">
                 Bible
               </span>
             </h1>
             <p
               ref={subtitleRef}
               className="hero-subtitle feature-text"
-              data-oid="a.gorch"
+              data-oid="fb9hon4"
             >
               Your comprehensive guide to navigating Singapore's property market
               with confidence and precision
             </p>
-            <div ref={ctaRef} className="hero-cta" data-oid="jtu6zc-">
+            <div ref={ctaRef} className="hero-cta" data-oid="k-dhd19">
               <a
                 href="#purchase"
                 className="btn btn-primary"
-                data-oid="gz4r14:"
+                data-oid="lneu6y0"
               >
                 Get Your Copy
               </a>
               <a
                 href="#features"
                 className="btn btn-secondary"
-                data-oid="nr07ieh"
+                data-oid="_z1v:6v"
               >
                 Learn More
               </a>
             </div>
           </div>
 
-          <div ref={bookRef} className="hero-book" data-oid="9i2b__k">
-            <BookCover data-oid="ap:.t3e" />
+          <div ref={bookRef} className="hero-book" data-oid="hmjxr1f">
+            <BookCover data-oid="et.6c5u" />
           </div>
         </div>
 
@@ -123,10 +123,10 @@ export default function HeroSection() {
           className="scroll-indicator"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
-          data-oid="wdga9gq"
+          data-oid="ceh_190"
         >
-          <ChevronDown size={24} data-oid="ahl-539" />
-          <span data-oid="0lkxdxo">Scroll to explore</span>
+          <ChevronDown size={24} data-oid="fg0tv5q" />
+          <span data-oid="aiaww2m">Scroll to explore</span>
         </motion.div>
       </div>
     </section>

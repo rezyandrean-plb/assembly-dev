@@ -41,34 +41,34 @@ const StoryHeroSection = () => {
     <section
       ref={sectionRef}
       className="relative py-32 bg-white overflow-hidden"
-      data-oid="sr23.rd"
+      data-oid="3.0e-t-"
     >
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-full" data-oid="2-g33e9">
+      <div className="absolute top-0 left-0 w-full h-full" data-oid="9zsconh">
         <div
           className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-60"
-          data-oid="a4l-.5o"
+          data-oid="_rgz5h."
         ></div>
         <div
           className="absolute bottom-20 right-10 w-24 h-24 bg-orange-100 rounded-full opacity-60"
-          data-oid="5il5r7z"
+          data-oid="rs5xo5_"
         ></div>
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-50 to-orange-50 rounded-full opacity-30"
-          data-oid="m49eicj"
+          data-oid="76rj54i"
         ></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="bm10:yg">
-        <div className="max-w-4xl mx-auto text-center" data-oid="qlk4xyi">
+      <div className="container mx-auto px-4 relative z-10" data-oid="k41ydro">
+        <div className="max-w-4xl mx-auto text-center" data-oid="wl:-c5e">
           <motion.div
             className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            data-oid="adjv59m"
+            data-oid="82aenqd"
           >
-            <Sparkles className="w-4 h-4" data-oid="1-l_dxm" />
+            <Sparkles className="w-4 h-4" data-oid="blj0jgo" />
             Our Story
           </motion.div>
 
@@ -77,10 +77,10 @@ const StoryHeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            data-oid="ofms1rq"
+            data-oid="hz1g-jh"
           >
             Creating Creators.
-            <span className="block text-blue-800" data-oid="vn2lani">
+            <span className="block text-blue-800" data-oid=".7resqp">
               Empowering Realtors.
             </span>
           </motion.h1>
@@ -90,14 +90,14 @@ const StoryHeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            data-oid="t14fxmg"
+            data-oid="g8ri0j2"
           >
             In a world where information is abundant but guidance is scarce,
             Assembly was founded to bridge that gap. We believe that real
             progress happens not just through knowledge, but through mentorship,
             collaboration, and practical growth.
-            <br data-oid="ot0im2q" />
-            <br data-oid="tk9_lj3" />
+            <br data-oid="21pu_ne" />
+            <br data-oid=".6hts7k" />
             Assembly is a space where aspiring creatives and realtors are
             equipped for the future—through expert-led training, peer learning,
             and real-world frameworks designed to nurture skill and confidence.
@@ -116,24 +116,24 @@ const FounderStorySection = () => {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="_0.ht60">
-      <div className="container mx-auto px-4" data-oid="5_d__rp">
-        <div className="max-w-6xl mx-auto" data-oid="pda6h6y">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid=":bvz4e9">
+      <div className="container mx-auto px-4" data-oid="8lu43_:">
+        <div className="max-w-6xl mx-auto" data-oid="29g63w8">
           <div
             className="grid lg:grid-cols-2 gap-16 items-center"
-            data-oid="6_6pdv0"
+            data-oid="9gttzac"
           >
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
               transition={{ duration: 0.8 }}
-              data-oid="itk:e6o"
+              data-oid="wz1f44t"
             >
-              <div className="relative" data-oid="v462blp">
+              <div className="relative" data-oid="wkeby6j">
                 {/* Placeholder for founder image */}
                 <div
                   className="w-full h-96 bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl flex items-center justify-center overflow-hidden"
-                  data-oid="vfgql01"
+                  data-oid="k3yedbd"
                 >
                   <Image
                     src="/images/About-Us-01-scaled.jpg"
@@ -142,7 +142,7 @@ const FounderStorySection = () => {
                     height={384}
                     className="object-cover w-full h-full"
                     priority
-                    data-oid="41ph-11"
+                    data-oid="8tlnmgg"
                   />
                 </div>
 
@@ -155,16 +155,16 @@ const FounderStorySection = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  data-oid="yv.0s5l"
+                  data-oid="rj4lsg1"
                 >
                   <Quote
                     className="w-6 h-6 text-blue-600 mb-2"
-                    data-oid="31_df2k"
+                    data-oid="--kh4.n"
                   />
 
                   <p
                     className="text-sm text-gray-700 italic"
-                    data-oid="ditek1n"
+                    data-oid="9h-gcm8"
                   >
                     "Education should empower, not intimidate."
                   </p>
@@ -176,31 +176,31 @@ const FounderStorySection = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="9agb8ss"
+              data-oid="5yq2v4t"
             >
               <h2
                 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-                data-oid="elkwh8s"
+                data-oid="21ogdm9"
               >
                 The Spark That Started It All
               </h2>
               <div
                 className="space-y-6 text-gray-700 leading-relaxed"
-                data-oid="r1919lw"
+                data-oid="swvzetc"
               >
-                <p data-oid="kvp0xju">
+                <p data-oid="m_7g7_3">
                   Back in 2018, our founder noticed something troubling in
                   Singapore's property market. While property investment was
                   creating incredible wealth for some, the knowledge and
                   strategies were locked away in exclusive circles.
                 </p>
-                <p data-oid="bki6vm5">
+                <p data-oid="aymmk68">
                   "I watched too many people make costly mistakes simply because
                   they didn't have access to the right information," recalls our
                   founder. "That's when I realized we needed to democratize
                   property education."
                 </p>
-                <p data-oid=":.0h8..">
+                <p data-oid="2u00hj7">
                   What started as weekend workshops in small community centers
                   has grown into a comprehensive platform that has transformed
                   thousands of lives. But our mission remains the same: making
@@ -210,14 +210,14 @@ const FounderStorySection = () => {
 
               <div
                 className="mt-8 p-6 bg-blue-50 rounded-xl"
-                data-oid="kdbm532"
+                data-oid="onr-0p-"
               >
-                <p className="text-gray-700 font-bold" data-oid="beay2yv">
+                <p className="text-gray-700 font-bold" data-oid="jbt0c.p">
                   “It is the long history of humankind that those who learned to
                   collaborate and improvise most effectively have
                   prevailed.”{" "}
                 </p>
-                <p className="mt-2" data-oid="ix3j4fn">
+                <p className="mt-2" data-oid="jvwke.2">
                   - Charles Darwin
                 </p>{" "}
               </div>
@@ -258,36 +258,36 @@ const OurPurposeSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="466w5el">
-      <div className="container mx-auto px-4" data-oid="dx:vbo9">
-        <div className="max-w-7xl mx-auto" data-oid="a7.htga">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="-566wt7">
+      <div className="container mx-auto px-4" data-oid=".qvi7e6">
+        <div className="max-w-7xl mx-auto" data-oid="e6tamn-">
           {/* Section Header */}
           <motion.div
             className="mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid="2ur-:q5"
+            data-oid="vu472ya"
           >
-            <div className="flex items-center gap-4 mb-6" data-oid="6tnp54s">
+            <div className="flex items-center gap-4 mb-6" data-oid="bk9b634">
               <h2
                 className="text-3xl md:text-4xl font-bold text-gray-900"
-                data-oid="wn-lu04"
+                data-oid="_cg6f3_"
               >
                 Our Purpose
               </h2>
-              <div className="flex gap-1" data-oid="yvup-lb">
+              <div className="flex gap-1" data-oid="ledi3ax">
                 <div
                   className="w-8 h-1 bg-blue-600 rounded"
-                  data-oid="5yt0p08"
+                  data-oid="d1t7t.3"
                 ></div>
                 <div
                   className="w-8 h-1 bg-orange-500 rounded"
-                  data-oid="i4qbwsq"
+                  data-oid="0v2aizf"
                 ></div>
                 <div
                   className="w-8 h-1 bg-green-500 rounded"
-                  data-oid="m.-s5jt"
+                  data-oid="2ine.rn"
                 ></div>
               </div>
             </div>
@@ -296,7 +296,7 @@ const OurPurposeSection = () => {
           {/* Main Content Grid */}
           <div
             className="grid lg:grid-cols-3 gap-12 items-center"
-            data-oid="5odb4jp"
+            data-oid="65.b1ep"
           >
             {/* Left Image */}
             <motion.div
@@ -304,12 +304,12 @@ const OurPurposeSection = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="vwcccr9"
+              data-oid="v:b3t-h"
             >
-              <div className="relative" data-oid="e8lu:bu">
+              <div className="relative" data-oid="m-971ju">
                 <div
                   className="aspect-[4/5] bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl overflow-hidden shadow-xl"
-                  data-oid="ieehee5"
+                  data-oid="zebukx:"
                 >
                   <Image
                     src="/images/NLC24-43.jpg"
@@ -317,7 +317,7 @@ const OurPurposeSection = () => {
                     width={500}
                     height={625}
                     className="w-full h-full object-cover"
-                    data-oid="x-jflj."
+                    data-oid="1nm7vws"
                   />
                 </div>
 
@@ -330,23 +330,23 @@ const OurPurposeSection = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  data-oid="tybte-7"
+                  data-oid="6_si6_d"
                 >
-                  <div className="flex items-center gap-2" data-oid="66t-c5z">
+                  <div className="flex items-center gap-2" data-oid="8b9j-i9">
                     <div
                       className="w-3 h-3 bg-blue-600 rounded-full"
-                      data-oid=".dozin-"
+                      data-oid="h:u::oe"
                     ></div>
                     <span
                       className="text-sm font-semibold text-gray-900"
-                      data-oid="s22yce_"
+                      data-oid="i.7exnl"
                     >
                       ASSEMBLY
                     </span>
                   </div>
                   <p
                     className="text-xs text-gray-600 text-center"
-                    data-oid="t70vaf1"
+                    data-oid="bymknyz"
                   >
                     BY PROPERTYLIMBROTHERS
                   </p>
@@ -360,15 +360,15 @@ const OurPurposeSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              data-oid="hw.di:f"
+              data-oid="82zehli"
             >
               <div
                 className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 shadow-lg"
-                data-oid="as2d7qc"
+                data-oid="h1k0m9k"
               >
                 <p
                   className="text-lg text-gray-700 leading-relaxed"
-                  data-oid=".x:4wsn"
+                  data-oid="_yovyiu"
                 >
                   We go beyond education. Our aim is to build a thriving
                   community of like-minded professionals—people who aren't just
@@ -382,19 +382,19 @@ const OurPurposeSection = () => {
               {/* Mission Statement */}
               <div
                 className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600"
-                data-oid="t0v_c0_"
+                data-oid="502hs4."
               >
                 <h3
                   className="font-bold text-gray-900 mb-2 flex items-center gap-2"
-                  data-oid="a52za.2"
+                  data-oid="syscwlq"
                 >
                   <Target
                     className="w-5 h-5 text-blue-600"
-                    data-oid="6l8ef2:"
+                    data-oid="f6u_b.t"
                   />
                   Our Mission
                 </h3>
-                <p className="text-gray-700" data-oid="amqtr2j">
+                <p className="text-gray-700" data-oid="nz0faka">
                   We don't just want to educate, we want to build up a community
                   where like-minded people can gather, share experiences, and
                   leverage on each other's experiences and expertise. We don't
@@ -411,12 +411,12 @@ const OurPurposeSection = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              data-oid="bd.md8b"
+              data-oid="dvg9pod"
             >
-              <div className="relative" data-oid="3jqn4p.">
+              <div className="relative" data-oid="18evl_q">
                 <div
                   className="aspect-[4/5] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl"
-                  data-oid="px-gjlt"
+                  data-oid="ar9-mxr"
                 >
                   <Image
                     src="/images/NLC24-137.jpg"
@@ -424,7 +424,7 @@ const OurPurposeSection = () => {
                     width={500}
                     height={625}
                     className="w-full h-full object-cover"
-                    data-oid="6vvp__d"
+                    data-oid="c5kjpj_"
                   />
                 </div>
               </div>
@@ -437,13 +437,13 @@ const OurPurposeSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            data-oid="eco4i79"
+            data-oid="2c.b406"
           >
             <div
               className="bg-white rounded-3xl p-12 border border-gray-100 shadow-lg"
-              data-oid="w_r09m8"
+              data-oid="_n2ihz9"
             >
-              <div className="grid md:grid-cols-4 gap-8" data-oid="iihsqqa">
+              <div className="grid md:grid-cols-4 gap-8" data-oid="yh0v53g">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -454,26 +454,26 @@ const OurPurposeSection = () => {
                       y: isInView ? 0 : 20,
                     }}
                     transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                    data-oid="xk.33nu"
+                    data-oid="ag2-qrr"
                   >
                     <div
                       className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
-                      data-oid="cql.tv:"
+                      data-oid="f-oazwq"
                     >
                       <stat.icon
                         className="w-8 h-8 text-blue-600"
-                        data-oid="4:hlw7o"
+                        data-oid="pk7w7k3"
                       />
                     </div>
                     <div
                       className="text-3xl font-bold mb-2 text-gray-900"
-                      data-oid="72us7p5"
+                      data-oid="xh6behp"
                     >
                       {stat.number}
                     </div>
                     <div
                       className="text-lg font-semibold mb-1 text-gray-700"
-                      data-oid="9stiq7:"
+                      data-oid="p4s6kx6"
                     >
                       {stat.label}
                     </div>
@@ -518,32 +518,32 @@ const ValuesInActionSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-900" data-oid="_t1smsf">
-      <div className="container mx-auto px-4" data-oid="sskpvf_">
-        <div className="max-w-6xl mx-auto" data-oid="21accb0">
+    <section ref={sectionRef} className="py-24 bg-gray-900" data-oid="2pq17q9">
+      <div className="container mx-auto px-4" data-oid="tn8veb8">
+        <div className="max-w-6xl mx-auto" data-oid="3_2.bzw">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid="o6rlrnf"
+            data-oid="ouvqqpt"
           >
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-6"
-              data-oid="dtd14a8"
+              data-oid="z75rlq9"
             >
               Our Core Values
             </h2>
             <p
               className="text-xl text-gray-300 max-w-3xl mx-auto"
-              data-oid="_j7yy71"
+              data-oid="mhet8-9"
             >
               These aren't just words on a wall. Here's how our core values
               shape everything we do, from course creation to student support.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8" data-oid=".fkaedi">
+          <div className="grid md:grid-cols-2 gap-8" data-oid="if3fs:v">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -551,28 +551,28 @@ const ValuesInActionSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                data-oid="x_yps10"
+                data-oid="2.88n0i"
               >
-                <div className="flex items-start gap-6" data-oid="3dwb_f9">
+                <div className="flex items-start gap-6" data-oid="8ygzmxa">
                   <div
                     className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0"
-                    data-oid="asb1g7l"
+                    data-oid="1n38skk"
                   >
                     <value.icon
                       className="w-8 h-8 text-white"
-                      data-oid=".5ry.9u"
+                      data-oid="y.l3v6."
                     />
                   </div>
-                  <div className="flex-1" data-oid="nmnc_7r">
+                  <div className="flex-1" data-oid="85yjup8">
                     <h3
                       className="text-xl font-bold text-white mb-3"
-                      data-oid=".x8ryio"
+                      data-oid="rq0l8d2"
                     >
                       {value.title}
                     </h3>
                     <p
                       className="text-gray-300 leading-relaxed mb-4"
-                      data-oid="jeqz2ot"
+                      data-oid="b:735lu"
                     >
                       {value.description}
                     </p>
@@ -604,25 +604,25 @@ const MeetTeamSection = () => {
     .filter(Boolean) as Facilitator[];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="ik:fneb">
-      <div className="container mx-auto px-4" data-oid="68.2yhg">
-        <div className="max-w-6xl mx-auto" data-oid="rg0k9xs">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="766bmiz">
+      <div className="container mx-auto px-4" data-oid="u9t9vyu">
+        <div className="max-w-6xl mx-auto" data-oid="z0vkht_">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid="ja2tntg"
+            data-oid="sn6jckb"
           >
             <h2
               className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-              data-oid="34l0v:s"
+              data-oid="5a:b9dj"
             >
               Meet the Humans Behind Assembly
             </h2>
             <p
               className="text-xl text-gray-600 max-w-3xl mx-auto"
-              data-oid="mgrve0u"
+              data-oid="fo2kxx."
             >
               We're not just educators – we're property investors, former
               students, and passionate believers in the power of shared
@@ -632,7 +632,7 @@ const MeetTeamSection = () => {
 
           <div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            data-oid="4o-z2z7"
+            data-oid=".-7:r6k"
           >
             {teamMembers.map((member, index) => (
               <motion.div
@@ -641,12 +641,12 @@ const MeetTeamSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                data-oid="9pt08ua"
+                data-oid=".8sl4hh"
               >
-                <div className="relative mb-6" data-oid="_y7ixwz">
+                <div className="relative mb-6" data-oid="-jefrwi">
                   <div
                     className="w-32 h-32 mx-auto rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300"
-                    data-oid=".gu249y"
+                    data-oid="bqj:dx4"
                   >
                     <Image
                       src={member.image}
@@ -654,36 +654,36 @@ const MeetTeamSection = () => {
                       width={128}
                       height={128}
                       className="w-full h-full object-cover"
-                      data-oid="uubfckf"
+                      data-oid="89t-vlw"
                     />
                   </div>
                 </div>
-                <div className="min-h-[6rem]" data-oid="y_t5irg">
+                <div className="min-h-[6rem]" data-oid="qo48znu">
                   <h3
                     className="text-lg font-bold text-gray-900 mb-1"
-                    data-oid="ni5yp2u"
+                    data-oid="378v2xc"
                   >
                     {member.name}
                   </h3>
                   <p
                     className="text-blue-600 font-medium mb-2"
-                    data-oid="pss7-65"
+                    data-oid=".09-zc0"
                   >
                     {member.role}
                   </p>
                 </div>
-                <p className="text-gray-600 text-sm mb-3" data-oid="45oi9.h">
+                <p className="text-gray-600 text-sm mb-3" data-oid="h-t8-41">
                   {member.bio}
                 </p>
               </motion.div>
             ))}
           </div>
-          <div className="mt-16 text-center" data-oid="_awqajj">
-            <Link href="/facilitators" data-oid=":g126g3">
+          <div className="mt-16 text-center" data-oid="427prv-">
+            <Link href="/facilitators" data-oid="c7v9345">
               <Button
                 size="lg"
                 className="bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 px-8 py-3 rounded-xl transition-all duration-300 group"
-                data-oid="s7fu8d3"
+                data-oid="s.1b_qr"
               >
                 Meet All Facilitators
               </Button>
@@ -725,55 +725,55 @@ const FutureVisionSection = () => {
     <section
       ref={sectionRef}
       className="py-24 bg-gradient-to-br from-blue-50 to-orange-50"
-      data-oid="i.s.wm8"
+      data-oid="-p4ec7n"
     >
-      <div className="container mx-auto px-4" data-oid="eajjf:7">
-        <div className="max-w-6xl mx-auto" data-oid="leogjni">
+      <div className="container mx-auto px-4" data-oid="s4g4h..">
+        <div className="max-w-6xl mx-auto" data-oid="zymcyka">
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            data-oid="7hqggbt"
+            data-oid="3._u6dg"
           >
             <div
               className="bg-transparent rounded-2xl p-8 max-w-2xl mx-auto"
-              data-oid="gzd4.y8"
+              data-oid="hjcogxb"
             >
               <h3
                 className="text-2xl font-bold text-gray-900 mb-4"
-                data-oid="mxn2d0-"
+                data-oid="1.-w8qn"
               >
                 Join Our Journey
               </h3>
-              <p className="text-gray-600 mb-6" data-oid="m12_rsx">
+              <p className="text-gray-600 mb-6" data-oid="l158j4y">
                 Be part of the next chapter in property education. Whether
                 you're a student, instructor, or industry partner, there's a
                 place for you in our growing community.
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                data-oid=":-4yods"
+                data-oid="jz05b7c"
               >
-                <Link href="/courses" data-oid="xsjhx-2">
+                <Link href="/courses" data-oid="ry7ftm.">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-xl transition-all duration-300 group"
-                    data-oid="e.oqpwe"
+                    data-oid="hz4zxrr"
                   >
                     Start Learning
                     <ArrowRight
                       className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                      data-oid="6f:58bh"
+                      data-oid="uhtwjq_"
                     />
                   </Button>
                 </Link>
-                <Link href="/contact" data-oid="7chf-i:">
+                <Link href="/contact" data-oid="34nqwzc">
                   <Button
                     variant="outline"
                     size="lg"
                     className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-xl transition-all duration-300"
-                    data-oid="14oubzm"
+                    data-oid="8ntyugb"
                   >
                     Get in Touch
                   </Button>
@@ -791,13 +791,13 @@ const FutureVisionSection = () => {
 export default function AboutPage() {
   return (
     <>
-      <Navbar data-oid="w1-a48p" />
-      <StoryHeroSection data-oid="o0.z2_1" />
-      <FounderStorySection data-oid="6v2c79m" />
-      <OurPurposeSection data-oid="4014f3p" />
-      <ValuesInActionSection data-oid="99b.s7y" />
-      <MeetTeamSection data-oid="u9.j8n8" />
-      <FutureVisionSection data-oid="p84f_e9" />
+      <Navbar data-oid="jnb16ot" />
+      <StoryHeroSection data-oid="mcjog3w" />
+      <FounderStorySection data-oid="ovs-7zy" />
+      <OurPurposeSection data-oid=".oo2.q5" />
+      <ValuesInActionSection data-oid="5l577xu" />
+      <MeetTeamSection data-oid="458o9rk" />
+      <FutureVisionSection data-oid="m3qfqi:" />
     </>
   );
 }

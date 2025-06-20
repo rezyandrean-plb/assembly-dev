@@ -96,15 +96,15 @@ export default function CondoPathSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white overflow-hidden min-h-screen"
-      data-oid="jz669ud"
+      data-oid="ze:q4ez"
     >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none" data-oid="ds6v.0v">
+      <div className="absolute inset-0 pointer-events-none" data-oid="fyu8ykr">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid slice"
-          data-oid="-6b_acf"
+          data-oid="_zseeo7"
         >
           {/* Background network elements */}
           {Array(20)
@@ -123,7 +123,7 @@ export default function CondoPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
-                data-oid="l.t:jk0"
+                data-oid="ee02mi:"
               />
             ))}
 
@@ -137,7 +137,7 @@ export default function CondoPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="-mf7fs-"
+            data-oid="7ci33x8"
           />
 
           {/* Specialized cluster - central node */}
@@ -152,7 +152,7 @@ export default function CondoPathSection() {
               opacity: clusterProgress >= 0.1 ? 1 : 0,
             }}
             transition={{ duration: 0.5 }}
-            data-oid="ttikc3i"
+            data-oid="y:61mmt"
           />
 
           {/* Specialized cluster - segment nodes */}
@@ -163,7 +163,7 @@ export default function CondoPathSection() {
             const labelEnd = 0.3 + index * 0.05;
 
             return (
-              <motion.g key={`segment-${index}`} data-oid="rj-_:e:">
+              <motion.g key={`segment-${index}`} data-oid="0nyl7mg">
                 {/* Segment circle */}
                 <motion.circle
                   cx={segment.x}
@@ -177,7 +177,7 @@ export default function CondoPathSection() {
                     opacity: clusterProgress >= segmentStart ? 0.63 : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay }}
-                  data-oid="hbklab7"
+                  data-oid="2qtvyfe"
                 />
 
                 {/* Segment label */}
@@ -199,7 +199,7 @@ export default function CondoPathSection() {
                           : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay + 0.1 }}
-                  data-oid="dj5coor"
+                  data-oid="xg.yugi"
                 >
                   {segment.label}
                 </motion.text>
@@ -218,7 +218,7 @@ export default function CondoPathSection() {
                     pathLength: clusterProgress >= segmentStart ? 1 : 0,
                   }}
                   transition={{ duration: 0.5, delay: segment.delay }}
-                  data-oid="t403cyv"
+                  data-oid="z_2x:7n"
                 />
 
                 {/* Pulsing effect */}
@@ -243,7 +243,7 @@ export default function CondoPathSection() {
                   style={{
                     opacity: clusterProgress >= labelStart ? 0.3 : 0,
                   }}
-                  data-oid="_6yo3ml"
+                  data-oid="qum5pqn"
                 />
               </motion.g>
             );
@@ -272,7 +272,7 @@ export default function CondoPathSection() {
                 opacity: clusterProgress >= 0.4 ? 0.45 : 0,
               }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              data-oid="4i9z:go"
+              data-oid="7yh:wg-"
             />
           ))}
 
@@ -301,7 +301,7 @@ export default function CondoPathSection() {
                       ? 0.45
                       : 0,
               }}
-              data-oid="d2la157"
+              data-oid="f4tivyx"
             />
           ))}
 
@@ -315,74 +315,74 @@ export default function CondoPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: exitPathProgress }}
             transition={{ duration: 0.5 }}
-            data-oid="qfbxot2"
+            data-oid="afcz3-9"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="s8rbz-6">
+      <div className="container mx-auto px-4 relative z-10" data-oid="b5bry1a">
         <motion.div
           className="text-center mb-16"
           style={{
             opacity: headerOpacity,
             y: headerY,
           }}
-          data-oid="t_m2dqc"
+          data-oid=":b7bw9q"
         >
           <h2
             className="text-4xl font-bold text-[#79123B] mb-4"
-            data-oid="g6wuzne"
+            data-oid="ze1zb.4"
           >
             Condo Investment Specialist Path
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="-2-4d87"
+            data-oid="hjhi2ax"
           >
             Master the art of investing in condominiums, from selection to
             portfolio building
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="jhc7_z."
+            data-oid="w1c.87a"
           ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto" data-oid="vv5h.la">
+        <div className="max-w-4xl mx-auto" data-oid="_simqcg">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            data-oid="yujodx_"
+            data-oid="np804wi"
           >
             <h3
               className="text-2xl font-bold text-[#79123B] mb-4"
-              data-oid="7mtn9e8"
+              data-oid=":7xfqvz"
             >
               Specialized Market Mastery
             </h3>
-            <p className="text-gray-700 mb-6" data-oid="wu15ffu">
+            <p className="text-gray-700 mb-6" data-oid="z13:8tz">
               The Condo Investment Specialist Path takes you deep into the
               specialized world of condominium investments in Singapore. This
               focused learning journey helps you develop expertise in analyzing,
               selecting, and building a portfolio of condominium properties
               across different market segments.
             </p>
-            <p className="text-gray-700 mb-6" data-oid="l8au81a">
+            <p className="text-gray-700 mb-6" data-oid="8tok4:z">
               Through advanced courses covering entry price analysis, selection
               frameworks, market comparisons, and portfolio building strategies,
               you'll gain the specialized knowledge needed to make informed
               decisions in this competitive market segment and maximize your
               investment returns.
             </p>
-            <div className="flex justify-center mt-8" data-oid="0dsoh98">
+            <div className="flex justify-center mt-8" data-oid="68yabi3">
               <Button
                 className="bg-[#79123B] hover:bg-[#5A0E2C] text-white"
-                data-oid="tagrfi3"
+                data-oid=":9q4okq"
               >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" data-oid="oyoyvtt" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid="tdvzy20" />
               </Button>
             </div>
           </motion.div>

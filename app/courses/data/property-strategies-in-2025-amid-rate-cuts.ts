@@ -1,5 +1,8 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const nicole = getFacilitator("nicole-ng");
 
 export const courseData: CourseData = {
   id: 2,
@@ -14,10 +17,22 @@ export const courseData: CourseData = {
   tags: ["Investment", "Market Trends", "Rate Cuts"],
   rating: 4.9,
   students: 112,
-  instructors: getInstructors(["melvin-lim", "nicole-ng"]).map((instructor, index) => ({
-    ...instructor,
-    title: index === 0 ? "Co-Founder & Key Executive Officer" : "Associate Division Director",
-  })),
+  instructors: melvin && nicole
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: nicole.name,
+          image: nicole.image,
+          title: nicole.role,
+          bio: nicole.bio,
+        },
+      ]
+    : [],
   lastUpdated: "30 April 2025",
   description: `2025 Is Coming—Is Your Property Strategy Ready?\n\nThe property market is shifting—interest rates are falling, trends are evolving, and opportunities are opening up. But here's the challenge: without a clear plan, navigating these changes can feel overwhelming. Should you act now or wait for better deals? What's the most brilliant move in an unpredictable market?`,
   whatYouWillLearn: [

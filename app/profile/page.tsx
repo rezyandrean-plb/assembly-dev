@@ -51,12 +51,12 @@ export default function ProfilePage() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
-    <div className="p-6" data-oid="7oa38ue">
-      <div className="mb-6" data-oid="gsv-.j1">
-        <h1 className="text-2xl font-bold text-gray-800" data-oid="wbeqlvz">
+    <div className="p-6" data-oid=".g.j9id">
+      <div className="mb-6" data-oid=":26j4z1">
+        <h1 className="text-2xl font-bold text-gray-800" data-oid="23_i1a6">
           {greeting}, Melvin
         </h1>
-        <p className="text-gray-500 mt-1" data-oid="u0b81-d">
+        <p className="text-gray-500 mt-1" data-oid="2:uxm.9">
           {dateString}
         </p>
       </div>
@@ -64,53 +64,53 @@ export default function ProfilePage() {
       {/* Stats Overview */}
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
-        data-oid="06ruo01"
+        data-oid="31juq:0"
       >
         {/* Enrolled Courses */}
         <Link
           href="/profile/learning-progress"
           className="block"
-          data-oid="ll1-:p1"
+          data-oid="gr-c5fh"
         >
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("enrolled")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="h:rf-cv"
+            data-oid="_gmd2.2"
           >
             <div
               className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="y4o30rc"
+              data-oid="bij4hsc"
             ></div>
-            <div className="p-5" data-oid="m_l:06o">
+            <div className="p-5" data-oid="0:czb1n">
               <div
                 className="flex justify-between items-start"
-                data-oid="c92dj_z"
+                data-oid=":hqch5f"
               >
-                <h3 className="text-gray-700 font-medium" data-oid="h5nlit8">
+                <h3 className="text-gray-700 font-medium" data-oid="3zgkkl8">
                   Enrolled Courses
                 </h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "enrolled" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid="lgbs:cr"
+                  data-oid="db51rq:"
                 >
                   <BookOpen
                     className={`h-4 w-4 ${hoveredCard === "enrolled" ? "text-white" : "text-blue-700"}`}
-                    data-oid="968s439"
+                    data-oid="zyp6cha"
                   />
                 </div>
               </div>
               <p
                 className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="wulsdlv"
+                data-oid="6io._8w"
               >
                 12
               </p>
               <p
                 className="text-sm text-green-500 flex items-center mt-1"
-                data-oid="3kda:h6"
+                data-oid="yvw19ic"
               >
                 <svg
                   width="14"
@@ -119,7 +119,7 @@ export default function ProfilePage() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-1"
-                  data-oid="hmqe:t_"
+                  data-oid="qgvhm2l"
                 >
                   <path
                     d="M5 12H19M19 12L13 6M19 12L13 18"
@@ -127,7 +127,7 @@ export default function ProfilePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    data-oid="rkr:535"
+                    data-oid="qggct0s"
                   />
                 </svg>
                 4 in progress
@@ -140,47 +140,47 @@ export default function ProfilePage() {
         <Link
           href="/profile/completed-courses"
           className="block"
-          data-oid="aikmlqg"
+          data-oid="i..ncgd"
         >
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("completed")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="8ujcl-k"
+            data-oid="r2ed9.e"
           >
             <div
               className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="xtmv.js"
+              data-oid="b0nd5qn"
             ></div>
-            <div className="p-5" data-oid="-ahtu0r">
+            <div className="p-5" data-oid="1q1-30z">
               <div
                 className="flex justify-between items-start"
-                data-oid="3qp4t_k"
+                data-oid="4yz6xtd"
               >
-                <h3 className="text-gray-700 font-medium" data-oid="rv7bjoj">
+                <h3 className="text-gray-700 font-medium" data-oid="4oexspc">
                   Completed Courses
                 </h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "completed" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid="_:lin98"
+                  data-oid="k14y8pe"
                 >
                   <Award
                     className={`h-4 w-4 ${hoveredCard === "completed" ? "text-white" : "text-blue-700"}`}
-                    data-oid="4qzxws2"
+                    data-oid=":n5s6.0"
                   />
                 </div>
               </div>
               <p
                 className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="67y.7d6"
+                data-oid="-n9viix"
               >
                 8
               </p>
               <p
                 className="text-sm text-green-500 flex items-center mt-1"
-                data-oid="j3or:c_"
+                data-oid="x80a6w1"
               >
                 <svg
                   width="14"
@@ -189,7 +189,7 @@ export default function ProfilePage() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-1"
-                  data-oid="bpz2pr4"
+                  data-oid="u_owyse"
                 >
                   <path
                     d="M5 12H19M19 12L13 6M19 12L13 18"
@@ -197,7 +197,7 @@ export default function ProfilePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    data-oid="7ubpvt4"
+                    data-oid="h_aecb9"
                   />
                 </svg>
                 +2 this month
@@ -207,46 +207,46 @@ export default function ProfilePage() {
         </Link>
 
         {/* Wishlist */}
-        <Link href="/profile/wishlist" className="block" data-oid="rn97f_4">
+        <Link href="/profile/wishlist" className="block" data-oid=".7m7_mz">
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("wishlist")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="e1rqre6"
+            data-oid="oy:pb:1"
           >
             <div
               className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="zdvl.5q"
+              data-oid="cw.8lr_"
             ></div>
-            <div className="p-5" data-oid="2t3s.i-">
+            <div className="p-5" data-oid="0w2no.t">
               <div
                 className="flex justify-between items-start"
-                data-oid="h..i-tz"
+                data-oid="i41sb__"
               >
-                <h3 className="text-gray-700 font-medium" data-oid="2wqosqo">
+                <h3 className="text-gray-700 font-medium" data-oid="_syh_0u">
                   Wishlist
                 </h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "wishlist" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid="b9afjce"
+                  data-oid="qid0jqx"
                 >
                   <Heart
                     className={`h-4 w-4 ${hoveredCard === "wishlist" ? "text-white" : "text-blue-700"}`}
-                    data-oid="dmqv4n8"
+                    data-oid=".-9.ut:"
                   />
                 </div>
               </div>
               <p
                 className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="e9-mj54"
+                data-oid="t:3mj6h"
               >
                 7
               </p>
               <p
                 className="text-sm text-green-500 flex items-center mt-1"
-                data-oid="m5od41n"
+                data-oid="-5:9ugr"
               >
                 <svg
                   width="14"
@@ -255,7 +255,7 @@ export default function ProfilePage() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-1"
-                  data-oid="1-xfxq6"
+                  data-oid="053r-6k"
                 >
                   <path
                     d="M5 12H19M19 12L13 6M19 12L13 18"
@@ -263,7 +263,7 @@ export default function ProfilePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    data-oid="7k8okz."
+                    data-oid="-e7bvf-"
                   />
                 </svg>
                 3 new courses
@@ -273,46 +273,46 @@ export default function ProfilePage() {
         </Link>
 
         {/* Upcoming Events */}
-        <Link href="/profile/events" className="block" data-oid="k-.lxjk">
+        <Link href="/profile/events" className="block" data-oid="7h7a5ek">
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("events")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="jcrfdjt"
+            data-oid="2bx3psp"
           >
             <div
               className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="94i0a_z"
+              data-oid="q74m2n."
             ></div>
-            <div className="p-5" data-oid="fp4jxbz">
+            <div className="p-5" data-oid="-31r5p1">
               <div
                 className="flex justify-between items-start"
-                data-oid="1b2y:ot"
+                data-oid="abely6j"
               >
-                <h3 className="text-gray-700 font-medium" data-oid="14ojbom">
+                <h3 className="text-gray-700 font-medium" data-oid="owna8_0">
                   Upcoming Events
                 </h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "events" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid="bp1j_c9"
+                  data-oid="bmsqc05"
                 >
                   <Calendar
                     className={`h-4 w-4 ${hoveredCard === "events" ? "text-white" : "text-blue-700"}`}
-                    data-oid="gsxhezv"
+                    data-oid="y3ygcxp"
                   />
                 </div>
               </div>
               <p
                 className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="qytw6zm"
+                data-oid="a25_ols"
               >
                 {upcomingEvents.length}
               </p>
               <p
                 className="text-sm text-green-500 flex items-center mt-1"
-                data-oid="d3cma:a"
+                data-oid="v24a77r"
               >
                 <svg
                   width="14"
@@ -321,7 +321,7 @@ export default function ProfilePage() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-1"
-                  data-oid="gwxaas9"
+                  data-oid="iuwtd2x"
                 >
                   <path
                     d="M5 12H19M19 12L13 6M19 12L13 18"
@@ -329,7 +329,7 @@ export default function ProfilePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    data-oid="6:te1rb"
+                    data-oid="s6706v4"
                   />
                 </svg>
                 Next: {upcomingEvents[0]?.daysLeft || 0} days left
@@ -340,49 +340,49 @@ export default function ProfilePage() {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid=".:-0783">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="3m3n:r8">
         {/* Left Column */}
-        <div className="lg:col-span-2 flex flex-col" data-oid="_6suvx9">
+        <div className="lg:col-span-2 flex flex-col" data-oid="8_pe8sg">
           {/* Learning Progress */}
           <motion.div
             className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex-1 flex flex-col"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            data-oid="0htdhn-"
+            data-oid="566m.v3"
           >
             <div
               className="flex justify-between items-center mb-4"
-              data-oid="-p66593"
+              data-oid="i5nd6p2"
             >
               <h2
                 className="text-lg font-bold text-gray-800"
-                data-oid="jxm2rh4"
+                data-oid="-yj:evg"
               >
                 Learning Progress
               </h2>
               <Link
                 href="/profile/learning-progress"
                 className="text-blue-600 text-sm font-medium flex items-center gap-1 hover:underline"
-                data-oid="ids33s9"
+                data-oid="fa9.de3"
               >
-                View All <ChevronRight size={16} data-oid=":etncs-" />
+                View All <ChevronRight size={16} data-oid="7qak0dm" />
               </Link>
             </div>
 
             <div
               className="space-y-4 flex-1 overflow-y-auto"
-              data-oid="pqr224g"
+              data-oid="j9j.ahg"
             >
               {enrolledCourses.map((course) => (
                 <div
                   key={course.id}
                   className="flex gap-4 p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition"
-                  data-oid="tn8nvts"
+                  data-oid="u7pr1x_"
                 >
                   <div
                     className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                    data-oid="j5828-7"
+                    data-oid="xmhec-x"
                   >
                     <Image
                       src={course.image || "/placeholder.svg"}
@@ -390,25 +390,25 @@ export default function ProfilePage() {
                       width={64}
                       height={64}
                       className="object-cover w-full h-full"
-                      data-oid="0snoc72"
+                      data-oid=":-gu2k."
                     />
                   </div>
-                  <div className="flex-grow" data-oid=".ds5ohv">
+                  <div className="flex-grow" data-oid="2ozdhy-">
                     <h3
                       className="font-medium text-gray-800"
-                      data-oid="8ik7t:f"
+                      data-oid="oza0crh"
                     >
                       {course.title}
                     </h3>
                     <p
                       className="text-xs text-gray-500 mt-1"
-                      data-oid="wiz42l4"
+                      data-oid="rv-03fx"
                     >
                       {course.totalHours} hours total
                     </p>
                     <div
                       className="mt-2 w-full bg-gray-200 rounded-full h-2"
-                      data-oid="d.9wzb4"
+                      data-oid="u.0rs1a"
                     >
                       <div
                         className={`h-2 rounded-full ${
@@ -419,16 +419,16 @@ export default function ProfilePage() {
                               : "bg-green-400"
                         }`}
                         style={{ width: `${course.progress}%` }}
-                        data-oid="6losb5u"
+                        data-oid="-94:_au"
                       ></div>
                     </div>
                     <div
                       className="mt-2 flex justify-between items-center"
-                      data-oid="pvlu_im"
+                      data-oid="i:yw2fz"
                     >
                       <span
                         className="text-xs text-gray-500"
-                        data-oid="60i6:ya"
+                        data-oid="b.a_u0g"
                       >
                         {course.progress === 0
                           ? "Not started yet"
@@ -436,18 +436,18 @@ export default function ProfilePage() {
                       </span>
                       <span
                         className="text-xs text-green-600 font-medium"
-                        data-oid="6t.c4ml"
+                        data-oid="-swe-sk"
                       >
                         {course.progress === 0
                           ? "Ready to start"
                           : `${course.progress}% completed`}
                       </span>
                     </div>
-                    <div className="mt-2 flex justify-end" data-oid=":6jw6q:">
+                    <div className="mt-2 flex justify-end" data-oid="iiicmwf">
                       <Link
                         href={`/courses/${course.slug}`}
                         className="text-blue-600 text-xs font-medium hover:underline"
-                        data-oid="8wujmxq"
+                        data-oid="4nr4i9:"
                       >
                         {course.progress === 0 ? "Start" : "Continue"}
                       </Link>
@@ -460,47 +460,47 @@ export default function ProfilePage() {
         </div>
 
         {/* Right Column */}
-        <div className="space-y-6" data-oid="00hlbrv">
+        <div className="space-y-6" data-oid=".du637-">
           {/* Recent Activity */}
           <motion.div
             className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            data-oid="g60y25i"
+            data-oid="akc7ju6"
           >
             <div
               className="flex justify-between items-center mb-4"
-              data-oid="nq64tst"
+              data-oid="xn7carv"
             >
-              <div data-oid="slj976g">
+              <div data-oid="6.y324b">
                 <h2
                   className="text-lg font-bold text-gray-800"
-                  data-oid="jahac2z"
+                  data-oid=".zck8jq"
                 >
                   Recent Activity
                 </h2>
-                <p className="text-sm text-gray-500" data-oid="4:l2m8r">
+                <p className="text-sm text-gray-500" data-oid="q.:5_hg">
                   Your recent learning activity
                 </p>
               </div>
               <Link
                 href="/profile/activity"
                 className="text-blue-600 text-sm font-medium flex items-center gap-1 hover:underline"
-                data-oid="pcfi:ho"
+                data-oid="f.01x23"
               >
-                View All <ChevronRight size={16} data-oid="kadwre:" />
+                View All <ChevronRight size={16} data-oid="4pw:yb9" />
               </Link>
             </div>
 
-            <div className="space-y-4" data-oid="o6ur7l5">
+            <div className="space-y-4" data-oid="gm8mf0h">
               {recentActivity.map((activity) => (
                 <div
                   key={activity.id}
                   className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0"
-                  data-oid="t5l793a"
+                  data-oid="2_u7a36"
                 >
-                  <div className="flex items-start gap-3" data-oid="4d0zzjc">
+                  <div className="flex items-start gap-3" data-oid="uc-hy13">
                     <div
                       className={`flex-shrink-0 rounded-full p-2 ${
                         activity.type === "completed"
@@ -509,38 +509,38 @@ export default function ProfilePage() {
                             ? "bg-red-100"
                             : "bg-blue-100"
                       }`}
-                      data-oid="hfb6dl6"
+                      data-oid="sr3mdg5"
                     >
                       {activity.type === "completed" && (
                         <Award
                           className={`h-4 w-4 text-green-600`}
-                          data-oid="a9666m8"
+                          data-oid=":72b-:t"
                         />
                       )}
                       {activity.type === "wishlist" && (
                         <Heart
                           className={`h-4 w-4 text-red-600`}
-                          data-oid="i_ijy_6"
+                          data-oid="om6f.go"
                         />
                       )}
                       {activity.type === "purchase" && (
                         <ShoppingBag
                           className={`h-4 w-4 text-blue-600`}
-                          data-oid="_y6sgdr"
+                          data-oid="o__:o3j"
                         />
                       )}
                     </div>
-                    <div data-oid="4-k7few">
+                    <div data-oid="u-q-8a3">
                       <p
                         className="font-medium text-gray-800"
-                        data-oid="ht04f78"
+                        data-oid="t1ewihg"
                       >
                         {activity.title}
                       </p>
                       {activity.course && (
                         <p
                           className="text-sm text-gray-600 mt-1"
-                          data-oid="9:ful7n"
+                          data-oid="78iea4w"
                         >
                           {activity.course}
                         </p>
@@ -548,7 +548,7 @@ export default function ProfilePage() {
                       {activity.instructor && (
                         <p
                           className="text-sm text-gray-600 mt-1"
-                          data-oid="h_:uf2:"
+                          data-oid="pz.j6_e"
                         >
                           Course by {activity.instructor}
                         </p>
@@ -556,7 +556,7 @@ export default function ProfilePage() {
                       {activity.price && (
                         <p
                           className="text-sm text-gray-600 mt-1"
-                          data-oid="3t13f0x"
+                          data-oid="9aqcx6g"
                         >
                           {activity.price} Premium Course
                         </p>
@@ -564,14 +564,14 @@ export default function ProfilePage() {
                       {activity.xp && (
                         <p
                           className="text-sm text-green-600 mt-1"
-                          data-oid="68v5iev"
+                          data-oid=":.px9ag"
                         >
                           +{activity.xp} XP earned
                         </p>
                       )}
                       <p
                         className="text-xs text-gray-500 mt-1"
-                        data-oid="bi4_ei."
+                        data-oid="gryyn3t"
                       >
                         {activity.time}
                       </p>
@@ -588,42 +588,42 @@ export default function ProfilePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            data-oid="ush_8.p"
+            data-oid="pefbu6z"
           >
             <div
               className="flex justify-between items-center mb-4"
-              data-oid="6u_rddz"
+              data-oid="acxng:y"
             >
-              <div data-oid=":o5su:9">
+              <div data-oid="xadhf6q">
                 <h2
                   className="text-lg font-bold text-gray-800"
-                  data-oid=".7n9leh"
+                  data-oid="t:rtjct"
                 >
                   Recommended Courses
                 </h2>
-                <p className="text-sm text-gray-500" data-oid="5wguyni">
+                <p className="text-sm text-gray-500" data-oid="s3kggd9">
                   Based on your interests and learning history
                 </p>
               </div>
               <Link
                 href="/courses"
                 className="text-blue-600 text-sm font-medium flex items-center gap-1 hover:underline"
-                data-oid="t5ei2ba"
+                data-oid="p.6l1ph"
               >
-                View All <ChevronRight size={16} data-oid="yoyj7nk" />
+                View All <ChevronRight size={16} data-oid="i.ahuvi" />
               </Link>
             </div>
 
-            <div className="space-y-4" data-oid="-k66tih">
+            <div className="space-y-4" data-oid="s_4axbf">
               {recommendedCourses.map((course) => (
                 <div
                   key={course.id}
                   className="flex gap-3 p-3 border border-gray-100 rounded-lg hover:bg-gray-50 transition"
-                  data-oid="_c7-wqy"
+                  data-oid="yat3nn6"
                 >
                   <div
                     className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                    data-oid="lel5b7k"
+                    data-oid="ka_0ngc"
                   >
                     <Image
                       src={course.image || "/profile-placeholder.png"}
@@ -631,29 +631,29 @@ export default function ProfilePage() {
                       width={64}
                       height={64}
                       className="object-cover w-full h-full"
-                      data-oid="kov6cie"
+                      data-oid="3zu0u8e"
                     />
                   </div>
-                  <div className="flex-grow" data-oid="a-7bvwz">
+                  <div className="flex-grow" data-oid="tni4wxs">
                     <h3
                       className="font-medium text-gray-800 text-sm"
-                      data-oid=".pi:-e0"
+                      data-oid="use5mae"
                     >
                       {course.title}
                     </h3>
                     <div
                       className="flex items-center justify-between mt-1"
-                      data-oid="elv8j2l"
+                      data-oid="m7-zdi2"
                     >
                       <span
                         className="text-xs text-gray-500"
-                        data-oid="i30.sy8"
+                        data-oid="_o3fpq6"
                       >
                         {course.level}
                       </span>
                       <span
                         className="text-xs text-gray-500"
-                        data-oid="qd-lxm_"
+                        data-oid="wwpndp3"
                       >
                         {course.totalHours} hours
                       </span>
@@ -661,7 +661,7 @@ export default function ProfilePage() {
                     <Link
                       href={`/courses/${course.slug}`}
                       className="mt-2 text-blue-600 text-xs font-medium hover:underline inline-block"
-                      data-oid="byvvf7v"
+                      data-oid="xu0lorl"
                     >
                       View
                     </Link>

@@ -45,15 +45,15 @@ export default function CourseFilter({
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 mb-12" data-oid="c:8_tr-">
+    <div className="bg-white rounded-xl shadow-lg p-6 mb-12" data-oid="gxeu:ut">
       {/* Desktop View */}
-      <div className="hidden md:block" data-oid="unvx173">
-        <div className="flex flex-col md:flex-row gap-4" data-oid="hyc2vqo">
-          <div className="relative flex-grow" data-oid="0ifz861">
+      <div className="hidden md:block" data-oid=":n:d:20">
+        <div className="flex flex-col md:flex-row gap-4" data-oid="4lh0085">
+          <div className="relative flex-grow" data-oid="_vgxkh7">
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
               size={20}
-              data-oid="uf3oa2c"
+              data-oid="spe1n:2"
             />
 
             <input
@@ -62,35 +62,35 @@ export default function CourseFilter({
               className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#123B79]"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              data-oid="ds5up42"
+              data-oid="ixuo0qt"
             />
 
             {searchQuery && (
               <button
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                 onClick={() => onSearchChange("")}
-                data-oid="kvn2gw4"
+                data-oid="3zpmoph"
               >
-                <X size={16} data-oid="d-01wi6" />
+                <X size={16} data-oid="-j0ejev" />
               </button>
             )}
           </div>
 
-          <div className="flex gap-2 flex-wrap" data-oid="kbz8fa1">
-            <div className="relative group" data-oid="dsp.jt3">
+          <div className="flex gap-2 flex-wrap" data-oid="uvbi-db">
+            <div className="relative group" data-oid="1-7ubve">
               <Button
                 variant="outline"
                 className="flex items-center gap-1"
-                data-oid="-ysgxdm"
+                data-oid="y.n-2wo"
               >
                 Category
-                <ChevronDown size={16} data-oid="swur3z0" />
+                <ChevronDown size={16} data-oid="dp:pnls" />
               </Button>
               <div
                 className="absolute z-10 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 hidden group-hover:block"
-                data-oid="tcajxwj"
+                data-oid="rf_g8l_"
               >
-                <div className="p-2 space-y-1" data-oid="ffpk1ch">
+                <div className="p-2 space-y-1" data-oid="h3g9ebt">
                   {filters.map((filter) => (
                     <button
                       key={filter.id}
@@ -100,7 +100,7 @@ export default function CourseFilter({
                           : "hover:bg-gray-100 text-gray-700"
                       }`}
                       onClick={() => onFilterChange(filter.id)}
-                      data-oid="r1wwxyx"
+                      data-oid="wmmh2gv"
                     >
                       {filter.label}
                     </button>
@@ -109,25 +109,25 @@ export default function CourseFilter({
               </div>
             </div>
 
-            <div className="relative group" data-oid="mg3o2d1">
+            <div className="relative group" data-oid="443r0vn">
               <Button
                 variant="outline"
                 className="flex items-center gap-1"
-                data-oid="mwg-3d1"
+                data-oid=".nty2l8"
               >
                 Level
-                <ChevronDown size={16} data-oid=":l.ook6" />
+                <ChevronDown size={16} data-oid="janstsw" />
               </Button>
               <div
                 className="absolute z-10 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 hidden group-hover:block"
-                data-oid="7ycbm.1"
+                data-oid="vmnh2a3"
               >
-                <div className="p-2 space-y-1" data-oid="sqxkd1n">
+                <div className="p-2 space-y-1" data-oid="2ba.eyu">
                   {levels.map((level) => (
                     <button
                       key={level.id}
                       className="w-full text-left px-3 py-2 rounded-md text-sm hover:bg-gray-100 text-gray-700"
-                      data-oid="1:rgbrv"
+                      data-oid="ppuaq3a"
                     >
                       {level.label}
                     </button>
@@ -136,25 +136,25 @@ export default function CourseFilter({
               </div>
             </div>
 
-            <div className="relative group" data-oid="o-rjwp-">
+            <div className="relative group" data-oid="kw6wsqa">
               <Button
                 variant="outline"
                 className="flex items-center gap-1"
-                data-oid="xq-.0ao"
+                data-oid="ns_jggq"
               >
                 Duration
-                <ChevronDown size={16} data-oid="t89n7yu" />
+                <ChevronDown size={16} data-oid="ytaga4g" />
               </Button>
               <div
                 className="absolute z-10 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 hidden group-hover:block"
-                data-oid="lm2js31"
+                data-oid="zd2:uvl"
               >
-                <div className="p-2 space-y-1" data-oid="nbogi_m">
+                <div className="p-2 space-y-1" data-oid="xd-aueh">
                   {durations.map((duration) => (
                     <button
                       key={duration.id}
                       className="w-full text-left px-3 py-2 rounded-md text-sm hover:bg-gray-100 text-gray-700"
-                      data-oid="y:8n6r3"
+                      data-oid="p0ap7.x"
                     >
                       {duration.label}
                     </button>
@@ -167,13 +167,13 @@ export default function CourseFilter({
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden" data-oid="51rec01">
-        <div className="flex gap-2 mb-4" data-oid="8amuklj">
-          <div className="relative flex-grow" data-oid="1bz337m">
+      <div className="md:hidden" data-oid="ekyk1a2">
+        <div className="flex gap-2 mb-4" data-oid=".03fse8">
+          <div className="relative flex-grow" data-oid="09fn2:l">
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
               size={20}
-              data-oid="cqc35k7"
+              data-oid="jvy3p_l"
             />
 
             <input
@@ -182,16 +182,16 @@ export default function CourseFilter({
               className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#123B79]"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              data-oid="lv7r-0n"
+              data-oid="z7a7-3v"
             />
 
             {searchQuery && (
               <button
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                 onClick={() => onSearchChange("")}
-                data-oid="m241ob9"
+                data-oid="yty_xxv"
               >
-                <X size={16} data-oid="c.axp:8" />
+                <X size={16} data-oid="4g2kf_2" />
               </button>
             )}
           </div>
@@ -199,9 +199,9 @@ export default function CourseFilter({
             variant="outline"
             className="flex-shrink-0"
             onClick={() => setShowMobileFilters(!showMobileFilters)}
-            data-oid="4:1guxf"
+            data-oid="6h3ba.k"
           >
-            <Filter size={20} data-oid="w:wajwb" />
+            <Filter size={20} data-oid="0ws3qc5" />
           </Button>
         </div>
 
@@ -212,17 +212,17 @@ export default function CourseFilter({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
-            data-oid="c3ty6xu"
+            data-oid="85j8j5s"
           >
-            <div className="space-y-4 pt-2 pb-4" data-oid="ua2ota7">
-              <div data-oid=".m8ss.-">
+            <div className="space-y-4 pt-2 pb-4" data-oid="kspa6..">
+              <div data-oid="xs5y7r1">
                 <h3
                   className="font-medium text-gray-700 mb-2"
-                  data-oid="tdrtazr"
+                  data-oid="jcgdv:d"
                 >
                   Category
                 </h3>
-                <div className="flex flex-wrap gap-2" data-oid=":agfoy4">
+                <div className="flex flex-wrap gap-2" data-oid="enc8mps">
                   {filters.map((filter) => (
                     <Button
                       key={filter.id}
@@ -234,7 +234,7 @@ export default function CourseFilter({
                         activeFilter === filter.id ? "bg-[#123B79]" : ""
                       }
                       onClick={() => onFilterChange(filter.id)}
-                      data-oid="jrad7bg"
+                      data-oid="rzhh8_z"
                     >
                       {filter.label}
                     </Button>
@@ -242,20 +242,20 @@ export default function CourseFilter({
                 </div>
               </div>
 
-              <div data-oid="oou7s5z">
+              <div data-oid="utsg65w">
                 <h3
                   className="font-medium text-gray-700 mb-2"
-                  data-oid="a8yx53c"
+                  data-oid="7u2.06-"
                 >
                   Level
                 </h3>
-                <div className="flex flex-wrap gap-2" data-oid="mepczn9">
+                <div className="flex flex-wrap gap-2" data-oid="unb7weh">
                   {levels.map((level) => (
                     <Button
                       key={level.id}
                       variant="outline"
                       size="sm"
-                      data-oid="au-0owb"
+                      data-oid="fwpd6y1"
                     >
                       {level.label}
                     </Button>
@@ -263,20 +263,20 @@ export default function CourseFilter({
                 </div>
               </div>
 
-              <div data-oid="f93n4:6">
+              <div data-oid="b_8e9uu">
                 <h3
                   className="font-medium text-gray-700 mb-2"
-                  data-oid="9rk0pb3"
+                  data-oid=".rlz4x3"
                 >
                   Duration
                 </h3>
-                <div className="flex flex-wrap gap-2" data-oid="5qidm:p">
+                <div className="flex flex-wrap gap-2" data-oid="jacb1_y">
                   {durations.map((duration) => (
                     <Button
                       key={duration.id}
                       variant="outline"
                       size="sm"
-                      data-oid="2mzz.yk"
+                      data-oid="c85qe6x"
                     >
                       {duration.label}
                     </Button>

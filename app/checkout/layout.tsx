@@ -28,15 +28,15 @@ export default function CheckoutLayout({
   }
 
   return (
-    <CheckoutProvider data-oid="05r7dzn">
-      <div className="min-h-screen bg-gray-50" data-oid="v8p-zk.">
+    <CheckoutProvider data-oid="ttxr_y8">
+      <div className="min-h-screen bg-gray-50" data-oid="qgjd06v">
         <Stepper
           currentStep={currentStep}
           hasBook={hasBook}
-          data-oid="sw2lmvu"
+          data-oid="q4q4f4z"
         />
 
-        <div className="bg-white" data-oid="qtn0gga">
+        <div className="bg-white" data-oid="tdz.6ht">
           {children}
         </div>
       </div>

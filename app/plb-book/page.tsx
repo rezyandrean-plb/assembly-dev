@@ -163,72 +163,72 @@ export default function PLBBookPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-white" data-oid="a04vg_6">
+      <main className="min-h-screen bg-white" data-oid="-k_z:yz">
         {/* Page Content */}
-        <div className="pt-24 pb-16" data-oid="vd5zxkt">
-          <Navbar data-oid="qrapmo4" />
-          <div className="plb-book-page relative" data-oid="h-8qcq9">
+        <div className="pt-24 pb-16" data-oid="zgdqv1_">
+          <Navbar data-oid="426hrcg" />
+          <div className="plb-book-page relative" data-oid=".gdhixc">
             {/* Light gradient background instead of network */}
             <div
               className="absolute inset-0 z-0"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="-wqwton"
+              data-oid="2pgf2nx"
             ></div>
 
             {/* Hero Section */}
             <section
               className="section"
               style={{ paddingTop: "120px" }}
-              data-oid="o--jff5"
+              data-oid="ditgf7o"
             >
-              <div className="container relative z-10" data-oid="m2gaaz5">
+              <div className="container relative z-10" data-oid=".l7knxm">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="jhh:88."
+                  data-oid="o84llaf"
                 >
-                  <div className="fade-in" data-oid="b_d3m6b">
+                  <div className="fade-in" data-oid="k5v498j">
                     <h1
                       className="text-primary mb-4 text-3xl"
-                      data-oid="350-q9l"
+                      data-oid="g-7y25k"
                     >
                       Positioning: PropertyLimBrothers on the Art of Selling
                       Your Property to its Maximum Potential
                     </h1>
-                    <p className="text-md mb-6" data-oid="m5v8zry">
+                    <p className="text-md mb-6" data-oid="r-rm:-i">
                       When you truly understand how to sell and see through the
                       lens of a buyer, you gain charity on what, where and which
                       property to buy and invest in next.
                     </p>
-                    <div className="mb-6" data-oid="e:42kde">
+                    <div className="mb-6" data-oid="dn75.ao">
                       <div
                         className="flex items-center mb-2"
-                        data-oid="1wwp2qd"
+                        data-oid="coq7-mk"
                       >
                         <span
                           className="text-gray-500 line-through mr-2"
-                          data-oid=".u_1dw-"
+                          data-oid="5czgxza"
                         >
                           $39.00
                         </span>
                         <span
                           className="text-2xl font-bold text-primary"
-                          data-oid=".crk:wr"
+                          data-oid="_dou2.:"
                         >
                           $29.00
                         </span>
                       </div>
                     </div>
-                    <div className="mt-8 flex space-x-4" data-oid="5lms_1i">
+                    <div className="mt-8 flex space-x-4" data-oid=":_fiazd">
                       <a
                         href="https://www.amazon.com/dp/B0F1CMZ9MQ"
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-oid="fy:_gjc"
+                        data-oid="p:6u5-1"
                       >
                         <Button
                           size="lg"
                           className="bg-primary text-white"
-                          data-oid="as3olgj"
+                          data-oid="am4q:9v"
                         >
                           Get the E-book
                         </Button>
@@ -237,7 +237,7 @@ export default function PLBBookPage() {
                         size="lg"
                         variant="outline"
                         onClick={handleAddToCart}
-                        data-oid="2767fno"
+                        data-oid="o4az903"
                       >
                         Get the Paperback
                       </Button>
@@ -245,17 +245,17 @@ export default function PLBBookPage() {
                   </div>
                   <div
                     className="fade-in flex justify-center"
-                    data-oid="88pq-8y"
+                    data-oid="hm02k-c"
                   >
                     <div
                       className="relative w-[300px] h-[390px] bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
-                      data-oid="r6umtak"
+                      data-oid="33n43v1"
                     >
                       <img
                         src="/images/PLB Book Front Cover_FA.jpg"
                         alt="PropertyLimBrothers Book Cover"
                         className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                        data-oid=":b7i4s9"
+                        data-oid="dbvm9ky"
                       />
                     </div>
                   </div>
@@ -267,52 +267,52 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#eff5fd" }}
-              data-oid="ezegsgk"
+              data-oid="km2w4mn"
             >
               <div
                 className="absolute top-0 left-0 w-full h-full opacity-5"
-                data-oid="_ilytzm"
+                data-oid="34iqdol"
               >
                 <div
                   className="absolute top-10 right-10 w-40 h-40 rounded-full bg-primary"
-                  data-oid="2v_1t4j"
+                  data-oid="gdpws68"
                 ></div>
                 <div
                   className="absolute bottom-20 left-10 w-60 h-60 rounded-full bg-primary-dark"
-                  data-oid="s4aycud"
+                  data-oid="4netm4n"
                 ></div>
               </div>
-              <div className="container relative z-10" data-oid="moj3b1r">
-                <div className="text-center mb-12" data-oid="53gpe64">
+              <div className="container relative z-10" data-oid="b1om9m8">
+                <div className="text-center mb-12" data-oid="9z_kit6">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="yebg7c9"
+                    data-oid="4suaqzx"
                   >
                     In a crowded real estate marketplace,{" "}
-                    <span className="text-primary-dark" data-oid="bgquuej">
+                    <span className="text-primary-dark" data-oid="-ey88-c">
                       Positioning is Everything
                     </span>
                     .
                   </h2>
                   <div
                     className="flex flex-wrap justify-center gap-3 mt-4 mb-8"
-                    data-oid="rx3:7h-"
+                    data-oid="u39uako"
                   >
                     <span
                       className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="dgpbvuh"
+                      data-oid="k7lyqi."
                     >
                       Real Estate
                     </span>
                     <span
                       className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="8z0w3wd"
+                      data-oid="z9n9kyh"
                     >
                       Selling
                     </span>
                     <span
                       className="bg-[#123b79] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="yqn.xak"
+                      data-oid=".wi5cjp"
                     >
                       Property Investing Mindset
                     </span>
@@ -321,9 +321,9 @@ export default function PLBBookPage() {
 
                 <div
                   className="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto"
-                  data-oid="z8tkw2l"
+                  data-oid="-ehq3_7"
                 >
-                  <p className="mb-6 text-lg" data-oid="goc7gpu">
+                  <p className="mb-6 text-lg" data-oid="4oszuqi">
                     The moment you list your property in the resale market, it
                     becomes a unique product that needs to attract that one
                     right buyer to make the offer you desire. How do you stand
@@ -334,29 +334,29 @@ export default function PLBBookPage() {
 
                   <div
                     className="bg-primary text-white p-5 mb-6 rounded-lg shadow-inner"
-                    data-oid="3-fof57"
+                    data-oid=".8irsbs"
                   >
-                    <p className="font-medium text-lg" data-oid="_2z:h1g">
+                    <p className="font-medium text-lg" data-oid="x8mbj78">
                       It's about attracting genuine buyers by positioning your
                       property with content and maximum exposure.
                     </p>
                   </div>
 
-                  <div className="mb-6" data-oid="h:_:qio">
-                    <p className="mb-4" data-oid="jxamgon">
+                  <div className="mb-6" data-oid="aqwwtri">
+                    <p className="mb-4" data-oid="dfdk44c">
                       For the first time ever,{" "}
-                      <strong data-oid="lsn-_0e">Melvin Lim</strong> and{" "}
-                      <strong data-oid="6uqm:qw">Adrian Lim</strong>—more
+                      <strong data-oid="6kve5q9">Melvin Lim</strong> and{" "}
+                      <strong data-oid="49t20-x">Adrian Lim</strong>—more
                       popularly known as PropertyLimBrothers, Singapore's most
                       successful real estate duo that revolutionalise how
                       properties are being marketed with video home tours in
                       Singapore—have assembled an unrivaled playbook on property
                       marketing, designed to take your home from{" "}
-                      <strong data-oid="2_633w7">"listed"</strong> to{" "}
-                      <strong data-oid="2-9t5c-">"sold"</strong>.
+                      <strong data-oid="8:cedqs">"listed"</strong> to{" "}
+                      <strong data-oid="c.242ud">"sold"</strong>.
                     </p>
 
-                    <p data-oid="zidr7vf">
+                    <p data-oid="yayymeo">
                       More than just a guide, this is a blueprint for uncovering
                       the unique potential of every real estate you touch and
                       finding the perfect buyer for every home. Backed by wisdom
@@ -373,19 +373,19 @@ export default function PLBBookPage() {
             <section
               className="section py-16"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="nyl-s1v"
+              data-oid="i4o_c9i"
             >
-              <div className="container-fluid px-0" data-oid="b7oyi-1">
-                <div className="text-center mb-8 px-4" data-oid="bmx-owg">
+              <div className="container-fluid px-0" data-oid="0q7rgmh">
+                <div className="text-center mb-8 px-4" data-oid="d3deem:">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="1_gj6ux"
+                    data-oid="tr:brg0"
                   >
                     Key Insights from the Book
                   </h2>
                   <p
                     className="text-lg text-gray-700 max-w-2xl mx-auto"
-                    data-oid="k_cv_gn"
+                    data-oid="a8r-e-a"
                   >
                     Discover powerful strategies and insights that will
                     transform your approach to property selling
@@ -396,7 +396,7 @@ export default function PLBBookPage() {
                   images={quoteImages}
                   visibleCount={4}
                   autoScrollInterval={4000}
-                  data-oid="aup1:ol"
+                  data-oid="bsx3mtx"
                 />
               </div>
             </section>
@@ -405,25 +405,25 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden py-16"
               style={{ backgroundColor: "#e7ebf1" }}
-              data-oid="-43fw6j"
+              data-oid="yw5_bzl"
             >
               <div
                 className="container-fluid px-4 md:px-8 lg:px-12 relative z-10 max-w-[1600px] mx-auto"
-                data-oid="_db8on9"
+                data-oid=":r.:dq:"
               >
-                <div className="text-center mb-12" data-oid=".5iwqs7">
+                <div className="text-center mb-12" data-oid="pvpd.7o">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="1t1f:3."
+                    data-oid="735eun."
                   >
                     Discover the Art of{" "}
-                    <span className="text-primary-dark" data-oid="t00mwt1">
+                    <span className="text-primary-dark" data-oid="c.hqcj9">
                       Home Selling
                     </span>
                   </h2>
                   <p
                     className="text-lg mb-8 max-w-3xl mx-auto"
-                    data-oid="o0rc-dr"
+                    data-oid="5rtoa5z"
                   >
                     Embark on a journey through the pages of this book, where we
                     demystify the art of home selling with a comprehensive,
@@ -431,54 +431,54 @@ export default function PLBBookPage() {
                   </p>
                 </div>
 
-                <div className="max-w-6xl mx-auto" data-oid="j.xzgtm">
+                <div className="max-w-6xl mx-auto" data-oid="psv6mmy">
                   <div
                     className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8"
-                    data-oid="lxvth5m"
+                    data-oid="hjuqz11"
                   >
                     {/* Book image on the left - outside white container */}
                     <div
                       className="lg:col-span-4 fade-in relative"
-                      data-oid="7l-:p81"
+                      data-oid="dsezo28"
                     >
                       <div
                         className="absolute w-[165%] -left-[30%]"
-                        data-oid=".l:taz2"
+                        data-oid="v0449q5"
                       >
                         <img
                           src="/images/PLB Book Mockup Cover & Content.png"
                           alt="PropertyLimBrothers Book Cover"
                           className="w-full h-full object-contain scale-150"
-                          data-oid="831tvnj"
+                          data-oid=":e4asri"
                         />
                       </div>
                     </div>
 
                     {/* List on the right - in white container */}
-                    <div className="lg:col-span-8 fade-in" data-oid="d-i5wt7">
+                    <div className="lg:col-span-8 fade-in" data-oid="59jp5eq">
                       <div
                         className="bg-white rounded-xl shadow-lg p-8"
-                        data-oid="2dnh_dn"
+                        data-oid="8qkn3jj"
                       >
                         <div
                           className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                          data-oid=".x02.5x"
+                          data-oid="r9yf2la"
                         >
-                          <div className="space-y-3" data-oid="c.2a78q">
+                          <div className="space-y-3" data-oid="3.18vtz">
                             <div
                               className="flex items-start"
-                              data-oid="r83gt_k"
+                              data-oid=":-hu0h."
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="9:537jp"
+                                data-oid="2g6kz--"
                               >
                                 01
                               </div>
-                              <div data-oid="ajljiut">
+                              <div data-oid="2_v5-uj">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="gg.te-j"
+                                  data-oid="vdnp-w6"
                                 >
                                   The mindset of successful property sellers
                                 </h3>
@@ -487,18 +487,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="88iu..r"
+                              data-oid="du.ulc5"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="4eq4hs."
+                                data-oid="-4za9kk"
                               >
                                 02
                               </div>
-                              <div data-oid="xdr66_k">
+                              <div data-oid="81ey3e2">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="dwaa3x2"
+                                  data-oid="haeamw7"
                                 >
                                   The Singapore Buy and Sell Pattern
                                 </h3>
@@ -507,18 +507,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid=".vdfd06"
+                              data-oid="-8iviq6"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="_j7ytsc"
+                                data-oid="sfx35x:"
                               >
                                 03
                               </div>
-                              <div data-oid="lxpusxi">
+                              <div data-oid="j:d507l">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="bm8on9u"
+                                  data-oid="eh3vm4o"
                                 >
                                   How to build empathy and connection with your
                                   eventual buyer
@@ -528,18 +528,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="05b825z"
+                              data-oid="sksaxl6"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="d_lvpwd"
+                                data-oid="k9.rsq5"
                               >
                                 04
                               </div>
-                              <div data-oid="9xdgsgm">
+                              <div data-oid="h3522i1">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="qhs-kcc"
+                                  data-oid="hqjoigb"
                                 >
                                   Step-by-step guide to preparing for a home
                                   sale
@@ -549,18 +549,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid=":bv4kit"
+                              data-oid="yfv1.-b"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="5jq87zp"
+                                data-oid="_rwwx:z"
                               >
                                 05
                               </div>
-                              <div data-oid="sa8tkh.">
+                              <div data-oid="krtpjro">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="-7dzl18"
+                                  data-oid="e76rk1a"
                                 >
                                   How to prepare and dress your house for the
                                   sale
@@ -570,18 +570,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="2xkf3v6"
+                              data-oid="_:pmh_q"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="_erej95"
+                                data-oid="f_dih6j"
                               >
                                 06
                               </div>
-                              <div data-oid=":kwo1jn">
+                              <div data-oid="er4p03c">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="aneg.vw"
+                                  data-oid="kjq.j6e"
                                 >
                                   How to leverage on and harness the power of
                                   social media
@@ -590,21 +590,21 @@ export default function PLBBookPage() {
                             </div>
                           </div>
 
-                          <div className="space-y-3" data-oid="-hwnbkr">
+                          <div className="space-y-3" data-oid="ua:a-dz">
                             <div
                               className="flex items-start"
-                              data-oid="2ta7o5j"
+                              data-oid="5bw9606"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="7u3fckw"
+                                data-oid="gs5sp4a"
                               >
                                 07
                               </div>
-                              <div data-oid="ph7bh.g">
+                              <div data-oid="-o88lto">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="wtlfq2v"
+                                  data-oid="5pxepq0"
                                 >
                                   The four pillars of social media content
                                   creation
@@ -614,18 +614,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="g9ys3yr"
+                              data-oid="mtjby3p"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="0txm2ty"
+                                data-oid="g6zl78d"
                               >
                                 08
                               </div>
-                              <div data-oid="qnznhh8">
+                              <div data-oid="rfokp68">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="yfgjlqk"
+                                  data-oid="qyp53sa"
                                 >
                                   How to create a comprehensive Home Tour
                                 </h3>
@@ -634,18 +634,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="3585280"
+                              data-oid="e4g8tat"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="dsl3:01"
+                                data-oid="ujfog_4"
                               >
                                 09
                               </div>
-                              <div data-oid="xycih7k">
+                              <div data-oid="fnq06cs">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="de9k6h8"
+                                  data-oid="eoe9wdp"
                                 >
                                   How to advertise and distribute your content
                                   to maximise attention
@@ -655,18 +655,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="pqlk4tu"
+                              data-oid="heiua:1"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="a3a:dt0"
+                                data-oid="n1tl9qe"
                               >
                                 10
                               </div>
-                              <div data-oid="7n_iwua">
+                              <div data-oid="vzqe2v0">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="z57g7mp"
+                                  data-oid="n-smd31"
                                 >
                                   Pricing techniques for your home
                                 </h3>
@@ -675,18 +675,18 @@ export default function PLBBookPage() {
 
                             <div
                               className="flex items-start"
-                              data-oid="q6l22qf"
+                              data-oid="uheqy:5"
                             >
                               <div
                                 className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="klgwo3_"
+                                data-oid="fxf7907"
                               >
                                 11
                               </div>
-                              <div data-oid="0uj7tc-">
+                              <div data-oid="quvje._">
                                 <h3
                                   className="text-primary font-semibold text-sm"
-                                  data-oid="_ltz99g"
+                                  data-oid="h44c-x6"
                                 >
                                   Graphic guides to timeline and financial
                                   calculations
@@ -706,25 +706,25 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden text-white"
               style={{ backgroundColor: "#123b79" }}
-              data-oid="-fl-6wm"
+              data-oid="fhwxxiy"
             >
               <div
                 className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-blue-900/20"
-                data-oid="l3qr8i3"
+                data-oid="fmhpvwk"
               ></div>
-              <div className="container relative z-10" data-oid="-6e0:ed">
+              <div className="container relative z-10" data-oid="dwa3yie">
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="i6rcox_"
+                  data-oid="7h-mzwj"
                 >
-                  <div className="fade-in" data-oid="z8-nq.l">
+                  <div className="fade-in" data-oid="wt:f3j.">
                     <h2
                       className="text-2xl md:text-3xl font-bold mb-4"
-                      data-oid="a4cf600"
+                      data-oid="p-hvz1q"
                     >
                       Unlock Your Property's Maximum Potential
                     </h2>
-                    <p className="mb-6" data-oid="ftqf.jh">
+                    <p className="mb-6" data-oid="pu18cl:">
                       Delve into a comprehensive guide to optimising property
                       value, blending market insights, data analysis, and buyer
                       psychology.
@@ -732,115 +732,115 @@ export default function PLBBookPage() {
                     <Link
                       href="/plb-book/preview"
                       className="inline-block"
-                      data-oid=":g9oj5h"
+                      data-oid="8rn7f4i"
                     >
                       <button
                         className="btn bg-transparent border-2 border-white text-white hover:bg-white/10"
-                        data-oid="047nuov"
+                        data-oid="e:p5e_n"
                       >
                         Preview Free Chapter →
                       </button>
                     </Link>
                   </div>
-                  <div className="fade-in" data-oid="_827aja">
-                    <div className="space-y-4" data-oid="fae03vu">
+                  <div className="fade-in" data-oid="d9..1eg">
+                    <div className="space-y-4" data-oid="ml:.ojm">
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="i5_1llc"
+                        data-oid="r_czw:h"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="96mzcda"
+                          data-oid="up0yy2r"
                         >
                           01
                         </span>
-                        <span className="text-lg" data-oid="v6ccr8v">
+                        <span className="text-lg" data-oid="vwfv:w1">
                           The Most Common Reasons for Selling
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="sk8lp.:"
+                        data-oid="yz.rl:l"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="e1gfkxm"
+                          data-oid="cal014z"
                         >
                           02
                         </span>
-                        <span className="text-lg" data-oid="bec_5ci">
+                        <span className="text-lg" data-oid="6ox7fm1">
                           12 Steps to Selling Your Home
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid=":lwesa2"
+                        data-oid="mg77:qe"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="zeqco7f"
+                          data-oid=".6qyult"
                         >
                           03
                         </span>
-                        <span className="text-lg" data-oid="oodfptc">
+                        <span className="text-lg" data-oid="9qgvdp7">
                           Product Positioning: Transforming the home
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="2x0j0d8"
+                        data-oid="lqh9vrb"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="bq93zs."
+                          data-oid="x9e4q4:"
                         >
                           04
                         </span>
-                        <span className="text-lg" data-oid="eq.fk40">
+                        <span className="text-lg" data-oid="78y45cu">
                           Marketing in the 21st Century: Real Estate Content
                           Creation
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="ruvm2kv"
+                        data-oid="wkdspdv"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="iww3wqk"
+                          data-oid="qs6v0wz"
                         >
                           05
                         </span>
-                        <span className="text-lg" data-oid="ewwvcgc">
+                        <span className="text-lg" data-oid="2h2wpu6">
                           Advertising and Distribution of Content: The Often
                           Neglected Part
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="vt:hyka"
+                        data-oid="07gxf56"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="mo:hq7u"
+                          data-oid="kpy_gdh"
                         >
                           06
                         </span>
-                        <span className="text-lg" data-oid="l5pc.:n">
+                        <span className="text-lg" data-oid="uq4exy:">
                           Viewings: The Art of Showmanship
                         </span>
                       </div>
                       <div
                         className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="xwcb__8"
+                        data-oid="1lh20.0"
                       >
                         <span
                           className="text-sm mr-4 opacity-70"
-                          data-oid="aav:3vd"
+                          data-oid="lrghw7l"
                         >
                           07
                         </span>
-                        <span className="text-lg" data-oid="-659xt7">
+                        <span className="text-lg" data-oid="eci_s5t">
                           Sealing the Deal: How to Price Your Property Correctly
                         </span>
                       </div>
@@ -855,27 +855,27 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="-8z-yp5"
+              data-oid="yyjj-6v"
             >
               <div
                 className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full -translate-y-32 translate-x-32"
-                data-oid="dauhy4d"
+                data-oid="s.-9i-2"
               ></div>
               <div
                 className="absolute bottom-0 left-0 w-48 h-48 bg-white/20 rounded-full translate-y-24 -translate-x-24"
-                data-oid="xrdcm76"
+                data-oid="x7gs3r4"
               ></div>
-              <div className="container relative z-10" data-oid="rpm6y9j">
-                <div className="text-center mb-16 fade-in" data-oid="th-d7bb">
+              <div className="container relative z-10" data-oid="_yvwysd">
+                <div className="text-center mb-16 fade-in" data-oid="g3udp7r">
                   <h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-primary"
-                    data-oid="a4e7b9f"
+                    data-oid="21fqber"
                   >
                     About the Authors
                   </h2>
                   <p
                     className="text-lg text-gray-700 max-w-2xl mx-auto"
-                    data-oid="4_678id"
+                    data-oid="g-fc1b_"
                   >
                     Meet the PropertyLimBrothers team - Singapore's leading
                     property experts with over 17 years of combined experience
@@ -885,49 +885,49 @@ export default function PLBBookPage() {
                 {/* Melvin Lim - Image Left, Bio Right */}
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
-                  data-oid="d-aj.nm"
+                  data-oid="d35sl_p"
                 >
-                  <div className="order-1 md:order-1" data-oid="hxmbf1u">
-                    <div className="relative" data-oid="x6wk.ab">
+                  <div className="order-1 md:order-1" data-oid="y8w-o40">
+                    <div className="relative" data-oid="1p-hsre">
                       <div
                         className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                        data-oid="bhycoh0"
+                        data-oid="iabjlav"
                       >
                         <img
                           src="/images/Melvin_01.png"
                           alt="Melvin Lim"
                           className="w-full h-full object-cover"
-                          data-oid="el._hm-"
+                          data-oid="bbb00a2"
                         />
                       </div>
                       <div
                         className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10"
-                        data-oid=":qiyxbo"
+                        data-oid="wupqgrw"
                       ></div>
                     </div>
                   </div>
-                  <div className="order-2 md:order-2" data-oid="pw.h3yt">
+                  <div className="order-2 md:order-2" data-oid="n15n41c">
                     <div
                       className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="pkel1dv"
+                      data-oid="0zd12mw"
                     >
                       <h3
                         className="text-2xl font-bold text-primary mb-2"
-                        data-oid="a-z9y3o"
+                        data-oid="b2xi-r_"
                       >
                         Melvin Lim
                       </h3>
                       <p
                         className="text-primary-dark font-semibold mb-4"
-                        data-oid="32e7pjy"
+                        data-oid="hcc3j.q"
                       >
                         Co-Founder and CEO
                       </p>
                       <div
                         className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="f:m:hys"
+                        data-oid="u.6a2ke"
                       >
-                        <p data-oid="jcn6:er">
+                        <p data-oid=".:n-yfs">
                           Co-Founder and CEO of PropertyLimBrothers (PLB),
                           brings 17 years of real estate expertise to the
                           forefront of Singapore's property market. Under his
@@ -935,7 +935,7 @@ export default function PLBBookPage() {
                           1,800 homes, setting a new benchmark for real estate
                           in Singapore.
                         </p>
-                        <p data-oid="t2qsdap">
+                        <p data-oid="x6k3xbe">
                           In 2017, Melvin introduced presenter-led home tour
                           videos to Singapore—a groundbreaking move that
                           redefined property marketing by showcasing each home's
@@ -944,7 +944,7 @@ export default function PLBBookPage() {
                           innovative strategies have become a standard others
                           aspire to achieve.
                         </p>
-                        <p data-oid="5vcaxwi">
+                        <p data-oid="l9t46xz">
                           Melvin remains committed to his core values of
                           integrity and innovation. His passion for uncovering
                           the true character of every home drives his success,
@@ -960,30 +960,30 @@ export default function PLBBookPage() {
                 {/* Adrian Lim - Bio Left, Image Right */}
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
-                  data-oid="5-90181"
+                  data-oid="wh-11mt"
                 >
-                  <div className="order-2 md:order-1" data-oid="sq5h:31">
+                  <div className="order-2 md:order-1" data-oid="25.vzeq">
                     <div
                       className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="18fd1:i"
+                      data-oid=":qow.7f"
                     >
                       <h3
                         className="text-2xl font-bold text-primary mb-2"
-                        data-oid="0.fb.:-"
+                        data-oid="zgkbczy"
                       >
                         Adrian Lim
                       </h3>
                       <p
                         className="text-primary-dark font-semibold mb-4"
-                        data-oid="6cp69vh"
+                        data-oid="zvz460i"
                       >
                         Co-Founder and Managing Director
                       </p>
                       <div
                         className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="go7clgl"
+                        data-oid="4_qmsz6"
                       >
-                        <p data-oid="8o9b3b2">
+                        <p data-oid="7--fui:">
                           Co-Founder and Managing Director of
                           PropertyLimBrothers, has 17 years of real estate
                           experience in the industry and has transacted over
@@ -992,14 +992,14 @@ export default function PLBBookPage() {
                           has solved many complex situations for our clients
                           over the past years.
                         </p>
-                        <p data-oid=".bumdq.">
+                        <p data-oid="kjht9y-">
                           He constantly spearheads the Realty Team in PLB. His
                           passion is driven by a relentless pursuit of what lies
                           ahead. This dedication to serve effortlessly connects
                           realtors and clients, inspiring others to thrive under
                           his leadership.
                         </p>
-                        <p data-oid="v670l:7">
+                        <p data-oid="g.8g7n.">
                           A family man who enjoys the company of his wife, four
                           children and their dogs Coffee and Mocha, Adrian is
                           known for his passion, dedication and achievements in
@@ -1008,22 +1008,22 @@ export default function PLBBookPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="order-1 md:order-2" data-oid="xnhqsa6">
-                    <div className="relative" data-oid="5j3__1w">
+                  <div className="order-1 md:order-2" data-oid="cxj8z64">
+                    <div className="relative" data-oid="9c9w53-">
                       <div
                         className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300"
-                        data-oid="uz:3l:k"
+                        data-oid="jgudpc9"
                       >
                         <img
                           src="/images/Adrian_01-600x600.png"
                           alt="Adrian Lim"
                           className="w-full h-full object-cover"
-                          data-oid="hx1qir2"
+                          data-oid="xdbgriv"
                         />
                       </div>
                       <div
                         className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary-dark/10 rounded-full -z-10"
-                        data-oid="dvxfvtt"
+                        data-oid="4jql8tk"
                       ></div>
                     </div>
                   </div>
@@ -1032,49 +1032,49 @@ export default function PLBBookPage() {
                 {/* Grayce Tan - Image Left, Bio Right */}
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 fade-in"
-                  data-oid="h24rhs_"
+                  data-oid="js.:1sx"
                 >
-                  <div className="order-1 md:order-1" data-oid="lv:aa38">
-                    <div className="relative" data-oid="6loual_">
+                  <div className="order-1 md:order-1" data-oid="sb11oo5">
+                    <div className="relative" data-oid="4jwdbdj">
                       <div
                         className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300"
-                        data-oid="pwcarou"
+                        data-oid="pv4qerd"
                       >
                         <img
                           src="/images/Grayce_02-600x600.png"
                           alt="Grayce Tan"
                           className="w-full h-full object-cover"
-                          data-oid="vojpd_1"
+                          data-oid="uf:jwg9"
                         />
                       </div>
                       <div
                         className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10"
-                        data-oid="y2g22lz"
+                        data-oid="yudm.85"
                       ></div>
                     </div>
                   </div>
-                  <div className="order-2 md:order-2" data-oid=":q5h5r9">
+                  <div className="order-2 md:order-2" data-oid="73w-nlc">
                     <div
                       className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="afmnmeo"
+                      data-oid=".gjpmf."
                     >
                       <h3
                         className="text-2xl font-bold text-primary mb-2"
-                        data-oid="ajg9qc4"
+                        data-oid="qw75q7d"
                       >
                         Grayce Tan
                       </h3>
                       <p
                         className="text-primary-dark font-semibold mb-4"
-                        data-oid="lvoz:ds"
+                        data-oid="usuuhvd"
                       >
                         Senior Marketing and Business Development Manager
                       </p>
                       <div
                         className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="r:h609y"
+                        data-oid="47:b2ns"
                       >
-                        <p data-oid="b1g-vw7">
+                        <p data-oid="fyxc.my">
                           Senior Marketing and Business Development Manager at
                           PropertyLimBrothers, with a rich background in Real
                           Estate, Sociology, and Educational Pedagogy. Leading
@@ -1083,7 +1083,7 @@ export default function PLBBookPage() {
                           boosting brand visibility and customer engagement
                           through innovative strategies and key partnerships.
                         </p>
-                        <p data-oid="fky2f35">
+                        <p data-oid="i7.d02:">
                           A passionate lifelong learner, Grayce's deep curiosity
                           for people and market dynamics drives her approach to
                           real estate. She spearheads strategic content
@@ -1091,7 +1091,7 @@ export default function PLBBookPage() {
                           ensures her teams stay at the forefront of industry
                           trends.
                         </p>
-                        <p data-oid="8-tz_3f">
+                        <p data-oid="uv82zbf">
                           Grounded in a commitment to delivering insightful,
                           data-driven content, Grayce is dedicated to helping
                           clients and readers alike navigate the ever-evolving
@@ -1108,42 +1108,42 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#e1e7ee" }}
-              data-oid="b9kl_6c"
+              data-oid="pjx2sio"
             >
-              <div className="container relative z-10" data-oid="wn7pkgd">
+              <div className="container relative z-10" data-oid="1-vm7qe">
                 <div
                   className="max-w-4xl mx-auto text-center fade-in"
-                  data-oid="o4.rh51"
+                  data-oid=":flmldg"
                 >
                   <div
                     className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6"
-                    data-oid="dh:.brz"
+                    data-oid="aa_xtvr"
                   >
                     <svg
                       className="w-8 h-8 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      data-oid="z3unwrs"
+                      data-oid="xiwixkb"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        data-oid="abkqyxk"
+                        data-oid="gl12-ka"
                       />
                     </svg>
                   </div>
                   <h2
                     className="text-4xl md:text-5xl font-bold text-primary mb-4"
-                    data-oid="ipgymyf"
+                    data-oid="1-ahjp-"
                   >
                     Frequently Asked Questions
                   </h2>
                   <p
                     className="text-xl text-gray-600 max-w-2xl mx-auto"
-                    data-oid=":3evnuf"
+                    data-oid="vk2z5h5"
                   >
                     Everything you need to know about the Property Leverage
                     Blueprint
@@ -1151,24 +1151,24 @@ export default function PLBBookPage() {
                 </div>
 
                 {/* FAQ Grid Layout */}
-                <div className="max-w-6xl mx-auto mt-12" data-oid="fuj4_jr">
+                <div className="max-w-6xl mx-auto mt-12" data-oid="ij.37w8">
                   <div
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start"
-                    data-oid="61v0dwz"
+                    data-oid="tc01d53"
                   >
                     {faqItems.map((item, index) => (
                       <div
                         key={index}
                         className="fade-in h-full"
                         style={{ animationDelay: `${index * 0.1}s` }}
-                        data-oid="h9gn4p0"
+                        data-oid="l47sxwn"
                       >
                         <FAQItem
                           question={item.question}
                           answer={item.answer}
                           isOpen={activeIndex === index}
                           onClick={() => toggleFAQ(index)}
-                          data-oid="8-11_jr"
+                          data-oid="l:z0967"
                         />
                       </div>
                     ))}
@@ -1181,63 +1181,63 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#fdfdfd" }}
-              data-oid="cdkny0-"
+              data-oid="jw1-dz_"
             >
-              <div className="container relative z-10" data-oid="ay3fepk">
+              <div className="container relative z-10" data-oid="s:7j2lr">
                 {/* Contact support section */}
-                <div className="text-center fade-in" data-oid="1vjkfvr">
+                <div className="text-center fade-in" data-oid="50n3.20">
                   <div
                     className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100"
-                    data-oid="k:uornw"
+                    data-oid="srgatcc"
                   >
                     <div
                       className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-4"
-                      data-oid="3n.7x9c"
+                      data-oid="r_uiog5"
                     >
                       <svg
                         className="w-6 h-6 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        data-oid="xy6kiii"
+                        data-oid="gpa_xly"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
                           d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          data-oid="x12o_w4"
+                          data-oid="7xp7i91"
                         />
                       </svg>
                     </div>
                     <h3
                       className="text-2xl font-bold text-primary mb-3"
-                      data-oid="uwr_3ou"
+                      data-oid="y6aqdb8"
                     >
                       Still have questions?
                     </h3>
-                    <p className="text-gray-600 mb-6" data-oid="-3yj2vv">
+                    <p className="text-gray-600 mb-6" data-oid="9sdr3x0">
                       Can't find the answer you're looking for? Our friendly
                       team is here to help.
                     </p>
                     <a
                       href="mailto:hello@assembly.sg"
                       className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium"
-                      data-oid="bpyn:fo"
+                      data-oid="fbbfeat"
                     >
                       <svg
                         className="w-5 h-5 mr-2"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        data-oid="o6niicm"
+                        data-oid=".z3c1sc"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
                           d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          data-oid="kyhr0s4"
+                          data-oid="ld8qj2h"
                         />
                       </svg>
                       Contact Support

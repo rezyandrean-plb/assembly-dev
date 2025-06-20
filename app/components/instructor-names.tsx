@@ -27,10 +27,10 @@ export default function InstructorNames({
   return (
     <div
       className="text-gray-600 text-sm mb-4 flex items-center"
-      data-oid="rp30sa1"
+      data-oid="h18qw60"
     >
-      <Users className="w-4 h-4 mr-2" data-oid="nh:vqrw" />
-      <span data-oid="d74uk_j">
+      <Users className="w-4 h-4 mr-2" data-oid="0:jgvsr" />
+      <span data-oid="j786.h3">
         {instructors.map((i) => i.name).join(", ")}
       </span>
     </div>

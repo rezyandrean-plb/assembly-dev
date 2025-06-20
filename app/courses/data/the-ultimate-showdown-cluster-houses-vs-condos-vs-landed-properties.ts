@@ -1,5 +1,8 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 export const courseData: CourseData = {
   id: 1007,
@@ -14,14 +17,22 @@ export const courseData: CourseData = {
   tags: ["Cluster Houses", "Condos", "Landed Properties", "Comparison"],
   rating: 0,
   students: 0,
-  instructors: [
-    ...getInstructors(["melvin-lim"]),
-    {
-      name: "Ong Yu Rong",
-      image: "/professional-headshot-ong-yu-rong.png",
-      bio: "Ong Yu Rong brings data-driven insights to property analysis, with expertise in market trends and valuation.",
-    },
-  ],
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+    : [],
   lastUpdated: "2024-06-01",
   description: "A comprehensive comparison of cluster houses, condominiums, and landed properties for Singaporean property buyers and investors.",
   whatYouWillLearn: [
