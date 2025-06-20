@@ -40,8 +40,6 @@ export const facilitators: Facilitator[] = [
       instagram: "https://instagram.com/melvinlim",
     },
     stats: {
-      yearsExperience: 20,
-      studentsHelped: 5000,
       coursesCreated: 15,
     },
   },
@@ -64,8 +62,6 @@ export const facilitators: Facilitator[] = [
       linkedin: "https://linkedin.com/in/marc-chan",
     },
     stats: {
-      yearsExperience: 15,
-      studentsHelped: 2500,
       coursesCreated: 8,
     },
   },
@@ -88,8 +84,6 @@ export const facilitators: Facilitator[] = [
       linkedin: "https://linkedin.com/in/ong-yu-rong",
     },
     stats: {
-      yearsExperience: 12,
-      studentsHelped: 1800,
       coursesCreated: 6,
     },
   },
@@ -113,8 +107,6 @@ export const facilitators: Facilitator[] = [
       instagram: "https://instagram.com/graycetan",
     },
     stats: {
-      yearsExperience: 10,
-      studentsHelped: 1500,
       coursesCreated: 5,
     },
   },
@@ -137,8 +129,6 @@ export const facilitators: Facilitator[] = [
       linkedin: "https://linkedin.com/in/george-peng",
     },
     stats: {
-      yearsExperience: 18,
-      studentsHelped: 800,
       coursesCreated: 7,
     },
   },
@@ -161,8 +151,6 @@ export const facilitators: Facilitator[] = [
       linkedin: "https://linkedin.com/in/joan-loh",
     },
     stats: {
-      yearsExperience: 14,
-      studentsHelped: 3200,
       coursesCreated: 9,
     },
   },

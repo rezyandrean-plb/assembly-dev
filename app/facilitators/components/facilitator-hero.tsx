@@ -74,70 +74,52 @@ export function FacilitatorHero() {
 
           {/* Quick Stats */}
           <motion.div
-            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12"
+            className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            data-oid="l5s9ts1"
+            data-oid="4kk_8rz"
           >
-            <div className="text-center group" data-oid="t0tf2fa">
+            <div className="text-center" data-oid="qpnm7ud">
               <div
-                className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl"
-                data-oid="5:5:1ir"
+                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
+                data-oid="cn-_ou_"
               >
-                <Users className="w-10 h-10 text-white" data-oid="ol4sk6e" />
+                <Users className="w-8 h-8 text-white" data-oid="tfunbe9" />
               </div>
-              <div
-                className="text-4xl font-bold mb-2 text-gray-900"
-                data-oid="-do-luy"
-              >
-                6
+              <div className="text-3xl font-bold mb-2" data-oid="ln.y_.t">
+                15,000+
               </div>
-              <div className="text-gray-600 font-medium" data-oid="3d2mg-d">
-                Expert Facilitators
-              </div>
-              <div className="text-sm text-gray-500 mt-1" data-oid="s8rm2-2">
-                Industry veterans and mentors
+              <div className="text-blue-200" data-oid="0djayqu">
+                Students Taught
               </div>
             </div>
-            <div className="text-center group" data-oid="-23:ts-">
+            <div className="text-center" data-oid="hp-1.-f">
               <div
-                className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl"
-                data-oid="i148.x8"
+                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
+                data-oid="zmd5orw"
               >
-                <Award className="w-10 h-10 text-white" data-oid="2:vqhf5" />
+                <Award className="w-8 h-8 text-white" data-oid="23cw5at" />
               </div>
-              <div
-                className="text-4xl font-bold mb-2 text-gray-900"
-                data-oid="xs.xmfa"
-              >
-                Proven
+              <div className="text-3xl font-bold mb-2" data-oid="27kgc70">
+                80+
               </div>
-              <div className="text-gray-600 font-medium" data-oid="liznpw5">
-                Track Records
-              </div>
-              <div className="text-sm text-gray-500 mt-1" data-oid="4omsv:_">
-                Real success in property investment
+              <div className="text-blue-200" data-oid="dmk30pi">
+                Years Combined Experience
               </div>
             </div>
-            <div className="text-center group" data-oid="fqdiyic">
+            <div className="text-center" data-oid="f1y0:57">
               <div
-                className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl"
-                data-oid="hivu8mq"
+                className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
+                data-oid="na9k1sr"
               >
-                <BookOpen className="w-10 h-10 text-white" data-oid="4_j76ny" />
+                <BookOpen className="w-8 h-8 text-white" data-oid="tk.xun0" />
               </div>
-              <div
-                className="text-4xl font-bold mb-2 text-gray-900"
-                data-oid="h6as8uy"
-              >
+              <div className="text-3xl font-bold mb-2" data-oid="-ibi1l2">
                 50+
               </div>
-              <div className="text-gray-600 font-medium" data-oid="ze_wooh">
-                Expert Courses
-              </div>
-              <div className="text-sm text-gray-500 mt-1" data-oid="21y5xhs">
-                Carefully crafted learning journeys
+              <div className="text-blue-200" data-oid="qrrfb5l">
+                Courses Created
               </div>
             </div>
           </motion.div>

@@ -91,42 +91,39 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                 {facilitator.experience}
               </p>
 
+              <motion.p
+                className="text-lg text-gray-300 mb-8 leading-relaxed"
+                data-oid="-t.ypyz"
+              >
+                {facilitator.description}
+              </motion.p>
+
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-8" data-oid="gywb:13">
-                <div className="text-center" data-oid="8pq0ask">
+              <motion.div
+                className="grid md:grid-cols-1 gap-8 max-w-xs mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                data-oid="byq9_i6"
+              >
+                <div className="text-center" data-oid="hma.fs4">
                   <div
-                    className="text-2xl font-bold text-white mb-1"
-                    data-oid="ww.g7uc"
+                    className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4"
+                    data-oid="n14u0ph"
                   >
-                    {facilitator.stats?.yearsExperience}+
+                    <BookOpen
+                      className="w-8 h-8 text-white"
+                      data-oid="a46ubh3"
+                    />
                   </div>
-                  <div className="text-sm text-blue-200" data-oid="kxywm4:">
-                    Years Experience
-                  </div>
-                </div>
-                <div className="text-center" data-oid="7.:2x-k">
-                  <div
-                    className="text-2xl font-bold text-white mb-1"
-                    data-oid="d1nv5u7"
-                  >
-                    {facilitator.stats?.studentsHelped.toLocaleString()}+
-                  </div>
-                  <div className="text-sm text-blue-200" data-oid="jz1woqf">
-                    Students Helped
-                  </div>
-                </div>
-                <div className="text-center" data-oid="s:is9_i">
-                  <div
-                    className="text-2xl font-bold text-white mb-1"
-                    data-oid="-au0358"
-                  >
+                  <div className="text-3xl font-bold mb-2" data-oid="fnj14wj">
                     {facilitator.stats?.coursesCreated}
                   </div>
-                  <div className="text-sm text-blue-200" data-oid="_r2jqg2">
+                  <div className="text-blue-200" data-oid="cqt3skl">
                     Courses Created
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Social Links */}
               {facilitator.socialLinks && (
