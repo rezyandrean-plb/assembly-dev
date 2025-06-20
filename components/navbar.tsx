@@ -27,6 +27,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "About", href: "/about" },
+    { name: "Facilitators", href: "/facilitators" },
     { name: "Courses", href: "/courses" },
     { name: "Learning Paths", href: "/learning-paths" },
     { name: "PLB Book", href: "/plb-book" },
