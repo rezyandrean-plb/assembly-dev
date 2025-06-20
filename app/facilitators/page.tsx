@@ -84,16 +84,16 @@ export default function FacilitatorsPage() {
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                   data-oid="z6s5.9-"
                 >
-                  <Link href="/courses" data-oid="4vdc-nv">
+                  <Link href="/courses" data-oid="fpju8kd">
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-xl transition-all duration-300 group"
-                      data-oid="9bwh1ay"
+                      className="bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 px-8 py-3 rounded-xl transition-all duration-300 group"
+                      data-oid="fpgcsv3"
                     >
                       Browse Courses
                       <ArrowRight
                         className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                        data-oid="v.j6:2t"
+                        data-oid="a4t9y38"
                       />
                     </Button>
                   </Link>
