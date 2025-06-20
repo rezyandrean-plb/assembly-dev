@@ -198,6 +198,7 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
                   className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"
                   data-oid="sl4.ct8"
                 />
+
                 <span
                   className="text-gray-700 text-lg leading-relaxed"
                   data-oid="k7lmoma"
