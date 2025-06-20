@@ -1,28 +1,35 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
-  id: 21,
+  id: 10001,
   title: "The Shift in Singapore's Real Estate Market 2023",
   slug: "the-shift-in-singapores-real-estate-market-2023",
   level: "All Levels",
-  duration: "1 hour",
-  category: "market trends",
+  duration: "1 hour 15 minutes",
+  category: "Market Trends",
   price: "Free",
   image: "/the-shift-in-singapores-real-estate-market-2023.jpg",
   featured: true,
-  tags: ["Market Trends", "Webinar", "2023"],
-  rating: 4.7,
-  students: 1250,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-  ],
-  lastUpdated: "June 2023",
-  description:
-    "This free webinar explores the significant shifts in Singapore's real estate market in 2023. As the property landscape continues to evolve post-pandemic, understanding these changes is crucial for investors, homeowners, and potential buyers. Join property expert Melvin Lim as he analyzes current trends, predicts future movements, and provides actionable insights to navigate this dynamic market.",
+  tags: ["Market Trends", "Webinar"],
+  rating: 0,
+  students: 7,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10 September 2024",
+  description: `In 2020, Singapore's real estate market experienced a strong bull run, characterised by a substantial and sustained increase in select property values. This was anticipated by PropertyLimBrothers, resulting in a strong investment portfolio for our clients.
+
+So what's in 2023? PropertyLimBrothers forecasts macro shifts in the market which will undoubtedly drive the way we invest in real estate. Join Melvin Lim, CEO and Co-founder of PropertyLimBrothers, as he shares about the risks and opportunities in the next wave of real estate trends.`,
   whatYouWillLearn: [
     "Understand the key factors driving Singapore's property market in 2023",
     "Analyze the impact of recent government cooling measures",
@@ -96,27 +103,5 @@ export const courseData: CourseData = {
     "Real estate professionals seeking market insights",
     "Anyone interested in Singapore's property market trends",
   ],
-  reviews: [
-    {
-      name: "Sarah Tan",
-      rating: 5,
-      date: "July 2023",
-      comment:
-        "Incredibly insightful webinar that helped me understand the current market dynamics. Melvin presents complex information in an accessible way. Highly recommended!",
-    },
-    {
-      name: "David Lim",
-      rating: 4,
-      date: "June 2023",
-      comment:
-        "Great overview of the market situation. The Q&A session was particularly valuable as Melvin addressed specific concerns about my investment property.",
-    },
-    {
-      name: "Michelle Wong",
-      rating: 5,
-      date: "June 2023",
-      comment:
-        "As a first-time homebuyer, this webinar gave me the confidence to make informed decisions. The segment on government policies was especially helpful.",
-    },
-  ],
+  reviews: [  ],
 }

@@ -440,10 +440,10 @@ const OurPurposeSection = () => {
             data-oid="eco4i79"
           >
             <div
-              className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 rounded-3xl p-12 text-white"
-              data-oid="x920ca5"
+              className="bg-white rounded-3xl p-12 border border-gray-100 shadow-lg"
+              data-oid="w_r09m8"
             >
-              <div className="grid md:grid-cols-4 gap-8" data-oid="aaq02lg">
+              <div className="grid md:grid-cols-4 gap-8" data-oid="iihsqqa">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -454,23 +454,26 @@ const OurPurposeSection = () => {
                       y: isInView ? 0 : 20,
                     }}
                     transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                    data-oid="c9tz..f"
+                    data-oid="xk.33nu"
                   >
                     <div
-                      className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
-                      data-oid="x7gjy4u"
+                      className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                      data-oid="cql.tv:"
                     >
                       <stat.icon
-                        className="w-8 h-8 text-white"
-                        data-oid="pf11se0"
+                        className="w-8 h-8 text-blue-600"
+                        data-oid="4:hlw7o"
                       />
                     </div>
-                    <div className="text-3xl font-bold mb-2" data-oid="64w4gas">
+                    <div
+                      className="text-3xl font-bold mb-2 text-gray-900"
+                      data-oid="72us7p5"
+                    >
                       {stat.number}
                     </div>
                     <div
-                      className="text-lg font-semibold mb-1"
-                      data-oid="i4q0kb."
+                      className="text-lg font-semibold mb-1 text-gray-700"
+                      data-oid="9stiq7:"
                     >
                       {stat.label}
                     </div>

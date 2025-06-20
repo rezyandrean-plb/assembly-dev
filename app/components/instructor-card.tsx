@@ -5,6 +5,8 @@ import Image from "next/image";
 export interface InstructorProps {
   name: string;
   image: string;
+  title?: string;
+  bio?: string;
 }
 
 export function InstructorCard({ name, image }: InstructorProps) {

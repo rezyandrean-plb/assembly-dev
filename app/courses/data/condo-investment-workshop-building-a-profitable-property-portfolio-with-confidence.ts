@@ -1,5 +1,7 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 3,
@@ -14,11 +16,16 @@ export const courseData: CourseData = {
   tags: ["Investment", "Condo", "Portfolio"],
   rating: 4.7,
   students: 156,
-  instructors: getInstructors(["melvin-lim"]).map((instructor) => ({
-    ...instructor,
-    title: "Lead Property Investment Strategist",
-    bio: "Melvin Lim is a renowned property investment strategist with over 15 years of experience in the Singapore real estate market. He specializes in condominium investments and portfolio building strategies.",
-  })),
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: "Lead Property Investment Strategist",
+          bio: "Melvin Lim is a renowned property investment strategist with over 15 years of experience in the Singapore real estate market. He specializes in condominium investments and portfolio building strategies.",
+        },
+      ]
+    : [],
   lastUpdated: "May 2025",
   description: `This comprehensive workshop is designed for property investors looking to build or expand their condominium portfolio in Singapore's competitive market. Through a combination of expert instruction, case studies, and hands-on exercises, you'll develop the skills and confidence to identify, analyze, and acquire profitable condo investments.
 
