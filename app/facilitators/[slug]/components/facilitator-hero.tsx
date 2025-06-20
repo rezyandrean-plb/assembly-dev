@@ -42,6 +42,7 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
           className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"
           data-oid="mmc2e7w"
         />
+
         <div
           className="absolute bottom-20 right-10 w-24 h-24 bg-orange-400/20 rounded-full blur-xl"
           data-oid="4c3___n"
@@ -193,6 +194,7 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                       className="w-5 h-5 text-blue-600"
                       data-oid="jkf0-69"
                     />
+
                     <div data-oid="n__a8zs">
                       <div
                         className="text-sm font-bold text-gray-900"

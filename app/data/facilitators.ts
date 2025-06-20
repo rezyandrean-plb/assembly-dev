@@ -14,8 +14,6 @@ export interface Facilitator {
     instagram?: string;
   };
   stats?: {
-    yearsExperience: number;
-    studentsHelped: number;
     coursesCreated: number;
   };
 }
