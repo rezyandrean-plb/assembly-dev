@@ -29,7 +29,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
-import { getInstructors } from "@/app/data/instructors";
+import { getFacilitator, Facilitator } from "@/app/data/facilitators";
 import Image from "next/image";
 
 // Story-driven Hero Section
@@ -589,24 +589,16 @@ const MeetTeamSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
-  const instructors = getInstructors(["melvin-lim", "nicole-ng", "adrian-lim"]);
-
-  const teamMembers = [
-    ...instructors.map((instructor) => ({
-      name: instructor.name,
-      role: "Lead Instructor",
-      image: instructor.image,
-      bio: "20+ years in property investment with a passion for teaching",
-      specialty: "Property Investment Strategy",
-    })),
-    {
-      name: "Sarah Chen",
-      role: "Content Creator",
-      image: "/confident-asian-professional.png",
-      bio: "Former marketing executive turned education specialist",
-      specialty: "Course Development",
-    },
+  const facilitatorIds = [
+    "melvin-lim",
+    "adrian-lim",
+    "marc-chan",
+    "george-peng",
   ];
+
+  const teamMembers = facilitatorIds
+    .map((id) => getFacilitator(id))
+    .filter(Boolean) as Facilitator[];
 
   return (
     <section ref={sectionRef} className="py-24 bg-white" data-oid="ik:fneb">
@@ -653,45 +645,46 @@ const MeetTeamSection = () => {
                     className="w-32 h-32 mx-auto rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300"
                     data-oid=".gu249y"
                   >
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover"
-                      data-oid="7k5n07b"
+                      data-oid="uubfckf"
                     />
                   </div>
-                  <div
-                    className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"
-                    data-oid="ntp1wrb"
-                  >
-                    <Heart className="w-4 h-4 text-white" data-oid="x9x4n31" />
-                  </div>
                 </div>
-                <h3
-                  className="text-lg font-bold text-gray-900 mb-1"
-                  data-oid="ni5yp2u"
-                >
-                  {member.name}
-                </h3>
-                <p
-                  className="text-blue-600 font-medium mb-2"
-                  data-oid="pss7-65"
-                >
-                  {member.role}
-                </p>
+                <div className="min-h-[6rem]" data-oid="y_t5irg">
+                  <h3
+                    className="text-lg font-bold text-gray-900 mb-1"
+                    data-oid="ni5yp2u"
+                  >
+                    {member.name}
+                  </h3>
+                  <p
+                    className="text-blue-600 font-medium mb-2"
+                    data-oid="pss7-65"
+                  >
+                    {member.role}
+                  </p>
+                </div>
                 <p className="text-gray-600 text-sm mb-3" data-oid="45oi9.h">
                   {member.bio}
                 </p>
-                <div
-                  className="bg-gray-50 rounded-lg px-3 py-1 inline-block"
-                  data-oid="we0ogvb"
-                >
-                  <span className="text-xs text-gray-700" data-oid="ocg9ajr">
-                    {member.specialty}
-                  </span>
-                </div>
               </motion.div>
             ))}
+          </div>
+          <div className="mt-16 text-center" data-oid="_awqajj">
+            <Link href="/facilitators" data-oid=":g126g3">
+              <Button
+                size="lg"
+                className="bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 px-8 py-3 rounded-xl transition-all duration-300 group"
+                data-oid="s7fu8d3"
+              >
+                Meet All Facilitators
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -795,15 +788,13 @@ const FutureVisionSection = () => {
 export default function AboutPage() {
   return (
     <>
-      <Navbar data-oid="8-62qc3" />
-      <div className="bg-white" data-oid="2cqmrfa">
-        <StoryHeroSection data-oid="o9bkr6x" />
-        <FounderStorySection data-oid="ski8e2f" />
-        <OurPurposeSection data-oid="t009tbk" />
-        <ValuesInActionSection data-oid="v:.rqzw" />
-        <MeetTeamSection data-oid="mskm8:c" />
-        <FutureVisionSection data-oid="-owidh3" />
-      </div>
+      <Navbar data-oid="w1-a48p" />
+      <StoryHeroSection data-oid="o0.z2_1" />
+      <FounderStorySection data-oid="6v2c79m" />
+      <OurPurposeSection data-oid="4014f3p" />
+      <ValuesInActionSection data-oid="99b.s7y" />
+      <MeetTeamSection data-oid="u9.j8n8" />
+      <FutureVisionSection data-oid="p84f_e9" />
     </>
   );
 }

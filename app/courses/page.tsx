@@ -8,25 +8,7 @@ import { Search, Filter, ChevronDown, X } from "lucide-react";
 import CourseCard from "@/components/course-card";
 import LearningPathCard from "@/components/learning-path-card";
 import Navbar from "@/components/navbar";
-import { courses as mainCourses } from "@/app/data/courses";
-
-interface Course {
-  id: number;
-  title: string;
-  instructor: string;
-  level?: string;
-  duration?: string;
-  category?: string;
-  categories: string[];
-  price: string;
-  type?: string;
-  image: string;
-  rating?: number;
-  reviewCount?: number;
-  tags?: string[];
-  slug: string;
-  url?: string;
-}
+import { courses as mainCourses, Course } from "@/app/data/courses";
 
 interface LearningPath {
   id: string;
@@ -50,8 +32,8 @@ type FilterState = {
 
 export default function CoursesPage() {
   // State for courses data
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [courses, setCourses] = useState<Course[]>(mainCourses);
+  const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"courses" | "paths">("courses");
 
   // Update the filter options with the new values
@@ -196,392 +178,18 @@ export default function CoursesPage() {
     setCurrentPage(pageNumber);
   };
 
-  // Parse CSV data and set up courses
   useEffect(() => {
-    const parseCourseData = () => {
-      // This is the CSV data provided by the user, manually parsed
-      const courseData = [
-        {
-          url: "https://assembly.sg/courses/property-strategies-in-2025-amid-rate-cuts/",
-          title: "Property Strategies in 2025 Amid Rate Cuts",
-          categories: ["Market Trends", "Webinar"],
-          instructor: "Melvin Lim, Nicole Ng",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/entry-price-analysis-for-5-upcoming-new-launches/",
-          title: "Entry Price Analysis for 5 Upcoming New Launches",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Phyllis Goh",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/ec-sellers-make-the-most-money-when-they-sell-at-mop-year-myth-or-truth/",
-          title:
-            "EC Sellers Make the Most Money when they sell at MOP Year – Myth or Truth?",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/mistakes-in-strategising-to-own-1-hdb-1-condo-right-from-the-start/",
-          title:
-            "Mistakes in Strategising to Own 1 HDB + 1 Condo Right From the Start",
-          categories: ["Condo", "HDB", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/new-launch-condo-selection-strategies/",
-          title: "New Launch Condo Selection Strategies",
-          categories: ["Condo", "Webinar"],
-          instructor:
-            "Marc Chan, Ong Yu Rong, George Peng, Shawn Tay, Jesley Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/live-debate-new-launch-condo-vs-resale-condo-which-is-more-profitable/",
-          title:
-            "Live Debate - New Launch Condo VS Resale Condo: Which is More Profitable?",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/how-to-strategise-from-a-condo-portfolio-into-a-landed-portfolio/",
-          title:
-            "How to Strategise from a Condo Portfolio into a Landed Portfolio",
-          categories: ["Landed", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/are-landed-properties-overpriced-in-2024-should-we-wait-for-2025-to-enter-or-is-now-the-best-time/",
-          title:
-            "Are Landed Properties Overpriced in 2024? Should we wait for 2025 to Enter or is now the best time?",
-          categories: ["Landed", "Webinar"],
-          instructor: "Melvin Lim, Beatrice Lim, George Peng",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/live-debate-resale-hdb-vs-resale-condo/",
-          title: "LIVE Debate - Resale HDB VS Resale Condo",
-          categories: ["Condo", "HDB", "Webinar"],
-          instructor:
-            "Melvin Lim, Jesley Lim, Lee Jun Wei, Ramzi Razak, Loong Yanyan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/hdb-upgraders-101-secrets-to-upgrading-from-a-hdb-to-a-condo-masterclass/",
-          title:
-            "HDB Upgraders 101: Secrets to Upgrading from a HDB to a Condo",
-          categories: ["Condo", "HDB", "Workshop"],
-          instructor: "TBD",
-          price: "$599.00",
-        },
-        {
-          url: "https://assembly.sg/courses/landed-buyer-investing-masterclass/",
-          title: "Landed Buyer Investing",
-          categories: ["Landed", "Masterclass"],
-          instructor: "TBD",
-          price: "$2,899.00",
-        },
-        {
-          url: "https://assembly.sg/courses/property-portfolio-strategy/",
-          title: "Property Portfolio Strategy Mastery",
-          categories: ["Investing", "Workshop"],
-          instructor: "TBD",
-          price: "$2,899.00",
-        },
-        {
-          url: "https://assembly.sg/courses/property-financing-strategy/",
-          title: "Property Financing Strategy Mastery",
-          categories: ["Investing", "Masterclass"],
-          instructor: "TBD",
-          price: "$1,899.00",
-        },
-        {
-          url: "https://assembly.sg/courses/selling-your-property-effectively-as-a-diy-property-seller/",
-          title: "Selling your Property Effectively as a DIY Property Seller",
-          categories: ["Condo", "HDB", "Landed", "Masterclass"],
-          instructor: "TBD",
-          price: "$399.00",
-        },
-        {
-          url: "https://assembly.sg/courses/property-summit-2024/",
-          title: "Property Summit 2024",
-          categories: [
-            "Condo",
-            "Event Courses",
-            "HDB",
-            "Investing",
-            "Landed",
-            "Market Trends",
-          ],
+    // This effect now only populates categories and filter options from the mainCourses data
+    const allCategories = mainCourses.flatMap((course) => course.categories);
+    const uniqueCategories = Array.from(new Set(allCategories));
+    setCategories([
+      { id: "all", name: "All Classes" },
+      ...uniqueCategories.map((cat) => ({ id: cat, name: cat })),
+    ]);
 
-          instructor:
-            "Melvin Lim, Marc Chan, Grayce Tan, Ong Yu Rong, Shawn Tay, Jesley Lim, George Peng, Wayne Tang, Joan Loh",
-          price: "$399.00",
-        },
-        {
-          url: "https://assembly.sg/courses/niche-positioning-masterclass/",
-          title: "Module 1 of Niche Positioning Masterclass",
-          categories: ["Condo", "Masterclass"],
-          instructor: "Melvin Lim",
-          price: "$2,999.00",
-        },
-        {
-          url: "https://assembly.sg/courses/master-new-launch-selection/",
-          title:
-            "Master New Launch Selection: 6 Exclusive Frameworks to Select the Winning New Launch in 2024/2025",
-          categories: ["Condo", "Masterclass"],
-          instructor:
-            "Melvin Lim, Marc Chan, Ong Yu Rong, Shawn Tay, George Peng, Jesley Lim",
-          price: "$399.00",
-        },
-        {
-          url: "https://assembly.sg/courses/condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence/",
-          title:
-            "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence",
-          categories: ["Condo", "Workshop"],
-          instructor: "Melvin Lim",
-          price: "$899.00",
-        },
-        {
-          url: "https://assembly.sg/courses/the-ultimate-guide-to-making-the-best-property-decision/",
-          title: "The Ultimate Guide To Making The Best Property Decision",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Joan Loh",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/2024-market-trends-strategies-for-new-launch-resale-condos/",
-          title:
-            "2024 Market Trends & Strategies for New Launch & Resale Condos",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong, Wayne Tang, Joan Loh",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/singapore-real-estate-market-trends-predictions-2024/",
-          title: "Singapore Real Estate Market Trends & Predictions 2024",
-          categories: ["Market Trends", "Webinar"],
-          instructor: "Melvin Lim, Grayce Tan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/2024-market-trends-strategies-for-landed-properties/",
-          title: "2024 Market Trends & Strategies for Landed Properties",
-          categories: ["Landed", "Webinar"],
-          instructor: "Melvin Lim, Beatrice Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/property-portfolio-expansion-strategies-2024/",
-          title: "Property Portfolio Expansion Strategies 2024",
-          categories: ["Investing", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong, George Peng",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/live-debate-choosing-your-path-in-singapore-property-condo-vs-landed/",
-          title:
-            "Live Debate - Choosing Your Path in Singapore Property: Condo vs Landed",
-          categories: ["Condo", "Landed", "Webinar"],
-          instructor:
-            "Melvin Lim, Ong Yu Rong, George Peng, Shawn Tay, Gavin Chan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/live-debate-choosing-your-path-in-singapore-property-bto-vs-resale-hdb/",
-          title:
-            "Live Debate - Choosing Your Path in Singapore Property: BTO vs Resale HDB",
-          categories: ["HDB", "Webinar"],
-          instructor:
-            "Melvin Lim, Grayce Tan, Joan Loh, Sebastian Lau, Lyndon Leong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/singapores-master-plan-transformation/",
-          title: "Singapore's Master Plan Transformation",
-          categories: ["Market Trends", "Webinar"],
-          instructor: "Melvin Lim, Grayce Tan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/how-has-the-latest-cooling-measures-affected-the-property-market/",
-          title:
-            "How has the latest Cooling Measures affected the Property Market?",
-          categories: ["Market Trends", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/maximizing-your-property-investment/",
-          title: "Maximizing Your Property Investment",
-          categories: ["HDB", "Webinar"],
-          instructor: "Ong Yu Rong, Grayce Tan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/7-analytical-factors-for-safe-new-launch-property-investment/",
-          title: "7 Analytical Factors for Safe New Launch Property Investment",
-          categories: ["Investing", "Webinar"],
-          instructor: "Ong Yu Rong, George Peng",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/rising-stars-or-hidden-gems/",
-          title: "Rising Stars or Hidden Gems?",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/freehold-property-investment-strategy/",
-          title: "Freehold Property Investment Strategy",
-          categories: ["Condo", "Landed", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties/",
-          title:
-            "The Ultimate Showdown: Cluster Houses vs. Condos vs. Landed Properties",
-          categories: ["Landed", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/exit-with-confidence/",
-          title: "Exit with Confidence",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Marc Chan",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/the-art-of-real-estate-investment/",
-          title: "The Art of Real Estate Investment",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim, Ong Yu Rong",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/landed-property-investment-strategies/",
-          title: "Landed Property Investment Strategies",
-          categories: ["Landed", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/making-the-right-move/",
-          title: "Making the Right Move",
-          categories: ["HDB", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/new-launches-is-there-still-an-opportunity-in-2023/",
-          title: "New Launches – Is There Still an Opportunity in 2023?",
-          categories: ["Condo", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-        {
-          url: "https://assembly.sg/courses/the-shift-in-singapores-real-estate-market-2023/",
-          title: "The Shift in Singapore's Real Estate Market 2023",
-          categories: ["Market Trends", "Webinar"],
-          instructor: "Melvin Lim",
-          price: "Free",
-        },
-      ];
-
-      // Extract unique categories
-      const uniqueCategories = new Set<string>();
-      const uniquePrices = new Set<string>();
-
-      courseData.forEach((course) => {
-        course.categories.forEach((category) => {
-          uniqueCategories.add(category);
-        });
-
-        uniquePrices.add(course.price === "Free" ? "Free" : "Paid");
-      });
-
-      // Create formatted course objects
-      const formattedCourses: Course[] = courseData.map((course, index) => {
-        // Generate a slug from the title
-        const slug = course.title
-          .toLowerCase()
-          .replace(/[–—]/g, "-") // Replace en dash and em dash with hyphen
-          .replace(/[^\w\s-]/g, "") // Remove other non-word characters
-          .replace(/\s+/g, "-") // Replace spaces with hyphen
-          .replace(/-{2,}/g, "-") // Collapse multiple hyphens into one
-          .replace(/^-|-$/g, ""); // Remove leading/trailing hyphens
-
-        // Determine primary category for image selection
-        const primaryCategory = course.categories[0]?.toLowerCase() || "";
-
-        // Select an appropriate image based on the main data file if available
-        const mainCourse = mainCourses.find((c) => c.title === course.title);
-        let image = mainCourse?.image || "/singapore-skyline-day.png";
-
-        // Find the course with the title "Property Strategies in 2025 Amid Rate Cuts" and update its image property
-        if (course.title === "Property Strategies in 2025 Amid Rate Cuts") {
-          image = "/images/property-strategies-2025.jpg";
-        }
-
-        // Determine if it's a paid course
-        const isPaid = course.price !== "Free";
-
-        return {
-          id: index + 1,
-          title: course.title,
-          instructor: course.instructor,
-          level: "All Levels", // Default level
-          duration: course.categories.includes("Webinar")
-            ? "1 hour"
-            : "Self-paced",
-          category: primaryCategory,
-          categories: course.categories,
-          price: course.price,
-          type: course.categories.includes("Masterclass")
-            ? "Masterclass"
-            : "Course",
-          image,
-          rating: 0, // Default rating
-          tags: course.categories, // Use categories as tags
-          slug,
-          url: course.url,
-        };
-      });
-
-      // Update state with the formatted courses
-      setCourses(formattedCourses);
-
-      // Update categories for navigation
-      const categoryList = Array.from(uniqueCategories).sort();
-      setFilterOptions((prev) => ({
-        level: prev.level,
-        duration: prev.duration,
-        category: categoryList,
-        type: prev.type,
-        price: Array.from(uniquePrices).sort(),
-      }));
-
-      // Update category navigation
-      setCategories([
-        { id: "all", name: "All Classes" },
-        ...Array.from(uniqueCategories).map((cat) => ({
-          id: cat.toLowerCase().replace(/\s+/g, "-"),
-          name: cat,
-        })),
-      ]);
-
-      setLoading(false);
-    };
-
-    parseCourseData();
+    const allLevels = mainCourses.map((course) => course.level || "All Levels");
+    const uniqueLevels = Array.from(new Set(allLevels));
+    setFilterOptions((prev) => ({ ...prev, level: uniqueLevels }));
   }, []);
 
   // Filter courses based on active category, search query, and selected filters
@@ -1353,9 +961,16 @@ export default function CoursesPage() {
                           .map((course, index) => (
                             <CourseCard
                               key={course.id}
-                              course={course}
-                              delay={index * 0.1}
-                              data-oid="33x.vzw"
+                              course={{
+                                title: course.title,
+                                level: course.level || "All Levels",
+                                duration: course.duration || "Self-paced",
+                                image: course.image,
+                                slug: course.slug,
+                                instructorIds: course.instructorIds || [],
+                              }}
+                              delay={0.1 * (index % 3)}
+                              data-oid="3_2qtbl"
                             />
                           ))}
                       </div>

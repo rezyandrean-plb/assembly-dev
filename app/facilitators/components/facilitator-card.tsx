@@ -9,6 +9,8 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  Mail,
+  MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +24,28 @@ interface FacilitatorCardProps {
 
 export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
   const isEven = index % 2 === 0;
+
+  const socialIcons = {
+    linkedin: Linkedin,
+    twitter: Twitter,
+    instagram: Instagram,
+    whatsapp: MessageCircle,
+    email: Mail,
+  };
+
+  const getSocialLink = (platform: string, url: string) => {
+    if (platform === "email") {
+      return `mailto:${url}`;
+    }
+    if (platform === "whatsapp") {
+      return url.startsWith("wa.me/") ? `https://${url}` : url;
+    }
+    return url;
+  };
+
+  const getSocialIcon = (platform: string) => {
+    return socialIcons[platform as keyof typeof socialIcons];
+  };
 
   return (
     <motion.div
@@ -62,17 +86,15 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
               >
                 {Object.entries(facilitator.socialLinks).map(
                   ([platform, url]) => {
-                    const icons = {
-                      linkedin: Linkedin,
-                      twitter: Twitter,
-                      instagram: Instagram,
-                    };
-                    const Icon = icons[platform as keyof typeof icons];
+                    const Icon = getSocialIcon(platform);
+                    const linkUrl = getSocialLink(platform, url);
+
                     return (
                       <Link
                         key={platform}
-                        href={url}
-                        target="_blank"
+                        href={linkUrl}
+                        target={platform === "email" ? "_self" : "_blank"}
+                        rel={platform === "email" ? "" : "noopener noreferrer"}
                         className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg"
                         data-oid="ds0qgik"
                       >

@@ -12,6 +12,8 @@ import {
   Instagram,
   Quote,
   CheckCircle,
+  Mail,
+  MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,6 +31,22 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
     linkedin: Linkedin,
     twitter: Twitter,
     instagram: Instagram,
+    whatsapp: MessageCircle,
+    email: Mail,
+  };
+
+  const getSocialLink = (platform: string, url: string) => {
+    if (platform === "email") {
+      return `mailto:${url}`;
+    }
+    if (platform === "whatsapp") {
+      return url.startsWith("wa.me/") ? `https://${url}` : url;
+    }
+    return url;
+  };
+
+  const getSocialIcon = (platform: string) => {
+    return socialIcons[platform as keyof typeof socialIcons];
   };
 
   return (
@@ -60,13 +78,7 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
             data-oid="iabrnve"
           >
             {/* Image Section - Takes 2 columns */}
-            <motion.div
-              className="lg:col-span-2 relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
-              transition={{ duration: 0.8 }}
-              data-oid="_2punyr"
-            >
+            <div className="lg:col-span-2 relative" data-oid="_2punyr">
               <div className="relative" data-oid="f::8fj-">
                 {/* Main Image */}
                 <div
@@ -85,94 +97,12 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                       data-oid="0ql4ni6"
                     />
                   </div>
-
-                  {/* Floating Elements */}
-                  <motion.div
-                    className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100"
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    data-oid="uzwr-0s"
-                  >
-                    <div className="flex items-center gap-3" data-oid=".:lg1us">
-                      <div
-                        className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
-                        data-oid="zs7hbl4"
-                      >
-                        <Star
-                          className="w-6 h-6 text-blue-600"
-                          data-oid="ou8jwjz"
-                        />
-                      </div>
-                      <div data-oid="m9j8005">
-                        <div
-                          className="text-sm font-bold text-gray-900"
-                          data-oid="n3mn.an"
-                        >
-                          Expert
-                        </div>
-                        <div
-                          className="text-xs text-gray-600"
-                          data-oid="c4p0wzy"
-                        >
-                          Facilitator
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100"
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1,
-                    }}
-                    data-oid="hc7xy_l"
-                  >
-                    <div className="flex items-center gap-3" data-oid="j26z:s7">
-                      <div
-                        className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
-                        data-oid="rc.ejap"
-                      >
-                        <BookOpen
-                          className="w-6 h-6 text-green-600"
-                          data-oid="u-0k6ma"
-                        />
-                      </div>
-                      <div data-oid="ym60z9c">
-                        <div
-                          className="text-lg font-bold text-gray-900"
-                          data-oid="su-33q9"
-                        >
-                          {facilitator.stats?.coursesCreated}
-                        </div>
-                        <div
-                          className="text-xs text-gray-600"
-                          data-oid="xmed-9d"
-                        >
-                          Courses
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Content Section - Takes 3 columns */}
-            <motion.div
-              className="lg:col-span-3 space-y-8"
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="a1-fe6n"
-            >
+            <div className="lg:col-span-3 space-y-8" data-oid="a1-fe6n">
               {/* Header */}
               <div data-oid="ywybxm.">
                 <div
@@ -230,14 +160,17 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                   <div className="flex gap-3" data-oid="3eoazi5">
                     {Object.entries(facilitator.socialLinks).map(
                       ([platform, url]) => {
-                        const Icon =
-                          socialIcons[platform as keyof typeof socialIcons];
+                        const Icon = getSocialIcon(platform);
+                        const linkUrl = getSocialLink(platform, url);
+
                         return (
                           <Link
                             key={platform}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={linkUrl}
+                            target={platform === "email" ? "_self" : "_blank"}
+                            rel={
+                              platform === "email" ? "" : "noopener noreferrer"
+                            }
                             className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 group shadow-sm"
                             data-oid="d8yvcjc"
                           >
@@ -252,7 +185,7 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

@@ -12,22 +12,24 @@ export interface Facilitator {
     linkedin?: string;
     twitter?: string;
     instagram?: string;
+    whatsapp?: string;
+    email?: string;
   };
   stats?: {
     coursesCreated: number;
   };
+  // New field to control visibility on facilitators page
+  showOnFacilitatorsPage?: boolean;
 }
 
 export const facilitators: Facilitator[] = [
   {
     id: "melvin-lim",
     name: "Melvin Lim",
-    role: "Lead Instructor & Founder",
-    image:
-      "https://www.propertylimbrothers.com/wp-content/uploads/2017/10/Melvin-Lim_Headshot_V2_900px.jpg",
-    bio: "20+ years in property investment with a passion for teaching",
-    longBio:
-      "Melvin Lim, Co-Founder and CEO of PropertyLimBrothers, one of Singapore's most recognisable property brands. With over 1,800 homes sold, Melvin has built a reputation for excellence in Singapore's real estate scene. His success is rooted in media savvy marketing, data-driven strategy, and a deep commitment to integrity. Melvin brings a unique blend of thought leadership and practical insight to Assembly.",
+    role: "CEO/Founder of PropertyLimBrothers",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/10/Melvin-Lim_Headshot_V2_900px.jpg",
+    bio: "Melvin Lim is the Founder and CEO of Assembly.",
+    longBio: "Melvin Lim is the Founder and CEO of Assembly. Having majored in banking and finance, his knack of crunching numbers is key to analysing the value of each property for his clients. Incorporating that with his passion for content and digital marketing, it paved the way for what PropertyLimBrothers have become today.",
     specialty: "Property Investment Strategy",
     experience: "20+ years in property investment",
     courses: [
@@ -38,19 +40,42 @@ export const facilitators: Facilitator[] = [
     socialLinks: {
       linkedin: "https://linkedin.com/in/melvin-lim",
       instagram: "https://instagram.com/melvinlim",
+      whatsapp: "wa.me/6590676710",
     },
     stats: {
       coursesCreated: 15,
     },
+    showOnFacilitatorsPage: true,
+  },
+  {
+    id: "adrian-lim",
+    name: "Adrian Lim",
+    role: "Co-founder & Managing Director, PropertyLimBrothers",
+    image: "https://plb-integrity1-media.propertylimbrothers.com/wp-content/uploads/2022/09/29080058/AdrianLim_new_9x9.jpg",
+    bio: "Co-founder and Managing Director of PropertyLimBrothers",
+    longBio: "Adrian Lim is the Co-founder and Managing Director of PropertyLimBrothers, bringing strategic leadership and operational excellence to the organization.",
+    specialty: "Strategic Leadership & Operations",
+    experience: "15+ years in property and business management",
+    courses: [
+      "Strategic Property Investment",
+      "Business Development in Real Estate",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/adrian_propertylimbrothers/",
+      whatsapp: "wa.me/6581832333",
+    },
+    stats: {
+      coursesCreated: 3,
+    },
+    showOnFacilitatorsPage: false,
   },
   {
     id: "marc-chan",
     name: "Marc Chan",
-    role: "Senior Property Strategist",
+    role: "VP of Operations",
     image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/11/Marc-Headshot_900px_Prof.jpg",
-    bio: "Expert in market analysis and investment strategies",
-    longBio:
-      "Marc Chan is a seasoned property strategist with extensive experience in Singapore's real estate market. He specializes in market analysis, investment timing, and portfolio optimization. Marc's analytical approach and deep market insights have helped hundreds of investors make informed decisions in their property journey.",
+    bio: "Being an ex-entrepreneur and business owner, Marc brings with him a wealth of entrepreneurial insights",
+    longBio: "Being an ex-entrepreneur and business owner, Marc brings with him a wealth of entrepreneurial insights, as well as experience in crafting creative marketing strategies for his clients' properties. As a property investor himself, he brings vision and acumen, as well as first-hand experience to his clients' property planning and investment journey.",
     specialty: "Market Analysis & Investment Timing",
     experience: "15+ years in property analysis",
     courses: [
@@ -59,65 +84,22 @@ export const facilitators: Facilitator[] = [
       "Property Market Fundamentals",
     ],
     socialLinks: {
-      linkedin: "https://linkedin.com/in/marc-chan",
+      linkedin: "https://www.linkedin.com/in/marcchanjy/",
+      instagram: "https://www.instagram.com/marc_propertylimbrothers",
+      whatsapp: "wa.me/6591876797",
     },
     stats: {
       coursesCreated: 8,
     },
-  },
-  {
-    id: "ong-yu-rong",
-    name: "Ong Yu Rong",
-    role: "Property Finance Expert",
-    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/07/Yu-Rong-Headshot_900px_Prof.jpg",
-    bio: "Specialist in property financing and mortgage strategies",
-    longBio:
-      "Ong Yu Rong is a property finance expert with deep knowledge of Singapore's banking and mortgage landscape. He helps investors navigate complex financing structures, optimize loan packages, and maximize their purchasing power. His expertise in financial modeling and risk assessment has been invaluable to countless property investors.",
-    specialty: "Property Financing & Mortgage Strategies",
-    experience: "12+ years in property finance",
-    courses: [
-      "Property Financing Mastery",
-      "Mortgage Optimization Strategies",
-      "Financial Modeling for Property Investment",
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/ong-yu-rong",
-    },
-    stats: {
-      coursesCreated: 6,
-    },
-  },
-  {
-    id: "grayce-tan",
-    name: "Grayce Tan",
-    role: "New Launch Specialist",
-    image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/11/Grayce-Headshot_900px.jpg",
-    bio: "Expert in new launch properties and developer relations",
-    longBio:
-      "Grayce Tan is a new launch specialist with extensive experience in Singapore's new development market. She has strong relationships with major developers and deep insights into upcoming projects. Grayce's expertise helps investors identify the best new launch opportunities and navigate the complexities of off-plan purchases.",
-    specialty: "New Launch Properties & Developer Relations",
-    experience: "10+ years in new launch properties",
-    courses: [
-      "New Launch Selection Mastery",
-      "Developer Analysis Workshop",
-      "Off-plan Investment Strategies",
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/grayce-tan",
-      instagram: "https://instagram.com/graycetan",
-    },
-    stats: {
-      coursesCreated: 5,
-    },
+    showOnFacilitatorsPage: true,
   },
   {
     id: "george-peng",
     name: "George Peng",
-    role: "Landed Property Expert",
+    role: "Associate Senior Investment Director",
     image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/07/George-Headshot_900px.jpg",
-    bio: "Specialist in landed properties and luxury real estate",
-    longBio:
-      "George Peng is a landed property expert with extensive experience in Singapore's luxury real estate market. He specializes in landed properties, including bungalows, semi-detached houses, and terrace houses. George's deep understanding of landed property dynamics and market trends makes him an invaluable resource for high-net-worth investors.",
+    bio: "Prior to real estate, George enjoyed a fast-paced career in the offshore marine industry",
+    longBio: "Prior to real estate, George enjoyed a fast-paced career in the offshore marine industry. While the tasks are different, the responsibilities are similar — solving problems, meeting deadlines, ensuring that clients' needs are met. The major difference, and pull factor, is the ability to offer sound, unbiased real estate advice to his clients and gain their trust and appreciation.",
     specialty: "Landed Properties & Luxury Real Estate",
     experience: "18+ years in luxury real estate",
     courses: [
@@ -126,20 +108,68 @@ export const facilitators: Facilitator[] = [
       "High-Value Property Analysis",
     ],
     socialLinks: {
-      linkedin: "https://linkedin.com/in/george-peng",
+      instagram: "https://www.instagram.com/Commandong",
+      whatsapp: "wa.me/6584819588",
     },
     stats: {
       coursesCreated: 7,
     },
+    showOnFacilitatorsPage: true,
+  },
+  {
+    id: "ong-yu-rong",
+    name: "Ong Yu Rong",
+    role: "Associate Senior Investment Director",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/07/Yu-Rong-Headshot_900px_Prof.jpg",
+    bio: "Yu Rong, the Listing & Investment Consultant of PropertyLimBrothers Team, is no stranger to the real estate industry",
+    longBio: "Yu Rong, the Listing & Investment Consultant of PropertyLimBrothers Team, is no stranger to the real estate industry. Over the last decade, he has helped his clients amass a profitable property portfolio. With an unwavering passion for investment planning and financial literacy, Yu Rong has individually transacted over 250 properties and consistently achieved Top Performer in the industry.",
+    specialty: "Property Financing & Mortgage Strategies",
+    experience: "12+ years in property finance",
+    courses: [
+      "Property Financing Mastery",
+      "Mortgage Optimization Strategies",
+      "Financial Modeling for Property Investment",
+    ],
+    socialLinks: {
+      email: "yurong.ong@propertylimbrothers.com",
+      whatsapp: "wa.me/6586140388",
+    },
+    stats: {
+      coursesCreated: 6,
+    },
+    showOnFacilitatorsPage: true,
+  },
+  {
+    id: "grayce-tan",
+    name: "Grayce Tan",
+    role: "VP of Strategy, Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/11/Grayce-Headshot_900px.jpg",
+    bio: "Grayce hails from a background of a varying passions, grounded in an insatiable curiosity for people",
+    longBio: "Grayce hails from a background of a varying passions, grounded in an insatiable curiosity for people. Her worldview is informed by her pursuit of knowledge in the fields of Sociology, Educational Pedagogy and Real Estate Investment, anchored through her life experiences.",
+    specialty: "New Launch Properties & Developer Relations",
+    experience: "10+ years in new launch properties",
+    courses: [
+      "New Launch Selection Mastery",
+      "Developer Analysis Workshop",
+      "Off-plan Investment Strategies",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/grayce-tan/",
+      instagram: "https://www.instagram.com/babygrayce",
+      whatsapp: "wa.me/6597404788",
+    },
+    stats: {
+      coursesCreated: 5,
+    },
+    showOnFacilitatorsPage: true,
   },
   {
     id: "joan-loh",
     name: "Joan Loh",
-    role: "HDB & Upgrading Specialist",
+    role: "Associate Consultant",
     image: "https://plb-integrity1-media.propertylimbrothers.com/wp-content/uploads/2022/11/13035229/Joan1.jpg",
-    bio: "Expert in HDB properties and upgrading strategies",
-    longBio:
-      "Joan Loh is an HDB and upgrading specialist with comprehensive knowledge of Singapore's public housing system. She helps first-time buyers navigate HDB purchases and assists existing HDB owners in planning their upgrading journey to private properties. Joan's practical approach and deep understanding of housing policies make her an essential guide for many Singaporeans.",
+    bio: "Joan began her career in policy development and digital transformation",
+    longBio: "Joan began her career in policy development and digital transformation, and in a similar vein, her property advice is built on foresight, empathy, genuine relationships, and prioritising her clients' needs above all else.",
     specialty: "HDB Properties & Upgrading Strategies",
     experience: "14+ years in HDB and upgrading",
     courses: [
@@ -148,11 +178,128 @@ export const facilitators: Facilitator[] = [
       "First-time Buyer's Guide",
     ],
     socialLinks: {
-      linkedin: "https://linkedin.com/in/joan-loh",
+      linkedin: "https://www.linkedin.com/in/joan-loh-389846184/",
+      instagram: "https://www.instagram.com/joanlohh",
+      whatsapp: "wa.me/6590463988",
     },
     stats: {
       coursesCreated: 9,
     },
+    showOnFacilitatorsPage: true,
+  },
+  {
+    id: "wayne-tang",
+    name: "Wayne Tang",
+    role: "VP of Sales Development & Performance Coach",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/11/Wayne-Headshot_900px.jpg",
+    bio: "Wayne is a service-oriented, seasoned product storyteller with more than a decade of marketing experience",
+    longBio: "Wayne is a service-oriented, seasoned product storyteller with more than a decade of marketing experience in the consumer electronics industry. With this edge, he leverages on the similarities with real estate, finding unique angles for his clients' homes. His keen attention to detail and forthcoming nature makes him a valuable addition to our team.",
+    specialty: "Sales Development & Performance Coaching",
+    experience: "12+ years in sales and marketing",
+    courses: [
+      "Sales Development Mastery",
+      "Performance Coaching Workshop",
+      "Real Estate Marketing Strategies",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/iamwaynetang/",
+      whatsapp: "wa.me/6598476588",
+    },
+    stats: {
+      coursesCreated: 4,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "alan-koh",
+    name: "Alan Koh",
+    role: "Associate Senior Investment Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/07/Alan-Headshot_900px.jpg",
+    bio: "A high-touch real estate agent with extensive market knowledge and unmatched dedication",
+    longBio: "A high-touch real estate agent with extensive market knowledge and unmatched dedication, Alan is known to be information ready in most situations, and to offer quick responses to all queries and requirements. He is sales-driven and service-oriented, and often goes above and beyond his duties to meet his clients' needs.",
+    specialty: "High-Touch Real Estate Services",
+    experience: "8+ years in real estate",
+    courses: [
+      "Client Relationship Management",
+      "Real Estate Consultation Excellence",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/alan-koh-ba1553188/",
+      instagram: "https://www.instagram.com/alankoh_propertylimbrothers/",
+      whatsapp: "wa.me/6586867302",
+    },
+    stats: {
+      coursesCreated: 2,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "christina-tan",
+    name: "Christina Tan",
+    role: "Associate Senior Investment Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/07/Alan-Headshot_900px.jpg", // Note: Same image as Alan Koh - needs update
+    bio: "What's clearly noticeable about Christina is her bright and positive disposition and unwavering enthusiasm",
+    longBio: "What's clearly noticeable about Christina is her bright and positive disposition and unwavering enthusiasm in getting the job done well. She is a valuable team player who contributes cheerfully to her clients' and team's needs without hesitation. Coming from a sales background, she naturally takes initiative and is determined, handling all her clients with confidence and capability.",
+    specialty: "Sales Excellence & Client Relations",
+    experience: "6+ years in sales and real estate",
+    courses: [
+      "Sales Excellence Workshop",
+      "Client Relationship Building",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/christina_propertylimbrothers/",
+      whatsapp: "wa.me/6586999440",
+    },
+    stats: {
+      coursesCreated: 2,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "eunice-lam",
+    name: "Eunice Lam",
+    role: "Associate Senior Investment Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/08/Eunice-Headshot_900px.jpg",
+    bio: "Hailing from a background of automotive production Eunice has developed strong capabilities in negotiation and coordination",
+    longBio: "Hailing from a background of automotive production Eunice has developed strong capabilities in negotiation and coordination, which she now applies purposefully to achieving her clients' real estate objectives. Her passion and dedication is apparent in the way she strives to exceed her clients' expectations by going the extra mile in every aspect of her role.",
+    specialty: "Negotiation & Coordination",
+    experience: "7+ years in real estate",
+    courses: [
+      "Negotiation Mastery",
+      "Real Estate Coordination Excellence",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/eunice-lam-628744233/",
+      instagram: "https://www.instagram.com/eunice_propertylimbrothers/",
+      whatsapp: "wa.me/6596879322",
+    },
+    stats: {
+      coursesCreated: 2,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "kevin-lim",
+    name: "Kevin Lim",
+    role: "Associate Senior Investment Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2018/08/Kevin-Headshot_900px-V2.jpg",
+    bio: "A former banker with over a decade of experience in Citibank, DBS Bank, UOB and Standard Chartered",
+    longBio: "A former banker with over a decade of experience in Citibank, DBS Bank, UOB and Standard Chartered, Kevin took a natural transition into the real estate industry leveraging on his background in finance. He offers a solid consultancy for his clients combining fresh market perspectives and holistic financial planning.",
+    specialty: "Financial Planning & Banking Expertise",
+    experience: "15+ years in banking and finance",
+    courses: [
+      "Financial Planning for Property Investment",
+      "Banking Strategies for Real Estate",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/kevin-lim-93586055/?originalSubdomain=sg",
+      instagram: "https://www.instagram.com/kevin_limwl",
+      whatsapp: "wa.me/6597458614",
+    },
+    stats: {
+      coursesCreated: 3,
+    },
+    showOnFacilitatorsPage: false,
   },
 ];
 
@@ -169,4 +316,9 @@ export function getFacilitatorsBySpecialty(specialty: string): Facilitator[] {
   return facilitators.filter((facilitator) =>
     facilitator.specialty.toLowerCase().includes(specialty.toLowerCase()),
   );
+}
+
+// New function to get only facilitators that should be shown on the facilitators page
+export function getFacilitatorsForPage(): Facilitator[] {
+  return facilitators.filter((facilitator) => facilitator.showOnFacilitatorsPage !== false);
 }

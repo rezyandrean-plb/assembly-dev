@@ -4,7 +4,7 @@ export interface Course {
   id: number
   title: string
   description: string
-  instructor: string
+  instructorIds: string[]
   level?: string
   duration?: string
   category?: string
@@ -30,7 +30,7 @@ export const courses: Course[] = [
     id: 1,
     title: "Property Strategies in 2025 Amid Rate Cuts",
     description: "This course explores the latest market trends and strategies for property investment in 2025.",
-    instructor: "Melvin Lim, Nicole Ng",
+    instructorIds: ["melvin-lim", "nicole-ng"],
     level: "All Levels",
     duration: "1 hour",
     category: "market trends",
@@ -51,7 +51,7 @@ export const courses: Course[] = [
     id: 2,
     title: "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence",
     description: "A comprehensive workshop on building a profitable condo investment portfolio with confidence.",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "Self-paced",
     category: "condo",
@@ -72,7 +72,7 @@ export const courses: Course[] = [
     id: 3,
     title: "Master New Launch Selection: 6 Exclusive Frameworks to Select the Winning New Launch in 2024/2025",
     description: "Learn exclusive frameworks to identify and select winning new launch properties in the current market.",
-    instructor: "Melvin Lim, Marc Chan, Ong Yu Rong, Shawn Tay, George Peng, Jesley Lim",
+    instructorIds: ["melvin-lim", "marc-chan", "ong-yu-rong", "shawn-tay", "george-peng", "jesley-lim"],
     level: "All Levels",
     duration: "Self-paced",
     category: "condo",
@@ -93,7 +93,7 @@ export const courses: Course[] = [
     id: 4,
     title: "Module 1 of Niche Positioning Masterclass",
     description: "The first module of our masterclass on niche positioning for real estate professionals.",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "Self-paced",
     category: "condo",
@@ -114,8 +114,17 @@ export const courses: Course[] = [
     id: 5,
     title: "Property Summit 2024",
     description: "Join us for the premier property summit of 2024, featuring industry experts and networking opportunities.",
-    instructor:
-      "Melvin Lim, Marc Chan, Grayce Tan, Ong Yu Rong, Shawn Tay, Jesley Lim, George Peng, Wayne Tang, Joan Loh",
+    instructorIds: [
+      "melvin-lim", 
+      "marc-chan", 
+      "grayce-tan", 
+      "ong-yu-rong", 
+      "shawn-tay", 
+      "jesley-lim", 
+      "george-peng", 
+      "wayne-tang", 
+      "joan-loh"
+    ],
     level: "All Levels",
     duration: "2 days",
     category: "event courses",
@@ -136,7 +145,7 @@ export const courses: Course[] = [
     id: 6,
     title: "Selling your Property Effectively as a DIY Property Seller",
     description: "A guide for DIY property sellers to market and sell their properties effectively.",
-    instructor: "TBD",
+    instructorIds: ["tbd"],
     level: "All Levels",
     duration: "Self-paced",
     category: "property selling",
@@ -157,7 +166,7 @@ export const courses: Course[] = [
     id: 7,
     title: "Property Financing Strategy Mastery",
     description: "Master the art of property financing with our in-depth strategy course.",
-    instructor: "TBD",
+    instructorIds: ["tbd"],
     level: "All Levels",
     duration: "Self-paced",
     category: "investing",
@@ -178,7 +187,7 @@ export const courses: Course[] = [
     id: 8,
     title: "HTML & CSS Mastery",
     description: "A beginner-friendly course on the fundamentals of web development with HTML and CSS.",
-    instructor: "Michael Chen",
+    instructorIds: ["michael-chen"],
     level: "Beginner",
     duration: "Self-paced",
     category: "condo",
@@ -199,7 +208,7 @@ export const courses: Course[] = [
     id: 9,
     title: "Responsive Web Design",
     description: "Learn how to create websites that look great on all devices with responsive web design techniques.",
-    instructor: "Jessica Lee",
+    instructorIds: ["jessica-lee"],
     level: "Intermediate",
     duration: "Self-paced",
     category: "hdb",
@@ -220,7 +229,7 @@ export const courses: Course[] = [
     id: 10,
     title: "Git & GitHub Essentials",
     description: "An essential guide to version control with Git and GitHub for developers.",
-    instructor: "Robert Kim",
+    instructorIds: ["robert-kim"],
     level: "Beginner",
     duration: "Self-paced",
     category: "landed",
@@ -241,7 +250,7 @@ export const courses: Course[] = [
     id: 11,
     title: "UI/UX Principles",
     description: "Discover the core principles of UI/UX design to create user-friendly and engaging digital products.",
-    instructor: "Emma Rodriguez",
+    instructorIds: ["emma-rodriguez"],
     level: "Intermediate",
     duration: "Self-paced",
     category: "market trends",
@@ -261,7 +270,7 @@ export const courses: Course[] = [
   {
     id: 12,
     title: "SQL Basics",
-    instructor: "David Wilson",
+    instructorIds: ["david-wilson"],
     level: "Beginner",
     duration: "Self-paced",
     category: "investing",
@@ -281,7 +290,7 @@ export const courses: Course[] = [
   {
     id: 13,
     title: "Python for Beginners",
-    instructor: "Alex Thompson",
+    instructorIds: ["alex-thompson"],
     level: "Beginner",
     duration: "Self-paced",
     category: "condo",
@@ -301,7 +310,7 @@ export const courses: Course[] = [
   {
     id: 14,
     title: "Agile Methodology",
-    instructor: "Jennifer Park",
+    instructorIds: ["jennifer-park"],
     level: "Intermediate",
     duration: "Self-paced",
     category: "hdb",
@@ -321,7 +330,7 @@ export const courses: Course[] = [
   {
     id: 15,
     title: "Advanced JavaScript Patterns",
-    instructor: "Sarah Johnson",
+    instructorIds: ["sarah-johnson"],
     level: "Intermediate",
     duration: "Self-paced",
     category: "landed",
@@ -339,7 +348,7 @@ export const courses: Course[] = [
   {
     id: 16,
     title: "Cloud Computing Fundamentals",
-    instructor: "Michael Chen",
+    instructorIds: ["michael-chen"],
     level: "Beginner",
     duration: "Self-paced",
     category: "market trends",
@@ -357,7 +366,7 @@ export const courses: Course[] = [
   {
     id: 17,
     title: "Mobile App Development with React Native",
-    instructor: "Jessica Lee",
+    instructorIds: ["jessica-lee"],
     level: "Advanced",
     duration: "Self-paced",
     category: "investing",
@@ -375,7 +384,7 @@ export const courses: Course[] = [
   {
     id: 18,
     title: "Property Portfolio Strategy Mastery",
-    instructor: "Melvin Lim, Marc Chan, George Peng",
+    instructorIds: ["melvin-lim", "marc-chan", "george-peng"],
     level: "Advanced",
     duration: "30 hours",
     category: "investing",
@@ -395,7 +404,7 @@ export const courses: Course[] = [
   {
     id: 19,
     title: "Landed Property Buyer's Investment Guide",
-    instructor: "Melvin Lim, George Peng, Wayne Tang",
+    instructorIds: ["melvin-lim", "george-peng", "wayne-tang"],
     level: "Intermediate",
     duration: "24 hours",
     category: "landed",
@@ -415,7 +424,7 @@ export const courses: Course[] = [
   {
     id: 20,
     title: "HDB Upgraders 101: Secrets to Upgrading from a HDB to a Condo",
-    instructor: "TBD",
+    instructorIds: ["tbd"],
     level: "All Levels",
     duration: "Self-paced",
     category: "hdb",
@@ -435,7 +444,7 @@ export const courses: Course[] = [
   {
     id: 21,
     title: "The Shift in Singapore's Real Estate Market 2023",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "1 hour",
     category: "market trends",
@@ -454,7 +463,7 @@ export const courses: Course[] = [
   {
     id: 22,
     title: "New Launches – Is There Still an Opportunity in 2023?",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "1 hour",
     category: "condo",
@@ -474,7 +483,7 @@ export const courses: Course[] = [
   {
     id: 23,
     title: "Making the Right Move",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "1 hour",
     category: "hdb",
@@ -494,7 +503,7 @@ export const courses: Course[] = [
   {
     id: 24,
     title: "Landed Property Investment Strategies",
-    instructor: "Melvin Lim",
+    instructorIds: ["melvin-lim"],
     level: "All Levels",
     duration: "1 hour",
     category: "landed",
@@ -514,7 +523,7 @@ export const courses: Course[] = [
   {
     id: 25,
     title: "The Art of Real Estate Investment",
-    instructor: "Melvin Lim, Ong Yu Rong",
+    instructorIds: ["melvin-lim", "ong-yu-rong"],
     level: "All Levels",
     duration: "1 hour",
     category: "condo",
@@ -534,7 +543,7 @@ export const courses: Course[] = [
   {
     id: 26,
     title: "Exit with Confidence",
-    instructor: "Melvin Lim, Marc Chan",
+    instructorIds: ["melvin-lim", "marc-chan"],
     level: "All Levels",
     duration: "1 hour",
     category: "condo",
@@ -554,7 +563,7 @@ export const courses: Course[] = [
   {
     id: 27,
     title: "The Ultimate Showdown: Cluster Houses vs. Condos vs. Landed Properties",
-    instructor: "Melvin Lim, Ong Yu Rong",
+    instructorIds: ["melvin-lim", "ong-yu-rong"],
     level: "All Levels",
     duration: "1 hour",
     category: "landed",
@@ -574,7 +583,7 @@ export const courses: Course[] = [
   {
     id: 28,
     title: "Freehold Property Investment Strategy",
-    instructor: "Melvin Lim, Ong Yu Rong",
+    instructorIds: ["melvin-lim", "ong-yu-rong"],
     level: "All Levels",
     duration: "1 hour",
     category: "condo",
@@ -594,7 +603,7 @@ export const courses: Course[] = [
   {
     id: 29,
     title: "Rising Stars or Hidden Gems?",
-    instructor: "Melvin Lim, Ong Yu Rong",
+    instructorIds: ["melvin-lim", "ong-yu-rong"],
     level: "All Levels",
     duration: "1 hour",
     category: "condo",

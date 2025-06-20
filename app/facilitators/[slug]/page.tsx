@@ -1,30 +1,9 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { notFound } from "next/navigation";
-import {
-  ArrowLeft,
-  Award,
-  BookOpen,
-  Users,
-  Calendar,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Target,
-  Linkedin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
 import { getFacilitator } from "@/app/data/facilitators";
 import { FacilitatorHero } from "./components/facilitator-hero";
-import { FacilitatorBio } from "./components/facilitator-bio";
 import { FacilitatorCourses } from "./components/facilitator-courses";
 
 interface FacilitatorPageProps {
@@ -42,24 +21,24 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
 
   return (
     <>
-      <Navbar data-oid="xdtgdyf" />
-      <div className="bg-white" data-oid="o_eoe1-">
+      <Navbar data-oid="cl8jk1e" />
+      <div className="bg-white" data-oid="8u97.f:">
         {/* Back Navigation */}
-        <div className="bg-gray-50 py-4" data-oid="xjwjtd6">
-          <div className="container mx-auto px-4" data-oid="8vkvz5w">
+        <div className="bg-gray-50 py-4" data-oid="mqh2_wz">
+          <div className="container mx-auto px-4" data-oid="ix-89zf">
             <Link
               href="/facilitators"
               className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
-              data-oid="cnjudl2"
+              data-oid="s1f:e2o"
             >
-              <ArrowLeft className="w-4 h-4" data-oid="dcbat:u" />
+              <ArrowLeft className="w-4 h-4" data-oid="c90vzs7" />
               Back to All Facilitators
             </Link>
           </div>
         </div>
 
-        <FacilitatorHero facilitator={facilitator} data-oid=":-d7luf" />
-        <FacilitatorCourses facilitator={facilitator} data-oid="bs2196i" />
+        <FacilitatorHero facilitator={facilitator} data-oid="i084nyh" />
+        <FacilitatorCourses facilitator={facilitator} data-oid="y7:xv5l" />
       </div>
     </>
   );

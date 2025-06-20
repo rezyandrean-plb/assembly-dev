@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
+import InstructorNames from "./instructor-names";
 
 interface CourseCardProps {
   course: {
@@ -11,6 +12,8 @@ interface CourseCardProps {
     level: string;
     duration: string;
     image: string;
+    slug: string;
+    instructorIds: string[];
   };
   delay: number;
 }
@@ -23,53 +26,58 @@ export default function CourseCard({ course, delay }: CourseCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      whileHover={{ y: -10 }}
-      data-oid="e3kwniw"
+      whileHover={{ y: -5 }}
+      data-oid="ssvw7jo"
     >
       <div
-        className="bg-gray-800 rounded-xl overflow-hidden h-full flex flex-col"
-        data-oid=":i9y02p"
+        className="bg-white rounded-xl overflow-hidden h-full flex flex-col border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+        data-oid="j:ag.83"
       >
-        <div className="relative h-48 overflow-hidden" data-oid="7t-r4.x">
+        <div className="relative h-48 overflow-hidden" data-oid="c-o6zui">
           <Image
             src={course.image || "/placeholder.svg"}
             alt={course.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            data-oid=".xow23h"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            data-oid="s_n8e32"
           />
 
           <div
-            className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"
-            data-oid="fud_348"
-          />
-
-          <div
-            className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-            data-oid="48u8edw"
+            className="absolute top-4 right-4 bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full"
+            data-oid="dfk9z-z"
           >
             {course.level}
           </div>
         </div>
 
-        <div className="p-6 flex flex-col flex-grow" data-oid=".7mhyl_">
-          <h3 className="text-xl font-bold mb-3" data-oid="x3ycaqz">
+        <div className="p-6 flex flex-col flex-grow" data-oid="b61ymyk">
+          <h3
+            className="text-lg font-bold mb-3 text-gray-900"
+            data-oid="om41.x9"
+          >
             {course.title}
           </h3>
-          <div className="text-gray-400 text-sm mb-4" data-oid="3evkhq4">
-            <span className="inline-block mr-4" data-oid="0irhhwz">
-              ⏱️ {course.duration}
-            </span>
+          <InstructorNames
+            instructorIds={course.instructorIds}
+            data-oid="j1e8_i3"
+          />
+
+          <div
+            className="text-gray-600 text-sm mb-4 flex items-center"
+            data-oid="l5wsept"
+          >
+            <Clock className="w-4 h-4 mr-2" data-oid="l_s.a7_" />
+            <span data-oid="6yyoog5">{course.duration}</span>
           </div>
 
-          <div className="mt-auto" data-oid="oexerds">
+          <div className="mt-auto" data-oid="-0e8-s6">
             <Link
-              href={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}
-              className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium"
-              data-oid="l:e_nsp"
+              href={`/courses/${course.slug}`}
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
+              data-oid="cqg86-6"
             >
               Learn More
-              <ArrowRight className="ml-2 h-4 w-4" data-oid="yc7-_s6" />
+              <ArrowRight className="ml-2 h-4 w-4" data-oid="pw7osmf" />
             </Link>
           </div>
         </div>
