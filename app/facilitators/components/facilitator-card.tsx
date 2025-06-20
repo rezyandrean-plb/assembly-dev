@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Award,
   Quote,
   Star,
   Linkedin,
   Twitter,
   Instagram,
+  BookOpen,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,47 +25,47 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
 
   return (
     <motion.div
-      className={`group relative ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} flex flex-col lg:flex gap-8 items-center`}
+      className={`group relative ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} flex flex-col lg:flex gap-12 items-center py-16`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
       viewport={{ once: true }}
-      data-oid="lao2o9v"
+      data-oid="l17l:eo"
     >
       {/* Image Section */}
-      <div className="relative lg:w-1/2" data-oid="ktq2r9m">
-        <div className="relative" data-oid="jxcxu7_">
-          {/* Main Image */}
+      <div className="relative lg:w-2/5" data-oid="utjjisu">
+        <div className="relative" data-oid="s00.tsg">
+          {/* Main Image Container */}
           <div
-            className="relative w-80 h-96 mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500"
-            data-oid="vvjaay."
+            className="relative w-96 h-[500px] mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 bg-gradient-to-br from-gray-100 to-gray-200"
+            data-oid="durp8n9"
           >
             <Image
               src={facilitator.image}
               alt={facilitator.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
-              data-oid="2.dguto"
+              data-oid="ynyzx8."
             />
 
-            {/* Gradient Overlay */}
+            {/* Subtle Gradient Overlay */}
             <div
-              className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-              data-oid="pdcqi.r"
+              className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+              data-oid="2wtkbkg"
             />
 
-            {/* Experience Badge */}
+            {/* Specialty Badge */}
             <div
-              className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
-              data-oid="1y2vs1-"
+              className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-100"
+              data-oid="n0-ik5w"
             >
-              <div className="flex items-center gap-2" data-oid="q2.npj_">
-                <Award className="w-4 h-4 text-blue-600" data-oid="woazq03" />
+              <div className="flex items-center gap-2" data-oid="r6j10ws">
+                <Star className="w-4 h-4 text-blue-600" data-oid="_:328si" />
                 <span
                   className="text-sm font-bold text-gray-900"
-                  data-oid="e4dgr8p"
+                  data-oid="sldwp1k"
                 >
-                  {facilitator.stats?.yearsExperience}+ Years
+                  Expert
                 </span>
               </div>
             </div>
@@ -74,7 +74,7 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
             {facilitator.socialLinks && (
               <div
                 className="absolute top-6 right-6 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="yh94luh"
+                data-oid="zp4n:.w"
               >
                 {Object.entries(facilitator.socialLinks).map(
                   ([platform, url]) => {
@@ -89,12 +89,12 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
                         key={platform}
                         href={url}
                         target="_blank"
-                        className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg"
-                        data-oid="u.g3k1-"
+                        className="w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg border border-gray-100"
+                        data-oid="ri36w07"
                       >
                         <Icon
                           className="w-4 h-4 text-gray-700"
-                          data-oid="3h5r3-3"
+                          data-oid="rcpvr0_"
                         />
                       </Link>
                     );
@@ -102,19 +102,32 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
                 )}
               </div>
             )}
+
+            {/* Course Count Badge */}
+            <div
+              className="absolute bottom-6 left-6 bg-blue-600 text-white rounded-full px-4 py-2 shadow-lg"
+              data-oid="ur.9f09"
+            >
+              <div className="flex items-center gap-2" data-oid="0n4buc6">
+                <BookOpen className="w-4 h-4" data-oid="yzsleyl" />
+                <span className="text-sm font-bold" data-oid="4dyj-u1">
+                  {facilitator.stats?.coursesCreated} Courses
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Floating Quote */}
           <motion.div
-            className={`absolute -bottom-6 ${isEven ? "-right-6" : "-left-6"} bg-white rounded-2xl p-6 shadow-xl max-w-xs border-l-4 border-blue-500`}
+            className={`absolute -bottom-8 ${isEven ? "-right-8" : "-left-8"} bg-white rounded-2xl p-6 shadow-xl max-w-sm border-l-4 border-blue-500`}
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            data-oid="i741cul"
+            data-oid=":eqtg8e"
           >
-            <Quote className="w-5 h-5 text-blue-600 mb-2" data-oid="7mf508j" />
+            <Quote className="w-5 h-5 text-blue-600 mb-3" data-oid="mr7:93x" />
             <p
               className="text-sm text-gray-700 italic leading-relaxed"
-              data-oid="439o9v."
+              data-oid="kvfa4ob"
             >
               "Empowering investors with practical knowledge and proven
               strategies."
@@ -124,117 +137,101 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
       </div>
 
       {/* Content Section */}
-      <div className="lg:w-1/2 space-y-6" data-oid="990bfi9">
+      <div className="lg:w-3/5 space-y-8" data-oid="09al42p">
         {/* Header */}
-        <div data-oid="f:zmufs">
+        <div data-oid="poa7.__">
           <div
-            className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
-            data-oid="qaamgha"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-blue-100"
+            data-oid="1hq0ho2"
           >
-            <Star className="w-4 h-4" data-oid="00.4joc" />
+            <Star className="w-4 h-4" data-oid="gmcmv28" />
             {facilitator.specialty}
           </div>
 
           <h3
-            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2"
-            data-oid="r8c9l0g"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight"
+            data-oid="c8xn4lu"
           >
             {facilitator.name}
           </h3>
 
           <p
-            className="text-xl text-blue-600 font-semibold mb-4"
-            data-oid="-stvp5h"
+            className="text-2xl text-blue-600 font-semibold mb-6"
+            data-oid="94gfy8g"
           >
             {facilitator.role}
           </p>
 
           <p
-            className="text-gray-600 leading-relaxed text-lg"
-            data-oid="qmt0k2r"
+            className="text-gray-600 leading-relaxed text-xl"
+            data-oid="w24mswm"
           >
             {facilitator.bio}
           </p>
         </div>
 
-        {/* Impact Stats */}
-        <div className="grid grid-cols-3 gap-4" data-oid="sba.2gb">
-          <div
-            className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl"
-            data-oid="5yei8rx"
+        {/* Key Achievements */}
+        <div
+          className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100"
+          data-oid="g.gdmmf"
+        >
+          <h4
+            className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3"
+            data-oid="dn.ojao"
           >
             <div
-              className="text-2xl font-bold text-blue-900 mb-1"
-              data-oid="5m2wjno"
+              className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center"
+              data-oid="zz2azv5"
             >
-              {facilitator.stats?.studentsHelped.toLocaleString()}+
+              <Star className="w-4 h-4 text-blue-600" data-oid="c96lw_2" />
             </div>
-            <div
-              className="text-xs text-blue-700 font-medium"
-              data-oid="mgfb06c"
-            >
-              Students Mentored
-            </div>
-          </div>
-          <div
-            className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl"
-            data-oid="9qaz-50"
-          >
-            <div
-              className="text-2xl font-bold text-green-900 mb-1"
-              data-oid="-u1orn2"
-            >
-              {facilitator.stats?.coursesCreated}
-            </div>
-            <div
-              className="text-xs text-green-700 font-medium"
-              data-oid="1x4zd:_"
-            >
-              Expert Courses
-            </div>
-          </div>
-          <div
-            className="text-center p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl"
-            data-oid="m2k5oh."
-          >
-            <div
-              className="text-2xl font-bold text-orange-900 mb-1"
-              data-oid="_tza2t1"
-            >
-              {facilitator.stats?.yearsExperience}+
-            </div>
-            <div
-              className="text-xs text-orange-700 font-medium"
-              data-oid=".f6_kbi"
-            >
-              Years Experience
-            </div>
-          </div>
+            Notable Achievements
+          </h4>
+          <ul className="space-y-4" data-oid="2ftp11l">
+            {facilitator.achievements.slice(0, 3).map((achievement, idx) => (
+              <li
+                key={idx}
+                className="flex items-start gap-4"
+                data-oid="-6yiou6"
+              >
+                <div
+                  className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"
+                  data-oid="sl4.ct8"
+                />
+                <span
+                  className="text-gray-700 text-lg leading-relaxed"
+                  data-oid="k7lmoma"
+                >
+                  {achievement}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* CTA */}
-        <div className="flex gap-4" data-oid="u3zs47f">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4" data-oid="f8bisd9">
           <Link
             href={`/facilitators/${facilitator.id}`}
             className="flex-1"
-            data-oid="immi9i4"
+            data-oid="8fkty.-"
           >
             <Button
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 rounded-xl group"
-              data-oid="jf0.hqi"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 px-8 rounded-xl text-lg font-semibold group shadow-lg hover:shadow-xl transition-all duration-300"
+              data-oid="wa6jsgw"
             >
               Meet {facilitator.name.split(" ")[0]}
               <ArrowRight
-                className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
-                data-oid="jd-bk7."
+                className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                data-oid="3:kws3l"
               />
             </Button>
           </Link>
-          <Link href="/courses" data-oid="nvxh0dg">
+          <Link href="/courses" data-oid="mkg_zxm">
             <Button
               variant="outline"
-              className="px-6 py-3 rounded-xl border-2 hover:bg-gray-50"
-              data-oid="l_:zyf1"
+              className="px-8 py-4 rounded-xl border-2 border-gray-300 hover:bg-gray-50 text-lg font-semibold transition-all duration-300"
+              data-oid=".9q1cnl"
             >
               View Courses
             </Button>
