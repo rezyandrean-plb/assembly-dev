@@ -42,10 +42,12 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
         className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20"
         data-oid=":fykm.o"
       />
+
       <div
         className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl"
         data-oid=":q7y-zb"
       />
+
       <div
         className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100/40 to-transparent rounded-full blur-3xl"
         data-oid="e:admc0"
@@ -267,6 +269,7 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                   className="w-8 h-8 text-blue-600 mb-4"
                   data-oid="5.fplnk"
                 />
+
                 <p
                   className="text-lg text-gray-700 italic leading-relaxed mb-4"
                   data-oid="bryz9n3"
