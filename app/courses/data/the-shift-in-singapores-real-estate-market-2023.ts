@@ -1,4 +1,4 @@
-import type { CourseData } from "../components/course-detail-template"
+import type { CourseData } from "@/app/types/course"
 import { getFacilitator } from "@/app/data/facilitators"
 
 const melvin = getFacilitator("melvin-lim");

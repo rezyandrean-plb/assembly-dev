@@ -1,13 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-export interface InstructorProps {
-  name: string;
-  image: string;
-  title?: string;
-  bio?: string;
-}
+import { InstructorProps } from "@/app/types/course";
 
 export function InstructorCard({ name, image }: InstructorProps) {
   return (

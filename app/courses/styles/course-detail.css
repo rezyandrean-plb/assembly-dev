@@ -1,0 +1,87 @@
+/* Smooth sticky sidebar styles */
+.smooth-sticky-sidebar {
+  scroll-behavior: smooth;
+  will-change: transform, box-shadow;
+}
+
+.smooth-sticky-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.smooth-sticky-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.smooth-sticky-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(18, 59, 121, 0.2);
+  border-radius: 2px;
+}
+
+.smooth-sticky-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 59, 121, 0.4);
+}
+
+/* Smooth transitions for sticky elements */
+.sticky-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced shadow effects for sticky state */
+.sticky-shadow {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(18, 59, 121, 0.05);
+}
+
+/* Smooth scale animation */
+.sticky-scale {
+  transform: scale(0.98);
+  transform-origin: top center;
+}
+
+/* Backdrop blur enhancement for sticky state */
+.sticky-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Prevent layout shift during sticky transitions */
+.sticky-container {
+  contain: layout style paint;
+}
+
+/* Smooth opacity transitions */
+.fade-in-sticky {
+  opacity: 0;
+  animation: fadeInSticky 0.5s ease-out forwards;
+}
+
+@keyframes fadeInSticky {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+  .smooth-sticky-sidebar {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .smooth-sticky-sidebar,
+  .sticky-transition {
+    transition: none !important;
+    animation: none !important;
+  }
+}

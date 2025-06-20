@@ -1,7 +1,5 @@
 "use client";
-
 import type React from "react";
-
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -10,10 +8,13 @@ import Navbar from "@/components/navbar";
 import { NetworkProvider } from "@/context/network-context";
 import NetworkBackground from "@/components/network-background";
 import { Button } from "@/components/ui/button";
+import { InstructorCard } from "@/app/components/instructor-card";
 import {
-  InstructorCard,
+  type CourseData,
+  type CourseModule,
+  type Review,
   type InstructorProps,
-} from "@/app/components/instructor-card";
+} from "@/app/types/course";
 import {
   Clock,
   Users,
@@ -36,52 +37,14 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { useCart } from "@/components/cart-context";
-
-// Course data interface
-export interface CourseModule {
-  title: string;
-  lessons: string[];
-}
-
-export interface Review {
-  name: string;
-  rating: number;
-  date: string;
-  comment: string;
-}
-
-export interface CourseData {
-  id: number;
-  title: string;
-  slug: string;
-  level: string;
-  duration: string;
-  category: string;
-  price: string;
-  image: string;
-  featured: boolean;
-  tags: string[];
-  rating: number;
-  students: number;
-  instructors: InstructorProps[];
-  lastUpdated: string;
-  description: string | React.ReactNode;
-  whatYouWillLearn: string[];
-  curriculum: CourseModule[];
-  highlights?: string[];
-  requirements?: string[];
-  targetAudience?: string[];
-  reviews?: Review[];
-  sections?: { title: string; content: string }[];
-}
+import { useSmoothSticky } from "../hooks/use-smooth-sticky";
+import "../styles/course-detail.css";
 
 interface CourseDetailTemplateProps {
   courseData: CourseData;
 }
 
-export default function CourseDetailTemplate({
-  courseData,
-}: CourseDetailTemplateProps) {
+export default function CourseDetailTemplate({ courseData, }: CourseDetailTemplateProps) {
   const router = useRouter();
   const { addToCart } = useCart();
   const [scrollY, setScrollY] = useState(0);
@@ -93,106 +56,48 @@ export default function CourseDetailTemplate({
   const [isBookmarked, setIsBookmarked] = useState(false);
   const lastScrollY = { current: 0 };
   const lastScrollTime = { current: Date.now() };
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [sidebarPosition, setSidebarPosition] = useState(24); // Initial top position
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
   const relatedCoursesRef = useRef<HTMLDivElement>(null);
   const reviewsSectionRef = useRef<HTMLHeadingElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
-
+  // Use the smooth sticky hook
+  const { elementRef: sidebarRef, sentinelRef, isSticky, stickyOffset } = useSmoothSticky({ offset: 24, rootMargin: '-100px 0px -200px 0px' });
   useEffect(() => {
     let rafId: number;
-
     const handleScroll = () => {
       const currentTime = Date.now();
       const timeDelta = currentTime - lastScrollTime.current;
-
       if (timeDelta > 0) {
         // Calculate scroll speed (pixels per millisecond)
         const currentScrollY = window.scrollY;
         const scrollDelta = Math.abs(currentScrollY - lastScrollY.current);
         const speed = scrollDelta / timeDelta;
-
         setScrollY(currentScrollY);
         setScrollSpeed(speed * 100); // Scale for better usability
-
-        // Set scrolling state to true and update sidebar position
-        setIsScrolling(true);
-
-        // Check if related courses section is in view
-        const relatedCoursesPosition =
-          relatedCoursesRef.current?.getBoundingClientRect().top;
-        const hasReachedRelatedCourses =
-          relatedCoursesPosition !== undefined && relatedCoursesPosition <= 100;
-
-        // Check if main content section bottom is in view
-        const mainContentPosition =
-          mainContentRef.current?.getBoundingClientRect();
-        const hasReachedMainContentBottom =
-          mainContentPosition !== undefined &&
-          mainContentPosition.bottom <= window.innerHeight;
-
-        if (!hasReachedRelatedCourses && !hasReachedMainContentBottom) {
-          // Calculate new position (with limits to keep it visible)
-          const newPosition = Math.max(
-            24,
-            Math.min(
-              currentScrollY + 24,
-              document.body.scrollHeight - windowHeight - 400,
-            ),
-          );
-          setSidebarPosition(newPosition);
-        }
-
-        // Clear any existing timeout
-        if (scrollTimeout.current) {
-          clearTimeout(scrollTimeout.current);
-        }
-
-        // Set timeout to detect when scrolling stops
-        scrollTimeout.current = setTimeout(() => {
-          setIsScrolling(false);
-        }, 150);
-
         lastScrollY.current = currentScrollY;
         lastScrollTime.current = currentTime;
       }
-
       rafId = requestAnimationFrame(handleScroll);
     };
-
     const handleResize = () => {
       setWindowHeight(window.innerHeight);
     };
-
     // Set initial values
     handleResize();
-
     // Add event listeners
     window.addEventListener("resize", handleResize);
     rafId = requestAnimationFrame(handleScroll);
-
     // Clean up
     return () => {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(rafId);
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
     };
   }, [windowHeight]);
-
   // Toggle module expansion
   const toggleModule = (index: number) => {
-    setExpandedModules((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
-    );
+    setExpandedModules((prev) => prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index], );
   };
-
   // Copy to clipboard function
   const copyToClipboard = () => {
     const url = `https://assembly.sg/courses/${courseData.slug}`;
@@ -200,18 +105,11 @@ export default function CourseDetailTemplate({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
   // Share on social media
   const shareOnSocialMedia = (platform: string) => {
-    const url = encodeURIComponent(
-      `https://assembly.sg/courses/${courseData.slug}`,
-    );
-    const title = encodeURIComponent(
-      courseData?.title || "Check out this course",
-    );
-
+    const url = encodeURIComponent( `https://assembly.sg/courses/${courseData.slug}`, );
+    const title = encodeURIComponent( courseData?.title || "Check out this course", );
     let shareUrl = "";
-
     switch (platform) {
       case "facebook":
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -225,370 +123,155 @@ export default function CourseDetailTemplate({
       default:
         return;
     }
-
     window.open(shareUrl, "_blank", "width=600,height=400");
   };
-
   // Handle bookmark action
   const handleBookmark = () => {
     if (isLoggedIn) {
       setIsBookmarked(!isBookmarked);
       // In a real app, you would save this to the user's account
-      console.log(
-        `Course ${isBookmarked ? "removed from" : "added to"} wishlist`,
-      );
+      console.log( `Course ${isBookmarked ? "removed from" : "added to"} wishlist`, );
     } else {
       setIsLoginModalOpen(true);
     }
   };
-
   // Handle login
   const handleLogin = () => {
     router.push("/login");
     setIsLoginModalOpen(false);
   };
-
   // Calculate total lessons
   let totalLessons = 0;
   if (Array.isArray(courseData.curriculum)) {
-    totalLessons = courseData.curriculum.reduce(
-      (acc, module) => acc + (module.lessons?.length || 0),
-      0,
-    );
+    totalLessons = courseData.curriculum.reduce( (acc, module) => acc + (module.lessons?.length || 0), 0, );
   } else if (Array.isArray(courseData.sections)) {
     totalLessons = courseData.sections.length;
   }
-
   // Check if course has reviews
   const hasReviews = courseData.reviews && courseData.reviews.length > 0;
-
   return (
     <NetworkProvider data-oid="8uj4.06">
-      <main
-        className="relative overflow-hidden bg-[#F5F5F5] min-h-screen"
-        data-oid="xg43d99"
-      >
-        <NetworkBackground
-          scrollY={scrollY}
-          scrollSpeed={scrollSpeed}
-          windowHeight={windowHeight}
-          opacity={0.3}
-          data-oid="7no.199"
-        />
-
+      <main className="relative overflow-hidden bg-[#F5F5F5] min-h-screen" data-oid="xg43d99" >
+        <NetworkBackground scrollY={scrollY} scrollSpeed={scrollSpeed} windowHeight={windowHeight} opacity={0.3} data-oid="7no.199" />
         <Navbar data-oid="53b.4.0" />
         {/* Hero Section */}
         <section className="pt-32 pb-16 relative z-10" data-oid="idzw-9z">
-          <div
-            className="container mx-auto px-4 relative z-10"
-            data-oid="c197_5j"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6"
-              data-oid="3i-s.ll"
-            >
-              <a
-                href="/courses"
-                className="inline-flex items-center text-[#123B79] hover:underline"
-                data-oid="lt7f3r5"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" data-oid="qfsf4zm" />
-                Back to Courses
+          <div className="container mx-auto px-4 relative z-10" data-oid="c197_5j" >
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6" data-oid="3i-s.ll" >
+              <a href="/courses" className="inline-flex items-center text-[#123B79] hover:underline" data-oid="lt7f3r5" >
+                <ArrowLeft className="h-4 w-4 mr-2" data-oid="qfsf4zm" /> Back to Courses
               </a>
             </motion.div>
-
-            <div
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10"
-              data-oid="3l:t890"
-            >
+            {/* Sticky sentinel - invisible element to trigger sticky behavior */}
+            <div ref={sentinelRef} className="absolute top-0 left-0 w-full h-px pointer-events-none" />
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10" data-oid="3l:t890" >
               {/* Main Content - 8 columns on large screens */}
-              <motion.div
-                ref={mainContentRef}
-                className="lg:col-span-8 bg-white/95 p-6 rounded-xl shadow-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                data-oid="bm2cup9"
-              >
-                <h1
-                  className="text-4xl font-bold text-[#123B79] mb-4 drop-shadow-sm"
-                  data-oid="uggi1m7"
-                >
+              <motion.div ref={mainContentRef} className="lg:col-span-8 bg-white/95 p-6 rounded-xl shadow-sm" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} data-oid="bm2cup9" >
+                <h1 className="text-4xl font-bold text-[#123B79] mb-4 drop-shadow-sm" data-oid="uggi1m7" >
                   {courseData.title}
                 </h1>
-
-                <div
-                  className="flex flex-wrap items-center gap-4 mb-6"
-                  data-oid="p.ao:7s"
-                >
+                <div className="flex flex-wrap items-center gap-4 mb-6" data-oid="p.ao:7s" >
                   <div className="flex items-center" data-oid="xkbewxe">
-                    <Star
-                      className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                      data-oid="02noxck"
-                    />
-
-                    <span className="ml-1 font-semibold" data-oid="zlr2di.">
-                      {courseData.rating}
-                    </span>
-                    <span className="ml-1 text-gray-500" data-oid=":n16:4e">
-                      ({courseData.students} students)
-                    </span>
+                    <Star className="h-5 w-5 text-[#F0A500] fill-[#F0A500]" data-oid="02noxck" />
+                    <span className="ml-1 font-semibold" data-oid="zlr2di."> {courseData.rating} </span>
+                    <span className="ml-1 text-gray-500" data-oid=":n16:4e"> ({courseData.students} students) </span>
                   </div>
-                  <div
-                    className="flex items-center text-gray-600"
-                    data-oid="qux8cqt"
-                  >
+                  <div className="flex items-center text-gray-600" data-oid="qux8cqt" >
                     <Clock className="h-4 w-4 mr-1" data-oid="t4ue1:w" />
                     <span data-oid="rs:v:pu">{courseData.duration}</span>
                   </div>
-                  <div
-                    className="flex items-center text-gray-600"
-                    data-oid="45_t-x6"
-                  >
+                  <div className="flex items-center text-gray-600" data-oid="45_t-x6" >
                     <Calendar className="h-4 w-4 mr-1" data-oid="3okbgfz" />
-                    <span data-oid="o6pbhpg">
-                      Last updated: {courseData.lastUpdated}
-                    </span>
+                    <span data-oid="o6pbhpg"> Last updated: {courseData.lastUpdated} </span>
                   </div>
-                  <div
-                    className="flex items-center text-gray-600"
-                    data-oid="vl7ql_6"
-                  >
+                  <div className="flex items-center text-gray-600" data-oid="vl7ql_6" >
                     <Award className="h-4 w-4 mr-1" data-oid="s:t3qe0" />
                     <span data-oid="e72sa7e">{courseData.level}</span>
                   </div>
                 </div>
-
                 {/* Course Image for Mobile */}
-                <div
-                  className="lg:hidden mb-6 relative rounded-xl overflow-hidden"
-                  data-oid="n:sp4:w"
-                >
+                <div className="lg:hidden mb-6 relative rounded-xl overflow-hidden" data-oid="n:sp4:w" >
                   <div className="aspect-video relative" data-oid="2un:xlt">
-                    <Image
-                      src={courseData.image || "/placeholder.svg"}
-                      alt={courseData.title}
-                      fill
-                      className="object-cover"
-                      data-oid="m05mjq7"
-                    />
+                    <Image src={courseData.image || "/placeholder.svg"} alt={courseData.title} fill className="object-cover" data-oid="m05mjq7" />
                   </div>
                 </div>
-
                 <div className="text-lg text-gray-700 mb-8" data-oid="n1ym.fj">
-                  {typeof courseData.description === "string"
-                    ? courseData.description
-                    : courseData.description}
+                  {typeof courseData.description === "string" ? courseData.description : courseData.description}
                 </div>
-
                 {/* Instructors Section - Updated to display side by side */}
                 <div className="mb-8" data-oid="jf67sju">
-                  <h2
-                    className="font-semibold text-xl text-[#123B79] mb-4"
-                    data-oid="kp1pwyo"
-                  >
-                    Course Instructors
-                  </h2>
-                  <div
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
-                    data-oid="bkoqleh"
-                  >
-                    <div
-                      className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                      data-oid="3opf8nd"
-                    >
-                      {Array.isArray(courseData.instructors) &&
-                      courseData.instructors.length > 0 ? (
+                  <h2 className="font-semibold text-xl text-[#123B79] mb-4" data-oid="kp1pwyo" > Course Instructors </h2>
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100" data-oid="bkoqleh" >
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6" data-oid="3opf8nd" >
+                      {Array.isArray(courseData.instructors) && courseData.instructors.length > 0 ? (
                         courseData.instructors.map((instructor, index) => (
-                          <InstructorCard
-                            key={index}
-                            name={instructor.name}
-                            image={instructor.image}
-                            data-oid="r:7b:vh"
-                          />
+                          <InstructorCard key={index} name={instructor.name} image={instructor.image} data-oid="r:7b:vh" />
                         ))
                       ) : (
-                        <div
-                          className="text-gray-500 col-span-4"
-                          data-oid="jb8huyy"
-                        >
-                          Instructor information coming soon.
-                        </div>
+                        <div className="text-gray-500 col-span-4" data-oid="jb8huyy" > Instructor information coming soon. </div>
                       )}
                     </div>
                   </div>
                 </div>
-
                 {/* Course Highlights */}
                 {courseData.highlights && (
-                  <div
-                    className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                    data-oid="u2aoh30"
-                  >
-                    <h2
-                      className="text-xl font-bold text-[#123B79] mb-4"
-                      data-oid=":hcsizw"
-                    >
-                      Course Highlights
-                    </h2>
-                    <div
-                      className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                      data-oid="9dcdgc0"
-                    >
+                  <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100" data-oid="u2aoh30" >
+                    <h2 className="text-xl font-bold text-[#123B79] mb-4" data-oid=":hcsizw" > Course Highlights </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="9dcdgc0" >
                       {courseData.highlights.map((highlight, index) => (
-                        <div
-                          key={index}
-                          className="flex items-start"
-                          data-oid="d8e1q7v"
-                        >
-                          <CheckCircle
-                            className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5"
-                            data-oid=".p:5:.y"
-                          />
-
-                          <p className="text-gray-700" data-oid="kryba6h">
-                            {highlight}
-                          </p>
+                        <div key={index} className="flex items-start" data-oid="d8e1q7v" >
+                          <CheckCircle className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5" data-oid=".p:5:.y" />
+                          <p className="text-gray-700" data-oid="kryba6h"> {highlight} </p>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
-
                 {/* What You'll Learn */}
-                <div
-                  className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="y0k9bym"
-                >
-                  <h2
-                    className="text-xl font-bold text-[#123B79] mb-4"
-                    data-oid="kylzqfb"
-                  >
-                    What You'll Learn
-                  </h2>
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                    data-oid="xx3l6gw"
-                  >
-                    {Array.isArray(courseData.whatYouWillLearn) &&
-                    courseData.whatYouWillLearn.length > 0 ? (
+                <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100" data-oid="y0k9bym" >
+                  <h2 className="text-xl font-bold text-[#123B79] mb-4" data-oid="kylzqfb" > What You'll Learn </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="xx3l6gw" >
+                    {Array.isArray(courseData.whatYouWillLearn) && courseData.whatYouWillLearn.length > 0 ? (
                       courseData.whatYouWillLearn.map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-start"
-                          data-oid="clqpjr_"
-                        >
-                          <CheckCircle
-                            className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5"
-                            data-oid="1895d8u"
-                          />
-
-                          <p className="text-gray-700" data-oid="o-mqxlt">
-                            {item}
-                          </p>
+                        <div key={index} className="flex items-start" data-oid="clqpjr_" >
+                          <CheckCircle className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5" data-oid="1895d8u" />
+                          <p className="text-gray-700" data-oid="o-mqxlt"> {item} </p>
                         </div>
                       ))
                     ) : (
-                      <div className="text-gray-500" data-oid="8s4x757">
-                        Learning outcomes will be updated soon.
-                      </div>
+                      <div className="text-gray-500" data-oid="8s4x757"> Learning outcomes will be updated soon. </div>
                     )}
                   </div>
                 </div>
-
                 {/* Course Content */}
-                <div
-                  className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="za9cgtm"
-                >
-                  <div
-                    className="flex justify-between items-center mb-4"
-                    data-oid="s7dhm6f"
-                  >
-                    <h2
-                      className="text-xl font-bold text-[#123B79]"
-                      data-oid="fafipb6"
-                    >
-                      Course Content
-                    </h2>
+                <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100" data-oid="za9cgtm" >
+                  <div className="flex justify-between items-center mb-4" data-oid="s7dhm6f" >
+                    <h2 className="text-xl font-bold text-[#123B79]" data-oid="fafipb6" > Course Content </h2>
                     <div className="text-sm text-gray-600" data-oid="rt1px40">
-                      {Array.isArray(courseData.curriculum) &&
-                      courseData.curriculum.length > 0
-                        ? `${courseData.curriculum.length} modules • ${courseData.duration}`
-                        : Array.isArray(courseData.sections) &&
-                            courseData.sections.length > 0
-                          ? `${courseData.sections.length} sections • ${courseData.duration}`
-                          : courseData.duration}
+                      {Array.isArray(courseData.curriculum) && courseData.curriculum.length > 0 ? `${courseData.curriculum.length} modules • ${courseData.duration}` : Array.isArray(courseData.sections) && courseData.sections.length > 0 ? `${courseData.sections.length} sections • ${courseData.duration}` : courseData.duration}
                     </div>
                   </div>
-
                   <div className="space-y-4" data-oid="51uflu1">
-                    {Array.isArray(courseData.curriculum) &&
-                    courseData.curriculum.length > 0 ? (
+                    {Array.isArray(courseData.curriculum) && courseData.curriculum.length > 0 ? (
                       courseData.curriculum.map((module, moduleIndex) => (
-                        <div
-                          key={moduleIndex}
-                          className="border border-gray-200 rounded-lg overflow-hidden"
-                          data-oid="65:-8ed"
-                        >
-                          <button
-                            className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center hover:bg-gray-100 transition-colors"
-                            onClick={() => toggleModule(moduleIndex)}
-                            data-oid="6vm75ac"
-                          >
-                            <h3
-                              className="font-bold text-[#123B79] text-left"
-                              data-oid="ept8-:r"
-                            >
-                              Module {moduleIndex + 1}: {module.title}
-                            </h3>
-                            <div
-                              className="flex items-center"
-                              data-oid="nd4oqbf"
-                            >
+                        <div key={moduleIndex} className="border border-gray-200 rounded-lg overflow-hidden" data-oid="65:-8ed" >
+                          <button className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center hover:bg-gray-100 transition-colors" onClick={() => toggleModule(moduleIndex)} data-oid="6vm75ac" >
+                            <h3 className="font-bold text-[#123B79] text-left" data-oid="ept8-:r" > Module {moduleIndex + 1}: {module.title} </h3>
+                            <div className="flex items-center" data-oid="nd4oqbf" >
                               {expandedModules.includes(moduleIndex) ? (
-                                <ChevronUp
-                                  className="h-5 w-5 text-gray-600"
-                                  data-oid="9.vs8tr"
-                                />
+                                <ChevronUp className="h-5 w-5 text-gray-600" data-oid="9.vs8tr" />
                               ) : (
-                                <ChevronDown
-                                  className="h-5 w-5 text-gray-600"
-                                  data-oid="hsz.4rm"
-                                />
+                                <ChevronDown className="h-5 w-5 text-gray-600" data-oid="hsz.4rm" />
                               )}
                             </div>
                           </button>
-
                           {expandedModules.includes(moduleIndex) && (
-                            <div
-                              className="divide-y divide-gray-200"
-                              data-oid=":uiju-8"
-                            >
+                            <div className="divide-y divide-gray-200" data-oid=":uiju-8" >
                               {module.lessons.map((lesson, lessonIndex) => (
-                                <div
-                                  key={lessonIndex}
-                                  className="px-6 py-4 flex items-center"
-                                  data-oid="z7:et:t"
-                                >
-                                  <div
-                                    className="flex items-center"
-                                    data-oid="zk_aftm"
-                                  >
-                                    <BookOpen
-                                      className="h-4 w-4 text-[#123B79] mr-3"
-                                      data-oid="w069p1i"
-                                    />
-
-                                    <span
-                                      className="text-gray-700"
-                                      data-oid="kdo7.aq"
-                                    >
-                                      {lesson}
-                                    </span>
+                                <div key={lessonIndex} className="px-6 py-4 flex items-center" data-oid="z7:et:t" >
+                                  <div className="flex items-center" data-oid="zk_aftm" >
+                                    <BookOpen className="h-4 w-4 text-[#123B79] mr-3" data-oid="w069p1i" />
+                                    <span className="text-gray-700" data-oid="kdo7.aq" > {lesson} </span>
                                   </div>
                                 </div>
                               ))}
@@ -596,349 +279,119 @@ export default function CourseDetailTemplate({
                           )}
                         </div>
                       ))
-                    ) : Array.isArray(courseData.sections) &&
-                      courseData.sections.length > 0 ? (
+                    ) : Array.isArray(courseData.sections) && courseData.sections.length > 0 ? (
                       courseData.sections.map((section, sectionIndex) => (
-                        <div
-                          key={sectionIndex}
-                          className="border border-gray-200 rounded-lg overflow-hidden"
-                          data-oid="vut9mvv"
-                        >
-                          <div
-                            className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center"
-                            data-oid="5zd.a1a"
-                          >
-                            <h3
-                              className="font-bold text-[#123B79] text-left"
-                              data-oid="p8zkjt:"
-                            >
-                              Section {sectionIndex + 1}: {section.title}
-                            </h3>
+                        <div key={sectionIndex} className="border border-gray-200 rounded-lg overflow-hidden" data-oid="vut9mvv" >
+                          <div className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center" data-oid="5zd.a1a" >
+                            <h3 className="font-bold text-[#123B79] text-left" data-oid="p8zkjt:" > Section {sectionIndex + 1}: {section.title} </h3>
                           </div>
                           <div className="px-6 py-4" data-oid="lgc6so5">
-                            <span className="text-gray-700" data-oid="_7wl069">
-                              {section.content}
-                            </span>
+                            <span className="text-gray-700" data-oid="_7wl069"> {section.content} </span>
                           </div>
                         </div>
                       ))
                     ) : (
-                      <div className="text-gray-500" data-oid="b1cohim">
-                        No course content available.
-                      </div>
+                      <div className="text-gray-500" data-oid="b1cohim"> No course content available. </div>
                     )}
                   </div>
                 </div>
-
                 {/* Who This Course Is For */}
                 {courseData.targetAudience && (
-                  <div
-                    className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                    data-oid="0dw90x:"
-                  >
-                    <h2
-                      className="text-xl font-bold text-[#123B79] mb-4"
-                      data-oid="8a0_2pg"
-                    >
-                      Who This Course Is For
-                    </h2>
-                    <ul
-                      className="list-disc pl-5 space-y-2 text-gray-700"
-                      data-oid="n6qg_qn"
-                    >
+                  <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100" data-oid="0dw90x:" >
+                    <h2 className="text-xl font-bold text-[#123B79] mb-4" data-oid="8a0_2pg" > Who This Course Is For </h2>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-700" data-oid="n6qg_qn" >
                       {courseData.targetAudience.map((audience, index) => (
-                        <li key={index} data-oid="k-4i7e1">
-                          {audience}
-                        </li>
+                        <li key={index} data-oid="k-4i7e1"> {audience} </li>
                       ))}
                     </ul>
                   </div>
                 )}
-
                 {/* Student Testimonials - Now part of the main content */}
-                <div
-                  className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="zpt0mbz"
-                >
-                  <h2
-                    ref={reviewsSectionRef}
-                    className="text-2xl font-bold text-[#123B79] mb-8"
-                    data-oid="x:3fux2"
-                  >
-                    What Our Students Say
-                  </h2>
-
+                <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100" data-oid="zpt0mbz" >
+                  <h2 ref={reviewsSectionRef} className="text-2xl font-bold text-[#123B79] mb-8" data-oid="x:3fux2" > What Our Students Say </h2>
                   {hasReviews ? (
-                    <div
-                      className="grid grid-cols-1 md:grid-cols-2 gap-8"
-                      data-oid="c1znvxf"
-                    >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-oid="c1znvxf" >
                       {courseData.reviews!.map((review, index) => (
-                        <motion.div
-                          key={index}
-                          className="bg-gray-50 rounded-xl p-6 shadow-sm"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: 0.1 * index }}
-                          viewport={{ once: true }}
-                          data-oid="ss0jtkp"
-                        >
-                          <div
-                            className="flex justify-between items-start mb-4"
-                            data-oid="8916muk"
-                          >
+                        <motion.div key={index} className="bg-gray-50 rounded-xl p-6 shadow-sm" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 * index }} viewport={{ once: true }} data-oid="ss0jtkp" >
+                          <div className="flex justify-between items-start mb-4" data-oid="8916muk" >
                             <div data-oid="ws:ft8j">
-                              <h4 className="font-bold" data-oid="m2zgjft">
-                                {review.name}
-                              </h4>
-                              <div
-                                className="flex items-center mt-1"
-                                data-oid="ujecr3z"
-                              >
+                              <h4 className="font-bold" data-oid="m2zgjft"> {review.name} </h4>
+                              <div className="flex items-center mt-1" data-oid="ujecr3z" >
                                 {[...Array(5)].map((_, i) => (
-                                  <Star
-                                    key={i}
-                                    className={`h-4 w-4 ${
-                                      i < review.rating
-                                        ? "text-[#F0A500] fill-[#F0A500]"
-                                        : "text-gray-300"
-                                    }`}
-                                    data-oid="6y3u39u"
-                                  />
+                                  <Star key={i} className={`h-4 w-4 ${ i < review.rating ? "text-[#F0A500] fill-[#F0A500]" : "text-gray-300" }`} data-oid="6y3u39u" />
                                 ))}
-                                <span
-                                  className="ml-2 text-sm text-gray-500"
-                                  data-oid="7izeeia"
-                                >
-                                  {review.date}
-                                </span>
+                                <span className="ml-2 text-sm text-gray-500" data-oid="7izeeia" > {review.date} </span>
                               </div>
                             </div>
                           </div>
-                          <p className="text-gray-700" data-oid="xhah9bh">
-                            {review.comment}
-                          </p>
+                          <p className="text-gray-700" data-oid="xhah9bh"> {review.comment} </p>
                         </motion.div>
                       ))}
                     </div>
                   ) : (
-                    <motion.div
-                      className="flex flex-col items-center justify-center bg-gray-50 rounded-xl py-16 px-4 shadow-sm"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      data-oid="pu4a3o5"
-                    >
+                    <motion.div className="flex flex-col items-center justify-center bg-gray-50 rounded-xl py-16 px-4 shadow-sm" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} data-oid="pu4a3o5" >
                       <div className="mb-6 text-gray-300" data-oid="jh8pn.d">
-                        <div
-                          className="rounded-full bg-gray-100 w-24 h-24 flex items-center justify-center mb-2"
-                          data-oid="ttqqz9-"
-                        >
-                          <MessageCircle
-                            className="h-12 w-12"
-                            data-oid="..kk_:9"
-                          />
+                        <div className="rounded-full bg-gray-100 w-24 h-24 flex items-center justify-center mb-2" data-oid="ttqqz9-" >
+                          <MessageCircle className="h-12 w-12" data-oid="..kk_:9" />
                         </div>
                       </div>
-                      <h3
-                        className="text-xl font-semibold text-gray-700 mb-2"
-                        data-oid="9y:1byc"
-                      >
-                        No Reviews Yet
-                      </h3>
-                      <p
-                        className="text-gray-500 text-center max-w-md mb-6"
-                        data-oid="c:9cfyl"
-                      >
-                        Be the first to share your experience with this course
-                        and help others make informed decisions.
-                      </p>
-                      <Button
-                        onClick={() => {}}
-                        variant="outline"
-                        className="text-[#123B79] border-[#123B79]"
-                        data-oid="q0q97qk"
-                      >
-                        Write a Review
-                      </Button>
+                      <h3 className="text-xl font-semibold text-gray-700 mb-2" data-oid="9y:1byc" > No Reviews Yet </h3>
+                      <p className="text-gray-500 text-center max-w-md mb-6" data-oid="c:9cfyl" > Be the first to share your experience with this course and help others make informed decisions. </p>
+                      <Button onClick={() => {}} variant="outline" className="text-[#123B79] border-[#123B79]" data-oid="q0q97qk" > Write a Review </Button>
                     </motion.div>
                   )}
                 </div>
               </motion.div>
-
               {/* Sidebar - 4 columns on large screens */}
-              <motion.div
-                className="lg:col-span-4 z-10 relative" // Added relative positioning
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                data-oid="xngfr-w"
-              >
-                <div
-                  className={`transition-all duration-200 ${isScrolling ? "ease-out" : "ease-in"}`}
-                  style={{
-                    position: "absolute",
-                    top: `${sidebarPosition}px`,
-                    width: "100%", // Changed from calc(100% - 2rem) to 100%
-                    maxWidth: "100%", // Added max-width constraint
-                    right: 0,
-                    left: 0,
-                  }}
-                  data-oid="j13bj4o"
-                >
+              <motion.div className="lg:col-span-4 z-10" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} data-oid="xngfr-w" >
+                <div ref={sidebarRef} className={`lg:sticky smooth-sticky-sidebar sticky-container ${ isSticky ? 'sticky-shadow sticky-scale sticky-backdrop' : 'shadow-lg' }`} style={{ top: `${stickyOffset}px`, maxHeight: 'calc(100vh - 6rem)', overflowY: 'auto', }} data-oid="j13bj4o" >
                   {/* Course Preview Image - Desktop Only */}
-                  <div
-                    className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg"
-                    data-oid="btb3eui"
-                  >
+                  <div className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg" data-oid="btb3eui" >
                     <div className="aspect-video relative" data-oid=".b-phmm">
-                      <Image
-                        src={courseData.image || "/placeholder.svg"}
-                        alt={courseData.title}
-                        fill
-                        className="object-cover"
-                        data-oid="od4tc1b"
-                      />
+                      <Image src={courseData.image || "/placeholder.svg"} alt={courseData.title} fill className="object-cover" data-oid="od4tc1b" />
                     </div>
                   </div>
-
                   {/* Enrollment Card */}
-                  <div
-                    className="bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6"
-                    data-oid="mcw-bd."
-                  >
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6 transition-all duration-300 hover:shadow-xl" data-oid="mcw-bd." >
                     <div className="p-6" data-oid="mw7pv-0">
-                      <div
-                        className="flex justify-between items-center mb-4"
-                        data-oid="l9_p3xw"
-                      >
-                        <div
-                          className="text-3xl font-bold text-[#123B79]"
-                          data-oid="qfaf:d3"
-                        >
-                          {courseData.price}
-                        </div>
+                      <div className="flex justify-between items-center mb-4" data-oid="l9_p3xw" >
+                        <div className="text-3xl font-bold text-[#123B79]" data-oid="qfaf:d3" > {courseData.price} </div>
                         <div className="flex space-x-2" data-oid="_-ud.vd">
-                          <button
-                            onClick={handleBookmark}
-                            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                            aria-label={
-                              isBookmarked
-                                ? "Remove from wishlist"
-                                : "Add to wishlist"
-                            }
-                            data-oid="44k:m4f"
-                          >
+                          <button onClick={handleBookmark} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors" aria-label={ isBookmarked ? "Remove from wishlist" : "Add to wishlist" } data-oid="44k:m4f" >
                             {isBookmarked ? (
-                              <BookOpen
-                                className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                                data-oid="pv1-gjy"
-                              />
+                              <BookOpen className="h-5 w-5 text-[#F0A500] fill-[#F0A500]" data-oid="pv1-gjy" />
                             ) : (
-                              <BookOpen
-                                className="h-5 w-5 text-gray-700"
-                                data-oid="_7xk91l"
-                              />
+                              <BookOpen className="h-5 w-5 text-gray-700" data-oid="_7xk91l" />
                             )}
                           </button>
-                          <button
-                            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                            onClick={() => setIsShareModalOpen(true)}
-                            aria-label="Share course"
-                            data-oid="x6i3dnr"
-                          >
-                            <Share2
-                              className="h-5 w-5 text-gray-700"
-                              data-oid="nhbkw02"
-                            />
+                          <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors" onClick={() => setIsShareModalOpen(true)} aria-label="Share course" data-oid="x6i3dnr" >
+                            <Share2 className="h-5 w-5 text-gray-700" data-oid="nhbkw02" />
                           </button>
                         </div>
                       </div>
-
-                      <Button
-                        className="w-full bg-[#123B79] hover:bg-[#0A2A5E] mb-3"
-                        onClick={() => {
-                          if (
-                            courseData.price &&
-                            courseData.price.toLowerCase() !== "free"
-                          ) {
-                            addToCart({
-                              id: courseData.id,
-                              title: courseData.title,
-                              slug: courseData.slug,
-                              price: courseData.price,
-                              image: courseData.image,
-                              instructor:
-                                courseData.instructors?.[0]?.name || "",
-                            });
-                            router.push("/cart"); // Optionally navigate to cart
-                          } else {
-                            // Free course: enroll or redirect logic (if any)
-                            // For now, just show a message or redirect
-                          }
-                        }}
-                        data-oid="is3979m"
-                      >
-                        <ShoppingCart
-                          className="mr-2 h-4 w-4"
-                          data-oid="d9bj327"
-                        />
-                        Enroll Now
+                      <Button className="w-full bg-[#123B79] hover:bg-[#0A2A5E] mb-3" onClick={() => { if ( courseData.price && courseData.price.toLowerCase() !== "free" ) { addToCart({ id: courseData.id, title: courseData.title, slug: courseData.slug, price: courseData.price, image: courseData.image, instructor: courseData.instructors?.[0]?.name || "", }); router.push("/cart"); // Optionally navigate to cart } else { // Free course: enroll or redirect logic (if any) // For now, just show a message or redirect } }} data-oid="is3979m" >
+                        <ShoppingCart className="mr-2 h-4 w-4" data-oid="d9bj327" /> Enroll Now
                       </Button>
-
                       <div className="space-y-4 mt-6" data-oid="oh6nbk3">
                         <div className="flex items-center" data-oid=":hslfi:">
-                          <Clock
-                            className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="87dovx3"
-                          />
-
+                          <Clock className="h-5 w-5 text-[#123B79] mr-3" data-oid="87dovx3" />
                           <div data-oid="hf_i113">
-                            <p className="font-semibold" data-oid="py-e67w">
-                              Course Duration
-                            </p>
-                            <p
-                              className="text-sm text-gray-600"
-                              data-oid="jeawqu9"
-                            >
-                              {courseData.duration}
-                            </p>
+                            <p className="font-semibold" data-oid="py-e67w"> Course Duration </p>
+                            <p className="text-sm text-gray-600" data-oid="jeawqu9" > {courseData.duration} </p>
                           </div>
                         </div>
                         <div className="flex items-center" data-oid="adcwew:">
-                          <Users
-                            className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="0q.m13s"
-                          />
-
+                          <Users className="h-5 w-5 text-[#123B79] mr-3" data-oid="0q.m13s" />
                           <div data-oid="u0p42zs">
-                            <p className="font-semibold" data-oid="9grqj2c">
-                              Total Enrolled
-                            </p>
-                            <p
-                              className="text-sm text-gray-600"
-                              data-oid="rpbqrio"
-                            >
-                              {courseData.students}
-                            </p>
+                            <p className="font-semibold" data-oid="9grqj2c"> Total Enrolled </p>
+                            <p className="text-sm text-gray-600" data-oid="rpbqrio" > {courseData.students} </p>
                           </div>
                         </div>
                         <div className="flex items-center" data-oid="vcu:p44">
-                          <BarChart
-                            className="h-5 w-5 text-[#123B79] mr-3"
-                            data-oid="856o5jz"
-                          />
-
+                          <BarChart className="h-5 w-5 text-[#123B79] mr-3" data-oid="856o5jz" />
                           <div data-oid="v.r_s35">
-                            <p className="font-semibold" data-oid="-04lfa_">
-                              Course Level
-                            </p>
-                            <p
-                              className="text-sm text-gray-600"
-                              data-oid="b1es6hh"
-                            >
-                              {courseData.level}
-                            </p>
+                            <p className="font-semibold" data-oid="-04lfa_"> Course Level </p>
+                            <p className="text-sm text-gray-600" data-oid="b1es6hh" > {courseData.level} </p>
                           </div>
                         </div>
                       </div>
@@ -949,115 +402,31 @@ export default function CourseDetailTemplate({
             </div>
           </div>
         </section>
-
         {/* Rest of the component remains the same */}
         {/* Related Courses */}
-        <section
-          ref={relatedCoursesRef}
-          className="py-16 bg-gray-50 relative z-10 border-y border-gray-100"
-          data-oid="8p_y3b0"
-        >
+        <section ref={relatedCoursesRef} className="py-16 bg-gray-50 relative z-10 border-y border-gray-100" data-oid="8p_y3b0" >
           <div className="container mx-auto px-4" data-oid="8bgzjvz">
-            <h2
-              className="text-2xl font-bold text-[#123B79] mb-8"
-              data-oid="zxa9lj8"
-            >
-              Related Courses You Might Like
-            </h2>
-            <div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              data-oid="lxo09rx"
-            >
+            <h2 className="text-2xl font-bold text-[#123B79] mb-8" data-oid="zxa9lj8" > Related Courses You Might Like </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-oid="lxo09rx" >
               {[
-                {
-                  title: "Financial Modeling Masterclass",
-                  level: "Advanced",
-                  duration: "40 hours 45 minutes",
-                  price: "$1,499",
-                  image: "/financial-model-dashboard.png",
-                  slug: "financial-modeling-masterclass",
-                },
-                {
-                  title: "Condominium Investment Analysis",
-                  level: "Intermediate",
-                  duration: "24 hours 20 minutes",
-                  price: "$999",
-                  image: "/singapore-skyline-condos.png",
-                  slug: "condominium-investment-analysis",
-                },
-                {
-                  title: "Property Market Trend Analysis",
-                  level: "Advanced",
-                  duration: "32 hours 10 minutes",
-                  price: "$1,199",
-                  image: "/singapore-skyline-day.png",
-                  slug: "property-market-trend-analysis",
-                },
+                { title: "Financial Modeling Masterclass", level: "Advanced", duration: "40 hours 45 minutes", price: "$1,499", image: "/financial-model-dashboard.png", slug: "financial-modeling-masterclass", },
+                { title: "Condominium Investment Analysis", level: "Intermediate", duration: "24 hours 20 minutes", price: "$999", image: "/singapore-skyline-condos.png", slug: "condominium-investment-analysis", },
+                { title: "Property Market Trend Analysis", level: "Advanced", duration: "32 hours 10 minutes", price: "$1,199", image: "/singapore-skyline-day.png", slug: "property-market-trend-analysis", },
               ].map((relatedCourse, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  viewport={{ once: true }}
-                  data-oid="_x.jymu"
-                >
+                <motion.div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 * index }} viewport={{ once: true }} data-oid="_x.jymu" >
                   <div className="relative h-48" data-oid="01z4fh9">
-                    <Image
-                      src={relatedCourse.image || "/placeholder.svg"}
-                      alt={relatedCourse.title}
-                      fill
-                      className="object-cover"
-                      data-oid="prk4bmm"
-                    />
-
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-                      data-oid="sisiw4s"
-                    ></div>
-                    <div
-                      className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full"
-                      data-oid="ey-4_.v"
-                    >
-                      {relatedCourse.level}
-                    </div>
+                    <Image src={relatedCourse.image || "/placeholder.svg"} alt={relatedCourse.title} fill className="object-cover" data-oid="prk4bmm" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" data-oid="sisiw4s" ></div>
+                    <div className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full" data-oid="ey-4_.v" > {relatedCourse.level} </div>
                   </div>
                   <div className="p-6" data-oid="qy4x896">
-                    <h3
-                      className="text-lg font-bold text-[#123B79] mb-2"
-                      data-oid="kir5ged"
-                    >
-                      {relatedCourse.title}
-                    </h3>
-                    <div
-                      className="text-gray-500 text-sm mb-4"
-                      data-oid="y3z4.2e"
-                    >
-                      <span className="inline-block mr-4" data-oid="bb1mv-2">
-                        ⏱️ {relatedCourse.duration}
-                      </span>
+                    <h3 className="text-lg font-bold text-[#123B79] mb-2" data-oid="kir5ged" > {relatedCourse.title} </h3>
+                    <div className="text-gray-500 text-sm mb-4" data-oid="y3z4.2e" >
+                      <span className="inline-block mr-4" data-oid="bb1mv-2"> ⏱️ {relatedCourse.duration} </span>
                     </div>
-                    <div
-                      className="flex justify-between items-center"
-                      data-oid="i1:wawv"
-                    >
-                      <span
-                        className="font-bold text-[#123B79]"
-                        data-oid="z4g50gc"
-                      >
-                        {relatedCourse.price}
-                      </span>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() =>
-                          router.push(`/courses/${relatedCourse.slug}`)
-                        }
-                        data-oid="6i_6thk"
-                      >
-                        View Course
-                      </Button>
+                    <div className="flex justify-between items-center" data-oid="i1:wawv" >
+                      <span className="font-bold text-[#123B79]" data-oid="z4g50gc" > {relatedCourse.price} </span>
+                      <Button variant="outline" size="sm" onClick={() => router.push(`/courses/${relatedCourse.slug}`) } data-oid="6i_6thk" > View Course </Button>
                     </div>
                   </div>
                 </motion.div>
@@ -1066,74 +435,29 @@ export default function CourseDetailTemplate({
           </div>
         </section>
         {/* Final CTA */}
-        <section
-          className="py-16 bg-[#123B79] text-white relative z-10 border-y border-gray-100"
-          data-oid=".t9281m"
-        >
-          <div
-            className="container mx-auto px-4 text-center"
-            data-oid="ksdmywi"
-          >
-            <h2 className="text-3xl font-bold mb-4" data-oid="57uiyef">
-              Ready to advance your property investment knowledge?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" data-oid="oqb_sp7">
-              Join {courseData.students}+ students who are already transforming
-              their investment strategies with this course.
-            </p>
-            <Button
-              className="bg-[#F0A500] hover:bg-[#D89400] text-[#123B79] font-bold text-lg px-8 py-6"
-              data-oid="e30oa:a"
-            >
-              Enroll Now for {courseData.price}
-            </Button>
+        <section className="py-16 bg-[#123B79] text-white relative z-10 border-y border-gray-100" data-oid=".t9281m" >
+          <div className="container mx-auto px-4 text-center" data-oid="ksdmywi" >
+            <h2 className="text-3xl font-bold mb-4" data-oid="57uiyef"> Ready to advance your property investment knowledge? </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto" data-oid="oqb_sp7"> Join {courseData.students}+ students who are already transforming their investment strategies with this course. </p>
+            <Button className="bg-[#F0A500] hover:bg-[#D89400] text-[#123B79] font-bold text-lg px-8 py-6" data-oid="e30oa:a" > Enroll Now for {courseData.price} </Button>
           </div>
         </section>
-
         {/* Share Modal */}
         {isShareModalOpen && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-            data-oid="um7lzr7"
-          >
-            <div
-              className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-              data-oid="1u-4ru7"
-            >
-              <div
-                className="flex justify-between items-center p-4 border-b"
-                data-oid="x_o4nbl"
-              >
-                <h3 className="font-bold text-lg" data-oid="44jsdrc">
-                  Share Course
-                </h3>
-                <button
-                  onClick={() => setIsShareModalOpen(false)}
-                  className="p-1 rounded-full hover:bg-gray-100"
-                  data-oid="57twi9u"
-                >
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" data-oid="um7lzr7" >
+            <div className="bg-white rounded-xl overflow-hidden max-w-md w-full" data-oid="1u-4ru7" >
+              <div className="flex justify-between items-center p-4 border-b" data-oid="x_o4nbl" >
+                <h3 className="font-bold text-lg" data-oid="44jsdrc"> Share Course </h3>
+                <button onClick={() => setIsShareModalOpen(false)} className="p-1 rounded-full hover:bg-gray-100" data-oid="57twi9u" >
                   <X className="h-5 w-5" data-oid="30bav_m" />
                 </button>
               </div>
               <div className="p-6" data-oid="8-_59b4">
                 <div className="mb-6" data-oid="4vu95dm">
-                  <p className="font-medium mb-2" data-oid="52amo.e">
-                    Page Link
-                  </p>
+                  <p className="font-medium mb-2" data-oid="52amo.e"> Page Link </p>
                   <div className="flex" data-oid=":9g0hnq">
-                    <input
-                      type="text"
-                      value={`https://assembly.sg/courses/${courseData.slug}`}
-                      readOnly
-                      className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 bg-gray-50"
-                      data-oid="rh5hya9"
-                    />
-
-                    <button
-                      onClick={copyToClipboard}
-                      className="bg-[#123B79] text-white px-3 py-2 rounded-r-md hover:bg-[#0A2A5E] transition-colors"
-                      data-oid="18zxu5q"
-                    >
+                    <input type="text" value={`https://assembly.sg/courses/${courseData.slug}`} readOnly className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 bg-gray-50" data-oid="rh5hya9" />
+                    <button onClick={copyToClipboard} className="bg-[#123B79] text-white px-3 py-2 rounded-r-md hover:bg-[#0A2A5E] transition-colors" data-oid="18zxu5q" >
                       {copied ? (
                         <Check className="h-5 w-5" data-oid="_ci8lg2" />
                       ) : (
@@ -1142,31 +466,16 @@ export default function CourseDetailTemplate({
                     </button>
                   </div>
                 </div>
-
                 <div data-oid="2f3ibba">
-                  <p className="font-medium mb-3" data-oid="mgsr94i">
-                    Share on social media
-                  </p>
+                  <p className="font-medium mb-3" data-oid="mgsr94i"> Share on social media </p>
                   <div className="flex space-x-4" data-oid="2dfpsiw">
-                    <button
-                      onClick={() => shareOnSocialMedia("facebook")}
-                      className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid="eh3x1ze"
-                    >
+                    <button onClick={() => shareOnSocialMedia("facebook")} className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors" data-oid="eh3x1ze" >
                       <Facebook className="h-6 w-6" data-oid="zuehap0" />
                     </button>
-                    <button
-                      onClick={() => shareOnSocialMedia("twitter")}
-                      className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid="n5hv:j3"
-                    >
+                    <button onClick={() => shareOnSocialMedia("twitter")} className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors" data-oid="n5hv:j3" >
                       <X className="h-5 w-5" data-oid="j_tej1p" />
                     </button>
-                    <button
-                      onClick={() => shareOnSocialMedia("linkedin")}
-                      className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                      data-oid=".q_b_2n"
-                    >
+                    <button onClick={() => shareOnSocialMedia("linkedin")} className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors" data-oid=".q_b_2n" >
                       <Linkedin className="h-5 w-5" data-oid="ztp:zof" />
                     </button>
                   </div>
@@ -1175,97 +484,32 @@ export default function CourseDetailTemplate({
             </div>
           </div>
         )}
-
         {/* Login Modal */}
         {isLoginModalOpen && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-            data-oid="2n:k4sd"
-          >
-            <div
-              className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-              data-oid="s:x_tq0"
-            >
-              <div
-                className="flex justify-between items-center p-4 border-b"
-                data-oid="mwe-ol1"
-              >
-                <h3 className="font-bold text-lg" data-oid="ooz3oxy">
-                  Login Required
-                </h3>
-                <button
-                  onClick={() => setIsLoginModalOpen(false)}
-                  className="p-1 rounded-full hover:bg-gray-100"
-                  data-oid=":u5wo8l"
-                >
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" data-oid="2n:k4sd" >
+            <div className="bg-white rounded-xl overflow-hidden max-w-md w-full" data-oid="s:x_tq0" >
+              <div className="flex justify-between items-center p-4 border-b" data-oid="mwe-ol1" >
+                <h3 className="font-bold text-lg" data-oid="ooz3oxy"> Login Required </h3>
+                <button onClick={() => setIsLoginModalOpen(false)} className="p-1 rounded-full hover:bg-gray-100" data-oid=":u5wo8l" >
                   <X className="h-5 w-5" data-oid="wvr6hdf" />
                 </button>
               </div>
               <div className="p-6" data-oid="l7re042">
-                <p className="mb-6" data-oid="_1ek20m">
-                  Please log in to add this course to your wishlist.
-                </p>
+                <p className="mb-6" data-oid="_1ek20m"> Please log in to add this course to your wishlist. </p>
                 <div className="space-y-4" data-oid="xec3zut">
                   <div data-oid="wrtnwhx">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="jrpjwc_"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                      placeholder="your@email.com"
-                      data-oid="kux6st4"
-                    />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1" data-oid="jrpjwc_" > Email </label>
+                    <input type="email" id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="your@email.com" data-oid="kux6st4" />
                   </div>
                   <div data-oid="85v_x8b">
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="55hmsj_"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                      placeholder="••••••••"
-                      data-oid="4iz3ukc"
-                    />
+                    <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1" data-oid="55hmsj_" > Password </label>
+                    <input type="password" id="password" className="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="••••••••" data-oid="4iz3ukc" />
                   </div>
-                  <Button
-                    onClick={handleLogin}
-                    className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
-                    data-oid="4f3t54."
-                  >
-                    Log In
-                  </Button>
-                  <div
-                    className="text-center text-sm text-gray-500"
-                    data-oid="uajehd0"
-                  >
-                    <a
-                      href="/forgot-password"
-                      className="text-[#123B79] hover:underline"
-                      data-oid="xfv8:rj"
-                    >
-                      Forgot password?
-                    </a>
-                    <span className="mx-2" data-oid=".4edhum">
-                      •
-                    </span>
-                    <a
-                      href="/signup"
-                      className="text-[#123B79] hover:underline"
-                      data-oid="m099rif"
-                    >
-                      Create account
-                    </a>
+                  <Button onClick={handleLogin} className="w-full bg-[#123B79] hover:bg-[#0A2A5E]" data-oid="4f3t54." > Log In </Button>
+                  <div className="text-center text-sm text-gray-500" data-oid="uajehd0" >
+                    <a href="/forgot-password" className="text-[#123B79] hover:underline" data-oid="xfv8:rj" > Forgot password? </a>
+                    <span className="mx-2" data-oid=".4edhum"> • </span>
+                    <a href="/signup" className="text-[#123B79] hover:underline" data-oid="m099rif" > Create account </a>
                   </div>
                 </div>
               </div>
