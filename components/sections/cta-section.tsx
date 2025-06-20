@@ -13,12 +13,12 @@ export default function CtaSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-[#f0f4f8] relative overflow-hidden"
-      data-oid="jm4abj4"
+      data-oid="sg3sd-a"
     >
-      <div className="container mx-auto px-4 relative z-10" data-oid="hq8q8ph">
+      <div className="container mx-auto px-4 relative z-10" data-oid="ofp.nil">
         <div
           className="max-w-4xl mx-auto text-center text-gray-800"
-          data-oid="dsr37lx"
+          data-oid="g4_asol"
         >
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
@@ -28,7 +28,7 @@ export default function CtaSection() {
               y: isInView ? 0 : 30,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="z5w2ybu"
+            data-oid="c9soh7p"
           >
             Can't Find What You're Looking For?
           </motion.h2>
@@ -41,13 +41,13 @@ export default function CtaSection() {
               y: isInView ? 0 : 30,
             }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            data-oid="lfxcj4h"
+            data-oid="9nivndn"
           >
             There's so much to learn that it doesn't all fit into one page.
             Click below to access our content.
           </motion.p>
 
-          <div className="flex justify-center" data-oid="pxz_qol">
+          <div className="flex justify-center" data-oid="lcab3l2">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{
@@ -58,16 +58,16 @@ export default function CtaSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex justify-center"
-              data-oid="q5:87kw"
+              data-oid="xjd8rc6"
             >
               <Button
                 size="lg"
                 className="bg-[#123B79] text-white hover:bg-[#0A2A5E] px-8 py-6 text-lg rounded-full flex items-center"
-                data-oid="5.h5qak"
+                data-oid="pxnf3o7"
               >
-                <BookOpen className="mr-2 h-5 w-5" data-oid="u5-no-c" />
+                <BookOpen className="mr-2 h-5 w-5" data-oid="jrwnoa2" />
                 Explore Courses
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="bnnmv:8" />
+                <ArrowRight className="ml-2 h-5 w-5" data-oid=".cr4m9m" />
               </Button>
             </motion.div>
           </div>

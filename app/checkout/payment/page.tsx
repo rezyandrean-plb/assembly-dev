@@ -27,33 +27,33 @@ export default function PaymentPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="3majcoo">
-      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="ef3j2pn">
+    <div className="min-h-screen bg-gray-50" data-oid="jo.uoi7">
+      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="djhihe_">
         <div
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          data-oid="kp.p9c5"
+          data-oid=".sgbjc4"
         >
           {/* Left Column - Payment Methods */}
-          <div className="lg:col-span-2" data-oid="d89rvo3">
+          <div className="lg:col-span-2" data-oid="c_:.tn5">
             <div
               className="bg-white rounded-lg shadow-sm p-6"
-              data-oid="ojx2a8z"
+              data-oid="bzrdif8"
             >
               <h2
                 className="text-2xl font-bold mb-2 text-gray-900"
-                data-oid="_nkmsfl"
+                data-oid=".unlr46"
               >
                 Payment Method
               </h2>
-              <p className="text-gray-600 mb-6" data-oid="9-_2131">
+              <p className="text-gray-600 mb-6" data-oid="mev7_07">
                 Choose your preferred payment method
               </p>
 
-              <div className="space-y-6" data-oid="z8k2pyn">
+              <div className="space-y-6" data-oid=".0z9nb:">
                 {/* Redeem Rewards/Points Section */}
                 <div
                   className="border border-gray-200 rounded-lg"
-                  data-oid="48dm371"
+                  data-oid=".rh:ba4"
                 >
                   <div
                     className="flex justify-between items-center p-4 cursor-pointer"
@@ -62,39 +62,39 @@ export default function PaymentPage() {
                         expandedSection === "rewards" ? "" : "rewards",
                       )
                     }
-                    data-oid="jb--5hl"
+                    data-oid="h_hvd8e"
                   >
-                    <h3 className="font-semibold" data-oid="ot-c3_.">
+                    <h3 className="font-semibold" data-oid=".jm1qfv">
                       Redeem Rewards / Points
                     </h3>
                     <ChevronDown
                       className={`transition-transform ${expandedSection === "rewards" ? "rotate-180" : ""}`}
-                      data-oid=".nttp4a"
+                      data-oid="ps3ztiu"
                     />
                   </div>
                   {expandedSection === "rewards" && (
-                    <div className="border-t p-4 space-y-3" data-oid="96jubit">
+                    <div className="border-t p-4 space-y-3" data-oid="ta_4b0f">
                       {paymentMethods.map((method) => (
                         <div
                           key={method.id}
                           className="flex items-center justify-between p-3 border rounded"
-                          data-oid="nv6b.c_"
+                          data-oid="aot5g:e"
                         >
                           <div
                             className="flex items-center gap-3"
-                            data-oid="f8jnv4i"
+                            data-oid="h4v0jaj"
                           >
                             <input
                               type="radio"
                               name="rewardPayment"
                               value={method.id}
                               className="w-4 h-4"
-                              data-oid="lvcbwqa"
+                              data-oid="ishthqh"
                             />
 
-                            <span data-oid="fr1wi52">{method.name}</span>
+                            <span data-oid=":falsd6">{method.name}</span>
                           </div>
-                          <span className="text-2xl" data-oid="n4.xxln">
+                          <span className="text-2xl" data-oid="wda.ro-">
                             {method.icon}
                           </span>
                         </div>
@@ -106,7 +106,7 @@ export default function PaymentPage() {
                 {/* Credit/Debit Card Section */}
                 <div
                   className="border border-gray-200 rounded-lg"
-                  data-oid="07p_nke"
+                  data-oid="fzs9dy7"
                 >
                   <div
                     className="flex justify-between items-center p-4 cursor-pointer"
@@ -117,9 +117,9 @@ export default function PaymentPage() {
                           : "Credit / Debit",
                       )
                     }
-                    data-oid="o6pzau6"
+                    data-oid="8lhsk-f"
                   >
-                    <div className="flex items-center gap-3" data-oid="gk9warj">
+                    <div className="flex items-center gap-3" data-oid="wu52r-d">
                       <input
                         type="radio"
                         name="paymentMethod"
@@ -127,37 +127,37 @@ export default function PaymentPage() {
                         checked={selectedPayment === "Credit / Debit"}
                         onChange={() => setSelectedPayment("Credit / Debit")}
                         className="w-4 h-4"
-                        data-oid="icmctt0"
+                        data-oid="q8ksxey"
                       />
 
-                      <span className="font-semibold" data-oid="v60e0vc">
+                      <span className="font-semibold" data-oid="l5jyrx1">
                         Debit or Credit Card
                       </span>
                     </div>
-                    <div className="flex items-center gap-2" data-oid=".moustq">
-                      <div className="flex gap-1" data-oid="7otl_1b">
+                    <div className="flex items-center gap-2" data-oid="mp5j3h3">
+                      <div className="flex gap-1" data-oid="zvdi5za">
                         <div
                           className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="i1rkjc4"
+                          data-oid="s57byvr"
                         >
                           VISA
                         </div>
                         <div
                           className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="gst_i8e"
+                          data-oid="clwp_yf"
                         >
                           MC
                         </div>
                         <div
                           className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="3-7l9:5"
+                          data-oid="6zycal:"
                         >
                           AE
                         </div>
                       </div>
                       <ChevronDown
                         className={`transition-transform ${expandedSection === "Credit / Debit" ? "rotate-180" : ""}`}
-                        data-oid=":hs2u1t"
+                        data-oid="32jw6r7"
                       />
                     </div>
                   </div>
@@ -166,54 +166,54 @@ export default function PaymentPage() {
                     selectedPayment === "Credit / Debit" && (
                       <div
                         className="border-t p-4 space-y-4"
-                        data-oid="9k5go-z"
+                        data-oid="fh1gbd3"
                       >
-                        <div data-oid="6po4lsc">
+                        <div data-oid="aslxrox">
                           <label
                             className="block text-sm font-medium mb-1"
-                            data-oid="va-u9nm"
+                            data-oid="d-pn64f"
                           >
                             Card Number *
                           </label>
                           <input
                             type="text"
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                            data-oid="n2aq6t0"
+                            data-oid="6-w:557"
                           />
                         </div>
-                        <div data-oid="sov5dwv">
+                        <div data-oid="nbvxx3.">
                           <label
                             className="block text-sm font-medium mb-1"
-                            data-oid="qk5tss3"
+                            data-oid=".sp30-f"
                           >
                             Card Name *
                           </label>
                           <input
                             type="text"
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            data-oid="sqfx1ne"
+                            data-oid="brdnqmy"
                           />
                         </div>
                         <div
                           className="grid grid-cols-2 gap-4"
-                          data-oid="5g:7kq."
+                          data-oid="lp_miux"
                         >
-                          <div data-oid="ptl1mrt">
+                          <div data-oid="417dflt">
                             <label
                               className="block text-sm font-medium mb-1"
-                              data-oid="zb3q85h"
+                              data-oid="bcnwadd"
                             >
                               Expiry Date *
                             </label>
                             <div
                               className="grid grid-cols-2 gap-2"
-                              data-oid="1lkylcn"
+                              data-oid="yaqyq.s"
                             >
                               <select
                                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                                data-oid="upvr_r4"
+                                data-oid="dc1ta-s"
                               >
-                                <option data-oid="eng71p3">MM</option>
+                                <option data-oid="7s-37te">MM</option>
                                 {Array.from(
                                   { length: 12 },
                                   (_, i) => i + 1,
@@ -221,7 +221,7 @@ export default function PaymentPage() {
                                   <option
                                     key={m}
                                     value={m.toString().padStart(2, "0")}
-                                    data-oid="dlq1ne6"
+                                    data-oid="qu3unxv"
                                   >
                                     {m.toString().padStart(2, "0")}
                                   </option>
@@ -229,31 +229,31 @@ export default function PaymentPage() {
                               </select>
                               <select
                                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                data-oid="xyk9hjd"
+                                data-oid="kwom0rk"
                               >
-                                <option data-oid="j3gfevc">YYYY</option>
+                                <option data-oid="qifz_hq">YYYY</option>
                                 {Array.from(
                                   { length: 10 },
                                   (_, i) => new Date().getFullYear() + i,
                                 ).map((y) => (
-                                  <option key={y} value={y} data-oid="k9w2ucm">
+                                  <option key={y} value={y} data-oid="ubggsr9">
                                     {y}
                                   </option>
                                 ))}
                               </select>
                             </div>
                           </div>
-                          <div data-oid="cvbo8kw">
+                          <div data-oid="sd2xly3">
                             <label
                               className="block text-sm font-medium mb-1"
-                              data-oid="0mgbe-4"
+                              data-oid="g02keef"
                             >
                               CVC *
                             </label>
                             <input
                               type="text"
                               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              data-oid="akzpt25"
+                              data-oid="gvmgl58"
                             />
                           </div>
                         </div>
@@ -266,9 +266,9 @@ export default function PaymentPage() {
                   <div
                     key={method.id}
                     className="border border-gray-200 rounded-lg p-4 flex items-center justify-between"
-                    data-oid="jrtzqv-"
+                    data-oid="kjb5ui:"
                   >
-                    <div className="flex items-center gap-3" data-oid="pxfns0:">
+                    <div className="flex items-center gap-3" data-oid="hu9a3bq">
                       <input
                         type="radio"
                         name="paymentMethod"
@@ -276,14 +276,14 @@ export default function PaymentPage() {
                         checked={selectedPayment === method.id}
                         onChange={() => setSelectedPayment(method.id)}
                         className="w-4 h-4"
-                        data-oid="ir5dmrc"
+                        data-oid="827yklk"
                       />
 
-                      <span className="font-semibold" data-oid="r3wqvi0">
+                      <span className="font-semibold" data-oid=".rc8zi.">
                         {method.name}
                       </span>
                     </div>
-                    <span className="text-2xl" data-oid="l2n.gqb">
+                    <span className="text-2xl" data-oid="r.8yg37">
                       {method.icon}
                     </span>
                   </div>
@@ -293,45 +293,45 @@ export default function PaymentPage() {
           </div>
 
           {/* Right Column - Order Summary & Review */}
-          <div className="lg:col-span-1" data-oid="9bu6k0p">
-            <div className="sticky top-8 space-y-6" data-oid="3ir..rk">
-              <OrderSummary data-oid="7-xgdy7" />
+          <div className="lg:col-span-1" data-oid="h46zmwr">
+            <div className="sticky top-8 space-y-6" data-oid="-f1ha_g">
+              <OrderSummary data-oid="0td_fr1" />
 
               {/* Review Address */}
               <div
                 className="bg-white rounded-lg shadow-sm p-6"
-                data-oid="zsh:w91"
+                data-oid="klgr3up"
               >
                 <div
                   className="flex justify-between items-center mb-4"
-                  data-oid="amu9yyf"
+                  data-oid="kn0ah8g"
                 >
-                  <h3 className="text-lg font-semibold" data-oid="4lo:gbg">
+                  <h3 className="text-lg font-semibold" data-oid="wtp0gd.">
                     Review Address
                   </h3>
                   <button
                     onClick={() => router.push("/checkout/address")}
                     className="text-[#123b79] text-sm hover:underline font-medium"
-                    data-oid="62mw-vr"
+                    data-oid="rzisro9"
                   >
                     Edit
                   </button>
                 </div>
-                <div className="text-sm space-y-1" data-oid="-3zbh7p">
-                  <h4 className="font-bold text-gray-900" data-oid="et3e2b5">
+                <div className="text-sm space-y-1" data-oid="w6x_9fo">
+                  <h4 className="font-bold text-gray-900" data-oid="ja-vhmq">
                     Delivery & Billing Address
                   </h4>
-                  <p className="font-semibold text-gray-800" data-oid="euxo.ei">
+                  <p className="font-semibold text-gray-800" data-oid="zzy29ux">
                     {finalBillingAddress.firstName}{" "}
                     {finalBillingAddress.lastName}
                   </p>
-                  <p className="text-gray-600" data-oid="26vwne5">
+                  <p className="text-gray-600" data-oid=":349yko">
                     {finalBillingAddress.email}
                   </p>
-                  <p className="text-gray-600" data-oid="pimmsag">
+                  <p className="text-gray-600" data-oid="2clakd-">
                     {finalBillingAddress.mobile}
                   </p>
-                  <p className="text-gray-600" data-oid="ssx7mya">
+                  <p className="text-gray-600" data-oid="w2rmp0w">
                     72 Hebe St, QLD, BARDON, 4065
                   </p>
                 </div>
@@ -341,7 +341,7 @@ export default function PaymentPage() {
               <button
                 onClick={() => alert("Order Placed!")}
                 className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
-                data-oid="q0_vk3j"
+                data-oid="scml6eo"
               >
                 Proceed to Checkout →
               </button>
@@ -350,21 +350,21 @@ export default function PaymentPage() {
               <button
                 onClick={() => router.push("/courses")}
                 className="w-full bg-white border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-                data-oid="pycj8:s"
+                data-oid="gpuf0fx"
               >
                 Continue Shopping
               </button>
 
               <p
                 className="text-xs text-gray-500 text-center leading-relaxed"
-                data-oid="3e-dun."
+                data-oid="vv4do_g"
               >
                 By clicking Proceed to Checkout you confirm that you have read,
                 understood and accept our{" "}
                 <a
                   href="#"
                   className="text-[#123b79] hover:underline"
-                  data-oid="w6_5uja"
+                  data-oid="dghu079"
                 >
                   terms and conditions
                 </a>
@@ -372,7 +372,7 @@ export default function PaymentPage() {
                 <a
                   href="#"
                   className="text-[#123b79] hover:underline"
-                  data-oid="h4:9h1s"
+                  data-oid="ou9jwuz"
                 >
                   returns policy
                 </a>{" "}
@@ -380,7 +380,7 @@ export default function PaymentPage() {
                 <a
                   href="#"
                   className="text-[#123b79] hover:underline"
-                  data-oid="bzf3jgv"
+                  data-oid="x0dthsz"
                 >
                   privacy policy
                 </a>
@@ -392,16 +392,16 @@ export default function PaymentPage() {
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 text-center" data-oid="9azqm27">
-        <h3 className="text-lg font-semibold mb-2" data-oid="4l1om2c">
+      <div className="mt-12 text-center" data-oid="0oj0i9h">
+        <h3 className="text-lg font-semibold mb-2" data-oid="p:wt:lc">
           Need Help?
         </h3>
-        <p className="text-gray-600" data-oid="f44ujbs">
+        <p className="text-gray-600" data-oid="4bnp-2c">
           Perhaps our{" "}
           <a
             href="#"
             className="text-blue-600 hover:underline font-medium"
-            data-oid="n5rfwr2"
+            data-oid="6394.z3"
           >
             FAQs
           </a>{" "}
@@ -409,7 +409,7 @@ export default function PaymentPage() {
           <a
             href="#"
             className="text-blue-600 hover:underline font-medium"
-            data-oid="z:ey73p"
+            data-oid="qi-snlp"
           >
             Contact Us
           </a>{" "}

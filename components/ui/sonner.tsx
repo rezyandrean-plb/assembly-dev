@@ -24,7 +24,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
         },
       }}
       {...props}
-      data-oid="qxl6r1h"
+      data-oid="2vhtais"
     />
   );
 };

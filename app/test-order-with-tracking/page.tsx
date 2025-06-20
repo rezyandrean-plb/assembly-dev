@@ -53,14 +53,14 @@ export default function TestOrderWithTrackingPage() {
   return (
     <div
       className="min-h-screen bg-gray-50 flex items-center justify-center"
-      data-oid="n4v3b60"
+      data-oid="7uyb6kn"
     >
-      <div className="text-center" data-oid="rj8o8qz">
+      <div className="text-center" data-oid="5dtkoiu">
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79] mx-auto mb-4"
-          data-oid="3rypf-8"
+          data-oid="cq0dkk7"
         ></div>
-        <p className="text-gray-600" data-oid=".rlff6.">
+        <p className="text-gray-600" data-oid="a-vn7vj">
           Setting up order with tracking number...
         </p>
       </div>

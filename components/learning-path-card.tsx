@@ -192,7 +192,7 @@ export default function LearningPathCard({
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            data-oid="hgpru3u"
+            data-oid="7ouun3k"
           />
         );
 
@@ -216,7 +216,7 @@ export default function LearningPathCard({
               repeat: Number.POSITIVE_INFINITY,
               delay: i * 0.3,
             }}
-            data-oid="de4c_g0"
+            data-oid="1nih.c8"
           />
         ));
       case "condo-investment-specialist":
@@ -235,7 +235,7 @@ export default function LearningPathCard({
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 1, delay: 0.2 }}
-                  data-oid="8:cqc7g"
+                  data-oid="la__tx-"
                 />
 
                 <motion.line
@@ -249,7 +249,7 @@ export default function LearningPathCard({
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ duration: 1, delay: 0.4 }}
-                  data-oid="y_tckhz"
+                  data-oid="p-qfdg9"
                 />
 
                 {path.nodes[4] && (
@@ -264,7 +264,7 @@ export default function LearningPathCard({
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 0.5 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    data-oid="j:ngxlg"
+                    data-oid=".edjie_"
                   />
                 )}
               </>
@@ -286,40 +286,40 @@ export default function LearningPathCard({
       transition={{ duration: 0.5, delay: 0.1 * index }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="rcz_0ye"
+      data-oid=".8fi46x"
     >
       <div
         className="h-3"
         style={{ backgroundColor: path.color }}
-        data-oid="ggssg70"
+        data-oid="3d9dme."
       ></div>
-      <div className="p-6" data-oid="es.ypvo">
+      <div className="p-6" data-oid="lz301ne">
         <div
           className="rounded-full w-14 h-14 flex items-center justify-center mb-4"
           style={{ backgroundColor: path.color }}
-          data-oid="10zh85j"
+          data-oid="mg4m__h"
         >
           {path.iconComponent}
         </div>
         <h3
           className="text-xl font-bold mb-3"
           style={{ color: path.color }}
-          data-oid="yvj5yt9"
+          data-oid="1onq7wy"
         >
           {path.title}
         </h3>
-        <p className="text-gray-600 mb-6" data-oid="gyev3y:">
+        <p className="text-gray-600 mb-6" data-oid="2yi:nb5">
           {path.description}
         </p>
 
         {/* Path Visualization */}
-        <div className="mb-6 h-20 relative" data-oid="dpm36s0">
+        <div className="mb-6 h-20 relative" data-oid="5uopalk">
           <svg
             width="100%"
             height="80"
             viewBox="0 0 300 80"
             preserveAspectRatio="xMidYMid meet"
-            data-oid="35n_7t_"
+            data-oid="v1ow51_"
           >
             {/* Path line */}
             <motion.path
@@ -332,7 +332,7 @@ export default function LearningPathCard({
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={getPathAnimation()}
-              data-oid="s0u6m9."
+              data-oid="8gg4z9i"
             />
 
             {/* Nodes */}
@@ -342,14 +342,14 @@ export default function LearningPathCard({
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={getNodeAnimation(i)}
-                data-oid="w5yd4g2"
+                data-oid="pvwal-3"
               >
                 <circle
                   cx={node.x}
                   cy={node.y}
                   r={i === 0 || i === path.nodes.length - 1 ? 6 : 5}
                   fill={path.color}
-                  data-oid="ie4corn"
+                  data-oid="u3f9h-e"
                 />
 
                 {i === 0 && (
@@ -359,7 +359,7 @@ export default function LearningPathCard({
                     textAnchor="middle"
                     fill="#666"
                     fontSize="12"
-                    data-oid="p7vt3yb"
+                    data-oid="f_3f_r8"
                   >
                     Start
                   </text>
@@ -371,7 +371,7 @@ export default function LearningPathCard({
                     textAnchor="middle"
                     fill="#666"
                     fontSize="12"
-                    data-oid="scofslq"
+                    data-oid="e1tkgpg"
                   >
                     Expert
                   </text>
@@ -384,16 +384,16 @@ export default function LearningPathCard({
           </svg>
         </div>
 
-        <div className="flex justify-between items-center" data-oid="qb_gmfe">
-          <span className="text-sm text-gray-500" data-oid="0r2j5lj">
+        <div className="flex justify-between items-center" data-oid="z1t1nxu">
+          <span className="text-sm text-gray-500" data-oid="7f2_8n7">
             {path.courseCount} courses
           </span>
-          <Link href={`/learning-paths/${path.id}`} data-oid="h_ubwya">
+          <Link href={`/learning-paths/${path.id}`} data-oid="gqrum-i">
             <Button
               variant="outline"
               className="text-sm"
               style={{ borderColor: path.color, color: path.color }}
-              data-oid="o939aa6"
+              data-oid=":jgi2mg"
             >
               View Path
             </Button>

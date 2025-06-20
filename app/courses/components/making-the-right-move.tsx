@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/making-the-right-move";
 
 export default function MakingTheRightMove() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="kiwy.1z" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="dk_d4-2" />;
 }

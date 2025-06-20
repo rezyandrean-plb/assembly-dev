@@ -133,48 +133,48 @@ export default function WishlistPage() {
   });
 
   return (
-    <div className="p-6" data-oid="kfl:hye">
+    <div className="p-6" data-oid="msnhhp5">
       <div
         className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="8dl0gue"
+        data-oid="u259g.e"
       >
-        <div data-oid=".:5a08n">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="vg0qiap">
+        <div data-oid="55soei9">
+          <h1 className="text-2xl font-bold text-gray-800" data-oid="96x6nvx">
             Wishlist
           </h1>
-          <p className="text-gray-500 mt-1" data-oid="mtuxtbd">
+          <p className="text-gray-500 mt-1" data-oid="_1z_1d3">
             Courses you've bookmarked for later
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="1p1_h6g">
-          <div className="relative" data-oid="wy5-8zv">
+        <div className="mt-4 md:mt-0 flex gap-3" data-oid="8_.h-ej">
+          <div className="relative" data-oid="lci6rfj">
             <input
               type="text"
               placeholder="Search wishlist..."
               className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="gjd_g17"
+              data-oid="8bmw0-l"
             />
 
             <Search
               className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="gvfhp-m"
+              data-oid="9ac60_g"
             />
           </div>
           <button
             className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="fr0_yah"
+            data-oid="bb0wpuz"
           >
-            <Filter className="h-4 w-4" data-oid="xh9uner" />
-            <span data-oid="cm38in_">Filter</span>
+            <Filter className="h-4 w-4" data-oid="dgd3kr-" />
+            <span data-oid="x5o8iej">Filter</span>
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="yso5ixd">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="6gu_l8_">
         <button
           className={`px-4 py-2 font-medium text-sm ${
             activeTab === "all"
@@ -182,7 +182,7 @@ export default function WishlistPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("all")}
-          data-oid="0yjnjer"
+          data-oid="nhhwrhx"
         >
           All Items ({wishlistItems.length})
         </button>
@@ -193,7 +193,7 @@ export default function WishlistPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveTab("onSale")}
-          data-oid="i-913nu"
+          data-oid="goms9_m"
         >
           On Sale ({onSaleItems.length})
         </button>
@@ -201,24 +201,24 @@ export default function WishlistPage() {
 
       <div
         className="flex justify-between items-center mb-6"
-        data-oid="6gcxr5r"
+        data-oid="dgsgh97"
       >
-        <p className="text-sm text-gray-500" data-oid="n6osd39">
+        <p className="text-sm text-gray-500" data-oid="g1eno6:">
           {filteredItems.length} courses in wishlist
         </p>
         <button
           className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-2"
-          data-oid="eazq5om"
+          data-oid="e6g9rta"
         >
-          <ShoppingCart className="h-4 w-4" data-oid="fxgy02u" />
-          <span data-oid="rct.uv2">Add All to Cart</span>
+          <ShoppingCart className="h-4 w-4" data-oid="wi93u33" />
+          <span data-oid="k4:5dzj">Add All to Cart</span>
         </button>
       </div>
 
       {/* Course Grid */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        data-oid="um2lz8:"
+        data-oid="vv3x6y0"
       >
         {filteredItems.map((item) => (
           <motion.div
@@ -227,88 +227,88 @@ export default function WishlistPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            data-oid="89e5.qm"
+            data-oid="uqwaugt"
           >
-            <div className="relative" data-oid="wszk-8y">
-              <div className="h-48 relative" data-oid="dk45zw4">
+            <div className="relative" data-oid="tff6bd6">
+              <div className="h-48 relative" data-oid="a6r8sa3">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
                   fill
                   className="object-cover"
-                  data-oid="nop7xce"
+                  data-oid="zn0b33j"
                 />
               </div>
               {item.onSale && (
                 <div
                   className="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-                  data-oid="dykfo-p"
+                  data-oid="b67r2.j"
                 >
                   SALE
                 </div>
               )}
             </div>
-            <div className="p-6" data-oid="07uamlz">
+            <div className="p-6" data-oid="6y.rpj9">
               <h2
                 className="text-lg font-bold text-gray-800 mb-1 line-clamp-1"
-                data-oid="7__s9dd"
+                data-oid="12ct0sg"
               >
                 {item.title}
               </h2>
               <p
                 className="text-sm text-gray-600 mb-3 line-clamp-2"
-                data-oid="6:5mt3k"
+                data-oid="sroy3ua"
               >
                 {item.description}
               </p>
 
-              <div className="flex items-center mb-3" data-oid="b_99bco">
-                <p className="text-sm text-gray-700" data-oid="mjvzmfk">
+              <div className="flex items-center mb-3" data-oid="8n7k20z">
+                <p className="text-sm text-gray-700" data-oid="kui6te8">
                   By {item.instructor}
                 </p>
               </div>
 
-              <div className="flex items-center mb-3" data-oid="juj_0n6">
-                <div className="flex items-center" data-oid="dq0cdmg">
+              <div className="flex items-center mb-3" data-oid="xn2lcqp">
+                <div className="flex items-center" data-oid="pqma3cj">
                   <Star
                     className="h-4 w-4 text-yellow-500 fill-current"
-                    data-oid="30mmc9i"
+                    data-oid="xyet8u6"
                   />
 
-                  <span className="ml-1 text-sm font-medium" data-oid="4.mc03p">
+                  <span className="ml-1 text-sm font-medium" data-oid="ohlt55t">
                     {item.rating}
                   </span>
                 </div>
-                <span className="mx-2 text-xs text-gray-500" data-oid="sfhwn-j">
+                <span className="mx-2 text-xs text-gray-500" data-oid="3cizda3">
                   ({item.reviews} reviews)
                 </span>
               </div>
 
               <div
                 className="flex items-center justify-between text-sm text-gray-500 mb-4"
-                data-oid="oxk30at"
+                data-oid="2s21:pp"
               >
-                <span data-oid="yp3g6t8">{item.hours} hours</span>
-                <span data-oid="v4fgsdr">{item.lessons} lessons</span>
-                <span data-oid="7lh::s-">Level: {item.level}</span>
+                <span data-oid="la.upy5">{item.hours} hours</span>
+                <span data-oid="5..5q3a">{item.lessons} lessons</span>
+                <span data-oid="syzk4u1">Level: {item.level}</span>
               </div>
 
               <div
                 className="flex items-center justify-between mb-4"
-                data-oid="vf6t7bh"
+                data-oid="32z9cij"
               >
-                <div data-oid="isoa-g6">
+                <div data-oid="pfq:ac1">
                   {item.onSale ? (
-                    <div className="flex items-center" data-oid="hufvhab">
+                    <div className="flex items-center" data-oid="4m-qlab">
                       <span
                         className="text-lg font-bold text-gray-800"
-                        data-oid="vvu3_bn"
+                        data-oid="jw_t:c4"
                       >
                         ${item.salePrice}
                       </span>
                       <span
                         className="ml-2 text-sm text-gray-500 line-through"
-                        data-oid="rh747wr"
+                        data-oid="6u41vcr"
                       >
                         ${item.price}
                       </span>
@@ -316,7 +316,7 @@ export default function WishlistPage() {
                   ) : (
                     <span
                       className="text-lg font-bold text-gray-800"
-                      data-oid="chef32c"
+                      data-oid=":bj3vut"
                     >
                       ${item.price}
                     </span>
@@ -324,7 +324,7 @@ export default function WishlistPage() {
                 </div>
                 <button
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700"
-                  data-oid="i48fl2q"
+                  data-oid="f1snplx"
                 >
                   Add to Cart
                 </button>
@@ -332,18 +332,18 @@ export default function WishlistPage() {
 
               <div
                 className="flex justify-between items-center"
-                data-oid="fvn8fa_"
+                data-oid="1lhs3f2"
               >
                 <Link
                   href={`/courses/${item.id}`}
                   className="text-blue-600 text-sm font-medium hover:underline"
-                  data-oid="avwh:ti"
+                  data-oid="n-7kv0z"
                 >
                   View Details
                 </Link>
                 <button
                   className="text-red-500 text-sm font-medium hover:underline"
-                  data-oid="ink51zy"
+                  data-oid="k8b65c0"
                 >
                   Remove
                 </button>

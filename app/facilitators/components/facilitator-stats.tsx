@@ -5,5 +5,5 @@ import { useRef } from "react";
 import { TrendingUp, Users, Award, BookOpen, Star, Target } from "lucide-react";
 
 export function FacilitatorStats() {
-  return <div data-oid="i4587r-"></div>;
+  return <div data-oid="0fj99g5"></div>;
 }

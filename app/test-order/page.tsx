@@ -53,14 +53,14 @@ export default function TestOrderPage() {
   return (
     <div
       className="min-h-screen bg-gray-50 flex items-center justify-center"
-      data-oid="a124667"
+      data-oid="n8yf2pr"
     >
-      <div className="text-center" data-oid="t3rhm_z">
+      <div className="text-center" data-oid="qrx-37q">
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79] mx-auto mb-4"
-          data-oid="5n7j_rc"
+          data-oid=".f5-2kg"
         ></div>
-        <p className="text-gray-600" data-oid="5_:ghe2">
+        <p className="text-gray-600" data-oid="jzsd1zr">
           Setting up test order...
         </p>
       </div>

@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/landed-buyer-investing";
 
 export default function LandedBuyerInvesting() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="2d_o7.m" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="5u:1xcd" />;
 }

@@ -7,10 +7,10 @@ export default function DirectSignupLink() {
   const router = useRouter();
 
   return (
-    <a href="/signup" className="inline-block" data-oid="eodd46x">
+    <a href="/signup" className="inline-block" data-oid="xxra2:0">
       <Button
         className="bg-orange-500 text-white hover:bg-orange-600"
-        data-oid="wvmjr4e"
+        data-oid="8v::rwj"
       >
         Sign Up
       </Button>

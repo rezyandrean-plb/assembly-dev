@@ -86,39 +86,39 @@ const TripleFocusSection: React.FC<TripleFocusSectionProps> = ({
   return (
     <section
       className="py-12 bg-gray-900 text-white relative overflow-hidden"
-      data-oid="gb2nfms"
+      data-oid="zd6l4de"
     >
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-full z-0"
         style={{ pointerEvents: "none" }}
-        data-oid="nhnx1zm"
+        data-oid="_gh.m4_"
       />
 
-      <div className="container mx-auto px-4 relative z-10" data-oid=".zyf4lr">
-        <h2 className="text-3xl font-semibold mb-4" data-oid="4s:3um3">
+      <div className="container mx-auto px-4 relative z-10" data-oid="7cs9mek">
+        <h2 className="text-3xl font-semibold mb-4" data-oid="sl.p86t">
           {title}
         </h2>
-        <p className="text-gray-300 mb-8" data-oid="ufhqb96">
+        <p className="text-gray-300 mb-8" data-oid="vnr0wjk">
           {description}
         </p>
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          data-oid="q7srpld"
+          data-oid="u1.-che"
         >
           {focusPoints.map((point, index) => (
             <div
               key={index}
               className="bg-gray-800 p-6 rounded-lg shadow-md"
-              data-oid="cc9t9j4"
+              data-oid="j:pz_pb"
             >
-              <div className="text-4xl mb-4" data-oid="3:2i60x">
+              <div className="text-4xl mb-4" data-oid="55og3mc">
                 {point.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2" data-oid="csyser-">
+              <h3 className="text-xl font-semibold mb-2" data-oid="kmbejv0">
                 {point.title}
               </h3>
-              <p className="text-gray-300" data-oid="7shi2cl">
+              <p className="text-gray-300" data-oid="m_mnuub">
                 {point.description}
               </p>
             </div>

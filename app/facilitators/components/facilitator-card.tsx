@@ -30,35 +30,35 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
       viewport={{ once: true }}
-      data-oid="lao2o9v"
+      data-oid="h5rn4x8"
     >
       {/* Image Section */}
-      <div className="relative lg:w-1/2" data-oid="ktq2r9m">
-        <div className="relative" data-oid="jxcxu7_">
+      <div className="relative lg:w-1/2" data-oid="cbynda9">
+        <div className="relative" data-oid="5eqnnrf">
           {/* Main Image */}
           <div
             className="relative w-80 h-96 mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500"
-            data-oid="vvjaay."
+            data-oid="63.sgr3"
           >
             <Image
               src={facilitator.image}
               alt={facilitator.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
-              data-oid="2.dguto"
+              data-oid="kmgp.h1"
             />
 
             {/* Gradient Overlay */}
             <div
               className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-              data-oid="pdcqi.r"
+              data-oid="r2bj1:_"
             />
 
             {/* Social Links */}
             {facilitator.socialLinks && (
               <div
                 className="absolute top-6 right-6 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="yh94luh"
+                data-oid="ierqp2w"
               >
                 {Object.entries(facilitator.socialLinks).map(
                   ([platform, url]) => {
@@ -74,11 +74,11 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
                         href={url}
                         target="_blank"
                         className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg"
-                        data-oid="u.g3k1-"
+                        data-oid="7e1lqla"
                       >
                         <Icon
                           className="w-4 h-4 text-gray-700"
-                          data-oid="3h5r3-3"
+                          data-oid=":_hpbgy"
                         />
                       </Link>
                     );
@@ -91,65 +91,65 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
       </div>
 
       {/* Content Section */}
-      <div className="lg:w-1/2 space-y-6" data-oid="990bfi9">
+      <div className="lg:w-1/2 space-y-6" data-oid="2:16ywv">
         {/* Header */}
-        <div data-oid="f:zmufs">
+        <div data-oid="nt-tm0p">
           <div
             className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
-            data-oid="qaamgha"
+            data-oid=":1hmhhu"
           >
-            <Star className="w-4 h-4" data-oid="00.4joc" />
+            <Star className="w-4 h-4" data-oid="x8v05jq" />
             {facilitator.specialty}
           </div>
 
           <h3
             className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2"
-            data-oid="r8c9l0g"
+            data-oid="uqhlfs7"
           >
             {facilitator.name}
           </h3>
 
           <p
             className="text-xl text-blue-600 font-semibold mb-4"
-            data-oid="-stvp5h"
+            data-oid="ko-ga79"
           >
             {facilitator.role}
           </p>
 
           <p
             className="text-gray-600 leading-relaxed text-lg"
-            data-oid="qmt0k2r"
+            data-oid="k:2f2_5"
           >
             {facilitator.longBio}
           </p>
-          <p className="text-gray-500 text-lg" data-oid="scij3._">
+          <p className="text-gray-500 text-lg" data-oid="cu3qsjw">
             {facilitator.stats?.coursesCreated} Expert Courses
           </p>
         </div>
 
         {/* CTA */}
-        <div className="flex gap-4" data-oid="u3zs47f">
+        <div className="flex gap-4" data-oid="q7mc7jv">
           <Link
             href={`/facilitators/${facilitator.id}`}
             className="flex-1"
-            data-oid="immi9i4"
+            data-oid="q8u54dp"
           >
             <Button
               className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 rounded-xl group"
-              data-oid="jf0.hqi"
+              data-oid=":3:p8xy"
             >
               Meet {facilitator.name.split(" ")[0]}
               <ArrowRight
                 className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
-                data-oid="jd-bk7."
+                data-oid="40pc_d9"
               />
             </Button>
           </Link>
-          <Link href="/courses" data-oid="nvxh0dg">
+          <Link href="/courses" data-oid="wlopfbt">
             <Button
               variant="outline"
               className="px-6 py-3 rounded-xl border-2 hover:bg-gray-50"
-              data-oid="l_:zyf1"
+              data-oid="bh69_r_"
             >
               View Courses
             </Button>

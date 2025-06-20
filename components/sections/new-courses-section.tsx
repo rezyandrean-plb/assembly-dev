@@ -31,39 +31,39 @@ export default function NewCoursesSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-gradient-to-br from-gray-50 to-blue-50"
-      data-oid=".c230tk"
+      data-oid="p6l8ioj"
     >
-      <div className="container mx-auto px-4" data-oid="2cijpge">
+      <div className="container mx-auto px-4" data-oid="mdrv2mb">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="iasfj89"
+          data-oid="9lfe87c"
         >
           <h2
             className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent"
-            data-oid="fzlut2:"
+            data-oid="y6rcjaw"
           >
             Featured Courses
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
-            data-oid="pb37:4a"
+            data-oid="e_ws:go"
           >
             Master real estate investment with our comprehensive courses
             designed by industry experts
           </p>
-          <Link href="/courses" data-oid="vbpgacc">
+          <Link href="/courses" data-oid="cxf1ozb">
             <Button
               variant="outline"
               size="lg"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
-              data-oid="_r41g80"
+              data-oid="2lsv-f0"
             >
               View All Courses
-              <ArrowRight className="ml-2 h-5 w-5" data-oid="from7z3" />
+              <ArrowRight className="ml-2 h-5 w-5" data-oid="eezxj3f" />
             </Button>
           </Link>
         </motion.div>
@@ -71,7 +71,7 @@ export default function NewCoursesSection() {
         {/* Courses Grid */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          data-oid="lj_n7b0"
+          data-oid="2n_hwp-"
         >
           {featuredCourses.map((course, index) => (
             <motion.div
@@ -81,43 +81,43 @@ export default function NewCoursesSection() {
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              data-oid=":ol2uhv"
+              data-oid="_rp8izc"
             >
               {/* Course Image */}
               <div
                 className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden"
-                data-oid="0omqpx8"
+                data-oid="kk-324n"
               >
                 <div
                   className="absolute inset-0 bg-black/20"
-                  data-oid=".w_b31b"
+                  data-oid="k-9x7zt"
                 />
 
-                <div className="absolute top-4 left-4" data-oid="sflb7hj">
+                <div className="absolute top-4 left-4" data-oid="evvzhc-">
                   <Badge
                     className={getCategoryColor(course.category || "default")}
-                    data-oid="nudix93"
+                    data-oid="-u9b2b5"
                   >
                     {course.categories[0]}
                   </Badge>
                 </div>
-                <div className="absolute top-4 right-4" data-oid="2jij7i6">
+                <div className="absolute top-4 right-4" data-oid="n-s65h_">
                   <Badge
                     variant="secondary"
                     className="bg-white/90 text-gray-800"
-                    data-oid="ywiynl3"
+                    data-oid="9gzyizd"
                   >
                     {course.type}
                   </Badge>
                 </div>
                 <div
                   className="absolute inset-0 flex items-center justify-center"
-                  data-oid="gbwz7ls"
+                  data-oid="thlg-b_"
                 >
-                  <div className="text-white text-center" data-oid="5j8u.26">
+                  <div className="text-white text-center" data-oid="3xzdkp.">
                     <div
                       className="text-6xl font-bold opacity-20"
-                      data-oid="80_xggk"
+                      data-oid="dq6yty."
                     >
                       {course.categories[0].charAt(0)}
                     </div>
@@ -126,30 +126,30 @@ export default function NewCoursesSection() {
               </div>
 
               {/* Course Content */}
-              <div className="p-6" data-oid="p6gjtpg">
+              <div className="p-6" data-oid="c:-3_8i">
                 <h3
                   className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors"
-                  data-oid="yjqgofm"
+                  data-oid="tk6mbj3"
                 >
                   {course.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm mb-4" data-oid="-yu55uy">
+                <p className="text-gray-600 text-sm mb-4" data-oid="3r2l9n9">
                   By {course.instructor}
                 </p>
 
                 {/* Course Meta */}
                 <div
                   className="flex items-center gap-4 mb-4 text-sm text-gray-500"
-                  data-oid="_u-9crj"
+                  data-oid="x9g5v0w"
                 >
-                  <div className="flex items-center gap-1" data-oid="rveznyo">
-                    <Clock className="w-4 h-4" data-oid="_3orum6" />
-                    <span data-oid="kvqwq-l">{course.duration}</span>
+                  <div className="flex items-center gap-1" data-oid="k9:rf4:">
+                    <Clock className="w-4 h-4" data-oid="qskux46" />
+                    <span data-oid="-94xjmi">{course.duration}</span>
                   </div>
-                  <div className="flex items-center gap-1" data-oid="knf08-w">
-                    <Users className="w-4 h-4" data-oid="h37jys3" />
-                    <span data-oid="av8mh3m">{course.level}</span>
+                  <div className="flex items-center gap-1" data-oid=":h:1kp9">
+                    <Users className="w-4 h-4" data-oid="mmsuuqz" />
+                    <span data-oid="6bohv5e">{course.level}</span>
                   </div>
                 </div>
 
@@ -157,9 +157,9 @@ export default function NewCoursesSection() {
                 {course.rating && (
                   <div
                     className="flex items-center gap-2 mb-4"
-                    data-oid="1vpu-m4"
+                    data-oid="f7d_768"
                   >
-                    <div className="flex items-center" data-oid="bpdikyh">
+                    <div className="flex items-center" data-oid="mkcd636">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -168,11 +168,11 @@ export default function NewCoursesSection() {
                               ? "fill-yellow-400 text-yellow-400"
                               : "text-gray-300"
                           }`}
-                          data-oid="wj2doe1"
+                          data-oid=".wibm7l"
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-600" data-oid=".1ck684">
+                    <span className="text-sm text-gray-600" data-oid="lscfmsw">
                       {course.rating} ({course.reviewCount} reviews)
                     </span>
                   </div>
@@ -181,22 +181,22 @@ export default function NewCoursesSection() {
                 {/* Price and CTA */}
                 <div
                   className="flex items-center justify-between"
-                  data-oid="-tx_cp_"
+                  data-oid="-hsfs1y"
                 >
                   <div
                     className="text-2xl font-bold text-gray-900"
-                    data-oid="ktk6kb_"
+                    data-oid=":gs0bm3"
                   >
                     {course.price}
                   </div>
                   <Link
                     href={course.url || `/courses/${course.slug}`}
-                    data-oid="194tfou"
+                    data-oid="jra4k5l"
                   >
                     <Button
                       size="sm"
                       className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                      data-oid="37od4w:"
+                      data-oid="d-5b5h8"
                     >
                       Learn More
                     </Button>
@@ -213,30 +213,30 @@ export default function NewCoursesSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          data-oid="2-mdk9p"
+          data-oid="kodpzu0"
         >
           <div
             className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto"
-            data-oid="skm44e-"
+            data-oid="xaze-h_"
           >
             <h3
               className="text-2xl font-bold text-gray-900 mb-4"
-              data-oid="5ci4w.c"
+              data-oid="70d5o-j"
             >
               Ready to Start Your Investment Journey?
             </h3>
-            <p className="text-gray-600 mb-6" data-oid="dd07lx3">
+            <p className="text-gray-600 mb-6" data-oid="rmrk3sl">
               Join thousands of successful investors and start building your
               real estate portfolio today.
             </p>
-            <Link href="/signup" data-oid="id1nltc">
+            <Link href="/signup" data-oid="i55eahc">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
-                data-oid="c2jpwqy"
+                data-oid="2wbjws7"
               >
                 Get Started Free
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="w:dvg:w" />
+                <ArrowRight className="ml-2 h-5 w-5" data-oid="orr2vx6" />
               </Button>
             </Link>
           </div>

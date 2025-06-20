@@ -17,17 +17,17 @@ export default function CartIcon() {
     <Link
       href="/cart"
       className="relative inline-flex items-center"
-      data-oid="1587f47"
+      data-oid="6xy:m:-"
     >
       <ShoppingCart
         className="h-6 w-6 text-neutral-600 hover:text-primary transition-colors"
-        data-oid="0qt:zix"
+        data-oid="1kz:tpq"
       />
 
       {mounted && cart.length > 0 && (
         <span
           className="absolute -top-2 -right-2 bg-[#ff6b35] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold"
-          data-oid="xw.01hy"
+          data-oid="u88_r1q"
         >
           {cart.length}
         </span>

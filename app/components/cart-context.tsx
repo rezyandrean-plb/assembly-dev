@@ -113,7 +113,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         getTotalItems,
         getTotalPrice,
       }}
-      data-oid="-4hj0:-"
+      data-oid="qfsdsai"
     >
       {children}
     </CartContext.Provider>

@@ -34,16 +34,16 @@ export class ErrorBoundary extends React.Component<
         this.props.fallback || (
           <div
             className="flex items-center justify-center min-h-screen"
-            data-oid="fvg562i"
+            data-oid="7ii7q8o"
           >
-            <div className="text-center" data-oid="pfr_sp4">
+            <div className="text-center" data-oid="je-2l1b">
               <h2
                 className="text-2xl font-bold text-gray-800 mb-4"
-                data-oid="qpo087:"
+                data-oid="6xk4oms"
               >
                 Something went wrong
               </h2>
-              <p className="text-gray-600" data-oid="-xzns7n">
+              <p className="text-gray-600" data-oid="uiuxw4f">
                 Please refresh the page to try again.
               </p>
             </div>
