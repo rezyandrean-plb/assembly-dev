@@ -132,7 +132,10 @@ export default function LearningPathsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white" data-oid="oqobhzb">
+    <main
+      className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-orange-400"
+      data-oid="oqobhzb"
+    >
       <Navbar data-oid="vs3y3ib" />
 
       <div className="pt-24 pb-16" data-oid="_-02xsi">
@@ -141,7 +144,7 @@ export default function LearningPathsPage() {
           <div className="mb-6" data-oid="_h6fz_g">
             <Link
               href="/courses"
-              className="inline-flex items-center text-[#123B79] hover:underline"
+              className="inline-flex items-center text-white hover:text-[#F0A500] transition-colors"
               data-oid="s1u-u2y"
             >
               <ArrowLeft className="h-4 w-4 mr-2" data-oid="pvy4m7m" />
@@ -152,13 +155,13 @@ export default function LearningPathsPage() {
           {/* Page Header */}
           <div className="text-center mb-16" data-oid="vh1jyf7">
             <h1
-              className="text-3xl font-bold text-[#123B79] mb-4"
+              className="text-3xl font-bold text-white mb-4"
               data-oid="3uo2zph"
             >
               Learning Paths
             </h1>
             <p
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-xl text-white/90 max-w-3xl mx-auto"
               data-oid=".ur8cwq"
             >
               Structured course sequences designed to guide you from beginner to
@@ -238,9 +241,12 @@ export default function LearningPathsPage() {
           )}
 
           {/* Additional Information */}
-          <div className="mt-16 bg-gray-50 rounded-xl p-8" data-oid="p3itz2y">
+          <div
+            className="mt-16 bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            data-oid="p3itz2y"
+          >
             <h2
-              className="text-2xl font-bold text-center mb-8"
+              className="text-2xl font-bold text-center mb-8 text-white"
               data-oid="l9ib5wc"
             >
               Why Choose a Learning Path?
@@ -256,10 +262,13 @@ export default function LearningPathsPage() {
                 >
                   <BookOpen className="h-8 w-8 text-white" data-oid="8e79e5b" />
                 </div>
-                <h3 className="text-xl font-bold mb-2" data-oid="_vof2pv">
+                <h3
+                  className="text-xl font-bold mb-2 text-white"
+                  data-oid="_vof2pv"
+                >
                   Structured Learning
                 </h3>
-                <p className="text-gray-600" data-oid="v62gzcy">
+                <p className="text-white/80" data-oid="v62gzcy">
                   Follow a carefully designed sequence of courses that build
                   upon each other for optimal learning progression
                 </p>
@@ -274,10 +283,13 @@ export default function LearningPathsPage() {
                     data-oid="o58dx9y"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2" data-oid=".xnzmvz">
+                <h3
+                  className="text-xl font-bold mb-2 text-white"
+                  data-oid=".xnzmvz"
+                >
                   Clear Progression
                 </h3>
-                <p className="text-gray-600" data-oid="kojq_oo">
+                <p className="text-white/80" data-oid="kojq_oo">
                   Track your journey from beginner to expert with clear
                   milestones and learning objectives
                 </p>
@@ -292,10 +304,13 @@ export default function LearningPathsPage() {
                     data-oid="hxwiotu"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2" data-oid="r6tg6mr">
+                <h3
+                  className="text-xl font-bold mb-2 text-white"
+                  data-oid="r6tg6mr"
+                >
                   Comprehensive Knowledge
                 </h3>
-                <p className="text-gray-600" data-oid="vq:dz5d">
+                <p className="text-white/80" data-oid="vq:dz5d">
                   Gain a complete understanding of specialized areas without
                   missing critical concepts
                 </p>
