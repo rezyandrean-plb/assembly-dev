@@ -17,7 +17,8 @@ export interface CartItem {
   image: string;
   author: string;
   quantity: number;
-  type?: "Course" | "Book";
+  type?: "Course" | "Book" | "Bundle";
+  isDiscount?: boolean;
 }
 
 // Define the context value type
