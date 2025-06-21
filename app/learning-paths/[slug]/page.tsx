@@ -23,8 +23,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useCart } from "@/components/cart-context";
-import toast from "react-hot-toast";
 
 interface Course {
   id: number;
@@ -51,15 +49,6 @@ export default function LearningPathPage() {
   const [loading, setLoading] = useState(true);
   const [pathData, setPathData] = useState<any>(null);
   const [pathCourses, setPathCourses] = useState<Course[]>([]);
-  const { addToCart } = useCart();
-
-  // Helper function to format price with thousand separators
-  const formatPrice = (price: number) => {
-    return price.toLocaleString("en-US", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
 
   // Calculate pricing information
   const calculatePricing = (courses: Course[]) => {
@@ -85,44 +74,6 @@ export default function LearningPathPage() {
       savings: savings,
       discountPercentage: discountPercentage,
     };
-  };
-
-  // Function to add bundle to cart
-  const addBundleToCart = () => {
-    if (!pathData || pathCourses.length === 0) return;
-
-    const pricing = calculatePricing(pathCourses);
-
-    // Create a bundle item for the cart
-    const bundleItem = {
-      id: `bundle-${pathData.id}`,
-      title: `${pathData.title} - Complete Bundle`,
-      slug: pathData.id,
-      price: pricing.bundlePrice,
-      image: "/singapore-skyline-day.png", // Default bundle image
-      author: "Assembly.sg",
-      type: "Bundle" as const,
-      isDiscount: true,
-    };
-
-    try {
-      addToCart(bundleItem);
-      toast.success(`${pathData.title} bundle added to cart!`, {
-        duration: 3000,
-        style: {
-          background: "#10B981",
-          color: "white",
-        },
-      });
-    } catch (error) {
-      toast.error("Failed to add bundle to cart. Please try again.", {
-        duration: 3000,
-        style: {
-          background: "#EF4444",
-          color: "white",
-        },
-      });
-    }
   };
 
   useEffect(() => {
@@ -429,7 +380,7 @@ export default function LearningPathPage() {
   if (loading) {
     return (
       <div
-        className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-orange-400"
+        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
         data-oid="o.kwm5r"
       >
         <Navbar data-oid="3h_-7g." />
@@ -470,7 +421,7 @@ export default function LearningPathPage() {
   if (!pathData) {
     return (
       <div
-        className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-orange-400"
+        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
         data-oid="74grb.n"
       >
         <Navbar data-oid="hsc9in0" />
@@ -480,12 +431,12 @@ export default function LearningPathPage() {
             data-oid="m3btuat"
           >
             <h1
-              className="text-3xl font-bold text-white mb-4"
+              className="text-3xl font-bold text-gray-900 mb-4"
               data-oid=":2p.j6v"
             >
               Learning Path Not Found
             </h1>
-            <p className="text-white/80 mb-8" data-oid="ph1.q0g">
+            <p className="text-gray-600 mb-8" data-oid="ph1.q0g">
               The learning path you're looking for doesn't exist or has been
               moved.
             </p>
@@ -505,7 +456,7 @@ export default function LearningPathPage() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-orange-400"
+      className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
       data-oid="-29:9u6"
     >
       <Navbar data-oid="s:i4_s-" />
@@ -538,7 +489,7 @@ export default function LearningPathPage() {
           >
             <Link
               href="/courses?tab=paths"
-              className="inline-flex items-center text-white hover:text-[#F0A500] font-medium transition-colors group"
+              className="inline-flex items-center text-[#123B79] hover:text-[#0A2A5E] font-medium transition-colors group"
               data-oid="vpmnf_9"
             >
               <ArrowLeft
@@ -778,7 +729,7 @@ export default function LearningPathPage() {
                         className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent"
                         data-oid="szzb31v"
                       >
-                        ${formatPrice(pricing.bundlePrice)}
+                        ${pricing.bundlePrice.toFixed(2)}
                       </div>
                     </div>
 
@@ -800,12 +751,12 @@ export default function LearningPathPage() {
                           className="text-red-600 font-bold text-lg"
                           data-oid=".qq..-:"
                         >
-                          Save ${formatPrice(pricing.savings)}
+                          Save ${pricing.savings.toFixed(2)}
                         </span>
                       </div>
                       <div className="text-sm text-gray-600" data-oid="g7uc4bh">
                         <span className="line-through" data-oid=".p97kmg">
-                          ${formatPrice(pricing.originalPrice)}
+                          ${pricing.originalPrice.toFixed(2)}
                         </span>
                         <span
                           className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold"
@@ -818,7 +769,6 @@ export default function LearningPathPage() {
 
                     {/* Primary CTA */}
                     <Button
-                      onClick={addBundleToCart}
                       className="w-full bg-gradient-to-r from-[#123B79] to-[#0A2A5E] hover:from-[#0A2A5E] hover:to-[#123B79] text-white font-bold py-6 text-lg mb-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
                       data-oid="lrdt.-9"
                     >
@@ -1173,7 +1123,7 @@ export default function LearningPathPage() {
                 data-oid=".t0obyv"
               >
                 Join hundreds of successful students and save $
-                {formatPrice(pricing.savings)} with our exclusive bundle deal.
+                {pricing.savings.toFixed(2)} with our exclusive bundle deal.
                 Transform your property investment knowledge with expert
                 guidance.
               </p>
@@ -1182,7 +1132,6 @@ export default function LearningPathPage() {
                 data-oid="v2q96hp"
               >
                 <Button
-                  onClick={addBundleToCart}
                   className="bg-gradient-to-r from-[#F0A500] to-[#D89400] hover:from-[#D89400] hover:to-[#F0A500] text-[#123B79] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 group"
                   data-oid="c_don9s"
                 >
@@ -1190,20 +1139,20 @@ export default function LearningPathPage() {
                     className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
                     data-oid="mrq93nu"
                   />
-                  Enroll Now - Save ${formatPrice(pricing.savings)}
+                  Enroll Now - Save ${pricing.savings.toFixed(2)}
                 </Button>
                 <div className="text-center" data-oid="_re4_i.">
                   <div className="text-sm opacity-80" data-oid="rhff2ml">
                     Bundle Price
                   </div>
                   <div className="text-2xl font-bold" data-oid="ii7m_nk">
-                    ${formatPrice(pricing.bundlePrice)}
+                    ${pricing.bundlePrice.toFixed(2)}
                   </div>
                   <div
                     className="text-sm opacity-80 line-through"
                     data-oid="tou63yh"
                   >
-                    ${formatPrice(pricing.originalPrice)}
+                    ${pricing.originalPrice.toFixed(2)}
                   </div>
                 </div>
               </div>
