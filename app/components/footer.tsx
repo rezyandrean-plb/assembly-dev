@@ -262,11 +262,11 @@ export default function AppFooter() {
                 Privacy Policy
               </Link>
               <Link
-                href="/cookies"
+                href="/faq"
                 className="text-gray-400 hover:text-white text-sm"
                 data-oid="pakac-j"
               >
-                Cookie Policy
+                FAQ
               </Link>
             </div>
           </div>
