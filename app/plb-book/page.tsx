@@ -164,7 +164,6 @@ export default function PLBBookPage() {
   return (
     <>
       <Navbar data-oid="426hrcg" />
-      container mx-auto px-4 flex justify-between items-center
       <main className="min-h-screen bg-white" data-oid="-k_z:yz">
         {/* Page Content */}
         <div className="pt-24 pb-16" data-oid="zgdqv1_">
