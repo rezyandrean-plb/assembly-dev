@@ -12,6 +12,8 @@ interface Address {
   country: string;
   company: string;
   streetAddress: string;
+  streetAddress2: string;
+  buildingName: string;
   suburb: string;
   state: string;
   postcode: string;
@@ -42,6 +44,8 @@ const initialAddressState: Address = {
   country: "Singapore",
   company: "",
   streetAddress: "",
+  streetAddress2: "",
+  buildingName: "",
   suburb: "",
   state: "",
   postcode: "",

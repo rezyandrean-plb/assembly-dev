@@ -232,9 +232,6 @@ export default function NewCtaSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
             data-oid="y8pp5p9"
           >
-            <div className="text-sm" data-oid="bjgyroe">
-              ✓ 30-day money-back guarantee
-            </div>
             <div className="text-sm" data-oid="6t57484">
               ✓ Trusted by 15,000+ students
             </div>

@@ -108,7 +108,7 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
 
         <div data-oid="ltuetrq">
           <label className="block text-sm font-medium mb-1" data-oid="6w3wy38">
-            Street Address *
+            Street Address (1) *
           </label>
           <input
             type="text"
@@ -119,10 +119,71 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             data-oid="8_cbibg"
           />
         </div>
+        <div data-oid="ltuetrq-2">
+          <label
+            className="block text-sm font-medium mb-1"
+            data-oid="6w3wy38-2"
+          >
+            Street Address (2)
+          </label>
+          <input
+            type="text"
+            name="streetAddress2"
+            value={address.streetAddress2}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            data-oid="8_cbibg-2"
+          />
+        </div>
+        <div data-oid="ltuetrq-3">
+          <label
+            className="block text-sm font-medium mb-1"
+            data-oid="6w3wy38-3"
+          >
+            Building Name
+          </label>
+          <input
+            type="text"
+            name="buildingName"
+            value={address.buildingName}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            data-oid="8_cbibg-3"
+          />
+        </div>
+        <div data-oid="ltuetrq-4">
+          <label
+            className="block text-sm font-medium mb-1"
+            data-oid="6w3wy38-4"
+          >
+            Postal Code *
+          </label>
+          <input
+            type="text"
+            name="postcode"
+            value={address.postcode}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            data-oid="8_cbibg-4"
+          />
+        </div>
       </div>
     </div>
   );
 }
+
+const isAddressValid = (address: any) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return (
+    address.firstName &&
+    address.lastName &&
+    address.email &&
+    emailRegex.test(address.email) &&
+    address.mobile &&
+    address.streetAddress &&
+    address.postcode
+  );
+};
 
 export default function AddressPage() {
   const router = useRouter();
@@ -146,10 +207,24 @@ export default function AddressPage() {
   }, [cart, router]);
 
   const handleNext = () => {
-    if (billingSameAsDelivery) {
-      setBillingAddress(deliveryAddress);
+    let deliveryValid = true;
+    if (deliveryOption === "delivery") {
+      deliveryValid = isAddressValid(deliveryAddress);
     }
-    router.push("/checkout/payment");
+
+    let billingValid = true;
+    if (!billingSameAsDelivery) {
+      billingValid = isAddressValid(billingAddress);
+    }
+
+    if (deliveryValid && billingValid) {
+      if (billingSameAsDelivery) {
+        setBillingAddress(deliveryAddress);
+      }
+      router.push("/checkout/payment");
+    } else {
+      alert("Please fill in all required fields with valid information.");
+    }
   };
 
   // Don't render if no books (will redirect)

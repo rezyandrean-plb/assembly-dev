@@ -22,8 +22,9 @@ export default function NewLearningPathsSection() {
   const learningPaths = [
     {
       id: 1,
-      title: "Beginner's Path",
-      subtitle: "Start Your Investment Journey",
+      title: "Beginner Property Investor",
+      subtitle:
+        "Build a strong foundation in property investment and understand the Singapore market",
       description:
         "Perfect for newcomers to real estate investment. Learn the fundamentals and build a solid foundation.",
       icon: <TrendingUp className="w-8 h-8" data-oid="y:o77zv" />,
@@ -43,8 +44,9 @@ export default function NewLearningPathsSection() {
     },
     {
       id: 2,
-      title: "HDB Specialist",
-      subtitle: "Master HDB Investments",
+      title: "HDB Upgrader & Strategist",
+      subtitle:
+        "For HDB owners or upgraders aiming to move to condos or optimize their property journey",
       description:
         "Comprehensive training on HDB regulations, upgrading strategies, and maximizing HDB investment returns.",
       icon: <Home className="w-8 h-8" data-oid="znxzhw-" />,
@@ -64,8 +66,9 @@ export default function NewLearningPathsSection() {
     },
     {
       id: 3,
-      title: "Condo Expert",
-      subtitle: "Condominium Investment Mastery",
+      title: "Condo Investment Specialist",
+      subtitle:
+        "Master the art of investing in condominiums, from selection to portfolio building",
       description:
         "Advanced strategies for condo investments, new launches, and building a profitable condo portfolio.",
       icon: <Building className="w-8 h-8" data-oid=".p36:bb" />,
@@ -133,8 +136,8 @@ export default function NewLearningPathsSection() {
         </motion.div>
 
         {/* Learning Paths Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16" data-oid="20jj6yj">
-          {learningPaths.map((path, index) => (
+        <div className="grid md:grid-cols-3 gap-8 mb-16" data-oid="20jj6yj">
+          {learningPaths.slice(0, 3).map((path, index) => (
             <motion.div
               key={path.id}
               className={`group relative ${path.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-neutral-200`}
@@ -257,16 +260,8 @@ export default function NewLearningPathsSection() {
           >
             <Button
               size="lg"
-              variant="secondary"
-              className="bg-white text-primary hover:bg-neutral-100 px-8 py-3"
-              data-oid="cozokb."
-            >
-              Take Assessment
-            </Button>
-            <Button
-              size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3"
+              className="border-2 border-white text-primary hover:bg-white hover:text-primary px-8 py-3"
               data-oid="_wk8db8"
             >
               Speak to Advisor

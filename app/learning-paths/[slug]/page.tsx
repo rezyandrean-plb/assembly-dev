@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useCart } from "@/components/cart-context";
+import toast from "react-hot-toast";
 
 interface Course {
   id: number;
@@ -49,6 +51,15 @@ export default function LearningPathPage() {
   const [loading, setLoading] = useState(true);
   const [pathData, setPathData] = useState<any>(null);
   const [pathCourses, setPathCourses] = useState<Course[]>([]);
+  const { addToCart } = useCart();
+
+  // Helper function to format price with thousand separators
+  const formatPrice = (price: number) => {
+    return price.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
 
   // Calculate pricing information
   const calculatePricing = (courses: Course[]) => {
@@ -74,6 +85,44 @@ export default function LearningPathPage() {
       savings: savings,
       discountPercentage: discountPercentage,
     };
+  };
+
+  // Function to add bundle to cart
+  const addBundleToCart = () => {
+    if (!pathData || pathCourses.length === 0) return;
+
+    const pricing = calculatePricing(pathCourses);
+
+    // Create a bundle item for the cart
+    const bundleItem = {
+      id: `bundle-${pathData.id}`,
+      title: `${pathData.title} - Complete Bundle`,
+      slug: pathData.id,
+      price: pricing.bundlePrice.toString(),
+      image: "/singapore-skyline-day.png", // Default bundle image
+      author: "Assembly.sg",
+      type: "Bundle" as const,
+      isDiscount: true,
+    };
+
+    try {
+      addToCart(bundleItem);
+      toast.success(`${pathData.title} bundle added to cart!`, {
+        duration: 3000,
+        style: {
+          background: "#10B981",
+          color: "white",
+        },
+      });
+    } catch (error) {
+      toast.error("Failed to add bundle to cart. Please try again.", {
+        duration: 3000,
+        style: {
+          background: "#EF4444",
+          color: "white",
+        },
+      });
+    }
   };
 
   useEffect(() => {
@@ -729,7 +778,7 @@ export default function LearningPathPage() {
                         className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent"
                         data-oid="szzb31v"
                       >
-                        ${pricing.bundlePrice.toFixed(2)}
+                        ${formatPrice(pricing.bundlePrice)}
                       </div>
                     </div>
 
@@ -751,12 +800,12 @@ export default function LearningPathPage() {
                           className="text-red-600 font-bold text-lg"
                           data-oid=".qq..-:"
                         >
-                          Save ${pricing.savings.toFixed(2)}
+                          Save ${formatPrice(pricing.savings)}
                         </span>
                       </div>
                       <div className="text-sm text-gray-600" data-oid="g7uc4bh">
                         <span className="line-through" data-oid=".p97kmg">
-                          ${pricing.originalPrice.toFixed(2)}
+                          ${formatPrice(pricing.originalPrice)}
                         </span>
                         <span
                           className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold"
@@ -769,6 +818,7 @@ export default function LearningPathPage() {
 
                     {/* Primary CTA */}
                     <Button
+                      onClick={addBundleToCart}
                       className="w-full bg-gradient-to-r from-[#123B79] to-[#0A2A5E] hover:from-[#0A2A5E] hover:to-[#123B79] text-white font-bold py-6 text-lg mb-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
                       data-oid="lrdt.-9"
                     >
@@ -1089,7 +1139,7 @@ export default function LearningPathPage() {
 
           {/* Enhanced Call to Action */}
           <motion.div
-            className="bg-gradient-to-br from-[#123B79] via-[#0A2A5E] to-[#123B79] text-white rounded-3xl p-12 text-center relative overflow-hidden"
+            className="bg-gray-900 text-[white] rounded-3xl p-12 text-center relative overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -1123,7 +1173,7 @@ export default function LearningPathPage() {
                 data-oid=".t0obyv"
               >
                 Join hundreds of successful students and save $
-                {pricing.savings.toFixed(2)} with our exclusive bundle deal.
+                {formatPrice(pricing.savings)} with our exclusive bundle deal.
                 Transform your property investment knowledge with expert
                 guidance.
               </p>
@@ -1132,6 +1182,7 @@ export default function LearningPathPage() {
                 data-oid="v2q96hp"
               >
                 <Button
+                  onClick={addBundleToCart}
                   className="bg-gradient-to-r from-[#F0A500] to-[#D89400] hover:from-[#D89400] hover:to-[#F0A500] text-[#123B79] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 group"
                   data-oid="c_don9s"
                 >
@@ -1139,20 +1190,20 @@ export default function LearningPathPage() {
                     className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
                     data-oid="mrq93nu"
                   />
-                  Enroll Now - Save ${pricing.savings.toFixed(2)}
+                  Enroll Now - Save ${formatPrice(pricing.savings)}
                 </Button>
                 <div className="text-center" data-oid="_re4_i.">
                   <div className="text-sm opacity-80" data-oid="rhff2ml">
                     Bundle Price
                   </div>
                   <div className="text-2xl font-bold" data-oid="ii7m_nk">
-                    ${pricing.bundlePrice.toFixed(2)}
+                    ${formatPrice(pricing.bundlePrice)}
                   </div>
                   <div
                     className="text-sm opacity-80 line-through"
                     data-oid="tou63yh"
                   >
-                    ${pricing.originalPrice.toFixed(2)}
+                    ${formatPrice(pricing.originalPrice)}
                   </div>
                 </div>
               </div>

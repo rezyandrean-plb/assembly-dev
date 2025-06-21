@@ -17,8 +17,10 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
-  const facilitatorCourses = allCourses.filter((course: Course) =>
-    course.instructor.includes(facilitator.name),
+  const facilitatorCourses = allCourses.filter(
+    (course: Course) =>
+      Array.isArray(course.instructorIds) &&
+      course.instructorIds.includes(facilitator.id),
   );
 
   return (
@@ -58,11 +60,9 @@ export function FacilitatorCourses({ facilitator }: FacilitatorCoursesProps) {
                 <CourseCard
                   key={course.id}
                   course={{
-                    title: course.title,
+                    ...course,
                     level: course.level || "All Levels",
                     duration: course.duration || "Self-paced",
-                    image: course.image,
-                    slug: course.slug,
                   }}
                   delay={0.1 * index}
                   data-oid="dtz-0xx"

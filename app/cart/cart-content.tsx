@@ -650,9 +650,6 @@ export default function CartPageContent() {
                           className="text-sm text-neutral-600 space-y-1"
                           data-oid="dl9fen3"
                         >
-                          <li data-oid="lg-7wkt">
-                            • 30-day money-back guarantee
-                          </li>
                           <li data-oid="1py:5ra">
                             • Lifetime access to courses
                           </li>

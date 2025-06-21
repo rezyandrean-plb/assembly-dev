@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCheckout } from "@/context/checkout-context";
 import OrderSummary from "../components/order-summary";
@@ -20,9 +21,13 @@ export default function PaymentPage() {
   const paymentMethods: { id: string; name: string; icon: string }[] = [];
 
   const otherPaymentMethods = [
-    { id: "grabpay", name: "GrabPay", icon: "🟩" },
-    { id: "applepay", name: "Apple Pay", icon: "" },
-    { id: "paypal", name: "PayPal", icon: "🅿️" },
+    {
+      id: "grabpay",
+      name: "GrabPay",
+      icon: "/images/payment/Grabpay.png",
+    },
+    { id: "applepay", name: "Apple Pay", icon: "/images/payment/applepay.png" },
+    { id: "paypal", name: "PayPal", icon: "/images/payment/paypal.png" },
     { id: "stripe", name: "Stripe", icon: "💳" },
   ];
 
@@ -50,59 +55,6 @@ export default function PaymentPage() {
               </p>
 
               <div className="space-y-6" data-oid="dat.-:h">
-                {/* Redeem Rewards/Points Section */}
-                <div
-                  className="border border-gray-200 rounded-lg"
-                  data-oid="cjoj5ar"
-                >
-                  <div
-                    className="flex justify-between items-center p-4 cursor-pointer"
-                    onClick={() =>
-                      setExpandedSection(
-                        expandedSection === "rewards" ? "" : "rewards",
-                      )
-                    }
-                    data-oid="28grv:y"
-                  >
-                    <h3 className="font-semibold" data-oid="0lnq8pe">
-                      Redeem Rewards / Points
-                    </h3>
-                    <ChevronDown
-                      className={`transition-transform ${expandedSection === "rewards" ? "rotate-180" : ""}`}
-                      data-oid="mgo9chu"
-                    />
-                  </div>
-                  {expandedSection === "rewards" && (
-                    <div className="border-t p-4 space-y-3" data-oid="de8c5tl">
-                      {paymentMethods.map((method) => (
-                        <div
-                          key={method.id}
-                          className="flex items-center justify-between p-3 border rounded"
-                          data-oid="_0w_hz_"
-                        >
-                          <div
-                            className="flex items-center gap-3"
-                            data-oid="dt7i.x6"
-                          >
-                            <input
-                              type="radio"
-                              name="rewardPayment"
-                              value={method.id}
-                              className="w-4 h-4"
-                              data-oid="gr.r:c7"
-                            />
-
-                            <span data-oid=":0jqest">{method.name}</span>
-                          </div>
-                          <span className="text-2xl" data-oid="4yjtbd5">
-                            {method.icon}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
                 {/* Credit/Debit Card Section */}
                 <div
                   className="border border-gray-200 rounded-lg"
@@ -135,28 +87,21 @@ export default function PaymentPage() {
                       </span>
                     </div>
                     <div className="flex items-center gap-2" data-oid="dozhb5r">
-                      <div className="flex gap-1" data-oid="uqjjqb6">
-                        <div
-                          className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="fs8qicw"
-                        >
-                          VISA
-                        </div>
-                        <div
-                          className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="zvabdz8"
-                        >
-                          MC
-                        </div>
-                        <div
-                          className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center"
-                          data-oid="ecv-hf3"
-                        >
-                          AE
-                        </div>
-                      </div>
+                      <Image
+                        src="/images/payment/visa-mastercard.png"
+                        alt="Visa and Mastercard"
+                        width={100}
+                        height={25}
+                        className="object-contain"
+                        data-oid="oz3phdh"
+                      />
+
                       <ChevronDown
-                        className={`transition-transform ${expandedSection === "Credit / Debit" ? "rotate-180" : ""}`}
+                        className={`transition-transform ${
+                          expandedSection === "Credit / Debit"
+                            ? "rotate-180"
+                            : ""
+                        }`}
                         data-oid="izcz1n4"
                       />
                     </div>
@@ -283,9 +228,20 @@ export default function PaymentPage() {
                         {method.name}
                       </span>
                     </div>
-                    <span className="text-2xl" data-oid="s0a0wvc">
-                      {method.icon}
-                    </span>
+                    {method.id === "stripe" ? (
+                      <span className="text-2xl" data-oid="ngn.ju0">
+                        {method.icon}
+                      </span>
+                    ) : (
+                      <Image
+                        src={method.icon}
+                        alt={method.name}
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                        data-oid="pfysg05"
+                      />
+                    )}
                   </div>
                 ))}
               </div>
@@ -332,7 +288,13 @@ export default function PaymentPage() {
                     {finalBillingAddress.mobile}
                   </p>
                   <p className="text-gray-600" data-oid="-zuq_uz">
-                    72 Hebe St, QLD, BARDON, 4065
+                    {finalBillingAddress.streetAddress}
+                    {finalBillingAddress.streetAddress2 &&
+                      `, ${finalBillingAddress.streetAddress2}`}
+                    {finalBillingAddress.buildingName &&
+                      `, ${finalBillingAddress.buildingName}`}
+                    , {finalBillingAddress.country},{" "}
+                    {finalBillingAddress.postcode}
                   </p>
                 </div>
               </div>

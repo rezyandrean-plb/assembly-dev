@@ -40,9 +40,8 @@ export default function OrderSummary() {
 
   const hasBook = cart.some((item) => item.type === "Book");
   const finalShippingCost = hasBook ? shippingCost : 0;
-  const orderTotalBeforeGst = subtotal - discount + finalShippingCost;
-  const gst = orderTotalBeforeGst * 0.09; // 9% GST for Singapore
-  const orderTotal = orderTotalBeforeGst + gst;
+  const orderTotal = subtotal - discount + finalShippingCost;
+  const gst = (orderTotal / 1.09) * 0.09; // 9% GST is included in the price
 
   return (
     <div
@@ -90,9 +89,17 @@ export default function OrderSummary() {
           >
             <span data-oid="vbl2c:i">Shipping</span>
             <span className="font-semibold" data-oid="l3jcnrw">
-              {finalShippingCost > 0
-                ? formatPrice(finalShippingCost)
-                : "SGD 10.00"}
+              {finalShippingCost > 0 ? formatPrice(finalShippingCost) : "Free"}
+            </span>
+          </div>
+
+          <div
+            className="flex justify-between text-gray-700"
+            data-oid="dvhv-3z"
+          >
+            <span data-oid="1tk.eqc">GST (included)</span>
+            <span className="font-semibold" data-oid="9xg7ne1">
+              {formatPrice(gst)}
             </span>
           </div>
 
@@ -127,10 +134,6 @@ export default function OrderSummary() {
           </div>
 
           <div className="space-y-2 text-sm text-gray-600" data-oid="pml3ujq">
-            <div className="flex items-center gap-2" data-oid="1urja8a">
-              <Check className="w-4 h-4 text-green-600" data-oid="ctog9tm" />
-              <span data-oid="ez88yip">30-day money-back guarantee</span>
-            </div>
             <div className="flex items-center gap-2" data-oid="4uaz2:h">
               <Check className="w-4 h-4 text-green-600" data-oid="1n20gua" />
               <span data-oid="pv89czv">Lifetime access to courses</span>
