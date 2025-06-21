@@ -2,9 +2,25 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, CheckCircle, Clock, Star } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  CheckCircle,
+  Clock,
+  Star,
+  DollarSign,
+  Gift,
+  TrendingDown,
+  Sparkles,
+  Users,
+  Award,
+  Target,
+  ShoppingCart,
+  Percent,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -34,10 +50,36 @@ export default function LearningPathPage() {
   const [pathData, setPathData] = useState<any>(null);
   const [pathCourses, setPathCourses] = useState<Course[]>([]);
 
+  // Calculate pricing information
+  const calculatePricing = (courses: Course[]) => {
+    let totalOriginalPrice = 0;
+    let totalBundlePrice = 0;
+
+    courses.forEach((course) => {
+      const price =
+        course.price.toLowerCase() === "free"
+          ? 0
+          : parseFloat(course.price.replace(/[$,]/g, ""));
+      totalOriginalPrice += price;
+    });
+
+    // Bundle discount: 25% off total price
+    const discountPercentage = 25;
+    totalBundlePrice = totalOriginalPrice * (1 - discountPercentage / 100);
+    const savings = totalOriginalPrice - totalBundlePrice;
+
+    return {
+      originalPrice: totalOriginalPrice,
+      bundlePrice: totalBundlePrice,
+      savings: savings,
+      discountPercentage: discountPercentage,
+    };
+  };
+
   useEffect(() => {
     // Simulate loading path data
     const loadPathData = () => {
-      // Define learning paths
+      // Define learning paths with enhanced bundle information
       const paths = [
         {
           id: "beginner-property-investor",
@@ -45,6 +87,7 @@ export default function LearningPathPage() {
           description:
             "Build a strong foundation in property investment and understand the Singapore market",
           color: "#123B79",
+          bundleType: "Foundation Bundle",
           longDescription:
             "The Beginner Property Investor Path guides you through building a solid foundation of knowledge and skills essential for success in Singapore's property market. Starting with fundamental concepts and gradually progressing to more complex strategies, this structured learning journey prepares you to make informed investment decisions with confidence.",
           outcomes: [
@@ -63,6 +106,7 @@ export default function LearningPathPage() {
           description:
             "For HDB owners or upgraders aiming to move to condos or optimize their property journey",
           color: "#794B12",
+          bundleType: "Upgrader Bundle",
           longDescription:
             "The HDB Upgrader & Strategist Path guides you through making strategic decisions to optimize your property journey. Whether you're starting with your first HDB flat or planning to upgrade to a condominium, this learning path helps you navigate the complex choices and transitions in Singapore's property market.",
           outcomes: [
@@ -81,6 +125,7 @@ export default function LearningPathPage() {
           description:
             "Master the art of investing in condominiums, from selection to portfolio building",
           color: "#79123B",
+          bundleType: "Specialist Bundle",
           longDescription:
             "The Condo Investment Specialist Path takes you deep into the specialized world of condominium investments in Singapore. This focused learning journey helps you develop expertise in analyzing, selecting, and building a portfolio of condominium properties across different market segments.",
           outcomes: [
@@ -334,32 +379,35 @@ export default function LearningPathPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#F5F5F5]" data-oid="kfz7c.t">
-        <Navbar data-oid="minnk1x" />
-        <div className="pt-24 pb-16" data-oid="rhmd861">
-          <div className="container mx-auto px-4" data-oid="idf87eh">
-            <div className="animate-pulse" data-oid="4zl_6b3">
+      <div
+        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
+        data-oid="o.kwm5r"
+      >
+        <Navbar data-oid="3h_-7g." />
+        <div className="pt-24 pb-16" data-oid="wdkdvul">
+          <div className="container mx-auto px-4" data-oid="t_5zoya">
+            <div className="animate-pulse" data-oid="qe:h:wg">
               <div
                 className="h-8 bg-gray-200 rounded w-1/3 mb-4"
-                data-oid="5p246yn"
+                data-oid="ptfajji"
               ></div>
               <div
                 className="h-4 bg-gray-200 rounded w-2/3 mb-8"
-                data-oid="8gj9uzj"
+                data-oid="9diik.r"
               ></div>
               <div
                 className="h-64 bg-gray-200 rounded mb-8"
-                data-oid="5f.i57r"
+                data-oid="-xuun:8"
               ></div>
               <div
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                data-oid="myy.s2i"
+                data-oid="odvs:t_"
               >
                 {[...Array(3)].map((_, i) => (
                   <div
                     key={i}
                     className="h-64 bg-gray-200 rounded"
-                    data-oid="doixio."
+                    data-oid="rltgl7g"
                   ></div>
                 ))}
               </div>
@@ -372,26 +420,29 @@ export default function LearningPathPage() {
 
   if (!pathData) {
     return (
-      <div className="min-h-screen bg-[#F5F5F5]" data-oid="szeredi">
-        <Navbar data-oid="7-guuwa" />
-        <div className="pt-24 pb-16" data-oid="ar6zvt3">
+      <div
+        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
+        data-oid="74grb.n"
+      >
+        <Navbar data-oid="hsc9in0" />
+        <div className="pt-24 pb-16" data-oid="bkr5aw.">
           <div
             className="container mx-auto px-4 text-center"
-            data-oid="4l0yz:0"
+            data-oid="m3btuat"
           >
             <h1
               className="text-3xl font-bold text-gray-900 mb-4"
-              data-oid="uk6:m_i"
+              data-oid=":2p.j6v"
             >
               Learning Path Not Found
             </h1>
-            <p className="text-gray-600 mb-8" data-oid="xujzt1:">
+            <p className="text-gray-600 mb-8" data-oid="ph1.q0g">
               The learning path you're looking for doesn't exist or has been
               moved.
             </p>
-            <Link href="/courses" data-oid="y5m.43r">
-              <Button data-oid="ys9-p5b">
-                <ArrowLeft className="mr-2 h-4 w-4" data-oid="4qu.qut" />
+            <Link href="/courses" data-oid="ssxmb6-">
+              <Button data-oid="52e9dom">
+                <ArrowLeft className="mr-2 h-4 w-4" data-oid="1xgwdtt" />
                 Back to Courses
               </Button>
             </Link>
@@ -401,295 +452,578 @@ export default function LearningPathPage() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-[#F5F5F5]" data-oid="lr.h-ch">
-      <Navbar data-oid=":g__puk" />
+  const pricing = calculatePricing(pathCourses);
 
-      <div className="pt-24 pb-16" data-oid="mibnu6-">
-        <div className="container mx-auto px-4" data-oid="btdlnlg">
+  return (
+    <div
+      className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
+      data-oid="-29:9u6"
+    >
+      <Navbar data-oid="s:i4_s-" />
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5" data-oid="-kni.04">
+        <div
+          className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
+          data-oid="hajb:fm"
+        ></div>
+        <div
+          className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"
+          data-oid="_n1--4u"
+        ></div>
+        <div
+          className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"
+          data-oid="ca.obez"
+        ></div>
+      </div>
+
+      <div className="pt-24 pb-16 relative z-10" data-oid="z.vqp3:">
+        <div className="container mx-auto px-4" data-oid="owmfi42">
           {/* Back button */}
-          <div className="mb-6" data-oid="il8rc_2">
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            data-oid="z6.:i55"
+          >
             <Link
               href="/courses?tab=paths"
-              className="inline-flex items-center text-[#123B79] hover:underline"
-              data-oid="qii7vdi"
+              className="inline-flex items-center text-[#123B79] hover:text-[#0A2A5E] font-medium transition-colors group"
+              data-oid="vpmnf_9"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" data-oid="9_l:h-6" />
+              <ArrowLeft
+                className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform"
+                data-oid="m1bs:mk"
+              />
               Back to Learning Paths
             </Link>
-          </div>
+          </motion.div>
 
-          {/* Path Header */}
-          <div className="mb-12" data-oid="gy2.55m">
-            <div className="flex items-center mb-4" data-oid="r2axs0h">
-              <div
-                className="rounded-full w-14 h-14 flex items-center justify-center mr-4"
-                style={{ backgroundColor: pathData.color }}
-                data-oid="p83gwr2"
-              >
-                {pathData.id === "beginner-property-investor" ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    data-oid="s:z.m5f"
-                  >
-                    <rect
-                      x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="2"
-                      data-oid="-gwxqgt"
-                    />
-
-                    <path d="M9 3v18" data-oid="4ac-cx-" />
-                    <path d="M14 8h.01" data-oid="5sq.dl-" />
-                    <path d="M14 12h.01" data-oid="zpb2rb3" />
-                    <path d="M14 16h.01" data-oid="0fe65mc" />
-                  </svg>
-                ) : pathData.id === "hdb-upgrader-strategist" ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    data-oid="ozdv3g-"
-                  >
-                    <path d="M2 12h6" data-oid="9wqare-" />
-                    <path d="M22 12h-6" data-oid="-qtd1a:" />
-                    <path d="M12 2v2" data-oid="zy0b48x" />
-                    <path d="M12 8v2" data-oid="yct-gcc" />
-                    <path d="M12 14v2" data-oid="n3v:2qn" />
-                    <path d="M12 20v2" data-oid="948zrwp" />
-                    <path d="M19 9l-7 3-7-3" data-oid="ny1086z" />
-                    <path d="M19 15l-7-3-7 3" data-oid="txh9qv0" />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    data-oid="80-lu2q"
-                  >
-                    <path
-                      d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
-                      data-oid="3shz1hd"
-                    />
-                  </svg>
-                )}
-              </div>
-              <h1
-                className="text-3xl font-bold"
-                style={{ color: pathData.color }}
-                data-oid="yq_30_v"
-              >
-                {pathData.title}
-              </h1>
-            </div>
-            <p
-              className="text-xl text-gray-600 mb-6 max-w-3xl"
-              data-oid="m0r-l3p"
-            >
-              {pathData.description}
-            </p>
-            <div
-              className="flex items-center text-sm text-gray-500"
-              data-oid="j6zzfv3"
-            >
-              <BookOpen className="h-4 w-4 mr-1" data-oid="mey0kqd" />
-              <span data-oid="dmicl8o">{pathCourses.length} courses</span>
-              <span className="mx-2" data-oid="k4gi9wv">
-                •
-              </span>
-              <Clock className="h-4 w-4 mr-1" data-oid="lz-0fa3" />
-              <span data-oid="8006bao">
-                Approximately {pathCourses.length * 4} weeks to complete
-              </span>
-            </div>
-          </div>
-
-          {/* Path Description */}
-          <div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
-            data-oid="p1-bg_f"
+          {/* Enhanced Path Header */}
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            data-oid="jkf_wb."
           >
-            <div className="lg:col-span-2" data-oid="8yek5q8">
-              <h2
-                className="text-2xl font-bold mb-4"
-                style={{ color: pathData.color }}
-                data-oid="_b4okpe"
-              >
-                About This Learning Path
-              </h2>
-              <p className="text-gray-700 mb-6" data-oid="oyp6922">
-                {pathData.longDescription}
-              </p>
+            <div
+              className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 relative overflow-hidden"
+              data-oid="vy3upno"
+            >
+              {/* Gradient overlay */}
+              <div
+                className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#123B79] via-[#F0A500] to-[#123B79]"
+                data-oid="wgtf6_3"
+              ></div>
 
-              <h3 className="text-xl font-bold mb-4" data-oid="vonx5dc">
-                What You'll Learn
-              </h3>
-              <div className="space-y-2 mb-8" data-oid="h-6d07:">
-                {pathData.outcomes.map((outcome, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start"
-                    data-oid="r-0__gh"
-                  >
-                    <CheckCircle
-                      className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5"
-                      data-oid="ln:d9jc"
+              <div className="flex items-center mb-6" data-oid="9sicv_:">
+                <div
+                  className="rounded-full w-16 h-16 flex items-center justify-center mr-6 shadow-lg"
+                  style={{ backgroundColor: pathData.color }}
+                  data-oid=".krpmcz"
+                >
+                  {pathData.id === "beginner-property-investor" ? (
+                    <Target className="h-8 w-8 text-white" data-oid="pm4415v" />
+                  ) : pathData.id === "hdb-upgrader-strategist" ? (
+                    <TrendingDown
+                      className="h-8 w-8 text-white"
+                      data-oid="sicev:y"
                     />
+                  ) : (
+                    <Award className="h-8 w-8 text-white" data-oid=":ov82.i" />
+                  )}
+                </div>
+                <div data-oid="a:den-i">
+                  <div
+                    className="flex items-center gap-3 mb-2"
+                    data-oid="9wujhbd"
+                  >
+                    <h1
+                      className="text-4xl lg:text-5xl font-bold"
+                      style={{ color: pathData.color }}
+                      data-oid="w7o.b5r"
+                    >
+                      {pathData.title}
+                    </h1>
+                    <span
+                      className="bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-sm font-bold px-3 py-1 rounded-full"
+                      data-oid="nwjhnhc"
+                    >
+                      <Sparkles
+                        className="h-3 w-3 inline mr-1"
+                        data-oid="2slmqr_"
+                      />
 
-                    <p className="text-gray-700" data-oid="aoub_ta">
-                      {outcome}
+                      {pathData.bundleType}
+                    </span>
+                  </div>
+                  <p
+                    className="text-xl text-gray-700 max-w-4xl leading-relaxed"
+                    data-oid="qysc2by"
+                  >
+                    {pathData.description}
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex flex-wrap items-center gap-6 text-sm text-gray-600"
+                data-oid="e7mc1u8"
+              >
+                <div
+                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
+                  data-oid="b6td04k"
+                >
+                  <BookOpen className="h-4 w-4 mr-2" data-oid="eh8_ovl" />
+                  <span className="font-medium" data-oid="pbz7_e4">
+                    {pathCourses.length} courses
+                  </span>
+                </div>
+                <div
+                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
+                  data-oid="6_a3fp8"
+                >
+                  <Clock className="h-4 w-4 mr-2" data-oid="98jq_4t" />
+                  <span className="font-medium" data-oid="0cw-:1p">
+                    Approximately {pathCourses.length * 4} weeks
+                  </span>
+                </div>
+                <div
+                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
+                  data-oid="p8xsbp8"
+                >
+                  <Users className="h-4 w-4 mr-2" data-oid="_mgiwnk" />
+                  <span className="font-medium" data-oid="5s1epyb">
+                    {pathData.id === "beginner-property-investor"
+                      ? "Beginner to Intermediate"
+                      : pathData.id === "hdb-upgrader-strategist"
+                        ? "Intermediate"
+                        : "Intermediate to Advanced"}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Enhanced Path Description with Sidebar */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12"
+            data-oid="a7mi.cw"
+          >
+            <motion.div
+              className="lg:col-span-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              data-oid="7_uzz5v"
+            >
+              {/* About Section */}
+              <div
+                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 mb-6"
+                data-oid="y00bzyt"
+              >
+                <div className="flex items-center mb-6" data-oid="6z17k6j">
+                  <div
+                    className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
+                    data-oid="swx:-k6"
+                  >
+                    <BookOpen
+                      className="h-6 w-6 text-white"
+                      data-oid="889id:k"
+                    />
+                  </div>
+                  <h2
+                    className="text-3xl font-bold text-[#123B79]"
+                    data-oid="8wfc4_s"
+                  >
+                    About This Learning Path
+                  </h2>
+                </div>
+                <p
+                  className="text-gray-700 mb-8 text-lg leading-relaxed"
+                  data-oid="23qstym"
+                >
+                  {pathData.longDescription}
+                </p>
+
+                <div className="flex items-center mb-6" data-oid="ra.xepl">
+                  <div
+                    className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-3 mr-4"
+                    data-oid="c8ua433"
+                  >
+                    <Target className="h-6 w-6 text-white" data-oid="23wwwnh" />
+                  </div>
+                  <h3
+                    className="text-2xl font-bold text-[#123B79]"
+                    data-oid="vgezb62"
+                  >
+                    What You'll Master
+                  </h3>
+                </div>
+                <div className="space-y-4" data-oid="ougbuby">
+                  {pathData.outcomes.map((outcome, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-start group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-4 transition-all duration-300"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      data-oid="9zsw46p"
+                    >
+                      <div
+                        className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
+                        data-oid=".ydir46"
+                      >
+                        <CheckCircle
+                          className="h-4 w-4 text-white"
+                          data-oid="nxfney:"
+                        />
+                      </div>
+                      <p
+                        className="text-gray-700 font-medium text-lg leading-relaxed"
+                        data-oid="ez0-3_f"
+                      >
+                        {outcome}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Enhanced Sidebar */}
+            <motion.div
+              className="lg:col-span-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              data-oid="a5oesqd"
+            >
+              {/* Bundle Pricing Card */}
+              <div
+                className="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl border border-white/50 mb-6 relative"
+                data-oid="jwt9ihr"
+              >
+                {/* Premium Badge */}
+                <div
+                  className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
+                  data-oid="0:0vuzm"
+                >
+                  <Gift className="h-3 w-3 inline mr-1" data-oid="ug0jr0n" />
+                  BUNDLE DEAL
+                </div>
+
+                <div className="p-8" data-oid="b5b8qe5">
+                  <div className="text-center mb-8" data-oid="tljlrh7">
+                    <div className="mb-4" data-oid="qjm8wd5">
+                      <span
+                        className="text-sm text-gray-500 font-medium"
+                        data-oid="j5:v6sr"
+                      >
+                        Bundle Price
+                      </span>
+                      <div
+                        className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent"
+                        data-oid="szzb31v"
+                      >
+                        ${pricing.bundlePrice.toFixed(2)}
+                      </div>
+                    </div>
+
+                    {/* Savings Display */}
+                    <div
+                      className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-4 mb-6"
+                      data-oid="eq1g53z"
+                    >
+                      <div
+                        className="flex items-center justify-center mb-2"
+                        data-oid="u.c1m-s"
+                      >
+                        <TrendingDown
+                          className="h-5 w-5 text-red-600 mr-2"
+                          data-oid="nxse.53"
+                        />
+
+                        <span
+                          className="text-red-600 font-bold text-lg"
+                          data-oid=".qq..-:"
+                        >
+                          Save ${pricing.savings.toFixed(2)}
+                        </span>
+                      </div>
+                      <div className="text-sm text-gray-600" data-oid="g7uc4bh">
+                        <span className="line-through" data-oid=".p97kmg">
+                          ${pricing.originalPrice.toFixed(2)}
+                        </span>
+                        <span
+                          className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold"
+                          data-oid="0oa.tb3"
+                        >
+                          {pricing.discountPercentage}% OFF
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Primary CTA */}
+                    <Button
+                      className="w-full bg-gradient-to-r from-[#123B79] to-[#0A2A5E] hover:from-[#0A2A5E] hover:to-[#123B79] text-white font-bold py-6 text-lg mb-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
+                      data-oid="lrdt.-9"
+                    >
+                      <ShoppingCart
+                        className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
+                        data-oid="8t5r5-2"
+                      />
+                      Enroll in Bundle Now
+                    </Button>
+
+                    <p
+                      className="text-xs text-gray-500 mb-6"
+                      data-oid="esfax3:"
+                    >
+                      30-day money-back guarantee • Lifetime access
                     </p>
                   </div>
-                ))}
-              </div>
-            </div>
 
-            <div className="lg:col-span-1" data-oid="6-myn4k">
-              <div className="bg-gray-50 rounded-xl p-6" data-oid="a:n5vci">
-                <h3 className="text-xl font-bold mb-4" data-oid=".5uu-b9">
-                  Path Details
-                </h3>
-                <div className="space-y-4" data-oid="mux4:2j">
-                  <div className="flex items-center" data-oid="ws4tydn">
-                    <BookOpen
-                      className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="6iklm73"
-                    />
+                  {/* Bundle Benefits */}
+                  <div className="space-y-4" data-oid="9n.fj-3">
+                    <h3
+                      className="font-bold text-lg text-[#123B79] mb-4 flex items-center"
+                      data-oid="_-l3xi3"
+                    >
+                      <Gift className="h-5 w-5 mr-2" data-oid="6.0kfac" />
+                      Bundle Includes:
+                    </h3>
 
-                    <div data-oid="9fipv:4">
-                      <p className="font-semibold" data-oid="gh_4hl2">
-                        Courses
-                      </p>
-                      <p className="text-sm text-gray-600" data-oid=".u8yp9-">
-                        {pathCourses.length} courses
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center" data-oid="ae_mq1r">
-                    <Clock
-                      className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="6ztj4ve"
-                    />
+                    <div className="space-y-3" data-oid="n-fp57y">
+                      <div
+                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
+                        data-oid="jgou4li"
+                      >
+                        <div
+                          className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
+                          data-oid="5i99j6_"
+                        >
+                          <BookOpen
+                            className="h-4 w-4 text-white"
+                            data-oid="hk4bsbw"
+                          />
+                        </div>
+                        <div data-oid="-nc10z8">
+                          <p
+                            className="font-semibold text-gray-900 text-lg"
+                            data-oid="44ee68o"
+                          >
+                            {pathCourses.length} Premium Courses
+                          </p>
+                          <p
+                            className="text-sm text-gray-600"
+                            data-oid="jfsu7.u"
+                          >
+                            Structured learning path
+                          </p>
+                        </div>
+                      </div>
 
-                    <div data-oid="-f9mv5m">
-                      <p className="font-semibold" data-oid="a.1667r">
-                        Duration
-                      </p>
-                      <p className="text-sm text-gray-600" data-oid="c.i:daw">
-                        Approximately {pathCourses.length * 4} weeks
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center" data-oid="_b4-vrx">
-                    <Star
-                      className="h-5 w-5 text-[#123B79] mr-3"
-                      data-oid="q7zbs34"
-                    />
+                      <div
+                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
+                        data-oid="71d_nxu"
+                      >
+                        <div
+                          className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
+                          data-oid="-c7_w-j"
+                        >
+                          <Percent
+                            className="h-4 w-4 text-white"
+                            data-oid="_3jbe40"
+                          />
+                        </div>
+                        <div data-oid="qn-r84l">
+                          <p
+                            className="font-semibold text-gray-900 text-lg"
+                            data-oid="46uij4v"
+                          >
+                            25% Bundle Discount
+                          </p>
+                          <p
+                            className="text-sm text-gray-600"
+                            data-oid="--2elki"
+                          >
+                            Significant savings vs individual courses
+                          </p>
+                        </div>
+                      </div>
 
-                    <div data-oid="--wj8-o">
-                      <p className="font-semibold" data-oid="5-hm-74">
-                        Level
-                      </p>
-                      <p className="text-sm text-gray-600" data-oid="h1lw_kr">
-                        {pathData.id === "beginner-property-investor"
-                          ? "Beginner to Intermediate"
-                          : pathData.id === "hdb-upgrader-strategist"
-                            ? "Intermediate"
-                            : "Intermediate to Advanced"}
-                      </p>
+                      <div
+                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
+                        data-oid="_wrt.bz"
+                      >
+                        <div
+                          className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
+                          data-oid="-rbt5_d"
+                        >
+                          <Award
+                            className="h-4 w-4 text-white"
+                            data-oid="kgww2uk"
+                          />
+                        </div>
+                        <div data-oid="bm9c8bw">
+                          <p
+                            className="font-semibold text-gray-900 text-lg"
+                            data-oid="x3traxp"
+                          >
+                            Completion Certificate
+                          </p>
+                          <p
+                            className="text-sm text-gray-600"
+                            data-oid="pzi09jy"
+                          >
+                            Professional credential
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
+                        data-oid="b_dbvwk"
+                      >
+                        <div
+                          className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
+                          data-oid="u_kyejz"
+                        >
+                          <Users
+                            className="h-4 w-4 text-white"
+                            data-oid="ervomr-"
+                          />
+                        </div>
+                        <div data-oid="j.rus13">
+                          <p
+                            className="font-semibold text-gray-900 text-lg"
+                            data-oid="pjh4nah"
+                          >
+                            Expert Support
+                          </p>
+                          <p
+                            className="text-sm text-gray-600"
+                            data-oid="zoh4owe"
+                          >
+                            Direct access to instructors
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <div
-                  className="mt-6 pt-6 border-t border-gray-200"
-                  data-oid="ltnqlf."
-                >
-                  <Button
-                    className="w-full"
-                    style={{ backgroundColor: pathData.color }}
-                    data-oid="tgqbods"
-                  >
-                    Enroll in This Path
-                  </Button>
-                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          {/* Course Sequence */}
-          <div className="mb-16" data-oid="yl4yjpb">
-            <h2 className="text-2xl font-bold mb-6" data-oid="s2el842">
-              Course Sequence
-            </h2>
-            <div className="space-y-6" data-oid="y:77qt_">
+          {/* Enhanced Course Sequence */}
+          <motion.div
+            className="mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            data-oid="d2mt.mh"
+          >
+            <div className="flex items-center mb-8" data-oid="qslsssd">
+              <div
+                className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
+                data-oid="ashw1jc"
+              >
+                <BookOpen className="h-6 w-6 text-white" data-oid=".ibfnve" />
+              </div>
+              <h2
+                className="text-3xl font-bold text-[#123B79]"
+                data-oid="stx4f-d"
+              >
+                Course Sequence
+              </h2>
+            </div>
+            <div className="space-y-6" data-oid="vcil840">
               {pathCourses.map((course, index) => (
-                <div
+                <motion.div
                   key={course.id}
-                  className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm"
-                  data-oid=".c24mkq"
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl border border-white/50 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  data-oid="h4l3ata"
                 >
-                  <div className="flex flex-col md:flex-row" data-oid="kgzyf5c">
-                    <div className="md:w-1/4 relative" data-oid="1taeac8">
+                  <div className="flex flex-col md:flex-row" data-oid="1160-51">
+                    <div className="md:w-1/4 relative" data-oid="1eybeyt">
                       <div
                         className="relative h-48 md:h-full"
-                        data-oid="8_5tehz"
+                        data-oid="_m.19r8"
                       >
                         <Image
                           src={course.image || "/placeholder.svg"}
                           alt={course.title}
                           fill
                           className="object-cover"
-                          data-oid="21a-t5q"
+                          data-oid="zi2pcks"
                         />
 
                         <div
-                          className="absolute inset-0 bg-black bg-opacity-20"
-                          data-oid="djp_kcu"
+                          className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
+                          data-oid="6e19c8p"
                         ></div>
                         <div
-                          className="absolute top-4 left-4 bg-white text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center"
-                          data-oid="alodo-p"
+                          className="absolute top-4 left-4 bg-gradient-to-r from-[#123B79] to-[#0A2A5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                          data-oid="bctv3vv"
                         >
                           {index + 1}
                         </div>
+                        <div
+                          className="absolute top-4 right-4"
+                          data-oid="3-fnfl5"
+                        >
+                          <span
+                            className={`text-xs font-bold px-3 py-1 rounded-full shadow-lg ${
+                              course.price.toLowerCase() === "free"
+                                ? "bg-green-500 text-white"
+                                : "bg-white text-gray-800"
+                            }`}
+                            data-oid="w4hsbvt"
+                          >
+                            {course.price.toLowerCase() === "free"
+                              ? "FREE"
+                              : course.price}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="p-6 md:w-3/4" data-oid="784.syi">
-                      <h3 className="text-xl font-bold mb-2" data-oid="3ho3yi2">
+                    <div className="p-8 md:w-3/4" data-oid="2idhtfh">
+                      <h3
+                        className="text-2xl font-bold text-[#123B79] mb-3"
+                        data-oid="5.gvp9c"
+                      >
                         {course.title}
                       </h3>
                       <p
-                        className="text-gray-500 text-sm mb-2"
-                        data-oid="i_cyuvc"
+                        className="text-gray-500 text-sm mb-3 font-medium"
+                        data-oid="ckp94cf"
                       >
                         Instructor: {course.instructor} • {course.duration}
                       </p>
-                      <p className="text-gray-700 mb-4" data-oid=":ydu47u">
+                      <p
+                        className="text-gray-700 mb-6 text-lg leading-relaxed"
+                        data-oid="ckfeuj3"
+                      >
                         {course.description}
                       </p>
                       <div
-                        className="flex flex-wrap gap-2 mb-4"
-                        data-oid="k28_kuy"
+                        className="flex flex-wrap gap-2 mb-6"
+                        data-oid="enqg:fy"
                       >
                         {course.categories.map((category, i) => (
                           <span
                             key={i}
-                            className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 rounded-full"
-                            data-oid="2unhe:c"
+                            className="text-xs font-medium px-3 py-1 bg-gradient-to-r from-[#123B79]/10 to-[#123B79]/5 text-[#123B79] rounded-full border border-[#123B79]/20"
+                            data-oid="xg0hqz0"
                           >
                             {category}
                           </span>
@@ -697,64 +1031,133 @@ export default function LearningPathPage() {
                       </div>
                       <div
                         className="flex items-center justify-between"
-                        data-oid="4.qx6g0"
+                        data-oid="14:kt:w"
                       >
-                        <div className="flex items-center" data-oid="2b5now4">
-                          <div className="flex" data-oid="4k6vfrt">
+                        <div className="flex items-center" data-oid="o6re.ts">
+                          <div className="flex mr-3" data-oid="sz197b5">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
-                                className={`h-4 w-4 ${
+                                className={`h-5 w-5 ${
                                   star <= Math.round(course.rating)
-                                    ? "text-yellow-400 fill-yellow-400"
+                                    ? "text-[#F0A500] fill-[#F0A500]"
                                     : "text-gray-300"
                                 }`}
-                                data-oid="xl6c_2d"
+                                data-oid="xnskt.f"
                               />
                             ))}
                           </div>
                           <span
-                            className="ml-2 text-sm text-gray-600"
-                            data-oid="qf8l66r"
+                            className="text-sm text-gray-600 font-medium"
+                            data-oid="qquol2y"
                           >
                             {course.rating} ({course.reviewCount} reviews)
                           </span>
                         </div>
-                        <div className="text-lg font-bold" data-oid=":wlgvvm">
-                          {course.price}
+                        <div className="text-right" data-oid="x_c43x-">
+                          <div
+                            className="text-2xl font-bold text-[#123B79]"
+                            data-oid="aa7qz54"
+                          >
+                            {course.price.toLowerCase() === "free" ? (
+                              <span
+                                className="text-green-600"
+                                data-oid="k8ttzuh"
+                              >
+                                FREE
+                              </span>
+                            ) : (
+                              course.price
+                            )}
+                          </div>
+                          {course.price.toLowerCase() !== "free" && (
+                            <div
+                              className="text-xs text-gray-500"
+                              data-oid="eiuoz6p"
+                            >
+                              Individual price
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          {/* Call to Action */}
-          <div
-            className="bg-gray-50 rounded-xl p-8 text-center"
-            data-oid="bxs4gn_"
+          {/* Enhanced Call to Action */}
+          <motion.div
+            className="bg-gradient-to-br from-[#123B79] via-[#0A2A5E] to-[#123B79] text-white rounded-3xl p-12 text-center relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            data-oid="4nhflvx"
           >
-            <h2 className="text-2xl font-bold mb-4" data-oid="3noqqnz">
-              Ready to Start Your Learning Journey?
-            </h2>
-            <p
-              className="text-gray-600 mb-6 max-w-2xl mx-auto"
-              data-oid="-2wbrr7"
-            >
-              Enroll in this learning path to gain structured access to all
-              courses and track your progress toward becoming an expert in{" "}
-              {pathData.title.toLowerCase()}.
-            </p>
-            <Button
-              size="lg"
-              style={{ backgroundColor: pathData.color }}
-              data-oid="2nntqvc"
-            >
-              Enroll Now
-            </Button>
-          </div>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10" data-oid="iogui4u">
+              <div
+                className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full mix-blend-overlay filter blur-xl animate-pulse"
+                data-oid="jzviz-z"
+              ></div>
+              <div
+                className="absolute bottom-10 right-10 w-32 h-32 bg-[#F0A500] rounded-full mix-blend-overlay filter blur-xl animate-pulse delay-1000"
+                data-oid="ah8-fwt"
+              ></div>
+            </div>
+
+            <div className="relative z-10" data-oid="xce8_pc">
+              <h2 className="text-4xl font-bold mb-4" data-oid="bpotfs_">
+                Ready to Start Your
+                <span
+                  className="bg-gradient-to-r from-[#F0A500] to-[#D89400] bg-clip-text text-transparent"
+                  data-oid="ul.wmej"
+                >
+                  {" "}
+                  Learning Journey?
+                </span>
+              </h2>
+              <p
+                className="text-xl mb-8 max-w-3xl mx-auto opacity-90"
+                data-oid=".t0obyv"
+              >
+                Join hundreds of successful students and save $
+                {pricing.savings.toFixed(2)} with our exclusive bundle deal.
+                Transform your property investment knowledge with expert
+                guidance.
+              </p>
+              <div
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                data-oid="v2q96hp"
+              >
+                <Button
+                  className="bg-gradient-to-r from-[#F0A500] to-[#D89400] hover:from-[#D89400] hover:to-[#F0A500] text-[#123B79] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 group"
+                  data-oid="c_don9s"
+                >
+                  <ShoppingCart
+                    className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
+                    data-oid="mrq93nu"
+                  />
+                  Enroll Now - Save ${pricing.savings.toFixed(2)}
+                </Button>
+                <div className="text-center" data-oid="_re4_i.">
+                  <div className="text-sm opacity-80" data-oid="rhff2ml">
+                    Bundle Price
+                  </div>
+                  <div className="text-2xl font-bold" data-oid="ii7m_nk">
+                    ${pricing.bundlePrice.toFixed(2)}
+                  </div>
+                  <div
+                    className="text-sm opacity-80 line-through"
+                    data-oid="tou63yh"
+                  >
+                    ${pricing.originalPrice.toFixed(2)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
