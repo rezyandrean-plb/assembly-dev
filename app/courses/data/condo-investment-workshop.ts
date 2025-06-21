@@ -1,4 +1,4 @@
-import type { CourseData } from "../components/course-detail-template-renew"
+import type { CourseData } from "../components/course-detail-template"
 import { getFacilitator } from "@/app/data/facilitators"
 
 const melvin = getFacilitator("melvin-lim");
