@@ -433,7 +433,6 @@ export default function FAQPage() {
                     data-oid="t92agab"
                   />
                 </div>
-
                 <h2
                   className="text-3xl lg:text-4xl font-bold mb-4"
                   data-oid="3x-oqz4"
@@ -447,7 +446,6 @@ export default function FAQPage() {
                   Can't find the answer you're looking for? Our support team is
                   here to help you succeed.
                 </p>
-
                 <div
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                   data-oid="48rm4nv"
@@ -468,7 +466,7 @@ export default function FAQPage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-xl group transition-all duration-300"
+                    className="border-2 border-white/30 bg-slate-200 text-primary hover:bg-white/70 px-8 py-4 text-lg rounded-xl group transition-all duration-300"
                     asChild
                     data-oid="567ibrr"
                   >
@@ -480,49 +478,7 @@ export default function FAQPage() {
                       Email Us
                     </a>
                   </Button>
-                </div>
-
-                {/* Contact Info */}
-                <div
-                  className="flex flex-wrap gap-8 justify-center mt-12 pt-8 border-t border-white/20"
-                  data-oid="-tio_vt"
-                >
-                  <div className="flex items-center gap-3" data-oid="3xc84ka">
-                    <div
-                      className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center"
-                      data-oid="6g7005j"
-                    >
-                      <Mail className="w-5 h-5 text-white" data-oid="uyfev:f" />
-                    </div>
-                    <div className="text-left" data-oid="kuc68w.">
-                      <div className="text-sm text-white/80" data-oid="5lsu.y2">
-                        Email
-                      </div>
-                      <div className="font-semibold" data-oid="3utmpww">
-                        support@assembly.sg
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3" data-oid="1_n:lua">
-                    <div
-                      className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center"
-                      data-oid=".5ra35x"
-                    >
-                      <Phone
-                        className="w-5 h-5 text-white"
-                        data-oid="gu6yp7."
-                      />
-                    </div>
-                    <div className="text-left" data-oid="-cdbinh">
-                      <div className="text-sm text-white/80" data-oid="xrq0:nu">
-                        Response Time
-                      </div>
-                      <div className="font-semibold" data-oid="kd.abpg">
-                        Within 24 hours
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </div>{" "}
               </div>
             </div>
           </div>
