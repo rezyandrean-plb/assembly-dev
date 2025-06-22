@@ -4,11 +4,28 @@ import type React from "react";
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Search, Filter, ChevronDown, X } from "lucide-react";
+import {
+  Search,
+  Filter,
+  ChevronDown,
+  X,
+  Brain,
+  Target,
+  Clock,
+  TrendingUp,
+  Home,
+  Building,
+  MapPin,
+  DollarSign,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 import CourseCard from "@/components/course-card";
 import LearningPathCard from "@/components/learning-path-card";
 import Navbar from "@/components/navbar";
 import { courses as mainCourses, Course } from "@/app/data/courses";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface LearningPath {
   id: string;
@@ -34,7 +51,9 @@ export default function CoursesPage() {
   // State for courses data
   const [courses, setCourses] = useState<Course[]>(mainCourses);
   const [loading, setLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState<"courses" | "paths">("courses");
+  const [activeTab, setActiveTab] = useState<
+    "courses" | "paths" | "recommendation"
+  >("courses");
 
   // Update the filter options with the new values
   const [selectedFilters, setSelectedFilters] = useState<FilterState>({
@@ -67,6 +86,145 @@ export default function CoursesPage() {
   // Add a new state for current page
   const [currentPage, setCurrentPage] = useState(1);
   const coursesPerPage = 18;
+
+  // Assessment state
+  const [assessmentStep, setAssessmentStep] = useState(0);
+  const [assessmentAnswers, setAssessmentAnswers] = useState<{
+    [key: string]: any;
+  }>({});
+  const [showResults, setShowResults] = useState(false);
+  const [personalizedPlan, setPersonalizedPlan] = useState<{
+    profile: string;
+    courses: Course[];
+    learningPath: string;
+    estimatedDuration: string;
+    confidence: number;
+  } | null>(null);
+
+  const assessmentQuestions = [
+    {
+      id: "experience",
+      type: "single",
+      question:
+        "How would you describe your current experience with property investment?",
+      options: [
+        {
+          label: "I'm a complete beginner, just starting to explore.",
+          value: "beginner",
+        },
+        {
+          label:
+            "I have some theoretical knowledge but no practical experience.",
+          value: "knowledgeable",
+        },
+        {
+          label: "I have purchased my own home for dwelling.",
+          value: "homeowner",
+        },
+        {
+          label: "I own one or more investment properties.",
+          value: "investor",
+        },
+      ],
+    },
+    {
+      id: "goal",
+      type: "single",
+      question: "What is your primary goal for joining Assembly?",
+      options: [
+        {
+          label: "To buy my first home (HDB or private).",
+          value: "first_home",
+        },
+        {
+          label: "To upgrade from my current property to a better one.",
+          value: "upgrade",
+        },
+        {
+          label: "To build a property portfolio for passive income.",
+          value: "portfolio",
+        },
+        {
+          label:
+            "To master advanced investment strategies and financial modeling.",
+          value: "advanced",
+        },
+      ],
+    },
+    {
+      id: "interests",
+      type: "multiple",
+      question:
+        "Which property sectors are you most interested in? (Select all that apply)",
+      options: [
+        { label: "Public Housing (HDB)", value: "hdb" },
+        {
+          label: "Private Condominiums (New Launch & Resale)",
+          value: "condo",
+        },
+        { label: "Landed Properties", value: "landed" },
+        { label: "Commercial Properties", value: "commercial" },
+      ],
+    },
+    {
+      id: "confidence",
+      type: "single",
+      question: "How confident are you in analyzing a property deal?",
+      options: [
+        {
+          label: "Not confident at all, I don't know where to start.",
+          value: "none",
+        },
+        {
+          label:
+            "I can look at basic numbers but struggle with deeper analysis.",
+          value: "basic",
+        },
+        {
+          label: "I am fairly confident but would like a structured framework.",
+          value: "confident",
+        },
+        {
+          label: "I am very confident and looking for nuanced insights.",
+          value: "expert",
+        },
+      ],
+    },
+  ];
+
+  const handleAssessmentAnswer = (questionId: string, answer: any) => {
+    setAssessmentAnswers((prev) => ({
+      ...prev,
+      [questionId]: answer,
+    }));
+  };
+
+  const calculateRecommendations = () => {
+    // This is a placeholder for your recommendation logic.
+    // It generates a sample plan for now.
+    const profile = "Ambitious Property Upgrader";
+    const recommendedCourses = mainCourses.slice(0, 3);
+    const learningPath = "hdb-upgrader-strategist";
+    const estimatedDuration = "6-8 Weeks";
+    const confidence = 95;
+
+    setPersonalizedPlan({
+      profile,
+      courses: recommendedCourses,
+      learningPath,
+      estimatedDuration,
+      confidence,
+    });
+
+    setShowResults(true);
+  };
+
+  const restartAssessment = () => {
+    setAssessmentStep(0);
+    setAssessmentAnswers({});
+    setShowResults(false);
+    setPersonalizedPlan(null);
+  };
 
   // Learning paths data
   const learningPaths: LearningPath[] = [
@@ -350,9 +508,12 @@ export default function CoursesPage() {
 
             {/* Tab Navigation */}
             <div className="mb-8 border-b border-gray-200" data-oid="c_fbhtd">
-              <div className="flex space-x-8" data-oid="mse._8a">
+              <div
+                className="flex space-x-8 overflow-x-auto"
+                data-oid="mse._8a"
+              >
                 <button
-                  className={`pb-4 px-1 font-medium text-lg transition-colors ${
+                  className={`pb-4 px-1 font-medium text-lg transition-colors whitespace-nowrap ${
                     activeTab === "courses"
                       ? "text-[#123B79] border-b-2 border-[#123B79]"
                       : "text-gray-600 hover:text-gray-900"
@@ -363,7 +524,7 @@ export default function CoursesPage() {
                   Individual Courses
                 </button>
                 <button
-                  className={`pb-4 px-1 font-medium text-lg transition-colors ${
+                  className={`pb-4 px-1 font-medium text-lg transition-colors whitespace-nowrap ${
                     activeTab === "paths"
                       ? "text-[#123B79] border-b-2 border-[#123B79]"
                       : "text-gray-600 hover:text-gray-900"
@@ -372,6 +533,17 @@ export default function CoursesPage() {
                   data-oid="m6pcppy"
                 >
                   Learning Paths
+                </button>
+                <button
+                  className={`pb-4 px-1 font-medium text-lg transition-colors whitespace-nowrap ${
+                    activeTab === "recommendation"
+                      ? "text-[#123B79] border-b-2 border-[#123B79]"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={() => setActiveTab("recommendation")}
+                  data-oid="rec_tab"
+                >
+                  Personalised Course Recommendation
                 </button>
               </div>
             </div>
@@ -1149,6 +1321,519 @@ export default function CoursesPage() {
                   </div>
                 </div>
               </>
+            ) : activeTab === "recommendation" ? (
+              // Personalised Course Recommendation Tab Content
+              <div className="max-w-4xl mx-auto" data-oid="vdjbf0-">
+                {!showResults ? (
+                  <div
+                    className="bg-white rounded-2xl shadow-lg p-8"
+                    data-oid="5j5327q"
+                  >
+                    {/* Assessment Header */}
+                    <div className="text-center mb-8" data-oid="mflin:p">
+                      <div
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                        data-oid="zu_b-rt"
+                      >
+                        <Brain
+                          className="w-8 h-8 text-primary"
+                          data-oid="4wm8sw-"
+                        />
+                      </div>
+                      <h2
+                        className="text-3xl font-bold text-gray-900 mb-4"
+                        data-oid="3dor7x:"
+                      >
+                        Personalised Course Recommendation
+                      </h2>
+                      <p className="text-gray-600 text-lg" data-oid="gucqxn_">
+                        Answer a few questions to get a customized learning path
+                        tailored to your goals and experience level.
+                      </p>
+
+                      {/* Progress Bar */}
+                      <div className="mt-6" data-oid="9_2k2l-">
+                        <div
+                          className="flex justify-between text-sm text-gray-500 mb-2"
+                          data-oid="rv1h1kf"
+                        >
+                          <span data-oid="2aq.2du">
+                            Question {assessmentStep + 1} of{" "}
+                            {assessmentQuestions.length}
+                          </span>
+                          <span data-oid="elz0ron">
+                            {Math.round(
+                              ((assessmentStep + 1) /
+                                assessmentQuestions.length) *
+                                100,
+                            )}
+                            %
+                          </span>
+                        </div>
+                        <div
+                          className="w-full bg-gray-200 rounded-full h-2"
+                          data-oid=".ql8t_d"
+                        >
+                          <motion.div
+                            className="bg-primary h-2 rounded-full"
+                            initial={{ width: 0 }}
+                            animate={{
+                              width: `${((assessmentStep + 1) / assessmentQuestions.length) * 100}%`,
+                            }}
+                            transition={{ duration: 0.3 }}
+                            data-oid="3jbypnb"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Assessment Questions */}
+                    <AnimatePresence mode="wait" data-oid="uz_nur5">
+                      <motion.div
+                        key={assessmentStep}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="mb-8"
+                        data-oid="1_idavi"
+                      >
+                        {assessmentStep < assessmentQuestions.length && (
+                          <div data-oid="vs17i95">
+                            <h3
+                              className="text-xl font-semibold text-gray-900 mb-6"
+                              data-oid="28e3xiq"
+                            >
+                              {assessmentQuestions[assessmentStep].question}
+                            </h3>
+
+                            <div className="space-y-3" data-oid="-jd_px4">
+                              {assessmentQuestions[assessmentStep].options.map(
+                                (option, index) => (
+                                  <motion.button
+                                    key={option.value}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      delay: index * 0.1,
+                                    }}
+                                    className={`w-full p-4 text-left border-2 rounded-xl transition-all duration-200 hover:border-primary/50 hover:bg-primary/5 ${
+                                      assessmentQuestions[assessmentStep]
+                                        .type === "multiple"
+                                        ? assessmentAnswers[
+                                            assessmentQuestions[assessmentStep]
+                                              .id
+                                          ]?.some(
+                                            (a: any) =>
+                                              a.value === option.value,
+                                          )
+                                          ? "border-primary bg-primary/10"
+                                          : "border-gray-200"
+                                        : assessmentAnswers[
+                                              assessmentQuestions[
+                                                assessmentStep
+                                              ].id
+                                            ]?.value === option.value
+                                          ? "border-primary bg-primary/10"
+                                          : "border-gray-200"
+                                    }`}
+                                    onClick={() => {
+                                      const questionId =
+                                        assessmentQuestions[assessmentStep].id;
+                                      if (
+                                        assessmentQuestions[assessmentStep]
+                                          .type === "multiple"
+                                      ) {
+                                        const currentAnswers =
+                                          assessmentAnswers[questionId] || [];
+                                        const isSelected = currentAnswers.some(
+                                          (a: any) => a.value === option.value,
+                                        );
+                                        if (isSelected) {
+                                          handleAssessmentAnswer(
+                                            questionId,
+                                            currentAnswers.filter(
+                                              (a: any) =>
+                                                a.value !== option.value,
+                                            ),
+                                          );
+                                        } else {
+                                          handleAssessmentAnswer(questionId, [
+                                            ...currentAnswers,
+                                            option,
+                                          ]);
+                                        }
+                                      } else {
+                                        handleAssessmentAnswer(
+                                          questionId,
+                                          option,
+                                        );
+                                      }
+                                    }}
+                                    data-oid="b:0d3n."
+                                  >
+                                    <div
+                                      className="flex items-center justify-between"
+                                      data-oid="lknisps"
+                                    >
+                                      <span
+                                        className="font-medium text-gray-900"
+                                        data-oid="32jzupp"
+                                      >
+                                        {option.label}
+                                      </span>
+                                      {assessmentQuestions[assessmentStep]
+                                        .type === "multiple" ? (
+                                        <div
+                                          className={`w-5 h-5 border-2 rounded ${
+                                            assessmentAnswers[
+                                              assessmentQuestions[
+                                                assessmentStep
+                                              ].id
+                                            ]?.some(
+                                              (a: any) =>
+                                                a.value === option.value,
+                                            )
+                                              ? "border-primary bg-primary"
+                                              : "border-gray-300"
+                                          }`}
+                                          data-oid="9.w9q-e"
+                                        >
+                                          {assessmentAnswers[
+                                            assessmentQuestions[assessmentStep]
+                                              .id
+                                          ]?.some(
+                                            (a: any) =>
+                                              a.value === option.value,
+                                          ) && (
+                                            <CheckCircle
+                                              className="w-3 h-3 text-white m-0.5"
+                                              data-oid="pkk_ubs"
+                                            />
+                                          )}
+                                        </div>
+                                      ) : (
+                                        <div
+                                          className={`w-5 h-5 border-2 rounded-full ${
+                                            assessmentAnswers[
+                                              assessmentQuestions[
+                                                assessmentStep
+                                              ].id
+                                            ]?.value === option.value
+                                              ? "border-primary bg-primary"
+                                              : "border-gray-300"
+                                          }`}
+                                          data-oid="s9wm-du"
+                                        >
+                                          {assessmentAnswers[
+                                            assessmentQuestions[assessmentStep]
+                                              .id
+                                          ]?.value === option.value && (
+                                            <div
+                                              className="w-2 h-2 bg-white rounded-full m-1"
+                                              data-oid="dm:iula"
+                                            />
+                                          )}
+                                        </div>
+                                      )}
+                                    </div>
+                                  </motion.button>
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </motion.div>
+                    </AnimatePresence>
+
+                    {/* Navigation Buttons */}
+                    <div
+                      className="flex justify-between pt-6 border-t border-gray-200"
+                      data-oid="aw_p2wu"
+                    >
+                      <Button
+                        variant="outline"
+                        onClick={() =>
+                          setAssessmentStep(Math.max(0, assessmentStep - 1))
+                        }
+                        disabled={assessmentStep === 0}
+                        className="flex items-center gap-2"
+                        data-oid="c8:nb78"
+                      >
+                        Previous
+                      </Button>
+
+                      {assessmentStep < assessmentQuestions.length - 1 ? (
+                        <Button
+                          onClick={() => setAssessmentStep(assessmentStep + 1)}
+                          disabled={
+                            !assessmentAnswers[
+                              assessmentQuestions[assessmentStep].id
+                            ]
+                          }
+                          className="bg-primary hover:bg-primary-dark flex items-center gap-2"
+                          data-oid="6dtgwap"
+                        >
+                          Next
+                          <ArrowRight className="w-4 h-4" data-oid="j:w:l9z" />
+                        </Button>
+                      ) : (
+                        <Button
+                          onClick={calculateRecommendations}
+                          disabled={
+                            !assessmentAnswers[
+                              assessmentQuestions[assessmentStep].id
+                            ]
+                          }
+                          className="bg-primary hover:bg-primary-dark flex items-center gap-2"
+                          data-oid="a_n1.9h"
+                        >
+                          Get My Recommendations
+                          <Target className="w-4 h-4" data-oid="u5p_fcz" />
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  // Results Display
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    data-oid="6qtlkf2"
+                  >
+                    {/* Results Header */}
+                    <div
+                      className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white mb-8"
+                      data-oid="iez7vfl"
+                    >
+                      <div className="text-center" data-oid="pi4qih5">
+                        <div
+                          className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                          data-oid="beg98xw"
+                        >
+                          <Target
+                            className="w-8 h-8 text-white"
+                            data-oid="u21etfp"
+                          />
+                        </div>
+                        <h2
+                          className="text-3xl font-bold mb-4"
+                          data-oid="0e4r7fk"
+                        >
+                          Your Personalised Learning Plan
+                        </h2>
+                        <p
+                          className="text-white/90 text-lg mb-6"
+                          data-oid="cbulr1v"
+                        >
+                          Based on your responses, we've created a customized
+                          learning path just for you.
+                        </p>
+
+                        {/* Confidence Score */}
+                        <div
+                          className="bg-white/10 rounded-xl p-4 inline-block"
+                          data-oid="0tbve6f"
+                        >
+                          <div
+                            className="flex items-center gap-3"
+                            data-oid="4..efw2"
+                          >
+                            <BarChart3 className="w-6 h-6" data-oid="7202:b6" />
+                            <div data-oid="lo.qj3n">
+                              <div
+                                className="text-sm text-white/80"
+                                data-oid="er7de6y"
+                              >
+                                Recommendation Confidence
+                              </div>
+                              <div
+                                className="text-2xl font-bold"
+                                data-oid="e6zz_3c"
+                              >
+                                {personalizedPlan?.confidence}%
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Profile Summary */}
+                    <div
+                      className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
+                      data-oid="g7g7uwc"
+                    >
+                      <div
+                        className="bg-white rounded-xl p-6 shadow-lg"
+                        data-oid="3zoma6y"
+                      >
+                        <div
+                          className="flex items-center gap-3 mb-3"
+                          data-oid="yfhdhfg"
+                        >
+                          <div
+                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            data-oid="dk57f31"
+                          >
+                            <Target
+                              className="w-5 h-5 text-primary"
+                              data-oid="bo3kvjt"
+                            />
+                          </div>
+                          <h3
+                            className="font-semibold text-gray-900"
+                            data-oid="jwydj-7"
+                          >
+                            Your Profile
+                          </h3>
+                        </div>
+                        <p
+                          className="text-lg font-medium text-primary"
+                          data-oid="r7zl_q3"
+                        >
+                          {personalizedPlan?.profile}
+                        </p>
+                      </div>
+
+                      <div
+                        className="bg-white rounded-xl p-6 shadow-lg"
+                        data-oid="r1_drzc"
+                      >
+                        <div
+                          className="flex items-center gap-3 mb-3"
+                          data-oid="0uu6-c5"
+                        >
+                          <div
+                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            data-oid="3-yov6f"
+                          >
+                            <Clock
+                              className="w-5 h-5 text-primary"
+                              data-oid="q6gh5w5"
+                            />
+                          </div>
+                          <h3
+                            className="font-semibold text-gray-900"
+                            data-oid="m.lx_ax"
+                          >
+                            Estimated Duration
+                          </h3>
+                        </div>
+                        <p
+                          className="text-lg font-medium text-primary"
+                          data-oid="::il3zz"
+                        >
+                          {personalizedPlan?.estimatedDuration}
+                        </p>
+                      </div>
+
+                      <div
+                        className="bg-white rounded-xl p-6 shadow-lg"
+                        data-oid=":2laym3"
+                      >
+                        <div
+                          className="flex items-center gap-3 mb-3"
+                          data-oid="-.geaxg"
+                        >
+                          <div
+                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            data-oid="9z.tkqv"
+                          >
+                            <TrendingUp
+                              className="w-5 h-5 text-primary"
+                              data-oid="t0alh6u"
+                            />
+                          </div>
+                          <h3
+                            className="font-semibold text-gray-900"
+                            data-oid="mxgy79n"
+                          >
+                            Learning Path
+                          </h3>
+                        </div>
+                        <p
+                          className="text-lg font-medium text-primary"
+                          data-oid="d2kq:2a"
+                        >
+                          {personalizedPlan?.learningPath ===
+                          "beginner-property-investor"
+                            ? "Beginner Property Investor"
+                            : personalizedPlan?.learningPath ===
+                                "hdb-upgrader-strategist"
+                              ? "HDB Upgrader & Strategist"
+                              : "Condo Investment Specialist"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Recommended Courses */}
+                    <div
+                      className="bg-white rounded-2xl p-8 shadow-lg mb-8"
+                      data-oid="ubyejc:"
+                    >
+                      <h3
+                        className="text-2xl font-bold text-gray-900 mb-6"
+                        data-oid="_-2dpyk"
+                      >
+                        Your Recommended Courses
+                      </h3>
+                      <div
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        data-oid=":98cfil"
+                      >
+                        {personalizedPlan?.courses.map((course, index) => (
+                          <motion.div
+                            key={course.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            data-oid="5ue94ug"
+                          >
+                            <CourseCard
+                              course={{
+                                title: course.title,
+                                level: course.level || "All Levels",
+                                duration: course.duration || "Self-paced",
+                                image: course.image,
+                                slug: course.slug,
+                                instructorIds: course.instructorIds || [],
+                              }}
+                              delay={0}
+                              data-oid="_:0pepa"
+                            />
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div
+                      className="flex flex-col sm:flex-row gap-4 justify-center"
+                      data-oid="hwcndm0"
+                    >
+                      <Button
+                        onClick={() => setActiveTab("courses")}
+                        className="bg-primary hover:bg-primary-dark flex items-center gap-2"
+                        data-oid="rwjcyob"
+                      >
+                        Browse All Courses
+                        <ArrowRight className="w-4 h-4" data-oid="k5iwyub" />
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={restartAssessment}
+                        className="flex items-center gap-2"
+                        data-oid="81-:6og"
+                      >
+                        Retake Assessment
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
             ) : (
               // Learning Paths Tab Content
               <div data-oid="hc62c4g">
