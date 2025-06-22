@@ -1,31 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 export const courseData: CourseData = {
   id: 28,
   title: "Freehold Property Investment Strategy",
   slug: "freehold-property-investment-strategy",
   level: "All Levels",
-  duration: "1 hour",
-  category: "condo",
+  duration: "1 hour 11 minutes",
+  category: "Webinar",
   price: "Free",
   image: "/freehold-property-investment-strategy.jpg", // Updated image path
   featured: false,
-  tags: ["Freehold", "Investment", "Webinar"],
-  rating: 4.7,
-  students: 820,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/professional-headshot-ong-yu-rong.png",
-      bio: "Investment Analyst specializing in real estate market trends",
-    },
-  ],
-  lastUpdated: "December 2022",
+  tags: ["Landed", "Condo", "Webinar"],
+  rating: 0,
+  students: 14,
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+      :[],
+  lastUpdated: "10/09/2024",
   description:
     "Freehold properties represent a distinct investment category in Singapore's real estate market, offering unique advantages and considerations. This webinar explores specialized strategies for investing in freehold properties, examining their historical performance, value proposition, and optimal positioning within an investment portfolio. Property experts Melvin Lim and Ong Yu Rong provide data-driven insights to help you determine if and how freehold properties should feature in your investment strategy.",
   whatYouWillLearn: [

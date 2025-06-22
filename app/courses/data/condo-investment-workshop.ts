@@ -26,7 +26,7 @@ export const courseData: CourseData = {
         },
       ]
       : [],
-  lastUpdated: "20 June 2025",
+  lastUpdated: "20/06/2025",
   description: `This comprehensive workshop is designed for property investors looking to build or expand their condominium portfolio in Singapore's competitive market. Through a combination of expert instruction, case studies, and hands-on exercises, you'll develop the skills and confidence to identify, analyze, and acquire profitable condo investments.
 
 The workshop covers everything from market analysis and property valuation to financing strategies and portfolio management. You'll learn how to evaluate potential investments, negotiate effectively, and build a diversified portfolio that generates consistent returns.

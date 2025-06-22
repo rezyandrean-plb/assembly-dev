@@ -12,14 +12,14 @@ export const courseData: CourseData = {
   title: "Live Debate - Choosing Your Path in Singapore Property: BTO vs Resale HDB",
   slug: "live-debate-choosing-your-path-in-singapore-property-bto-vs-resale-hdb",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Property Comparison",
+  duration: "2 hours 15 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/bto-vs-resale-hdb-debate.jpg",
+  image: "/Assembly-2023-Webinars-Thumbnails-15-scaled.jpg",
   featured: false,
-  tags: ["Property Comparison", "HDB", "Live Debate"],
+  tags: ["HDB", "Webinar"],
   rating: 0,
-  students: 0,
+  students: 16,
   instructors: melvin && grayce && joan && sebastian && lyndon
     ? [
         {
@@ -54,7 +54,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "2024-06-01",
+  lastUpdated: "10/09/2024",
   description: "A live debate exploring the pros and cons of BTO versus Resale HDB flats for Singaporean homebuyers.",
   whatYouWillLearn: [
     "Understand the differences between BTO and resale HDB",

@@ -6,11 +6,9 @@ import dynamic from "next/dynamic";
 const validSlugs = [
   "property-strategies-in-2025-amid-rate-cuts",
   "hdb-investment-masterclass",
-  "condo-investment-masterclass",
-  "financial-modeling-masterclass",
+
   "property-market-trend-analysis",
-  "condominium-investment-analysis",
-  "condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence",
+
   "condo-investment-workshop",
   "master-new-launch-selection",
   "module-1-of-niche-positioning-masterclass",
@@ -63,16 +61,10 @@ export async function generateMetadata({
     "property-strategies-in-2025-amid-rate-cuts":
       "Property Strategies in 2025 Amid Rate Cuts | Assembly SG",
     "hdb-investment-masterclass": "HDB Investment Masterclass | Assembly SG",
-    "condo-investment-masterclass":
-      "Condo Investment Masterclass | Assembly SG",
-    "financial-modeling-masterclass":
-      "Financial Modeling Masterclass | Assembly SG",
+
     "property-market-trend-analysis":
       "Property Market Trend Analysis | Assembly SG",
-    "condominium-investment-analysis":
-      "Condominium Investment Analysis | Assembly SG",
-    "condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence":
-      "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence | Assembly SG",
+
     "condo-investment-workshop":
       "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence | Assembly SG",
     "master-new-launch-selection":
@@ -186,106 +178,10 @@ export default function CourseDetailPage({
         ),
       },
     ),
-    "hdb-investment-masterclass": dynamic(
-      () => import("../components/hdb-investment-masterclass"),
-      {
-        loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="5ttruzq"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="h_op67z"
-            ></div>
-          </div>
-        ),
-      },
-    ),
-    "condo-investment-masterclass": dynamic(
-      () => import("../components/condo-investment-masterclass"),
-      {
-        loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="exs4m17"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="kl70g69"
-            ></div>
-          </div>
-        ),
-      },
-    ),
-    "financial-modeling-masterclass": dynamic(
-      () => import("../components/financial-modeling-masterclass"),
-      {
-        loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="wc4r5tx"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="lcz_l8k"
-            ></div>
-          </div>
-        ),
-      },
-    ),
-    "property-market-trend-analysis": dynamic(
-      () => import("../components/property-market-trend-analysis"),
-      {
-        loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="dz198iu"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="pitgwv9"
-            ></div>
-          </div>
-        ),
-      },
-    ),
-    "condominium-investment-analysis": dynamic(
-      () => import("../components/condominium-investment-analysis"),
-      {
-        loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="v77_p-g"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="x35mn1j"
-            ></div>
-          </div>
-        ),
-      },
-    ),
-    "condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence":
-      dynamic(
-        () =>
-          import(
-            "../components/condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence"
-          ),
-        {
-          loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="e2ut.wm"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="27wfjzy"
-              ></div>
-            </div>
-          ),
-        },
-      ),
+
+
+
+
     "condo-investment-workshop": dynamic(
       () => import("../components/condo-investment-workshop"),
       {

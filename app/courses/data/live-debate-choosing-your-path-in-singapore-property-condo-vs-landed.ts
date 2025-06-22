@@ -12,14 +12,14 @@ export const courseData: CourseData = {
   title: "Live Debate - Choosing Your Path in Singapore Property: Condo vs Landed",
   slug: "live-debate-choosing-your-path-in-singapore-property-condo-vs-landed",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Property Comparison",
+  duration: "2 hours 23 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/condo-vs-landed-debate.jpg",
+  image: "/live-debate-choosing-your-path-in-singapore-property-condo-vs-landed.jpg",
   featured: false,
-  tags: ["Property Comparison", "Investment Strategy", "Live Debate"],
+  tags: ["Condo", "Landed", "Webinar"],
   rating: 0,
-  students: 0,
+  students: 15,
   instructors: melvin && yurong && shawntay && george && gavin
     ? [
         {
@@ -54,7 +54,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "2024-06-01",
+  lastUpdated: "10/09/2024",
   description: "An engaging debate comparing the pros and cons of investing in condominiums versus landed properties in Singapore.",
   whatYouWillLearn: [
     "Understand key differences between condo and landed investments",

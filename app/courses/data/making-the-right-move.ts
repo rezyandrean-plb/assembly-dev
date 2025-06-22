@@ -1,26 +1,32 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 23,
   title: "Making the Right Move",
   slug: "making-the-right-move",
   level: "All Levels",
-  duration: "1 hour",
-  category: "hdb",
+  duration: "1 hour 9 minutes",
+  category: "HDB",
   price: "Free",
   image: "/making-the-right-move.jpg",
   featured: false,
   tags: ["HDB", "Strategy", "Webinar"],
-  rating: 4.6,
-  students: 920,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-  ],
-  lastUpdated: "May 2023",
+  rating: 5.0,
+  students: 18,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description:
     "In Singapore's dynamic property market, timing and strategy are everything. This webinar focuses on helping HDB owners make informed decisions about their next property move. Whether you're considering upgrading, right-sizing, or simply relocating, this session will provide you with a structured approach to evaluate your options and execute your move with confidence.",
   whatYouWillLearn: [
@@ -99,25 +105,11 @@ export const courseData: CourseData = {
   ],
   reviews: [
     {
-      name: "Jasmine Tay",
+      name: "Gilbert Tan",
       rating: 5,
-      date: "June 2023",
+      date: "3 months ago",
       comment:
-        "This webinar came at the perfect time for my family. We were debating between upgrading to a condo or a larger HDB, and the decision framework presented helped us clarify our priorities.",
-    },
-    {
-      name: "Raymond Ng",
-      rating: 4,
-      date: "May 2023",
-      comment:
-        "Very practical advice on the logistics of buying and selling simultaneously. The financial planning section was particularly helpful in understanding what we could realistically afford.",
-    },
-    {
-      name: "Siti Aminah",
-      rating: 5,
-      date: "May 2023",
-      comment:
-        "As someone approaching MOP, this webinar provided exactly the guidance I needed. The section on timing considerations was eye-opening and helped me adjust my timeline.",
+        "Great content",
     },
   ],
 }

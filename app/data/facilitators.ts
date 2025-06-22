@@ -388,6 +388,27 @@ export const facilitators: Facilitator[] = [
     showOnFacilitatorsPage: false,
   },
   {
+    id: "beatrice-lim",
+    name: "Beatrice Lim",
+    role: "Nil",
+    image: "",
+    bio: "",
+    longBio: "",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "2024 Market Trends & Strategies for Landed Properties",
+    ],
+    socialLinks: {
+      instagram: "",
+      whatsapp: "",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
     id: "jesley-lim",
     name: "Jesley Lim",
     role: "Associate Senior Consultant",
@@ -423,6 +444,92 @@ export const facilitators: Facilitator[] = [
     socialLinks: {
       instagram: "https://www.instagram.com/nicolewookieng/",
       whatsapp: "wa.me/6597404988",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "phyllis-goh",
+    name: "Phyllis Goh",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2020/04/Phyllis-Headshot_900px.jpg",
+    bio: "Phyllis is adept at analysing property market movements and portfolio asset planning.",
+    longBio: "Having studied real estate and urban planning as her minor in university, Phyllis is adept at analysing property market movements and portfolio asset planning. While she is currently the youngest member in the team, her warm and empathetic disposition allows her to connect with both the younger and older generation alike.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Entry Price Analysis for 5 Upcoming New Launches",
+    ],
+    socialLinks: {
+      instagram: "https://www.instagram.com/pygmyllis",
+      whatsapp: "wa.me/6590926788",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "lee-jun-wei",
+    name: "Lee Jun Wei",
+    role: "Associate Senior Consultant",
+    image: "https://plb-integrity1-media.propertylimbrothers.com/wp-content/uploads/2022/11/13035219/Junwei1.jpg",
+    bio: "Jun Wei has a pleasant disposition, and is highly competent in communication and interpersonal skills, contributing to positive client experiences.",
+    longBio: "Having specialised in Hotel Management for Luxury hotels, Jun Wei has an eye for detail and is an excellent team player. Jun Wei often goes beyond what is required of him to proactively help clients/ guests, for an above and beyond experience; just like how it is when he was a hotelier. He has a pleasant disposition, and is highly competent in communication and interpersonal skills, contributing to positive client experiences. The fusion of these qualities have honed Jun Wei into a people-centric, focused on the details, enabling him to handle situations that arise and look out for clients the finer details in a property transaction.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Resale HDB VS Resale Condo",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/jun-wei-lee/",
+      instagram: "https://www.instagram.com/junweifaber",
+      whatsapp: "wa.me/6596852588",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "ramzi-razak",
+    name: "Ramzi Razak",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2019/10/Ramzi-Headshot_900px.jpg",
+    bio: "Compassionate by nature, Ramzi is driven by his belief in helping others with sincerity and integrity.",
+    longBio: "Compassionate by nature, Ramzi is driven by his belief in helping others with sincerity and integrity. A hardworking yet down-to-earth individual, his strong work ethics coupled with his ability to truly listen to what clients need allows Ramzi to connect them seamlessly to the property sphere. Ramzi aims to share his knowledge and insights to value-add to others, building meaningful relationships and enriching his clients’ real estate journeys.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Resale HDB VS Resale Condo",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/ramzirazak/",
+      instagram: "https://www.instagram.com/rams_plb",
+      whatsapp: "wa.me/6597413188",
+    },
+    stats: {
+      coursesCreated: 1,
+    },
+    showOnFacilitatorsPage: false,
+  },
+  {
+    id: "loong-yanyan",
+    name: "Loong Yanyan",
+    role: "Associate Consultant",
+    image: "https://www.propertylimbrothers.com/wp-content/uploads/2019/10/Yanyan-Headshot_900px_Prof.jpg",
+    bio: "No matter the task, Yanyan believes in providing the utmost honest and genuine service.",
+    longBio: "Having co-founded a small events company back in 2016, she carries with her that same resilience, entrepreneurial spirit, and growth mindset as strengths for her real estate career. No matter the task, Yanyan believes in providing the utmost honest and genuine service. With her dedicated personality complemented by her vibrant and cheerful demeanour, she has won the hearts of the people whom she has worked with. Yanyan hopes to be invaluable to all her clients, from those seeking a great investment to a new family in search of their dream home.",
+    specialty: "Property Investment and Development",
+    experience: "10+ years in real estate",
+    courses: [
+      "Live Debate - Resale HDB VS Resale Condo",
+    ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/loongyanyan/",
+      whatsapp: "wa.me/6597419288",
     },
     stats: {
       coursesCreated: 1,

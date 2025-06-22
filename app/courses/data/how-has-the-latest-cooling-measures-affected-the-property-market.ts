@@ -12,7 +12,7 @@ const courseData: CourseData = {
   duration: "1 hour 21 minutes",
   category: "Market Analysis",
   price: "Free",
-  image: "/images/courses/cooling-measures.jpg",
+  image: "/how-have-the-latest-cooling-measures-affected-the-property-market.jpg",
   featured: false,
   tags: ["Market Trends", "Webinar"],
   rating: 0,
@@ -33,7 +33,7 @@ const courseData: CourseData = {
         },
       ]
     : [],  
-  lastUpdated: "10 September 2024",
+  lastUpdated: "10/09/2024",
   description: "An in-depth analysis of the latest property cooling measures and their impact on Singapore's real estate market.",
   whatYouWillLearn: [
     "Understand the latest cooling measures",

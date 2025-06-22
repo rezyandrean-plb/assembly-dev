@@ -1,31 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const marc = getFacilitator("marc-chan");
 
 export const courseData: CourseData = {
   id: 26,
   title: "Exit with Confidence",
   slug: "exit-with-confidence",
   level: "All Levels",
-  duration: "1 hour",
-  category: "condo",
+  duration: "1 hour 29 minutes",
+  category: "Webinar",
   price: "Free",
   image: "/exit-with-confidence.jpg",
   featured: false,
-  tags: ["Condo", "Exit Strategy", "Webinar"],
-  rating: 4.7,
-  students: 850,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Marc Chan",
-      image: "/marc-chan-headshot.png",
-      bio: "Specialist in property exit strategies and market timing",
-    },
-  ],
-  lastUpdated: "February 2023",
+  tags: ["Condo", "Webinar"],
+  rating: 0,
+  students: 14,
+  instructors: melvin && marc
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: marc.name,
+          image: marc.image,
+          title: marc.role,
+          bio: marc.bio,
+        },
+      ]
+      :[],
+  lastUpdated: "10/09/2024",
   description:
     "While much attention is given to property acquisition, successful investing ultimately depends on your exit strategy. This webinar focuses on the often-overlooked art of exiting property investments at the right time and in the right way to maximize returns. Property experts Melvin Lim and Marc Chan share their expertise on developing and executing exit strategies that protect your capital and optimize your gains in Singapore's competitive property market.",
   whatYouWillLearn: [

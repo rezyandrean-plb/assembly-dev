@@ -88,110 +88,115 @@ export default function CoursesPage() {
   const coursesPerPage = 18;
 
   // Assessment state
+  const [showAssessment, setShowAssessment] = useState(true);
+  const [showAssessmentResults, setShowAssessmentResults] = useState(false);
+  const [assessmentAnswers, setAssessmentAnswers] = useState<
+    Record<string, any>
+  >({});
+  const [recommendedCourses, setRecommendedCourses] = useState<Course[]>([]);
   const [assessmentStep, setAssessmentStep] = useState(0);
-  const [assessmentAnswers, setAssessmentAnswers] = useState<{
-    [key: string]: any;
-  }>({});
-  const [showResults, setShowResults] = useState(false);
-  const [personalizedPlan, setPersonalizedPlan] = useState<{
-    profile: string;
-    courses: Course[];
-    learningPath: string;
-    estimatedDuration: string;
-    confidence: number;
-  } | null>(null);
 
+  // Assessment questions for personalized learning paths
   const assessmentQuestions = [
     {
-      id: "experience",
-      type: "single",
+      id: "1",
+      type: "single-choice",
       question:
         "How would you describe your current experience with property investment?",
       options: [
         {
-          label: "I'm a complete beginner, just starting to explore.",
+          label: "I'm a complete beginner, just starting to explore",
           value: "beginner",
         },
         {
-          label:
-            "I have some theoretical knowledge but no practical experience.",
-          value: "knowledgeable",
+          label: "I have some basic knowledge but haven't invested yet",
+          value: "novice",
         },
         {
-          label: "I have purchased my own home for dwelling.",
-          value: "homeowner",
+          label: "I own 1-2 properties and have some experience",
+          value: "intermediate",
         },
         {
-          label: "I own one or more investment properties.",
-          value: "investor",
-        },
-      ],
-    },
-    {
-      id: "goal",
-      type: "single",
-      question: "What is your primary goal for joining Assembly?",
-      options: [
-        {
-          label: "To buy my first home (HDB or private).",
-          value: "first_home",
-        },
-        {
-          label: "To upgrade from my current property to a better one.",
-          value: "upgrade",
-        },
-        {
-          label: "To build a property portfolio for passive income.",
-          value: "portfolio",
-        },
-        {
-          label:
-            "To master advanced investment strategies and financial modeling.",
+          label: "I'm an experienced investor with multiple properties",
           value: "advanced",
         },
       ],
     },
     {
-      id: "interests",
-      type: "multiple",
-      question:
-        "Which property sectors are you most interested in? (Select all that apply)",
+      id: "2",
+      type: "single-choice",
+      question: "What type of property investment interests you most?",
       options: [
-        { label: "Public Housing (HDB)", value: "hdb" },
+        { label: "HDB flats for upgrading or investment", value: "hdb" },
         {
-          label: "Private Condominiums (New Launch & Resale)",
+          label: "Condominiums for rental yield and capital appreciation",
           value: "condo",
         },
-        { label: "Landed Properties", value: "landed" },
-        { label: "Commercial Properties", value: "commercial" },
+        {
+          label: "Landed properties for long-term wealth building",
+          value: "landed",
+        },
+        { label: "I'm interested in all types", value: "all" },
       ],
     },
     {
-      id: "confidence",
-      type: "single",
-      question: "How confident are you in analyzing a property deal?",
+      id: "3",
+      type: "single-choice",
+      question: "What's your primary goal with property investment?",
       options: [
+        { label: "Building wealth for retirement", value: "retirement" },
+        { label: "Generating passive rental income", value: "income" },
+        { label: "Capital appreciation over time", value: "appreciation" },
+        { label: "Upgrading my current living situation", value: "upgrade" },
+      ],
+    },
+    {
+      id: "4",
+      type: "single-choice",
+      question:
+        "How comfortable are you with market analysis and financial modeling?",
+      options: [
+        { label: "Not comfortable at all, I need guidance", value: "beginner" },
         {
-          label: "Not confident at all, I don't know where to start.",
-          value: "none",
+          label: "Somewhat comfortable with basic concepts",
+          value: "intermediate",
         },
         {
-          label:
-            "I can look at basic numbers but struggle with deeper analysis.",
-          value: "basic",
+          label: "Quite comfortable, I can do basic analysis",
+          value: "advanced",
         },
         {
-          label: "I am fairly confident but would like a structured framework.",
-          value: "confident",
-        },
-        {
-          label: "I am very confident and looking for nuanced insights.",
+          label: "Very comfortable, I enjoy detailed analysis",
           value: "expert",
         },
       ],
     },
+    {
+      id: "5",
+      type: "single-choice",
+      question: "What's your current investment budget range?",
+      options: [
+        { label: "Under $500K", value: "under500k" },
+        { label: "$500K - $1M", value: "500k-1m" },
+        { label: "$1M - $2M", value: "1m-2m" },
+        { label: "Above $2M", value: "above2m" },
+      ],
+    },
+    {
+      id: "6",
+      type: "single-choice",
+      question:
+        "How much time can you dedicate to learning about property investment?",
+      options: [
+        { label: "1-2 hours per week", value: "minimal" },
+        { label: "3-5 hours per week", value: "moderate" },
+        { label: "6-10 hours per week", value: "substantial" },
+        { label: "More than 10 hours per week", value: "intensive" },
+      ],
+    },
   ];
 
+  // Handle assessment answer selection
   const handleAssessmentAnswer = (questionId: string, answer: any) => {
     setAssessmentAnswers((prev) => ({
       ...prev,
@@ -199,31 +204,51 @@ export default function CoursesPage() {
     }));
   };
 
+  // Calculate personalized course recommendations based on assessment answers
   const calculateRecommendations = () => {
-    // This is a placeholder for your recommendation logic.
-    // It generates a sample plan for now.
-    const profile = "Ambitious Property Upgrader";
-    const recommendedCourses = mainCourses.slice(0, 3);
-    const learningPath = "hdb-upgrader-strategist";
-    const estimatedDuration = "6-8 Weeks";
-    const confidence = 95;
+    const answers = assessmentAnswers;
+    let recommended: Course[] = [];
 
-    setPersonalizedPlan({
-      profile,
-      courses: recommendedCourses,
-      learningPath,
-      estimatedDuration,
-      confidence,
+    // Logic to recommend courses based on answers
+    const experienceLevel = answers["1"]?.value;
+    const propertyType = answers["2"]?.value;
+    const goal = answers["3"]?.value;
+    const analysisComfort = answers["4"]?.value;
+    const budget = answers["5"]?.value;
+    const timeCommitment = answers["6"]?.value;
+
+    // Filter courses based on assessment responses
+    const filteredCourses = courses.filter((course) => {
+      // Beginner-friendly courses
+      if (experienceLevel === "beginner") {
+        return course.level === "All Levels" || course.level === "Beginner";
+      }
+
+      // Property type matching
+      if (propertyType === "hdb") {
+        return course.categories.includes("HDB");
+      } else if (propertyType === "condo") {
+        return course.categories.includes("Condo");
+      } else if (propertyType === "landed") {
+        return course.categories.includes("Landed");
+      }
+
+      return true;
     });
 
-    setShowResults(true);
+    // Prioritize courses based on goals and comfort level
+    recommended = filteredCourses.slice(0, 6); // Limit to 6 recommendations
+
+    setRecommendedCourses(recommended);
+    setShowAssessmentResults(true);
   };
 
+  // Restart the assessment
   const restartAssessment = () => {
-    setAssessmentStep(0);
     setAssessmentAnswers({});
-    setShowResults(false);
-    setPersonalizedPlan(null);
+    setRecommendedCourses([]);
+    setShowAssessmentResults(false);
+    setShowAssessment(true);
   };
 
   // Learning paths data
@@ -367,7 +392,8 @@ export default function CoursesPage() {
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       const matchesTitle = course.title.toLowerCase().includes(query);
-      const matchesInstructor = course.instructor.toLowerCase().includes(query);
+      const matchesInstructor =
+        course.instructorIds?.[0]?.toLowerCase().includes(query) || false;
       const matchesTags =
         course.tags?.some((tag) => tag.toLowerCase().includes(query)) || false;
 
@@ -1324,7 +1350,7 @@ export default function CoursesPage() {
             ) : activeTab === "recommendation" ? (
               // Personalised Course Recommendation Tab Content
               <div data-oid="vdjbf0-">
-                {!showResults ? (
+                {!showAssessmentResults ? (
                   <div
                     className="bg-white rounded-2xl shadow-lg p-8"
                     data-oid="5j5327q"
@@ -1632,135 +1658,70 @@ export default function CoursesPage() {
                           learning path just for you.
                         </p>
 
-                        {/* Confidence Score */}
+                        {/* Confidence Score and Duration */}
                         <div
-                          className="bg-white/10 rounded-xl p-4 inline-block"
+                          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                           data-oid="0tbve6f"
                         >
                           <div
-                            className="flex items-center gap-3"
-                            data-oid="4..efw2"
+                            className="bg-white/10 rounded-xl p-4"
+                            data-oid="f9wa8o6"
                           >
-                            <BarChart3 className="w-6 h-6" data-oid="7202:b6" />
-                            <div data-oid="lo.qj3n">
-                              <div
-                                className="text-sm text-white/80"
-                                data-oid="er7de6y"
-                              >
-                                Recommendation Confidence
-                              </div>
-                              <div
-                                className="text-2xl font-bold"
-                                data-oid="e6zz_3c"
-                              >
-                                {personalizedPlan?.confidence}%
+                            <div
+                              className="flex items-center gap-3"
+                              data-oid="4..efw2"
+                            >
+                              <BarChart3
+                                className="w-6 h-6"
+                                data-oid="7202:b6"
+                              />
+
+                              <div data-oid="lo.qj3n">
+                                <div
+                                  className="text-sm text-white/80"
+                                  data-oid="er7de6y"
+                                >
+                                  Recommendation Confidence
+                                </div>
+                                <div
+                                  className="text-2xl font-bold"
+                                  data-oid="e6zz_3c"
+                                >
+                                  95%
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    {/* Profile Summary */}
-                    <div
-                      className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-                      data-oid="g7g7uwc"
-                    >
-                      <h3
-                        className="text-2xl font-bold text-gray-900 mb-6"
-                        data-oid="profile-summary-title"
-                      >
-                        Your Learning Profile
-                      </h3>
-                      <div
-                        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                        data-oid="ths_gfs"
-                      >
-                        <div
-                          className="text-center p-6 bg-gradient-to-br from-[#123B79]/5 to-[#123B79]/10 rounded-xl border border-[#123B79]/20"
-                          data-oid="3zoma6y"
-                        >
                           <div
-                            className="w-12 h-12 bg-[#123B79] rounded-full flex items-center justify-center mx-auto mb-4"
-                            data-oid="dk57f31"
+                            className="bg-white/10 rounded-xl p-4"
+                            data-oid="nz2e3c9"
                           >
-                            <Target
-                              className="w-6 h-6 text-white"
-                              data-oid="bo3kvjt"
-                            />
-                          </div>
-                          <h4
-                            className="font-semibold text-gray-900 mb-2"
-                            data-oid="jwydj-7"
-                          >
-                            Your Profile
-                          </h4>
-                          <p
-                            className="text-lg font-medium text-[#123B79]"
-                            data-oid="r7zl_q3"
-                          >
-                            {personalizedPlan?.profile}
-                          </p>
-                        </div>
+                            <div
+                              className="flex items-center gap-3"
+                              data-oid="duration-section"
+                            >
+                              <Clock
+                                className="w-6 h-6"
+                                data-oid="duration-icon"
+                              />
 
-                        <div
-                          className="text-center p-6 bg-gradient-to-br from-[#F0A500]/5 to-[#F0A500]/10 rounded-xl border border-[#F0A500]/20"
-                          data-oid="r1_drzc"
-                        >
-                          <div
-                            className="w-12 h-12 bg-[#F0A500] rounded-full flex items-center justify-center mx-auto mb-4"
-                            data-oid="3-yov6f"
-                          >
-                            <Clock
-                              className="w-6 h-6 text-white"
-                              data-oid="q6gh5w5"
-                            />
+                              <div data-oid="duration-content">
+                                <div
+                                  className="text-sm text-white/80"
+                                  data-oid="duration-label"
+                                >
+                                  Estimated Duration
+                                </div>
+                                <div
+                                  className="text-2xl font-bold"
+                                  data-oid="duration-value"
+                                >
+                                  6-8 Weeks
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <h4
-                            className="font-semibold text-gray-900 mb-2"
-                            data-oid="m.lx_ax"
-                          >
-                            Estimated Duration
-                          </h4>
-                          <p
-                            className="text-lg font-medium text-[#F0A500]"
-                            data-oid="::il3zz"
-                          >
-                            {personalizedPlan?.estimatedDuration}
-                          </p>
-                        </div>
-
-                        <div
-                          className="text-center p-6 bg-gradient-to-br from-green-500/5 to-green-500/10 rounded-xl border border-green-500/20"
-                          data-oid=":2laym3"
-                        >
-                          <div
-                            className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
-                            data-oid="9z.tkqv"
-                          >
-                            <TrendingUp
-                              className="w-6 h-6 text-white"
-                              data-oid="t0alh6u"
-                            />
-                          </div>
-                          <h4
-                            className="font-semibold text-gray-900 mb-2"
-                            data-oid="mxgy79n"
-                          >
-                            Learning Path
-                          </h4>
-                          <p
-                            className="text-lg font-medium text-green-600"
-                            data-oid="d2kq:2a"
-                          >
-                            {personalizedPlan?.learningPath ===
-                            "beginner-property-investor"
-                              ? "Beginner Property Investor"
-                              : personalizedPlan?.learningPath ===
-                                  "hdb-upgrader-strategist"
-                                ? "HDB Upgrader & Strategist"
-                                : "Condo Investment Specialist"}
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -1780,7 +1741,7 @@ export default function CoursesPage() {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                         data-oid=":98cfil"
                       >
-                        {personalizedPlan?.courses.map((course, index) => (
+                        {recommendedCourses.map((course, index) => (
                           <motion.div
                             key={course.id}
                             initial={{ opacity: 0, y: 20 }}
@@ -1791,7 +1752,7 @@ export default function CoursesPage() {
                             <CourseCard
                               course={{
                                 title: course.title,
-                                instructor: course.instructor,
+                                instructor: course.instructorIds?.[0] || "TBD",
                                 level: course.level || "All Levels",
                                 duration: course.duration || "Self-paced",
                                 image: course.image,
