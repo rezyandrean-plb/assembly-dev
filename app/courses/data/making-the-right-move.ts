@@ -9,11 +9,11 @@ export const courseData: CourseData = {
   slug: "making-the-right-move",
   level: "All Levels",
   duration: "1 hour 9 minutes",
-  category: "HDB",
+  category: "Webinar",
   price: "Free",
   image: "/making-the-right-move.jpg",
   featured: false,
-  tags: ["HDB", "Strategy", "Webinar"],
+  tags: ["HDB", "Webinar"],
   rating: 5.0,
   students: 18,
   instructors: melvin

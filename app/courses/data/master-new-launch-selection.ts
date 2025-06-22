@@ -61,7 +61,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "20 June 2025",
+  lastUpdated: "20/06/2025",
   description: `This comprehensive masterclass is designed for property investors looking to make informed decisions when selecting new launch properties in Singapore. Through our 6 exclusive frameworks, you'll learn how to identify winning properties that align with your investment goals and maximize your returns.
 
 Our team of expert instructors brings decades of combined experience in the Singapore property market, offering you insights that go beyond what's available to the general public. You'll learn how to analyze market trends, evaluate developer track records, assess location potential, and much more.

@@ -179,9 +179,6 @@ export default function CourseDetailPage({
       },
     ),
 
-
-
-
     "condo-investment-workshop": dynamic(
       () => import("../components/condo-investment-workshop"),
       {
