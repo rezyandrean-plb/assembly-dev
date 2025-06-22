@@ -1663,109 +1663,105 @@ export default function CoursesPage() {
 
                     {/* Profile Summary */}
                     <div
-                      className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
+                      className="bg-white rounded-2xl p-8 shadow-lg mb-8"
                       data-oid="g7g7uwc"
                     >
+                      <h3
+                        className="text-2xl font-bold text-gray-900 mb-6"
+                        data-oid="profile-summary-title"
+                      >
+                        Your Learning Profile
+                      </h3>
                       <div
-                        className="bg-white rounded-xl p-6 shadow-lg"
-                        data-oid="3zoma6y"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                        data-oid="ths_gfs"
                       >
                         <div
-                          className="flex items-center gap-3 mb-3"
-                          data-oid="yfhdhfg"
+                          className="text-center p-6 bg-gradient-to-br from-[#123B79]/5 to-[#123B79]/10 rounded-xl border border-[#123B79]/20"
+                          data-oid="3zoma6y"
                         >
                           <div
-                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            className="w-12 h-12 bg-[#123B79] rounded-full flex items-center justify-center mx-auto mb-4"
                             data-oid="dk57f31"
                           >
                             <Target
-                              className="w-5 h-5 text-primary"
+                              className="w-6 h-6 text-white"
                               data-oid="bo3kvjt"
                             />
                           </div>
-                          <h3
-                            className="font-semibold text-gray-900"
+                          <h4
+                            className="font-semibold text-gray-900 mb-2"
                             data-oid="jwydj-7"
                           >
                             Your Profile
-                          </h3>
+                          </h4>
+                          <p
+                            className="text-lg font-medium text-[#123B79]"
+                            data-oid="r7zl_q3"
+                          >
+                            {personalizedPlan?.profile}
+                          </p>
                         </div>
-                        <p
-                          className="text-lg font-medium text-primary"
-                          data-oid="r7zl_q3"
-                        >
-                          {personalizedPlan?.profile}
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white rounded-xl p-6 shadow-lg"
-                        data-oid="r1_drzc"
-                      >
                         <div
-                          className="flex items-center gap-3 mb-3"
-                          data-oid="0uu6-c5"
+                          className="text-center p-6 bg-gradient-to-br from-[#F0A500]/5 to-[#F0A500]/10 rounded-xl border border-[#F0A500]/20"
+                          data-oid="r1_drzc"
                         >
                           <div
-                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            className="w-12 h-12 bg-[#F0A500] rounded-full flex items-center justify-center mx-auto mb-4"
                             data-oid="3-yov6f"
                           >
                             <Clock
-                              className="w-5 h-5 text-primary"
+                              className="w-6 h-6 text-white"
                               data-oid="q6gh5w5"
                             />
                           </div>
-                          <h3
-                            className="font-semibold text-gray-900"
+                          <h4
+                            className="font-semibold text-gray-900 mb-2"
                             data-oid="m.lx_ax"
                           >
                             Estimated Duration
-                          </h3>
+                          </h4>
+                          <p
+                            className="text-lg font-medium text-[#F0A500]"
+                            data-oid="::il3zz"
+                          >
+                            {personalizedPlan?.estimatedDuration}
+                          </p>
                         </div>
-                        <p
-                          className="text-lg font-medium text-primary"
-                          data-oid="::il3zz"
-                        >
-                          {personalizedPlan?.estimatedDuration}
-                        </p>
-                      </div>
 
-                      <div
-                        className="bg-white rounded-xl p-6 shadow-lg"
-                        data-oid=":2laym3"
-                      >
                         <div
-                          className="flex items-center gap-3 mb-3"
-                          data-oid="-.geaxg"
+                          className="text-center p-6 bg-gradient-to-br from-green-500/5 to-green-500/10 rounded-xl border border-green-500/20"
+                          data-oid=":2laym3"
                         >
                           <div
-                            className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                            className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
                             data-oid="9z.tkqv"
                           >
                             <TrendingUp
-                              className="w-5 h-5 text-primary"
+                              className="w-6 h-6 text-white"
                               data-oid="t0alh6u"
                             />
                           </div>
-                          <h3
-                            className="font-semibold text-gray-900"
+                          <h4
+                            className="font-semibold text-gray-900 mb-2"
                             data-oid="mxgy79n"
                           >
                             Learning Path
-                          </h3>
+                          </h4>
+                          <p
+                            className="text-lg font-medium text-green-600"
+                            data-oid="d2kq:2a"
+                          >
+                            {personalizedPlan?.learningPath ===
+                            "beginner-property-investor"
+                              ? "Beginner Property Investor"
+                              : personalizedPlan?.learningPath ===
+                                  "hdb-upgrader-strategist"
+                                ? "HDB Upgrader & Strategist"
+                                : "Condo Investment Specialist"}
+                          </p>
                         </div>
-                        <p
-                          className="text-lg font-medium text-primary"
-                          data-oid="d2kq:2a"
-                        >
-                          {personalizedPlan?.learningPath ===
-                          "beginner-property-investor"
-                            ? "Beginner Property Investor"
-                            : personalizedPlan?.learningPath ===
-                                "hdb-upgrader-strategist"
-                              ? "HDB Upgrader & Strategist"
-                              : "Condo Investment Specialist"}
-                        </p>
                       </div>
                     </div>
 
@@ -1795,11 +1791,16 @@ export default function CoursesPage() {
                             <CourseCard
                               course={{
                                 title: course.title,
+                                instructor: course.instructor,
                                 level: course.level || "All Levels",
                                 duration: course.duration || "Self-paced",
                                 image: course.image,
+                                price: course.price,
                                 slug: course.slug,
-                                instructorIds: course.instructorIds || [],
+                                categories: course.categories,
+                                rating: course.rating,
+                                reviewCount: course.reviewCount,
+                                id: course.id,
                               }}
                               delay={0}
                               data-oid="_:0pepa"
