@@ -604,8 +604,8 @@ export default function ContactPage() {
                         >
                           By submitting this form, you agree to receive future
                           marketing materials from Assembly SG. Your personal
-                          information will be used in accordance with our
-                          privacy policy.
+                          information will be used in accordance with our terms
+                          of service.
                         </div>
 
                         <Button

@@ -258,13 +258,6 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white text-sm"
-                data-oid="y05cb6k"
-              >
-                Privacy Policy
-              </Link>
-              <Link
                 href="/faq"
                 className="text-gray-400 hover:text-white text-sm"
                 data-oid="g1pghk-"

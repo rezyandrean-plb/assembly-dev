@@ -712,14 +712,6 @@ export default function SignupPage() {
                   >
                     Terms of Service
                   </Link>{" "}
-                  and{" "}
-                  <Link
-                    href="/privacy"
-                    className="text-primary hover:text-primary-dark font-medium"
-                    data-oid="d:hn:lc"
-                  >
-                    Privacy Policy
-                  </Link>
                 </span>
               </label>
               {errors.agreeToTerms && (

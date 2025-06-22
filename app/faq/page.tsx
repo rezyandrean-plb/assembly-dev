@@ -155,81 +155,12 @@ export default function FAQPage() {
         {/* Hero Section */}
         <section
           ref={sectionRef}
-          className="relative bg-primary overflow-hidden py-20 lg:py-32 w-full"
+          className="relative bg-primary overflow-hidden mt-16 py-16 lg:py-32 w-full"
           data-oid="afxc9mu"
         >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10" data-oid="g5d6pkr">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-              }}
-              data-oid="xi2wd.q"
-            />
-          </div>
-
-          {/* Floating Elements */}
-          <div
-            className="absolute inset-0 overflow-hidden pointer-events-none"
-            data-oid="dit0wxz"
-          >
-            <motion.div
-              className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
-              animate={{
-                y: [0, -20, 0],
-                x: [0, 10, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              data-oid="kubla:i"
-            />
-
-            <motion.div
-              className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-xl"
-              animate={{
-                y: [0, 30, 0],
-                x: [0, -15, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              data-oid="hjagmaw"
-            />
-
-            <motion.div
-              className="absolute bottom-20 left-1/4 w-24 h-24 bg-white/10 rounded-full blur-xl"
-              animate={{
-                y: [0, -25, 0],
-                x: [0, 20, 0],
-              }}
-              transition={{
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              data-oid="f-k444v"
-            />
-          </div>
-
           <div className="w-full px-4 lg:px-8 relative z-10" data-oid="tl372.j">
             <div className="max-w-7xl mx-auto text-center" data-oid="_rhejjz">
-              <motion.div
-                className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                data-oid="neixua5"
-              >
-                <HelpCircle className="w-4 h-4" data-oid="-tu1s6v" />
-                Get Instant Answers
-              </motion.div>
-
+              {" "}
               <motion.h1
                 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight"
                 initial={{ opacity: 0, y: 30 }}
@@ -242,9 +173,8 @@ export default function FAQPage() {
                   Questions
                 </span>
               </motion.h1>
-
               <motion.p
-                className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed"
+                className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

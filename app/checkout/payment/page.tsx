@@ -324,27 +324,11 @@ export default function PaymentPage() {
                 By clicking Proceed to Checkout you confirm that you have read,
                 understood and accept our{" "}
                 <a
-                  href="#"
+                  href="/terms"
                   className="text-[#123b79] hover:underline"
                   data-oid="rtm.u6j"
                 >
-                  terms and conditions
-                </a>
-                ,{" "}
-                <a
-                  href="#"
-                  className="text-[#123b79] hover:underline"
-                  data-oid="4ilgcj."
-                >
-                  returns policy
-                </a>{" "}
-                and{" "}
-                <a
-                  href="#"
-                  className="text-[#123b79] hover:underline"
-                  data-oid="14hmrx7"
-                >
-                  privacy policy
+                  terms of service
                 </a>
                 .
               </p>
@@ -354,7 +338,7 @@ export default function PaymentPage() {
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 text-center" data-oid="97afuhc">
+      <div className="mt-12 mb-12 text-center" data-oid="97afuhc">
         <h3 className="text-lg font-semibold mb-2" data-oid="kzl45-8">
           Need Help?
         </h3>

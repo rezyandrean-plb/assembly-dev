@@ -299,11 +299,11 @@ export default function AddressPage() {
                       <p className="text-sm text-blue-800" data-oid="-5cuh::">
                         Please see our{" "}
                         <a
-                          href="/privacy"
+                          href="/terms"
                           className="text-[#123b79] hover:underline font-medium"
                           data-oid="bh_h:gh"
                         >
-                          privacy policy
+                          terms of service
                         </a>{" "}
                         for more information about how we deal with your
                         information.

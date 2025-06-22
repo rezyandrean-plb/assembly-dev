@@ -60,6 +60,7 @@
   --classyPalette-classyPalette2: #64748b;
   --classyPalette-classyPalette3: #1e4a8c;
   --classyPalette-classyPalette4: #475569;
+  --destructive-foreground: 210 40% 98%;
 }
 
 body {
@@ -259,5 +260,29 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.list-alpha-brackets {
+  counter-reset: list-counter;
+}
+.list-alpha-brackets > li {
+  list-style: none;
+  position: relative;
+  counter-increment: list-counter;
+  padding-left: 2rem;
+}
+.list-alpha-brackets > li::before {
+  content: "(" counter(list-counter, lower-alpha) ")";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
 }
