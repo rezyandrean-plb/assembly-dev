@@ -167,10 +167,8 @@ export default function PLBBookPage() {
       <main className="min-h-screen bg-white" data-oid="-k_z:yz">
         {/* Page Content */}
         <div className="pt-24 pb-16" data-oid="zgdqv1_">
-          <div
-            className="plb-book-page mx-auto px-4 sm:px-6 lg:px-8"
-            data-oid=".gdhixc"
-          >
+          <Navbar data-oid="57xinrw" />
+          <div className="plb-book-page relative" data-oid=".gdhixc">
             {/* Light gradient background instead of network */}
             <div
               className="absolute inset-0 z-0"

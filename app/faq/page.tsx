@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 interface FAQItem {
   question: string;
@@ -148,342 +149,352 @@ export default function FAQPage() {
   });
 
   return (
-    <div className="min-h-screen bg-neutral-50" data-oid="lxb9n8u">
-      {/* Hero Section */}
-      <section
-        ref={sectionRef}
-        className="relative bg-primary overflow-hidden py-20 lg:py-32"
-        data-oid="d1rv.cg"
-      >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10" data-oid="g5d6pkr">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-            data-oid="xi2wd.q"
-          />
-        </div>
-
-        {/* Floating Elements */}
-        <div
-          className="absolute inset-0 overflow-hidden pointer-events-none"
-          data-oid="dit0wxz"
+    <>
+      <Navbar data-oid="6simr_q" />
+      <div className="min-h-screen bg-neutral-50 w-full" data-oid="3saxk5k">
+        {/* Hero Section */}
+        <section
+          ref={sectionRef}
+          className="relative bg-primary overflow-hidden py-20 lg:py-32 w-full"
+          data-oid="afxc9mu"
         >
-          <motion.div
-            className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
-            animate={{
-              y: [0, -20, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            data-oid="kubla:i"
-          />
-
-          <motion.div
-            className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-xl"
-            animate={{
-              y: [0, 30, 0],
-              x: [0, -15, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            data-oid="hjagmaw"
-          />
-
-          <motion.div
-            className="absolute bottom-20 left-1/4 w-24 h-24 bg-white/10 rounded-full blur-xl"
-            animate={{
-              y: [0, -25, 0],
-              x: [0, 20, 0],
-            }}
-            transition={{
-              duration: 7,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            data-oid="f-k444v"
-          />
-        </div>
-
-        <div
-          className="container mx-auto px-4 relative z-10"
-          data-oid="_v:5hd6"
-        >
-          <div className="max-w-4xl mx-auto text-center" data-oid="037b4rr">
-            <motion.div
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              data-oid="neixua5"
-            >
-              <HelpCircle className="w-4 h-4" data-oid="-tu1s6v" />
-              Get Instant Answers
-            </motion.div>
-
-            <motion.h1
-              className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="1k:s24w"
-            >
-              Frequently Asked
-              <span className="block text-white/90" data-oid="u4ny8ne">
-                Questions
-              </span>
-            </motion.h1>
-
-            <motion.p
-              className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              data-oid="xq0dga7"
-            >
-              Find answers to common questions about Assembly SG courses,
-              platform features, and more.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="py-20" data-oid="9ejtybc">
-        <div className="container mx-auto px-4" data-oid="o91has1">
-          <div className="max-w-4xl mx-auto" data-oid="zpbit39">
-            {/* Category Filter */}
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10" data-oid="g5d6pkr">
             <div
-              className="flex flex-wrap gap-2 mb-12 justify-center"
-              data-oid="f_flkjn"
-            >
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? "bg-primary text-white shadow-lg"
-                      : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
-                  }`}
-                  data-oid="5rm:anv"
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}
+              data-oid="xi2wd.q"
+            />
+          </div>
 
-            {/* FAQ Items */}
-            <div className="space-y-4" data-oid="lezp_0_">
-              {filteredFAQs.map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  data-oid="6a41u3r"
-                >
+          {/* Floating Elements */}
+          <div
+            className="absolute inset-0 overflow-hidden pointer-events-none"
+            data-oid="dit0wxz"
+          >
+            <motion.div
+              className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
+              animate={{
+                y: [0, -20, 0],
+                x: [0, 10, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              data-oid="kubla:i"
+            />
+
+            <motion.div
+              className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-xl"
+              animate={{
+                y: [0, 30, 0],
+                x: [0, -15, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              data-oid="hjagmaw"
+            />
+
+            <motion.div
+              className="absolute bottom-20 left-1/4 w-24 h-24 bg-white/10 rounded-full blur-xl"
+              animate={{
+                y: [0, -25, 0],
+                x: [0, 20, 0],
+              }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              data-oid="f-k444v"
+            />
+          </div>
+
+          <div className="w-full px-4 lg:px-8 relative z-10" data-oid="tl372.j">
+            <div className="max-w-7xl mx-auto text-center" data-oid="_rhejjz">
+              <motion.div
+                className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                data-oid="neixua5"
+              >
+                <HelpCircle className="w-4 h-4" data-oid="-tu1s6v" />
+                Get Instant Answers
+              </motion.div>
+
+              <motion.h1
+                className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                data-oid="1k:s24w"
+              >
+                Frequently Asked
+                <span className="block text-white/90" data-oid="u4ny8ne">
+                  Questions
+                </span>
+              </motion.h1>
+
+              <motion.p
+                className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                data-oid="xq0dga7"
+              >
+                Find answers to common questions about Assembly SG courses,
+                platform features, and more.
+              </motion.p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Content */}
+        <section className="py-20 w-full" data-oid="5x5_ti7">
+          <div className="w-full px-4 lg:px-8" data-oid="j8js1w8">
+            <div className="max-w-7xl mx-auto" data-oid="koisplh">
+              {/* Category Filter */}
+              <div
+                className="flex flex-wrap gap-2 mb-12 justify-center"
+                data-oid="f_flkjn"
+              >
+                {categories.map((category) => (
                   <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200 group"
-                    data-oid="zo3oxzt"
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                      selectedCategory === category
+                        ? "bg-primary text-white shadow-lg"
+                        : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
+                    }`}
+                    data-oid="5rm:anv"
                   >
-                    <div className="flex items-start gap-4" data-oid="lm8:krl">
-                      <div
-                        className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1"
-                        data-oid="oyedd8b"
-                      >
-                        <HelpCircle
-                          className="w-5 h-5 text-primary"
-                          data-oid="1qga7.c"
-                        />
-                      </div>
-                      <h3
-                        className="text-lg font-semibold text-gray-900 pr-4 group-hover:text-primary transition-colors"
-                        data-oid="plwnl.r"
-                      >
-                        {item.question}
-                      </h3>
-                    </div>
-                    <div className="flex-shrink-0" data-oid="4jpuojx">
-                      {openItems.includes(index) ? (
-                        <svg
-                          className="h-6 w-6 text-primary transition-transform duration-200"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          data-oid="5g6qxts"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                            data-oid="kcjd9al"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-6 w-6 text-gray-400 group-hover:text-primary transition-colors duration-200"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          data-oid="8fs6s.:"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                            data-oid="rupjesu"
-                          />
-                        </svg>
-                      )}
-                    </div>
+                    {category}
                   </button>
-                  {openItems.includes(index) && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-8 pb-6"
-                      data-oid="jup8ond"
+                ))}
+              </div>
+
+              {/* FAQ Items */}
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                data-oid="qqq7mhc"
+              >
+                {filteredFAQs.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    data-oid="6a41u3r"
+                  >
+                    <button
+                      onClick={() => toggleItem(index)}
+                      className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200 group"
+                      data-oid="zo3oxzt"
                     >
                       <div
-                        className="border-t border-gray-100 pt-6 ml-14"
-                        data-oid="j6h_c2h"
+                        className="flex items-start gap-4"
+                        data-oid="lm8:krl"
                       >
-                        <p
-                          className="text-gray-700 leading-relaxed"
-                          data-oid="nxw8.:j"
+                        <div
+                          className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1"
+                          data-oid="oyedd8b"
                         >
-                          {item.answer}
-                        </p>
+                          <HelpCircle
+                            className="w-5 h-5 text-primary"
+                            data-oid="1qga7.c"
+                          />
+                        </div>
+                        <h3
+                          className="text-lg font-semibold text-gray-900 pr-4 group-hover:text-primary transition-colors"
+                          data-oid="plwnl.r"
+                        >
+                          {item.question}
+                        </h3>
                       </div>
-                    </motion.div>
-                  )}
-                </motion.div>
-              ))}
+                      <div className="flex-shrink-0" data-oid="4jpuojx">
+                        {openItems.includes(index) ? (
+                          <svg
+                            className="h-6 w-6 text-primary transition-transform duration-200"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            data-oid="5g6qxts"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 15l7-7 7 7"
+                              data-oid="kcjd9al"
+                            />
+                          </svg>
+                        ) : (
+                          <svg
+                            className="h-6 w-6 text-gray-400 group-hover:text-primary transition-colors duration-200"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            data-oid="8fs6s.:"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                              data-oid="rupjesu"
+                            />
+                          </svg>
+                        )}
+                      </div>
+                    </button>
+                    {openItems.includes(index) && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-8 pb-6"
+                        data-oid="jup8ond"
+                      >
+                        <div
+                          className="border-t border-gray-100 pt-6 ml-14"
+                          data-oid="j6h_c2h"
+                        >
+                          <p
+                            className="text-gray-700 leading-relaxed"
+                            data-oid="nxw8.:j"
+                          >
+                            {item.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* No Results */}
+              {filteredFAQs.length === 0 && (
+                <div
+                  className="text-center py-12 lg:col-span-2"
+                  data-oid="5ui1bll"
+                >
+                  <div
+                    className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                    data-oid="rxygjj1"
+                  >
+                    <Search
+                      className="w-8 h-8 text-gray-400"
+                      data-oid="w6.1_vu"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-semibold text-gray-900 mb-2"
+                    data-oid="cfwbu4w"
+                  >
+                    No results found
+                  </h3>
+                  <p className="text-gray-600" data-oid="mtxkah.">
+                    Try adjusting your search or filter criteria
+                  </p>
+                </div>
+              )}
             </div>
-
-            {/* No Results */}
-            {filteredFAQs.length === 0 && (
-              <div className="text-center py-12" data-oid="5ui1bll">
-                <div
-                  className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                  data-oid="rxygjj1"
-                >
-                  <Search
-                    className="w-8 h-8 text-gray-400"
-                    data-oid="w6.1_vu"
-                  />
-                </div>
-                <h3
-                  className="text-xl font-semibold text-gray-900 mb-2"
-                  data-oid="cfwbu4w"
-                >
-                  No results found
-                </h3>
-                <p className="text-gray-600" data-oid="mtxkah.">
-                  Try adjusting your search or filter criteria
-                </p>
-              </div>
-            )}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-white" data-oid="f810ho-">
-        <div className="container mx-auto px-4" data-oid="py0z4h6">
-          <div className="max-w-4xl mx-auto" data-oid="f7s7-g6">
-            <div
-              className="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-12 text-center text-white relative overflow-hidden"
-              data-oid="xlgz0kr"
-            >
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10" data-oid="r_g-22.">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
-                  }}
-                  data-oid="te:zfko"
-                />
-              </div>
-
-              <div className="relative z-10" data-oid="vc5p2sc">
-                <div
-                  className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"
-                  data-oid="ba9gs7k"
-                >
-                  <MessageCircle
-                    className="w-8 h-8 text-white"
-                    data-oid="t92agab"
+        {/* Contact Section */}
+        <section className="py-20 bg-neutral-100 w-full" data-oid="9vemkfc">
+          <div className="w-full px-4 lg:px-8" data-oid="7wkfqow">
+            <div className="max-w-7xl mx-auto" data-oid="kke0cy.">
+              <div
+                className="bg-[#0000000000] rounded-3xl p-12 text-center text-white relative overflow-hidden"
+                data-oid="j:c2c9w"
+              >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5" data-oid="518:tul">
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                    }}
+                    data-oid="uijc1i5"
                   />
                 </div>
-                <h2
-                  className="text-3xl lg:text-4xl font-bold mb-4"
-                  data-oid="3x-oqz4"
-                >
-                  Still have questions?
-                </h2>
-                <p
-                  className="text-xl text-white/90 mb-8 max-w-2xl mx-auto"
-                  data-oid="_jx52vy"
-                >
-                  Can't find the answer you're looking for? Our support team is
-                  here to help you succeed.
-                </p>
-                <div
-                  className="flex flex-col sm:flex-row gap-4 justify-center"
-                  data-oid="48rm4nv"
-                >
-                  <Link href="/contact" data-oid="-afo46w">
+
+                <div className="relative z-10" data-oid="29h1fjm">
+                  <div
+                    className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6"
+                    data-oid="37wqkbf"
+                  >
+                    <MessageCircle
+                      className="w-8 h-8 text-primary"
+                      data-oid="37xd52n"
+                    />
+                  </div>
+
+                  <h2
+                    className="text-primary text-3xl lg:text-4xl font-bold mb-4"
+                    data-oid="2wbti.z"
+                  >
+                    Still have questions?
+                  </h2>
+                  <p
+                    className="text-xl text-primary mb-8 max-w-2xl mx-auto"
+                    data-oid="ur0u4g_"
+                  >
+                    Can't find the answer you're looking for? Our support team
+                    is here to help you succeed.
+                  </p>
+
+                  <div
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
+                    data-oid="53mhtmq"
+                  >
+                    <Link href="/contact" data-oid="-sbo6p7">
+                      <Button
+                        size="lg"
+                        className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
+                        data-oid="1xidw-z"
+                      >
+                        <MessageCircle
+                          className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
+                          data-oid="w.z:imv"
+                        />
+                        Contact Support
+                      </Button>
+                    </Link>
                     <Button
                       size="lg"
-                      className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                      data-oid="jqdx62e"
+                      className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
+                      asChild
+                      data-oid="gabofm1"
                     >
-                      <MessageCircle
-                        className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                        data-oid="2uugs_d"
-                      />
-                      Contact Support
+                      <a href="mailto:support@assembly.sg" data-oid=":sbvti1">
+                        <Mail
+                          className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
+                          data-oid="_.t3t29"
+                        />
+                        Email Us
+                      </a>
                     </Button>
-                  </Link>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-white/30 bg-slate-200 text-primary hover:bg-white/70 px-8 py-4 text-lg rounded-xl group transition-all duration-300"
-                    asChild
-                    data-oid="567ibrr"
-                  >
-                    <a href="mailto:support@assembly.sg" data-oid="s131fvp">
-                      <Mail
-                        className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                        data-oid="mp8c.n2"
-                      />
-                      Email Us
-                    </a>
-                  </Button>
-                </div>{" "}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

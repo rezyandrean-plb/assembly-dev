@@ -38,8 +38,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-lg py-3"
-          : "bg-white/80 backdrop-blur-sm py-4"
+          ? "bg-white backdrop-blur-lg shadow-lg py-3"
+          : "bg-white backdrop-blur-sm py-4"
       }`}
       data-oid="63yrf_e"
     >
