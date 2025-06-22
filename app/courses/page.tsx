@@ -1323,7 +1323,7 @@ export default function CoursesPage() {
               </>
             ) : activeTab === "recommendation" ? (
               // Personalised Course Recommendation Tab Content
-              <div className="max-w-4xl mx-auto" data-oid="vdjbf0-">
+              <div data-oid="vdjbf0-">
                 {!showResults ? (
                   <div
                     className="bg-white rounded-2xl shadow-lg p-8"
