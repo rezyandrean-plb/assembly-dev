@@ -54,7 +54,7 @@ export default function CourseCard({
   const cardPadding = size === "small" ? "p-2" : "p-4";
   const fontSize = size === "small" ? "text-xs" : "text-base";
   const titleSize = size === "small" ? "text-sm" : "text-lg";
-  const imageHeight = size === "small" ? 240 : 180;
+  const imageHeight = size === "small" ? 240 : 220;
   const buttonSize = size === "small" ? "px-2 py-1 text-[10px]" : "px-4 py-2";
 
   // New design for 'You Might Also Like' section
@@ -64,7 +64,7 @@ export default function CourseCard({
     return (
       <Link href={courseLink} className="block h-full" data-oid="086a:8a">
         <motion.div
-          className="group h-full cursor-pointer"
+          className="group h-full cursor-pointer hover:scale-105 transition-transform duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay }}
@@ -73,13 +73,14 @@ export default function CourseCard({
         >
           <div
             className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full p-4 items-center"
+            style={{ minHeight: "420px" }}
             data-oid="iy3qzo."
           >
             {/* Image */}
             <div className="w-full flex justify-center" data-oid="cdpbgc6">
               <div
                 className="rounded-xl overflow-hidden w-full"
-                style={{ height: 120, maxWidth: 220 }}
+                style={{ height: 140, maxWidth: 260 }}
                 data-oid="6wvp7z_"
               >
                 <Image
@@ -88,8 +89,8 @@ export default function CourseCard({
                     "/placeholder.svg?height=120&width=220&query=real+estate+course"
                   }
                   alt={course.title}
-                  width={220}
-                  height={120}
+                  width={260}
+                  height={140}
                   className="object-contain w-full h-full"
                   data-oid="_9m.0pb"
                 />
@@ -231,7 +232,7 @@ export default function CourseCard({
 
   return (
     <motion.div
-      className="group"
+      className="group hover:scale-105 transition-transform duration-300"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
@@ -240,6 +241,7 @@ export default function CourseCard({
     >
       <div
         className={`bg-white rounded-lg overflow-hidden h-full flex flex-col border border-gray-200 shadow-sm hover:shadow-md transition-shadow ${cardPadding}`}
+        style={{ minHeight: "520px" }}
         data-oid="4nph8d_"
       >
         <Link href={courseLink} className="block" data-oid="3ukog7u">
@@ -282,7 +284,7 @@ export default function CourseCard({
               }
               alt={course.title}
               fill
-              className={`${size === "small" ? "object-contain" : "object-cover"} transition-transform duration-300 group-hover:scale-105`}
+              className={`${size === "small" ? "object-contain" : "object-cover"}`}
               data-oid="u_mu8df"
             />
 

@@ -9,14 +9,14 @@ export const courseData: CourseData = {
   title: "The Ultimate Showdown: Cluster Houses vs. Condos vs. Landed Properties",
   slug: "the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Property Comparison",
+  duration: "1 hour 49 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/ultimate-showdown.jpg",
+  image: "/the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties.jpg",
   featured: false,
-  tags: ["Cluster Houses", "Condos", "Landed Properties", "Comparison"],
+  tags: ["Landed", "Webinar"],
   rating: 0,
-  students: 0,
+  students: 8,
   instructors: melvin && yurong
     ? [
         {
@@ -33,7 +33,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "2024-06-01",
+  lastUpdated: "10/09/2024",
   description: "A comprehensive comparison of cluster houses, condominiums, and landed properties for Singaporean property buyers and investors.",
   whatYouWillLearn: [
     "Understand the differences between cluster houses, condos, and landed properties",

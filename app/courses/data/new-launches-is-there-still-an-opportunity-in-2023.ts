@@ -1,26 +1,32 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 22,
   title: "New Launches – Is There Still an Opportunity in 2023?",
   slug: "new-launches-is-there-still-an-opportunity-in-2023",
   level: "All Levels",
-  duration: "1 hour",
+  duration: "1 hour 23 minutes",
   category: "condo",
   price: "Free",
-  image: "/new-launch-opportunities.png",
+  image: "/new-launches-is-there-still-an-opportunity-in-2023.jpg",
   featured: true,
-  tags: ["Condo", "New Launch", "Webinar", "2023"],
-  rating: 4.8,
-  students: 875,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-  ],
-  lastUpdated: "July 2023",
+  tags: ["Condo", "Webinar"],
+  rating: 0,
+  students: 8,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description:
     "With rising prices and changing market conditions, many investors are questioning whether new launch condominiums still present viable investment opportunities in 2023. This webinar cuts through the noise to provide a data-driven analysis of the current new launch market in Singapore. Learn how to identify genuine opportunities, avoid potential pitfalls, and make informed decisions in today's competitive landscape.",
   whatYouWillLearn: [

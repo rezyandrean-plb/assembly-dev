@@ -15,7 +15,7 @@ export const courseData: CourseData = {
   image: "/images/property-strategies-2025.jpg",
   featured: true,
   tags: ["Investment", "Market Trends", "Rate Cuts"],
-  rating: 4.9,
+  rating: 0,
   students: 112,
   instructors: melvin && nicole
     ? [
@@ -33,7 +33,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "30 April 2025",
+  lastUpdated: "30/04/2025",
   description: `2025 Is Coming—Is Your Property Strategy Ready?\n\nThe property market is shifting—interest rates are falling, trends are evolving, and opportunities are opening up. But here's the challenge: without a clear plan, navigating these changes can feel overwhelming. Should you act now or wait for better deals? What's the most brilliant move in an unpredictable market?`,
   whatYouWillLearn: [
     "Understand how interest rate cuts impact property valuations and mortgage costs",

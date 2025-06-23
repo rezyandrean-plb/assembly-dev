@@ -70,9 +70,31 @@ export interface Course {
 
 // Function to convert CourseData to Course format
 const convertToStandardFormat = (courseData: any, index: number): Course => {
-  // Extract instructor names from the instructors array
+  // Create a mapping from instructor names to facilitator IDs
+  const nameToIdMapping: { [key: string]: string } = {
+    'Melvin Lim': 'melvin-lim',
+    'Adrian Lim': 'adrian-lim', 
+    'Marc Chan': 'marc-chan',
+    'George Peng': 'george-peng',
+    'Ong Yu Rong': 'ong-yu-rong',
+    'Grayce Tan': 'grayce-tan',
+    'Joan Loh': 'joan-loh',
+    'Wayne Tang': 'wayne-tang',
+    'Alan Koh': 'alan-koh',
+    'Beatrice Lim': 'beatrice-lim',
+    'Jesley Lim': 'jesley-lim',
+    'Shawn Tay': 'shawn-tay',
+    'Lyndon Leong': 'lyndon-leong',
+    'Ramzi Razak': 'ramzi-razak',
+    'Lee Jun Wei': 'lee-jun-wei',
+    'Loong Yanyan': 'loong-yanyan',
+    'To be announced': 'tbd',
+    'TBD': 'tbd'
+  };
+
+  // Extract instructor names from the instructors array and map to IDs
   const instructorIds = courseData.instructors?.map((instructor: any) => 
-    instructor.name.toLowerCase().replace(/\s+/g, '-')
+    nameToIdMapping[instructor.name] || 'tbd'
   ) || ['tbd'];
 
   // Convert duration to hours if it's in "X hours Y minutes" format

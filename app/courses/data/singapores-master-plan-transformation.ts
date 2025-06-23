@@ -10,9 +10,9 @@ const courseData: CourseData = {
   slug: "singapores-master-plan-transformation",
   level: "All Levels",
   duration: "57 minutes",
-  category: "Marketing Trends",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/master-plan-transformation.jpg",
+  image: "/singapores-master-plan-transformation.jpg",
   featured: false,
   tags: ["Marketing Trends", "Webinar"],
   rating: 0,
@@ -33,7 +33,7 @@ const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "10 September 2024",
+  lastUpdated: "10/09/2024",
   description: "Understanding Singapore's urban development plans and their impact on property values and investment opportunities.",
   whatYouWillLearn: [
     "Understand Singapore's urban development strategy",

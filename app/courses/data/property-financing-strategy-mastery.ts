@@ -1,25 +1,28 @@
 import type { CourseData } from "../components/course-detail-template"
+// import { getFacilitator } from "@/app/data/facilitators"
+
+// const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 8,
   title: "Property Financing Strategy Mastery",
   slug: "property-financing-strategy-mastery",
   level: "All Levels",
-  duration: "15 hours",
-  category: "Property Finance",
+  duration: "To be determined",
+  category: "Masterclass",
   price: "$1,899.00",
   image: "/property-financing-strategy-mastery.jpg",
   featured: true,
-  tags: ["Investing", "Financing", "Masterclass"],
-  rating: 4.9,
-  students: 95,
+  tags: ["Masterclass", "Investing"],
+  rating: 0,
+  students: 0,
   instructors: [
     {
-      name: "TBD",
-      image: "/professional-finance-expert.png",
+      name: "To be announced",
+      image: "/images/instructors/placeholder.jpg",
     },
   ],
-  lastUpdated: "May 2025",
+  lastUpdated: "22/06/2025",
   description: `This advanced masterclass is designed for property investors who understand that financing strategy is often the difference between average and exceptional returns. Through comprehensive modules covering everything from mortgage optimization to tax planning, you'll develop sophisticated financing strategies that can dramatically improve your investment performance.
 
 Led by industry experts with backgrounds in banking, finance, and property investment, this course goes beyond basic mortgage concepts to explore advanced techniques used by professional investors. You'll learn how to structure loans for maximum leverage, optimize your debt portfolio across multiple properties, and implement tax-efficient investment strategies.

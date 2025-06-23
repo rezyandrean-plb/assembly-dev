@@ -44,6 +44,9 @@ import {
   Infinity,
 } from "lucide-react";
 import { useCart } from "@/components/cart-context";
+import { courses } from "@/app/data/courses";
+import { getFacilitator } from "@/app/data/facilitators";
+import CourseCard from "@/components/course-card";
 
 // Course data interface
 export interface CourseModule {
@@ -81,6 +84,7 @@ export interface CourseData {
   targetAudience?: string[];
   reviews?: Review[];
   sections?: { title: string; content: string }[];
+  previewUrl?: string;
 }
 
 interface CourseDetailTemplateProps {
@@ -98,6 +102,7 @@ export default function CourseDetailTemplate({
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [showVideoPreview, setShowVideoPreview] = useState(false);
 
   const sidebarRef = useRef<HTMLDivElement>(null);
   const heroSectionRef = useRef<HTMLDivElement>(null);
@@ -166,6 +171,21 @@ export default function CourseDetailTemplate({
     setIsLoginModalOpen(false);
   };
 
+  // Handle preview click
+  const handlePreview = () => {
+    if (courseData.previewUrl) {
+      setShowVideoPreview(true);
+    }
+  };
+
+  // Extract YouTube video ID from URL
+  const getYouTubeVideoId = (url: string) => {
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return match && match[2].length === 11 ? match[2] : null;
+  };
+
   // Calculate total lessons
   let totalLessons = 0;
   if (Array.isArray(courseData.curriculum)) {
@@ -179,6 +199,63 @@ export default function CourseDetailTemplate({
 
   // Check if course has reviews
   const hasReviews = courseData.reviews && courseData.reviews.length > 0;
+
+  // Get related courses based on categories, tags, and level
+  const getRelatedCourses = () => {
+    // Filter out the current course and get courses with similar characteristics
+    const otherCourses = courses.filter(
+      (course) => course.slug !== courseData.slug,
+    );
+
+    // Score courses based on similarity
+    const scoredCourses = otherCourses.map((course) => {
+      let score = 0;
+
+      // Match by category
+      if (course.category === courseData.category?.toLowerCase()) {
+        score += 3;
+      }
+
+      // Match by tags
+      const courseTags = courseData.tags || [];
+      const otherCourseTags = course.tags || [];
+      const tagMatches = courseTags.filter((tag) =>
+        otherCourseTags.some(
+          (otherTag) =>
+            otherTag.toLowerCase().includes(tag.toLowerCase()) ||
+            tag.toLowerCase().includes(otherTag.toLowerCase()),
+        ),
+      ).length;
+      score += tagMatches * 2;
+
+      // Match by level
+      if (course.level === courseData.level) {
+        score += 1;
+      }
+
+      // Prefer courses with higher ratings
+      if (course.rating && course.rating > 4) {
+        score += 1;
+      }
+
+      // Prefer paid courses if current course is paid, free if current is free
+      const currentIsFree = courseData.price === "Free";
+      const courseIsFree = course.price === "Free";
+      if (currentIsFree === courseIsFree) {
+        score += 1;
+      }
+
+      return { course, score };
+    });
+
+    // Sort by score and return top 3
+    return scoredCourses
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3)
+      .map((item) => item.course);
+  };
+
+  const relatedCourses = getRelatedCourses();
 
   return (
     <main className="relative bg-gray-50 min-h-screen" data-oid="07_zg65">
@@ -245,14 +322,14 @@ export default function CourseDetailTemplate({
                   {courseData.title}
                 </h1>
 
-                <p
+                <div
                   className="text-xl text-gray-700 mb-6 leading-relaxed"
                   data-oid="ix-:npe"
                 >
                   {typeof courseData.description === "string"
                     ? courseData.description
                     : courseData.description}
-                </p>
+                </div>
 
                 {/* Course Stats */}
                 <div
@@ -309,34 +386,79 @@ export default function CourseDetailTemplate({
                   </div>
                 </div>
 
-                {/* Course Image for Mobile */}
+                {/* Course Image/Video for Mobile */}
                 <div
                   className="lg:hidden mb-6 relative rounded-xl overflow-hidden"
                   data-oid="tlkw_8w"
                 >
                   <div className="aspect-video relative" data-oid="k.0epp-">
-                    <Image
-                      src={courseData.image || "/placeholder.svg"}
-                      alt={courseData.title}
-                      fill
-                      className="object-cover"
-                      data-oid="egbpzaf"
-                    />
-
-                    <div
-                      className="absolute inset-0 bg-black/20 flex items-center justify-center"
-                      data-oid="wttvi18"
-                    >
-                      <button
-                        className="bg-white/90 hover:bg-white rounded-full p-4 transition-colors"
-                        data-oid="yc52h.l"
+                    {showVideoPreview && courseData.previewUrl ? (
+                      <div
+                        className="relative w-full h-full"
+                        data-oid="pzh3vis"
                       >
-                        <Play
-                          className="h-8 w-8 text-[#123B79] ml-1"
-                          data-oid="doqjd_x"
+                        <iframe
+                          src={`https://www.youtube.com/embed/${getYouTubeVideoId(courseData.previewUrl)}?autoplay=1&rel=0`}
+                          title="Course Preview"
+                          className="w-full h-full rounded-xl"
+                          frameBorder={0}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          data-oid="unna17."
                         />
-                      </button>
-                    </div>
+
+                        <button
+                          onClick={() => setShowVideoPreview(false)}
+                          className="absolute top-2 right-2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+                          aria-label="Close video"
+                          data-oid="5vbt-p4"
+                        >
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            data-oid="oo5pgqp"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M6 18L18 6M6 6l12 12"
+                              data-oid=":r9bs_5"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        <Image
+                          src={courseData.image || "/placeholder.svg"}
+                          alt={courseData.title}
+                          fill
+                          className="object-cover"
+                          data-oid="egbpzaf"
+                        />
+
+                        {courseData.previewUrl && (
+                          <div
+                            className="absolute inset-0 bg-black/20 flex items-center justify-center"
+                            data-oid="wttvi18"
+                          >
+                            <button
+                              onClick={handlePreview}
+                              className="bg-white/90 hover:bg-white rounded-full p-4 transition-colors"
+                              data-oid="yc52h.l"
+                            >
+                              <Play
+                                className="h-8 w-8 text-[#123B79] ml-1"
+                                data-oid="doqjd_x"
+                              />
+                            </button>
+                          </div>
+                        )}
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -353,7 +475,7 @@ export default function CourseDetailTemplate({
                   Meet Your Instructors
                 </h2>
                 <div
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
                   data-oid="g41qf83"
                 >
                   {Array.isArray(courseData.instructors) &&
@@ -373,7 +495,7 @@ export default function CourseDetailTemplate({
                     ))
                   ) : (
                     <div
-                      className="text-gray-500 col-span-3"
+                      className="text-gray-500 col-span-full"
                       data-oid="9jgu2q-"
                     >
                       Instructor information coming soon.
@@ -766,36 +888,80 @@ export default function CourseDetailTemplate({
                 className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6"
                 data-oid="qpf7dbc"
               >
-                {/* Course Preview Image */}
+                {/* Course Preview Image/Video */}
                 <div className="relative aspect-video" data-oid="w.tp_d3">
-                  <Image
-                    src={courseData.image || "/placeholder.svg"}
-                    alt={courseData.title}
-                    fill
-                    className="object-cover"
-                    data-oid="xnmktfs"
-                  />
-
-                  <div
-                    className="absolute inset-0 bg-black/20 flex items-center justify-center"
-                    data-oid="nbj21k5"
-                  >
-                    <button
-                      className="bg-white/90 hover:bg-white rounded-full p-4 transition-colors group"
-                      data-oid="rcr307l"
-                    >
-                      <Play
-                        className="h-8 w-8 text-[#123B79] ml-1 group-hover:scale-110 transition-transform"
-                        data-oid=".2azrmo"
+                  {showVideoPreview && courseData.previewUrl ? (
+                    <div className="relative w-full h-full" data-oid="351ey7k">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${getYouTubeVideoId(courseData.previewUrl)}?autoplay=1&rel=0`}
+                        title="Course Preview"
+                        className="w-full h-full rounded-t-2xl"
+                        frameBorder={0}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        data-oid="90h8_57"
                       />
-                    </button>
-                  </div>
-                  <div
-                    className="absolute top-4 right-4 bg-[#123B79] text-white text-sm font-bold px-3 py-1 rounded-full"
-                    data-oid="w-rm335"
-                  >
-                    Preview
-                  </div>
+
+                      <button
+                        onClick={() => setShowVideoPreview(false)}
+                        className="absolute top-2 right-2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+                        aria-label="Close video"
+                        data-oid="skjjr:r"
+                      >
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          data-oid="140aaox"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                            data-oid="lmx_9rb"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <Image
+                        src={courseData.image || "/placeholder.svg"}
+                        alt={courseData.title}
+                        fill
+                        className="object-cover"
+                        data-oid="xnmktfs"
+                      />
+
+                      {courseData.previewUrl && (
+                        <>
+                          <div
+                            className="absolute inset-0 bg-black/20 flex items-center justify-center"
+                            data-oid="nbj21k5"
+                          >
+                            <button
+                              onClick={handlePreview}
+                              className="bg-white/90 hover:bg-white rounded-full p-4 transition-colors group"
+                              data-oid="rcr307l"
+                            >
+                              <Play
+                                className="h-8 w-8 text-[#123B79] ml-1 group-hover:scale-110 transition-transform"
+                                data-oid=".2azrmo"
+                              />
+                            </button>
+                          </div>
+                          <div
+                            className="absolute top-4 right-4 bg-[#123B79] text-white text-sm font-bold px-3 py-1 rounded-full"
+                            data-oid="w-rm335"
+                          >
+                            Preview
+                          </div>
+                        </>
+                      )}
+                    </>
+                  )}
                 </div>
 
                 {/* Quick Summary */}
@@ -872,14 +1038,44 @@ export default function CourseDetailTemplate({
                   </Button>
 
                   {/* Secondary CTA */}
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#123B79] text-[#123B79] hover:bg-[#123B79] hover:text-white font-semibold py-3 mb-6 rounded-xl"
-                    data-oid="pa0933h"
-                  >
-                    <Play className="mr-2 h-4 w-4" data-oid="f35r4y." />
-                    Preview Course
-                  </Button>
+                  {courseData.previewUrl && (
+                    <Button
+                      variant="outline"
+                      onClick={
+                        showVideoPreview
+                          ? () => setShowVideoPreview(false)
+                          : handlePreview
+                      }
+                      className="w-full border-[#123B79] text-[#123B79] hover:bg-[#123B79] hover:text-white font-semibold py-3 mb-6 rounded-xl"
+                      data-oid="pa0933h"
+                    >
+                      {showVideoPreview ? (
+                        <>
+                          <svg
+                            className="mr-2 h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            data-oid="0tflm7i"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M6 18L18 6M6 6l12 12"
+                              data-oid="2u6qitz"
+                            />
+                          </svg>
+                          Close Preview
+                        </>
+                      ) : (
+                        <>
+                          <Play className="mr-2 h-4 w-4" data-oid="f35r4y." />
+                          Preview Course
+                        </>
+                      )}
+                    </Button>
+                  )}
 
                   {/* Course Features */}
                   <div className="space-y-4" data-oid="47oivtn">
@@ -1055,124 +1251,45 @@ export default function CourseDetailTemplate({
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             data-oid="xb.xa53"
           >
-            {[
-              {
-                title: "Financial Modeling Masterclass",
-                level: "Advanced",
-                duration: "40 hours 45 minutes",
-                price: "$1,499",
-                image: "/financial-model-dashboard.png",
-                slug: "financial-modeling-masterclass",
-                rating: 4.8,
-                students: 1250,
-              },
-              {
-                title: "Condominium Investment Analysis",
-                level: "Intermediate",
-                duration: "24 hours 20 minutes",
-                price: "$999",
-                image: "/singapore-skyline-condos.png",
-                slug: "condominium-investment-analysis",
-                rating: 4.7,
-                students: 890,
-              },
-              {
-                title: "Property Market Trend Analysis",
-                level: "Advanced",
-                duration: "32 hours 10 minutes",
-                price: "$1,199",
-                image: "/singapore-skyline-day.png",
-                slug: "property-market-trend-analysis",
-                rating: 4.9,
-                students: 1100,
-              },
-            ].map((relatedCourse, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                viewport={{ once: true }}
-                data-oid="5o-g5j:"
-              >
-                <div className="relative h-48" data-oid="654u8i_">
-                  <Image
-                    src={relatedCourse.image || "/placeholder.svg"}
-                    alt={relatedCourse.title}
-                    fill
-                    className="object-cover"
-                    data-oid="zkut4wj"
+            {relatedCourses.map((course, index) => {
+              // Get instructor names from IDs
+              const instructorNames =
+                course.instructorIds
+                  ?.map((id) => {
+                    if (id === "tbd") return "To be announced";
+                    const facilitator = getFacilitator(id);
+                    return facilitator?.name || "Unknown";
+                  })
+                  .join(", ") || "To be announced";
+
+              return (
+                <motion.div
+                  key={course.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                  viewport={{ once: true }}
+                  data-oid="2renfm5"
+                >
+                  <CourseCard
+                    course={{
+                      title: course.title,
+                      instructor: instructorNames,
+                      level: course.level || "All Levels",
+                      duration: course.duration || "Self-paced",
+                      image: course.image,
+                      slug: course.slug,
+                      price: course.price || "Free",
+                      rating: course.rating,
+                      reviewCount: course.reviewCount,
+                    }}
+                    delay={0}
+                    size="normal"
+                    data-oid="wdimxh:"
                   />
-
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-                    data-oid="x5qkf05"
-                  ></div>
-                  <div
-                    className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full"
-                    data-oid="n9mnvl3"
-                  >
-                    {relatedCourse.level}
-                  </div>
-                  <div
-                    className="absolute bottom-4 left-4 text-white"
-                    data-oid="_2sl_cr"
-                  >
-                    <div className="flex items-center mb-1" data-oid="o191scs">
-                      <Star
-                        className="h-4 w-4 text-[#F0A500] fill-[#F0A500] mr-1"
-                        data-oid="xvk3w3k"
-                      />
-
-                      <span className="font-semibold" data-oid="zptgt6:">
-                        {relatedCourse.rating}
-                      </span>
-                      <span className="ml-1 text-sm" data-oid="7_jdz5k">
-                        ({relatedCourse.students})
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6" data-oid="9m6l1hz">
-                  <h3
-                    className="text-lg font-bold text-[#123B79] mb-2 line-clamp-2"
-                    data-oid="8uxkpx3"
-                  >
-                    {relatedCourse.title}
-                  </h3>
-                  <div
-                    className="text-gray-500 text-sm mb-4 flex items-center"
-                    data-oid="kypsqkz"
-                  >
-                    <Clock className="h-4 w-4 mr-1" data-oid="v.wwqxp" />
-                    {relatedCourse.duration}
-                  </div>
-                  <div
-                    className="flex justify-between items-center"
-                    data-oid="9h58y2e"
-                  >
-                    <span
-                      className="font-bold text-xl text-[#123B79]"
-                      data-oid="7-hf.n:"
-                    >
-                      {relatedCourse.price}
-                    </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() =>
-                        router.push(`/courses/${relatedCourse.slug}`)
-                      }
-                      className="border-[#123B79] text-[#123B79] hover:bg-[#123B79] hover:text-white"
-                      data-oid="i9fg89i"
-                    >
-                      View Course
-                    </Button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

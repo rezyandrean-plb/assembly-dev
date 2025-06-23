@@ -40,7 +40,7 @@ const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "10 September 2024",
+  lastUpdated: "10/09/2024",
   description: "Learn advanced strategies for expanding your property portfolio in 2024's market conditions.",
   whatYouWillLearn: [
     "Learn advanced portfolio expansion techniques",

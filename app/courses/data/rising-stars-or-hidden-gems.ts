@@ -1,31 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 export const courseData: CourseData = {
   id: 29,
   title: "Rising Stars or Hidden Gems?",
   slug: "rising-stars-or-hidden-gems",
   level: "All Levels",
-  duration: "1 hour",
-  category: "condo",
+  duration: "1 hour 1 minute",
+  category: "Webinar",
   price: "Free",
   image: "/rising-stars-or-hidden-gems.jpg", // Updated image path
   featured: true,
-  tags: ["Condo", "Investment Opportunities", "Webinar"],
-  rating: 4.9,
-  students: 1050,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/professional-headshot-ong-yu-rong.png",
-      bio: "Investment Analyst specializing in real estate market trends",
-    },
-  ],
-  lastUpdated: "November 2022",
+  tags: ["Condo","Webinar"],
+  rating: 0,
+  students: 8,
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description:
     "In Singapore's mature property market, finding genuine opportunities requires looking beyond the obvious. This webinar explores emerging neighborhoods and overlooked property segments that may offer superior investment potential. Property experts Melvin Lim and Ong Yu Rong share their methodology for identifying 'rising stars' and 'hidden gems' in the market, helping you discover opportunities that others might miss.",
   whatYouWillLearn: [
@@ -109,20 +117,6 @@ export const courseData: CourseData = {
       date: "December 2022",
       comment:
         "This webinar opened my eyes to opportunities I hadn't considered. The framework for evaluating emerging areas is practical and has already helped me identify a few interesting prospects.",
-    },
-    {
-      name: "Serene Lim",
-      rating: 5,
-      date: "November 2022",
-      comment:
-        "Melvin and Yu Rong's insights into infrastructure developments and their impact on property values were invaluable. Their analysis goes much deeper than what you typically find in property seminars.",
-    },
-    {
-      name: "Darren Chong",
-      rating: 5,
-      date: "November 2022",
-      comment:
-        "The case studies of past 'rising stars' were fascinating and provided concrete evidence of their methodology's effectiveness. I particularly appreciated the balanced discussion of risks and rewards.",
     },
   ],
 }

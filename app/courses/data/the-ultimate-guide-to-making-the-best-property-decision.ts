@@ -9,14 +9,14 @@ const courseData: CourseData = {
   title: "The Ultimate Guide to Making the Best Property Decision",
   slug: "the-ultimate-guide-to-making-the-best-property-decision",
   level: "All Levels",
-  duration: "2 hours",
+  duration: "1 hour 8 minutes",
   category: "Condo",
   price: "Free",
-  image: "/images/courses/property-decision-guide.jpg",
+  image: "/the-ultimate-guide-to-making-the-best-property-decision.jpg",
   featured: false,
   tags: ["Condo", "Webinar"],
   rating: 0,
-  students: 0,
+  students: 43,
   instructors: melvin && joan 
     ? [
         {
@@ -33,7 +33,7 @@ const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "2024-06-01",
+  lastUpdated: "10/09/2024",
   description: "A comprehensive guide to making informed and strategic property decisions in Singapore's real estate market.",
   whatYouWillLearn: [
     "Make informed property decisions",

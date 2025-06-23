@@ -15,7 +15,24 @@ export default function InstructorNames({
 
   useEffect(() => {
     const facilitatorDetails = instructorIds
-      .map((id) => getFacilitator(id))
+      .map((id) => {
+        if (id === "tbd") {
+          // Handle "To be announced" case
+          return {
+            id: "tbd",
+            name: "To be announced",
+            role: "",
+            image: "",
+            bio: "",
+            longBio: "",
+            specialty: "",
+            experience: "",
+            courses: [],
+          } as Facilitator;
+        }
+        const facilitator = getFacilitator(id);
+        return facilitator;
+      })
       .filter(Boolean) as Facilitator[];
     setInstructors(facilitatorDetails);
   }, [instructorIds]);

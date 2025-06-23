@@ -9,11 +9,12 @@ export const courseData: CourseData = {
   slug: "module-1-of-niche-positioning-masterclass",
   level: "Intermediate",
   duration: "3 hours 52 minutes",
-  category: "Property Investment",
+  category: "Webinar",
   price: "$2,999.00",
   image: "/module-1-of-niche-positioning-masterclass.jpg",
+  previewUrl: "https://youtu.be/GtI90K2o01w",
   featured: true,
-  tags: ["Niche Positioning", "Property Investment", "Market Strategy"],
+  tags: ["Webinar"],
   rating: 0,
   students: 7,
   instructors: melvin
@@ -26,7 +27,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "09 June 2025",
+  lastUpdated: "09/06/2025",
   description: `Module 1 of our exclusive Niche Positioning Masterclass is designed for serious property investors who want to develop specialized expertise in high-growth property niches. This foundational module will help you identify lucrative property niches and develop a strategic positioning that sets you apart from the average investor.
 
 Led by Melvin Lim, one of Singapore's foremost property investment strategists, this intensive program combines theoretical frameworks with practical applications to help you develop a unique investment approach that targets underserved or emerging market segments.

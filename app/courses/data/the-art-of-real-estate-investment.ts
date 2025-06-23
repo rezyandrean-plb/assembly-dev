@@ -1,31 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 export const courseData: CourseData = {
   id: 25,
   title: "The Art of Real Estate Investment",
   slug: "the-art-of-real-estate-investment",
   level: "All Levels",
-  duration: "1 hour",
-  category: "condo",
+  duration: "1 hour 43 minutes",
+  category: "Webinar",
   price: "Free",
   image: "/the-art-of-real-estate-investment.jpg",
   featured: true,
-  tags: ["Condo", "Investment", "Webinar"],
-  rating: 4.8,
-  students: 1120,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/professional-headshot-ong-yu-rong.png",
-      bio: "Investment Analyst specializing in real estate market trends",
-    },
-  ],
-  lastUpdated: "March 2023",
+  tags: ["Condo", "Webinar"],
+  rating: 0,
+  students: 15,
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description:
     "Real estate investment is both a science and an art. While data analysis forms the foundation, successful investors also master the nuanced art of timing, negotiation, and strategic decision-making. This webinar explores the artistic elements of property investment that often separate good returns from exceptional ones. Join property experts Melvin Lim and Ong Yu Rong as they share insights gained from decades of experience navigating Singapore's complex property market.",
   whatYouWillLearn: [

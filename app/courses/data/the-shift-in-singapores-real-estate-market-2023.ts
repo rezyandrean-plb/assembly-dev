@@ -9,7 +9,7 @@ export const courseData: CourseData = {
   slug: "the-shift-in-singapores-real-estate-market-2023",
   level: "All Levels",
   duration: "1 hour 15 minutes",
-  category: "Market Trends",
+  category: "Webinar",
   price: "Free",
   image: "/the-shift-in-singapores-real-estate-market-2023.jpg",
   featured: true,
@@ -26,7 +26,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "10 September 2024",
+  lastUpdated: "10/09/2024",
   description: `In 2020, Singapore's real estate market experienced a strong bull run, characterised by a substantial and sustained increase in select property values. This was anticipated by PropertyLimBrothers, resulting in a strong investment portfolio for our clients.
 
 So what's in 2023? PropertyLimBrothers forecasts macro shifts in the market which will undoubtedly drive the way we invest in real estate. Join Melvin Lim, CEO and Co-founder of PropertyLimBrothers, as he shares about the risks and opportunities in the next wave of real estate trends.`,

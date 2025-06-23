@@ -21,7 +21,7 @@ export const courseData: CourseData = {
   price: "$399.00",
   image: "/property-summit-2024.jpg",
   featured: true,
-  tags: ["Event", "Condo", "HDB", "Investing", "Landed", "Market Trends"],
+  tags: ["Event Courses", "Condo", "HDB", "Investing", "Landed", "Market Trends"],
   rating: 0,
   students: 90,
   instructors: melvin && marc && grayce && yurong && george && shawntay && jesley && wayne && joan
@@ -82,7 +82,7 @@ export const courseData: CourseData = {
         },
       ]
     : [],
-  lastUpdated: "June 2024",
+  lastUpdated: "11/01/2024",
   description: `Join us for the premier property investment event of the year! The Property Summit 2024 brings together Singapore's top property experts, successful investors, and industry insiders for two days of intensive learning, networking, and strategy development.
 
 This exclusive event will cover the latest market trends, investment strategies, and opportunities across all property segments in Singapore. From HDB to luxury condos, from landed properties to commercial real estate, our expert speakers will provide insights and actionable advice to help you make informed investment decisions.
