@@ -10,12 +10,6 @@ import {
   Phone,
   Mail,
   ChevronDown,
-  Clock,
-  MessageCircle,
-  Users,
-  Star,
-  ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import NetworkBackground from "@/components/network-background";
 import { Button } from "@/components/ui/button";
@@ -55,30 +49,10 @@ export default function ContactPage() {
   });
 
   const interestOptions = [
-    {
-      id: "courses",
-      label: "Courses",
-      icon: "📚",
-      description: "Property investment courses",
-    },
-    {
-      id: "careers",
-      label: "Careers",
-      icon: "💼",
-      description: "Join our team",
-    },
-    {
-      id: "book",
-      label: "PLB Book",
-      icon: "📖",
-      description: "Property investment guide",
-    },
-    {
-      id: "others",
-      label: "Others",
-      icon: "💬",
-      description: "General inquiries",
-    },
+    { id: "courses", label: "Courses" },
+    { id: "careers", label: "Careers" },
+    { id: "book", label: "PLB Book" },
+    { id: "others", label: "Others" },
   ];
 
   const toggleInterest = (id: string) => {
@@ -117,357 +91,196 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar data-oid="w03ihjl" />
+      <Navbar data-oid="86_en2d" />
       <main
-        className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"
-        data-oid="sxj4622"
+        className="relative min-h-screen overflow-hidden bg-gradient-to-b from-blue-50 to-white"
+        data-oid="ie66q-h"
       >
-        {/* Enhanced Background */}
-        <div className="absolute inset-0 z-0" data-oid="cc80dnj">
-          <NetworkBackground data-oid="thsv9_8" />
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5"
-            data-oid="t74wtb_"
-          />
-
-          {/* Floating Elements */}
-          <motion.div
-            className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
-            animate={{
-              y: [0, -20, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            data-oid="baqds5d"
-          />
-
-          <motion.div
-            className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
-            animate={{
-              y: [0, 20, 0],
-              x: [0, -15, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-            data-oid="f6yzi8:"
-          />
+        {/* Background */}
+        <div className="absolute inset-0 z-0 opacity-20" data-oid="7ylzm9c">
+          <NetworkBackground data-oid="zq44zmq" />
         </div>
 
-        {/* Hero Section - Enhanced */}
+        {/* Hero Section */}
         <section
-          className="relative pt-24 pb-16 md:pt-32 md:pb-20"
-          data-oid="_ekkul_"
+          className="relative pt-24 pb-12 md:pt-32 md:pb-16"
+          data-oid="8deaqm3"
         >
           <div
             className="container px-4 mx-auto text-center"
-            data-oid="-i3_l__"
+            data-oid="0osawip"
           >
-            <motion.div
-              className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-lg border border-white/20"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              data-oid="-w10ji5"
+              data-oid="r3ai_9u"
             >
-              <Sparkles className="h-4 w-4 text-blue-600" data-oid="g7u7hq5" />
-              <span
-                className="text-sm font-medium text-gray-700"
-                data-oid="d36ulyv"
-              >
-                We're here to help
-              </span>
-            </motion.div>
-
-            <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-900 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              data-oid="f2fg4p1"
-            >
-              Let's Connect
+              Get In Touch
             </motion.h1>
-
             <motion.p
-              className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8"
+              className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              data-oid="qyijau2"
+              data-oid="a8m4v3q"
             >
-              Ready to start your property investment journey? We're here to
-              guide you every step of the way.
+              Got a question? We're here 25/8.
             </motion.p>
-
-            {/* Quick Stats */}
-            <motion.div
-              className="flex flex-wrap justify-center gap-8 mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              data-oid="u77305l"
-            >
-              <div
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2"
-                data-oid="_xusmxe"
-              >
-                <Clock className="h-5 w-5 text-blue-600" data-oid="7pwbm7w" />
-                <span
-                  className="text-sm font-medium text-gray-700"
-                  data-oid="3r3-cvb"
-                >
-                  24h Response
-                </span>
-              </div>
-              <div
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2"
-                data-oid="f4kglhn"
-              >
-                <Users className="h-5 w-5 text-blue-600" data-oid="k_-ovs3" />
-                <span
-                  className="text-sm font-medium text-gray-700"
-                  data-oid="3wyegqq"
-                >
-                  Expert Team
-                </span>
-              </div>
-              <div
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2"
-                data-oid="xfl7o9w"
-              >
-                <Star className="h-5 w-5 text-blue-600" data-oid="45oq94:" />
-                <span
-                  className="text-sm font-medium text-gray-700"
-                  data-oid="4t:h-o8"
-                >
-                  5-Star Service
-                </span>
-              </div>
-            </motion.div>
           </div>
         </section>
 
-        {/* Main Content - Redesigned */}
-        <section className="relative py-16 md:py-20" data-oid="z7m7q-.">
-          <div className="container px-4 mx-auto" data-oid="sx5mlob">
+        {/* Main Content */}
+        <section className="relative py-12 md:py-16" data-oid="_fpj_i_">
+          <div className="container px-4 mx-auto" data-oid="-fzilpv">
             <div
-              className="grid lg:grid-cols-2 gap-16 items-start"
-              data-oid="q2w.2_r"
+              className="flex flex-col lg:flex-row gap-12 items-center"
+              data-oid="on-zmer"
             >
-              {/* Left Column - Contact Info & Animation */}
+              {/* Left Column - Animation and Contact Info */}
               <motion.div
-                className="space-y-8"
+                className="w-full lg:w-1/2"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                data-oid="nld:uks"
+                data-oid="0o6gzs-"
               >
-                {/* Contact Animation */}
                 <div
-                  className="relative h-[400px] md:h-[450px] bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20"
-                  data-oid="44dr46a"
+                  className="relative h-[400px] md:h-[500px] mb-8"
+                  data-oid="xa4fgro"
                 >
-                  <ContactAnimation data-oid="x2rhe_z" />
+                  <ContactAnimation data-oid="tg.h02c" />
                 </div>
 
-                {/* Contact Information Cards */}
-                <div className="grid gap-4" data-oid="gqp8rk1">
-                  <motion.div
-                    className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
-                    whileHover={{ y: -2 }}
-                    data-oid="j.hevd4"
+                <div
+                  className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg"
+                  data-oid="w1gja9u"
+                >
+                  <h3
+                    className="text-2xl font-bold text-blue-900 mb-6"
+                    data-oid="zu6l.zz"
                   >
-                    <div className="flex items-start gap-4" data-oid="g1zdk8p">
+                    Contact Information
+                  </h3>
+
+                  <div className="space-y-4" data-oid="yf00s4k">
+                    <div className="flex items-start gap-4" data-oid="-42_3z7">
                       <div
-                        className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg"
-                        data-oid="puhka2o"
+                        className="bg-blue-100 p-3 rounded-full"
+                        data-oid=".xgb8ms"
                       >
                         <MapPin
-                          className="h-6 w-6 text-white"
-                          data-oid="xyq87dt"
+                          className="h-6 w-6 text-blue-600"
+                          data-oid="n__ohes"
                         />
                       </div>
-                      <div data-oid="pdcj2od">
+                      <div data-oid="sqn0b4s">
                         <h4
-                          className="font-bold text-gray-900 mb-1"
-                          data-oid="5p77kfz"
+                          className="font-semibold text-gray-900"
+                          data-oid="h0p19av"
                         >
-                          Visit Our Office
+                          Our Location
                         </h4>
-                        <p
-                          className="text-gray-600 text-sm leading-relaxed"
-                          data-oid="d3cn-i0"
-                        >
-                          Oxley Bizhub 2, #11-15
-                          <br data-oid="tlklal1" />
-                          62 Ubi Road 1, Singapore 408734
+                        <p className="text-gray-600" data-oid="he9hm3d">
+                          Oxley Bizhub 2, #11-15, 62 Ubi Road 1, Singapore
+                          408734
                         </p>
-                        <button
-                          className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium mt-2 group"
-                          data-oid="3fqm_62"
-                        >
-                          Get Directions
-                          <ArrowRight
-                            className="h-3 w-3 group-hover:translate-x-1 transition-transform"
-                            data-oid="9k.2d93"
-                          />
-                        </button>
                       </div>
                     </div>
-                  </motion.div>
 
-                  <div className="grid md:grid-cols-2 gap-4" data-oid="h.:vwx.">
-                    <motion.div
-                      className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
-                      whileHover={{ y: -2 }}
-                      data-oid="9ph38vy"
-                    >
+                    <div className="flex items-start gap-4" data-oid="h7-iaqo">
                       <div
-                        className="flex items-start gap-4"
-                        data-oid="_w4gnml"
+                        className="bg-blue-100 p-3 rounded-full"
+                        data-oid="sxdvsgx"
                       >
-                        <div
-                          className="bg-gradient-to-br from-green-500 to-green-600 p-3 rounded-xl shadow-lg"
-                          data-oid="-9qkf_j"
-                        >
-                          <Phone
-                            className="h-6 w-6 text-white"
-                            data-oid="bp30_.m"
-                          />
-                        </div>
-                        <div data-oid="2jr0fhf">
-                          <h4
-                            className="font-bold text-gray-900 mb-1"
-                            data-oid="wspzhss"
-                          >
-                            Call Us
-                          </h4>
-                          <p
-                            className="text-gray-600 text-sm"
-                            data-oid="3xeer74"
-                          >
-                            +65 6232 6719
-                          </p>
-                        </div>
+                        <Phone
+                          className="h-6 w-6 text-blue-600"
+                          data-oid="vfd0ies"
+                        />
                       </div>
-                    </motion.div>
+                      <div data-oid="lt-po1u">
+                        <h4
+                          className="font-semibold text-gray-900"
+                          data-oid="j2w2dvl"
+                        >
+                          Phone Number
+                        </h4>
+                        <p className="text-gray-600" data-oid="-mefozr">
+                          +65 6232 6719
+                        </p>
+                      </div>
+                    </div>
 
-                    <motion.div
-                      className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
-                      whileHover={{ y: -2 }}
-                      data-oid="wlz78ki"
-                    >
+                    <div className="flex items-start gap-4" data-oid="-s73tr0">
                       <div
-                        className="flex items-start gap-4"
-                        data-oid="2hg:6-0"
+                        className="bg-blue-100 p-3 rounded-full"
+                        data-oid="3dd1.rj"
                       >
-                        <div
-                          className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shadow-lg"
-                          data-oid="7k.5:92"
-                        >
-                          <Mail
-                            className="h-6 w-6 text-white"
-                            data-oid="jdigk2-"
-                          />
-                        </div>
-                        <div data-oid="cxmw595">
-                          <h4
-                            className="font-bold text-gray-900 mb-1"
-                            data-oid="r-xos4q"
-                          >
-                            Email Us
-                          </h4>
-                          <p
-                            className="text-gray-600 text-sm"
-                            data-oid=".n:5exj"
-                          >
-                            hello@assembly.sg
-                          </p>
-                        </div>
+                        <Mail
+                          className="h-6 w-6 text-blue-600"
+                          data-oid="0.83a-u"
+                        />
                       </div>
-                    </motion.div>
+                      <div data-oid=".s1zd5f">
+                        <h4
+                          className="font-semibold text-gray-900"
+                          data-oid="a8dm.iy"
+                        >
+                          Email Address
+                        </h4>
+                        <p className="text-gray-600" data-oid="wz8bvd-">
+                          hello@assembly.sg
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Right Column - Enhanced Contact Form */}
+              {/* Right Column - Contact Form */}
               <motion.div
-                className="lg:sticky lg:top-8"
+                className="w-full lg:w-1/2"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                data-oid="tatsiio"
+                data-oid="oigmr_y"
               >
                 <div
-                  className="bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20"
-                  data-oid="04hkg25"
+                  className="bg-white backdrop-blur-md rounded-xl p-6 md:p-8 shadow-xl border border-gray-200"
+                  data-oid="j7n0s5b"
                 >
-                  <div className="text-center mb-8" data-oid="wjmnqce">
-                    <h2
-                      className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent mb-3"
-                      data-oid="3gr4__y"
-                    >
-                      Start Your Journey
-                    </h2>
-                    <p className="text-gray-600" data-oid="r1jlabw">
-                      Tell us how we can help you achieve your property
-                      investment goals
-                    </p>
-                  </div>
+                  <h2
+                    className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent mb-6"
+                    data-oid="486z_16"
+                  >
+                    Ask us anything!
+                  </h2>
 
-                  <AnimatePresence data-oid="gf4dohu">
+                  <AnimatePresence data-oid="chxbf5g">
                     {isSubmitted ? (
                       <motion.div
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 text-center"
+                        className="bg-green-50 border border-green-200 rounded-lg p-6 text-center"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        data-oid="mforrd8"
+                        data-oid="mblhb2x"
                       >
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.2, type: "spring" }}
-                          data-oid="atpsag0"
-                        >
-                          <CheckCircle
-                            className="h-20 w-20 text-green-500 mx-auto mb-4"
-                            data-oid="emv2f.:"
-                          />
-                        </motion.div>
+                        <CheckCircle
+                          className="h-16 w-16 text-green-500 mx-auto mb-4"
+                          data-oid="m-ktr6-"
+                        />
+
                         <h3
-                          className="text-2xl font-bold text-green-800 mb-3"
-                          data-oid=":q8ll4z"
+                          className="text-xl font-semibold text-green-800 mb-2"
+                          data-oid="_lprk-."
                         >
-                          Message Sent Successfully!
+                          Thank You!
                         </h3>
-                        <p className="text-green-700 mb-4" data-oid="fwc37s.">
-                          Thank you for reaching out. Our team will get back to
-                          you within 24 hours.
+                        <p className="text-green-700" data-oid="gg-uhkn">
+                          Your message has been sent successfully. We'll get
+                          back to you shortly.
                         </p>
-                        <div
-                          className="inline-flex items-center gap-2 bg-green-100 rounded-full px-4 py-2"
-                          data-oid="h1ly8.r"
-                        >
-                          <Clock
-                            className="h-4 w-4 text-green-600"
-                            data-oid="2spavhl"
-                          />
-                          <span
-                            className="text-sm font-medium text-green-700"
-                            data-oid="6o7sa0b"
-                          >
-                            Expected response: Within 24 hours
-                          </span>
-                        </div>
                       </motion.div>
                     ) : (
                       <motion.form
@@ -475,172 +288,169 @@ export default function ContactPage() {
                         className="space-y-6"
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        data-oid="henlm69"
+                        data-oid="n-u8_ua"
                       >
-                        {/* Name Field */}
-                        <div data-oid="vow43.e">
+                        <div data-oid="es2h7t:">
                           <label
                             htmlFor="name"
-                            className="block text-sm font-semibold text-gray-700 mb-2"
-                            data-oid="rr60645"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            data-oid="f0ln0vn"
                           >
                             Full Name{" "}
-                            <span className="text-red-500" data-oid="w8d13qc">
+                            <span className="text-red-500" data-oid="dkzvuz9">
                               *
                             </span>
                           </label>
                           <input
                             id="name"
                             type="text"
-                            className={`w-full px-4 py-3 rounded-xl border-2 ${
-                              errors.name
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 bg-gray-50"
-                            } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                            placeholder="Enter your full name"
+                            className={`w-full px-4 py-3 rounded-lg border ${errors.name ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
+                            placeholder="Your name"
                             {...register("name", {
                               required: "Name is required",
                             })}
-                            data-oid="pekqr5a"
+                            data-oid="mm902.d"
                           />
 
                           {errors.name && (
-                            <motion.p
-                              className="mt-2 text-sm text-red-600 flex items-center gap-1"
-                              initial={{ opacity: 0, y: -10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              data-oid="5--he0g"
+                            <p
+                              className="mt-1 text-sm text-red-600"
+                              data-oid="d_rhdoz"
                             >
                               {errors.name.message}
-                            </motion.p>
+                            </p>
                           )}
                         </div>
 
-                        {/* Email Field */}
-                        <div data-oid="oz_mkpx">
+                        <div data-oid="takqfy3">
                           <label
                             htmlFor="email"
-                            className="block text-sm font-semibold text-gray-700 mb-2"
-                            data-oid="941kxln"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            data-oid="e7wuz-8"
                           >
                             Email Address{" "}
-                            <span className="text-red-500" data-oid="m5tgug3">
+                            <span className="text-red-500" data-oid="f:zz7y2">
                               *
                             </span>
                           </label>
                           <input
                             id="email"
                             type="email"
-                            className={`w-full px-4 py-3 rounded-xl border-2 ${
-                              errors.email
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 bg-gray-50"
-                            } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                            placeholder="Enter your email address"
+                            className={`w-full px-4 py-3 rounded-lg border ${errors.email ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
+                            placeholder="Your email"
                             {...register("email", {
                               required: "Email is required",
                               pattern: {
                                 value:
                                   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                message: "Please enter a valid email address",
+                                message: "Invalid email address",
                               },
                             })}
-                            data-oid="2_xlmb3"
+                            data-oid="n9z4aaf"
                           />
 
                           {errors.email && (
-                            <motion.p
-                              className="mt-2 text-sm text-red-600"
-                              initial={{ opacity: 0, y: -10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              data-oid="e.fz5y5"
+                            <p
+                              className="mt-1 text-sm text-red-600"
+                              data-oid=":peqptd"
                             >
                               {errors.email.message}
-                            </motion.p>
+                            </p>
                           )}
                         </div>
 
-                        {/* Phone Field */}
-                        <div data-oid="9a9nbcu">
+                        <div data-oid="7m:28r:">
                           <label
                             htmlFor="phone"
-                            className="block text-sm font-semibold text-gray-700 mb-2"
-                            data-oid="ldgx7sa"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            data-oid="7:o4r43"
                           >
                             Phone Number{" "}
-                            <span className="text-red-500" data-oid=":px3e16">
+                            <span className="text-red-500" data-oid="yghrj2u">
                               *
                             </span>
                           </label>
-                          <div className="relative" data-oid="6tb5-2a">
-                            <div className="flex" data-oid="6i1uhg3">
-                              <div className="relative" data-oid="-ttdnt:">
+                          <div className="relative" data-oid=".ukv.6z">
+                            {/* Country code selector - redesigned to be more compact */}
+                            <div className="flex" data-oid="xdmpk5:">
+                              <div
+                                className="relative inline-block"
+                                data-oid="-uo3fh2"
+                              >
                                 <button
                                   type="button"
-                                  className="flex items-center gap-2 px-3 py-3 rounded-l-xl border-2 border-r-0 border-gray-200 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                                  className="flex items-center gap-1 px-2 py-3 rounded-l-lg border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
                                   onClick={() =>
                                     setIsCountryDropdownOpen(
                                       !isCountryDropdownOpen,
                                     )
                                   }
-                                  data-oid="46q_8z:"
+                                  data-oid="2t87.6-"
                                 >
-                                  <span className="text-lg" data-oid="81y6ywy">
+                                  <span
+                                    className="text-base"
+                                    data-oid=":yr__zz"
+                                  >
                                     {selectedCountry.flag}
                                   </span>
                                   <span
-                                    className="text-sm font-medium"
-                                    data-oid="8wvx99."
+                                    className="text-sm whitespace-nowrap"
+                                    data-oid="e3b-tws"
                                   >
                                     {selectedCountry.code}
                                   </span>
                                   <ChevronDown
-                                    className="h-4 w-4 text-gray-500"
-                                    data-oid="on_if4."
+                                    className="h-3 w-3 text-gray-500"
+                                    data-oid="gkoi24s"
                                   />
                                 </button>
 
+                                {/* Country dropdown - repositioned and restyled */}
                                 {isCountryDropdownOpen && (
                                   <div
-                                    className="absolute z-20 left-0 mt-2 w-72 max-h-60 overflow-y-auto bg-white rounded-xl shadow-2xl border border-gray-200"
-                                    data-oid="2i:e.7:"
+                                    className="absolute z-10 left-0 mt-1 w-60 max-h-60 overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200"
+                                    style={{ maxWidth: "calc(100vw - 3rem)" }}
+                                    data-oid="0qa::_6"
                                   >
                                     <div
-                                      className="sticky top-0 bg-white p-3 border-b border-gray-200"
-                                      data-oid="kcu7pga"
+                                      className="sticky top-0 bg-white p-2 border-b border-gray-200"
+                                      data-oid="3ybvllg"
                                     >
                                       <input
                                         type="text"
-                                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         placeholder="Search countries..."
                                         onClick={(e) => e.stopPropagation()}
-                                        data-oid="m8jkms6"
+                                        onChange={(e) => {
+                                          // Filter countries logic would go here
+                                        }}
+                                        data-oid="irfbsy-"
                                       />
                                     </div>
-                                    <div className="py-2" data-oid="d5817n0">
+                                    <div className="py-1" data-oid="upp040j">
                                       {countries.map((country) => (
                                         <button
                                           key={country.code}
                                           type="button"
-                                          className="w-full text-left px-4 py-2 hover:bg-blue-50 flex items-center gap-3 text-sm transition-colors"
+                                          className="w-full text-left px-3 py-1.5 hover:bg-blue-50 flex items-center gap-2 text-sm"
                                           onClick={() => selectCountry(country)}
-                                          data-oid="2ddra_4"
+                                          data-oid=":d6paqu"
                                         >
                                           <span
-                                            className="text-lg"
-                                            data-oid="4v-dihc"
+                                            className="text-base"
+                                            data-oid="vc2v62u"
                                           >
                                             {country.flag}
                                           </span>
                                           <span
-                                            className="flex-1 truncate"
-                                            data-oid="fgno3xn"
+                                            className="truncate"
+                                            data-oid="6xbo4it"
                                           >
                                             {country.name}
                                           </span>
                                           <span
-                                            className="text-gray-500 text-xs"
-                                            data-oid="96aoljk"
+                                            className="text-gray-500 ml-auto text-xs"
+                                            data-oid="_2:mn26"
                                           >
                                             {country.code}
                                           </span>
@@ -651,210 +461,169 @@ export default function ContactPage() {
                                 )}
                               </div>
 
+                              {/* Phone number input */}
                               <input
                                 id="phone"
                                 type="tel"
-                                className={`flex-1 px-4 py-3 rounded-r-xl border-2 ${
+                                className={`flex-1 px-4 py-3 rounded-r-lg border ${
                                   errors.phone
-                                    ? "border-red-300 bg-red-50"
-                                    : "border-gray-200 bg-gray-50"
-                                } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                placeholder="Enter your phone number"
+                                    ? "border-red-500"
+                                    : "border-gray-300"
+                                } focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
+                                placeholder="Your phone number"
                                 {...register("phone", {
                                   required: "Phone number is required",
                                 })}
-                                data-oid="2uud_6w"
+                                data-oid="mi2kicv"
                               />
                             </div>
                             {errors.phone && (
-                              <motion.p
-                                className="mt-2 text-sm text-red-600"
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                data-oid="3eq5ct0"
+                              <p
+                                className="mt-1 text-sm text-red-600"
+                                data-oid="ssbh0:l"
                               >
                                 {errors.phone.message}
-                              </motion.p>
+                              </p>
                             )}
 
+                            {/* Add click outside handler to close dropdown */}
                             {isCountryDropdownOpen && (
                               <div
-                                className="fixed inset-0 z-10"
+                                className="fixed inset-0 z-0"
                                 onClick={() => setIsCountryDropdownOpen(false)}
-                                data-oid="96a7dp4"
-                              />
+                                data-oid="_tf7ea5"
+                              ></div>
                             )}
                           </div>
                         </div>
 
-                        {/* Interest Selection */}
-                        <div data-oid="ro:qwzo">
+                        <div data-oid="p4df1u9">
                           <label
-                            className="block text-sm font-semibold text-gray-700 mb-3"
-                            data-oid="hn9j-b2"
+                            className="block text-sm font-medium text-gray-700 mb-3"
+                            data-oid="xvf:jhx"
                           >
-                            How can we help you?{" "}
-                            <span className="text-red-500" data-oid="o7xs_ug">
+                            What can we help you with?{" "}
+                            <span className="text-red-500" data-oid="on8rujl">
                               *
                             </span>
                           </label>
                           <div
                             className="grid grid-cols-2 gap-3"
-                            data-oid="ut4acn3"
+                            data-oid="0enr5sb"
                           >
                             {interestOptions.map((option) => (
                               <motion.div
                                 key={option.id}
-                                className={`cursor-pointer rounded-xl border-2 p-4 transition-all duration-200 ${
+                                className={`cursor-pointer rounded-lg border p-3 transition-all ${
                                   selectedInterests.includes(option.id)
-                                    ? "border-blue-500 bg-blue-50 shadow-md"
-                                    : "border-gray-200 bg-gray-50 hover:border-blue-300 hover:bg-blue-25"
+                                    ? "border-blue-500 bg-blue-50"
+                                    : "border-gray-200 hover:border-blue-300 bg-gray-50"
                                 }`}
                                 onClick={() => toggleInterest(option.id)}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                data-oid="8hmra4f"
+                                data-oid="1ss_tev"
                               >
                                 <div
-                                  className="flex items-center gap-3"
-                                  data-oid="r0ylx4h"
+                                  className="flex items-center"
+                                  data-oid="-:d2qvw"
                                 >
                                   <div
-                                    className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
+                                    className={`w-5 h-5 rounded-full border flex items-center justify-center ${
                                       selectedInterests.includes(option.id)
                                         ? "border-blue-500 bg-blue-500"
                                         : "border-gray-300"
                                     }`}
-                                    data-oid="k.069nu"
+                                    data-oid="8yci-e8"
                                   >
                                     {selectedInterests.includes(option.id) && (
                                       <motion.div
-                                        className="w-3 h-3 bg-white rounded-full"
+                                        className="w-2 h-2 bg-white rounded-full"
                                         initial={{ scale: 0 }}
                                         animate={{ scale: 1 }}
                                         transition={{ duration: 0.2 }}
-                                        data-oid="n2hs_du"
+                                        data-oid=".z1fv20"
                                       />
                                     )}
                                   </div>
-                                  <div data-oid="89vo.v1">
-                                    <div
-                                      className="flex items-center gap-2"
-                                      data-oid=".pr8x8r"
-                                    >
-                                      <span
-                                        className="text-lg"
-                                        data-oid="1f4.cl4"
-                                      >
-                                        {option.icon}
-                                      </span>
-                                      <span
-                                        className="font-medium text-gray-900"
-                                        data-oid="2nj3pbk"
-                                      >
-                                        {option.label}
-                                      </span>
-                                    </div>
-                                    <p
-                                      className="text-xs text-gray-500 mt-1"
-                                      data-oid="n3.9uq-"
-                                    >
-                                      {option.description}
-                                    </p>
-                                  </div>
+                                  <span
+                                    className="ml-2 text-sm"
+                                    data-oid="xrt1tok"
+                                  >
+                                    {option.label}
+                                  </span>
                                 </div>
                               </motion.div>
                             ))}
                           </div>
                           {selectedInterests.length === 0 && (
                             <p
-                              className="mt-2 text-sm text-red-600"
-                              data-oid="7pd1k7d"
+                              className="mt-1 text-sm text-red-600"
+                              data-oid="v-1oqft"
                             >
                               Please select at least one option
                             </p>
                           )}
                         </div>
 
-                        {/* Message Field */}
-                        <div data-oid="a-dw9-l">
+                        <div data-oid="6:5x39:">
                           <label
                             htmlFor="message"
-                            className="block text-sm font-semibold text-gray-700 mb-2"
-                            data-oid="n7yr12w"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            data-oid="s3o-29z"
                           >
-                            Your Message{" "}
-                            <span className="text-red-500" data-oid="x4pxtnh">
+                            Message{" "}
+                            <span className="text-red-500" data-oid="jjptg9e">
                               *
                             </span>
                           </label>
                           <textarea
                             id="message"
                             rows={4}
-                            className={`w-full px-4 py-3 rounded-xl border-2 ${
-                              errors.message
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 bg-gray-50"
-                            } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none`}
-                            placeholder="Tell us about your property investment goals and how we can help you..."
+                            className={`w-full px-4 py-3 rounded-lg border ${errors.message ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
+                            placeholder="Tell us how we can help you..."
                             {...register("message", {
                               required: "Message is required",
                             })}
-                            data-oid="r1gqpr6"
+                            data-oid="dsddmvt"
                           />
 
                           {errors.message && (
-                            <motion.p
-                              className="mt-2 text-sm text-red-600"
-                              initial={{ opacity: 0, y: -10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              data-oid="r8oc7a:"
+                            <p
+                              className="mt-1 text-sm text-red-600"
+                              data-oid="xgitbhd"
                             >
                               {errors.message.message}
-                            </motion.p>
+                            </p>
                           )}
                         </div>
 
-                        {/* Privacy Notice */}
                         <div
-                          className="bg-gray-50 rounded-xl p-4 border border-gray-200"
-                          data-oid="-godpxq"
+                          className="text-xs text-gray-500"
+                          data-oid="sndtd:d"
                         >
-                          <p
-                            className="text-xs text-gray-600 leading-relaxed"
-                            data-oid="d48n0ag"
-                          >
-                            🔒{" "}
-                            <strong data-oid="n9k_cjy">
-                              Privacy Protected:
-                            </strong>{" "}
-                            By submitting this form, you agree to receive
-                            communications from Assembly SG. Your information is
-                            secure and will be used in accordance with our
-                            privacy policy.
-                          </p>
+                          By submitting this form, you agree to receive future
+                          marketing materials from Assembly SG. Your personal
+                          information will be used in accordance with our terms
+                          of service.
                         </div>
 
-                        {/* Submit Button */}
                         <Button
                           type="submit"
-                          className="w-full py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 hover:from-blue-700 hover:via-blue-800 hover:to-purple-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+                          className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-medium rounded-lg flex items-center justify-center"
                           disabled={
                             isSubmitting || selectedInterests.length === 0
                           }
-                          data-oid="ors_gb6"
+                          data-oid="ynpid41"
                         >
                           {isSubmitting ? (
-                            <div
-                              className="flex items-center justify-center gap-3"
-                              data-oid="to.ls.4"
-                            >
+                            <>
                               <svg
-                                className="animate-spin h-5 w-5 text-white"
+                                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                data-oid="co8cdhy"
+                                data-oid="ry8hea0"
                               >
                                 <circle
                                   className="opacity-25"
@@ -863,33 +632,25 @@ export default function ContactPage() {
                                   r="10"
                                   stroke="currentColor"
                                   strokeWidth="4"
-                                  data-oid="6hd2bw4"
-                                />
-
+                                  data-oid="-td4m0a"
+                                ></circle>
                                 <path
                                   className="opacity-75"
                                   fill="currentColor"
                                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                  data-oid="qj843nc"
-                                />
+                                  data-oid="q.y-7l0"
+                                ></path>
                               </svg>
-                              <span data-oid="o7w2fmv">Sending Message...</span>
-                            </div>
+                              Submitting...
+                            </>
                           ) : (
-                            <div
-                              className="flex items-center justify-center gap-2"
-                              data-oid="7afhnwm"
-                            >
-                              <MessageCircle
-                                className="h-5 w-5"
-                                data-oid="trjwwdu"
+                            <>
+                              Submit{" "}
+                              <Send
+                                className="ml-2 h-5 w-5"
+                                data-oid=".t.2fu5"
                               />
-                              <span data-oid=":n4w932">Send Message</span>
-                              <ArrowRight
-                                className="h-5 w-5"
-                                data-oid="dzc9vqq"
-                              />
-                            </div>
+                            </>
                           )}
                         </Button>
                       </motion.form>
@@ -901,37 +662,17 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Enhanced Map Section */}
-        <section className="relative py-16 md:py-20" data-oid="k9d6mdc">
-          <div className="container px-4 mx-auto" data-oid="pnx2fjt">
+        {/* Map Section */}
+        <section className="relative py-12 md:py-16" data-oid="einp_fo">
+          <div className="container px-4 mx-auto" data-oid="lht:dhi">
             <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              data-oid="4dcsn7z"
-            >
-              <h2
-                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent mb-4"
-                data-oid="2lqwvki"
-              >
-                Visit Our Office
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto" data-oid=".c2u7zv">
-                Located in the heart of Singapore's business district, our
-                office is easily accessible and equipped with modern facilities
-                for consultations.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="rounded-2xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] border border-white/20"
+              className="rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="d0iem5a"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              data-oid="w-qmujf"
             >
-              <ContactMap data-oid="oy8lvjj" />
+              <ContactMap data-oid="ysberjl" />
             </motion.div>
           </div>
         </section>
