@@ -14,6 +14,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import CartIcon from "./cart-icon";
+import { useAuth } from "@/context/auth-context";
 
 export default function ProfileNavbar() {
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function ProfileNavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [hasNotifications, setHasNotifications] = useState(true);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,16 +77,46 @@ export default function ProfileNavbar() {
           className="hidden md:flex items-center space-x-8"
           data-oid=".kn3bkj"
         >
-          <Link href="/courses" className="nav-link" data-oid="e6p0p71">
-            Courses
-          </Link>
-          <Link href="/about" className="nav-link" data-oid="e2r0aty">
+          <Link
+            href="/about"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="e2r0aty"
+          >
             About
           </Link>
-          <Link href="/plb-book" className="nav-link" data-oid="kks5usl">
+          <Link
+            href="/facilitators"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="e6f0p71"
+          >
+            Facilitators
+          </Link>
+          <Link
+            href="/courses"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="e6p0p71"
+          >
+            Courses
+          </Link>
+          <Link
+            href="/learning-paths"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="e6l0p71"
+          >
+            Learning Paths
+          </Link>
+          <Link
+            href="/plb-book"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="kks5usl"
+          >
             PLB Book
           </Link>
-          <Link href="/contact" className="nav-link" data-oid="e3u-b9x">
+          <Link
+            href="/contact"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+            data-oid="e3u-b9x"
+          >
             Contact
           </Link>
 
@@ -228,17 +260,28 @@ export default function ProfileNavbar() {
                   className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center overflow-hidden"
                   data-oid="c0t1f6-"
                 >
-                  <Image
-                    src="/profile-placeholder.png"
-                    alt="Profile"
-                    width={32}
-                    height={32}
-                    className="object-cover"
-                    data-oid="xm66p-a"
-                  />
+                  {user?.image ? (
+                    <Image
+                      src={user.image}
+                      alt="Profile"
+                      width={32}
+                      height={32}
+                      className="object-cover"
+                      data-oid="xm66p-a"
+                    />
+                  ) : (
+                    <div
+                      className="w-8 h-8 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold text-sm"
+                      data-oid="2dc269q"
+                    >
+                      {user?.name
+                        ? user.name.charAt(0).toUpperCase()
+                        : user?.email.charAt(0).toUpperCase()}
+                    </div>
+                  )}
                 </div>
                 <span className="font-medium text-sm" data-oid="h3_zsz5">
-                  Melvin Lim
+                  {user?.name || user?.email.split("@")[0]}
                 </span>
                 <ChevronDown
                   className={`h-4 w-4 text-gray-500 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
@@ -259,7 +302,7 @@ export default function ProfileNavbar() {
                       className="text-sm font-medium text-gray-900"
                       data-oid="asvwxlw"
                     >
-                      melvin.lim@example.com
+                      {user?.email}
                     </p>
                   </div>
 
@@ -350,6 +393,10 @@ export default function ProfileNavbar() {
                     data-oid="okdadye"
                   >
                     <button
+                      onClick={() => {
+                        logout();
+                        router.push("/");
+                      }}
                       className="w-full text-left px-4 py-2 hover:bg-gray-50 text-red-600"
                       data-oid="8pxo.0e"
                     >

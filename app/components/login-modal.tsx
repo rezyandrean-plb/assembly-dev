@@ -20,30 +20,57 @@ import {
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSuccessfulLogin?: () => void;
 }
 
-export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
+export default function LoginModal({
+  isOpen,
+  onClose,
+  onSuccessfulLogin,
+}: LoginModalProps) {
   const { login } = useAuth();
-  const [email, setEmail] = useState("pyee.t104@gmail.com");
+  const [email, setEmail] = useState("pyee.1104@gmail.com");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
+  const [error, setError] = useState("");
 
   const handleLogin = async () => {
     setIsLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    login();
-    onClose();
+    setError("");
+
+    try {
+      const success = await login(email, password);
+      if (success) {
+        onClose();
+        // Call the success callback if provided (e.g., proceed to checkout)
+        if (onSuccessfulLogin) {
+          setTimeout(onSuccessfulLogin, 100);
+        }
+      } else {
+        setError("Invalid email or password. Please try again.");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    }
+
     setIsLoading(false);
   };
 
-  const handleGoogleLogin = () => {
-    // Handle Google login
-    login();
-    onClose();
+  const handleGoogleLogin = async () => {
+    // For demo purposes, log in with the first test account
+    setIsLoading(true);
+    const success = await login("pyee.1104@gmail.com", "Abc123456#");
+    if (success) {
+      onClose();
+      // Call the success callback if provided (e.g., proceed to checkout)
+      if (onSuccessfulLogin) {
+        setTimeout(onSuccessfulLogin, 100);
+      }
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -82,7 +109,8 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/20 transition-colors"
+                className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
+                aria-label="Close modal"
                 data-oid="rf4sgus"
               >
                 <X className="w-5 h-5" data-oid="1ya.:q9" />
@@ -337,6 +365,16 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                         </button>
                       </div>
                     </div>
+
+                    {/* Error Message */}
+                    {error && (
+                      <div
+                        className="bg-red-50 border border-red-200 rounded-xl p-3 text-red-600 text-sm"
+                        data-oid="n88q33e"
+                      >
+                        {error}
+                      </div>
+                    )}
 
                     {/* Remember Me & Forgot Password */}
                     <div

@@ -19,8 +19,10 @@ import {
   getUpcomingEvents,
   getRecentActivity,
 } from "@/app/data/courses";
+import { useAuth } from "@/context/auth-context";
 
 export default function ProfilePage() {
+  const { user } = useAuth();
   // Get current date and time
   const today = new Date();
   const options: Intl.DateTimeFormatOptions = {
@@ -54,7 +56,7 @@ export default function ProfilePage() {
     <div className="p-6" data-oid=".g.j9id">
       <div className="mb-6" data-oid=":26j4z1">
         <h1 className="text-2xl font-bold text-gray-800" data-oid="23_i1a6">
-          {greeting}, Melvin
+          {greeting}, {user?.name || user?.email.split("@")[0]}
         </h1>
         <p className="text-gray-500 mt-1" data-oid="2:uxm.9">
           {dateString}

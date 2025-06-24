@@ -47,6 +47,9 @@ import { useCart } from "@/components/cart-context";
 import { courses } from "@/app/data/courses";
 import { getFacilitator } from "@/app/data/facilitators";
 import CourseCard from "@/components/course-card";
+import { useAuth } from "@/context/auth-context";
+import LoginModal from "@/app/components/login-modal";
+import toast from "react-hot-toast";
 
 // Course data interface
 export interface CourseModule {
@@ -96,11 +99,11 @@ export default function CourseDetailTemplate({
 }: CourseDetailTemplateProps) {
   const router = useRouter();
   const { addToCart } = useCart();
+  const { isLoggedIn } = useAuth();
   const [expandedModules, setExpandedModules] = useState<number[]>([0]);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [showVideoPreview, setShowVideoPreview] = useState(false);
 
@@ -163,12 +166,6 @@ export default function CourseDetailTemplate({
     } else {
       setIsLoginModalOpen(true);
     }
-  };
-
-  // Handle login
-  const handleLogin = () => {
-    router.push("/login");
-    setIsLoginModalOpen(false);
   };
 
   // Handle preview click
@@ -1014,22 +1011,36 @@ export default function CourseDetailTemplate({
                   <Button
                     className="w-full bg-[#123B79] hover:bg-[#0A2A5E] text-white font-bold py-4 text-lg mb-4 rounded-xl"
                     onClick={() => {
-                      if (
+                      // Always add course to cart (paid or free)
+                      const coursePrice =
                         courseData.price &&
                         courseData.price.toLowerCase() !== "free"
-                      ) {
-                        addToCart({
-                          id: String(courseData.id),
-                          title: courseData.title,
-                          slug: courseData.slug,
-                          price: courseData.price,
-                          image: courseData.image,
-                          author:
-                            courseData.instructors?.[0]?.name || "Assembly",
-                          type: "Course",
-                        });
-                        router.push("/cart");
-                      }
+                          ? courseData.price
+                          : "$0.00"; // Display free courses as $0.00
+
+                      addToCart({
+                        id: String(courseData.id),
+                        title: courseData.title,
+                        slug: courseData.slug,
+                        price: coursePrice,
+                        image: courseData.image,
+                        author: courseData.instructors?.[0]?.name || "Assembly",
+                        type: "Course",
+                      });
+
+                      // Show success notification instead of redirecting
+                      toast.success(
+                        `Course added to cart! "${courseData.title}" has been added to your cart.`,
+                        {
+                          duration: 3000, // Auto-dismiss after 3 seconds
+                          position: "top-center",
+                          style: {
+                            background: "#10B981",
+                            color: "#fff",
+                            fontWeight: "500",
+                          },
+                        },
+                      );
                     }}
                     data-oid="r25xgqt"
                   >
@@ -1444,101 +1455,11 @@ export default function CourseDetailTemplate({
       )}
 
       {/* Login Modal */}
-      {isLoginModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          data-oid="4t:yq_a"
-        >
-          <div
-            className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-            data-oid="avwf_p."
-          >
-            <div
-              className="flex justify-between items-center p-4 border-b"
-              data-oid="6ksm6h2"
-            >
-              <h3 className="font-bold text-lg" data-oid=":s65:20">
-                Login Required
-              </h3>
-              <button
-                onClick={() => setIsLoginModalOpen(false)}
-                className="p-1 rounded-full hover:bg-gray-100"
-                data-oid="7cfe7.k"
-              >
-                <X className="h-5 w-5" data-oid="ph.pte1" />
-              </button>
-            </div>
-            <div className="p-6" data-oid="mgmwdz1">
-              <p className="mb-6" data-oid="f988:mr">
-                Please log in to add this course to your wishlist.
-              </p>
-              <div className="space-y-4" data-oid="sp5qn6.">
-                <div data-oid="xpq9nzt">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="2:hxawm"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    placeholder="your@email.com"
-                    data-oid="z5m.csq"
-                  />
-                </div>
-                <div data-oid="u1tbtpi">
-                  <label
-                    htmlFor="password"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="90da.ej"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    placeholder="••••••••"
-                    data-oid="1df7t-0"
-                  />
-                </div>
-                <Button
-                  onClick={handleLogin}
-                  className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
-                  data-oid="i9qzu01"
-                >
-                  Log In
-                </Button>
-                <div
-                  className="text-center text-sm text-gray-500"
-                  data-oid="a8gt--h"
-                >
-                  <a
-                    href="/forgot-password"
-                    className="text-[#123B79] hover:underline"
-                    data-oid="qfy::3j"
-                  >
-                    Forgot password?
-                  </a>
-                  <span className="mx-2" data-oid="cr5ol4a">
-                    •
-                  </span>
-                  <a
-                    href="/signup"
-                    className="text-[#123B79] hover:underline"
-                    data-oid="zy2nyoe"
-                  >
-                    Create account
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        data-oid="_bu0zip"
+      />
     </main>
   );
 }

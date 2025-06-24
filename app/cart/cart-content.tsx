@@ -27,14 +27,19 @@ import LoginModal from "@/app/components/login-modal";
 import { motion, AnimatePresence } from "framer-motion";
 
 function formatPrice(price: number | string) {
+  // Handle explicit $0.00 case
+  if (price === "$0.00") {
+    return "Free";
+  }
+
   const numericPrice =
     typeof price === "string"
       ? parseFloat(price.replace(/[^0-9.]/g, ""))
       : price;
-  if (isNaN(numericPrice)) {
+  if (isNaN(numericPrice) || numericPrice === 0) {
     return typeof price === "string" && price.toLowerCase() === "free"
       ? "Free"
-      : "$0.00";
+      : "Free";
   }
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -98,6 +103,13 @@ export default function CartPageContent() {
       return;
     }
 
+    // Check if all items are free (total is $0)
+    if (orderTotal === 0) {
+      // All items are free, go directly to order received
+      router.push("/order-received");
+      return;
+    }
+
     if (hasBook) {
       router.push("/checkout/delivery");
     } else {
@@ -154,9 +166,16 @@ export default function CartPageContent() {
     <>
       <LoginModal
         isOpen={isLoginModalOpen}
-        onClose={() => {
-          setIsLoginModalOpen(false);
-          setTimeout(handleCheckout, 100);
+        onClose={() => setIsLoginModalOpen(false)}
+        onSuccessfulLogin={() => {
+          // Continue with checkout after successful login
+          if (orderTotal === 0) {
+            router.push("/order-received");
+          } else if (hasBook) {
+            router.push("/checkout/delivery");
+          } else {
+            router.push("/checkout/payment");
+          }
         }}
         data-oid="nooz6gx"
       />

@@ -17,7 +17,9 @@ import {
 } from "lucide-react";
 import NetworkBackground from "@/components/network-background";
 import { Suspense } from "react";
+import { useRouter } from "next/navigation";
 import ProfileNavbar from "../components/profile-navbar";
+import { useAuth } from "@/context/auth-context";
 
 export default function ProfileLayout({
   children,
@@ -26,6 +28,8 @@ export default function ProfileLayout({
 }) {
   const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
+  const { user, logout, isLoggedIn } = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +40,35 @@ export default function ProfileLayout({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.push("/login");
+    }
+  }, [isLoggedIn, router]);
+
   const isActive = (path: string) => {
     return pathname === path;
   };
+
+  // Show loading while checking authentication
+  if (!isLoggedIn) {
+    return (
+      <div
+        className="min-h-screen bg-gray-50 flex items-center justify-center"
+        data-oid="nq-dhjo"
+      >
+        <div className="text-center" data-oid="3dqm_zy">
+          <div
+            className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"
+            data-oid="j4:i.pi"
+          ></div>
+          <p className="mt-4 text-gray-600" data-oid="8i76u:8">
+            Redirecting to login...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16 relative" data-oid="7tc.7.v">
@@ -67,21 +97,32 @@ export default function ProfileLayout({
                   className="w-10 h-10 rounded-full overflow-hidden"
                   data-oid="a55ubb-"
                 >
-                  <Image
-                    src="/profile-placeholder.png"
-                    alt="Melvin Lim"
-                    width={40}
-                    height={40}
-                    className="object-cover"
-                    data-oid="7qkh79b"
-                  />
+                  {user?.image ? (
+                    <Image
+                      src={user.image}
+                      alt={user.name || user.email}
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                      data-oid="7qkh79b"
+                    />
+                  ) : (
+                    <div
+                      className="w-10 h-10 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
+                      data-oid=":vql_-y"
+                    >
+                      {user?.name
+                        ? user.name.charAt(0).toUpperCase()
+                        : user?.email.charAt(0).toUpperCase()}
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1 min-w-0" data-oid="f_0cdz.">
                   <h3
                     className="text-sm font-medium text-gray-900 truncate"
                     data-oid="h5888n1"
                   >
-                    Melvin Lim
+                    {user?.name || user?.email.split("@")[0]}
                   </h3>
                 </div>
               </div>
@@ -170,6 +211,7 @@ export default function ProfileLayout({
 
             <div className="mt-auto p-4" data-oid="4tgsj4v">
               <button
+                onClick={logout}
                 className="w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 text-red-600 hover:bg-red-50"
                 data-oid="j-lvcal"
               >
