@@ -1,5 +1,4 @@
-import type { Config } from "tailwindcss"
-
+import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -17,32 +16,75 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "var(--primary)",
+          light: "var(--primary-light)",
+          lighter: "var(--primary-lighter)",
+          dark: "var(--primary-dark)",
+          darker: "var(--primary-darker)",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          vibrant: "var(--accent-vibrant)",
+          "vibrant-dark": "var(--accent-vibrant-dark)",
+        },
+        success: {
+          DEFAULT: "var(--success)",
+        },
+        warning: {
+          DEFAULT: "var(--warning)",
+        },
+        error: {
+          DEFAULT: "var(--error)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        naturalPalette: {
+          DEFAULT: "var(--naturalPalette)",
+          foreground: "var(--naturalPalette-foreground)",
+          naturalPalette1: "var(--naturalPalette-naturalPalette1)",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        greyFriends: {
+          DEFAULT: "var(--greyFriends)",
+          foreground: "var(--greyFriends-foreground)",
+          matchingPalette1: "var(--greyFriends-matchingPalette1)",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+        dottingPalette: {
+          DEFAULT: "var(--dottingPalette)",
+          dottingPalette2: "var(--dottingPalette-dottingPalette2)",
+          dottingPalette1: "var(--dottingPalette-dottingPalette1)",
+          dottingPalette3: "var(--dottingPalette-dottingPalette3)",
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+        neighbourPalette: {
+          DEFAULT: "var(--neighbourPalette)",
+          foreground: "var(--neighbourPalette-foreground)",
+          neighbourPalette1: "var(--neighbourPalette-neighbourPalette1)",
+          neighbourPalette2: "var(--neighbourPalette-neighbourPalette2)",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        discreetPalette: {
+          DEFAULT: "var(--discreetPalette)",
+          discreetPalette1: "var(--discreetPalette-discreetPalette1)",
+          discreetPalette2: "var(--discreetPalette-discreetPalette2)",
+          discreetPalette3: "var(--discreetPalette-discreetPalette3)",
+        },
+        spotPalette: {
+          DEFAULT: "var(--spotPalette)",
+          spotPalette1: "var(--spotPalette-spotPalette1)",
+          spotPalette2: "var(--spotPalette-spotPalette2)",
+          spotPalette3: "var(--spotPalette-spotPalette3)",
+        },
+        classyPalette: {
+          DEFAULT: "var(--classyPalette)",
+          classyPalette1: "var(--classyPalette-classyPalette1)",
+          classyPalette2: "var(--classyPalette-classyPalette2)",
+          classyPalette3: "var(--classyPalette-classyPalette3)",
+          classyPalette4: "var(--classyPalette-classyPalette4)",
         },
       },
       borderRadius: {
@@ -59,29 +101,56 @@ const config: Config = {
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
         },
         fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
         fadeInDown: {
-          "0%": { opacity: "0", transform: "translateY(-20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
         fadeInLeft: {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
         },
         fadeInRight: {
-          "0%": { opacity: "0", transform: "translateX(20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+          "0%": {
+            opacity: "0",
+            transform: "translateX(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
         },
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-
-export default config
+};
+export default config;
