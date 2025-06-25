@@ -1,25 +1,28 @@
 import type { CourseData } from "../components/course-detail-template"
+// import { getFacilitator } from "@/app/data/facilitators"
+
+// const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 7,
   title: "Selling your Property Effectively as a DIY Property Seller",
   slug: "selling-your-property-effectively-as-a-diy-property-seller",
   level: "All Levels",
-  duration: "10 hours",
-  category: "Property Selling",
+  duration: "To be determined",
+  category: "Masterclass",
   price: "$399.00",
   image: "/selling-your-property-effectively-as-a-diy-property-seller.jpg",
   featured: false,
-  tags: ["DIY Selling", "Property Marketing", "Negotiation"],
-  rating: 4.7,
-  students: 120,
+  tags: ["Condo", "HDB", "Landed", "Masterclass"],
+  rating: 0,
+  students: 0,
   instructors: [
     {
-      name: "TBD",
-      image: "/professional-real-estate-agent.png",
+      name: "To be announced",
+      image: "/images/instructors/placeholder.jpg",
     },
   ],
-  lastUpdated: "April 2025",
+  lastUpdated: "23/06/2025",
   description: `This comprehensive course is designed for property owners who want to sell their properties without engaging an agent, saving thousands in commission fees while achieving the best possible price. Whether you're selling an HDB flat, condominium, or landed property, this course provides you with the knowledge, tools, and strategies to handle the entire selling process professionally and effectively.
 
 You'll learn how to accurately value your property, create compelling listings, market effectively across multiple channels, conduct viewings that convert, and negotiate like a professional. The course includes templates, checklists, and step-by-step guides to simplify the process and ensure you don't miss any critical steps.

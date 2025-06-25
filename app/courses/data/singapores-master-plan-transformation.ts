@@ -1,21 +1,39 @@
-import { CourseData } from "../types"
-import { getInstructors } from "@/app/data/instructors"
+import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const grayce = getFacilitator("grayce-tan");
 
 const courseData: CourseData = {
   id: 1004,
   title: "Singapore's Master Plan Transformation",
   slug: "singapores-master-plan-transformation",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Urban Planning",
+  duration: "57 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/master-plan-transformation.jpg",
+  image: "/singapores-master-plan-transformation.jpg",
   featured: false,
-  tags: ["Urban Planning", "Development", "Property Investment"],
+  tags: ["Marketing Trends", "Webinar"],
   rating: 0,
-  students: 0,
-  instructors: getInstructors ? getInstructors(["melvin-lim"]) : [],
-  lastUpdated: "2024-06-01",
+  students: 24,
+  instructors: melvin && grayce
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: grayce.name,
+          image: grayce.image,
+          title: grayce.role,
+          bio: grayce.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description: "Understanding Singapore's urban development plans and their impact on property values and investment opportunities.",
   whatYouWillLearn: [
     "Understand Singapore's urban development strategy",

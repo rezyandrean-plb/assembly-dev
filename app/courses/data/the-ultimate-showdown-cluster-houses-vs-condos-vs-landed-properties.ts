@@ -1,28 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 export const courseData: CourseData = {
   id: 1007,
   title: "The Ultimate Showdown: Cluster Houses vs. Condos vs. Landed Properties",
   slug: "the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Property Comparison",
+  duration: "1 hour 49 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/ultimate-showdown.jpg",
+  image: "/the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties.jpg",
   featured: false,
-  tags: ["Cluster Houses", "Condos", "Landed Properties", "Comparison"],
+  tags: ["Landed", "Webinar"],
   rating: 0,
-  students: 0,
-  instructors: [
-    ...getInstructors(["melvin-lim"]),
-    {
-      name: "Ong Yu Rong",
-      image: "/professional-headshot-ong-yu-rong.png",
-      bio: "Ong Yu Rong brings data-driven insights to property analysis, with expertise in market trends and valuation.",
-    },
-  ],
-  lastUpdated: "2024-06-01",
+  students: 8,
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description: "A comprehensive comparison of cluster houses, condominiums, and landed properties for Singaporean property buyers and investors.",
   whatYouWillLearn: [
     "Understand the differences between cluster houses, condos, and landed properties",

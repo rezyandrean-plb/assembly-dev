@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "../components/course-detail-template"
-import { courseData } from "../data/how-to-strategise-from-a-condo-portfolio-into-a-landed-portfolio"
+import CourseDetailTemplate from "../components/course-detail-template";
+import { courseData } from "../data/how-to-strategise-from-a-condo-portfolio-into-a-landed-portfolio";
 
 export default function HowToStrategiseFromACondoPortfolioIntoALandedPortfolio() {
-  return <CourseDetailTemplate courseData={courseData} />
-} 
+  return <CourseDetailTemplate courseData={courseData} data-oid="jcz4y-h" />;
+}

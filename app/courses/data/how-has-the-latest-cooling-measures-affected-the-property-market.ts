@@ -1,21 +1,39 @@
 import { CourseData } from "../types"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
 
 const courseData: CourseData = {
   id: 1005,
   title: "How has the latest Cooling Measures affected the Property Market?",
   slug: "how-has-the-latest-cooling-measures-affected-the-property-market",
   level: "All Levels",
-  duration: "2 hours",
+  duration: "1 hour 21 minutes",
   category: "Market Analysis",
   price: "Free",
-  image: "/images/courses/cooling-measures.jpg",
+  image: "/how-have-the-latest-cooling-measures-affected-the-property-market.jpg",
   featured: false,
-  tags: ["Market Analysis", "Policy Impact", "Property Investment"],
+  tags: ["Market Trends", "Webinar"],
   rating: 0,
-  students: 0,
-  instructors: getInstructors ? getInstructors(["melvin-lim"]) : [],
-  lastUpdated: "2024-06-01",
+  students: 15,
+  instructors: melvin && yurong
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+      ]
+    : [],  
+  lastUpdated: "10/09/2024",
   description: "An in-depth analysis of the latest property cooling measures and their impact on Singapore's real estate market.",
   whatYouWillLearn: [
     "Understand the latest cooling measures",

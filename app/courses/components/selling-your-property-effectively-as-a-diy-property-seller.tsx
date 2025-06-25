@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "../components/course-detail-template"
-import { courseData } from "../data/selling-your-property-effectively-as-a-diy-property-seller"
+import CourseDetailTemplate from "../components/course-detail-template";
+import { courseData } from "../data/selling-your-property-effectively-as-a-diy-property-seller";
 
 export default function SellingYourPropertyEffectivelyAsADIYPropertySeller() {
-  return <CourseDetailTemplate courseData={courseData} />
+  return <CourseDetailTemplate courseData={courseData} data-oid="dui.65a" />;
 }

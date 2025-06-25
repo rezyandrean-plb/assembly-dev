@@ -1,25 +1,28 @@
 import type { CourseData } from "../components/course-detail-template"
+// import { getFacilitator } from "@/app/data/facilitators"
+
+// const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 30,
   title: "Landed Buyer Investing",
   slug: "landed-buyer-investing",
   level: "All Levels",
-  duration: "8 hours",
-  category: "landed",
+  duration: "To be determined",
+  category: "Masterclass",
   price: "$2,899.00",
   image: "/landed-buyer-investing.jpg",
   featured: true,
-  tags: ["Landed", "Masterclass", "Investment"],
+  tags: ["Landed", "Masterclass"],
   rating: 0,
   students: 0,
   instructors: [
     {
-      name: "TBD",
-      image: "/images/instructors/melvin-lim.png",
+      name: "To be announced",
+      image: "/images/instructors/placeholder.jpg",
     },
   ],
-  lastUpdated: "April 2023",
+  lastUpdated: "23/06/2025",
   description:
     "This comprehensive masterclass is designed specifically for investors and homebuyers interested in Singapore's landed property market. Landed properties represent a unique segment with different considerations, regulations, and investment dynamics compared to condominiums or HDBs. This course provides in-depth knowledge and practical strategies for navigating this exclusive market segment, whether you're looking to invest or find your dream landed home.",
   whatYouWillLearn: [
