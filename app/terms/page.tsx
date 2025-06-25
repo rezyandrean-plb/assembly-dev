@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Shield, FileText, Scale, Clock } from "lucide-react";
-import Navbar from "@/components/navbar";
 
 export default function TermsOfServicePage() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -11,7 +10,6 @@ export default function TermsOfServicePage() {
 
   return (
     <>
-      <Navbar data-oid="k49c1:i" />
       <div
         className="min-h-screen bg-neutral-50 w-full pt-20"
         data-oid="anqtz:g"

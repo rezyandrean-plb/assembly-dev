@@ -13,8 +13,6 @@ import { courseData as makingTheRightMove } from "@/app/courses/data/making-the-
 import { courseData as exitWithConfidence } from "@/app/courses/data/exit-with-confidence";
 import { courseData as freeholdPropertyStrategy } from "@/app/courses/data/freehold-property-investment-strategy";
 
-
-
 import { courseData as hdbUpgraders101 } from "@/app/courses/data/hdb-upgraders-101-secrets-to-upgrading-from-a-hdb-to-a-condo";
 import { courseData as landedOverpriced2024 } from "@/app/courses/data/are-landed-properties-overpriced-in-2024-should-we-wait-for-2025-to-enter-or-is-now-the-best-time";
 import { courseData as analyticalFactors7 } from "@/app/courses/data/7-analytical-factors-for-safe-new-launch-property-investment";
@@ -35,7 +33,6 @@ import { courseData as singaporeTrends2024 } from "@/app/courses/data/singapore-
 import { courseData as newLaunchSelection } from "@/app/courses/data/new-launch-condo-selection-strategies";
 import { courseData as strategisingHdbCondo } from "@/app/courses/data/mistakes-in-strategising-to-own-1-hdb-1-condo-right-from-the-start";
 import { courseData as maximizingInvestment } from "@/app/courses/data/maximizing-your-property-investment";
-
 
 import { courseData as ecSellersMop } from "@/app/courses/data/ec-sellers-make-the-most-money-when-they-sell-at-mop-year-myth-or-truth";
 import { courseData as landedPropertyStrategies } from "@/app/courses/data/landed-property-investment-strategies";
@@ -169,8 +166,6 @@ const allCourseData = [
   exitWithConfidence,
   freeholdPropertyStrategy,
 
-
-
   hdbUpgraders101,
   landedOverpriced2024,
   analyticalFactors7,
@@ -192,7 +187,6 @@ const allCourseData = [
   strategisingHdbCondo,
   maximizingInvestment,
 
-
   ecSellersMop,
   landedPropertyStrategies,
   newLaunchOpportunity2023,
@@ -209,71 +203,3 @@ export const courses: Course[] = allCourseData.map((courseData, index) =>
   // Ensure completely unique IDs by using index-based IDs
   id: 1000 + index
 }));
-
-// Helper functions to get different course categories
-export const getEnrolledCourses = () => {
-  return courses.filter((course) => course.progress !== undefined && !course.completed)
-}
-
-export const getCompletedCourses = () => {
-  return courses.filter((course) => course.completed)
-}
-
-export const getRecommendedCourses = () => {
-  // In a real app, this would use user preferences to filter courses
-  // For now, we'll just return courses that aren't enrolled or completed
-  return courses.filter((course) => course.progress === undefined && !course.completed).slice(0, 3)
-}
-
-export const getUpcomingEvents = () => {
-  return [
-    {
-      id: 1,
-      title: "Final Project: Web App",
-      course: "Advanced Web Development",
-      date: "May 15, 2023",
-      daysLeft: 2,
-    },
-    {
-      id: 2,
-      title: "User Research Report",
-      course: "UX Design Fundamentals",
-      date: "May 18, 2023",
-      daysLeft: 5,
-    },
-    {
-      id: 3,
-      title: "Data Analysis Exercise",
-      course: "Data Science Essentials",
-      date: "May 23, 2023",
-      daysLeft: 10,
-    },
-  ]
-}
-
-export const getRecentActivity = () => {
-  return [
-    {
-      id: 1,
-      type: "completed",
-      title: "Completed Module 3: Advanced CSS",
-      course: "Advanced Web Development",
-      time: "2h ago",
-      xp: 25,
-    },
-    {
-      id: 2,
-      type: "wishlist",
-      title: 'Added "AI for Beginners" to wishlist',
-      instructor: "David Wilson",
-      time: "Yesterday",
-    },
-    {
-      id: 3,
-      type: "purchase",
-      title: 'Purchased "Data Science Essentials"',
-      price: "$149.99",
-      time: "3 days ago",
-    },
-  ]
-}

@@ -1,244 +1,127 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Search, Filter, Star, Edit, Trash } from "lucide-react";
-
-// Mock reviews data
-const reviewsData = [
-  {
-    id: 1,
-    course: "JavaScript Fundamentals",
-    instructor: "Sarah Johnson",
-    date: "May 20, 2023",
-    rating: 5,
-    content:
-      "This course was exactly what I needed to strengthen my JavaScript skills. The instructor explains complex concepts in a way that's easy to understand, and the exercises helped reinforce what I learned. Highly recommended for anyone looking to build a solid foundation in JavaScript.",
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 2,
-    course: "HTML & CSS Mastery",
-    instructor: "Michael Chen",
-    date: "March 15, 2023",
-    rating: 4,
-    content:
-      "Great course for learning modern HTML and CSS techniques. The projects were practical and helped me apply what I learned. The only reason I'm not giving 5 stars is because some of the content could use updating to cover the latest CSS features.",
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 3,
-    course: "Responsive Web Design",
-    instructor: "Jessica Lee",
-    date: "January 25, 2023",
-    rating: 5,
-    content:
-      "Excellent course on responsive design! I learned so much about media queries, flexible layouts, and mobile-first design principles. The instructor was engaging and the course projects were challenging but doable. I feel much more confident in creating responsive websites now.",
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 4,
-    course: "UI/UX Principles",
-    instructor: "Emma Rodriguez",
-    date: "October 10, 2022",
-    rating: 5,
-    content:
-      "This course changed how I think about design. The instructor breaks down complex UI/UX concepts into digestible lessons, and the case studies were incredibly insightful. I've already started applying these principles to my work and have seen significant improvements in user engagement.",
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 5,
-    course: "Python for Beginners",
-    instructor: "David Wilson",
-    date: "July 5, 2022",
-    rating: 4,
-    content:
-      "A solid introduction to Python programming. The course covers all the basics and includes some interesting projects to work on. I would have liked more advanced topics toward the end, but it's a great starting point for beginners.",
-    image: "/images/property-strategies-2025.jpg",
-  },
-];
+import { Star, MessageSquare, ThumbsUp } from "lucide-react";
+import Link from "next/link";
 
 export default function ReviewsPage() {
-  const [activeTab, setActiveTab] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // Get reviews from the last 30 days
-  const thirtyDaysAgo = new Date();
-  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-
-  const recentReviews = reviewsData.filter((review, index) => {
-    // This is a simplified approach for demo purposes
-    // In a real app, you would parse the date string and compare properly
-    return index < 2;
-  });
-
-  // Filter reviews based on active tab and search query
-  const filteredReviews = reviewsData.filter((review) => {
-    const matchesTab =
-      activeTab === "all" ||
-      (activeTab === "recent" && recentReviews.some((r) => r.id === review.id));
-
-    const matchesSearch = review.course
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-
-    return matchesTab && matchesSearch;
-  });
-
   return (
-    <div className="p-6" data-oid="o7.tel5">
-      <div
-        className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="mk9q1wr"
-      >
-        <div data-oid="dm3uogp">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="4-oheqj">
-            My Reviews
-          </h1>
-          <p className="text-gray-500 mt-1" data-oid="nm.bpam">
-            Reviews you've left for courses
-          </p>
-        </div>
-
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid="5928p7v">
-          <div className="relative" data-oid="d:z0j:q">
-            <input
-              type="text"
-              placeholder="Search reviews..."
-              className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="l_asp:9"
-            />
-
-            <Search
-              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="62v5u0o"
-            />
-          </div>
-          <button
-            className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="3x33:6g"
-          >
-            <Filter className="h-4 w-4" data-oid="avyn-p2" />
-            <span data-oid="s3d0238">Filter</span>
-          </button>
-        </div>
+    <div className="space-y-6" data-oid="mkkrt-z">
+      {/* Header */}
+      <div data-oid="d.tb-j9">
+        <h1 className="text-2xl font-bold text-gray-800" data-oid="gk7xp90">
+          My Reviews
+        </h1>
+        <p className="text-gray-600 mt-1" data-oid=".rfw1i.">
+          Reviews you've left for courses
+        </p>
       </div>
 
-      {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="jkrkl-x">
-        <button
-          className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "all"
-              ? "text-blue-600 border-b-2 border-blue-600"
-              : "text-gray-500 hover:text-gray-700"
-          }`}
-          onClick={() => setActiveTab("all")}
-          data-oid="uog7_zu"
+      {/* Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-oid="xbjof2z">
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="7pcdh4i"
         >
-          All Reviews ({reviewsData.length})
-        </button>
-        <button
-          className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "recent"
-              ? "text-blue-600 border-b-2 border-blue-600"
-              : "text-gray-500 hover:text-gray-700"
-          }`}
-          onClick={() => setActiveTab("recent")}
-          data-oid="yenaxx9"
-        >
-          Recent ({recentReviews.length})
-        </button>
-      </div>
-
-      {/* Reviews List */}
-      <div className="space-y-6" data-oid="9w8iurr">
-        {filteredReviews.map((review) => (
-          <motion.div
-            key={review.id}
-            className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            data-oid="yv:cvro"
-          >
-            <div className="flex items-start gap-4" data-oid="j_mbhl9">
-              <div
-                className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0"
-                data-oid="4bjlbx9"
-              >
-                <Image
-                  src={review.image || "/placeholder.svg"}
-                  alt={review.course}
-                  width={64}
-                  height={64}
-                  className="object-cover"
-                  data-oid="u0jsmbe"
-                />
-              </div>
-              <div className="flex-1" data-oid="k_aboyd">
-                <div
-                  className="flex flex-col md:flex-row md:items-center justify-between mb-2"
-                  data-oid="at3-_-4"
-                >
-                  <h2
-                    className="text-lg font-bold text-gray-800"
-                    data-oid="_tstddn"
-                  >
-                    {review.course}
-                  </h2>
-                  <div
-                    className="flex items-center mt-2 md:mt-0"
-                    data-oid="ysig74b"
-                  >
-                    <div className="flex" data-oid="7-vh-zf">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${i < review.rating ? "text-yellow-500 fill-current" : "text-gray-300"}`}
-                          data-oid="l-j.dmb"
-                        />
-                      ))}
-                    </div>
-                    <span
-                      className="ml-2 text-sm text-gray-500"
-                      data-oid="i03mm9u"
-                    >
-                      {review.date}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-sm text-gray-600 mb-2" data-oid="vozvsg1">
-                  Instructor: {review.instructor}
-                </p>
-
-                <p className="text-gray-700 mb-4" data-oid="5g9:q3u">
-                  {review.content}
-                </p>
-
-                <div className="flex justify-end space-x-3" data-oid="abjcv94">
-                  <button
-                    className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-1"
-                    data-oid="e.2veak"
-                  >
-                    <Edit className="h-3.5 w-3.5" data-oid="a5w841b" />
-                    <span data-oid="7n:map-">Edit</span>
-                  </button>
-                  <button
-                    className="px-3 py-1.5 border border-red-200 text-red-600 rounded-lg text-sm font-medium hover:bg-red-50 flex items-center gap-1"
-                    data-oid="8xjw6fj"
-                  >
-                    <Trash className="h-3.5 w-3.5" data-oid="hf29ov7" />
-                    <span data-oid="24v0o.o">Delete</span>
-                  </button>
-                </div>
-              </div>
+          <div className="flex items-center" data-oid="o4h8rvp">
+            <div className="p-2 bg-yellow-100 rounded-lg" data-oid="ysxg3lj">
+              <Star className="h-6 w-6 text-yellow-600" data-oid="o3jqac_" />
             </div>
-          </motion.div>
-        ))}
+            <div className="ml-4" data-oid="-vlvkdw">
+              <p
+                className="text-sm font-medium text-gray-600"
+                data-oid="bwx1hdy"
+              >
+                Total Reviews
+              </p>
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="ra_p1ih"
+              >
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="vunx97y"
+        >
+          <div className="flex items-center" data-oid="ybwfss:">
+            <div className="p-2 bg-blue-100 rounded-lg" data-oid="u416.x3">
+              <MessageSquare
+                className="h-6 w-6 text-blue-600"
+                data-oid="1hq9vzd"
+              />
+            </div>
+            <div className="ml-4" data-oid="d:jr_2m">
+              <p
+                className="text-sm font-medium text-gray-600"
+                data-oid="tw2jwdi"
+              >
+                Average Rating
+              </p>
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="e5kynq8"
+              >
+                0.0
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="h7ofi9o"
+        >
+          <div className="flex items-center" data-oid="nry6gk5">
+            <div className="p-2 bg-green-100 rounded-lg" data-oid="rujnppj">
+              <ThumbsUp className="h-6 w-6 text-green-600" data-oid="by_ogdy" />
+            </div>
+            <div className="ml-4" data-oid="gdek_zg">
+              <p
+                className="text-sm font-medium text-gray-600"
+                data-oid="duzbafl"
+              >
+                Helpful Votes
+              </p>
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="trubvif"
+              >
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Empty State */}
+      <div className="bg-white rounded-lg shadow-sm border" data-oid="9g0-65v">
+        <div className="p-8 text-center" data-oid="edorvts">
+          <Star
+            className="mx-auto h-16 w-16 text-gray-300 mb-4"
+            data-oid="x72p2z7"
+          />
+
+          <h3
+            className="text-lg font-medium text-gray-900 mb-2"
+            data-oid="t:vzv03"
+          >
+            No reviews yet
+          </h3>
+          <p className="text-gray-500 mb-6" data-oid="_o.9p4t">
+            Complete courses and share your experience to help other learners
+          </p>
+          <Link
+            href="/courses"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            data-oid="ttg:pdr"
+          >
+            Browse Courses
+          </Link>
+        </div>
       </div>
     </div>
   );

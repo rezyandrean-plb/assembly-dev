@@ -6,9 +6,13 @@ import { useRouter } from "next/navigation";
 import { useCheckout } from "@/context/checkout-context";
 import OrderSummary from "../components/order-summary";
 import { Lock, ChevronDown } from "lucide-react";
+import { useCart } from "@/components/cart-context";
+import { useAuth } from "@/context/auth-context";
 
 export default function PaymentPage() {
   const router = useRouter();
+  const { cart, clearCart } = useCart();
+  const { isLoggedIn, user } = useAuth();
   const { deliveryAddress, billingAddress, billingSameAsDelivery } =
     useCheckout();
   const [selectedPayment, setSelectedPayment] = useState("Credit / Debit");
@@ -17,6 +21,149 @@ export default function PaymentPage() {
   const finalBillingAddress = billingSameAsDelivery
     ? deliveryAddress
     : billingAddress;
+
+  // Calculate order total using the same logic as cart and order summary
+  const BOOK_ID = "property-leverage-blueprint";
+  const BOOK_ORIGINAL_PRICE = 39;
+  const BOOK_DISCOUNTED_PRICE = 29;
+
+  const bookInCart = cart.find((item) => item.id === BOOK_ID);
+  const discount = bookInCart
+    ? (BOOK_ORIGINAL_PRICE - BOOK_DISCOUNTED_PRICE) * bookInCart.quantity
+    : 0;
+
+  const subtotal = cart.reduce((sum, item) => {
+    let price = 0;
+    if (item.id === BOOK_ID) {
+      price = BOOK_ORIGINAL_PRICE;
+    } else if (item.price.toString().toLowerCase() !== "free") {
+      const parsedPrice = parseFloat(
+        item.price.toString().replace(/[^0-9.]/g, ""),
+      );
+      price = isNaN(parsedPrice) ? 0 : parsedPrice;
+    }
+    return sum + price * item.quantity;
+  }, 0);
+
+  const hasBook = cart.some((item) => item.type === "Book");
+  const shippingCost = hasBook ? 10.0 : 0.0; // This should ideally come from checkout context
+  const orderTotal = subtotal - discount + shippingCost;
+
+  // Generate order details
+  const generateOrderDetails = () => {
+    const orderId = `ORD-${Date.now()}${Math.random().toString(36).substr(2, 9).toUpperCase()}-TEST123`;
+    const orderDate = new Date().toISOString();
+
+    const orderItems = cart.map((item) => ({
+      id: item.id,
+      title: item.title,
+      price:
+        item.id === BOOK_ID
+          ? BOOK_DISCOUNTED_PRICE
+          : item.price.toString().toLowerCase() === "free"
+            ? 0
+            : parseFloat(item.price.toString().replace(/[^0-9.]/g, "")) || 0,
+      type: item.type as "course" | "book" | "Course" | "Book",
+      quantity: item.quantity,
+      image: item.image,
+      author: item.author,
+    }));
+
+    const customerInfo = {
+      name:
+        user?.name ||
+        finalBillingAddress.firstName + " " + finalBillingAddress.lastName ||
+        "John Doe",
+      email: user?.email || finalBillingAddress.email || "john.doe@example.com",
+      phone: finalBillingAddress.mobile || "+65 9123 4567",
+      address: hasBook
+        ? `${finalBillingAddress.streetAddress}${finalBillingAddress.streetAddress2 ? ", " + finalBillingAddress.streetAddress2 : ""}${finalBillingAddress.buildingName ? ", " + finalBillingAddress.buildingName : ""}, ${finalBillingAddress.country}, ${finalBillingAddress.postcode}`
+        : "123 Example Street, Singapore 123456",
+    };
+
+    return {
+      orderId,
+      orderDate,
+      items: orderItems,
+      totalAmount: orderTotal,
+      customerInfo,
+      hasBooks: hasBook,
+      trackingNumber: hasBook ? undefined : undefined, // Will be updated when order is ready to ship
+    };
+  };
+
+  const handleProceedToCheckout = async () => {
+    if (!isLoggedIn) {
+      // If user is not logged in, redirect to login
+      router.push("/login");
+      return;
+    }
+
+    try {
+      // Generate and store order details
+      const orderDetails = generateOrderDetails();
+      sessionStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+
+      // Process enrollments for courses in the cart
+      const coursesToEnroll = cart.filter((item) => {
+        // Check if it's explicitly a book
+        if (item.type === "Book") {
+          return false;
+        }
+        // Everything else is treated as a course (Course or undefined)
+        return true;
+      });
+
+      if (coursesToEnroll.length > 0) {
+        const enrollmentResponse = await fetch("/api/enrollments", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-user-email": user?.email || "",
+            "x-user-name": user?.name || "",
+            "x-user-image": user?.image || "",
+          },
+          body: JSON.stringify({
+            courses: coursesToEnroll.map((course) => ({
+              id: course.id,
+              title: course.title,
+              slug:
+                course.slug ||
+                course.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+              price: course.price,
+            })),
+            orderId: orderDetails.orderId,
+          }),
+        });
+
+        if (!enrollmentResponse.ok) {
+          const errorText = await enrollmentResponse.text();
+          console.error("Enrollment error:", errorText);
+          throw new Error("Failed to process course enrollments");
+        }
+
+        const enrollmentData = await enrollmentResponse.json();
+        console.log("Enrollment successful:", enrollmentData.message);
+      }
+
+      // Check if all items are free (total is $0)
+      if (orderTotal === 0) {
+        // All items are free, clear cart and go directly to order received
+        clearCart();
+        router.push("/order-received");
+        return;
+      }
+
+      // For paid items, process payment (placeholder for actual payment processing)
+      // In a real app, you would integrate with a payment processor here
+      alert("Payment processed successfully!");
+      clearCart();
+      router.push("/order-received");
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert("There was an error processing your order. Please try again.");
+    }
+  };
 
   const paymentMethods: { id: string; name: string; icon: string }[] = [];
 
@@ -301,11 +448,13 @@ export default function PaymentPage() {
 
               {/* Proceed to Checkout Button */}
               <button
-                onClick={() => alert("Order Placed!")}
+                onClick={handleProceedToCheckout}
                 className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
                 data-oid="0rpp644"
               >
-                Proceed to Checkout →
+                {orderTotal === 0
+                  ? "Complete Free Enrollment →"
+                  : "Process Payment →"}
               </button>
 
               {/* Continue Shopping */}

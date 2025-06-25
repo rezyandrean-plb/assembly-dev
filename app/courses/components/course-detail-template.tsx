@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import {
   InstructorCard,
@@ -256,8 +255,6 @@ export default function CourseDetailTemplate({
 
   return (
     <main className="relative bg-gray-50 min-h-screen" data-oid="07_zg65">
-      <Navbar data-oid="65hrnwu" />
-
       {/* Hero Section */}
       <section
         ref={heroSectionRef}

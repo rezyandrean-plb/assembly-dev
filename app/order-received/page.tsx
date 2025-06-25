@@ -12,7 +12,6 @@ import {
   Clock,
   MapPin,
 } from "lucide-react";
-import Navbar from "@/components/navbar";
 
 interface OrderItem {
   id: string;
@@ -77,7 +76,6 @@ export default function OrderReceivedPage() {
   if (isLoading) {
     return (
       <>
-        <Navbar data-oid="u92kh76" />
         <div
           className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
           data-oid="v7sq1d."
@@ -94,7 +92,6 @@ export default function OrderReceivedPage() {
   if (!orderDetails) {
     return (
       <>
-        <Navbar data-oid="iipnjx0" />
         <div
           className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
           data-oid="j3d8-5g"
@@ -152,7 +149,6 @@ export default function OrderReceivedPage() {
 
   return (
     <>
-      <Navbar data-oid="9q_oofj" />
       <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="yovp7d9">
         <div className="max-w-4xl mx-auto px-4" data-oid="-sipjdx">
           {/* Header */}
@@ -169,11 +165,14 @@ export default function OrderReceivedPage() {
               className="text-3xl font-bold text-gray-900 mb-2"
               data-oid="gp296ar"
             >
-              Order Received!
+              {orderDetails.totalAmount === 0
+                ? "Enrollment Complete!"
+                : "Order Received!"}
             </h1>
             <p className="text-lg text-gray-600 mb-6" data-oid="90jydtn">
-              Thank you for your purchase. Your order has been successfully
-              placed and confirmed.
+              {orderDetails.totalAmount === 0
+                ? "Thank you for enrolling! You now have access to your selected courses."
+                : "Thank you for your purchase. Your order has been successfully placed and confirmed."}
             </p>
 
             <div
@@ -217,7 +216,9 @@ export default function OrderReceivedPage() {
                     className="text-gray-600 font-semibold text-lg"
                     data-oid="owqxn.z"
                   >
-                    ${orderDetails.totalAmount.toFixed(2)}
+                    {orderDetails.totalAmount === 0
+                      ? "Free"
+                      : `$${orderDetails.totalAmount.toFixed(2)}`}
                   </p>
                 </div>
                 <div data-oid="tre8.7c">
@@ -558,7 +559,7 @@ export default function OrderReceivedPage() {
                 data-oid="0x8n4l."
               >
                 <button
-                  onClick={() => router.push("/profile/completed-courses")}
+                  onClick={() => router.push("/profile/learning-progress")}
                   className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
                   data-oid="7lw7xv2"
                 >

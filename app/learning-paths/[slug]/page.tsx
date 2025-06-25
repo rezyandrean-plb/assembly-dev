@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -432,7 +431,6 @@ export default function LearningPathPage() {
         className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
         data-oid="o.kwm5r"
       >
-        <Navbar data-oid="3h_-7g." />
         <div className="pt-24 pb-16" data-oid="wdkdvul">
           <div className="container mx-auto px-4" data-oid="t_5zoya">
             <div className="animate-pulse" data-oid="qe:h:wg">
@@ -473,7 +471,6 @@ export default function LearningPathPage() {
         className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
         data-oid="74grb.n"
       >
-        <Navbar data-oid="hsc9in0" />
         <div className="pt-24 pb-16" data-oid="bkr5aw.">
           <div
             className="container mx-auto px-4 text-center"
@@ -508,8 +505,6 @@ export default function LearningPathPage() {
       className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
       data-oid="-29:9u6"
     >
-      <Navbar data-oid="s:i4_s-" />
-
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5" data-oid="-kni.04">
         <div

@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import CourseCard from "@/components/course-card";
 import LearningPathCard from "@/components/learning-path-card";
-import Navbar from "@/components/navbar";
 import { courses as mainCourses, Course } from "@/app/data/courses";
 import { getFacilitator } from "@/app/data/facilitators";
 import { motion, AnimatePresence } from "framer-motion";
@@ -360,7 +359,6 @@ export default function CoursesPage() {
 
   return (
     <>
-      <Navbar data-oid="sd-keoi" />
       <main className="min-h-screen bg-white" data-oid=":_9lem4">
         {/* Page Content */}
         <div className="pt-24 pb-16" data-oid="h9kfq90">

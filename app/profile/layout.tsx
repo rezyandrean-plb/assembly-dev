@@ -1,44 +1,34 @@
 "use client";
 
-import type React from "react";
-
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import {
-  Home,
-  User,
-  BookOpen,
-  Award,
-  Heart,
-  MessageSquare,
-  LogOut,
-} from "lucide-react";
-import NetworkBackground from "@/components/network-background";
-import { Suspense } from "react";
-import { useRouter } from "next/navigation";
-import ProfileNavbar from "../components/profile-navbar";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "@/context/auth-context";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  User,
+  Settings,
+  BookOpen,
+  Heart,
+  ShoppingBag,
+  LogOut,
+  Menu,
+  X,
+  FileText,
+  BarChart3,
+  Award,
+} from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function ProfileLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [scrollY, setScrollY] = useState(0);
-  const pathname = usePathname();
-  const { user, logout, isLoggedIn } = useAuth();
+  const { isLoggedIn, user, logout } = useAuth();
   const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -46,190 +36,254 @@ export default function ProfileLayout({
     }
   }, [isLoggedIn, router]);
 
-  const isActive = (path: string) => {
-    return pathname === path;
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      const desktop = window.innerWidth >= 1024;
+      setIsDesktop(desktop);
+      if (desktop) {
+        setIsSidebarOpen(true);
+      }
+    };
 
-  // Show loading while checking authentication
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   if (!isLoggedIn) {
     return (
       <div
-        className="min-h-screen bg-gray-50 flex items-center justify-center"
-        data-oid="nq-dhjo"
+        className="min-h-screen flex items-center justify-center bg-gray-50"
+        data-oid="v0a7o:j"
       >
-        <div className="text-center" data-oid="3dqm_zy">
+        <div className="text-center" data-oid="lov2m6x">
           <div
-            className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"
-            data-oid="j4:i.pi"
+            className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"
+            data-oid="gl7799a"
           ></div>
-          <p className="mt-4 text-gray-600" data-oid="8i76u:8">
-            Redirecting to login...
+          <p className="text-gray-600" data-oid="dh8b0w7">
+            Checking authentication...
           </p>
         </div>
       </div>
     );
   }
 
+  const sidebarItems = [
+    {
+      name: "Profile Overview",
+      href: "/profile",
+      icon: User,
+      description: "View and edit your profile",
+    },
+    {
+      name: "Account Details",
+      href: "/profile/details",
+      icon: Settings,
+      description: "Manage your account information",
+    },
+    {
+      name: "Learning Progress",
+      href: "/profile/learning-progress",
+      icon: BarChart3,
+      description: "Track your learning journey",
+    },
+    {
+      name: "Completed Courses",
+      href: "/profile/completed-courses",
+      icon: Award,
+      description: "View certificates and achievements",
+    },
+    {
+      name: "Purchase History",
+      href: "/profile/purchase-history",
+      icon: ShoppingBag,
+      description: "View your past orders",
+    },
+    {
+      name: "Wishlist",
+      href: "/profile/wishlist",
+      icon: Heart,
+      description: "Courses you want to take",
+    },
+    {
+      name: "Reviews",
+      href: "/profile/reviews",
+      icon: BookOpen,
+      description: "Your course reviews",
+    },
+    {
+      name: "Settings",
+      href: "/profile/settings",
+      icon: Settings,
+      description: "Account preferences",
+    },
+    {
+      name: "Terms of Use",
+      href: "/profile/terms",
+      icon: FileText,
+      description: "View terms and policies",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50 pt-16 relative" data-oid="7tc.7.v">
-      <NetworkBackground
-        scrollY={scrollY}
-        scrollSpeed={0.5}
-        windowHeight={0}
-        opacity={0.05}
-        data-oid="gs7--h4"
-      />
+    <div className="min-h-screen bg-gray-50 pt-16" data-oid="jut:t-j">
+      {/* Mobile sidebar overlay */}
+      <AnimatePresence data-oid="zh:z4-a">
+        {isSidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+            data-oid="7:facvr"
+          />
+        )}
+      </AnimatePresence>
 
-      {/* Use the ProfileNavbar component */}
-      <ProfileNavbar data-oid="sjmbw30" />
-
-      <div className="flex" data-oid="fw96.qd">
+      <div className="flex" data-oid="su-gbx1">
         {/* Sidebar */}
-        <div
-          className="w-64 fixed left-0 top-16 bg-white shadow-sm z-10 h-screen"
-          style={{ maxHeight: "calc(100vh - 16px)", overflowY: "auto" }}
-          data-oid="ub.m0vo"
+        <motion.aside
+          initial={false}
+          animate={{
+            x: isDesktop ? 0 : isSidebarOpen ? 0 : "-100%",
+          }}
+          className="fixed top-16 left-0 z-40 w-80 h-[calc(100vh-4rem)] bg-white shadow-lg lg:relative lg:top-0 lg:z-auto lg:h-auto overflow-y-auto"
+          data-oid="le3ywbm"
         >
-          <div className="flex flex-col h-full" data-oid="2qtajs-">
-            <div className="p-4" data-oid="ulb0:jc">
-              <div className="flex items-center gap-3" data-oid="vw-0e0g">
+          <div className="p-6" data-oid="eflc2a_">
+            {/* Mobile close button */}
+            <div
+              className="flex justify-between items-center lg:hidden mb-6"
+              data-oid="ux2hwyj"
+            >
+              <h2
+                className="text-xl font-bold text-gray-800"
+                data-oid="3vv1hm3"
+              >
+                Profile Menu
+              </h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsSidebarOpen(false)}
+                data-oid="5pot828"
+              >
+                <X className="h-5 w-5" data-oid="tp8yagx" />
+              </Button>
+            </div>
+
+            {/* User info */}
+            <div
+              className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg mb-6"
+              data-oid="e62ac-8"
+            >
+              {user?.image ? (
+                <img
+                  src={user.image}
+                  alt={user.name || "User"}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
+                  data-oid="gy8yofz"
+                />
+              ) : (
                 <div
-                  className="w-10 h-10 rounded-full overflow-hidden"
-                  data-oid="a55ubb-"
+                  className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md"
+                  data-oid="2rfpuc2"
                 >
-                  {user?.image ? (
-                    <Image
-                      src={user.image}
-                      alt={user.name || user.email}
-                      width={40}
-                      height={40}
-                      className="object-cover"
-                      data-oid="7qkh79b"
-                    />
-                  ) : (
-                    <div
-                      className="w-10 h-10 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
-                      data-oid=":vql_-y"
-                    >
-                      {user?.name
-                        ? user.name.charAt(0).toUpperCase()
-                        : user?.email.charAt(0).toUpperCase()}
-                    </div>
-                  )}
+                  {user?.name
+                    ? user.name.charAt(0).toUpperCase()
+                    : user?.email?.charAt(0).toUpperCase() || "U"}
                 </div>
-                <div className="flex-1 min-w-0" data-oid="f_0cdz.">
-                  <h3
-                    className="text-sm font-medium text-gray-900 truncate"
-                    data-oid="h5888n1"
-                  >
-                    {user?.name || user?.email.split("@")[0]}
-                  </h3>
-                </div>
+              )}
+              <div data-oid="7w:v2y4">
+                <h3
+                  className="font-semibold text-gray-800 text-lg"
+                  data-oid="7:394sb"
+                >
+                  {user?.name || "User"}
+                </h3>
+                <p className="text-gray-600 text-sm" data-oid="no5:sno">
+                  {user?.email}
+                </p>
               </div>
             </div>
 
-            <div className="px-3 py-2" data-oid="8ixlu8c">
-              <p
-                className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 mb-2"
-                data-oid="dvgp3is"
-              >
-                MAIN NAVIGATION
-              </p>
-              <Link
-                href="/profile"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="1hwb1h-"
-              >
-                <Home size={18} data-oid="s:v__.l" />
-                Dashboard
-              </Link>
-              <Link
-                href="/profile/details"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/details")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="6pxe.:t"
-              >
-                <User size={18} data-oid="eg1upmy" />
-                Learning Preferences
-              </Link>
-              <Link
-                href="/profile/learning-progress"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/learning-progress")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="r49q7hg"
-              >
-                <BookOpen size={18} data-oid="_0fkwap" />
-                Learning Progress
-              </Link>
-              <Link
-                href="/profile/completed-courses"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/completed-courses")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="4j:3u5q"
-              >
-                <Award size={18} data-oid="slm-34y" />
-                Completed Courses
-              </Link>
-              <Link
-                href="/profile/reviews"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/reviews")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="laaa92j"
-              >
-                <MessageSquare size={18} data-oid="7p8dzoz" />
-                My Reviews
-              </Link>
-              <Link
-                href="/profile/wishlist"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/wishlist")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-                data-oid="64kkwht"
-              >
-                <Heart size={18} data-oid="sv1t8mf" />
-                Wishlist
-              </Link>
-            </div>
+            {/* Navigation */}
+            <nav className="space-y-2" data-oid="q2.d8fg">
+              {sidebarItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsSidebarOpen(false)}
+                  data-oid="bensjh3"
+                >
+                  <item.icon
+                    className="h-5 w-5 text-gray-500 group-hover:text-blue-600"
+                    data-oid="7s22p3g"
+                  />
 
-            <div className="mt-auto p-4" data-oid="4tgsj4v">
+                  <div data-oid="..3mwy9">
+                    <div
+                      className="font-medium text-gray-800 group-hover:text-blue-600"
+                      data-oid="ck9-2-t"
+                    >
+                      {item.name}
+                    </div>
+                    <div className="text-xs text-gray-500" data-oid="au11gki">
+                      {item.description}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              {/* Logout */}
               <button
-                onClick={logout}
-                className="w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 text-red-600 hover:bg-red-50"
-                data-oid="j-lvcal"
+                onClick={() => {
+                  logout();
+                  router.push("/");
+                }}
+                className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors group mt-6 border-t border-gray-200 pt-6"
+                data-oid="r.7hjwz"
               >
-                <LogOut size={18} data-oid="as8mp8v" />
-                Logout
+                <LogOut className="h-5 w-5 text-red-500" data-oid="2.i83n_" />
+                <div className="text-left" data-oid="h1dx3uh">
+                  <div className="font-medium text-red-600" data-oid="o_l-.u9">
+                    Log Out
+                  </div>
+                  <div className="text-xs text-red-400" data-oid="xx1ppc6">
+                    Sign out of your account
+                  </div>
+                </div>
               </button>
-            </div>
+            </nav>
           </div>
-        </div>
+        </motion.aside>
 
-        {/* Main Content */}
-        <div className="ml-64 flex-1 pb-16 min-h-screen" data-oid="_491iyq">
-          <Suspense
-            fallback={<div data-oid="_932flw">Loading...</div>}
-            data-oid="5heamcm"
+        {/* Main content */}
+        <div className="flex-1 lg:ml-0" data-oid="w_hvl-4">
+          {/* Mobile header */}
+          <div
+            className="lg:hidden bg-white shadow-sm border-b border-gray-200 px-4 py-3 flex items-center justify-between"
+            data-oid="9xcye.4"
           >
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsSidebarOpen(true)}
+              className="text-gray-600"
+              data-oid="8s0oifi"
+            >
+              <Menu className="h-5 w-5 mr-2" data-oid="pv7mza_" />
+              Profile Menu
+            </Button>
+          </div>
+
+          {/* Content */}
+          <main className="p-6" data-oid="brf.xz.">
             {children}
-          </Suspense>
+          </main>
         </div>
       </div>
     </div>

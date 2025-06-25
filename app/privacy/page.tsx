@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/navbar";
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white" data-oid="dhfok3t">
       {/* Navigation */}
-      <Navbar data-oid="x363.vr" />
 
       {/* Main Content */}
       <div className="pt-24 pb-16" data-oid="t2-rj50">

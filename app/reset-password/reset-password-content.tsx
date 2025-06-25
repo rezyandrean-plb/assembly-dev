@@ -6,7 +6,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, Check, AlertCircle, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/network-background";
-import Navbar from "@/components/navbar";
 
 export default function ResetPasswordContent() {
   const router = useRouter();
@@ -329,7 +328,6 @@ export default function ResetPasswordContent() {
 
   return (
     <div className="relative min-h-screen flex flex-col" data-oid="wh_9-pg">
-      <Navbar data-oid="40-mqhw" />
       <NetworkBackground
         scrollY={0}
         scrollSpeed={0}

@@ -1,356 +1,124 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { Heart, BookOpen, Star } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Search, Filter, Star, ShoppingCart } from "lucide-react";
-
-// Mock wishlist data
-const wishlistItems = [
-  {
-    id: 1,
-    title: "Advanced JavaScript Patterns",
-    description: "Master advanced design patterns and techniques",
-    instructor: "Sarah Johnson",
-    rating: 4.8,
-    reviews: 342,
-    hours: 18,
-    lessons: 24,
-    level: "Advanced",
-    price: 129.99,
-    salePrice: 89.99,
-    onSale: true,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 2,
-    title: "Cloud Computing Fundamentals",
-    description: "Learn cloud infrastructure and deployment",
-    instructor: "Michael Chen",
-    rating: 4.6,
-    reviews: 215,
-    hours: 20,
-    lessons: 28,
-    level: "Intermediate",
-    price: 99.99,
-    salePrice: null,
-    onSale: false,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 3,
-    title: "Mobile App Development with React Native",
-    description: "Build cross-platform mobile applications",
-    instructor: "Jessica Lee",
-    rating: 4.7,
-    reviews: 189,
-    hours: 22,
-    lessons: 30,
-    level: "Intermediate",
-    price: 119.99,
-    salePrice: 79.99,
-    onSale: true,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 4,
-    title: "Machine Learning Fundamentals",
-    description: "Introduction to machine learning algorithms",
-    instructor: "David Wilson",
-    rating: 4.9,
-    reviews: 412,
-    hours: 25,
-    lessons: 32,
-    level: "Advanced",
-    price: 129.99,
-    salePrice: null,
-    onSale: false,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 5,
-    title: "UI/UX Design Masterclass",
-    description: "Create beautiful and functional user interfaces",
-    instructor: "Emma Rodriguez",
-    rating: 4.5,
-    reviews: 278,
-    hours: 15,
-    lessons: 20,
-    level: "All Levels",
-    price: 69.99,
-    salePrice: null,
-    onSale: false,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 6,
-    title: "DevOps for Developers",
-    description: "Learn CI/CD pipelines and deployment automation",
-    instructor: "Robert Kim",
-    rating: 4.7,
-    reviews: 156,
-    hours: 20,
-    lessons: 25,
-    level: "Intermediate",
-    price: 109.99,
-    salePrice: null,
-    onSale: false,
-    image: "/images/property-strategies-2025.jpg",
-  },
-  {
-    id: 7,
-    title: "Blockchain Development",
-    description: "Build decentralized applications with blockchain",
-    instructor: "Alex Thompson",
-    rating: 4.6,
-    reviews: 132,
-    hours: 22,
-    lessons: 28,
-    level: "Advanced",
-    price: 119.99,
-    salePrice: null,
-    onSale: false,
-    image: "/images/property-strategies-2025.jpg",
-  },
-];
 
 export default function WishlistPage() {
-  const [activeTab, setActiveTab] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // Get items on sale
-  const onSaleItems = wishlistItems.filter((item) => item.onSale);
-
-  // Filter items based on active tab and search query
-  const filteredItems = wishlistItems.filter((item) => {
-    const matchesTab =
-      activeTab === "all" || (activeTab === "onSale" && item.onSale);
-    const matchesSearch = item.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    return matchesTab && matchesSearch;
-  });
-
   return (
-    <div className="p-6" data-oid="ld4_mil">
-      <div
-        className="flex flex-col md:flex-row md:items-center justify-between mb-6"
-        data-oid="om8epz-"
-      >
-        <div data-oid="n835hg8">
-          <h1 className="text-2xl font-bold text-gray-800" data-oid="v02xzyo">
-            Wishlist
-          </h1>
-          <p className="text-gray-500 mt-1" data-oid="d9yceqs">
-            Courses you've bookmarked for later
-          </p>
-        </div>
-
-        <div className="mt-4 md:mt-0 flex gap-3" data-oid=".fj24hn">
-          <div className="relative" data-oid="4_bz_00">
-            <input
-              type="text"
-              placeholder="Search wishlist..."
-              className="px-4 py-2 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid="nlxmuii"
-            />
-
-            <Search
-              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              data-oid="npwhrdv"
-            />
-          </div>
-          <button
-            className="px-4 py-2 border border-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-50"
-            data-oid="t-k2f3y"
-          >
-            <Filter className="h-4 w-4" data-oid="356x0vl" />
-            <span data-oid="ewhbh9f">Filter</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="9bj.cvt">
-        <button
-          className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "all"
-              ? "text-blue-600 border-b-2 border-blue-600"
-              : "text-gray-500 hover:text-gray-700"
-          }`}
-          onClick={() => setActiveTab("all")}
-          data-oid="vkuva1."
-        >
-          All Items ({wishlistItems.length})
-        </button>
-        <button
-          className={`px-4 py-2 font-medium text-sm ${
-            activeTab === "onSale"
-              ? "text-blue-600 border-b-2 border-blue-600"
-              : "text-gray-500 hover:text-gray-700"
-          }`}
-          onClick={() => setActiveTab("onSale")}
-          data-oid="mtz2eof"
-        >
-          On Sale ({onSaleItems.length})
-        </button>
-      </div>
-
-      <div
-        className="flex justify-between items-center mb-6"
-        data-oid="20oypk."
-      >
-        <p className="text-sm text-gray-500" data-oid="fq6958y">
-          {filteredItems.length} courses in wishlist
+    <div className="space-y-6" data-oid="911ki.5">
+      {/* Header */}
+      <div data-oid="vee_mds">
+        <h1 className="text-2xl font-bold text-gray-800" data-oid="om3ja7t">
+          Wishlist
+        </h1>
+        <p className="text-gray-600 mt-1" data-oid="stka6jd">
+          Courses you've bookmarked for later
         </p>
-        <button
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-2"
-          data-oid="854.l2d"
-        >
-          <ShoppingCart className="h-4 w-4" data-oid="5-1_45g" />
-          <span data-oid="xiivzvk">Add All to Cart</span>
-        </button>
       </div>
 
-      {/* Course Grid */}
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        data-oid="23s0jwu"
-      >
-        {filteredItems.map((item) => (
-          <motion.div
-            key={item.id}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            data-oid=":w6oko4"
-          >
-            <div className="relative" data-oid="lvwz3tr">
-              <div className="h-48 relative" data-oid="lqqxnvl">
-                <Image
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                  data-oid="a0_ncin"
-                />
-              </div>
-              {item.onSale && (
-                <div
-                  className="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-                  data-oid="h86t2e8"
-                >
-                  SALE
-                </div>
-              )}
+      {/* Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-oid="q_m.:z-">
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="ylgr8wy"
+        >
+          <div className="flex items-center" data-oid="p:ptxin">
+            <div className="p-2 bg-red-100 rounded-lg" data-oid=".77cmj-">
+              <Heart className="h-6 w-6 text-red-600" data-oid="33c12r3" />
             </div>
-            <div className="p-6" data-oid=".yb9igr">
-              <h2
-                className="text-lg font-bold text-gray-800 mb-1 line-clamp-1"
-                data-oid="7lnu7qg"
-              >
-                {item.title}
-              </h2>
+            <div className="ml-4" data-oid="ji.y9ke">
               <p
-                className="text-sm text-gray-600 mb-3 line-clamp-2"
-                data-oid="a1mudva"
+                className="text-sm font-medium text-gray-600"
+                data-oid="1h-.g9v"
               >
-                {item.description}
+                Total Saved
               </p>
-
-              <div className="flex items-center mb-3" data-oid="cqd9fgk">
-                <p className="text-sm text-gray-700" data-oid="yo44_8j">
-                  By {item.instructor}
-                </p>
-              </div>
-
-              <div className="flex items-center mb-3" data-oid="as811y5">
-                <div className="flex items-center" data-oid="vqgv2hq">
-                  <Star
-                    className="h-4 w-4 text-yellow-500 fill-current"
-                    data-oid="rikvt_:"
-                  />
-
-                  <span className="ml-1 text-sm font-medium" data-oid="e7i-.c3">
-                    {item.rating}
-                  </span>
-                </div>
-                <span className="mx-2 text-xs text-gray-500" data-oid="48o3kem">
-                  ({item.reviews} reviews)
-                </span>
-              </div>
-
-              <div
-                className="flex items-center justify-between text-sm text-gray-500 mb-4"
-                data-oid="s7u417r"
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="7b2dm7_"
               >
-                <span data-oid="whsczn.">{item.hours} hours</span>
-                <span data-oid="47z77j.">{item.lessons} lessons</span>
-                <span data-oid="ds7ywg7">Level: {item.level}</span>
-              </div>
-
-              <div
-                className="flex items-center justify-between mb-4"
-                data-oid="jy8nob2"
-              >
-                <div data-oid="4n619md">
-                  {item.onSale ? (
-                    <div className="flex items-center" data-oid="qkmyu7d">
-                      <span
-                        className="text-lg font-bold text-gray-800"
-                        data-oid=":fgo--8"
-                      >
-                        ${item.salePrice}
-                      </span>
-                      <span
-                        className="ml-2 text-sm text-gray-500 line-through"
-                        data-oid="5j:7svx"
-                      >
-                        ${item.price}
-                      </span>
-                    </div>
-                  ) : (
-                    <span
-                      className="text-lg font-bold text-gray-800"
-                      data-oid="bopqszf"
-                    >
-                      ${item.price}
-                    </span>
-                  )}
-                </div>
-                <button
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700"
-                  data-oid="nn8j4j1"
-                >
-                  Add to Cart
-                </button>
-              </div>
-
-              <div
-                className="flex justify-between items-center"
-                data-oid="mlqrqvb"
-              >
-                <Link
-                  href={`/courses/${item.id}`}
-                  className="text-blue-600 text-sm font-medium hover:underline"
-                  data-oid="554plre"
-                >
-                  View Details
-                </Link>
-                <button
-                  className="text-red-500 text-sm font-medium hover:underline"
-                  data-oid="47595-j"
-                >
-                  Remove
-                </button>
-              </div>
+                0
+              </p>
             </div>
-          </motion.div>
-        ))}
+          </div>
+        </div>
+
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="aozyx-d"
+        >
+          <div className="flex items-center" data-oid="izpt87a">
+            <div className="p-2 bg-yellow-100 rounded-lg" data-oid="v.tw2_e">
+              <Star className="h-6 w-6 text-yellow-600" data-oid="sog45z:" />
+            </div>
+            <div className="ml-4" data-oid="_v3471o">
+              <p
+                className="text-sm font-medium text-gray-600"
+                data-oid="vifm_8j"
+              >
+                On Sale
+              </p>
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="5d39uz4"
+              >
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="bg-white p-6 rounded-lg shadow-sm border"
+          data-oid="k7m6ud8"
+        >
+          <div className="flex items-center" data-oid="brvnkc7">
+            <div className="p-2 bg-blue-100 rounded-lg" data-oid="iyvbx9o">
+              <BookOpen className="h-6 w-6 text-blue-600" data-oid="0ypy2c-" />
+            </div>
+            <div className="ml-4" data-oid="-5p_mlp">
+              <p
+                className="text-sm font-medium text-gray-600"
+                data-oid="uo_y4of"
+              >
+                Free Courses
+              </p>
+              <p
+                className="text-2xl font-bold text-gray-900"
+                data-oid="mnpdnp6"
+              >
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Empty State */}
+      <div className="bg-white rounded-lg shadow-sm border" data-oid="4-il-ts">
+        <div className="p-8 text-center" data-oid="spzudpp">
+          <Heart
+            className="mx-auto h-16 w-16 text-gray-300 mb-4"
+            data-oid="96zf7ae"
+          />
+
+          <h3
+            className="text-lg font-medium text-gray-900 mb-2"
+            data-oid="s4atr6j"
+          >
+            Your wishlist is empty
+          </h3>
+          <p className="text-gray-500 mb-6" data-oid="bl_dq2f">
+            Save courses you're interested in to access them later
+          </p>
+          <Link
+            href="/courses"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            data-oid="6g1wqxc"
+          >
+            Browse Courses
+          </Link>
+        </div>
       </div>
     </div>
   );

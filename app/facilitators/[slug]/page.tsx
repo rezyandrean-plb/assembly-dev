@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
 import { getFacilitator } from "@/app/data/facilitators";
 import { FacilitatorHero } from "./components/facilitator-hero";
 import { FacilitatorCourses } from "./components/facilitator-courses";
@@ -21,7 +20,6 @@ export default function FacilitatorPage({ params }: FacilitatorPageProps) {
 
   return (
     <>
-      <Navbar data-oid="d7ydkj6" />
       <div className="bg-white" data-oid="6euh:ay">
         {/* Back Navigation */}
         <div className="bg-gray-50 py-4" data-oid="6_jrd3x">

@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
 import { getFacilitatorsForPage } from "@/app/data/facilitators";
 import { FacilitatorCard } from "./components/facilitator-card";
 import { FacilitatorStats } from "./components/facilitator-stats";
@@ -28,7 +27,6 @@ export default function FacilitatorsPage() {
 
   return (
     <>
-      <Navbar data-oid="1e9quuq" />
       <div className="bg-white" data-oid="q31swmj">
         <FacilitatorHero data-oid="..:w-te" />
 

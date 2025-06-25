@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
 
 interface FAQItem {
   question: string;
@@ -150,7 +149,6 @@ export default function FAQPage() {
 
   return (
     <>
-      <Navbar data-oid="6simr_q" />
       <div className="min-h-screen bg-neutral-50 w-full" data-oid="3saxk5k">
         {/* Hero Section */}
         <section

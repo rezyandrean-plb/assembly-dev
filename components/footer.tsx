@@ -13,7 +13,10 @@ export default function Footer() {
         data-oid="n7z8lk6"
       ></div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="g7bi4c4">
+      <div
+        className="w-full px-6 lg:px-8 xl:px-12 relative z-10"
+        data-oid="g7bi4c4"
+      >
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
           data-oid="n6ihn4:"
@@ -38,7 +41,7 @@ export default function Footer() {
             <div className="flex space-x-4" data-oid="tj-n_n1">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white transition-colors"
                 data-oid="9c.2jpn"
               >
                 <svg
@@ -55,7 +58,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white transition-colors"
                 data-oid="gmt0kgg"
               >
                 <svg
@@ -65,14 +68,14 @@ export default function Footer() {
                   data-oid="_v4nvl:"
                 >
                   <path
-                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
                     data-oid="5:w64m2"
                   />
                 </svg>
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white transition-colors"
                 data-oid="_aq7r7w"
               >
                 <svg
@@ -89,7 +92,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white transition-colors"
                 data-oid="cgtqloh"
               >
                 <svg
@@ -115,7 +118,7 @@ export default function Footer() {
               <li data-oid="_312d12">
                 <Link
                   href="/courses"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="6a25l-i"
                 >
                   All Courses
@@ -124,7 +127,7 @@ export default function Footer() {
               <li data-oid="n8pou8_">
                 <Link
                   href="/courses/hdb-investment-masterclass"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="rzluw1q"
                 >
                   HDB Investment
@@ -133,7 +136,7 @@ export default function Footer() {
               <li data-oid="ag..lpg">
                 <Link
                   href="/courses/condo-investment-masterclass"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="x3bf2yo"
                 >
                   Condo Investment
@@ -142,7 +145,7 @@ export default function Footer() {
               <li data-oid="h5z66mh">
                 <Link
                   href="/courses/strategic-property-investment"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="il499-p"
                 >
                   Strategic Investment
@@ -159,7 +162,7 @@ export default function Footer() {
               <li data-oid="sjj9-h-">
                 <Link
                   href="/learning-paths"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="css__fn"
                 >
                   All Learning Paths
@@ -168,7 +171,7 @@ export default function Footer() {
               <li data-oid="t.nmcp-">
                 <Link
                   href="/learning-paths/beginner"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="0akgw16"
                 >
                   Beginner Path
@@ -177,7 +180,7 @@ export default function Footer() {
               <li data-oid="dx7-l.0">
                 <Link
                   href="/learning-paths/hdb"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="5bhivxs"
                 >
                   HDB Specialist
@@ -186,7 +189,7 @@ export default function Footer() {
               <li data-oid="geknrg0">
                 <Link
                   href="/learning-paths/condo"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="rn.os2a"
                 >
                   Condo Specialist
@@ -203,7 +206,7 @@ export default function Footer() {
               <li data-oid="lw3yxhj">
                 <Link
                   href="/about"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="w3azswr"
                 >
                   About Us
@@ -212,7 +215,7 @@ export default function Footer() {
               <li data-oid="2t75wv1">
                 <Link
                   href="/contact"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid=":fxsp._"
                 >
                   Contact Us
@@ -221,7 +224,7 @@ export default function Footer() {
               <li data-oid="msd7uzj">
                 <Link
                   href="/plb-book"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="12_vkm8"
                 >
                   Property Launch Bible
@@ -230,7 +233,7 @@ export default function Footer() {
               <li data-oid="10k6wni">
                 <Link
                   href="/cart"
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition-colors"
                   data-oid="9kg57ji"
                 >
                   Shopping Cart
@@ -252,14 +255,14 @@ export default function Footer() {
             <div className="flex space-x-6 mt-4 md:mt-0" data-oid="rp:.2-1">
               <Link
                 href="/terms"
-                className="text-gray-400 hover:text-white text-sm"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
                 data-oid="iy-mst0"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/faq"
-                className="text-gray-400 hover:text-white text-sm"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
                 data-oid="g1pghk-"
               >
                 FAQ

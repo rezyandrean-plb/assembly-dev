@@ -8,12 +8,10 @@ import NewLearningPathsSection from "@/components/sections/new-learning-paths-se
 import NewTestimonialsSection from "@/components/sections/new-testimonials-section";
 import NewStatsSection from "@/components/sections/new-stats-section";
 import NewCtaSection from "@/components/sections/new-cta-section";
-import Navbar from "@/components/navbar";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar data-oid="-eznstj" />
       <NewHeroSection data-oid=".fbnk_x" />
       <NewFeaturesSection data-oid="gn7mzw6" />
       <NewCoursesSection data-oid="j02yk.i" />

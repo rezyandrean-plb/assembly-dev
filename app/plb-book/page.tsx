@@ -5,7 +5,6 @@ import NetworkBackground from "@/components/network-background";
 import Link from "next/link";
 import { FAQItem } from "./components/faq-item";
 import { AutoScrollCarousel } from "./components/auto-scroll-carousel";
-import Navbar from "@/components/navbar";
 import { useCart } from "@/components/cart-context";
 import { toast } from "react-hot-toast";
 import { Button } from "@/components/ui/button";
@@ -163,11 +162,9 @@ export default function PLBBookPage() {
 
   return (
     <>
-      <Navbar data-oid="426hrcg" />
       <main className="min-h-screen bg-white" data-oid="-k_z:yz">
         {/* Page Content */}
         <div className="pt-24 pb-16" data-oid="zgdqv1_">
-          <Navbar data-oid="57xinrw" />
           <div className="plb-book-page relative" data-oid=".gdhixc">
             {/* Light gradient background instead of network */}
             <div

@@ -16,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import ContactAnimation from "./components/contact-animation";
 import ContactMap from "./components/contact-map";
 import { countries } from "./data/countries";
-import Navbar from "@/components/navbar";
 
 type FormData = {
   name: string;
@@ -91,7 +90,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar data-oid="86_en2d" />
       <main
         className="relative min-h-screen overflow-hidden bg-gradient-to-b from-blue-50 to-white"
         data-oid="ie66q-h"

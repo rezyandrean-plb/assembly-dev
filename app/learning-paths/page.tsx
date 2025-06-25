@@ -3,8 +3,6 @@
 import type React from "react";
 
 import { useState, useEffect } from "react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { ArrowLeft, BookOpen, TrendingUp, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import LearningPathCard from "@/components/learning-path-card";
@@ -133,8 +131,6 @@ export default function LearningPathsPage() {
 
   return (
     <main className="min-h-screen bg-white" data-oid="oqobhzb">
-      <Navbar data-oid="vs3y3ib" />
-
       <div className="pt-24 pb-16" data-oid="_-02xsi">
         <div className="container mx-auto px-4" data-oid="dqhjou.">
           {/* Back button */}

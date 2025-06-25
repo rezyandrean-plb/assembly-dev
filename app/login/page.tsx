@@ -14,9 +14,11 @@ import {
   Users,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useAuth } from "@/context/auth-context";
 
 export default function LoginPage() {
   const router = useRouter();
+  const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -36,11 +38,29 @@ export default function LoginPage() {
     setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      sessionStorage.setItem("fromLogin", "true");
-      router.push("/");
+      const success = await login(email, password);
+      if (success) {
+        router.push("/");
+      } else {
+        setError("Invalid email or password. Please try again.");
+      }
     } catch (err) {
-      setError("Invalid email or password. Please try again.");
+      setError("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setIsSubmitting(true);
+    try {
+      // For demo purposes, log in with the first test account
+      const success = await login("pyee.1104@gmail.com", "Abc123456#");
+      if (success) {
+        router.push("/");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -96,7 +116,9 @@ export default function LoginPage() {
           {/* Social Login */}
           <button
             type="button"
-            className="w-full flex items-center justify-center gap-3 p-4 border-2 border-neutral-200 rounded-xl hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-200 mb-6"
+            onClick={handleGoogleLogin}
+            disabled={isSubmitting}
+            className="w-full flex items-center justify-center gap-3 p-4 border-2 border-neutral-200 rounded-xl hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-200 mb-6 disabled:opacity-50 disabled:cursor-not-allowed"
             data-oid="aicbm25"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" data-oid="pvn65tv">

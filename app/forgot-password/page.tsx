@@ -6,8 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 import { NetworkProvider } from "@/context/network-context";
 import NetworkBackground from "@/components/network-background";
 
@@ -54,8 +53,6 @@ export default function ForgotPasswordPage() {
           opacity={0.3}
           data-oid=".gkagud"
         />
-
-        <Navbar data-oid="9n_isy-" />
 
         <section className="pt-32 pb-16 relative z-10" data-oid="5j-j8_7">
           <div
@@ -257,8 +254,6 @@ export default function ForgotPasswordPage() {
             </div>
           </div>
         </section>
-
-        <Footer data-oid="7.-:dyj" />
       </main>
     </NetworkProvider>
   );

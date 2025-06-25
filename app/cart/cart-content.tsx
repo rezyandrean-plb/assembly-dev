@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import { courses as allCourses } from "@/app/data/courses";
 import CourseCard from "@/components/course-card";
-import Navbar from "@/components/navbar";
 import { useAuth } from "@/context/auth-context";
 import LoginModal from "@/app/components/login-modal";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,8 +52,8 @@ const BOOK_DISCOUNTED_PRICE = 29;
 
 export default function CartPageContent() {
   const router = useRouter();
-  const { cart, removeFromCart, updateQuantity } = useCart();
-  const { isLoggedIn } = useAuth();
+  const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { isLoggedIn, user } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [removingItems, setRemovingItems] = useState<Set<string>>(new Set());
@@ -97,6 +96,44 @@ export default function CartPageContent() {
     }, 300);
   };
 
+  // Generate order details for free checkout
+  const generateOrderDetails = () => {
+    const orderId = `ORD-${Date.now()}${Math.random().toString(36).substr(2, 9).toUpperCase()}-TEST123`;
+    const orderDate = new Date().toISOString();
+
+    const orderItems = cart.map((item) => ({
+      id: item.id,
+      title: item.title,
+      price:
+        item.id === BOOK_ID
+          ? BOOK_DISCOUNTED_PRICE
+          : item.price.toString().toLowerCase() === "free"
+            ? 0
+            : parseFloat(item.price.toString().replace(/[^0-9.]/g, "")) || 0,
+      type: item.type as "course" | "book" | "Course" | "Book",
+      quantity: item.quantity,
+      image: item.image,
+      author: item.author,
+    }));
+
+    const customerInfo = {
+      name: user?.name || "John Doe",
+      email: user?.email || "john.doe@example.com",
+      phone: "+65 9123 4567",
+      address: "123 Example Street, Singapore 123456",
+    };
+
+    return {
+      orderId,
+      orderDate,
+      items: orderItems,
+      totalAmount: orderTotal,
+      customerInfo,
+      hasBooks: hasBook,
+      trackingNumber: undefined,
+    };
+  };
+
   const handleCheckout = () => {
     if (!isLoggedIn) {
       setIsLoginModalOpen(true);
@@ -105,7 +142,12 @@ export default function CartPageContent() {
 
     // Check if all items are free (total is $0)
     if (orderTotal === 0) {
-      // All items are free, go directly to order received
+      // Generate and store order details for free items
+      const orderDetails = generateOrderDetails();
+      sessionStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+
+      // All items are free, clear cart and go directly to order received
+      clearCart();
       router.push("/order-received");
       return;
     }
@@ -170,6 +212,13 @@ export default function CartPageContent() {
         onSuccessfulLogin={() => {
           // Continue with checkout after successful login
           if (orderTotal === 0) {
+            // Generate and store order details for free items
+            const orderDetails = generateOrderDetails();
+            sessionStorage.setItem(
+              "orderDetails",
+              JSON.stringify(orderDetails),
+            );
+            clearCart();
             router.push("/order-received");
           } else if (hasBook) {
             router.push("/checkout/delivery");
@@ -184,8 +233,6 @@ export default function CartPageContent() {
         className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5"
         data-oid="wfob7_8"
       >
-        <Navbar data-oid="nj9:wyx" />
-
         <div
           className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24"
           data-oid="ridwigy"

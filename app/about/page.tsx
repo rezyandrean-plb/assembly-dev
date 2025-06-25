@@ -28,7 +28,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
 import { getFacilitator, Facilitator } from "@/app/data/facilitators";
 import Image from "next/image";
 
@@ -791,7 +790,6 @@ const FutureVisionSection = () => {
 export default function AboutPage() {
   return (
     <>
-      <Navbar data-oid="jnb16ot" />
       <StoryHeroSection data-oid="mcjog3w" />
       <FounderStorySection data-oid="ovs-7zy" />
       <OurPurposeSection data-oid=".oo2.q5" />

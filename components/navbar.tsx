@@ -12,6 +12,9 @@ import {
   LogOut,
   Settings,
   ChevronDown,
+  Bell,
+  FileText,
+  ShoppingBag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/cart-context";
@@ -21,12 +24,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [hasNotifications, setHasNotifications] = useState(true);
   const { cart } = useCart();
   const { isLoggedIn, user, logout } = useAuth();
 
   useEffect(() => {
     setIsMounted(true);
+    // Only animate once on initial mount
+    const timer = setTimeout(() => setHasAnimated(true), 100);
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -40,6 +49,14 @@ export default function Navbar() {
       ) {
         setIsProfileOpen(false);
       }
+      if (
+        isNotificationsOpen &&
+        !(event.target as Element).closest(
+          '[data-oid="notifications-btn"], [data-oid="notifications-dropdown"]',
+        )
+      ) {
+        setIsNotificationsOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,8 +64,9 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timer);
     };
-  }, [isProfileOpen]);
+  }, [isProfileOpen, isNotificationsOpen]);
 
   if (!isMounted) return null;
 
@@ -61,6 +79,22 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  // Animation variants - only animate on first load
+  const getAnimationProps = (delay: number) => {
+    if (hasAnimated) {
+      return {
+        initial: { opacity: 1, y: 0 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0 },
+      };
+    }
+    return {
+      initial: { opacity: 0, y: 20 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.5, delay },
+    };
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -71,13 +105,13 @@ export default function Navbar() {
       data-oid="63yrf_e"
     >
       <div
-        className="container mx-auto px-4 flex justify-between items-center"
+        className="w-full px-6 lg:px-8 xl:px-12 flex justify-between items-center"
         data-oid="6-3sj8_"
       >
-        {/* Logo */}
+        {/* Logo - Always on the far left */}
         <Link
           href="/"
-          className="flex items-center z-10 group"
+          className="flex items-center z-10 group flex-shrink-0"
           data-oid="s6la8gk"
         >
           <img
@@ -88,7 +122,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Always on the far right */}
         <div
           className="hidden md:flex items-center space-x-8"
           data-oid="lt27hr2"
@@ -97,14 +131,12 @@ export default function Navbar() {
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                {...getAnimationProps(0.1 + index * 0.1)}
                 data-oid="k_kl:ku"
               >
                 <Link
                   href={item.href}
-                  className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
+                  className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group whitespace-nowrap"
                   data-oid=".v7l1.q"
                 >
                   {item.name}
@@ -120,9 +152,7 @@ export default function Navbar() {
           {/* Cart */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            {...getAnimationProps(0.5)}
             data-oid="51vktl1"
           >
             <Link href="/cart" className="relative group" data-oid="fe.dsf7">
@@ -149,94 +179,257 @@ export default function Navbar() {
 
           {/* Auth Section */}
           {isLoggedIn && user ? (
-            /* Profile Dropdown */
-            <div className="relative" data-oid="-knzbcp">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                onClick={() => setIsProfileOpen(!isProfileOpen)}
-                className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                data-oid="profile-btn"
-              >
-                {user.image ? (
-                  <img
-                    src={user.image}
-                    alt={user.name || "User"}
-                    className="w-8 h-8 rounded-full object-cover"
-                    data-oid="6z9:yiv"
-                  />
-                ) : (
-                  <div
-                    className="w-8 h-8 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
-                    data-oid="s3zra48"
-                  >
-                    {user.name
-                      ? user.name.charAt(0).toUpperCase()
-                      : user.email.charAt(0).toUpperCase()}
-                  </div>
-                )}
-                <span className="font-medium text-gray-700" data-oid="08v-s8x">
-                  {user.name || user.email.split("@")[0]}
-                </span>
-                <ChevronDown
-                  className={`w-4 h-4 text-gray-500 transition-transform ${isProfileOpen ? "rotate-180" : ""}`}
-                  data-oid="6p4ezyd"
-                />
-              </motion.button>
-
-              {/* Profile Dropdown Menu */}
-              <AnimatePresence data-oid="0.xsk37">
-                {isProfileOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                    data-oid="profile-dropdown"
-                  >
-                    <Link
-                      href="/profile"
-                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                      data-oid="1k6c8ju"
-                    >
-                      <User className="w-4 h-4 mr-3" data-oid="25alrdt" />
-                      Profile
-                    </Link>
-                    <Link
-                      href="/profile/settings"
-                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                      data-oid="kfp6ai7"
-                    >
-                      <Settings className="w-4 h-4 mr-3" data-oid="j7m:yym" />
-                      Settings
-                    </Link>
-                    <hr className="my-2 border-gray-200" data-oid="9v9cqdp" />
-                    <button
-                      onClick={() => {
-                        logout();
-                        setIsProfileOpen(false);
-                      }}
-                      className="w-full flex items-center px-4 py-2 text-red-600 hover:bg-red-50 transition-colors"
-                      data-oid="fh4vj1y"
-                    >
-                      <LogOut className="w-4 h-4 mr-3" data-oid="wufq2dp" />
-                      Log Out
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ) : (
-            /* Auth Buttons */
-            <div className="flex space-x-3" data-oid="udajwx4">
+            <>
+              {/* Notifications - Only show when logged in */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                data-oid="b9fg9h4"
+                className="relative"
+                {...getAnimationProps(0.6)}
+                data-oid="5xftpm3"
               >
+                <button
+                  onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
+                  className="relative p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  data-oid="notifications-btn"
+                >
+                  <Bell
+                    className="h-6 w-6 text-gray-700 hover:text-blue-600 transition-colors"
+                    data-oid="a7o7zs6"
+                  />
+
+                  {hasNotifications && (
+                    <span
+                      className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
+                      data-oid="sp_uvww"
+                    />
+                  )}
+                </button>
+
+                {/* Notifications Dropdown */}
+                <AnimatePresence data-oid="notifications-animate">
+                  {isNotificationsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                      data-oid="notifications-dropdown"
+                    >
+                      <div
+                        className="px-4 py-2 border-b border-gray-100"
+                        data-oid="xski63p"
+                      >
+                        <div
+                          className="flex justify-between items-center"
+                          data-oid="zw4mmsc"
+                        >
+                          <h3
+                            className="font-semibold text-gray-800"
+                            data-oid="4-vkkvv"
+                          >
+                            Notifications
+                          </h3>
+                          <button
+                            className="text-xs text-blue-600 hover:underline"
+                            onClick={() => setHasNotifications(false)}
+                            data-oid="-pciavd"
+                          >
+                            Mark all as read
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        className="max-h-80 overflow-y-auto"
+                        data-oid="ej4:lg8"
+                      >
+                        <div
+                          className="px-4 py-3 border-b border-gray-100 bg-blue-50"
+                          data-oid="p_rtszg"
+                        >
+                          <p
+                            className="text-sm font-medium text-gray-800"
+                            data-oid="uvguw:4"
+                          >
+                            New course available
+                          </p>
+                          <p
+                            className="text-xs text-gray-500 mt-1"
+                            data-oid=".y_p2dt"
+                          >
+                            "Advanced Property Investment Strategies" is now
+                            available.
+                          </p>
+                          <p
+                            className="text-xs text-gray-400 mt-1"
+                            data-oid="3a_u:ln"
+                          >
+                            2 hours ago
+                          </p>
+                        </div>
+                        <div
+                          className="px-4 py-3 border-b border-gray-100"
+                          data-oid="2orgror"
+                        >
+                          <p
+                            className="text-sm font-medium text-gray-800"
+                            data-oid="fbnzm_8"
+                          >
+                            Course completed
+                          </p>
+                          <p
+                            className="text-xs text-gray-500 mt-1"
+                            data-oid="mbmsp--"
+                          >
+                            You've completed "HDB Investment Masterclass". View
+                            your certificate.
+                          </p>
+                          <p
+                            className="text-xs text-gray-400 mt-1"
+                            data-oid="yd:2_0w"
+                          >
+                            Yesterday
+                          </p>
+                        </div>
+                        <div
+                          className="px-4 py-3 text-center"
+                          data-oid="view-all"
+                        >
+                          <button
+                            className="text-sm text-blue-600 hover:underline"
+                            data-oid="view-all-btn"
+                          >
+                            View all notifications
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {/* Profile Dropdown */}
+              <div className="relative" data-oid="-knzbcp">
+                <motion.button
+                  {...getAnimationProps(0.7)}
+                  onClick={() => setIsProfileOpen(!isProfileOpen)}
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  data-oid="profile-btn"
+                >
+                  {user.image ? (
+                    <img
+                      src={user.image}
+                      alt={user.name || "User"}
+                      className="w-8 h-8 rounded-full object-cover"
+                      data-oid="6z9:yiv"
+                    />
+                  ) : (
+                    <div
+                      className="w-8 h-8 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
+                      data-oid="s3zra48"
+                    >
+                      {user.name
+                        ? user.name.charAt(0).toUpperCase()
+                        : user.email.charAt(0).toUpperCase()}
+                    </div>
+                  )}
+                  <span
+                    className="font-medium text-gray-700 whitespace-nowrap"
+                    data-oid="08v-s8x"
+                  >
+                    {user.name || user.email.split("@")[0]}
+                  </span>
+                  <ChevronDown
+                    className={`w-4 h-4 text-gray-500 transition-transform ${isProfileOpen ? "rotate-180" : ""}`}
+                    data-oid="6p4ezyd"
+                  />
+                </motion.button>
+
+                {/* Profile Dropdown Menu */}
+                <AnimatePresence data-oid="0.xsk37">
+                  {isProfileOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                      data-oid="profile-dropdown"
+                    >
+                      <div
+                        className="px-4 py-3 border-b border-gray-100"
+                        data-oid="9r8vo0v"
+                      >
+                        <p
+                          className="text-sm font-medium text-gray-900"
+                          data-oid="asvwxlw"
+                        >
+                          {user.email}
+                        </p>
+                      </div>
+
+                      <Link
+                        href="/profile"
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsProfileOpen(false)}
+                        data-oid="1k6c8ju"
+                      >
+                        <User className="w-4 h-4 mr-3" data-oid="25alrdt" />
+                        Profile
+                      </Link>
+                      <Link
+                        href="/profile/purchase-history"
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsProfileOpen(false)}
+                        data-oid="purchase-history"
+                      >
+                        <ShoppingBag
+                          className="w-4 h-4 mr-3"
+                          data-oid="shopping-bag"
+                        />
+                        Purchase History
+                      </Link>
+                      <Link
+                        href="/profile/settings"
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsProfileOpen(false)}
+                        data-oid="kfp6ai7"
+                      >
+                        <Settings className="w-4 h-4 mr-3" data-oid="j7m:yym" />
+                        Settings
+                      </Link>
+                      <Link
+                        href="/profile/terms"
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsProfileOpen(false)}
+                        data-oid="terms-link"
+                      >
+                        <FileText
+                          className="w-4 h-4 mr-3"
+                          data-oid="file-text"
+                        />
+                        Terms of Use
+                      </Link>
+                      <hr className="my-2 border-gray-200" data-oid="9v9cqdp" />
+                      <button
+                        onClick={() => {
+                          logout();
+                          setIsProfileOpen(false);
+                        }}
+                        className="w-full flex items-center px-4 py-2 text-red-600 hover:bg-red-50 transition-colors"
+                        data-oid="fh4vj1y"
+                      >
+                        <LogOut className="w-4 h-4 mr-3" data-oid="wufq2dp" />
+                        Log Out
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </>
+          ) : (
+            /* Auth Buttons - Only show when not logged in */
+            <div className="flex space-x-3" data-oid="udajwx4">
+              <motion.div {...getAnimationProps(0.6)} data-oid="b9fg9h4">
                 <Link href="/login" data-oid="ma2ql9r">
                   <Button
                     variant="outline"
@@ -247,12 +440,7 @@ export default function Navbar() {
                   </Button>
                 </Link>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                data-oid="z:n:qrl"
-              >
+              <motion.div {...getAnimationProps(0.7)} data-oid="z:n:qrl">
                 <Link href="/signup" data-oid="-rea637">
                   <Button
                     className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white shadow-lg hover:shadow-xl transition-all duration-300"
@@ -291,7 +479,10 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             data-oid="ba9la_j"
           >
-            <div className="container mx-auto px-4 py-6" data-oid="b4lzrcs">
+            <div
+              className="w-full px-6 lg:px-8 xl:px-12 py-6"
+              data-oid="b4lzrcs"
+            >
               <nav className="flex flex-col space-y-4" data-oid="_serqfm">
                 {navItems.map((item, index) => (
                   <motion.div
@@ -401,7 +592,7 @@ export default function Navbar() {
                       </motion.div>
                     </>
                   ) : (
-                    /* Mobile Auth Buttons */
+                    /* Mobile Auth Buttons - Only show when not logged in */
                     <>
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
