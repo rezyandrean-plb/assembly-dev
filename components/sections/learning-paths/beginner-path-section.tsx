@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useRef, useMemo } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useRef, useMemo } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function BeginnerPathSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
   // Key concepts that appear along the foundation
   const concepts = useMemo(
@@ -22,27 +22,53 @@ export default function BeginnerPathSection() {
       { text: "Investment Strategy", delay: 0.4 },
       { text: "Regulatory Understanding", delay: 0.5 },
     ],
+
     [],
-  )
+  );
 
   // Transform values based on scroll
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0])
-  const headerY = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [50, 0, 0, -50])
+  const headerOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.9, 1],
+    [0, 1, 1, 0],
+  );
+  const headerY = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.9, 1],
+    [50, 0, 0, -50],
+  );
 
-  const pathProgress = useTransform(scrollYProgress, [0.1, 0.8], [0, 1])
-  const foundationProgress = useTransform(scrollYProgress, [0.2, 0.7], [0, 1])
+  const pathProgress = useTransform(scrollYProgress, [0.1, 0.8], [0, 1]);
+  const foundationProgress = useTransform(scrollYProgress, [0.2, 0.7], [0, 1]);
 
   // Foundation top horizontal
-  const foundationTopHorizontalPathLength = useTransform(scrollYProgress, [0.4, 0.5], [0, 1])
+  const foundationTopHorizontalPathLength = useTransform(
+    scrollYProgress,
+    [0.4, 0.5],
+    [0, 1],
+  );
 
   // Exit pathway
-  const exitPathwayPathLength = useTransform(scrollYProgress, [0.7, 0.9], [0, 1])
+  const exitPathwayPathLength = useTransform(
+    scrollYProgress,
+    [0.7, 0.9],
+    [0, 1],
+  );
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+      data-oid="vb4byyc"
+    >
       {/* Network Path Animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+      <div className="absolute inset-0 pointer-events-none" data-oid="ap8dwsq">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+          data-oid="n102.1:"
+        >
           {/* Background network elements */}
           {Array(20)
             .fill(0)
@@ -60,6 +86,7 @@ export default function BeginnerPathSection() {
                   opacity: isInView ? 0.18 : 0,
                 }}
                 transition={{ duration: 1.5, delay: i * 0.05 }}
+                data-oid="-qv9lau"
               />
             ))}
 
@@ -73,6 +100,7 @@ export default function BeginnerPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: pathProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="8:b8r0e"
           />
 
           {/* Foundation structure - horizontal base */}
@@ -85,13 +113,14 @@ export default function BeginnerPathSection() {
             initial={{ pathLength: 0 }}
             style={{ pathLength: foundationProgress }}
             transition={{ duration: 0.5 }}
+            data-oid="a7zz46d"
           />
 
           {/* Foundation structure - vertical supports */}
           {Array(5)
             .fill(0)
             .map((_, i) => {
-              const x = 450 + i * 75
+              const x = 450 + i * 75;
               return (
                 <motion.path
                   key={`support-${i}`}
@@ -104,13 +133,17 @@ export default function BeginnerPathSection() {
                   animate={{
                     pathLength: isInView
                       ? scrollYProgress.get() > 0.2 + i * 0.05
-                        ? Math.min((scrollYProgress.get() - (0.2 + i * 0.05)) / 0.05, 1)
+                        ? Math.min(
+                            (scrollYProgress.get() - (0.2 + i * 0.05)) / 0.05,
+                            1,
+                          )
                         : 0
                       : 0,
                   }}
                   transition={{ duration: 0.3 }}
+                  data-oid="2w:scwr"
                 />
-              )
+              );
             })}
 
           {/* Foundation structure - top horizontal */}
@@ -125,13 +158,14 @@ export default function BeginnerPathSection() {
               pathLength: foundationTopHorizontalPathLength,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="5i8pl0v"
           />
 
           {/* Knowledge blocks being placed on the foundation */}
           {Array(5)
             .fill(0)
             .map((_, i) => {
-              const x = 465 + i * 75
+              const x = 465 + i * 75;
               return (
                 <motion.rect
                   key={`block-${i}`}
@@ -145,18 +179,28 @@ export default function BeginnerPathSection() {
                   animate={{
                     opacity: isInView
                       ? scrollYProgress.get() > 0.45 + i * 0.05
-                        ? Math.min((scrollYProgress.get() - (0.45 + i * 0.05)) / 0.05, 0.8)
+                        ? Math.min(
+                            (scrollYProgress.get() - (0.45 + i * 0.05)) / 0.05,
+                            0.8,
+                          )
                         : 0
                       : 0,
                     y: isInView
                       ? scrollYProgress.get() > 0.45 + i * 0.05
-                        ? Math.max(-100 + ((scrollYProgress.get() - (0.45 + i * 0.05)) / 0.05) * 100, -100)
+                        ? Math.max(
+                            -100 +
+                              ((scrollYProgress.get() - (0.45 + i * 0.05)) /
+                                0.05) *
+                                100,
+                            -100,
+                          )
                         : -100
                       : -100,
                   }}
                   transition={{ type: "spring", stiffness: 100 }}
+                  data-oid="ks0c:2p"
                 />
-              )
+              );
             })}
 
           {/* Glowing effect for the foundation */}
@@ -173,7 +217,10 @@ export default function BeginnerPathSection() {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            style={{ opacity: useTransform(foundationProgress, [0, 1], [0, 1]) }}
+            style={{
+              opacity: useTransform(foundationProgress, [0, 1], [0, 1]),
+            }}
+            data-oid="qg9b3jz"
           />
 
           {/* Particles flowing along the entry path */}
@@ -197,14 +244,19 @@ export default function BeginnerPathSection() {
                 style={{
                   offsetPath: "path('M100,500 C200,450 300,500 400,450')",
                 }}
+                data-oid="ymwys.u"
               />
             ))}
 
           {/* Concept labels */}
           {concepts.map((concept, index) => {
-            const x = 465 + index * 75
+            const x = 465 + index * 75;
             return (
-              <motion.g key={`concept-${index}`} style={{ originX: 0.5, originY: 0.5 }}>
+              <motion.g
+                key={`concept-${index}`}
+                style={{ originX: 0.5, originY: 0.5 }}
+                data-oid="i1p5_16"
+              >
                 <motion.text
                   x={x}
                   y={270}
@@ -215,19 +267,34 @@ export default function BeginnerPathSection() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{
                     opacity: isInView
-                      ? scrollYProgress.get() > 0.5 + index * 0.05 && scrollYProgress.get() < 0.85
-                        ? Math.min((scrollYProgress.get() - (0.5 + index * 0.05)) / 0.05, 1)
+                      ? scrollYProgress.get() > 0.5 + index * 0.05 &&
+                        scrollYProgress.get() < 0.85
+                        ? Math.min(
+                            (scrollYProgress.get() - (0.5 + index * 0.05)) /
+                              0.05,
+                            1,
+                          )
                         : scrollYProgress.get() >= 0.85
-                          ? Math.max(1 - (scrollYProgress.get() - 0.85) / 0.05, 0)
+                          ? Math.max(
+                              1 - (scrollYProgress.get() - 0.85) / 0.05,
+                              0,
+                            )
                           : 0
                       : 0,
                     y: isInView
                       ? scrollYProgress.get() > 0.5 + index * 0.05
-                        ? Math.max(-20 + ((scrollYProgress.get() - (0.5 + index * 0.05)) / 0.05) * 20, -20)
+                        ? Math.max(
+                            -20 +
+                              ((scrollYProgress.get() - (0.5 + index * 0.05)) /
+                                0.05) *
+                                20,
+                            -20,
+                          )
                         : -20
                       : -20,
                   }}
                   transition={{ duration: 0.5, delay: concept.delay }}
+                  data-oid="17pqt7x"
                 >
                   {concept.text}
                 </motion.text>
@@ -242,22 +309,37 @@ export default function BeginnerPathSection() {
                   initial={{ opacity: 0, pathLength: 0 }}
                   animate={{
                     opacity: isInView
-                      ? scrollYProgress.get() > 0.5 + index * 0.05 && scrollYProgress.get() < 0.85
-                        ? Math.min(((scrollYProgress.get() - (0.5 + index * 0.05)) / 0.05) * 0.6, 0.6)
+                      ? scrollYProgress.get() > 0.5 + index * 0.05 &&
+                        scrollYProgress.get() < 0.85
+                        ? Math.min(
+                            ((scrollYProgress.get() - (0.5 + index * 0.05)) /
+                              0.05) *
+                              0.6,
+                            0.6,
+                          )
                         : scrollYProgress.get() >= 0.85
-                          ? Math.max(0.6 - ((scrollYProgress.get() - 0.85) / 0.05) * 0.6, 0)
+                          ? Math.max(
+                              0.6 -
+                                ((scrollYProgress.get() - 0.85) / 0.05) * 0.6,
+                              0,
+                            )
                           : 0
                       : 0,
                     pathLength: isInView
                       ? scrollYProgress.get() > 0.5 + index * 0.05
-                        ? Math.min((scrollYProgress.get() - (0.5 + index * 0.05)) / 0.05, 1)
+                        ? Math.min(
+                            (scrollYProgress.get() - (0.5 + index * 0.05)) /
+                              0.05,
+                            1,
+                          )
                         : 0
                       : 0,
                   }}
                   transition={{ duration: 0.5, delay: concept.delay }}
+                  data-oid="m2lf26b"
                 />
               </motion.g>
-            )
+            );
           })}
 
           {/* Exit pathway to next section */}
@@ -272,47 +354,77 @@ export default function BeginnerPathSection() {
               pathLength: exitPathwayPathLength,
             }}
             transition={{ duration: 0.5 }}
+            data-oid="8sgwk.n"
           />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-16" style={{ opacity: headerOpacity, y: headerY }}>
-          <h2 className="text-4xl font-bold text-[#123B79] mb-4">Beginner Property Investor Path</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Build a strong foundation in property investment and understand the Singapore market
+      <div className="container mx-auto px-4 relative z-10" data-oid="oh9j_d-">
+        <motion.div
+          className="text-center mb-16"
+          style={{ opacity: headerOpacity, y: headerY }}
+          data-oid="y-pdakz"
+        >
+          <h2
+            className="text-4xl font-bold text-[#123B79] mb-4"
+            data-oid="3d9ofs-"
+          >
+            Beginner Property Investor Path
+          </h2>
+          <p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-oid="qf_xyoa"
+          >
+            Build a strong foundation in property investment and understand the
+            Singapore market
           </p>
-          <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
+          <div
+            className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
+            data-oid="z2__69x"
+          ></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto" data-oid="o99tw_1">
           <motion.div
             className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            data-oid="5kd:cd7"
           >
-            <h3 className="text-2xl font-bold text-[#123B79] mb-4">Laying the Foundation</h3>
-            <p className="text-gray-700 mb-6">
-              The Beginner Property Investor Path guides you through building a solid foundation of knowledge and skills
-              essential for success in Singapore's property market. Starting with fundamental concepts and gradually
-              progressing to more complex strategies, this structured learning journey prepares you to make informed
+            <h3
+              className="text-2xl font-bold text-[#123B79] mb-4"
+              data-oid="j95iq-."
+            >
+              Laying the Foundation
+            </h3>
+            <p className="text-gray-700 mb-6" data-oid="y7vlnln">
+              The Beginner Property Investor Path guides you through building a
+              solid foundation of knowledge and skills essential for success in
+              Singapore's property market. Starting with fundamental concepts
+              and gradually progressing to more complex strategies, this
+              structured learning journey prepares you to make informed
               investment decisions with confidence.
             </p>
-            <p className="text-gray-700 mb-6">
-              Through a carefully sequenced curriculum covering market analysis, financial planning, risk assessment,
-              regulatory frameworks, and strategic decision-making, you'll develop the comprehensive understanding
-              needed to navigate your first property investments successfully.
+            <p className="text-gray-700 mb-6" data-oid="5o7q9e.">
+              Through a carefully sequenced curriculum covering market analysis,
+              financial planning, risk assessment, regulatory frameworks, and
+              strategic decision-making, you'll develop the comprehensive
+              understanding needed to navigate your first property investments
+              successfully.
             </p>
-            <div className="flex justify-center mt-8">
-              <Button className="bg-[#123B79] hover:bg-[#0A2A5E] text-white">
+            <div className="flex justify-center mt-8" data-oid="8yzpncf">
+              <Button
+                className="bg-[#123B79] hover:bg-[#0A2A5E] text-white"
+                data-oid="55wg18u"
+              >
                 Explore This Path
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4" data-oid=":xalh31" />
               </Button>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

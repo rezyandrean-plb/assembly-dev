@@ -1,6 +1,12 @@
-"use client"
+"use client";
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 // Define the shape of a cart item
 export interface CartItem {
@@ -9,14 +15,17 @@ export interface CartItem {
   slug: string;
   price: string;
   image: string;
-  instructor: string;
+  author: string;
+  quantity: number;
+  type?: "Course" | "Book";
 }
 
 // Define the context value type
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (item: CartItem) => void;
-  removeFromCart: (slug: string) => void;
+  addToCart: (item: Omit<CartItem, "quantity">) => void;
+  removeFromCart: (id: number | string) => void;
+  updateQuantity: (id: number | string, quantity: number) => void;
   clearCart: () => void;
 }
 
@@ -29,7 +38,33 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
-      setCart(JSON.parse(storedCart));
+      try {
+        const parsedCart = JSON.parse(storedCart) as CartItem[];
+        const uniqueItems: { [id: string]: CartItem } = {};
+
+        parsedCart.forEach((item) => {
+          if (!item || typeof item.id === "undefined") return;
+
+          const validatedItem = {
+            ...item,
+            quantity: item.quantity || 1,
+            type: item.type || "Course",
+          };
+
+          if (uniqueItems[validatedItem.id]) {
+            if (validatedItem.type === "Book") {
+              uniqueItems[validatedItem.id].quantity += validatedItem.quantity;
+            }
+          } else {
+            uniqueItems[validatedItem.id] = validatedItem;
+          }
+        });
+
+        setCart(Object.values(uniqueItems));
+      } catch (error) {
+        console.error("Failed to parse cart from localStorage", error);
+        setCart([]); // Clear cart if parsing fails
+      }
     }
   }, []);
 
@@ -38,22 +73,37 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (item: CartItem) => {
+  const addToCart = (item: Omit<CartItem, "quantity">) => {
     setCart((prev) => {
-      // Prevent duplicates by id
-      if (prev.some((cartItem) => cartItem.id === item.id)) return prev;
-      return [...prev, item];
+      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
+      if (existingItem) {
+        // If item exists and it's a book, you might want to increase quantity
+        // For now, we just prevent duplicates as per original logic
+        return prev;
+      }
+      return [...prev, { ...item, quantity: 1 }];
     });
   };
 
-  const removeFromCart = (slug: string) => {
-    setCart((prev) => prev.filter((item) => item.slug !== slug));
+  const removeFromCart = (id: number | string) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const updateQuantity = (id: number | string, quantity: number) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item,
+      ),
+    );
   };
 
   const clearCart = () => setCart([]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart }}
+      data-oid=".0l4o_j"
+    >
       {children}
     </CartContext.Provider>
   );
@@ -65,4 +115,4 @@ export function useCart() {
     throw new Error("useCart must be used within a CartProvider");
   }
   return context;
-} 
+}
