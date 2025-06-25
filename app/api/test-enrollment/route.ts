@@ -1,30 +1,51 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '../auth/[...nextauth]/route'
+
+// Helper function to create or find user
+async function getOrCreateUser(userEmail: string, userName?: string, userImage?: string) {
+  let user = await prisma.user.findUnique({
+    where: { email: userEmail }
+  })
+
+  if (!user) {
+    try {
+      user = await prisma.user.create({
+        data: {
+          email: userEmail,
+          name: userName || userEmail.split('@')[0],
+          image: userImage || undefined
+        }
+      })
+    } catch (error: any) {
+      // If user creation fails due to unique constraint, try to find the user again
+      if (error.code === 'P2002') {
+        user = await prisma.user.findUnique({
+          where: { email: userEmail }
+        })
+      }
+      if (!user) {
+        throw error
+      }
+    }
+  }
+
+  return user
+}
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions)
+    // Get user email from request headers (sent by frontend)
+    const userEmail = request.headers.get('x-user-email')
     
-    if (!session?.user?.email) {
+    if (!userEmail) {
       return NextResponse.json({ error: 'Please log in first' }, { status: 401 })
     }
 
-    // Find or create user
-    let user = await prisma.user.findUnique({
-      where: { email: session.user.email }
-    })
-
-    if (!user) {
-      user = await prisma.user.create({
-        data: {
-          email: session.user.email,
-          name: session.user.name || session.user.email.split('@')[0],
-          image: session.user.image
-        }
-      })
-    }
+    const user = await getOrCreateUser(
+      userEmail,
+      request.headers.get('x-user-name') || undefined,
+      request.headers.get('x-user-image') || undefined
+    )
 
     // Test course data
     const testCourse = {
