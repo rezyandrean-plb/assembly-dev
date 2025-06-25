@@ -1,31 +1,52 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '../auth/[...nextauth]/route'
+
+// Helper function to create or find user
+async function getOrCreateUser(userEmail: string, userName?: string, userImage?: string) {
+  let user = await prisma.user.findUnique({
+    where: { email: userEmail }
+  })
+
+  if (!user) {
+    try {
+      user = await prisma.user.create({
+        data: {
+          email: userEmail,
+          name: userName || userEmail.split('@')[0],
+          image: userImage || undefined
+        }
+      })
+    } catch (error: any) {
+      // If user creation fails due to unique constraint, try to find the user again
+      if (error.code === 'P2002') {
+        user = await prisma.user.findUnique({
+          where: { email: userEmail }
+        })
+      }
+      if (!user) {
+        throw error
+      }
+    }
+  }
+
+  return user
+}
 
 // GET /api/progress?courseId=xxx - Get progress for a specific course
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions)
+    // Get user email from request headers (sent by frontend)
+    const userEmail = request.headers.get('x-user-email')
     
-    if (!session?.user?.email) {
+    if (!userEmail) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    let user = await prisma.user.findUnique({
-      where: { email: session.user.email }
-    })
-
-    // Create user if doesn't exist
-    if (!user) {
-      user = await prisma.user.create({
-        data: {
-          email: session.user.email,
-          name: session.user.name || session.user.email.split('@')[0],
-          image: session.user.image
-        }
-      })
-    }
+    const user = await getOrCreateUser(
+      userEmail,
+      request.headers.get('x-user-name') || undefined,
+      request.headers.get('x-user-image') || undefined
+    )
 
     const { searchParams } = new URL(request.url)
     const courseId = searchParams.get('courseId')
@@ -78,26 +99,18 @@ export async function GET(request: NextRequest) {
 // POST /api/progress - Update progress for a lesson
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions)
+    // Get user email from request headers (sent by frontend)
+    const userEmail = request.headers.get('x-user-email')
     
-    if (!session?.user?.email) {
+    if (!userEmail) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    let user = await prisma.user.findUnique({
-      where: { email: session.user.email }
-    })
-
-    // Create user if doesn't exist
-    if (!user) {
-      user = await prisma.user.create({
-        data: {
-          email: session.user.email,
-          name: session.user.name || session.user.email.split('@')[0],
-          image: session.user.image
-        }
-      })
-    }
+    const user = await getOrCreateUser(
+      userEmail,
+      request.headers.get('x-user-name') || undefined,
+      request.headers.get('x-user-image') || undefined
+    )
 
     const { 
       courseId, 
@@ -200,13 +213,14 @@ export async function POST(request: NextRequest) {
     const allProgress = await prisma.courseProgress.findMany({
       where: {
         userId: user.id,
-        courseId: courseId,
-        completedAt: { not: null }
+        courseId: courseId
       }
     })
 
     const totalLessons = 10 // This should come from course data
-    if (allProgress.length >= totalLessons && enrollment.status !== 'COMPLETED') {
+    const completedLessons = allProgress.filter(p => p.completedAt).length
+
+    if (completedLessons >= totalLessons && enrollment.status !== 'COMPLETED') {
       // Mark course as completed
       await prisma.enrollment.update({
         where: { id: enrollment.id },
@@ -222,15 +236,19 @@ export async function POST(request: NextRequest) {
           userId: user.id,
           courseId: courseId,
           actionType: 'COURSE_COMPLETE',
-          metadata: JSON.stringify({ courseName: enrollment.courseName })
+          metadata: JSON.stringify({
+            totalLessons,
+            completedLessons,
+            courseName: enrollment.courseName
+          })
         }
       })
     }
 
     return NextResponse.json({ 
-      success: true, 
+      success: true,
       progress,
-      message: completed ? 'Lesson completed!' : 'Progress saved!'
+      progressPercentage: Math.round((completedLessons / totalLessons) * 100)
     })
   } catch (error) {
     console.error('Error updating progress:', error)
