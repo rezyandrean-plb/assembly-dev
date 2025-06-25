@@ -1,9 +1,51 @@
 // This file centralizes course data to ensure consistency across the application
 
+// Import all individual course data files
+import { courseData as propertyStrategies2025 } from "@/app/courses/data/property-strategies-in-2025-amid-rate-cuts";
+import { courseData as condoInvestmentWorkshop } from "@/app/courses/data/condo-investment-workshop";
+import { courseData as masterNewLaunchSelection } from "@/app/courses/data/master-new-launch-selection";
+import { courseData as nichePositioningMasterclass } from "@/app/courses/data/module-1-of-niche-positioning-masterclass";
+import { courseData as propertySummit2024 } from "@/app/courses/data/property-summit-2024";
+import { courseData as sellingPropertyDIY } from "@/app/courses/data/selling-your-property-effectively-as-a-diy-property-seller";
+import { courseData as propertyFinancingStrategy } from "@/app/courses/data/property-financing-strategy-mastery";
+import { courseData as landedBuyerInvesting } from "@/app/courses/data/landed-buyer-investing";
+import { courseData as makingTheRightMove } from "@/app/courses/data/making-the-right-move";
+import { courseData as exitWithConfidence } from "@/app/courses/data/exit-with-confidence";
+import { courseData as freeholdPropertyStrategy } from "@/app/courses/data/freehold-property-investment-strategy";
+
+import { courseData as hdbUpgraders101 } from "@/app/courses/data/hdb-upgraders-101-secrets-to-upgrading-from-a-hdb-to-a-condo";
+import { courseData as landedOverpriced2024 } from "@/app/courses/data/are-landed-properties-overpriced-in-2024-should-we-wait-for-2025-to-enter-or-is-now-the-best-time";
+import { courseData as analyticalFactors7 } from "@/app/courses/data/7-analytical-factors-for-safe-new-launch-property-investment";
+import { courseData as entryPriceAnalysis } from "@/app/courses/data/entry-price-analysis-for-5-upcoming-new-launches";
+import propertyPortfolioExpansion2024 from "@/app/courses/data/property-portfolio-expansion-strategies-2024";
+import singaporeMasterPlan from "@/app/courses/data/singapores-master-plan-transformation";
+import ultimatePropertyGuide from "@/app/courses/data/the-ultimate-guide-to-making-the-best-property-decision";
+import { courseData as ultimateShowdown } from "@/app/courses/data/the-ultimate-showdown-cluster-houses-vs-condos-vs-landed-properties";
+import { courseData as liveDebateCondoLanded } from "@/app/courses/data/live-debate-choosing-your-path-in-singapore-property-condo-vs-landed";
+import { courseData as liveDebateBtoResale } from "@/app/courses/data/live-debate-choosing-your-path-in-singapore-property-bto-vs-resale-hdb";
+import { courseData as realEstateShift2023 } from "@/app/courses/data/the-shift-in-singapores-real-estate-market-2023";
+import coolingMeasuresImpact from "@/app/courses/data/how-has-the-latest-cooling-measures-affected-the-property-market";
+import { courseData as condoToLandedStrategy } from "@/app/courses/data/how-to-strategise-from-a-condo-portfolio-into-a-landed-portfolio";
+import { courseData as liveDebateResaleComparison } from "@/app/courses/data/live-debate-resale-hdb-vs-resale-condo";
+import { courseData as marketTrendsCondos2024 } from "@/app/courses/data/2024-market-trends-strategies-for-new-launch-resale-condos";
+import { courseData as marketTrendsLanded2024 } from "@/app/courses/data/2024-market-trends-strategies-for-landed-properties";
+import { courseData as singaporeTrends2024 } from "@/app/courses/data/singapore-real-estate-market-trends-predictions-2024";
+import { courseData as newLaunchSelection } from "@/app/courses/data/new-launch-condo-selection-strategies";
+import { courseData as strategisingHdbCondo } from "@/app/courses/data/mistakes-in-strategising-to-own-1-hdb-1-condo-right-from-the-start";
+import { courseData as maximizingInvestment } from "@/app/courses/data/maximizing-your-property-investment";
+
+import { courseData as ecSellersMop } from "@/app/courses/data/ec-sellers-make-the-most-money-when-they-sell-at-mop-year-myth-or-truth";
+import { courseData as landedPropertyStrategies } from "@/app/courses/data/landed-property-investment-strategies";
+import { courseData as newLaunchOpportunity2023 } from "@/app/courses/data/new-launches-is-there-still-an-opportunity-in-2023";
+import { courseData as propertyPortfolioMastery } from "@/app/courses/data/property-portfolio-strategy-mastery";
+import { courseData as risingStarsGems } from "@/app/courses/data/rising-stars-or-hidden-gems";
+import { courseData as artOfRealEstate } from "@/app/courses/data/the-art-of-real-estate-investment";
+
 export interface Course {
   id: number
   title: string
-  instructor: string
+  description: string
+  instructorIds: string[]
   level?: string
   duration?: string
   category?: string
@@ -23,648 +65,141 @@ export interface Course {
   completedDate?: string
 }
 
-// Mock data for courses - in a real app, this would come from an API or database
-export const courses: Course[] = [
-  {
-    id: 1,
-    title: "Property Strategies in 2025 Amid Rate Cuts",
-    instructor: "Melvin Lim, Nicole Ng",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "market trends",
-    categories: ["Market Trends", "Webinar"],
-    price: "Free",
-    type: "Course",
-    image: "/images/property-strategies-2025.jpg",
-    rating: 4.8,
-    reviewCount: 342,
-    tags: ["Market Trends", "Webinar"],
-    slug: "property-strategies-in-2025-amid-rate-cuts",
-    url: "/courses/property-strategies-in-2025-amid-rate-cuts",
-    progress: 75,
-    lastAccessed: "2 hours ago",
-    totalHours: 18,
-  },
-  {
-    id: 2,
-    title: "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "condo",
-    categories: ["Condo", "Workshop"],
-    price: "$899.00",
-    type: "Workshop",
-    image: "/images/condo-investment-workshop-building-a-profitable-property-portfolio-with-confidence.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Workshop"],
-    slug: "condo-investment-workshop",
-    url: "/courses/condo-investment-workshop",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 12,
-  },
-  {
-    id: 3,
-    title: "Master New Launch Selection: 6 Exclusive Frameworks to Select the Winning New Launch in 2024/2025",
-    instructor: "Melvin Lim, Marc Chan, Ong Yu Rong, Shawn Tay, George Peng, Jesley Lim",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "condo",
-    categories: ["Condo", "Masterclass"],
-    price: "$399.00",
-    type: "Masterclass",
-    image: "/master-new-launch-selection.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Masterclass"],
-    slug: "master-new-launch-selection",
-    url: "/courses/master-new-launch-selection",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 24,
-  },
-  {
-    id: 4,
-    title: "Module 1 of Niche Positioning Masterclass",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "condo",
-    categories: ["Condo", "Masterclass"],
-    price: "$2,999.00",
-    type: "Masterclass",
-    image: "/module-1-of-niche-positioning-masterclass.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Masterclass"],
-    slug: "module-1-of-niche-positioning-masterclass",
-    url: "/courses/module-1-of-niche-positioning-masterclass",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 15,
-  },
-  {
-    id: 5,
-    title: "Property Summit 2024",
-    instructor:
-      "Melvin Lim, Marc Chan, Grayce Tan, Ong Yu Rong, Shawn Tay, Jesley Lim, George Peng, Wayne Tang, Joan Loh",
-    level: "All Levels",
-    duration: "2 days",
-    category: "event courses",
-    categories: ["Condo", "Event Courses", "HDB", "Investing", "Landed", "Market Trends"],
-    price: "$399.00",
-    type: "Event",
-    image: "/property-summit-2024.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Event Courses", "Market Trends"],
-    slug: "property-summit-2024",
-    url: "/courses/property-summit-2024",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 20,
-  },
-  {
-    id: 6,
-    title: "Selling your Property Effectively as a DIY Property Seller",
-    instructor: "TBD",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "property selling",
-    categories: ["Condo", "HDB", "Landed", "Masterclass"],
-    price: "$399.00",
-    type: "Masterclass",
-    image: "/selling-your-property-effectively-as-a-diy-property-seller.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Property Selling", "Masterclass"],
-    slug: "selling-your-property-effectively-as-a-diy-property-seller",
-    url: "/courses/selling-your-property-effectively-as-a-diy-property-seller",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 22,
-  },
-  {
-    id: 7,
-    title: "Property Financing Strategy Mastery",
-    instructor: "TBD",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "investing",
-    categories: ["Investing", "Masterclass"],
-    price: "$1,899.00",
-    type: "Masterclass",
-    image: "/singapore-skyline-investment.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Investing", "Masterclass"],
-    slug: "property-financing-strategy-mastery",
-    url: "/courses/property-financing-strategy-mastery",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 15,
-  },
-  {
-    id: 8,
-    title: "HTML & CSS Mastery",
-    instructor: "Michael Chen",
-    level: "Beginner",
-    duration: "Self-paced",
-    category: "condo",
-    categories: ["Condo", "Workshop"],
-    price: "$49.99",
-    type: "Course",
-    image: "/singapore-skyline-condos.png",
-    rating: 4.6,
-    reviewCount: 198,
-    tags: ["Condo", "Workshop"],
-    slug: "html-css-mastery",
-    url: "https://assembly.sg/courses/html-css-mastery/",
-    completed: true,
-    completedDate: "March 3, 2023",
-    totalHours: 12,
-  },
-  {
-    id: 9,
-    title: "Responsive Web Design",
-    instructor: "Jessica Lee",
-    level: "Intermediate",
-    duration: "Self-paced",
-    category: "hdb",
-    categories: ["HDB", "Workshop"],
-    price: "$69.99",
-    type: "Course",
-    image: "/colorful-hdb-skyline.png",
-    rating: 4.8,
-    reviewCount: 176,
-    tags: ["HDB", "Workshop"],
-    slug: "responsive-web-design",
-    url: "https://assembly.sg/courses/responsive-web-design/",
-    completed: true,
-    completedDate: "January 20, 2023",
-    totalHours: 10,
-  },
-  {
-    id: 10,
-    title: "Git & GitHub Essentials",
-    instructor: "Robert Kim",
-    level: "Beginner",
-    duration: "Self-paced",
-    category: "landed",
-    categories: ["Landed", "Workshop"],
-    price: "$39.99",
-    type: "Course",
-    image: "/modern-real-estate-marketing.png",
-    rating: 4.5,
-    reviewCount: 132,
-    tags: ["Landed", "Workshop"],
-    slug: "git-github-essentials",
-    url: "https://assembly.sg/courses/git-github-essentials/",
-    completed: true,
-    completedDate: "December 10, 2022",
-    totalHours: 9,
-  },
-  {
-    id: 11,
-    title: "UI/UX Principles",
-    instructor: "Emma Rodriguez",
-    level: "Intermediate",
-    duration: "Self-paced",
-    category: "market trends",
-    categories: ["Market Trends", "Workshop"],
-    price: "$79.99",
-    type: "Course",
-    image: "/financial-model-dashboard.png",
-    rating: 4.7,
-    reviewCount: 165,
-    tags: ["Market Trends", "Workshop"],
-    slug: "ui-ux-principles",
-    url: "https://assembly.sg/courses/ui-ux-principles/",
-    completed: true,
-    completedDate: "October 5, 2022",
-    totalHours: 12,
-  },
-  {
-    id: 12,
-    title: "SQL Basics",
-    instructor: "David Wilson",
-    level: "Beginner",
-    duration: "Self-paced",
-    category: "investing",
-    categories: ["Investing", "Workshop"],
-    price: "$49.99",
-    type: "Course",
-    image: "/singapore-skyline-investment.png",
-    rating: 4.6,
-    reviewCount: 142,
-    tags: ["Investing", "Workshop"],
-    slug: "sql-basics",
-    url: "https://assembly.sg/courses/sql-basics/",
-    completed: true,
-    completedDate: "August 22, 2022",
-    totalHours: 10,
-  },
-  {
-    id: 13,
-    title: "Python for Beginners",
-    instructor: "Alex Thompson",
-    level: "Beginner",
-    duration: "Self-paced",
-    category: "condo",
-    categories: ["Condo", "Workshop"],
-    price: "$59.99",
-    type: "Course",
-    image: "/singapore-skyline-condos.png",
-    rating: 4.8,
-    reviewCount: 187,
-    tags: ["Condo", "Workshop"],
-    slug: "python-for-beginners",
-    url: "https://assembly.sg/courses/python-for-beginners/",
-    completed: true,
-    completedDate: "July 15, 2022",
-    totalHours: 16,
-  },
-  {
-    id: 14,
-    title: "Agile Methodology",
-    instructor: "Jennifer Park",
-    level: "Intermediate",
-    duration: "Self-paced",
-    category: "hdb",
-    categories: ["HDB", "Workshop"],
-    price: "$69.99",
-    type: "Course",
-    image: "/colorful-hdb-skyline.png",
-    rating: 4.7,
-    reviewCount: 154,
-    tags: ["HDB", "Workshop"],
-    slug: "agile-methodology",
-    url: "https://assembly.sg/courses/agile-methodology/",
-    completed: true,
-    completedDate: "May 3, 2022",
-    totalHours: 7,
-  },
-  {
-    id: 15,
-    title: "Advanced JavaScript Patterns",
-    instructor: "Sarah Johnson",
-    level: "Intermediate",
-    duration: "Self-paced",
-    category: "landed",
-    categories: ["Landed", "Masterclass"],
-    price: "$129.99",
-    type: "Course",
-    image: "/modern-real-estate-marketing.png",
-    rating: 4.9,
-    reviewCount: 198,
-    tags: ["Landed", "Masterclass"],
-    slug: "advanced-javascript-patterns",
-    url: "https://assembly.sg/courses/advanced-javascript-patterns/",
-    totalHours: 12,
-  },
-  {
-    id: 16,
-    title: "Cloud Computing Fundamentals",
-    instructor: "Michael Chen",
-    level: "Beginner",
-    duration: "Self-paced",
-    category: "market trends",
-    categories: ["Market Trends", "Workshop"],
-    price: "$89.99",
-    type: "Course",
-    image: "/financial-model-dashboard.png",
-    rating: 4.7,
-    reviewCount: 176,
-    tags: ["Market Trends", "Workshop"],
-    slug: "cloud-computing-fundamentals",
-    url: "https://assembly.sg/courses/cloud-computing-fundamentals/",
-    totalHours: 15,
-  },
-  {
-    id: 17,
-    title: "Mobile App Development with React Native",
-    instructor: "Jessica Lee",
-    level: "Advanced",
-    duration: "Self-paced",
-    category: "investing",
-    categories: ["Investing", "Masterclass"],
-    price: "$149.99",
-    type: "Course",
-    image: "/singapore-skyline-investment.png",
-    rating: 4.8,
-    reviewCount: 187,
-    tags: ["Investing", "Masterclass"],
-    slug: "mobile-app-development-with-react-native",
-    url: "https://assembly.sg/courses/mobile-app-development-with-react-native/",
-    totalHours: 20,
-  },
-  {
-    id: 18,
-    title: "Property Portfolio Strategy Mastery",
-    instructor: "Melvin Lim, Marc Chan, George Peng",
-    level: "Advanced",
-    duration: "30 hours",
-    category: "investing",
-    categories: ["Investing", "Masterclass"],
-    price: "$1,999.00",
-    type: "Masterclass",
-    image: "/singapore-skyline-investment.png",
-    rating: 4.9,
-    reviewCount: 245,
-    tags: ["Investing", "Portfolio", "Strategy", "Masterclass"],
-    slug: "property-portfolio-strategy-mastery",
-    url: "/courses/property-portfolio-strategy-mastery",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 30,
-  },
-  {
-    id: 19,
-    title: "Landed Property Buyer's Investment Guide",
-    instructor: "Melvin Lim, George Peng, Wayne Tang",
-    level: "Intermediate",
-    duration: "24 hours",
-    category: "landed",
-    categories: ["Landed", "Masterclass", "Investing"],
-    price: "$1,499.00",
-    type: "Masterclass",
-    image: "/landed-property-singapore.png",
-    rating: 4.8,
-    reviewCount: 342,
-    tags: ["Landed", "Investment", "Buyer's Guide", "Masterclass"],
-    slug: "landed-buyer-investing",
-    url: "/courses/landed-buyer-investing",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 24,
-  },
-  {
-    id: 20,
-    title: "HDB Upgraders 101: Secrets to Upgrading from a HDB to a Condo",
-    instructor: "TBD",
-    level: "All Levels",
-    duration: "Self-paced",
-    category: "hdb",
-    categories: ["Condo", "HDB", "Workshop"],
-    price: "$599.00",
-    type: "Workshop",
-    image: "/hdb-to-condo-upgrade.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["HDB", "Condo", "Upgrading", "Workshop"],
-    slug: "hdb-upgraders-101",
-    url: "/courses/hdb-upgraders-101",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 10,
-  },
-  {
-    id: 21,
-    title: "The Shift in Singapore's Real Estate Market 2023",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "market trends",
-    categories: ["Market Trends", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/the-shift-in-singapores-real-estate-market-2023.jpg",
-    reviewCount: 0,
-    tags: ["Market Trends", "Webinar"],
-    slug: "the-shift-in-singapores-real-estate-market-2023",
-    url: "/courses/the-shift-in-singapores-real-estate-market-2023",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 22,
-    title: "New Launches – Is There Still an Opportunity in 2023?",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "condo",
-    categories: ["Condo", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/new-launch-opportunities.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "New Launch", "Webinar"],
-    slug: "new-launches-is-there-still-an-opportunity-in-2023",
-    url: "/courses/new-launches-is-there-still-an-opportunity-in-2023",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 23,
-    title: "Making the Right Move",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "hdb",
-    categories: ["HDB", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/making-the-right-move.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["HDB", "Strategy", "Webinar"],
-    slug: "making-the-right-move",
-    url: "/courses/making-the-right-move",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 24,
-    title: "Landed Property Investment Strategies",
-    instructor: "Melvin Lim",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "landed",
-    categories: ["Landed", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/landed-property-investment-strategies.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Landed", "Investment", "Webinar"],
-    slug: "landed-property-investment-strategies",
-    url: "/courses/landed-property-investment-strategies",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 25,
-    title: "The Art of Real Estate Investment",
-    instructor: "Melvin Lim, Ong Yu Rong",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "condo",
-    categories: ["Condo", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/the-art-of-real-estate-investment.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Investment", "Webinar"],
-    slug: "the-art-of-real-estate-investment",
-    url: "/courses/the-art-of-real-estate-investment",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 26,
-    title: "Exit with Confidence",
-    instructor: "Melvin Lim, Marc Chan",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "condo",
-    categories: ["Condo", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/exit-with-confidence.jpg",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Exit Strategy", "Webinar"],
-    slug: "exit-with-confidence",
-    url: "/courses/exit-with-confidence",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 27,
-    title: "The Ultimate Showdown: Cluster Houses vs. Condos vs. Landed Properties",
-    instructor: "Melvin Lim, Ong Yu Rong",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "landed",
-    categories: ["Landed", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/property-types-comparison.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Landed", "Condo", "Cluster Houses", "Webinar"],
-    slug: "the-ultimate-showdown",
-    url: "/courses/the-ultimate-showdown",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 28,
-    title: "Freehold Property Investment Strategy",
-    instructor: "Melvin Lim, Ong Yu Rong",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "condo",
-    categories: ["Condo", "Landed", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/freehold-property-investment.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Freehold", "Investment", "Webinar"],
-    slug: "freehold-property-investment-strategy",
-    url: "/courses/freehold-property-investment-strategy",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-  {
-    id: 29,
-    title: "Rising Stars or Hidden Gems?",
-    instructor: "Melvin Lim, Ong Yu Rong",
-    level: "All Levels",
-    duration: "1 hour",
-    category: "condo",
-    categories: ["Condo", "Webinar"],
-    price: "Free",
-    type: "Webinar",
-    image: "/hidden-gems-property.png",
-    rating: 0,
-    reviewCount: 0,
-    tags: ["Condo", "Investment Opportunities", "Webinar"],
-    slug: "rising-stars-or-hidden-gems",
-    url: "/courses/rising-stars-or-hidden-gems",
-    progress: 0,
-    lastAccessed: "",
-    totalHours: 1,
-  },
-]
+// Function to convert CourseData to Course format
+const convertToStandardFormat = (courseData: any, index: number): Course => {
+  // Create a mapping from instructor names to facilitator IDs
+  const nameToIdMapping: { [key: string]: string } = {
+    'Melvin Lim': 'melvin-lim',
+    'Adrian Lim': 'adrian-lim', 
+    'Marc Chan': 'marc-chan',
+    'George Peng': 'george-peng',
+    'Ong Yu Rong': 'ong-yu-rong',
+    'Grayce Tan': 'grayce-tan',
+    'Joan Loh': 'joan-loh',
+    'Wayne Tang': 'wayne-tang',
+    'Alan Koh': 'alan-koh',
+    'Beatrice Lim': 'beatrice-lim',
+    'Jesley Lim': 'jesley-lim',
+    'Shawn Tay': 'shawn-tay',
+    'Lyndon Leong': 'lyndon-leong',
+    'Ramzi Razak': 'ramzi-razak',
+    'Lee Jun Wei': 'lee-jun-wei',
+    'Loong Yanyan': 'loong-yanyan',
+    'To be announced': 'tbd',
+    'TBD': 'tbd'
+  };
 
-// Helper functions to get different course categories
-export const getEnrolledCourses = () => {
-  return courses.filter((course) => course.progress !== undefined && !course.completed)
-}
+  // Extract instructor names from the instructors array and map to IDs
+  const instructorIds = courseData.instructors?.map((instructor: any) => 
+    nameToIdMapping[instructor.name] || 'tbd'
+  ) || ['tbd'];
 
-export const getCompletedCourses = () => {
-  return courses.filter((course) => course.completed)
-}
+  // Convert duration to hours if it's in "X hours Y minutes" format
+  let totalHours = 0;
+  if (courseData.duration) {
+    const hourMatch = courseData.duration.match(/(\d+)\s*hours?/);
+    const minuteMatch = courseData.duration.match(/(\d+)\s*minutes?/);
+    if (hourMatch) totalHours += parseInt(hourMatch[1]);
+    if (minuteMatch) totalHours += Math.round(parseInt(minuteMatch[1]) / 60 * 10) / 10;
+  }
 
-export const getRecommendedCourses = () => {
-  // In a real app, this would use user preferences to filter courses
-  // For now, we'll just return courses that aren't enrolled or completed
-  return courses.filter((course) => course.progress === undefined && !course.completed).slice(0, 3)
-}
+  // Determine categories based on tags and category
+  let categories: string[] = [];
+  if (courseData.tags) {
+    categories = [...courseData.tags];
+  }
+  if (courseData.category && !categories.includes(courseData.category)) {
+    categories.push(courseData.category);
+  }
 
-export const getUpcomingEvents = () => {
-  return [
-    {
-      id: 1,
-      title: "Final Project: Web App",
-      course: "Advanced Web Development",
-      date: "May 15, 2023",
-      daysLeft: 2,
-    },
-    {
-      id: 2,
-      title: "User Research Report",
-      course: "UX Design Fundamentals",
-      date: "May 18, 2023",
-      daysLeft: 5,
-    },
-    {
-      id: 3,
-      title: "Data Analysis Exercise",
-      course: "Data Science Essentials",
-      date: "May 23, 2023",
-      daysLeft: 10,
-    },
-  ]
-}
+  // Determine type based on price and other factors
+  let type = 'Course';
+  if (courseData.price === 'Free') {
+    type = 'Webinar';
+  } else if (courseData.title.toLowerCase().includes('masterclass')) {
+    type = 'Masterclass';
+  } else if (courseData.title.toLowerCase().includes('workshop')) {
+    type = 'Workshop';
+  } else if (courseData.title.toLowerCase().includes('summit')) {
+    type = 'Event';
+  }
 
-export const getRecentActivity = () => {
-  return [
-    {
-      id: 1,
-      type: "completed",
-      title: "Completed Module 3: Advanced CSS",
-      course: "Advanced Web Development",
-      time: "2h ago",
-      xp: 25,
-    },
-    {
-      id: 2,
-      type: "wishlist",
-      title: 'Added "AI for Beginners" to wishlist',
-      instructor: "David Wilson",
-      time: "Yesterday",
-    },
-    {
-      id: 3,
-      type: "purchase",
-      title: 'Purchased "Data Science Essentials"',
-      price: "$149.99",
-      time: "3 days ago",
-    },
-  ]
-}
+  // Ensure unique ID by using original ID + index if there are conflicts
+  const uniqueId = courseData.id ? courseData.id : (1000 + index);
+
+  return {
+    id: uniqueId,
+    title: courseData.title,
+    description: courseData.description || '',
+    instructorIds,
+    level: courseData.level || 'All Levels',
+    duration: courseData.duration || 'Self-paced',
+    category: courseData.category?.toLowerCase() || 'real-estate',
+    categories,
+    price: courseData.price,
+    type,
+    image: courseData.image,
+    rating: courseData.rating || 0,
+    reviewCount: courseData.reviews?.length || 0,
+    tags: courseData.tags || [],
+    slug: courseData.slug,
+    url: `/courses/${courseData.slug}`,
+    progress: 0,
+    lastAccessed: '',
+    totalHours: totalHours || 1,
+    completed: false,
+    completedDate: '',
+  };
+};
+
+// Array of all course data
+const allCourseData = [
+  propertyStrategies2025,
+  condoInvestmentWorkshop,
+  masterNewLaunchSelection,
+  nichePositioningMasterclass,
+  propertySummit2024,
+  sellingPropertyDIY,
+  propertyFinancingStrategy,
+  landedBuyerInvesting,
+  makingTheRightMove,
+  exitWithConfidence,
+  freeholdPropertyStrategy,
+
+  hdbUpgraders101,
+  landedOverpriced2024,
+  analyticalFactors7,
+  entryPriceAnalysis,
+  propertyPortfolioExpansion2024,
+  singaporeMasterPlan,
+  ultimatePropertyGuide,
+  ultimateShowdown,
+  liveDebateCondoLanded,
+  liveDebateBtoResale,
+  realEstateShift2023,
+  coolingMeasuresImpact,
+  condoToLandedStrategy,
+  liveDebateResaleComparison,
+  marketTrendsCondos2024,
+  marketTrendsLanded2024,
+  singaporeTrends2024,
+  newLaunchSelection,
+  strategisingHdbCondo,
+  maximizingInvestment,
+
+  ecSellersMop,
+  landedPropertyStrategies,
+  newLaunchOpportunity2023,
+  propertyPortfolioMastery,
+  risingStarsGems,
+  artOfRealEstate,
+];
+
+// Convert all course data to standard format with unique IDs
+export const courses: Course[] = allCourseData.map((courseData, index) => 
+  convertToStandardFormat(courseData, index)
+).map((course, index) => ({
+  ...course,
+  // Ensure completely unique IDs by using index-based IDs
+  id: 1000 + index
+}));
