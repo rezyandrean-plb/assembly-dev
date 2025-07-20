@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/live-debate-resale-hdb-vs-resale-condo";
 
 export default function LiveDebateResaleHDBVsResaleCondo() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="8sbqc-b" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="5f7f.mf" />;
 }

@@ -429,32 +429,32 @@ export default function LearningPathPage() {
     return (
       <div
         className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-        data-oid="o.kwm5r"
+        data-oid="tm06g9:"
       >
-        <div className="pt-24 pb-16" data-oid="wdkdvul">
-          <div className="container mx-auto px-4" data-oid="t_5zoya">
-            <div className="animate-pulse" data-oid="qe:h:wg">
+        <div className="pt-24 pb-16" data-oid="2.u4k7p">
+          <div className="container mx-auto px-4" data-oid="q9kw5z9">
+            <div className="animate-pulse" data-oid="fhmmgkq">
               <div
                 className="h-8 bg-gray-200 rounded w-1/3 mb-4"
-                data-oid="ptfajji"
+                data-oid="9-j4h.d"
               ></div>
               <div
                 className="h-4 bg-gray-200 rounded w-2/3 mb-8"
-                data-oid="9diik.r"
+                data-oid="kei8hz5"
               ></div>
               <div
                 className="h-64 bg-gray-200 rounded mb-8"
-                data-oid="-xuun:8"
+                data-oid=".2twx-t"
               ></div>
               <div
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                data-oid="odvs:t_"
+                data-oid="xut:2-z"
               >
                 {[...Array(3)].map((_, i) => (
                   <div
                     key={i}
                     className="h-64 bg-gray-200 rounded"
-                    data-oid="rltgl7g"
+                    data-oid="th52x75"
                   ></div>
                 ))}
               </div>
@@ -469,26 +469,26 @@ export default function LearningPathPage() {
     return (
       <div
         className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-        data-oid="74grb.n"
+        data-oid="e0o.imr"
       >
-        <div className="pt-24 pb-16" data-oid="bkr5aw.">
+        <div className="pt-24 pb-16" data-oid="6546gdd">
           <div
             className="container mx-auto px-4 text-center"
-            data-oid="m3btuat"
+            data-oid="m8le26u"
           >
             <h1
               className="text-3xl font-bold text-gray-900 mb-4"
-              data-oid=":2p.j6v"
+              data-oid="30p:mu4"
             >
               Learning Path Not Found
             </h1>
-            <p className="text-gray-600 mb-8" data-oid="ph1.q0g">
+            <p className="text-gray-600 mb-8" data-oid="e8dt9bf">
               The learning path you're looking for doesn't exist or has been
               moved.
             </p>
-            <Link href="/courses" data-oid="ssxmb6-">
-              <Button data-oid="52e9dom">
-                <ArrowLeft className="mr-2 h-4 w-4" data-oid="1xgwdtt" />
+            <Link href="/courses" data-oid="q2uqsy-">
+              <Button data-oid="oc7-4_e">
+                <ArrowLeft className="mr-2 h-4 w-4" data-oid="3g2fd6w" />
                 Back to Courses
               </Button>
             </Link>
@@ -503,42 +503,42 @@ export default function LearningPathPage() {
   return (
     <div
       className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-      data-oid="-29:9u6"
+      data-oid="0kd6r:z"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5" data-oid="-kni.04">
+      <div className="absolute inset-0 opacity-5" data-oid="zdmr4:g">
         <div
           className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          data-oid="hajb:fm"
+          data-oid="i0ydt9-"
         ></div>
         <div
           className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"
-          data-oid="_n1--4u"
+          data-oid="oyv.hn_"
         ></div>
         <div
           className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"
-          data-oid="ca.obez"
+          data-oid="5405fw9"
         ></div>
       </div>
 
-      <div className="pt-24 pb-16 relative z-10" data-oid="z.vqp3:">
-        <div className="container mx-auto px-4" data-oid="owmfi42">
+      <div className="pt-24 pb-16 relative z-10" data-oid="rj_dpih">
+        <div className="container mx-auto px-4" data-oid="a4jqius">
           {/* Back button */}
           <motion.div
             className="mb-6"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            data-oid="z6.:i55"
+            data-oid="3:ija:l"
           >
             <Link
               href="/courses?tab=paths"
               className="inline-flex items-center text-[#123B79] hover:text-[#0A2A5E] font-medium transition-colors group"
-              data-oid="vpmnf_9"
+              data-oid="6ukxyyc"
             >
               <ArrowLeft
                 className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform"
-                data-oid="m1bs:mk"
+                data-oid="qug1se-"
               />
               Back to Learning Paths
             </Link>
@@ -550,54 +550,54 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            data-oid="jkf_wb."
+            data-oid=".-pexv7"
           >
             <div
               className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 relative overflow-hidden"
-              data-oid="vy3upno"
+              data-oid=":f.-ww2"
             >
               {/* Gradient overlay */}
               <div
                 className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#123B79] via-[#F0A500] to-[#123B79]"
-                data-oid="wgtf6_3"
+                data-oid="9gdrzh7"
               ></div>
 
-              <div className="flex items-center mb-6" data-oid="9sicv_:">
+              <div className="flex items-center mb-6" data-oid="waj_c0q">
                 <div
                   className="rounded-full w-16 h-16 flex items-center justify-center mr-6 shadow-lg"
                   style={{ backgroundColor: pathData.color }}
-                  data-oid=".krpmcz"
+                  data-oid="pcxcy02"
                 >
                   {pathData.id === "beginner-property-investor" ? (
-                    <Target className="h-8 w-8 text-white" data-oid="pm4415v" />
+                    <Target className="h-8 w-8 text-white" data-oid="xngv:nv" />
                   ) : pathData.id === "hdb-upgrader-strategist" ? (
                     <TrendingDown
                       className="h-8 w-8 text-white"
-                      data-oid="sicev:y"
+                      data-oid="l:0r-4l"
                     />
                   ) : (
-                    <Award className="h-8 w-8 text-white" data-oid=":ov82.i" />
+                    <Award className="h-8 w-8 text-white" data-oid="ga-97g3" />
                   )}
                 </div>
-                <div data-oid="a:den-i">
+                <div data-oid="b5n3-_u">
                   <div
                     className="flex items-center gap-3 mb-2"
-                    data-oid="9wujhbd"
+                    data-oid="bskgx-1"
                   >
                     <h1
                       className="text-4xl lg:text-5xl font-bold"
                       style={{ color: pathData.color }}
-                      data-oid="w7o.b5r"
+                      data-oid="2ji0j-8"
                     >
                       {pathData.title}
                     </h1>
                     <span
                       className="bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-sm font-bold px-3 py-1 rounded-full"
-                      data-oid="nwjhnhc"
+                      data-oid="e8z399n"
                     >
                       <Sparkles
                         className="h-3 w-3 inline mr-1"
-                        data-oid="2slmqr_"
+                        data-oid="tn5nahm"
                       />
 
                       {pathData.bundleType}
@@ -605,7 +605,7 @@ export default function LearningPathPage() {
                   </div>
                   <p
                     className="text-xl text-gray-700 max-w-4xl leading-relaxed"
-                    data-oid="qysc2by"
+                    data-oid="33y85-e"
                   >
                     {pathData.description}
                   </p>
@@ -614,32 +614,32 @@ export default function LearningPathPage() {
 
               <div
                 className="flex flex-wrap items-center gap-6 text-sm text-gray-600"
-                data-oid="e7mc1u8"
+                data-oid="yqvjz7o"
               >
                 <div
                   className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="b6td04k"
+                  data-oid="1n1xaxm"
                 >
-                  <BookOpen className="h-4 w-4 mr-2" data-oid="eh8_ovl" />
-                  <span className="font-medium" data-oid="pbz7_e4">
+                  <BookOpen className="h-4 w-4 mr-2" data-oid="n82010s" />
+                  <span className="font-medium" data-oid="_leyhjy">
                     {pathCourses.length} courses
                   </span>
                 </div>
                 <div
                   className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="6_a3fp8"
+                  data-oid="h:10o3h"
                 >
-                  <Clock className="h-4 w-4 mr-2" data-oid="98jq_4t" />
-                  <span className="font-medium" data-oid="0cw-:1p">
+                  <Clock className="h-4 w-4 mr-2" data-oid="eky39la" />
+                  <span className="font-medium" data-oid="44kc:8g">
                     Approximately {pathCourses.length * 4} weeks
                   </span>
                 </div>
                 <div
                   className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="p8xsbp8"
+                  data-oid=".r6y3m."
                 >
-                  <Users className="h-4 w-4 mr-2" data-oid="_mgiwnk" />
-                  <span className="font-medium" data-oid="5s1epyb">
+                  <Users className="h-4 w-4 mr-2" data-oid="6.u9le5" />
+                  <span className="font-medium" data-oid="_53e-wa">
                     {pathData.id === "beginner-property-investor"
                       ? "Beginner to Intermediate"
                       : pathData.id === "hdb-upgrader-strategist"
@@ -654,59 +654,59 @@ export default function LearningPathPage() {
           {/* Enhanced Path Description with Sidebar */}
           <div
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12"
-            data-oid="a7mi.cw"
+            data-oid="7_qtcl_"
           >
             <motion.div
               className="lg:col-span-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              data-oid="7_uzz5v"
+              data-oid=".8cclry"
             >
               {/* About Section */}
               <div
                 className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 mb-6"
-                data-oid="y00bzyt"
+                data-oid="h3x4pfm"
               >
-                <div className="flex items-center mb-6" data-oid="6z17k6j">
+                <div className="flex items-center mb-6" data-oid="bl5-2c:">
                   <div
                     className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
-                    data-oid="swx:-k6"
+                    data-oid="lfi5ur6"
                   >
                     <BookOpen
                       className="h-6 w-6 text-white"
-                      data-oid="889id:k"
+                      data-oid="ynbxlh4"
                     />
                   </div>
                   <h2
                     className="text-3xl font-bold text-[#123B79]"
-                    data-oid="8wfc4_s"
+                    data-oid="k85w.d2"
                   >
                     About This Learning Path
                   </h2>
                 </div>
                 <p
                   className="text-gray-700 mb-8 text-lg leading-relaxed"
-                  data-oid="23qstym"
+                  data-oid="1n37:cw"
                 >
                   {pathData.longDescription}
                 </p>
 
-                <div className="flex items-center mb-6" data-oid="ra.xepl">
+                <div className="flex items-center mb-6" data-oid="p.jmxys">
                   <div
                     className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-3 mr-4"
-                    data-oid="c8ua433"
+                    data-oid=":ybpomn"
                   >
-                    <Target className="h-6 w-6 text-white" data-oid="23wwwnh" />
+                    <Target className="h-6 w-6 text-white" data-oid="cdb.1ea" />
                   </div>
                   <h3
                     className="text-2xl font-bold text-[#123B79]"
-                    data-oid="vgezb62"
+                    data-oid="2h6zikk"
                   >
                     What You'll Master
                   </h3>
                 </div>
-                <div className="space-y-4" data-oid="ougbuby">
+                <div className="space-y-4" data-oid="f8k5noi">
                   {pathData.outcomes.map((outcome, index) => (
                     <motion.div
                       key={index}
@@ -715,20 +715,20 @@ export default function LearningPathPage() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      data-oid="9zsw46p"
+                      data-oid="_u6lzcl"
                     >
                       <div
                         className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                        data-oid=".ydir46"
+                        data-oid="_v-sozh"
                       >
                         <CheckCircle
                           className="h-4 w-4 text-white"
-                          data-oid="nxfney:"
+                          data-oid="bi_e7nj"
                         />
                       </div>
                       <p
                         className="text-gray-700 font-medium text-lg leading-relaxed"
-                        data-oid="ez0-3_f"
+                        data-oid="yfzgytc"
                       >
                         {outcome}
                       </p>
@@ -744,34 +744,34 @@ export default function LearningPathPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              data-oid="a5oesqd"
+              data-oid=":_vm:1:"
             >
               {/* Bundle Pricing Card */}
               <div
                 className="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl border border-white/50 mb-6 relative"
-                data-oid="jwt9ihr"
+                data-oid="ml5xwxr"
               >
                 {/* Premium Badge */}
                 <div
                   className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
-                  data-oid="0:0vuzm"
+                  data-oid="y1s3r78"
                 >
-                  <Gift className="h-3 w-3 inline mr-1" data-oid="ug0jr0n" />
+                  <Gift className="h-3 w-3 inline mr-1" data-oid="aom3mx1" />
                   BUNDLE DEAL
                 </div>
 
-                <div className="p-8" data-oid="b5b8qe5">
-                  <div className="text-center mb-8" data-oid="tljlrh7">
-                    <div className="mb-4" data-oid="qjm8wd5">
+                <div className="p-8" data-oid="sy5rt1q">
+                  <div className="text-center mb-8" data-oid="x:8_ygv">
+                    <div className="mb-4" data-oid="ezcwsty">
                       <span
                         className="text-sm text-gray-500 font-medium"
-                        data-oid="j5:v6sr"
+                        data-oid="e5wukjs"
                       >
                         Bundle Price
                       </span>
                       <div
                         className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent"
-                        data-oid="szzb31v"
+                        data-oid="b.z0bi8"
                       >
                         ${formatPrice(pricing.bundlePrice)}
                       </div>
@@ -780,31 +780,31 @@ export default function LearningPathPage() {
                     {/* Savings Display */}
                     <div
                       className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-4 mb-6"
-                      data-oid="eq1g53z"
+                      data-oid="nm2yox1"
                     >
                       <div
                         className="flex items-center justify-center mb-2"
-                        data-oid="u.c1m-s"
+                        data-oid="b5fk7pv"
                       >
                         <TrendingDown
                           className="h-5 w-5 text-red-600 mr-2"
-                          data-oid="nxse.53"
+                          data-oid="e1:-atl"
                         />
 
                         <span
                           className="text-red-600 font-bold text-lg"
-                          data-oid=".qq..-:"
+                          data-oid=":twmi3a"
                         >
                           Save ${formatPrice(pricing.savings)}
                         </span>
                       </div>
-                      <div className="text-sm text-gray-600" data-oid="g7uc4bh">
-                        <span className="line-through" data-oid=".p97kmg">
+                      <div className="text-sm text-gray-600" data-oid="-n165dz">
+                        <span className="line-through" data-oid="muuu0-e">
                           ${formatPrice(pricing.originalPrice)}
                         </span>
                         <span
                           className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold"
-                          data-oid="0oa.tb3"
+                          data-oid="vjnd6p2"
                         >
                           {pricing.discountPercentage}% OFF
                         </span>
@@ -815,57 +815,57 @@ export default function LearningPathPage() {
                     <Button
                       onClick={addBundleToCart}
                       className="w-full bg-gradient-to-r from-[#123B79] to-[#0A2A5E] hover:from-[#0A2A5E] hover:to-[#123B79] text-white font-bold py-6 text-lg mb-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
-                      data-oid="lrdt.-9"
+                      data-oid="mud:epz"
                     >
                       <ShoppingCart
                         className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
-                        data-oid="8t5r5-2"
+                        data-oid=".ls8hez"
                       />
                       Enroll in Bundle Now
                     </Button>
 
                     <p
                       className="text-xs text-gray-500 mb-6"
-                      data-oid="esfax3:"
+                      data-oid="ljn38cb"
                     >
                       30-day money-back guarantee • Lifetime access
                     </p>
                   </div>
 
                   {/* Bundle Benefits */}
-                  <div className="space-y-4" data-oid="9n.fj-3">
+                  <div className="space-y-4" data-oid="e9y5lrx">
                     <h3
                       className="font-bold text-lg text-[#123B79] mb-4 flex items-center"
-                      data-oid="_-l3xi3"
+                      data-oid="8auwl15"
                     >
-                      <Gift className="h-5 w-5 mr-2" data-oid="6.0kfac" />
+                      <Gift className="h-5 w-5 mr-2" data-oid="pfws5-q" />
                       Bundle Includes:
                     </h3>
 
-                    <div className="space-y-3" data-oid="n-fp57y">
+                    <div className="space-y-3" data-oid="vml.-jb">
                       <div
                         className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="jgou4li"
+                        data-oid="rwxen57"
                       >
                         <div
                           className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="5i99j6_"
+                          data-oid="axdi9j0"
                         >
                           <BookOpen
                             className="h-4 w-4 text-white"
-                            data-oid="hk4bsbw"
+                            data-oid="1_nldj8"
                           />
                         </div>
-                        <div data-oid="-nc10z8">
+                        <div data-oid="xx2tf0s">
                           <p
                             className="font-semibold text-gray-900 text-lg"
-                            data-oid="44ee68o"
+                            data-oid="bzkkftd"
                           >
                             {pathCourses.length} Premium Courses
                           </p>
                           <p
                             className="text-sm text-gray-600"
-                            data-oid="jfsu7.u"
+                            data-oid="ezv7wxf"
                           >
                             Structured learning path
                           </p>
@@ -874,27 +874,27 @@ export default function LearningPathPage() {
 
                       <div
                         className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="71d_nxu"
+                        data-oid="rh8e5sl"
                       >
                         <div
                           className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="-c7_w-j"
+                          data-oid="2if854k"
                         >
                           <Percent
                             className="h-4 w-4 text-white"
-                            data-oid="_3jbe40"
+                            data-oid="7_r3u5p"
                           />
                         </div>
-                        <div data-oid="qn-r84l">
+                        <div data-oid="z9xv5pl">
                           <p
                             className="font-semibold text-gray-900 text-lg"
-                            data-oid="46uij4v"
+                            data-oid="-g_zawr"
                           >
                             25% Bundle Discount
                           </p>
                           <p
                             className="text-sm text-gray-600"
-                            data-oid="--2elki"
+                            data-oid="6etfhyb"
                           >
                             Significant savings vs individual courses
                           </p>
@@ -903,27 +903,27 @@ export default function LearningPathPage() {
 
                       <div
                         className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="_wrt.bz"
+                        data-oid="_tw3li7"
                       >
                         <div
                           className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="-rbt5_d"
+                          data-oid="v73ptw4"
                         >
                           <Award
                             className="h-4 w-4 text-white"
-                            data-oid="kgww2uk"
+                            data-oid="8an56z_"
                           />
                         </div>
-                        <div data-oid="bm9c8bw">
+                        <div data-oid="xndz58g">
                           <p
                             className="font-semibold text-gray-900 text-lg"
-                            data-oid="x3traxp"
+                            data-oid="m0wuhay"
                           >
                             Completion Certificate
                           </p>
                           <p
                             className="text-sm text-gray-600"
-                            data-oid="pzi09jy"
+                            data-oid="-utj4gu"
                           >
                             Professional credential
                           </p>
@@ -932,27 +932,27 @@ export default function LearningPathPage() {
 
                       <div
                         className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="b_dbvwk"
+                        data-oid=".3vbgd_"
                       >
                         <div
                           className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="u_kyejz"
+                          data-oid="1rkuloe"
                         >
                           <Users
                             className="h-4 w-4 text-white"
-                            data-oid="ervomr-"
+                            data-oid="q.13waf"
                           />
                         </div>
-                        <div data-oid="j.rus13">
+                        <div data-oid="sh4xykc">
                           <p
                             className="font-semibold text-gray-900 text-lg"
-                            data-oid="pjh4nah"
+                            data-oid="1ql33mn"
                           >
                             Expert Support
                           </p>
                           <p
                             className="text-sm text-gray-600"
-                            data-oid="zoh4owe"
+                            data-oid="0zijsal"
                           >
                             Direct access to instructors
                           </p>
@@ -971,23 +971,23 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            data-oid="d2mt.mh"
+            data-oid="3a28es1"
           >
-            <div className="flex items-center mb-8" data-oid="qslsssd">
+            <div className="flex items-center mb-8" data-oid="h0hh__i">
               <div
                 className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
-                data-oid="ashw1jc"
+                data-oid=".c5favh"
               >
-                <BookOpen className="h-6 w-6 text-white" data-oid=".ibfnve" />
+                <BookOpen className="h-6 w-6 text-white" data-oid="-uo:v.g" />
               </div>
               <h2
                 className="text-3xl font-bold text-[#123B79]"
-                data-oid="stx4f-d"
+                data-oid="u1rrfce"
               >
                 Course Sequence
               </h2>
             </div>
-            <div className="space-y-6" data-oid="vcil840">
+            <div className="space-y-6" data-oid="n3122st">
               {pathCourses.map((course, index) => (
                 <motion.div
                   key={course.id}
@@ -996,35 +996,35 @@ export default function LearningPathPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  data-oid="h4l3ata"
+                  data-oid="jem07vb"
                 >
-                  <div className="flex flex-col md:flex-row" data-oid="1160-51">
-                    <div className="md:w-1/4 relative" data-oid="1eybeyt">
+                  <div className="flex flex-col md:flex-row" data-oid="xbgjbnp">
+                    <div className="md:w-1/4 relative" data-oid="nilomzx">
                       <div
                         className="relative h-48 md:h-full"
-                        data-oid="_m.19r8"
+                        data-oid="gx4y7_t"
                       >
                         <Image
                           src={course.image || "/placeholder.svg"}
                           alt={course.title}
                           fill
                           className="object-cover"
-                          data-oid="zi2pcks"
+                          data-oid="qr97qql"
                         />
 
                         <div
                           className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
-                          data-oid="6e19c8p"
+                          data-oid="u.wplj9"
                         ></div>
                         <div
                           className="absolute top-4 left-4 bg-gradient-to-r from-[#123B79] to-[#0A2A5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
-                          data-oid="bctv3vv"
+                          data-oid="1i-43aa"
                         >
                           {index + 1}
                         </div>
                         <div
                           className="absolute top-4 right-4"
-                          data-oid="3-fnfl5"
+                          data-oid="dgw4_te"
                         >
                           <span
                             className={`text-xs font-bold px-3 py-1 rounded-full shadow-lg ${
@@ -1032,7 +1032,7 @@ export default function LearningPathPage() {
                                 ? "bg-green-500 text-white"
                                 : "bg-white text-gray-800"
                             }`}
-                            data-oid="w4hsbvt"
+                            data-oid="m5dsaet"
                           >
                             {course.price.toLowerCase() === "free"
                               ? "FREE"
@@ -1041,34 +1041,34 @@ export default function LearningPathPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-8 md:w-3/4" data-oid="2idhtfh">
+                    <div className="p-8 md:w-3/4" data-oid="wqktcfq">
                       <h3
                         className="text-2xl font-bold text-[#123B79] mb-3"
-                        data-oid="5.gvp9c"
+                        data-oid="ayd:o1e"
                       >
                         {course.title}
                       </h3>
                       <p
                         className="text-gray-500 text-sm mb-3 font-medium"
-                        data-oid="ckp94cf"
+                        data-oid="sag106v"
                       >
                         Instructor: {course.instructor} • {course.duration}
                       </p>
                       <p
                         className="text-gray-700 mb-6 text-lg leading-relaxed"
-                        data-oid="ckfeuj3"
+                        data-oid="qsqf3gw"
                       >
                         {course.description}
                       </p>
                       <div
                         className="flex flex-wrap gap-2 mb-6"
-                        data-oid="enqg:fy"
+                        data-oid="m7vnfbx"
                       >
                         {course.categories.map((category, i) => (
                           <span
                             key={i}
                             className="text-xs font-medium px-3 py-1 bg-gradient-to-r from-[#123B79]/10 to-[#123B79]/5 text-[#123B79] rounded-full border border-[#123B79]/20"
-                            data-oid="xg0hqz0"
+                            data-oid="bw2ehe3"
                           >
                             {category}
                           </span>
@@ -1076,10 +1076,10 @@ export default function LearningPathPage() {
                       </div>
                       <div
                         className="flex items-center justify-between"
-                        data-oid="14:kt:w"
+                        data-oid="0p..u_t"
                       >
-                        <div className="flex items-center" data-oid="o6re.ts">
-                          <div className="flex mr-3" data-oid="sz197b5">
+                        <div className="flex items-center" data-oid="ei:7c:z">
+                          <div className="flex mr-3" data-oid="2abz_d:">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
@@ -1088,26 +1088,26 @@ export default function LearningPathPage() {
                                     ? "text-[#F0A500] fill-[#F0A500]"
                                     : "text-gray-300"
                                 }`}
-                                data-oid="xnskt.f"
+                                data-oid=".l8tn7s"
                               />
                             ))}
                           </div>
                           <span
                             className="text-sm text-gray-600 font-medium"
-                            data-oid="qquol2y"
+                            data-oid="3uehgmp"
                           >
                             {course.rating} ({course.reviewCount} reviews)
                           </span>
                         </div>
-                        <div className="text-right" data-oid="x_c43x-">
+                        <div className="text-right" data-oid="r4poymb">
                           <div
                             className="text-2xl font-bold text-[#123B79]"
-                            data-oid="aa7qz54"
+                            data-oid="o6lf5-u"
                           >
                             {course.price.toLowerCase() === "free" ? (
                               <span
                                 className="text-green-600"
-                                data-oid="k8ttzuh"
+                                data-oid="zq7sxvb"
                               >
                                 FREE
                               </span>
@@ -1118,7 +1118,7 @@ export default function LearningPathPage() {
                           {course.price.toLowerCase() !== "free" && (
                             <div
                               className="text-xs text-gray-500"
-                              data-oid="eiuoz6p"
+                              data-oid=".dge:5h"
                             >
                               Individual price
                             </div>
@@ -1138,26 +1138,26 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            data-oid="4nhflvx"
+            data-oid="r.:dqvz"
           >
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10" data-oid="iogui4u">
+            <div className="absolute inset-0 opacity-10" data-oid="ij8cf07">
               <div
                 className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full mix-blend-overlay filter blur-xl animate-pulse"
-                data-oid="jzviz-z"
+                data-oid="_1-r8o8"
               ></div>
               <div
                 className="absolute bottom-10 right-10 w-32 h-32 bg-[#F0A500] rounded-full mix-blend-overlay filter blur-xl animate-pulse delay-1000"
-                data-oid="ah8-fwt"
+                data-oid="zg.ij0g"
               ></div>
             </div>
 
-            <div className="relative z-10" data-oid="xce8_pc">
-              <h2 className="text-4xl font-bold mb-4" data-oid="bpotfs_">
+            <div className="relative z-10" data-oid="whi4th1">
+              <h2 className="text-4xl font-bold mb-4" data-oid="n0j4oe1">
                 Ready to Start Your
                 <span
                   className="bg-gradient-to-r from-[#F0A500] to-[#D89400] bg-clip-text text-transparent"
-                  data-oid="ul.wmej"
+                  data-oid="1g-h33u"
                 >
                   {" "}
                   Learning Journey?
@@ -1165,7 +1165,7 @@ export default function LearningPathPage() {
               </h2>
               <p
                 className="text-xl mb-8 max-w-3xl mx-auto opacity-90"
-                data-oid=".t0obyv"
+                data-oid="tb3l-2t"
               >
                 Join hundreds of successful students and save $
                 {formatPrice(pricing.savings)} with our exclusive bundle deal.
@@ -1174,29 +1174,29 @@ export default function LearningPathPage() {
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                data-oid="v2q96hp"
+                data-oid="5vv55:6"
               >
                 <Button
                   onClick={addBundleToCart}
                   className="bg-gradient-to-r from-[#F0A500] to-[#D89400] hover:from-[#D89400] hover:to-[#F0A500] text-[#123B79] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 group"
-                  data-oid="c_don9s"
+                  data-oid="cm.or.v"
                 >
                   <ShoppingCart
                     className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
-                    data-oid="mrq93nu"
+                    data-oid="v6e-527"
                   />
                   Enroll Now - Save ${formatPrice(pricing.savings)}
                 </Button>
-                <div className="text-center" data-oid="_re4_i.">
-                  <div className="text-sm opacity-80" data-oid="rhff2ml">
+                <div className="text-center" data-oid="i9.oqzz">
+                  <div className="text-sm opacity-80" data-oid="alz2cny">
                     Bundle Price
                   </div>
-                  <div className="text-2xl font-bold" data-oid="ii7m_nk">
+                  <div className="text-2xl font-bold" data-oid="6ypvdug">
                     ${formatPrice(pricing.bundlePrice)}
                   </div>
                   <div
                     className="text-sm opacity-80 line-through"
-                    data-oid="tou63yh"
+                    data-oid="-tpsslt"
                   >
                     ${formatPrice(pricing.originalPrice)}
                   </div>

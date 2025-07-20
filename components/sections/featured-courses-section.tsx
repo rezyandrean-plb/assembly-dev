@@ -65,34 +65,34 @@ export default function FeaturedCoursesSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white"
-      data-oid="6l8r5zg"
+      data-oid="9g_7e2-"
     >
-      <div className="container mx-auto px-4" data-oid="su_l8wa">
+      <div className="container mx-auto px-4" data-oid="c5bem80">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: headerOpacity, y: headerY }}
-          data-oid="g4pzu91"
+          data-oid="gow8v:q"
         >
           <h2
             className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="2vt8r6o"
+            data-oid="5obd_u-"
           >
             Nodes of Expertise
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="hl.r94m"
+            data-oid="gcok6np"
           >
             Discover specialized courses that represent key intersections within
             our knowledge network
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="1.8b9.f"
+            data-oid="set26rm"
           ></div>
         </motion.div>
 
-        <div className="space-y-24" data-oid="ngd4lsa">
+        <div className="space-y-24" data-oid="be06s9b">
           {courses.map((course, index) => (
             <motion.div
               key={index}
@@ -108,30 +108,30 @@ export default function FeaturedCoursesSection() {
                 type: "spring",
                 stiffness: 50,
               }}
-              data-oid="mmp79.d"
+              data-oid="wt_d7ca"
             >
-              <div className="md:w-1/2 order-2 md:order-1" data-oid="4dkrvnh">
+              <div className="md:w-1/2 order-2 md:order-1" data-oid=":jy4a71">
                 <div
                   className="inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4"
                   style={{
                     background: `linear-gradient(to right, ${course.primaryColor}, ${course.secondaryColor})`,
                     color: "white",
                   }}
-                  data-oid=":jingf8"
+                  data-oid="x70cq81"
                 >
                   {course.category}
                 </div>
                 <h3
                   className="text-3xl font-bold text-[#123B79] mb-4"
-                  data-oid="ygrr2a1"
+                  data-oid="1pipqvz"
                 >
                   {course.title}
                 </h3>
-                <p className="text-lg text-gray-700 mb-6" data-oid="noq6rp6">
+                <p className="text-lg text-gray-700 mb-6" data-oid="woe363p">
                   {course.description}
                 </p>
 
-                <div className="flex space-x-4 mb-6" data-oid="r30ebq0">
+                <div className="flex space-x-4 mb-6" data-oid="882ggq6">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <svg
                       key={star}
@@ -139,11 +139,11 @@ export default function FeaturedCoursesSection() {
                       className="h-6 w-6 text-[#F0A500]"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      data-oid="64.d7na"
+                      data-oid="4xx4kb0"
                     >
                       <path
                         d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        data-oid="in1ll_6"
+                        data-oid="7os:el6"
                       />
                     </svg>
                   ))}
@@ -152,24 +152,24 @@ export default function FeaturedCoursesSection() {
                 <a
                   href={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className="inline-flex items-center text-[#123B79] font-medium hover:text-[#0A2A5E] transition-colors"
-                  data-oid="u.midzg"
+                  data-oid="thcblte"
                 >
                   Explore this course
-                  <ArrowRight className="ml-2 h-4 w-4" data-oid=".s2ktub" />
+                  <ArrowRight className="ml-2 h-4 w-4" data-oid="_4wlvom" />
                 </a>
               </div>
 
-              <div className="md:w-1/2 order-1 md:order-2" data-oid="0ft0er5">
+              <div className="md:w-1/2 order-1 md:order-2" data-oid="surlpo1">
                 <div
                   className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl"
-                  data-oid="czv1ctg"
+                  data-oid="4xykn9r"
                 >
                   <Image
                     src={course.image || "/placeholder.svg"}
                     alt={course.title}
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
-                    data-oid="rz:8pr2"
+                    data-oid="-0_z1:8"
                   />
 
                   <div
@@ -177,13 +177,13 @@ export default function FeaturedCoursesSection() {
                     style={{
                       background: `linear-gradient(to right, ${course.primaryColor}20, ${course.secondaryColor}10)`,
                     }}
-                    data-oid="kv-jbk2"
+                    data-oid="bd17osm"
                   ></div>
 
                   {/* Network node visualization */}
                   <div
                     className="absolute inset-0 flex items-center justify-center pointer-events-none"
-                    data-oid="62jhcc_"
+                    data-oid="5ytg.5y"
                   >
                     <svg
                       width="200"
@@ -191,7 +191,7 @@ export default function FeaturedCoursesSection() {
                       viewBox="0 0 200 200"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      data-oid=":sp8zcm"
+                      data-oid="a7-7ykg"
                     >
                       <motion.circle
                         cx="100"
@@ -207,7 +207,7 @@ export default function FeaturedCoursesSection() {
                           scale: isInView ? 1 : 0,
                         }}
                         transition={{ duration: 1, delay: course.delay + 0.3 }}
-                        data-oid="4.lrb90"
+                        data-oid="qnx8:rz"
                       />
 
                       <motion.circle
@@ -224,7 +224,7 @@ export default function FeaturedCoursesSection() {
                           scale: isInView ? 1 : 0,
                         }}
                         transition={{ duration: 1, delay: course.delay + 0.5 }}
-                        data-oid="iumj93f"
+                        data-oid="8ym-kfo"
                       />
                     </svg>
                   </div>

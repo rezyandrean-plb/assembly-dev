@@ -25,7 +25,7 @@ export function NetworkProvider({ children }: { children: ReactNode }) {
   return (
     <NetworkContext.Provider
       value={{ networkState, setNetworkState }}
-      data-oid="9ka39sq"
+      data-oid="vowwkno"
     >
       {children}
     </NetworkContext.Provider>

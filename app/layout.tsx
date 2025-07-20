@@ -4,7 +4,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import { ConditionalHeader } from "@/components/conditional-header";
+import { ConditionalFooter } from "@/components/conditional-footer";
 import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
@@ -20,21 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-oid="m7wzi0_">
-      <body className="" data-oid="8:6h3kj">
-        <Providers data-oid="_t36pw1">
-          <ScrollToTop data-oid="n8b12dd" />
+    <html lang="en" data-oid="tq.obm3">
+      <body className="" data-oid="sn.4sk0">
+        <Providers data-oid="ve0hf5x">
+          <ScrollToTop data-oid="_u4wv8c" />
           <div
             className="relative min-h-screen flex flex-col bg-[#F5F5F5]"
-            data-oid="o31vpkp"
+            data-oid="qdk5evo"
           >
-            <Navbar data-oid="persistent-navbar" />
-            <main className="flex-grow pt-16" data-oid="5h:grkm">
+            <ConditionalHeader data-oid="1kx8_ps" />
+            <main className="flex-grow" data-oid="onua6cg">
               {children}
             </main>
-            <Footer data-oid="1.wd-wf" />
+            <ConditionalFooter data-oid="1pogakd" />
           </div>
-          <Toaster position="top-center" data-oid="gi:d9v6" />
+          <Toaster position="top-center" data-oid="xo-4sml" />
         </Providers>
       </body>
     </html>

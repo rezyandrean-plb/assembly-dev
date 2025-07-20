@@ -8,11 +8,11 @@ import { ErrorBoundary } from "@/components/error-boundary";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ErrorBoundary data-oid="l5qemdb">
-      <SessionProvider data-oid="h02cehh">
-        <AuthProvider data-oid="ui1bagi">
-          <CartProvider data-oid="mm3sitp">
-            <NetworkProvider data-oid="koh.7sr">{children}</NetworkProvider>
+    <ErrorBoundary data-oid="2uktncx">
+      <SessionProvider data-oid="hp_do-r">
+        <AuthProvider data-oid="cj_wnhf">
+          <CartProvider data-oid="pkozznv">
+            <NetworkProvider data-oid="xvzn:nw">{children}</NetworkProvider>
           </CartProvider>
         </AuthProvider>
       </SessionProvider>

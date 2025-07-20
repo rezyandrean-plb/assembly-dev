@@ -23,8 +23,8 @@ function ScrollToTopContent() {
 
 export default function ScrollToTop() {
   return (
-    <Suspense fallback={null} data-oid="g4w9yjn">
-      <ScrollToTopContent data-oid="z_vpx_2" />
+    <Suspense fallback={null} data-oid="nz5y25j">
+      <ScrollToTopContent data-oid="9-kh7lk" />
     </Suspense>
   );
 }

@@ -116,7 +116,7 @@ export default function ParticleBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 -z-10"
-      data-oid="15ln4x."
+      data-oid="yeu717a"
     />
   );
 }

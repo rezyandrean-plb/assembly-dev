@@ -67,7 +67,7 @@ export default function NewStatsSection() {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8" data-oid="ex0bezh" />,
+      icon: <Users className="w-8 h-8" data-oid="3qkr7qp" />,
       value: Math.floor(counters.students).toLocaleString(),
       suffix: "+",
       label: "Active Students",
@@ -75,7 +75,7 @@ export default function NewStatsSection() {
       color: "bg-primary-light",
     },
     {
-      icon: <BookOpen className="w-8 h-8" data-oid="pia2:mr" />,
+      icon: <BookOpen className="w-8 h-8" data-oid="he8fp5l" />,
       value: Math.floor(counters.courses),
       suffix: "+",
       label: "Expert Courses",
@@ -83,7 +83,7 @@ export default function NewStatsSection() {
       color: "bg-success",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" data-oid="9-qnlxi" />,
+      icon: <TrendingUp className="w-8 h-8" data-oid="xqs7m_z" />,
       value: Math.floor(counters.success),
       suffix: "%",
       label: "Success Rate",
@@ -91,7 +91,7 @@ export default function NewStatsSection() {
       color: "bg-secondary",
     },
     {
-      icon: <DollarSign className="w-8 h-8" data-oid="4xbx1nk" />,
+      icon: <DollarSign className="w-8 h-8" data-oid="y_0wg1o" />,
       value: counters.portfolio.toFixed(1),
       suffix: "B+",
       label: "Portfolio Value",
@@ -99,7 +99,7 @@ export default function NewStatsSection() {
       color: "bg-accent",
     },
     {
-      icon: <Globe className="w-8 h-8" data-oid="g6fil1-" />,
+      icon: <Globe className="w-8 h-8" data-oid="qg3utey" />,
       value: Math.floor(counters.countries),
       suffix: "+",
       label: "Countries",
@@ -107,7 +107,7 @@ export default function NewStatsSection() {
       color: "bg-primary-darker",
     },
     {
-      icon: <Award className="w-8 h-8" data-oid="l-3xgr8" />,
+      icon: <Award className="w-8 h-8" data-oid="we4j489" />,
       value: counters.satisfaction.toFixed(1),
       suffix: "/5",
       label: "Satisfaction",
@@ -120,23 +120,23 @@ export default function NewStatsSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-primary text-white relative overflow-hidden"
-      data-oid="g7qdsvq"
+      data-oid="eqmqqji"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10" data-oid="2oi.1..">
+      <div className="absolute inset-0 opacity-10" data-oid="vb.tzsp">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
-          data-oid="o:bsgjc"
+          data-oid="2k_w1rk"
         />
       </div>
 
       {/* Floating Elements */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
-        data-oid="avia6nr"
+        data-oid="3w.qtbj"
       >
         <motion.div
           className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"
@@ -149,7 +149,7 @@ export default function NewStatsSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="aq:3re-"
+          data-oid="j3jowy2"
         />
 
         <motion.div
@@ -163,28 +163,28 @@ export default function NewStatsSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="z3kosz0"
+          data-oid="33t8ykj"
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="_agbjkv">
+      <div className="container mx-auto px-4 relative z-10" data-oid="xr_peui">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="r4p75qh"
+          data-oid="i_ms8_9"
         >
           <h2
             className="text-4xl lg:text-5xl font-bold mb-6 text-white"
-            data-oid="li:z3ic"
+            data-oid="xr.ydcp"
           >
             Our Impact in Numbers
           </h2>
           <p
             className="text-xl text-white/80 max-w-3xl mx-auto"
-            data-oid="6_d:8gl"
+            data-oid="p3wdghz"
           >
             Join a thriving community of successful real estate investors from
             around the world
@@ -194,7 +194,7 @@ export default function NewStatsSection() {
         {/* Stats Grid */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          data-oid=":0fbk_m"
+          data-oid=":ekwv2x"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -204,25 +204,25 @@ export default function NewStatsSection() {
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              data-oid="39.d77a"
+              data-oid="jfusj.q"
             >
               <div
                 className={`inline-flex p-4 rounded-2xl ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
-                data-oid="nl0_ak_"
+                data-oid="d54681x"
               >
-                <div className="text-white" data-oid="bv_7298">
+                <div className="text-white" data-oid="topcpui">
                   {stat.icon}
                 </div>
               </div>
 
               <div
                 className="text-4xl lg:text-5xl font-bold mb-2"
-                data-oid="scu40ib"
+                data-oid="rk4v2f4"
               >
                 {stat.value}
                 <span
                   className="text-2xl lg:text-3xl text-white/60"
-                  data-oid="xe02d60"
+                  data-oid="2ehcbvd"
                 >
                   {stat.suffix}
                 </span>
@@ -230,19 +230,19 @@ export default function NewStatsSection() {
 
               <h3
                 className="text-xl font-semibold mb-2 text-white"
-                data-oid="om1hfd4"
+                data-oid="zy57kk3"
               >
                 {stat.label}
               </h3>
 
-              <p className="text-white/70" data-oid="i7jml61">
+              <p className="text-white/70" data-oid="r2r5gfz">
                 {stat.description}
               </p>
 
               {/* Hover Effect */}
               <div
                 className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="pzdf9ff"
+                data-oid="s5gw06b"
               />
             </motion.div>
           ))}
@@ -254,16 +254,16 @@ export default function NewStatsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          data-oid="3y1fdfw"
+          data-oid="5-ker:-"
         >
           <div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto"
-            data-oid="fpn519m"
+            data-oid="8r3i4np"
           >
-            <h3 className="text-2xl font-bold mb-4" data-oid="obg1mq-">
+            <h3 className="text-2xl font-bold mb-4" data-oid="54ky.-c">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-white/80 mb-6" data-oid=".:x9u:k">
+            <p className="text-white/80 mb-6" data-oid="185-i8s">
               Start your real estate investment journey today and become part of
               our growing community.
             </p>
@@ -271,7 +271,7 @@ export default function NewStatsSection() {
               className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="tpcuof."
+              data-oid="7ro1qq8"
             >
               Start Learning Today
             </motion.button>

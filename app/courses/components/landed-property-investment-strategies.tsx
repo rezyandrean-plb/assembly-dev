@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/landed-property-investment-strategies";
 
 export default function LandedPropertyInvestmentStrategies() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="60nf4ft" />;
+  return <CourseDetailTemplate courseData={courseData} data-oid="wzy6c:i" />;
 }

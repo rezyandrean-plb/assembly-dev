@@ -8,10 +8,10 @@ export default function PropertyStrategiesIn2025AmidRateCuts() {
     ...courseData,
     description: (
       <>
-        <p className="font-bold mb-4" data-oid="pt97xxm">
+        <p className="font-bold mb-4" data-oid="m.t5eyx">
           2025 Is Coming—Is Your Property Strategy Ready?
         </p>
-        <p data-oid="br71l4t">
+        <p data-oid="g5zjh42">
           The property market is shifting—interest rates are falling, trends are
           evolving, and opportunities are opening up. But here's the challenge:
           without a clear plan, navigating these changes can feel overwhelming.
@@ -22,6 +22,6 @@ export default function PropertyStrategiesIn2025AmidRateCuts() {
     ),
   };
   return (
-    <CourseDetailTemplate courseData={updatedCourseData} data-oid="uughu.:" />
+    <CourseDetailTemplate courseData={updatedCourseData} data-oid="rj_j4y_" />
   );
 }

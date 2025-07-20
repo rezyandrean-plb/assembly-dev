@@ -14,59 +14,59 @@ export function FacilitatorBio({ facilitator }: FacilitatorBioProps) {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white" data-oid="c-k52o8">
-      <div className="container mx-auto px-4" data-oid="lg21s38">
-        <div className="max-w-4xl mx-auto" data-oid="e_94yu8">
+    <section ref={sectionRef} className="py-24 bg-white" data-oid="gx1iqj8">
+      <div className="container mx-auto px-4" data-oid="xrbte34">
+        <div className="max-w-4xl mx-auto" data-oid="24d90et">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            data-oid="z-c86_w"
+            data-oid="pbf0xlq"
           >
             <h2
               className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-              data-oid="m5mcpxl"
+              data-oid="j7qb:nq"
             >
               About {facilitator.name}
             </h2>
             <div
               className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto rounded-full"
-              data-oid="0a6ml6o"
+              data-oid="ltj6kg0"
             />
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-12" data-oid="1v.0p15">
+          <div className="grid lg:grid-cols-3 gap-12" data-oid="e9n286x">
             {/* Main Bio */}
             <motion.div
               className="lg:col-span-2"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              data-oid="57-0pgd"
+              data-oid="c6b6u.a"
             >
-              <div className="prose prose-lg max-w-none" data-oid="yqqle-p">
+              <div className="prose prose-lg max-w-none" data-oid="m9le.4v">
                 <p
                   className="text-gray-700 leading-relaxed text-lg mb-6"
-                  data-oid="9lnv9su"
+                  data-oid="v7pp9k3"
                 >
                   {facilitator.longBio}
                 </p>
 
                 <div
                   className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8"
-                  data-oid="r39kno2"
+                  data-oid=":4vml5:"
                 >
-                  <div className="flex items-start gap-4" data-oid="nc_3xyw">
+                  <div className="flex items-start gap-4" data-oid="x8ftapy">
                     <Quote
                       className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1"
-                      data-oid="a0:w6gb"
+                      data-oid="1p4g57x"
                     />
 
-                    <div data-oid="fbtpa4p">
+                    <div data-oid="8r48gg8">
                       <p
                         className="text-gray-700 italic mb-2"
-                        data-oid="47zpvas"
+                        data-oid="k0_cfzb"
                       >
                         "My goal is not just to teach property investment
                         strategies, but to empower individuals with the
@@ -75,7 +75,7 @@ export function FacilitatorBio({ facilitator }: FacilitatorBioProps) {
                       </p>
                       <p
                         className="text-sm text-gray-600 font-medium"
-                        data-oid="xem-hl-"
+                        data-oid="nhh27lm"
                       >
                         - {facilitator.name}
                       </p>
@@ -91,53 +91,53 @@ export function FacilitatorBio({ facilitator }: FacilitatorBioProps) {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 30 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              data-oid="r3npbxt"
+              data-oid="mec4h.t"
             >
               <div
                 className="bg-gray-50 rounded-2xl p-6 sticky top-8"
-                data-oid="v-aguh5"
+                data-oid="yw7krxu"
               >
                 <h3
                   className="text-xl font-bold text-gray-900 mb-6"
-                  data-oid="xoydafm"
+                  data-oid="48e-tl6"
                 >
                   Quick Facts
                 </h3>
 
-                <div className="space-y-4" data-oid="8omczr9">
-                  <div className="flex items-start gap-3" data-oid="rung2dz">
+                <div className="space-y-4" data-oid="5u9jim6">
+                  <div className="flex items-start gap-3" data-oid="5hhtq_5">
                     <Target
                       className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"
-                      data-oid="uv4n9qw"
+                      data-oid="vq1egaj"
                     />
 
-                    <div data-oid="lpk3iug">
+                    <div data-oid="of8lvls">
                       <div
                         className="font-semibold text-gray-900 mb-1"
-                        data-oid="lqsv.wv"
+                        data-oid=":wtf:80"
                       >
                         Specialty
                       </div>
-                      <div className="text-gray-600" data-oid="az:4k-n">
+                      <div className="text-gray-600" data-oid="lyki9e3">
                         {facilitator.specialty}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3" data-oid="9g8ln:a">
+                  <div className="flex items-start gap-3" data-oid="e5xl3r-">
                     <TrendingUp
                       className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"
-                      data-oid="aw.ddvz"
+                      data-oid="0noq8wb"
                     />
 
-                    <div data-oid=":8_l6di">
+                    <div data-oid="nif.x:f">
                       <div
                         className="font-semibold text-gray-900 mb-1"
-                        data-oid="l4szn1."
+                        data-oid="sk2ctsz"
                       >
                         Experience
                       </div>
-                      <div className="text-gray-600" data-oid="4ix1cd-">
+                      <div className="text-gray-600" data-oid="83pjrz_">
                         {facilitator.experience}
                       </div>
                     </div>
@@ -147,17 +147,17 @@ export function FacilitatorBio({ facilitator }: FacilitatorBioProps) {
                 {/* Teaching Philosophy */}
                 <div
                   className="mt-8 pt-6 border-t border-gray-200"
-                  data-oid="9a-1hja"
+                  data-oid="ielhqua"
                 >
                   <h4
                     className="font-semibold text-gray-900 mb-3"
-                    data-oid="xpbtiov"
+                    data-oid="d9fl6_k"
                   >
                     Teaching Philosophy
                   </h4>
                   <p
                     className="text-sm text-gray-600 leading-relaxed"
-                    data-oid="k3baauy"
+                    data-oid="vjl2ew:"
                   >
                     Believes in practical, hands-on learning combined with solid
                     theoretical foundations. Focuses on real-world applications

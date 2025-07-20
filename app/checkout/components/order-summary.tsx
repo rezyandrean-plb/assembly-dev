@@ -46,27 +46,27 @@ export default function OrderSummary() {
   return (
     <div
       className="bg-white rounded-2xl shadow-lg overflow-hidden"
-      data-oid="2.ab21s"
+      data-oid="84n94v5"
     >
       {/* Header */}
-      <div className="bg-[#2B4C8C] text-white p-6" data-oid="0pp:6f:">
-        <h2 className="text-xl font-bold" data-oid="5qr7lha">
+      <div className="bg-[#2B4C8C] text-white p-6" data-oid="t1xmv9l">
+        <h2 className="text-xl font-bold" data-oid="nnoqmx6">
           Order Summary
         </h2>
-        <p className="text-blue-100 text-sm mt-1" data-oid="oxqdqzs">
+        <p className="text-blue-100 text-sm mt-1" data-oid="qi-kabx">
           Ready to start learning
         </p>
       </div>
 
       {/* Order Details */}
-      <div className="p-6" data-oid="69fs.:9">
-        <div className="space-y-4" data-oid="9y1h1ng">
+      <div className="p-6" data-oid="qadgo.s">
+        <div className="space-y-4" data-oid="1.g5q3v">
           <div
             className="flex justify-between text-gray-700"
-            data-oid="6mwcm08"
+            data-oid="x5:9n5y"
           >
-            <span data-oid="4k_4b_a">Subtotal</span>
-            <span className="font-semibold" data-oid=":q84gih">
+            <span data-oid="9wuzqpj">Subtotal</span>
+            <span className="font-semibold" data-oid=":37.ru8">
               {formatPrice(subtotal)}
             </span>
           </div>
@@ -74,10 +74,10 @@ export default function OrderSummary() {
           {discount > 0 && (
             <div
               className="flex justify-between text-green-600"
-              data-oid="m:9-yq0"
+              data-oid="_:fgfh8"
             >
-              <span data-oid="g._8ii1">Discount</span>
-              <span className="font-semibold" data-oid=":qxwswj">
+              <span data-oid="cynj22c">Discount</span>
+              <span className="font-semibold" data-oid="71.1uhh">
                 -{formatPrice(discount)}
               </span>
             </div>
@@ -85,38 +85,38 @@ export default function OrderSummary() {
 
           <div
             className="flex justify-between text-gray-700"
-            data-oid="9rx56ix"
+            data-oid="c7owp2l"
           >
-            <span data-oid="vbl2c:i">Shipping</span>
-            <span className="font-semibold" data-oid="l3jcnrw">
+            <span data-oid="5l2xwoy">Shipping</span>
+            <span className="font-semibold" data-oid="1k7ssct">
               {finalShippingCost > 0 ? formatPrice(finalShippingCost) : "Free"}
             </span>
           </div>
 
           <div
             className="flex justify-between text-gray-700"
-            data-oid="dvhv-3z"
+            data-oid="ummgw1v"
           >
-            <span data-oid="1tk.eqc">GST (included)</span>
-            <span className="font-semibold" data-oid="9xg7ne1">
+            <span data-oid="3x4vvv8">GST (included)</span>
+            <span className="font-semibold" data-oid="eioin9j">
               {formatPrice(gst)}
             </span>
           </div>
 
-          <div className="border-t border-gray-200 pt-4" data-oid="oqjaesh">
+          <div className="border-t border-gray-200 pt-4" data-oid="15c239s">
             <div
               className="flex justify-between items-center"
-              data-oid="ft.lecj"
+              data-oid="8vd:qj4"
             >
               <span
                 className="text-lg font-bold text-gray-900"
-                data-oid="02ha82a"
+                data-oid="zjv34o9"
               >
                 Total
               </span>
               <span
                 className="text-2xl font-bold text-[#2B4C8C]"
-                data-oid="o5044f4"
+                data-oid="eqs-nts"
               >
                 {formatPrice(orderTotal)}
               </span>
@@ -125,22 +125,22 @@ export default function OrderSummary() {
         </div>
 
         {/* Security Features */}
-        <div className="mt-6 pt-6 border-t border-gray-100" data-oid="o63judm">
-          <div className="flex items-center gap-2 mb-4" data-oid="mtj5xda">
-            <Shield className="w-5 h-5 text-green-600" data-oid="_3l2tk5" />
-            <span className="font-semibold text-gray-900" data-oid="ppekiqp">
+        <div className="mt-6 pt-6 border-t border-gray-100" data-oid=".3_kb_q">
+          <div className="flex items-center gap-2 mb-4" data-oid="7cz07c2">
+            <Shield className="w-5 h-5 text-green-600" data-oid="q1w-0jg" />
+            <span className="font-semibold text-gray-900" data-oid="ztlew_i">
               Secure Checkout
             </span>
           </div>
 
-          <div className="space-y-2 text-sm text-gray-600" data-oid="pml3ujq">
-            <div className="flex items-center gap-2" data-oid="4uaz2:h">
-              <Check className="w-4 h-4 text-green-600" data-oid="1n20gua" />
-              <span data-oid="pv89czv">Lifetime access to courses</span>
+          <div className="space-y-2 text-sm text-gray-600" data-oid="2xedata">
+            <div className="flex items-center gap-2" data-oid="3pvdjz5">
+              <Check className="w-4 h-4 text-green-600" data-oid="9yck8cs" />
+              <span data-oid="eepkrk9">Lifetime access to courses</span>
             </div>
-            <div className="flex items-center gap-2" data-oid="8_oh_91">
-              <Check className="w-4 h-4 text-green-600" data-oid="p0lw3i3" />
-              <span data-oid="aabaw6p">SSL encrypted payment</span>
+            <div className="flex items-center gap-2" data-oid="xccitjl">
+              <Check className="w-4 h-4 text-green-600" data-oid=".26l83-" />
+              <span data-oid="uveo-xs">SSL encrypted payment</span>
             </div>
           </div>
         </div>

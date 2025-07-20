@@ -29,42 +29,42 @@ export default function BenefitsSection() {
 
   const benefits = [
     {
-      icon: <BookOpen className="h-6 w-6 text-[#123B79]" data-oid="uqojvi9" />,
+      icon: <BookOpen className="h-6 w-6 text-[#123B79]" data-oid="j633s17" />,
       title: "Enhanced Knowledge",
       description:
         "Gain deep insights into Singapore's property market dynamics and trends",
       delay: 0.2,
     },
     {
-      icon: <Compass className="h-6 w-6 text-[#123B79]" data-oid="6_k:jh5" />,
+      icon: <Compass className="h-6 w-6 text-[#123B79]" data-oid="xyr4zhu" />,
       title: "Strategic Navigation",
       description:
         "Learn to navigate complex regulations and market conditions with confidence",
       delay: 0.3,
     },
     {
-      icon: <BarChart2 className="h-6 w-6 text-[#123B79]" data-oid=".n-j_4s" />,
+      icon: <BarChart2 className="h-6 w-6 text-[#123B79]" data-oid="n33h99_" />,
       title: "Career Growth",
       description:
         "Develop skills that can accelerate your professional advancement",
       delay: 0.4,
     },
     {
-      icon: <Shield className="h-6 w-6 text-[#123B79]" data-oid="82_j7g:" />,
+      icon: <Shield className="h-6 w-6 text-[#123B79]" data-oid="71q6kmo" />,
       title: "Risk Mitigation",
       description:
         "Identify potential pitfalls and develop strategies to protect investments",
       delay: 0.5,
     },
     {
-      icon: <Zap className="h-6 w-6 text-[#123B79]" data-oid="9n:rz4." />,
+      icon: <Zap className="h-6 w-6 text-[#123B79]" data-oid="misadu9" />,
       title: "Competitive Edge",
       description:
         "Stay ahead with exclusive insights and early access to market information",
       delay: 0.6,
     },
     {
-      icon: <Award className="h-6 w-6 text-[#123B79]" data-oid="z0sc.jm" />,
+      icon: <Award className="h-6 w-6 text-[#123B79]" data-oid="jrffiqz" />,
       title: "Industry Recognition",
       description:
         "Build your reputation as a knowledgeable professional in the field",
@@ -76,36 +76,36 @@ export default function BenefitsSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-[#F5F5F5]"
-      data-oid="y5bb9i0"
+      data-oid="qls76hi"
     >
-      <div className="container mx-auto px-4" data-oid="z7fr__u">
+      <div className="container mx-auto px-4" data-oid=".t:5b-y">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: headerOpacity, y: headerY }}
-          data-oid="jlppekr"
+          data-oid="m05k3oa"
         >
           <h2
             className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="tnq8f43"
+            data-oid=".1ec4sz"
           >
             The Connected Ecosystem
           </h2>
           <p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="9o.jucp"
+            data-oid=".rqaf_-"
           >
             Experience the power of being part of an interconnected network of
             knowledge and opportunity
           </p>
           <div
             className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="vifez0i"
+            data-oid="w:q3jve"
           ></div>
         </motion.div>
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
-          data-oid="dcl1.c1"
+          data-oid="-ldal46"
         >
           {benefits.map((benefit, index) => (
             <motion.div
@@ -122,22 +122,22 @@ export default function BenefitsSection() {
                 type: "spring",
                 stiffness: 50,
               }}
-              data-oid="nuvo:4:"
+              data-oid="4f6xj.x"
             >
               <div
                 className="mr-4 p-3 bg-[#F0A500]/10 rounded-full"
-                data-oid="tirkudw"
+                data-oid="72d.lgu"
               >
                 {benefit.icon}
               </div>
-              <div data-oid="inpy1qu">
+              <div data-oid="euq0rr_">
                 <h3
                   className="text-xl font-bold text-[#123B79] mb-2"
-                  data-oid="s0:3rr6"
+                  data-oid="nkk.v7z"
                 >
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600" data-oid="rm-j:d3">
+                <p className="text-gray-600" data-oid="etoda1q">
                   {benefit.description}
                 </p>
               </div>
@@ -149,14 +149,14 @@ export default function BenefitsSection() {
       {/* Network visualization */}
       <div
         className="absolute inset-0 pointer-events-none overflow-hidden"
-        data-oid="06ru3gv"
+        data-oid="5p1pyjt"
       >
         <svg
           className="w-full h-full opacity-10"
           viewBox="0 0 1000 600"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          data-oid="7:n6tdb"
+          data-oid="v04jzof"
         >
           {/* Background network pattern */}
           {[...Array(10)].map((_, i) => (
@@ -172,7 +172,7 @@ export default function BenefitsSection() {
                 opacity: isInView ? 0.3 : 0,
               }}
               transition={{ duration: 2, delay: 0.1 * i }}
-              data-oid="eo5w8p4"
+              data-oid="bjz.80f"
             />
           ))}
         </svg>

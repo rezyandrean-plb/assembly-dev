@@ -157,7 +157,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="zzep2sp"
+            data-oid="lundjhz"
           />
 
           <line
@@ -167,7 +167,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="a36.sva"
+            data-oid="kaoafve"
           />
 
           <line
@@ -177,7 +177,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="x7p6d8k"
+            data-oid="7rgrrm."
           />
 
           <line
@@ -187,7 +187,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="dm3i-.m"
+            data-oid=":7lpll5"
           />
         </>
       );
@@ -201,7 +201,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2 - 5}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="zp3iw.b"
+            data-oid="-0paeyj"
           />
 
           <line
@@ -211,7 +211,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="x86pln0"
+            data-oid="cqo21-1"
           />
 
           <line
@@ -221,7 +221,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="xclpuy8"
+            data-oid="pw97zmr"
           />
 
           <line
@@ -231,7 +231,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2 - 5}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="k7rw-if"
+            data-oid="mw:m1_."
           />
         </>
       );
@@ -245,7 +245,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="wfsnx_g"
+            data-oid="88715_x"
           />
 
           <line
@@ -255,7 +255,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="3gsi61g"
+            data-oid=".975nk_"
           />
 
           <line
@@ -265,7 +265,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="8kcze3r"
+            data-oid="5xibm_0"
           />
 
           <line
@@ -275,7 +275,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="ebivhqg"
+            data-oid="quvyikg"
           />
         </>
       );
@@ -289,7 +289,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2 - 5}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="0zgbw4."
+            data-oid="ztvh08."
           />
 
           <line
@@ -299,7 +299,7 @@ export default function ResetPasswordContent() {
             y2={frontLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="qkq1ae7"
+            data-oid="7kds94l"
           />
 
           <line
@@ -309,7 +309,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="eb0ancd"
+            data-oid="5kegy9f"
           />
 
           <line
@@ -319,7 +319,7 @@ export default function ResetPasswordContent() {
             y2={backLegY2 - 5}
             stroke="black"
             strokeWidth="2.5"
-            data-oid="5e_ngth"
+            data-oid="yuayzyk"
           />
         </>
       );
@@ -327,77 +327,77 @@ export default function ResetPasswordContent() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col" data-oid="wh_9-pg">
+    <div className="relative min-h-screen flex flex-col" data-oid="j8k_f18">
       <NetworkBackground
         scrollY={0}
         scrollSpeed={0}
         windowHeight={0}
         opacity={0.3}
-        data-oid=".c3jfi0"
+        data-oid="ndrdqaq"
       />
 
-      <section className="pt-32 pb-16 flex-1 relative z-10" data-oid="2p:256r">
+      <section className="pt-32 pb-16 flex-1 relative z-10" data-oid="gg7.o.e">
         <div
           className="container mx-auto px-4 relative z-10"
-          data-oid="8loh871"
+          data-oid="i7ytz41"
         >
           <div
             className="max-w-md mx-auto bg-white/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-gray-200 p-6"
-            data-oid="klypi1e"
+            data-oid="io99uzr"
           >
-            <div className="mb-6" data-oid="r.i-ld0">
+            <div className="mb-6" data-oid="-zi-kg3">
               <button
                 onClick={() => router.push("/login")}
                 className="inline-flex items-center text-[#123B79] hover:underline"
-                data-oid="h:ah.36"
+                data-oid="yhi2e0."
               >
-                <ArrowLeft className="h-4 w-4 mr-2" data-oid="s0ktunh" />
+                <ArrowLeft className="h-4 w-4 mr-2" data-oid="e_af8rs" />
                 Back to Login
               </button>
             </div>
 
-            <div className="text-center mb-6" data-oid=":73txvc">
+            <div className="text-center mb-6" data-oid="yxk_gin">
               <h1
                 className="text-2xl font-bold text-[#123B79]"
-                data-oid="zmeuutk"
+                data-oid="qlr4mk8"
               >
                 Reset Password
               </h1>
               {!isSubmitted && tokenValid && (
-                <p className="text-gray-600 mt-2" data-oid=".:-3bap">
+                <p className="text-gray-600 mt-2" data-oid="cf763_z">
                   Please enter your new password below.
                 </p>
               )}
             </div>
 
             {!tokenChecked ? (
-              <div className="flex justify-center py-8" data-oid="uxg3ulr">
+              <div className="flex justify-center py-8" data-oid="jr7m5en">
                 <div
                   className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#123B79]"
-                  data-oid="1q_ln77"
+                  data-oid="a.b_lji"
                 ></div>
               </div>
             ) : !tokenValid ? (
-              <div className="text-center py-6" data-oid="660z1dk">
+              <div className="text-center py-6" data-oid="6uhnc8s">
                 <div
                   className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4"
-                  data-oid="m7jme8w"
+                  data-oid="ri-0agb"
                 >
-                  <AlertCircle className="h-8 w-8" data-oid="f9sfp79" />
+                  <AlertCircle className="h-8 w-8" data-oid="dlxx1p2" />
                 </div>
                 <h2
                   className="text-xl font-semibold text-gray-800 mb-2"
-                  data-oid="2nm3l96"
+                  data-oid="uxzui.v"
                 >
                   Invalid Reset Link
                 </h2>
-                <p className="text-gray-600 mb-6" data-oid="bh2z.5p">
+                <p className="text-gray-600 mb-6" data-oid="5g4_c9s">
                   {error}
                 </p>
                 <Button
                   onClick={() => router.push("/forgot-password")}
                   className="bg-[#123B79] hover:bg-[#0A2A5E]"
-                  data-oid="a169asn"
+                  data-oid="0us4jw:"
                 >
                   Request New Reset Link
                 </Button>
@@ -406,13 +406,13 @@ export default function ResetPasswordContent() {
               <form
                 onSubmit={handleSubmit}
                 className="space-y-4"
-                data-oid="up3ma7s"
+                data-oid="g_ro..p"
               >
                 {/* Cat animation */}
-                <div className="flex justify-center mb-6" data-oid="k6p9ti9">
+                <div className="flex justify-center mb-6" data-oid="hp5uxkp">
                   <div
                     className="relative h-24 flex items-center justify-center"
-                    data-oid="zkk5ll6"
+                    data-oid="btykbh:"
                   >
                     <svg
                       width={catWidth}
@@ -420,11 +420,11 @@ export default function ResetPasswordContent() {
                       viewBox={`0 0 ${catWidth} 80`}
                       preserveAspectRatio="xMidYMid meet"
                       className="transition-all duration-300 ease-in-out"
-                      data-oid=".cn-qp8"
+                      data-oid="7-zewdf"
                     >
                       <g
                         transform="translate(0,10) scale(1,0.8)"
-                        data-oid="css19i:"
+                        data-oid="7a:.4a8"
                       >
                         {/* Cat body - scales with password length */}
                         <path
@@ -432,7 +432,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="3"
                           fill="white"
-                          data-oid="7m1sd:3"
+                          data-oid="g6h9-2b"
                         />
                         {/* Cat head - fixed at left */}
                         <circle
@@ -442,7 +442,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="3"
                           fill="white"
-                          data-oid="jza.8-6"
+                          data-oid="ysjuo5p"
                         />
                         {/* Cat face */}
                         <circle
@@ -450,7 +450,7 @@ export default function ResetPasswordContent() {
                           cy="30"
                           r="2"
                           fill="black"
-                          data-oid="_zgomyl"
+                          data-oid="y3i_1-w"
                         />{" "}
                         {/* Left eye */}
                         <circle
@@ -458,14 +458,14 @@ export default function ResetPasswordContent() {
                           cy="30"
                           r="2"
                           fill="black"
-                          data-oid="w6rfq16"
+                          data-oid="h1vyshu"
                         />{" "}
                         {/* Right eye */}
                         <path
                           d="M30,35 L30,40"
                           stroke="black"
                           strokeWidth="1.5"
-                          data-oid="nj6a3yz"
+                          data-oid="nh9ys_f"
                         />{" "}
                         {/* Nose */}
                         <path
@@ -473,7 +473,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="1.5"
                           fill="none"
-                          data-oid="il8gs7_"
+                          data-oid="pyu2nst"
                         />{" "}
                         {/* Mouth left */}
                         <path
@@ -481,7 +481,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="1.5"
                           fill="none"
-                          data-oid="dzfaoff"
+                          data-oid="lv-0ayh"
                         />{" "}
                         {/* Mouth right */}
                         {/* Cat ears */}
@@ -490,7 +490,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="1.5"
                           fill="white"
-                          data-oid=".kn46-i"
+                          data-oid="tpjl-_a"
                         />{" "}
                         {/* Left ear */}
                         <path
@@ -498,7 +498,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="1.5"
                           fill="white"
-                          data-oid="icloe-s"
+                          data-oid=".44g_2z"
                         />{" "}
                         {/* Right ear */}
                         {/* Cat tail - animated */}
@@ -507,7 +507,7 @@ export default function ResetPasswordContent() {
                           stroke="black"
                           strokeWidth="2.5"
                           fill="none"
-                          data-oid="c29fvj1"
+                          data-oid="v17bnb-"
                         />
                         {/* Cat legs - animated */}
                         {renderCatLegs()}
@@ -516,42 +516,42 @@ export default function ResetPasswordContent() {
                           d="M20,38 L10,35"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="7ayqz3n"
+                          data-oid="qgj_rwp"
                         />{" "}
                         {/* Left whisker top */}
                         <path
                           d="M20,40 L8,40"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="ndwlhoe"
+                          data-oid="a_s8d5l"
                         />{" "}
                         {/* Left whisker middle */}
                         <path
                           d="M20,42 L10,45"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="d-2lw8x"
+                          data-oid="qlnazdm"
                         />{" "}
                         {/* Left whisker bottom */}
                         <path
                           d="M40,38 L50,35"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="1vbihsb"
+                          data-oid="jl_7sq7"
                         />{" "}
                         {/* Right whisker top */}
                         <path
                           d="M40,40 L52,40"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="h:v7.ee"
+                          data-oid="fzcu31o"
                         />{" "}
                         {/* Right whisker middle */}
                         <path
                           d="M40,42 L50,45"
                           stroke="black"
                           strokeWidth="1"
-                          data-oid="tmtd.dd"
+                          data-oid="h:uup_i"
                         />{" "}
                         {/* Right whisker bottom */}
                       </g>
@@ -559,15 +559,15 @@ export default function ResetPasswordContent() {
                   </div>
                 </div>
 
-                <div data-oid="bm27_6d">
+                <div data-oid="fiqvmgy">
                   <label
                     htmlFor="password"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="oep3af6"
+                    data-oid="zio.kk4"
                   >
                     New Password
                   </label>
-                  <div className="relative" data-oid="the5t1.">
+                  <div className="relative" data-oid="q8p..:f">
                     <input
                       type={showPassword ? "text" : "password"}
                       id="password"
@@ -577,7 +577,7 @@ export default function ResetPasswordContent() {
                       placeholder="Enter new password"
                       required
                       minLength={8}
-                      data-oid="wn0_q1."
+                      data-oid="_hoii32"
                     />
 
                     <button
@@ -587,32 +587,32 @@ export default function ResetPasswordContent() {
                       aria-label={
                         showPassword ? "Hide password" : "Show password"
                       }
-                      data-oid="zi-h8ze"
+                      data-oid="k5-0-tc"
                     >
                       {showPassword ? (
-                        <EyeOff size={20} data-oid="rffvopb" />
+                        <EyeOff size={20} data-oid="o.u2gm2" />
                       ) : (
-                        <Eye size={20} data-oid="niu4c66" />
+                        <Eye size={20} data-oid=":botibt" />
                       )}
                     </button>
                   </div>
                   <p
                     className={`mt-2 text-sm ${getMessageColor()}`}
-                    data-oid="3chw0cu"
+                    data-oid="-g9vc8n"
                   >
                     {getPasswordMessage()}
                   </p>
                 </div>
 
-                <div data-oid="9hdhbs-">
+                <div data-oid="7aths1y">
                   <label
                     htmlFor="confirmPassword"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="iu75gvb"
+                    data-oid="5.v:jri"
                   >
                     Confirm Password
                   </label>
-                  <div className="relative" data-oid="sx1i.nb">
+                  <div className="relative" data-oid="mr38i72">
                     <input
                       type={showConfirmPassword ? "text" : "password"}
                       id="confirmPassword"
@@ -625,7 +625,7 @@ export default function ResetPasswordContent() {
                       } rounded-full focus:outline-none focus:ring-2 focus:ring-[#123B79] focus:border-transparent`}
                       placeholder="Confirm new password"
                       required
-                      data-oid="7z1y49c"
+                      data-oid="34-hu8w"
                     />
 
                     <button
@@ -637,24 +637,24 @@ export default function ResetPasswordContent() {
                       aria-label={
                         showConfirmPassword ? "Hide password" : "Show password"
                       }
-                      data-oid="qofg3ap"
+                      data-oid="3_zzn5p"
                     >
                       {showConfirmPassword ? (
-                        <EyeOff size={20} data-oid="kphgu.5" />
+                        <EyeOff size={20} data-oid="gniscpk" />
                       ) : (
-                        <Eye size={20} data-oid="ztqfci4" />
+                        <Eye size={20} data-oid="eyb:5w9" />
                       )}
                     </button>
                   </div>
                   {confirmPassword && !passwordsMatch && (
-                    <p className="mt-2 text-sm text-red-600" data-oid="p080:jc">
+                    <p className="mt-2 text-sm text-red-600" data-oid="wz_xhi2">
                       Passwords do not match
                     </p>
                   )}
                   {confirmPassword && passwordsMatch && (
                     <p
                       className="mt-2 text-sm text-green-600"
-                      data-oid="jmqqblt"
+                      data-oid="12aa1d2"
                     >
                       Passwords match
                     </p>
@@ -662,7 +662,7 @@ export default function ResetPasswordContent() {
                 </div>
 
                 {error && (
-                  <p className="text-sm text-red-600" data-oid="yg6.flf">
+                  <p className="text-sm text-red-600" data-oid="9y84.8m">
                     {error}
                   </p>
                 )}
@@ -673,19 +673,19 @@ export default function ResetPasswordContent() {
                   disabled={
                     isSubmitting || (confirmPassword && !passwordsMatch)
                   }
-                  data-oid="wivx:kt"
+                  data-oid=".dq63jr"
                 >
                   {isSubmitting ? (
                     <span
                       className="flex items-center justify-center"
-                      data-oid="dqmhowu"
+                      data-oid="4hu7if5"
                     >
                       <svg
                         className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        data-oid="qyestht"
+                        data-oid="khy2ccb"
                       >
                         <circle
                           className="opacity-25"
@@ -694,13 +694,13 @@ export default function ResetPasswordContent() {
                           r="10"
                           stroke="currentColor"
                           strokeWidth="4"
-                          data-oid="u964ns0"
+                          data-oid="6xr5-:z"
                         ></circle>
                         <path
                           className="opacity-75"
                           fill="currentColor"
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                          data-oid="xkxg9:y"
+                          data-oid="qlzqajx"
                         ></path>
                       </svg>
                       Processing...
@@ -710,39 +710,39 @@ export default function ResetPasswordContent() {
                   )}
                 </Button>
 
-                <div className="text-center mt-4" data-oid="3hqo:s5">
+                <div className="text-center mt-4" data-oid="ot0xtd1">
                   <button
                     type="button"
                     onClick={() => router.push("/login")}
                     className="text-gray-500 hover:text-gray-700"
-                    data-oid="hkazdig"
+                    data-oid="fswsuct"
                   >
                     Cancel
                   </button>
                 </div>
               </form>
             ) : (
-              <div className="text-center py-6" data-oid="zhtyck0">
+              <div className="text-center py-6" data-oid="s9wtge2">
                 <div
                   className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4"
-                  data-oid="ogq182v"
+                  data-oid="izbdxxe"
                 >
-                  <Check className="h-8 w-8" data-oid="b92qnt5" />
+                  <Check className="h-8 w-8" data-oid="933dfk4" />
                 </div>
                 <h2
                   className="text-xl font-semibold text-gray-800 mb-2"
-                  data-oid="_8oca.9"
+                  data-oid="xmb1rwj"
                 >
                   Password Reset Successful
                 </h2>
-                <p className="text-gray-600 mb-6" data-oid="t.f9x:t">
+                <p className="text-gray-600 mb-6" data-oid="f8g2y3p">
                   Your password has been successfully reset. You can now log in
                   with your new password.
                 </p>
                 <Button
                   onClick={() => router.push("/login")}
                   className="py-3 px-6 rounded-full bg-black hover:bg-gray-800 text-white font-medium"
-                  data-oid="pozisrk"
+                  data-oid="k.e5.n-"
                 >
                   Go to Login
                 </Button>

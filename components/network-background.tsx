@@ -307,7 +307,7 @@ export default function NetworkBackground({
       ref={containerRef}
       className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
       style={{ opacity: opacity }}
-      data-oid="y4btgyr"
+      data-oid=":wqyl9e"
     />
   );
 }

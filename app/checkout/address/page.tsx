@@ -20,15 +20,15 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
   };
 
   return (
-    <div data-oid="x32nvwj">
+    <div data-oid="_oz3lj:">
       {title && (
-        <h3 className="text-xl font-bold mb-6" data-oid="er6qdx9">
+        <h3 className="text-xl font-bold mb-6" data-oid="gfk.axh">
           {title}
         </h3>
       )}
-      <div className="space-y-4" data-oid="-fsxepg">
-        <div data-oid="5-.fxxh">
-          <label className="block text-sm font-medium mb-1" data-oid="ilh07jl">
+      <div className="space-y-4" data-oid="z0cpf.:">
+        <div data-oid="aq70tk_">
+          <label className="block text-sm font-medium mb-1" data-oid="8vuijg:">
             First Name *
           </label>
           <input
@@ -37,12 +37,12 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.firstName}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-            data-oid="xvc40th"
+            data-oid="k-zouo_"
           />
         </div>
 
-        <div data-oid="w4.3zc8">
-          <label className="block text-sm font-medium mb-1" data-oid="xzrrx_d">
+        <div data-oid="5ects-4">
+          <label className="block text-sm font-medium mb-1" data-oid="4j2t0y7">
             Last Name *
           </label>
           <input
@@ -51,12 +51,12 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.lastName}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-            data-oid="gibqnk4"
+            data-oid="d2r_z96"
           />
         </div>
 
-        <div data-oid=":bvh.xt">
-          <label className="block text-sm font-medium mb-1" data-oid="v9tccqh">
+        <div data-oid="h:6jsb3">
+          <label className="block text-sm font-medium mb-1" data-oid="a1ogt:n">
             Email Address *
           </label>
           <input
@@ -65,12 +65,12 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.email}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="62z3d0t"
+            data-oid="d0wlg-5"
           />
         </div>
 
-        <div data-oid="znajv-i">
-          <label className="block text-sm font-medium mb-1" data-oid="00b6pja">
+        <div data-oid="tz5:ro6">
+          <label className="block text-sm font-medium mb-1" data-oid="wfju5de">
             Mobile *
           </label>
           <input
@@ -79,12 +79,12 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.mobile}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="9o6u7_u"
+            data-oid="iyr9mu_"
           />
         </div>
 
-        <div data-oid="jcljn6h">
-          <label className="block text-sm font-medium mb-1" data-oid="nls3l8p">
+        <div data-oid="7dv9f.h">
+          <label className="block text-sm font-medium mb-1" data-oid="5-ok_kp">
             Country
           </label>
           <select
@@ -92,22 +92,22 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.country}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="wbhqqy3"
+            data-oid="87iqmfd"
           >
-            <option value="Australia" data-oid=".a04034">
+            <option value="Australia" data-oid="m35psvl">
               Australia
             </option>
-            <option value="Singapore" data-oid="9on04:c">
+            <option value="Singapore" data-oid="241o3gu">
               Singapore
             </option>
-            <option value="Malaysia" data-oid="61g2218">
+            <option value="Malaysia" data-oid="u8ed.kp">
               Malaysia
             </option>
           </select>
         </div>
 
-        <div data-oid="ltuetrq">
-          <label className="block text-sm font-medium mb-1" data-oid="6w3wy38">
+        <div data-oid="0zhrym.">
+          <label className="block text-sm font-medium mb-1" data-oid="6wcva.v">
             Street Address (1) *
           </label>
           <input
@@ -116,14 +116,11 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.streetAddress}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="8_cbibg"
+            data-oid="tap9.uv"
           />
         </div>
-        <div data-oid="ltuetrq-2">
-          <label
-            className="block text-sm font-medium mb-1"
-            data-oid="6w3wy38-2"
-          >
+        <div data-oid="ikm_n7r">
+          <label className="block text-sm font-medium mb-1" data-oid="4kdprdy">
             Street Address (2)
           </label>
           <input
@@ -132,14 +129,11 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.streetAddress2}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="8_cbibg-2"
+            data-oid="e8wbki-"
           />
         </div>
-        <div data-oid="ltuetrq-3">
-          <label
-            className="block text-sm font-medium mb-1"
-            data-oid="6w3wy38-3"
-          >
+        <div data-oid="5xcjirr">
+          <label className="block text-sm font-medium mb-1" data-oid="3pyl6_3">
             Building Name
           </label>
           <input
@@ -148,14 +142,11 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.buildingName}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="8_cbibg-3"
+            data-oid="ebnszwp"
           />
         </div>
-        <div data-oid="ltuetrq-4">
-          <label
-            className="block text-sm font-medium mb-1"
-            data-oid="6w3wy38-4"
-          >
+        <div data-oid="l0zwgnf">
+          <label className="block text-sm font-medium mb-1" data-oid="bxb__n.">
             Postal Code *
           </label>
           <input
@@ -164,7 +155,7 @@ function AddressForm({ address, setAddress, title }: AddressFormProps) {
             value={address.postcode}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            data-oid="8_cbibg-4"
+            data-oid="xfh7f5q"
           />
         </div>
       </div>
@@ -231,14 +222,14 @@ export default function AddressPage() {
   const hasBook = cart.some((item) => item.type === "Book");
   if (!hasBook) {
     return (
-      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="0jaxtjq">
+      <div className="max-w-6xl mx-auto px-4 py-8" data-oid="68vjb7q">
         <div
           className="flex items-center justify-center min-h-[400px]"
-          data-oid="2jqk:to"
+          data-oid="v7qvjwa"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-            data-oid="d263iwm"
+            data-oid="p-iewby"
           ></div>
         </div>
       </div>
@@ -246,62 +237,62 @@ export default function AddressPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="wtmki18">
-      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="wm.8tj:">
+    <div className="min-h-screen bg-gray-50" data-oid="484uivc">
+      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="70nkjbr">
         <div
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          data-oid="5i_g454"
+          data-oid="foa_:ax"
         >
           {/* Left Column - Address Forms */}
-          <div className="lg:col-span-2" data-oid="0mc-2nb">
+          <div className="lg:col-span-2" data-oid="sb71lsv">
             <div
               className="bg-white rounded-lg shadow-sm p-6"
-              data-oid="80nnvn:"
+              data-oid="g.5wz8p"
             >
               <h2
                 className="text-2xl font-bold mb-2 text-gray-900"
-                data-oid="l2sh62q"
+                data-oid="equ47_o"
               >
                 Address Information
               </h2>
-              <p className="text-gray-600 mb-6" data-oid="8fbjh6v">
+              <p className="text-gray-600 mb-6" data-oid="vp8ae2.">
                 Please provide your delivery and billing details
               </p>
 
-              <div className="space-y-8" data-oid="li94qbm">
+              <div className="space-y-8" data-oid="ks3z:oo">
                 {/* Delivery Address */}
                 {deliveryOption === "delivery" && (
-                  <div data-oid="--2c74v">
+                  <div data-oid="j5qgt0y">
                     <AddressForm
                       address={deliveryAddress}
                       setAddress={setDeliveryAddress}
                       title="Delivery Address"
-                      data-oid="tw6r.w0"
+                      data-oid="gqfu3cy"
                     />
 
                     <div
                       className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200"
-                      data-oid="pw3rz:w"
+                      data-oid="rkmyp60"
                     >
                       <h4
                         className="font-semibold mb-2 text-blue-900"
-                        data-oid="i:jqy7m"
+                        data-oid=":v879ir"
                       >
                         Authority to Leave
                       </h4>
                       <p
                         className="text-sm text-blue-800 mb-2"
-                        data-oid="nvbo0vt"
+                        data-oid="_z51amm"
                       >
                         Your order may be left in a safe place. Contact us if
                         you preferred to have it delivered when someone is home.
                       </p>
-                      <p className="text-sm text-blue-800" data-oid="-5cuh::">
+                      <p className="text-sm text-blue-800" data-oid="vo:tsjh">
                         Please see our{" "}
                         <a
                           href="/terms"
                           className="text-[#123b79] hover:underline font-medium"
-                          data-oid="bh_h:gh"
+                          data-oid="cncja9q"
                         >
                           terms of service
                         </a>{" "}
@@ -313,13 +304,13 @@ export default function AddressPage() {
                 )}
 
                 {/* Billing Address */}
-                <div data-oid="8nv.oge">
-                  <h3 className="text-xl font-bold mb-6" data-oid=":hff007">
+                <div data-oid="6k8xq:_">
+                  <h3 className="text-xl font-bold mb-6" data-oid="acdh.g3">
                     Billing Address
                   </h3>
 
                   {deliveryOption === "delivery" && (
-                    <div className="flex items-center mb-4" data-oid="wfyimbe">
+                    <div className="flex items-center mb-4" data-oid="udrdcv8">
                       <input
                         type="checkbox"
                         checked={billingSameAsDelivery}
@@ -328,13 +319,13 @@ export default function AddressPage() {
                         }
                         id="sameAsDelivery"
                         className="w-4 h-4 text-[#123b79] rounded focus:ring-[#123b79]"
-                        data-oid="4t3mdgl"
+                        data-oid="h94q.xh"
                       />
 
                       <label
                         htmlFor="sameAsDelivery"
                         className="ml-2 text-sm font-medium"
-                        data-oid="odu6zor"
+                        data-oid="4e:n::0"
                       >
                         Same as Delivery Address
                       </label>
@@ -347,7 +338,7 @@ export default function AddressPage() {
                       address={billingAddress}
                       setAddress={setBillingAddress}
                       title=""
-                      data-oid="76.74-j"
+                      data-oid="f0ehjiw"
                     />
                   )}
                 </div>
@@ -355,7 +346,7 @@ export default function AddressPage() {
                 <button
                   onClick={handleNext}
                   className="w-full bg-[#123b79] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#0f2f63] transition-colors text-lg mt-8"
-                  data-oid="2jsjy8s"
+                  data-oid="71lt78-"
                 >
                   Continue to Payment →
                 </button>
@@ -364,25 +355,25 @@ export default function AddressPage() {
           </div>
 
           {/* Right Column - Order Summary */}
-          <div className="lg:col-span-1" data-oid="xuwihnc">
-            <div className="sticky top-8" data-oid="d493mrf">
-              <OrderSummary data-oid="l:pteim" />
+          <div className="lg:col-span-1" data-oid="x1a8_yh">
+            <div className="sticky top-8" data-oid="v82veyw">
+              <OrderSummary data-oid="53xjnl:" />
             </div>
           </div>
         </div>
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 text-center" data-oid="tjnngrl">
-        <h3 className="text-lg font-semibold mb-2" data-oid="ez8rnyt">
+      <div className="mt-12 text-center" data-oid="nt.66k0">
+        <h3 className="text-lg font-semibold mb-2" data-oid="7c_cmgw">
           Need Help?
         </h3>
-        <p className="text-gray-600" data-oid="shykq_q">
+        <p className="text-gray-600" data-oid="20b:ncj">
           Perhaps our{" "}
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="vt.vk6l"
+            data-oid="sqcm36l"
           >
             FAQs
           </a>{" "}
@@ -390,7 +381,7 @@ export default function AddressPage() {
           <a
             href="#"
             className="text-[#123b79] hover:underline font-medium"
-            data-oid="o54b.pp"
+            data-oid="uqth.ez"
           >
             Contact Us
           </a>{" "}

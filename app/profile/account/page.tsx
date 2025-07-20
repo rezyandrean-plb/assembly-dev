@@ -35,16 +35,16 @@ export default function AccountPage() {
   };
 
   return (
-    <div className="p-6" data-oid="xzfq8n2">
-      <h1 className="text-2xl font-bold text-gray-800 mb-2" data-oid="p6dquhk">
+    <div className="p-6" data-oid="hvcf1za">
+      <h1 className="text-2xl font-bold text-gray-800 mb-2" data-oid="q.kjc3a">
         Account Settings
       </h1>
-      <p className="text-gray-600 mb-6" data-oid="v.u8goe">
+      <p className="text-gray-600 mb-6" data-oid="596cswm">
         Manage your account information and security settings
       </p>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6" data-oid="y5._gp3">
+      <div className="flex border-b border-gray-200 mb-6" data-oid="v5cx5v8">
         <button
           className={`px-4 py-2 font-medium text-sm flex items-center gap-2 ${
             activeAccountTab === "profile"
@@ -52,9 +52,9 @@ export default function AccountPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveAccountTab("profile")}
-          data-oid="tjo00f_"
+          data-oid="29:9lgf"
         >
-          <User className="h-4 w-4" data-oid="8-dft-g" />
+          <User className="h-4 w-4" data-oid=".hfdyys" />
           Profile
         </button>
         <button
@@ -64,15 +64,15 @@ export default function AccountPage() {
               : "text-gray-500 hover:text-gray-700"
           }`}
           onClick={() => setActiveAccountTab("security")}
-          data-oid="hr3c714"
+          data-oid="lcrmip7"
         >
-          <Lock className="h-4 w-4" data-oid="nso6y4y" />
+          <Lock className="h-4 w-4" data-oid="fuf_gy8" />
           Security
         </button>
       </div>
 
       {/* Content Container with Background */}
-      <div className="bg-white rounded-lg shadow-sm mb-6" data-oid="9bkhni5">
+      <div className="bg-white rounded-lg shadow-sm mb-6" data-oid="7hr2h-i">
         {/* Profile Tab Content */}
         {activeAccountTab === "profile" && (
           <motion.div
@@ -80,23 +80,23 @@ export default function AccountPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             className="p-6"
-            data-oid="bq.sahp"
+            data-oid="2azbnqt"
           >
-            <div className="space-y-8" data-oid="a5k_ui6">
+            <div className="space-y-8" data-oid="fuu5ylz">
               {/* Profile Picture Section */}
               <div
                 className="flex flex-col items-center sm:flex-row sm:items-start gap-6"
-                data-oid=":w9v12a"
+                data-oid="bz5oifc"
               >
                 <div
                   className="relative"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
-                  data-oid="n07z25v"
+                  data-oid="sq1ns8c"
                 >
                   <div
                     className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-100 shadow-sm"
-                    data-oid="gl-nm.v"
+                    data-oid="omtbvsy"
                   >
                     <Image
                       src={profileImage || "/placeholder.svg"}
@@ -104,17 +104,17 @@ export default function AccountPage() {
                       width={128}
                       height={128}
                       className="object-cover w-full h-full"
-                      data-oid="2zvt8.o"
+                      data-oid="h3gaiw5"
                     />
 
                     {isUploading && (
                       <div
                         className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-full"
-                        data-oid="brw:ky8"
+                        data-oid="ntqj:5v"
                       >
                         <div
                           className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"
-                          data-oid="mp7eukr"
+                          data-oid="bu11_2w"
                         ></div>
                       </div>
                     )}
@@ -124,9 +124,9 @@ export default function AccountPage() {
                     <button
                       onClick={triggerFileInput}
                       className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-full text-white transition-opacity"
-                      data-oid="sw_3gjh"
+                      data-oid="kya19ew"
                     >
-                      <Camera className="h-8 w-8" data-oid="tzzzld3" />
+                      <Camera className="h-8 w-8" data-oid="gh:7-xe" />
                     </button>
                   )}
 
@@ -136,36 +136,36 @@ export default function AccountPage() {
                     onChange={handleImageUpload}
                     accept="image/*"
                     className="hidden"
-                    data-oid="rt::obm"
+                    data-oid="oa4zd5o"
                   />
                 </div>
 
                 <div
                   className="flex flex-col items-center sm:items-start"
-                  data-oid="v4mexuj"
+                  data-oid="_bawfzt"
                 >
                   <h3
                     className="text-lg font-medium text-gray-800 mb-2"
-                    data-oid="rm9ge:s"
+                    data-oid="nthqwtv"
                   >
                     Profile Picture
                   </h3>
                   <p
                     className="text-sm text-gray-600 mb-4 text-center sm:text-left"
-                    data-oid="k2b_b:w"
+                    data-oid="p:qvp7s"
                   >
                     Upload a profile picture to personalize your account.
-                    <br data-oid="wpq8goe" />
+                    <br data-oid="q0jya-3" />
                     JPG, PNG or GIF. 1MB max size.
                   </p>
 
-                  <div className="flex gap-3" data-oid="ww.6gfq">
+                  <div className="flex gap-3" data-oid=":yfld.7">
                     <button
                       onClick={triggerFileInput}
                       className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex items-center gap-2"
-                      data-oid="zn1cpif"
+                      data-oid="40lttff"
                     >
-                      <Upload className="h-4 w-4" data-oid="qotdywf" />
+                      <Upload className="h-4 w-4" data-oid="eq_bvoc" />
                       Upload New
                     </button>
 
@@ -175,9 +175,9 @@ export default function AccountPage() {
                           setProfileImage("/profile-placeholder.png")
                         }
                         className="px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition flex items-center gap-2"
-                        data-oid="_3n60pe"
+                        data-oid="th7ch8_"
                       >
-                        <X className="h-4 w-4" data-oid="7u48mzi" />
+                        <X className="h-4 w-4" data-oid="0zavo-4" />
                         Remove
                       </button>
                     )}
@@ -187,18 +187,18 @@ export default function AccountPage() {
 
               <div
                 className="border-t border-gray-200 pt-6"
-                data-oid="vr7ivmv"
+                data-oid="9436ta5"
               ></div>
 
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                data-oid="obm-h65"
+                data-oid="e3bd:zy"
               >
-                <div data-oid="fjdoe4:">
+                <div data-oid="wqz1t8w">
                   <label
                     htmlFor="username"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="tjg87h4"
+                    data-oid="3oc.rq_"
                   >
                     Username
                   </label>
@@ -207,14 +207,14 @@ export default function AccountPage() {
                     id="username"
                     defaultValue="melvinlim"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    data-oid="iy85l_1"
+                    data-oid="63y49oj"
                   />
                 </div>
-                <div data-oid="j9yko5a">
+                <div data-oid="84buv72">
                   <label
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="507a644"
+                    data-oid="zturxd_"
                   >
                     Email
                   </label>
@@ -223,20 +223,20 @@ export default function AccountPage() {
                     id="email"
                     defaultValue="melvin.lim@example.com"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    data-oid=".d7oeo3"
+                    data-oid="6-r5.6w"
                   />
                 </div>
               </div>
 
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                data-oid="uc5gn.1"
+                data-oid="u_92_vl"
               >
-                <div data-oid="qd8wsfz">
+                <div data-oid="3oawlgj">
                   <label
                     htmlFor="firstName"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="d6xf3pi"
+                    data-oid="n5e9y-c"
                   >
                     First Name
                   </label>
@@ -245,14 +245,14 @@ export default function AccountPage() {
                     id="firstName"
                     defaultValue="Melvin"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    data-oid="3_1id7u"
+                    data-oid="0pft75u"
                   />
                 </div>
-                <div data-oid="vqsyuaq">
+                <div data-oid="cc6gecn">
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid="dbtu1qf"
+                    data-oid="n1p5i24"
                   >
                     Last Name
                   </label>
@@ -261,18 +261,18 @@ export default function AccountPage() {
                     id="lastName"
                     defaultValue="Lim"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    data-oid="0argyrc"
+                    data-oid="7gb-aj2"
                   />
                 </div>
               </div>
 
-              <div className="pt-4" data-oid="-806zj1">
+              <div className="pt-4" data-oid="_kqsvlm">
                 <button
                   type="button"
                   className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex items-center gap-2"
-                  data-oid="g.4tlym"
+                  data-oid="i7vy229"
                 >
-                  <Save className="h-4 w-4" data-oid="9uehb5b" />
+                  <Save className="h-4 w-4" data-oid="0gkvv3:" />
                   Save Changes
                 </button>
               </div>
@@ -287,22 +287,22 @@ export default function AccountPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             className="p-6"
-            data-oid="-22mcdv"
+            data-oid="o5fwgzp"
           >
-            <div className="space-y-6" data-oid="vs0km80">
-              <div data-oid="9.xj:qg">
+            <div className="space-y-6" data-oid="c21:3l1">
+              <div data-oid="wsf.lf1">
                 <h3
                   className="text-lg font-medium text-gray-800 mb-3"
-                  data-oid="xvp5-_9"
+                  data-oid="uzwzevs"
                 >
                   Change Password
                 </h3>
-                <div className="space-y-4" data-oid="ics7g1b">
-                  <div data-oid="w4ln_vu">
+                <div className="space-y-4" data-oid="479v:md">
+                  <div data-oid="vbfv28f">
                     <label
                       htmlFor="current-password"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="e9s3o85"
+                      data-oid="25yotg:"
                     >
                       Current Password
                     </label>
@@ -311,14 +311,14 @@ export default function AccountPage() {
                       id="current-password"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="••••••••"
-                      data-oid="24pals."
+                      data-oid=".o1007-"
                     />
                   </div>
-                  <div data-oid="87oy.9x">
+                  <div data-oid="9g_z1o8">
                     <label
                       htmlFor="new-password"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="7r-ngi4"
+                      data-oid="hu:eee_"
                     >
                       New Password
                     </label>
@@ -327,22 +327,22 @@ export default function AccountPage() {
                       id="new-password"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="••••••••"
-                      data-oid="7z6..my"
+                      data-oid="6ywb.1s"
                     />
 
                     <p
                       className="mt-1 text-xs text-gray-500"
-                      data-oid="y5vp7op"
+                      data-oid="1p:ejiz"
                     >
                       Password must be at least 8 characters and include a
                       number and a special character.
                     </p>
                   </div>
-                  <div data-oid="3_prfzh">
+                  <div data-oid="q9pqr6t">
                     <label
                       htmlFor="confirm-password"
                       className="block text-sm font-medium text-gray-700 mb-1"
-                      data-oid="x38gzf1"
+                      data-oid="1o-5kxs"
                     >
                       Confirm New Password
                     </label>
@@ -351,14 +351,14 @@ export default function AccountPage() {
                       id="confirm-password"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="••••••••"
-                      data-oid="bw5z8b9"
+                      data-oid="9uh-c-h"
                     />
                   </div>
-                  <div data-oid="j17mn.1">
+                  <div data-oid="6mfymlw">
                     <button
                       type="button"
                       className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition"
-                      data-oid="ljyud_1"
+                      data-oid=":5l:s6."
                     >
                       Change Password
                     </button>
@@ -366,24 +366,24 @@ export default function AccountPage() {
                 </div>
               </div>
 
-              <div className="border-t border-gray-200 pt-6" data-oid="w03n-qg">
+              <div className="border-t border-gray-200 pt-6" data-oid="clrdxq.">
                 <h3
                   className="text-lg font-medium text-gray-800 mb-3"
-                  data-oid="kdrw-41"
+                  data-oid="qovkp_a"
                 >
                   Two-Factor Authentication
                 </h3>
                 <div
                   className="flex items-center justify-between"
-                  data-oid="4cqz5_2"
+                  data-oid="jqv9.dk"
                 >
-                  <div data-oid="0kwtoi7">
-                    <p className="text-sm text-gray-700" data-oid="-.6h13_">
+                  <div data-oid="m:zu5vk">
+                    <p className="text-sm text-gray-700" data-oid="w_e0f28">
                       Add an extra layer of security to your account
                     </p>
                     <p
                       className="text-xs text-gray-500 mt-1"
-                      data-oid="f5-hd4w"
+                      data-oid="m63ehwj"
                     >
                       We'll send a verification code to your phone when you sign
                       in.
@@ -392,45 +392,45 @@ export default function AccountPage() {
                   <button
                     type="button"
                     className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg transition"
-                    data-oid="6ys8tu0"
+                    data-oid="ok3:f0q"
                   >
                     Enable
                   </button>
                 </div>
               </div>
 
-              <div className="border-t border-gray-200 pt-6" data-oid=":jkuvwi">
+              <div className="border-t border-gray-200 pt-6" data-oid="vq:t7pi">
                 <h3
                   className="text-lg font-medium text-gray-800 mb-3"
-                  data-oid="l.y3ilq"
+                  data-oid="pqx4c49"
                 >
                   Session Management
                 </h3>
                 <div
                   className="bg-gray-50 p-4 rounded-lg mb-4"
-                  data-oid="wc:-j3v"
+                  data-oid="tl1h413"
                 >
                   <div
                     className="flex justify-between items-center"
-                    data-oid="a9wyzxk"
+                    data-oid="8l1ra03"
                   >
-                    <div data-oid="k71murg">
+                    <div data-oid="cbc3456">
                       <p
                         className="text-sm font-medium text-gray-700"
-                        data-oid="88:c_4j"
+                        data-oid="ea92:98"
                       >
                         Current Session
                       </p>
                       <p
                         className="text-xs text-gray-500 mt-1"
-                        data-oid="jp_ygej"
+                        data-oid="w6d:yhx"
                       >
                         Chrome on Windows • Singapore
                       </p>
                     </div>
                     <span
                       className="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full"
-                      data-oid="avt2-mp"
+                      data-oid="-o.0oi2"
                     >
                       Active now
                     </span>
@@ -439,7 +439,7 @@ export default function AccountPage() {
                 <button
                   type="button"
                   className="px-4 py-2 border border-red-300 text-red-600 hover:bg-red-50 font-medium rounded-lg transition"
-                  data-oid="63h2zhd"
+                  data-oid="z4r.dw."
                 >
                   Sign Out of All Devices
                 </button>

@@ -31,7 +31,7 @@ export function FAQItem({
         "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md",
         isOpen && "shadow-lg border-primary/20",
       )}
-      data-oid="06uz-2k"
+      data-oid="lis_m08"
     >
       <button
         className={cn(
@@ -40,7 +40,7 @@ export function FAQItem({
         )}
         onClick={onClick}
         aria-expanded={isOpen}
-        data-oid="ze-z1ll"
+        data-oid="c1zr4n5"
       >
         {/* Question icon */}
         <div
@@ -50,15 +50,15 @@ export function FAQItem({
               ? "bg-primary text-white"
               : "bg-primary/10 text-primary group-hover:bg-primary/20",
           )}
-          data-oid="qw96o4z"
+          data-oid="ivmstl1"
         >
-          <HelpCircle className="w-4 h-4" data-oid="t2848cj" />
+          <HelpCircle className="w-4 h-4" data-oid="cv56q4v" />
         </div>
 
         {/* Question text */}
         <div
           className="flex-grow flex items-center min-h-[32px]"
-          data-oid="yw-glc-"
+          data-oid="hff-bcb"
         >
           <h3
             className={cn(
@@ -67,7 +67,7 @@ export function FAQItem({
                 ? "text-primary"
                 : "text-gray-900 group-hover:text-primary",
             )}
-            data-oid="x3illyu"
+            data-oid="w4y6d02"
           >
             {question}
           </h3>
@@ -81,7 +81,7 @@ export function FAQItem({
               ? "transform rotate-180 text-primary"
               : "text-gray-400 group-hover:text-primary",
           )}
-          data-oid=".7uk:04"
+          data-oid="q6.ba.j"
         />
       </button>
 
@@ -93,11 +93,11 @@ export function FAQItem({
           "overflow-hidden transition-all duration-300 ease-in-out",
           isOpen ? "opacity-100" : "opacity-0",
         )}
-        data-oid="x99r19t"
+        data-oid="_lb1-d."
       >
-        <div className="px-6 pb-6 pl-18" data-oid="zhdmplx">
-          <div className="border-l-2 border-primary/20 pl-6" data-oid="wsajq.v">
-            <p className="text-gray-600 leading-relaxed" data-oid="9mttd0z">
+        <div className="px-6 pb-6 pl-18" data-oid="7zd7989">
+          <div className="border-l-2 border-primary/20 pl-6" data-oid="4umtz76">
+            <p className="text-gray-600 leading-relaxed" data-oid="2lk-t8:">
               {answer}
             </p>
           </div>

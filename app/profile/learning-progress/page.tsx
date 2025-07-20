@@ -95,37 +95,37 @@ export default function LearningProgressPage() {
   }, [isLoggedIn]);
 
   return (
-    <div className="space-y-6" data-oid="x3st4m.">
+    <div className="space-y-6" data-oid="llii71a">
       {/* Header */}
-      <div data-oid="reu3-yj">
-        <h1 className="text-2xl font-bold text-gray-800" data-oid="78sci3w">
+      <div data-oid="t8qg4wo">
+        <h1 className="text-2xl font-bold text-gray-800" data-oid="2w45hqr">
           Learning Progress
         </h1>
-        <p className="text-gray-600 mt-1" data-oid="gd6y76_">
+        <p className="text-gray-600 mt-1" data-oid="6xj8tkg">
           Track your learning journey and achievements
         </p>
       </div>
 
       {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4" data-oid="duqoc22">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4" data-oid="wzjgyxe">
         <div
           className="bg-white p-6 rounded-lg shadow-sm border"
-          data-oid="a_3-:yo"
+          data-oid="67a5p-t"
         >
-          <div className="flex items-center" data-oid="7d1mi:j">
-            <div className="p-2 bg-blue-100 rounded-lg" data-oid="j0_mp:3">
-              <BookOpen className="h-6 w-6 text-blue-600" data-oid="d54mnau" />
+          <div className="flex items-center" data-oid="1i3lzq8">
+            <div className="p-2 bg-blue-100 rounded-lg" data-oid="rjsilsg">
+              <BookOpen className="h-6 w-6 text-blue-600" data-oid="t7eb0_f" />
             </div>
-            <div className="ml-4" data-oid="7ro7hvi">
+            <div className="ml-4" data-oid="v9639co">
               <p
                 className="text-sm font-medium text-gray-600"
-                data-oid="wy5f7wc"
+                data-oid="f2hp2pp"
               >
                 In Progress
               </p>
               <p
                 className="text-2xl font-bold text-gray-900"
-                data-oid="lh3dah0"
+                data-oid=":qi8uj7"
               >
                 {loading ? "..." : stats.activeCourses}
               </p>
@@ -135,22 +135,22 @@ export default function LearningProgressPage() {
 
         <div
           className="bg-white p-6 rounded-lg shadow-sm border"
-          data-oid="ahkdn1e"
+          data-oid="l.77i4-"
         >
-          <div className="flex items-center" data-oid="xh8map:">
-            <div className="p-2 bg-green-100 rounded-lg" data-oid="39lkptm">
-              <Award className="h-6 w-6 text-green-600" data-oid="q_p6p45" />
+          <div className="flex items-center" data-oid="44_49ks">
+            <div className="p-2 bg-green-100 rounded-lg" data-oid="35yrm__">
+              <Award className="h-6 w-6 text-green-600" data-oid="hm:98qu" />
             </div>
-            <div className="ml-4" data-oid="3.hq:21">
+            <div className="ml-4" data-oid="5n:5p9f">
               <p
                 className="text-sm font-medium text-gray-600"
-                data-oid="hl1eiub"
+                data-oid="wwcfj4:"
               >
                 Completed
               </p>
               <p
                 className="text-2xl font-bold text-gray-900"
-                data-oid="pp6-f2."
+                data-oid="bi.9i8p"
               >
                 {loading ? "..." : stats.completedCourses}
               </p>
@@ -160,22 +160,22 @@ export default function LearningProgressPage() {
 
         <div
           className="bg-white p-6 rounded-lg shadow-sm border"
-          data-oid="5p4djan"
+          data-oid=":a8y1xl"
         >
-          <div className="flex items-center" data-oid="pp1n2ml">
-            <div className="p-2 bg-purple-100 rounded-lg" data-oid="_fup4xl">
-              <Clock className="h-6 w-6 text-purple-600" data-oid="ms5.5jn" />
+          <div className="flex items-center" data-oid=":szy_ci">
+            <div className="p-2 bg-purple-100 rounded-lg" data-oid="x:r2:9q">
+              <Clock className="h-6 w-6 text-purple-600" data-oid="dkvvu78" />
             </div>
-            <div className="ml-4" data-oid="4adzryk">
+            <div className="ml-4" data-oid="m4g9pbq">
               <p
                 className="text-sm font-medium text-gray-600"
-                data-oid="nb-xn4v"
+                data-oid="dzrcybt"
               >
                 Study Time
               </p>
               <p
                 className="text-2xl font-bold text-gray-900"
-                data-oid="tevx.-6"
+                data-oid="zmhul_."
               >
                 {loading ? "..." : `${stats.totalLearningHours}h`}
               </p>
@@ -185,25 +185,25 @@ export default function LearningProgressPage() {
 
         <div
           className="bg-white p-6 rounded-lg shadow-sm border"
-          data-oid="0gc176n"
+          data-oid="1_xt95d"
         >
-          <div className="flex items-center" data-oid="lxszntp">
-            <div className="p-2 bg-orange-100 rounded-lg" data-oid="lcpiy:r">
+          <div className="flex items-center" data-oid="x3jz3vr">
+            <div className="p-2 bg-orange-100 rounded-lg" data-oid="slaqk1v">
               <TrendingUp
                 className="h-6 w-6 text-orange-600"
-                data-oid="xoefo59"
+                data-oid="p-rb75m"
               />
             </div>
-            <div className="ml-4" data-oid="dy-b93v">
+            <div className="ml-4" data-oid="646r91z">
               <p
                 className="text-sm font-medium text-gray-600"
-                data-oid="48r-078"
+                data-oid="fvx8rvd"
               >
                 Streak
               </p>
               <p
                 className="text-2xl font-bold text-gray-900"
-                data-oid="8qiavko"
+                data-oid="31_yfon"
               >
                 {loading ? "..." : `${stats.currentStreak} days`}
               </p>
@@ -214,37 +214,37 @@ export default function LearningProgressPage() {
 
       {/* Course Progress or Empty State */}
       {enrollments.length > 0 ? (
-        <div className="space-y-4" data-oid="w5bzy37">
+        <div className="space-y-4" data-oid="2.5g-fu">
           <h2
             className="text-lg font-semibold text-gray-800"
-            data-oid="p377xah"
+            data-oid="5i6c1lr"
           >
             Your Enrolled Courses
           </h2>
-          <div className="grid gap-4" data-oid="27-2gqk">
+          <div className="grid gap-4" data-oid="suea4lh">
             {enrollments.map((enrollment) => (
               <div
                 key={enrollment.id}
                 className="bg-white rounded-lg shadow-sm border p-6"
-                data-oid="u.-ntz4"
+                data-oid="hwawii5"
               >
                 <div
                   className="flex justify-between items-start mb-4"
-                  data-oid="z5d97-m"
+                  data-oid="tb3p.np"
                 >
-                  <div data-oid="bhc8-c2">
+                  <div data-oid="8y-adt7">
                     <h3
                       className="text-lg font-medium text-gray-900"
-                      data-oid="3k4a9xu"
+                      data-oid="y6hl3:s"
                     >
                       {enrollment.courseName}
                     </h3>
-                    <p className="text-sm text-gray-500" data-oid="0cfpufu">
+                    <p className="text-sm text-gray-500" data-oid="-aw5v1b">
                       Enrolled on{" "}
                       {new Date(enrollment.enrolledAt).toLocaleDateString()}
                     </p>
                     {enrollment.lastAccessed && (
-                      <p className="text-sm text-gray-500" data-oid="-18-_uu">
+                      <p className="text-sm text-gray-500" data-oid="e7lxlwx">
                         Last accessed:{" "}
                         {new Date(enrollment.lastAccessed).toLocaleDateString()}
                       </p>
@@ -256,7 +256,7 @@ export default function LearningProgressPage() {
                         ? "bg-green-100 text-green-800"
                         : "bg-blue-100 text-blue-800"
                     }`}
-                    data-oid="i5e1a3z"
+                    data-oid="gqz9cma"
                   >
                     {enrollment.status === "COMPLETED"
                       ? "Completed"
@@ -266,23 +266,23 @@ export default function LearningProgressPage() {
 
                 <div
                   className="w-full bg-gray-200 rounded-full h-2 mb-2"
-                  data-oid="ktmtmo3"
+                  data-oid=".17pq3s"
                 >
                   <div
                     className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${enrollment.progressPercentage}%` }}
-                    data-oid="9hl7u-:"
+                    data-oid="17bl9ju"
                   ></div>
                 </div>
-                <p className="text-sm text-gray-600" data-oid="6qx3107">
+                <p className="text-sm text-gray-600" data-oid="etow7-d">
                   {enrollment.progressPercentage}% complete
                 </p>
 
-                <div className="mt-4 flex gap-2" data-oid="u8onowl">
+                <div className="mt-4 flex gap-2" data-oid="e1tq9ge">
                   <Link
                     href={`/courses/${enrollment.courseSlug}`}
                     className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-                    data-oid="92gf8_i"
+                    data-oid="rast1_5"
                   >
                     Continue Learning
                   </Link>
@@ -294,27 +294,27 @@ export default function LearningProgressPage() {
       ) : (
         <div
           className="bg-white rounded-lg shadow-sm border"
-          data-oid="3r:ecrb"
+          data-oid="47.w6vy"
         >
-          <div className="p-8 text-center" data-oid="9en4cb7">
+          <div className="p-8 text-center" data-oid="t7tze8r">
             <BookOpen
               className="mx-auto h-16 w-16 text-gray-300 mb-4"
-              data-oid="4l06g63"
+              data-oid="xih9qs9"
             />
 
             <h3
               className="text-lg font-medium text-gray-900 mb-2"
-              data-oid="e8lrodq"
+              data-oid="r_x0bqs"
             >
               No learning progress yet
             </h3>
-            <p className="text-gray-500 mb-6" data-oid="bwyydu8">
+            <p className="text-gray-500 mb-6" data-oid="rjm1c6l">
               Start your learning journey by enrolling in courses
             </p>
             <Link
               href="/courses"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              data-oid="saxh-ky"
+              data-oid="98jazrh"
             >
               Browse Courses
             </Link>

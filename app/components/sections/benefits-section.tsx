@@ -10,20 +10,20 @@ export default function BenefitsSection() {
 
   const benefits = [
     {
-      icon: <BookOpen className="h-6 w-6 text-orange-500" data-oid=":7v--__" />,
+      icon: <BookOpen className="h-6 w-6 text-orange-500" data-oid="m.pp1u:" />,
       title: "Enhanced Knowledge",
       description:
         "Gain deep insights into Singapore's property market dynamics and trends",
     },
     {
-      icon: <Compass className="h-6 w-6 text-orange-500" data-oid="51ww6:3" />,
+      icon: <Compass className="h-6 w-6 text-orange-500" data-oid="wfitnxh" />,
       title: "Strategic Navigation",
       description:
         "Learn to navigate complex regulations and market conditions with confidence",
     },
     {
       icon: (
-        <BarChart2 className="h-6 w-6 text-orange-500" data-oid="1i8_3zb" />
+        <BarChart2 className="h-6 w-6 text-orange-500" data-oid="xaqd:vh" />
       ),
 
       title: "Career Growth",
@@ -31,19 +31,19 @@ export default function BenefitsSection() {
         "Develop skills that can accelerate your professional advancement",
     },
     {
-      icon: <Shield className="h-6 w-6 text-orange-500" data-oid="sobsqnh" />,
+      icon: <Shield className="h-6 w-6 text-orange-500" data-oid="6a2k_6s" />,
       title: "Risk Mitigation",
       description:
         "Identify potential pitfalls and develop strategies to protect investments",
     },
     {
-      icon: <Zap className="h-6 w-6 text-orange-500" data-oid="kze3z2f" />,
+      icon: <Zap className="h-6 w-6 text-orange-500" data-oid="5tc5qfv" />,
       title: "Competitive Edge",
       description:
         "Stay ahead with exclusive insights and early access to market information",
     },
     {
-      icon: <Award className="h-6 w-6 text-orange-500" data-oid=":eiy5eb" />,
+      icon: <Award className="h-6 w-6 text-orange-500" data-oid="1c7knj8" />,
       title: "Industry Recognition",
       description:
         "Build your reputation as a knowledgeable professional in the field",
@@ -72,28 +72,28 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="k4w1erd">
-      <div className="container mx-auto px-4" data-oid="lxl6f5-">
+    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="txnrruc">
+      <div className="container mx-auto px-4" data-oid="pow6nzx">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          data-oid="2f5rvt5"
+          data-oid="1z86z.z"
         >
-          <h2 className="text-4xl font-bold text-gray-900" data-oid="f.qs:_6">
+          <h2 className="text-4xl font-bold text-gray-900" data-oid="jpw.tog">
             What You'll Gain
           </h2>
           <p
             className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
-            data-oid="18fbqm."
+            data-oid="o50swvp"
           >
             Tangible outcomes from engaging with Assembly's content and
             community
           </p>
           <div
             className="w-20 h-1 bg-orange-500 mx-auto mt-4"
-            data-oid="obgebcm"
+            data-oid="39rgsrl"
           ></div>
         </motion.div>
 
@@ -102,29 +102,29 @@ export default function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          data-oid="9dwkzyd"
+          data-oid="-10:wke"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               className="flex items-start p-6 bg-white rounded-lg shadow-md"
               variants={itemVariants}
-              data-oid="r-z:_8v"
+              data-oid="v9gbwyc"
             >
               <div
                 className="mr-4 p-3 bg-orange-100 rounded-full"
-                data-oid="edsq3bw"
+                data-oid="i3m4arh"
               >
                 {benefit.icon}
               </div>
-              <div data-oid="apq8i_v">
+              <div data-oid="hls3sdn">
                 <h3
                   className="text-xl font-bold text-gray-800 mb-2"
-                  data-oid="iglki5r"
+                  data-oid="huspp9h"
                 >
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600" data-oid="y0e07e4">
+                <p className="text-gray-600" data-oid="udc6os2">
                   {benefit.description}
                 </p>
               </div>

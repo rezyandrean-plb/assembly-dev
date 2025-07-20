@@ -33,15 +33,15 @@ function Feature({ icon, title, description }: FeatureProps) {
           ref(el);
         }
       }}
-      data-oid="li2yj8a"
+      data-oid="dm2:959"
     >
-      <div className="feature-icon" data-oid="horzgxh">
+      <div className="feature-icon" data-oid="5oq9iqm">
         {icon}
       </div>
-      <h3 className="feature-title" data-oid="yjwok5m">
+      <h3 className="feature-title" data-oid="0i:m85e">
         {title}
       </h3>
-      <p className="feature-description" data-oid="zn3plnf">
+      <p className="feature-description" data-oid="_:6wg0x">
         {description}
       </p>
     </div>
@@ -103,9 +103,9 @@ export default function BookOverviewSection() {
     <section
       className="section features-section"
       id="features"
-      data-oid="ifsb:bp"
+      data-oid="10k11fk"
     >
-      <div className="container" data-oid="az2:g3g">
+      <div className="container" data-oid="h522tsh">
         <h2
           className="section-title text-center"
           ref={(el) => {
@@ -116,22 +116,22 @@ export default function BookOverviewSection() {
               titleAnimRef(el);
             }
           }}
-          data-oid="o3f8s.p"
+          data-oid="owuidn3"
         >
           What's Inside The{" "}
-          <span className="text-highlight" data-oid="klqq769">
+          <span className="text-highlight" data-oid="p23h4.v">
             PLB Book
           </span>
         </h2>
 
-        <div className="features-grid" data-oid="a_dk.7k">
+        <div className="features-grid" data-oid="g-r3sg_">
           {features.map((feature, index) => (
             <Feature
               key={index}
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
-              data-oid=":4yexxr"
+              data-oid="rlhqpt8"
             />
           ))}
         </div>

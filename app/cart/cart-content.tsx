@@ -194,11 +194,11 @@ export default function CartPageContent() {
     return (
       <div
         className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex items-center justify-center"
-        data-oid="bktdyiv"
+        data-oid="ogq43s2"
       >
         <div
           className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"
-          data-oid="sfldw8g"
+          data-oid="17ga3q4"
         ></div>
       </div>
     );
@@ -226,55 +226,55 @@ export default function CartPageContent() {
             router.push("/checkout/payment");
           }
         }}
-        data-oid="nooz6gx"
+        data-oid="_5.onsn"
       />
 
       <div
         className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5"
-        data-oid="wfob7_8"
+        data-oid="3:ngaw9"
       >
         <div
           className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24"
-          data-oid="ridwigy"
+          data-oid="3b-bhw6"
         >
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
-            data-oid="aqs.b7l"
+            data-oid="jt5e2yn"
           >
             <div
               className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
-              data-oid="__cd11z"
+              data-oid="cnnol86"
             >
               <ShoppingBag
                 className="w-6 h-6 text-primary"
-                data-oid="1:fukw7"
+                data-oid=":aqoyw_"
               />
 
               <span
                 className="font-semibold text-neutral-700"
-                data-oid="c5e-tu-"
+                data-oid="bf1dpu-"
               >
                 Shopping Cart
               </span>
               <span
                 className="bg-primary text-white text-sm px-2 py-1 rounded-full"
-                data-oid="tw.otlk"
+                data-oid="c0ynav:"
               >
                 {cart.length}
               </span>
             </div>
             <h1
               className="text-4xl font-bold text-neutral-900 mb-4"
-              data-oid="zf-v:p5"
+              data-oid="gnb5gm6"
             >
               Your Learning Journey Awaits
             </h1>
             <p
               className="text-xl text-neutral-600 max-w-2xl mx-auto"
-              data-oid="xw73h8p"
+              data-oid="adrbi3j"
             >
               Review your selected courses and take the next step towards
               mastering real estate investment
@@ -286,67 +286,67 @@ export default function CartPageContent() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="max-w-2xl mx-auto text-center py-20"
-              data-oid="-ovv-y5"
+              data-oid="u84xht5"
             >
               <div
                 className="bg-white rounded-3xl shadow-xl p-12"
-                data-oid="a--k56c"
+                data-oid="krkar.c"
               >
                 <div
                   className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8"
-                  data-oid=".cv8kh2"
+                  data-oid="h840m0_"
                 >
                   <ShoppingBag
                     className="w-12 h-12 text-primary"
-                    data-oid="31suo6y"
+                    data-oid="wijq56e"
                   />
                 </div>
                 <h2
                   className="text-3xl font-bold text-neutral-900 mb-4"
-                  data-oid="lf-mo0o"
+                  data-oid="holkqql"
                 >
                   Your cart is empty
                 </h2>
-                <p className="text-neutral-600 mb-8 text-lg" data-oid="w1:6b6h">
+                <p className="text-neutral-600 mb-8 text-lg" data-oid=":l6oxaz">
                   Discover our expert-led courses and start building your real
                   estate investment portfolio today.
                 </p>
                 <Button
                   onClick={() => router.push("/courses")}
                   className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  data-oid="y9.oydu"
+                  data-oid="lqqkuq9"
                 >
                   Explore Courses
-                  <ArrowRight className="w-5 h-5 ml-2" data-oid="7qgvpja" />
+                  <ArrowRight className="w-5 h-5 ml-2" data-oid="7qjbqn2" />
                 </Button>
               </div>
             </motion.div>
           ) : (
             <div
               className="grid grid-cols-1 lg:grid-cols-3 gap-12"
-              data-oid="b35ze15"
+              data-oid="mk7gqws"
             >
               {/* Cart Items */}
-              <div className="lg:col-span-2" data-oid="dn18k.f">
+              <div className="lg:col-span-2" data-oid="n:-8_zf">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                  data-oid="dj_9edq"
+                  data-oid="9v.qhm:"
                 >
                   <div
                     className="p-6 border-b border-neutral-200"
-                    data-oid="s2j-m9s"
+                    data-oid="b-4-g97"
                   >
                     <h2
                       className="text-2xl font-bold text-neutral-900"
-                      data-oid="lfs.14o"
+                      data-oid="qemxl1."
                     >
                       Course Selection ({cart.length} items)
                     </h2>
                   </div>
 
-                  <AnimatePresence data-oid="wu9yl5i">
+                  <AnimatePresence data-oid="mrw:3d5">
                     {cart.map((item, index) => (
                       <motion.div
                         key={item.id}
@@ -356,20 +356,20 @@ export default function CartPageContent() {
                         className={`border-b border-neutral-100 last:border-b-0 ${
                           removingItems.has(item.id) ? "opacity-50" : ""
                         }`}
-                        data-oid="y5cl0a."
+                        data-oid="t_z35vt"
                       >
-                        <div className="p-6" data-oid="zyyrln6">
-                          <div className="flex gap-6" data-oid="wsr4lev">
+                        <div className="p-6" data-oid="zba1m-s">
+                          <div className="flex gap-6" data-oid="5_yiki:">
                             {/* Course Image */}
-                            <div className="flex-shrink-0" data-oid="zyu8z_4">
+                            <div className="flex-shrink-0" data-oid="thnusx-">
                               <div
                                 className="relative w-32 h-32 rounded-xl overflow-hidden bg-neutral-100"
-                                data-oid="su:puuk"
+                                data-oid="5zopgwy"
                               >
                                 {item.type === "Book" ? (
                                   <div
                                     className="w-full h-full bg-gray-100 flex items-center justify-center rounded-lg"
-                                    data-oid="hbm0kob"
+                                    data-oid="qiygth_"
                                   >
                                     <Image
                                       src="/images/PLB Book Front Cover_FA.jpg"
@@ -377,7 +377,7 @@ export default function CartPageContent() {
                                       width={80}
                                       height={120}
                                       className="object-contain"
-                                      data-oid="8sel.e."
+                                      data-oid="kbw.t1w"
                                     />
                                   </div>
                                 ) : (
@@ -386,17 +386,17 @@ export default function CartPageContent() {
                                     alt={item.title}
                                     fill
                                     className="object-cover"
-                                    data-oid="g759lz9"
+                                    data-oid="svxta:b"
                                   />
                                 )}
 
                                 <div
                                   className="absolute top-2 left-2"
-                                  data-oid="8pvv2-b"
+                                  data-oid="7_nerwl"
                                 >
                                   <span
                                     className="bg-primary text-white text-xs px-2 py-1 rounded-full font-medium"
-                                    data-oid="r3hd7nl"
+                                    data-oid="9s36ilf"
                                   >
                                     {item.type === "Book" ? "Book" : "Course"}
                                   </span>
@@ -405,21 +405,21 @@ export default function CartPageContent() {
                             </div>
 
                             {/* Course Details */}
-                            <div className="flex-1 min-w-0" data-oid="llimiij">
+                            <div className="flex-1 min-w-0" data-oid="iirwc49">
                               <div
                                 className="flex justify-between items-start mb-3"
-                                data-oid="vf1he0o"
+                                data-oid="0b.cc6r"
                               >
-                                <div className="flex-1" data-oid="i05_v_f">
+                                <div className="flex-1" data-oid=":d6ym10">
                                   <h3
                                     className="text-lg font-bold text-neutral-900 mb-2 line-clamp-2"
-                                    data-oid="zben.x3"
+                                    data-oid="yjjz06m"
                                   >
                                     {item.title}
                                   </h3>
                                   <p
                                     className="text-neutral-600 mb-3"
-                                    data-oid="wg-1evv"
+                                    data-oid="_88neut"
                                   >
                                     By {item.author || "Assembly.sg"}
                                   </p>
@@ -427,60 +427,60 @@ export default function CartPageContent() {
                                   {/* Course Features */}
                                   <div
                                     className="flex items-center gap-4 text-sm text-neutral-500 mb-4"
-                                    data-oid="eigibjn"
+                                    data-oid="9dbc0zs"
                                   >
                                     <div
                                       className="flex items-center gap-1"
-                                      data-oid="m_54cqq"
+                                      data-oid="fexxov6"
                                     >
                                       <Clock
                                         className="w-4 h-4"
-                                        data-oid="nff8sfr"
+                                        data-oid="2rh8:y1"
                                       />
 
-                                      <span data-oid="pcq7wk1">2-3 hours</span>
+                                      <span data-oid="u4ezlmz">2-3 hours</span>
                                     </div>
                                     <div
                                       className="flex items-center gap-1"
-                                      data-oid="iwsi5j-"
+                                      data-oid="nof00ll"
                                     >
                                       <Users
                                         className="w-4 h-4"
-                                        data-oid="m6g_qz4"
+                                        data-oid="40da:7w"
                                       />
 
-                                      <span data-oid="0qz5is-">
+                                      <span data-oid="w92ic9v">
                                         1,200+ students
                                       </span>
                                     </div>
                                     <div
                                       className="flex items-center gap-1"
-                                      data-oid="opc0teg"
+                                      data-oid="mk6e9-o"
                                     >
                                       <Star
                                         className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                                        data-oid="g0kxkx8"
+                                        data-oid="egg04sp"
                                       />
 
-                                      <span data-oid="rp78ab.">4.8</span>
+                                      <span data-oid="4hs6yk5">4.8</span>
                                     </div>
                                   </div>
                                 </div>
 
                                 <div
                                   className="text-right ml-4"
-                                  data-oid="ovcl97u"
+                                  data-oid="w483_zl"
                                 >
                                   <div
                                     className="text-2xl font-bold text-neutral-900"
-                                    data-oid="9qh5xb_"
+                                    data-oid="_zo8yg2"
                                   >
                                     {formatPrice(item.price)}
                                   </div>
                                   {item.id === BOOK_ID && (
                                     <div
                                       className="text-sm text-neutral-500 line-through"
-                                      data-oid="g:neard"
+                                      data-oid="t_laaui"
                                     >
                                       {formatPrice(BOOK_ORIGINAL_PRICE)}
                                     </div>
@@ -491,26 +491,26 @@ export default function CartPageContent() {
                               {/* Quantity and Actions */}
                               <div
                                 className="flex items-center justify-between"
-                                data-oid="w5x2_ae"
+                                data-oid="nqaly8w"
                               >
                                 <div
                                   className="flex items-center gap-4"
-                                  data-oid="s-1cl5r"
+                                  data-oid="1sgj1md"
                                 >
                                   {item.type === "Book" ? (
                                     <div
                                       className="flex items-center gap-2"
-                                      data-oid="5pw25ar"
+                                      data-oid="-u.s1ms"
                                     >
                                       <span
                                         className="text-sm text-neutral-600"
-                                        data-oid="k_xu70r"
+                                        data-oid="1ktjp1n"
                                       >
                                         Quantity:
                                       </span>
                                       <div
                                         className="flex items-center border border-neutral-200 rounded-lg"
-                                        data-oid="xfjwy-d"
+                                        data-oid="0w2m.uc"
                                       >
                                         <button
                                           onClick={() =>
@@ -520,16 +520,16 @@ export default function CartPageContent() {
                                             )
                                           }
                                           className="p-2 hover:bg-neutral-50 transition-colors"
-                                          data-oid="cbgenie"
+                                          data-oid="tnosnf_"
                                         >
                                           <Minus
                                             className="w-4 h-4"
-                                            data-oid="unk3b2b"
+                                            data-oid="yq5ewys"
                                           />
                                         </button>
                                         <span
                                           className="px-4 py-2 font-medium"
-                                          data-oid="o8:g19b"
+                                          data-oid="h3idrrr"
                                         >
                                           {item.quantity}
                                         </span>
@@ -541,11 +541,11 @@ export default function CartPageContent() {
                                             )
                                           }
                                           className="p-2 hover:bg-neutral-50 transition-colors"
-                                          data-oid="xjph.d9"
+                                          data-oid="rf:rw2r"
                                         >
                                           <Plus
                                             className="w-4 h-4"
-                                            data-oid="jn-qxrl"
+                                            data-oid="m3175u."
                                           />
                                         </button>
                                       </div>
@@ -553,14 +553,14 @@ export default function CartPageContent() {
                                   ) : (
                                     <div
                                       className="flex items-center gap-2 text-sm text-neutral-600"
-                                      data-oid="yjtst2b"
+                                      data-oid="3leo34."
                                     >
                                       <Award
                                         className="w-4 h-4"
-                                        data-oid="ccbh78:"
+                                        data-oid="xyyv.3b"
                                       />
 
-                                      <span data-oid="z451:y_">
+                                      <span data-oid="crjnazm">
                                         Lifetime Access
                                       </span>
                                     </div>
@@ -569,27 +569,27 @@ export default function CartPageContent() {
 
                                 <div
                                   className="flex items-center gap-2"
-                                  data-oid="bzydw8b"
+                                  data-oid="by:_0da"
                                 >
                                   <button
                                     type="button"
                                     className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
-                                    data-oid="06jsjxe"
+                                    data-oid="pro.azf"
                                   >
                                     <Heart
                                       className="w-5 h-5"
-                                      data-oid="yrj74z3"
+                                      data-oid="1xetgf8"
                                     />
                                   </button>
                                   <button
                                     onClick={() => handleRemoveItem(item.id)}
                                     type="button"
                                     className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
-                                    data-oid="-k3bd_d"
+                                    data-oid=".r-fwp7"
                                   >
                                     <Trash
                                       className="w-5 h-5"
-                                      data-oid="57ezkpj"
+                                      data-oid="remblk."
                                     />
                                   </button>
                                 </div>
@@ -604,39 +604,39 @@ export default function CartPageContent() {
               </div>
 
               {/* Order Summary */}
-              <div className="lg:col-span-1" data-oid="pgl:7qw">
+              <div className="lg:col-span-1" data-oid="x0l6iel">
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="sticky top-24"
-                  data-oid="hxpv6_3"
+                  data-oid="y.l9_ar"
                 >
                   <div
                     className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                    data-oid="hpa.2es"
+                    data-oid="5hbrn7k"
                   >
                     <div
                       className="p-6 bg-primary text-white"
-                      data-oid="p94cvf3"
+                      data-oid="r90_nit"
                     >
-                      <h2 className="text-xl font-bold mb-2" data-oid="vsi2kt1">
+                      <h2 className="text-xl font-bold mb-2" data-oid="gowg.u6">
                         Order Summary
                       </h2>
-                      <p className="text-grey-400" data-oid="vo.559f">
+                      <p className="text-grey-400" data-oid="_hvkqg9">
                         Ready to start learning?
                       </p>
                     </div>
 
-                    <div className="p-6" data-oid="dyio0bx">
-                      <div className="space-y-4 mb-6" data-oid="q96_3ci">
+                    <div className="p-6" data-oid="9twv2ri">
+                      <div className="space-y-4 mb-6" data-oid="fcbsyhe">
                         <div
                           className="flex justify-between items-center"
-                          data-oid="3hqj21t"
+                          data-oid="qscdp1w"
                         >
-                          <span className="text-neutral-600" data-oid="73ykkt3">
+                          <span className="text-neutral-600" data-oid="1unewy9">
                             Subtotal
                           </span>
-                          <span className="font-semibold" data-oid="d-m2s6w">
+                          <span className="font-semibold" data-oid="oiwac.4">
                             {formatPrice(subtotal)}
                           </span>
                         </div>
@@ -644,10 +644,10 @@ export default function CartPageContent() {
                         {discount > 0 && (
                           <div
                             className="flex justify-between items-center text-green-600"
-                            data-oid="k0h8taq"
+                            data-oid="sh_t.1-"
                           >
-                            <span data-oid="gjnqs0o">Discount</span>
-                            <span className="font-semibold" data-oid="6e-k.h5">
+                            <span data-oid="diao-8n">Discount</span>
+                            <span className="font-semibold" data-oid="r-igltm">
                               -{formatPrice(discount)}
                             </span>
                           </div>
@@ -655,12 +655,12 @@ export default function CartPageContent() {
 
                         <div
                           className="flex justify-between items-center"
-                          data-oid="58z9d:d"
+                          data-oid="8xjokwp"
                         >
-                          <span className="text-neutral-600" data-oid="r_xaruk">
+                          <span className="text-neutral-600" data-oid="uhypltp">
                             Shipping
                           </span>
-                          <span className="font-semibold" data-oid="5s5uk.8">
+                          <span className="font-semibold" data-oid="043ue:c">
                             {shippingCost > 0
                               ? formatPrice(shippingCost)
                               : "Free"}
@@ -669,21 +669,21 @@ export default function CartPageContent() {
 
                         <div
                           className="border-t border-neutral-200 pt-4"
-                          data-oid="ja64cz8"
+                          data-oid="0l5t9ir"
                         >
                           <div
                             className="flex justify-between items-center"
-                            data-oid="bqj77g7"
+                            data-oid="gnr3_w1"
                           >
                             <span
                               className="text-lg font-bold text-neutral-900"
-                              data-oid="90a8f1-"
+                              data-oid="_23.x5y"
                             >
                               Total
                             </span>
                             <span
                               className="text-2xl font-bold text-primary"
-                              data-oid=":iusvmg"
+                              data-oid="xwd7an-"
                             >
                               {formatPrice(orderTotal)}
                             </span>
@@ -694,44 +694,44 @@ export default function CartPageContent() {
                       {/* Security Features */}
                       <div
                         className="bg-neutral-50 rounded-xl p-4 mb-6"
-                        data-oid="-tmlj9:"
+                        data-oid="5:lhzl7"
                       >
                         <div
                           className="flex items-center gap-3 mb-3"
-                          data-oid="ikcch7x"
+                          data-oid="94plpwy"
                         >
                           <Shield
                             className="w-5 h-5 text-green-500"
-                            data-oid="lsw8h_-"
+                            data-oid="j40q.iu"
                           />
 
                           <span
                             className="font-semibold text-neutral-900"
-                            data-oid="e3.2cnf"
+                            data-oid="nvnl539"
                           >
                             Secure Checkout
                           </span>
                         </div>
                         <ul
                           className="text-sm text-neutral-600 space-y-1"
-                          data-oid="dl9fen3"
+                          data-oid="c55y21u"
                         >
-                          <li data-oid="1py:5ra">
+                          <li data-oid="0.g2:2h">
                             • Lifetime access to courses
                           </li>
-                          <li data-oid="r-gxv4k">• SSL encrypted payment</li>
+                          <li data-oid="pj:opg3">• SSL encrypted payment</li>
                         </ul>
                       </div>
 
                       <Button
                         onClick={handleCheckout}
                         className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                        data-oid="pims.c9"
+                        data-oid="5ped2xi"
                       >
                         Proceed to Checkout
                         <ArrowRight
                           className="w-5 h-5 ml-2"
-                          data-oid="9vaiw2x"
+                          data-oid="6r9c7he"
                         />
                       </Button>
 
@@ -739,7 +739,7 @@ export default function CartPageContent() {
                         onClick={() => router.push("/courses")}
                         variant="outline"
                         className="w-full mt-3 py-3 border-2 border-neutral-200 hover:border-primary hover:text-primary transition-all duration-300"
-                        data-oid="c.t4m7r"
+                        data-oid="88ecj2j"
                       >
                         Continue Shopping
                       </Button>
@@ -757,34 +757,34 @@ export default function CartPageContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="mt-20"
-              data-oid="ztn-i:p"
+              data-oid="i5g05s1"
             >
-              <div className="text-center mb-12" data-oid="02m2isg">
+              <div className="text-center mb-12" data-oid=".n3xfah">
                 <div
                   className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
-                  data-oid="8036049"
+                  data-oid="_x:-pd7"
                 >
                   <Sparkles
                     className="w-5 h-5 text-yellow-500"
-                    data-oid="6nhwz5c"
+                    data-oid="0olozlr"
                   />
 
                   <span
                     className="font-semibold text-neutral-700"
-                    data-oid="f39-xf4"
+                    data-oid="6tgsn.y"
                   >
                     Recommended for You
                   </span>
                 </div>
                 <h2
                   className="text-3xl font-bold text-neutral-900 mb-4"
-                  data-oid="::z28q1"
+                  data-oid="72._oux"
                 >
                   Complete Your Learning Path
                 </h2>
                 <p
                   className="text-neutral-600 text-lg max-w-2xl mx-auto"
-                  data-oid="u94vi6_"
+                  data-oid="fcy-y0-"
                 >
                   Based on your selections, these courses will help you build a
                   comprehensive understanding of real estate investment
@@ -793,7 +793,7 @@ export default function CartPageContent() {
 
               <div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                data-oid=":l2t3o_"
+                data-oid="emxhejp"
               >
                 {recommendedCourses.map((course, index) => (
                   <motion.div
@@ -801,9 +801,9 @@ export default function CartPageContent() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * index }}
-                    data-oid="u7ncngt"
+                    data-oid="uavlk0q"
                   >
-                    <CourseCard course={course} data-oid="2b2ebe5" />
+                    <CourseCard course={course} data-oid="293:xgt" />
                   </motion.div>
                 ))}
               </div>
