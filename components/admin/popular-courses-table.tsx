@@ -65,6 +65,7 @@ export function PopularCoursesTable() {
               className="h-2 bg-gray-200"
               data-oid="hm57ffh"
             />
+
             <span className="text-xs font-medium" data-oid="9j3zir1">
               {course.completionRate}%
             </span>

@@ -7,11 +7,11 @@ export function ConditionalFooter() {
   const pathname = usePathname();
   const isAdminRoute = pathname?.startsWith("/admin");
 
-  // Don't show footer on admin routes
-  if (isAdminRoute) {
+  // Don't render footer on admin routes or test login page
+  if (isAdminRoute || pathname === "/admin/test-login") {
     return null;
   }
 
-  // Show footer on public routes
-  return <Footer data-oid="p30aimh" />;
+  // Render footer for all other routes
+  return <Footer />;
 }

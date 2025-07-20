@@ -307,6 +307,7 @@ export default function PaymentsPage() {
                   className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
                   data-oid="8kj:srf"
                 />
+
                 <Input
                   type="search"
                   placeholder="Search payments..."
@@ -414,6 +415,7 @@ export default function PaymentsPage() {
                               className="h-4 w-4 text-muted-foreground"
                               data-oid="k79j9-e"
                             />
+
                             <div data-oid="aal8ti.">
                               <div
                                 className="text-sm font-medium"
@@ -468,6 +470,7 @@ export default function PaymentsPage() {
                                   className="h-4 w-4"
                                   data-oid="lj:p5-m"
                                 />
+
                                 <span className="sr-only" data-oid=".iizxtg">
                                   Actions
                                 </span>
@@ -606,6 +609,7 @@ export default function PaymentsPage() {
                                 className="h-4 w-4 text-muted-foreground"
                                 data-oid="n5bd3yo"
                               />
+
                               <div data-oid="jx3m5st">
                                 <div
                                   className="text-sm font-medium"
@@ -637,6 +641,7 @@ export default function PaymentsPage() {
                                     className="h-4 w-4"
                                     data-oid="9-n1wh3"
                                   />
+
                                   <span className="sr-only" data-oid="pyfoese">
                                     Actions
                                   </span>
@@ -761,6 +766,7 @@ export default function PaymentsPage() {
                                 className="h-4 w-4 text-muted-foreground"
                                 data-oid="mfcd5gy"
                               />
+
                               <div data-oid="s7hhki8">
                                 <div
                                   className="text-sm font-medium"
@@ -792,6 +798,7 @@ export default function PaymentsPage() {
                                     className="h-4 w-4"
                                     data-oid="t385uow"
                                   />
+
                                   <span className="sr-only" data-oid="2gaxxhf">
                                     Actions
                                   </span>
@@ -903,6 +910,7 @@ export default function PaymentsPage() {
                                 className="h-4 w-4 text-muted-foreground"
                                 data-oid="gufdsj8"
                               />
+
                               <div data-oid="etgvwby">
                                 <div
                                   className="text-sm font-medium"
@@ -934,6 +942,7 @@ export default function PaymentsPage() {
                                     className="h-4 w-4"
                                     data-oid="oh.jg2v"
                                   />
+
                                   <span className="sr-only" data-oid="nicld:c">
                                     Actions
                                   </span>
@@ -1058,6 +1067,7 @@ export default function PaymentsPage() {
                                 className="h-4 w-4 text-muted-foreground"
                                 data-oid="4ge8w_y"
                               />
+
                               <div data-oid="nc9oztq">
                                 <div
                                   className="text-sm font-medium"
@@ -1089,6 +1099,7 @@ export default function PaymentsPage() {
                                     className="h-4 w-4"
                                     data-oid="_ycj3vp"
                                   />
+
                                   <span className="sr-only" data-oid=":755:vm">
                                     Actions
                                   </span>

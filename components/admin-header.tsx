@@ -60,6 +60,7 @@ export function AdminHeader() {
               className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
               data-oid="qez4kcp"
             />
+
             <Input
               type="search"
               placeholder="Search..."
@@ -97,6 +98,7 @@ export function AdminHeader() {
                   alt={user.name}
                   data-oid="zdol511"
                 />
+
                 <AvatarFallback data-oid="mt.o1na">AD</AvatarFallback>
               </Avatar>
               <div className="hidden text-left md:block" data-oid="ydy_we:">

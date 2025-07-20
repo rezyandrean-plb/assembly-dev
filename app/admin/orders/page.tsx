@@ -405,6 +405,7 @@ export default function OrdersPage() {
                   className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
                   data-oid="ax1htx."
                 />
+
                 <Input
                   type="search"
                   placeholder="Search orders..."
@@ -581,6 +582,7 @@ export default function OrdersPage() {
                                   className="h-4 w-4"
                                   data-oid="8_.nkh7"
                                 />
+
                                 <span className="sr-only" data-oid="tg5zhzw">
                                   Actions
                                 </span>
@@ -744,6 +746,7 @@ export default function OrdersPage() {
                                     className="h-4 w-4"
                                     data-oid="avo3may"
                                   />
+
                                   <span className="sr-only" data-oid="qcj0au8">
                                     Actions
                                   </span>
@@ -891,6 +894,7 @@ export default function OrdersPage() {
                                     className="h-4 w-4"
                                     data-oid="-5jho23"
                                   />
+
                                   <span className="sr-only" data-oid="3-34-04">
                                     Actions
                                   </span>
@@ -1057,6 +1061,7 @@ export default function OrdersPage() {
                                     className="h-4 w-4"
                                     data-oid="k7gp_t9"
                                   />
+
                                   <span className="sr-only" data-oid="16i-7a0">
                                     Actions
                                   </span>

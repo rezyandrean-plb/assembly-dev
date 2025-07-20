@@ -345,16 +345,19 @@ export default function AnalyticsPage() {
                       stroke="#E8EFFF"
                       data-oid="u:6duhu"
                     />
+
                     <XAxis
                       dataKey="month"
                       stroke="#737687"
                       data-oid="njf1vgb"
                     />
+
                     <YAxis stroke="#737687" data-oid="vfco:hu" />
                     <Tooltip
                       formatter={(value) => [`$${value}`, "Revenue"]}
                       data-oid="8-9dfqw"
                     />
+
                     <Area
                       type="monotone"
                       dataKey="revenue"
@@ -389,11 +392,13 @@ export default function AnalyticsPage() {
                       stroke="#E8EFFF"
                       data-oid="t5_nbkk"
                     />
+
                     <XAxis
                       dataKey="month"
                       stroke="#737687"
                       data-oid="-ymolbj"
                     />
+
                     <YAxis stroke="#737687" data-oid="ghqyg_d" />
                     <Tooltip data-oid="19s03au" />
                     <Line
@@ -403,6 +408,7 @@ export default function AnalyticsPage() {
                       strokeWidth={2}
                       data-oid="75kihnb"
                     />
+
                     <Line
                       type="monotone"
                       dataKey="active"
@@ -494,6 +500,7 @@ export default function AnalyticsPage() {
                           className="h-2"
                           data-oid="h3rgkpm"
                         />
+
                         <span
                           className="text-xs font-medium"
                           data-oid="t_:f2hs"
@@ -542,16 +549,19 @@ export default function AnalyticsPage() {
                       stroke="#E8EFFF"
                       data-oid="7-ieu:_"
                     />
+
                     <XAxis
                       dataKey="month"
                       stroke="#737687"
                       data-oid="7.k.f:o"
                     />
+
                     <YAxis stroke="#737687" data-oid="jnp_r49" />
                     <Tooltip
                       formatter={(value) => [`$${value}`, "Revenue"]}
                       data-oid="7lwv.-e"
                     />
+
                     <Area
                       type="monotone"
                       dataKey="revenue"
@@ -634,11 +644,13 @@ export default function AnalyticsPage() {
                       stroke="#E8EFFF"
                       data-oid="fsefng:"
                     />
+
                     <XAxis
                       dataKey="month"
                       stroke="#737687"
                       data-oid="moafo.9"
                     />
+
                     <YAxis stroke="#737687" data-oid="3yqkf65" />
                     <Tooltip data-oid="ivg40li" />
                     <Line
@@ -648,6 +660,7 @@ export default function AnalyticsPage() {
                       strokeWidth={2}
                       data-oid="g6q1tdc"
                     />
+
                     <Line
                       type="monotone"
                       dataKey="active"
@@ -684,6 +697,7 @@ export default function AnalyticsPage() {
                         className="w-32 h-2"
                         data-oid="h_bfya3"
                       />
+
                       <span className="text-sm font-medium" data-oid="f9jkzo1">
                         35%
                       </span>
@@ -702,6 +716,7 @@ export default function AnalyticsPage() {
                         className="w-32 h-2"
                         data-oid="_:a-nrg"
                       />
+
                       <span className="text-sm font-medium" data-oid="a--h1qx">
                         42%
                       </span>
@@ -720,6 +735,7 @@ export default function AnalyticsPage() {
                         className="w-32 h-2"
                         data-oid="wxyfscz"
                       />
+
                       <span className="text-sm font-medium" data-oid="ynvetbu">
                         18%
                       </span>
@@ -738,6 +754,7 @@ export default function AnalyticsPage() {
                         className="w-32 h-2"
                         data-oid="p.gsp_j"
                       />
+
                       <span className="text-sm font-medium" data-oid="yse25-f">
                         5%
                       </span>
@@ -776,11 +793,13 @@ export default function AnalyticsPage() {
                       stroke="#E8EFFF"
                       data-oid="1bq0bqb"
                     />
+
                     <XAxis
                       dataKey="month"
                       stroke="#737687"
                       data-oid="_e:e5f:"
                     />
+
                     <YAxis stroke="#737687" data-oid="6xae3hw" />
                     <Tooltip data-oid="1d468s7" />
                     <Line
@@ -832,6 +851,7 @@ export default function AnalyticsPage() {
                           className="h-2"
                           data-oid=":ke1vxi"
                         />
+
                         <span
                           className="text-xs font-medium"
                           data-oid="8l7.hop"
@@ -888,6 +908,7 @@ export default function AnalyticsPage() {
                           className="w-32 h-2"
                           data-oid="bmo2dvp"
                         />
+
                         <span
                           className="text-sm font-medium"
                           data-oid="883szwt"

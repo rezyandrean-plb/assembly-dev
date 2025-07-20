@@ -21,6 +21,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useAdminAuth } from "@/hooks/use-admin-auth";
 
 const sidebarItems = [
   {
@@ -77,13 +78,23 @@ export default function AdminLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const pathname = usePathname();
+  const { user, isSuperAdmin } = useAdminAuth();
 
-  // Mock user data - in a real app, this would come from authentication
-  const user = {
-    name: "Admin User",
-    email: "admin@assembly.com",
-    role: "Administrator",
-    avatar: "/placeholder.svg?height=36&width=36",
+  // Filter sidebar items based on user role
+  const filteredSidebarItems = sidebarItems.filter((item) => {
+    // Show Settings only to Super Admins
+    if (item.href === "/admin/settings") {
+      return isSuperAdmin;
+    }
+    return true;
+  });
+
+  // Use actual user data from auth context
+  const displayUser = {
+    name: user?.name || "Admin User",
+    email: user?.email || "admin@assembly.com",
+    role: user?.role === "super_admin" ? "Super Admin" : "Administrator",
+    avatar: user?.image || "/placeholder.svg?height=36&width=36",
   };
 
   return (
@@ -135,27 +146,28 @@ export default function AdminLayout({
                   data-oid="bv2bo.h"
                 >
                   <AvatarImage
-                    src={user.avatar || "/placeholder.svg"}
-                    alt={user.name}
+                    src={displayUser.avatar || "/placeholder.svg"}
+                    alt={displayUser.name}
                     data-oid="l5_alhz"
                   />
+
                   <AvatarFallback
                     style={{ backgroundColor: "#123B79", color: "white" }}
                     data-oid="_cequ:b"
                   >
-                    {user.name.charAt(0)}
+                    {displayUser.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
                 <div data-oid="gexjuc:">
                   <p className="font-medium text-[#123B79]" data-oid="hc_8cqt">
-                    {user.name}
+                    {displayUser.name}
                   </p>
                   <Badge
                     variant="outline"
-                    className="mt-1 text-xs border-[#123B79] text-[#123B79]"
+                    className="mt-1 text-xs border-[#123B79] text-[#123B79] bg-[#123B79] text-white"
                     data-oid="02w5bor"
                   >
-                    {user.role}
+                    {displayUser.role}
                   </Badge>
                 </div>
               </div>
@@ -176,7 +188,7 @@ export default function AdminLayout({
                 Admin Navigation
               </h2>
               <div className="space-y-1" data-oid="gh5i0oc">
-                {sidebarItems.map((item) => (
+                {filteredSidebarItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}

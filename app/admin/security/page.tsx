@@ -122,6 +122,7 @@ export default function SecurityPage() {
                       className="h-5 w-5 text-[#123B79]"
                       data-oid="vuucce1"
                     />
+
                     <div data-oid="jxq-jqb">
                       <h3 className="font-medium" data-oid="sa3v2ox">
                         {check.title}

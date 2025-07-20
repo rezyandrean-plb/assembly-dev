@@ -6,6 +6,7 @@ interface User {
   email: string;
   name?: string;
   image?: string;
+  role?: string;
 }
 
 interface AuthContextType {
@@ -24,18 +25,28 @@ const TEMP_USERS = [
     password: "Abc123456#",
     name: "Pei Yee",
     image: undefined,
+    role: "user",
   },
   {
     email: "jenna.tan@propertylimbrothers.com",
     password: "Abc123456#",
     name: "Jenna Tan",
     image: undefined,
+    role: "admin",
   },
   {
     email: "blurryorr@gmail.com",
     password: "Abc123456#",
     name: "Blurry Orr",
     image: undefined,
+    role: "user",
+  },
+  {
+    email: "admin@assembly.com",
+    password: "SuperAdmin123#",
+    name: "Super Admin",
+    image: undefined,
+    role: "super_admin",
   },
 ];
 
@@ -58,6 +69,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         email: foundUser.email,
         name: foundUser.name,
         image: foundUser.image,
+        role: foundUser.role,
       });
       return true;
     }

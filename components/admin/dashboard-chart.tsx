@@ -45,6 +45,7 @@ export function DashboardChart() {
             stroke="#E8EFFF"
             data-oid="n7bifwi"
           />
+
           <XAxis dataKey="name" stroke="#737687" data-oid="j2n6q02" />
           <YAxis stroke="#737687" data-oid="yv-i:2b" />
           <Tooltip

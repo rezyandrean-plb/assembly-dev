@@ -189,6 +189,7 @@ export default function SupportPage() {
                         alt={ticket.user.name}
                         data-oid="5uo8o9w"
                       />
+
                       <AvatarFallback
                         className="bg-[#123B79] text-white"
                         data-oid="m2y3er."

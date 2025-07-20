@@ -70,6 +70,7 @@ export function RecentSalesTable() {
               alt={sale.customer.name}
               data-oid="xalrbni"
             />
+
             <AvatarFallback
               className="bg-[#123B79] text-white"
               data-oid="7.83rhn"

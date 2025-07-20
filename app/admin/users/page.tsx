@@ -148,6 +148,7 @@ export default function UsersPage() {
                 className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
                 data-oid="9vardmj"
               />
+
               <Input
                 type="search"
                 placeholder="Search users..."
@@ -197,6 +198,7 @@ export default function UsersPage() {
                               alt={user.name}
                               data-oid="yl5l7mo"
                             />
+
                             <AvatarFallback data-oid="tp0m:67">
                               {user.name.charAt(0)}
                             </AvatarFallback>
@@ -250,6 +252,7 @@ export default function UsersPage() {
                                 className="h-4 w-4"
                                 data-oid="3_-8a4:"
                               />
+
                               <span className="sr-only" data-oid="r-n1bx.">
                                 Actions
                               </span>
@@ -373,6 +376,7 @@ export default function UsersPage() {
                                 alt={user.name}
                                 data-oid="vrg4bgp"
                               />
+
                               <AvatarFallback data-oid="omcowtu">
                                 {user.name.charAt(0)}
                               </AvatarFallback>
@@ -420,6 +424,7 @@ export default function UsersPage() {
                                   className="h-4 w-4"
                                   data-oid="-yc-:_5"
                                 />
+
                                 <span className="sr-only" data-oid="mit7kuj">
                                   Actions
                                 </span>
@@ -542,6 +547,7 @@ export default function UsersPage() {
                                 alt={user.name}
                                 data-oid="4a982es"
                               />
+
                               <AvatarFallback data-oid="eip1l8:">
                                 {user.name.charAt(0)}
                               </AvatarFallback>
@@ -586,6 +592,7 @@ export default function UsersPage() {
                                   className="h-4 w-4"
                                   data-oid="754frb8"
                                 />
+
                                 <span className="sr-only" data-oid="4xue1jn">
                                   Actions
                                 </span>
@@ -708,6 +715,7 @@ export default function UsersPage() {
                                 alt={user.name}
                                 data-oid="bjmk2.g"
                               />
+
                               <AvatarFallback data-oid="k9isjfi">
                                 {user.name.charAt(0)}
                               </AvatarFallback>
@@ -752,6 +760,7 @@ export default function UsersPage() {
                                   className="h-4 w-4"
                                   data-oid="nktl8z9"
                                 />
+
                                 <span className="sr-only" data-oid="a7fn_wq">
                                   Actions
                                 </span>

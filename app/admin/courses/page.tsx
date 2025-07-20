@@ -146,6 +146,7 @@ export default function CoursesPage() {
                 className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
                 data-oid=".:udb13"
               />
+
               <Input
                 type="search"
                 placeholder="Search courses..."
@@ -230,6 +231,7 @@ export default function CoursesPage() {
                                 className="h-4 w-4"
                                 data-oid="4cs0ibf"
                               />
+
                               <span className="sr-only" data-oid="fzdu3lb">
                                 Actions
                               </span>
@@ -354,6 +356,7 @@ export default function CoursesPage() {
                                   className="h-4 w-4"
                                   data-oid="to4_10j"
                                 />
+
                                 <span className="sr-only" data-oid="6-3_5fn">
                                   Actions
                                 </span>
@@ -478,6 +481,7 @@ export default function CoursesPage() {
                                   className="h-4 w-4"
                                   data-oid=".rsjp8s"
                                 />
+
                                 <span className="sr-only" data-oid="tka7._9">
                                   Actions
                                 </span>
@@ -602,6 +606,7 @@ export default function CoursesPage() {
                                   className="h-4 w-4"
                                   data-oid="utkohme"
                                 />
+
                                 <span className="sr-only" data-oid="fblbwaz">
                                   Actions
                                 </span>
