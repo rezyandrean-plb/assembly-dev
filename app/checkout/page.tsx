@@ -1,10 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/components/cart-context";
 
-export default function CheckoutPage() {
+function CheckoutPage() {
   const router = useRouter();
   const { cart } = useCart();
 
@@ -36,3 +37,8 @@ export default function CheckoutPage() {
     </div>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(CheckoutPage), {
+  ssr: false,
+});

@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Link from "next/link";
 
@@ -37,7 +38,7 @@ function NotFoundContent() {
   );
 }
 
-export default function NotFound() {
+function NotFound() {
   return (
     <Suspense
       fallback={
@@ -67,3 +68,8 @@ export default function NotFound() {
     </Suspense>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(NotFound), {
+  ssr: false,
+});

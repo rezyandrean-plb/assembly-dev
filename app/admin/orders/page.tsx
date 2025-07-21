@@ -1,3 +1,6 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -38,7 +41,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export default function OrdersPage() {
+function OrdersPage() {
   const orders = [
     {
       id: "ORD-2025-1001",
@@ -1112,3 +1115,8 @@ export default function OrdersPage() {
     </div>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(OrdersPage), {
+  ssr: false,
+});

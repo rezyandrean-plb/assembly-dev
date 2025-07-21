@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useAuth } from "@/context/auth-context";
 
-export default function TestEnrollmentPage() {
+function TestEnrollmentPage() {
   const { isLoggedIn, user } = useAuth();
   const [result, setResult] = useState<string>("");
   const [loading, setLoading] = useState(false);
@@ -198,3 +199,8 @@ export default function TestEnrollmentPage() {
     </div>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(TestEnrollmentPage), {
+  ssr: false,
+});

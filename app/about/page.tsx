@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
@@ -787,7 +788,7 @@ const FutureVisionSection = () => {
 };
 
 // Main About Page component
-export default function AboutPage() {
+function AboutPage() {
   return (
     <>
       <StoryHeroSection data-oid="anybj7o" />
@@ -799,3 +800,8 @@ export default function AboutPage() {
     </>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(AboutPage), {
+  ssr: false,
+});
