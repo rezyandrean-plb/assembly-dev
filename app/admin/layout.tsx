@@ -30,9 +30,13 @@ const sidebarItems = [
     icon: BarChart3,
   },
   {
-    title: "Course Management",
-    href: "/admin/courses",
+    title: "Catalog",
+    href: "/admin/catalog",
     icon: BookOpen,
+    subItems: [
+      { title: "All Products", href: "/admin/catalog" },
+      { title: "Categories", href: "/admin/catalog/categories" },
+    ],
   },
   {
     title: "User Management",
@@ -210,30 +214,50 @@ export default function AdminLayout({
               </h2>
               <div className="space-y-1" data-oid="gh5i0oc">
                 {filteredSidebarItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={cn(
-                      "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                      pathname === item.href
-                        ? "bg-[#123B79] text-white"
-                        : "text-gray-600 hover:bg-[#E8EFFF] hover:text-[#123B79]",
-                    )}
-                    data-oid="niydf-m"
-                  >
-                    <item.icon
+                  <div key={item.href}>
+                    <Link
+                      href={item.href}
                       className={cn(
-                        pathname === item.href
-                          ? "text-white"
-                          : "text-gray-400 group-hover:text-[#123B79]",
-                        "mr-3 flex-shrink-0 h-5 w-5",
+                        "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                        pathname === item.href ||
+                          pathname.startsWith(item.href + "/")
+                          ? "bg-[#123B79] text-white"
+                          : "text-gray-600 hover:bg-[#E8EFFF] hover:text-[#123B79]",
                       )}
-                      aria-hidden="true"
-                      data-oid="5bgo4dq"
-                    />
-
-                    {item.title}
-                  </Link>
+                    >
+                      <item.icon
+                        className={cn(
+                          pathname === item.href ||
+                            pathname.startsWith(item.href + "/")
+                            ? "text-white"
+                            : "text-gray-400 group-hover:text-[#123B79]",
+                          "mr-3 flex-shrink-0 h-5 w-5",
+                        )}
+                        aria-hidden="true"
+                      />
+                      {item.title}
+                    </Link>
+                    {item.subItems &&
+                      (pathname === item.href ||
+                        pathname.startsWith(item.href + "/")) && (
+                        <div className="ml-6 mt-1 space-y-1">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className={cn(
+                                "flex items-center gap-2 rounded-md px-3 py-1 text-sm transition-colors",
+                                pathname === subItem.href
+                                  ? "bg-[#425DA0] text-white"
+                                  : "text-gray-300 hover:bg-[#425DA0] hover:text-white",
+                              )}
+                            >
+                              - {subItem.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                  </div>
                 ))}
               </div>
             </div>
