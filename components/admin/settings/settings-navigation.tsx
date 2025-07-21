@@ -14,25 +14,25 @@ const navigationItems = [
     id: "general" as const,
     label: "General",
     icon: Globe,
-    description: "Site information and basic settings",
+    description: "Site identity, contact info, and localization",
+  },
+  {
+    id: "shipping" as const,
+    label: "Shipping & Delivery",
+    icon: Truck,
+    description: "Shipping zones, methods, and costs",
+  },
+  {
+    id: "email-templates" as const,
+    label: "Email Templates",
+    icon: Mail,
+    description: "Customize automated email content",
   },
   {
     id: "payment-gateways" as const,
     label: "Payment Gateways",
     icon: CreditCard,
     description: "Configure payment providers",
-  },
-  {
-    id: "shipping" as const,
-    label: "Shipping & Delivery",
-    icon: Truck,
-    description: "Manage shipping methods and costs",
-  },
-  {
-    id: "email-templates" as const,
-    label: "Email Templates",
-    icon: Mail,
-    description: "Customize automated emails",
   },
   {
     id: "integrations" as const,

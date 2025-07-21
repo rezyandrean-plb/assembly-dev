@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { SettingsNavigation } from "@/components/admin/settings/settings-navigation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GeneralSettings } from "@/components/admin/settings/general-settings";
 import { PaymentGateways } from "@/components/admin/settings/payment-gateways";
 import { ShippingSettings } from "@/components/admin/settings/shipping-settings";
@@ -42,23 +42,6 @@ export default function SettingsPage() {
     }
   };
 
-  const renderActiveSection = () => {
-    switch (activeSection) {
-      case "general":
-        return <GeneralSettings data-oid="p7sumpu" />;
-      case "payment-gateways":
-        return <PaymentGateways data-oid="yva0_xs" />;
-      case "shipping":
-        return <ShippingSettings data-oid="8qmsgxh" />;
-      case "email-templates":
-        return <EmailTemplates data-oid="4egg:n." />;
-      case "integrations":
-        return <IntegrationsSettings data-oid="l4j.yf:" />;
-      default:
-        return <GeneralSettings data-oid="g-0vqm0" />;
-    }
-  };
-
   return (
     <div className="space-y-6" data-oid="z6ls.29">
       <div className="flex items-center justify-between" data-oid="rbqqm.x">
@@ -81,21 +64,66 @@ export default function SettingsPage() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" data-oid="y98w05b">
-        {/* Settings Navigation */}
-        <div className="lg:col-span-1" data-oid="vykq8ep">
-          <SettingsNavigation
-            activeSection={activeSection}
-            onSectionChange={setActiveSection}
-            data-oid="p3fbg1d"
-          />
+      <Tabs 
+        value={activeSection} 
+        onValueChange={(value) => setActiveSection(value as SettingsSection)}
+        className="mt-6"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <TabsList className="bg-white border border-gray-200">
+            <TabsTrigger 
+              value="general"
+              className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
+            >
+              General
+            </TabsTrigger>
+            <TabsTrigger 
+              value="shipping"
+              className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
+            >
+              Shipping & Delivery
+            </TabsTrigger>
+            <TabsTrigger 
+              value="email-templates"
+              className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
+            >
+              Email Templates
+            </TabsTrigger>
+            <TabsTrigger 
+              value="payment-gateways"
+              className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
+            >
+              Payment Gateways
+            </TabsTrigger>
+            <TabsTrigger 
+              value="integrations"
+              className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
+            >
+              Integrations & API Keys
+            </TabsTrigger>
+          </TabsList>
         </div>
 
-        {/* Settings Content */}
-        <div className="lg:col-span-3" data-oid="nneid-2">
-          {renderActiveSection()}
-        </div>
-      </div>
+        <TabsContent value="general" className="mt-4">
+          <GeneralSettings />
+        </TabsContent>
+
+        <TabsContent value="shipping" className="mt-4">
+          <ShippingSettings />
+        </TabsContent>
+
+        <TabsContent value="email-templates" className="mt-4">
+          <EmailTemplates />
+        </TabsContent>
+
+        <TabsContent value="payment-gateways" className="mt-4">
+          <PaymentGateways />
+        </TabsContent>
+
+        <TabsContent value="integrations" className="mt-4">
+          <IntegrationsSettings />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

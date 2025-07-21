@@ -87,146 +87,182 @@ export function GeneralSettings() {
   };
 
   return (
-    <Card data-oid="cppz3sg">
-      <CardHeader data-oid="_hj6d_6">
-        <CardTitle className="flex items-center gap-2" data-oid="o_b_6e8">
-          <Globe className="h-5 w-5" data-oid="3rp0yyx" />
-          General Settings
-        </CardTitle>
-        <CardDescription data-oid="4znj6g7">
-          Configure basic site information and global settings that affect the
-          entire platform.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-6" data-oid="pv0g.oe">
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          data-oid="vy3ad44"
-        >
-          <div className="space-y-2" data-oid="oxv7m22">
-            <Label htmlFor="site-name" data-oid="58sk:k8">
-              Site Name
-            </Label>
-            <Input
-              id="site-name"
-              value={settings.siteName}
-              onChange={(e) =>
-                setSettings((prev) => ({ ...prev, siteName: e.target.value }))
-              }
-              placeholder="Enter site name"
-              data-oid="h3rpsxp"
-            />
-
-            <p className="text-xs text-gray-500" data-oid="g1:k0i5">
-              Used in browser titles and email templates
-            </p>
-          </div>
-
-          <div className="space-y-2" data-oid="n0jw02e">
-            <Label htmlFor="contact-email" data-oid="djr-7jv">
-              Public Contact Email
-            </Label>
-            <Input
-              id="contact-email"
-              type="email"
-              value={settings.contactEmail}
-              onChange={(e) =>
-                setSettings((prev) => ({
-                  ...prev,
-                  contactEmail: e.target.value,
-                }))
-              }
-              placeholder="contact@yoursite.com"
-              data-oid="s2a4wi4"
-            />
-
-            <p className="text-xs text-gray-500" data-oid="fg:jsfh">
-              Displayed on contact forms and support pages
-            </p>
-          </div>
-        </div>
-
-        <div className="space-y-2" data-oid="ahf99sl">
-          <Label htmlFor="logo-upload" data-oid="2_oia3b">
-            Site Logo
-          </Label>
-          <div className="flex items-center gap-4" data-oid="54y:i2i">
-            <div className="flex-1" data-oid="1jf9ov:">
+    <div className="space-y-6">
+      {/* Site Identity Card */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Globe className="h-5 w-5" />
+            Site Identity
+          </CardTitle>
+          <CardDescription>Basic site information and branding</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="site-name">Site Name</Label>
               <Input
-                id="logo-upload"
-                type="file"
-                accept=".jpg,.jpeg,.png,.svg"
-                onChange={handleLogoUpload}
-                className="cursor-pointer"
-                data-oid="f9hwm_w"
+                id="site-name"
+                value={settings.siteName}
+                onChange={(e) =>
+                  setSettings((prev) => ({ ...prev, siteName: e.target.value }))
+                }
+                placeholder="Enter site name"
               />
+              <p className="text-xs text-gray-500">
+                Used in browser titles and email templates
+              </p>
             </div>
-            <Button variant="outline" size="sm" data-oid="4:ckktb">
-              <Upload className="h-4 w-4 mr-2" data-oid="o_vqo8s" />
-              Upload
-            </Button>
+
+            <div className="space-y-2">
+              <Label htmlFor="contact-email">Public Contact Email</Label>
+              <Input
+                id="contact-email"
+                type="email"
+                value={settings.contactEmail}
+                onChange={(e) =>
+                  setSettings((prev) => ({
+                    ...prev,
+                    contactEmail: e.target.value,
+                  }))
+                }
+                placeholder="contact@yoursite.com"
+              />
+              <p className="text-xs text-gray-500">
+                Displayed on contact forms and support pages
+              </p>
+            </div>
           </div>
-          <p className="text-xs text-gray-500" data-oid="ua_ya44">
-            Accepts JPG, PNG, SVG files up to 2MB. Appears in site header and
-            emails.
-          </p>
-          {settings.logo && (
-            <div className="text-sm text-green-600" data-oid="jlxcec:">
-              Selected: {settings.logo.name}
+
+          <div className="space-y-2">
+            <Label htmlFor="logo-upload">Site Logo</Label>
+            <div className="flex items-center gap-4">
+              <div className="flex-1">
+                <Input
+                  id="logo-upload"
+                  type="file"
+                  accept=".jpg,.jpeg,.png,.svg"
+                  onChange={handleLogoUpload}
+                  className="cursor-pointer"
+                />
+              </div>
+              <Button variant="outline" size="sm">
+                <Upload className="h-4 w-4 mr-2" />
+                Upload
+              </Button>
             </div>
-          )}
-        </div>
+            <p className="text-xs text-gray-500">
+              Accepts JPG, PNG, SVG files up to 2MB. Appears in site header and
+              emails.
+            </p>
+            {settings.logo && (
+              <div className="text-sm text-green-600">
+                Selected: {settings.logo.name}
+              </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
 
-        <div className="space-y-2" data-oid="u70et_f">
-          <Label htmlFor="currency" data-oid="-bjid7r">
-            Store Currency
-          </Label>
-          <Select
-            value={settings.currency}
-            onValueChange={(value) =>
-              setSettings((prev) => ({ ...prev, currency: value }))
-            }
-            data-oid="9mserkn"
-          >
-            <SelectTrigger data-oid="q:xpm4v">
-              <SelectValue placeholder="Select currency" data-oid="8v9gh.g" />
-            </SelectTrigger>
-            <SelectContent data-oid="tl078da">
-              {currencies.map((currency) => (
-                <SelectItem
-                  key={currency.code}
-                  value={currency.code}
-                  data-oid="2nwhdba"
-                >
-                  <div className="flex items-center gap-2" data-oid="p59:wbj">
-                    <span className="font-mono text-sm" data-oid="5m2oe6n">
-                      {currency.symbol}
-                    </span>
-                    <span data-oid="1dwe5u5">
-                      {currency.name} ({currency.code})
-                    </span>
-                  </div>
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <p className="text-xs text-gray-500" data-oid="_xln8d8">
-            Affects product pricing display and order processing
-          </p>
-        </div>
+      {/* Localization Card */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Localization & Display</CardTitle>
+          <CardDescription>
+            Currency, language, and regional settings
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="currency">Store Currency</Label>
+              <Select
+                value={settings.currency}
+                onValueChange={(value) =>
+                  setSettings((prev) => ({ ...prev, currency: value }))
+                }
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select currency" />
+                </SelectTrigger>
+                <SelectContent>
+                  {currencies.map((currency) => (
+                    <SelectItem key={currency.code} value={currency.code}>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-sm">
+                          {currency.symbol}
+                        </span>
+                        <span>
+                          {currency.name} ({currency.code})
+                        </span>
+                      </div>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <p className="text-xs text-gray-500">
+                Affects product pricing display and order processing
+              </p>
+            </div>
 
-        <div className="pt-4 border-t" data-oid="hs0:tp7">
+            <div className="space-y-2">
+              <Label htmlFor="timezone">Default Timezone</Label>
+              <Select defaultValue="Asia/Singapore">
+                <SelectTrigger>
+                  <SelectValue placeholder="Select timezone" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Asia/Singapore">
+                    Asia/Singapore (SGT)
+                  </SelectItem>
+                  <SelectItem value="Asia/Kuala_Lumpur">
+                    Asia/Kuala_Lumpur (MYT)
+                  </SelectItem>
+                  <SelectItem value="Asia/Bangkok">
+                    Asia/Bangkok (ICT)
+                  </SelectItem>
+                  <SelectItem value="UTC">UTC</SelectItem>
+                </SelectContent>
+              </Select>
+              <p className="text-xs text-gray-500">
+                Used for displaying dates and scheduling
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="language">Default Language</Label>
+            <Select defaultValue="en">
+              <SelectTrigger className="md:w-1/2">
+                <SelectValue placeholder="Select language" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="en">English</SelectItem>
+                <SelectItem value="zh">中文 (Chinese)</SelectItem>
+                <SelectItem value="ms">Bahasa Malaysia</SelectItem>
+                <SelectItem value="th">ไทย (Thai)</SelectItem>
+              </SelectContent>
+            </Select>
+            <p className="text-xs text-gray-500">
+              Default language for the platform interface
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Save Button */}
+      <Card>
+        <CardContent className="pt-6">
           <Button
             onClick={handleSave}
             disabled={isLoading}
             className="bg-[#123B79] hover:bg-[#425DA0]"
-            data-oid="yb.7xw1"
           >
-            <Save className="mr-2 h-4 w-4" data-oid="r5ab.ko" />
+            <Save className="mr-2 h-4 w-4" />
             {isLoading ? "Saving..." : "Save Changes"}
           </Button>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

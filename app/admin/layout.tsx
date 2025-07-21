@@ -58,11 +58,32 @@ const sidebarItems = [
     title: "Settings",
     href: "/admin/settings",
     icon: Settings,
+    subItems: [
+      { title: "General", href: "/admin/settings" },
+      {
+        title: "Email Templates",
+        href: "/admin/settings?section=email-templates",
+      },
+      { title: "Shipping", href: "/admin/settings?section=shipping" },
+    ],
   },
   {
     title: "Security",
     href: "/admin/security",
     icon: Shield,
+    subItems: [
+      { title: "Dashboard", href: "/admin/security" },
+      { title: "Audit Log", href: "/admin/security?section=audit-log" },
+      {
+        title: "Access Control",
+        href: "/admin/security?section=access-control",
+      },
+      {
+        title: "Security Policies",
+        href: "/admin/security?section=security-policies",
+      },
+      { title: "API Keys", href: "/admin/security?section=api-keys" },
+    ],
   },
   {
     title: "Support",
