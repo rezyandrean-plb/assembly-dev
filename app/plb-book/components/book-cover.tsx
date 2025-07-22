@@ -1,44 +1,45 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import { motion } from "framer-motion"
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function BookCover() {
-  const [isHovered, setIsHovered] = useState(false)
-  const bookRef = useRef<HTMLDivElement>(null)
+  const [isHovered, setIsHovered] = useState(false);
+  const bookRef = useRef<HTMLDivElement>(null);
 
   // Track mouse position for 3D effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!bookRef.current || !isHovered) return
+      if (!bookRef.current || !isHovered) return;
 
-      const book = bookRef.current
-      const bookRect = book.getBoundingClientRect()
+      const book = bookRef.current;
+      const bookRect = book.getBoundingClientRect();
 
-      const mouseX = e.clientX - bookRect.left
-      const mouseY = e.clientY - bookRect.top
+      const mouseX = e.clientX - bookRect.left;
+      const mouseY = e.clientY - bookRect.top;
 
-      const rotateY = (mouseX / bookRect.width - 0.5) * 20
-      const rotateX = (mouseY / bookRect.height - 0.5) * -20
+      const rotateY = (mouseX / bookRect.width - 0.5) * 20;
+      const rotateX = (mouseY / bookRect.height - 0.5) * -20;
 
-      book.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
-    }
+      book.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    };
 
-    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [isHovered])
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isHovered]);
 
   return (
     <div
       className="book-wrapper"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
-        setIsHovered(false)
+        setIsHovered(false);
         if (bookRef.current) {
-          bookRef.current.style.transform = "perspective(1000px) rotateY(0) rotateX(0)"
+          bookRef.current.style.transform =
+            "perspective(1000px) rotateY(0) rotateX(0)";
         }
       }}
     >
@@ -66,10 +67,14 @@ export default function BookCover() {
         className="book-badge"
         initial={{ rotate: -5 }}
         animate={{ rotate: isHovered ? 5 : -5 }}
-        transition={{ duration: 0.5, yoyo: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+        transition={{
+          duration: 0.5,
+          yoyo: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
       >
         FREE!
       </motion.div>
     </div>
-  )
+  );
 }

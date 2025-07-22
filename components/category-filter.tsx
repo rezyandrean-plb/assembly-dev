@@ -1,23 +1,29 @@
-"use client"
+"use client";
 
 interface CategoryFilterProps {
   category: {
-    id: string
-    name: string
-  }
-  isActive: boolean
-  onClick: () => void
+    id: string;
+    name: string;
+  };
+  isActive: boolean;
+  onClick: () => void;
 }
 
-export default function CategoryFilter({ category, isActive, onClick }: CategoryFilterProps) {
+export default function CategoryFilter({
+  category,
+  isActive,
+  onClick,
+}: CategoryFilterProps) {
   return (
     <button
       className={`pb-2 px-1 font-medium text-sm whitespace-nowrap transition-colors ${
-        isActive ? "text-[#123B79] border-b-2 border-[#123B79]" : "text-gray-600 hover:text-gray-900"
+        isActive
+          ? "text-[#123B79] border-b-2 border-[#123B79]"
+          : "text-gray-600 hover:text-gray-900"
       }`}
       onClick={onClick}
     >
       {category.name}
     </button>
-  )
+  );
 }

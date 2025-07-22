@@ -1,31 +1,28 @@
 import type { CourseData } from "../components/course-detail-template"
+// import { getFacilitator } from "@/app/data/facilitators"
+
+// const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 19,
   title: "Property Portfolio Strategy Mastery",
   slug: "property-portfolio-strategy-mastery",
   level: "All Levels",
-  duration: "8 hours",
-  category: "investing",
+  duration: "To be determined",
+  category: "Workshop",
   price: "$2,899.00",
-  image: "/property-investment-masterclass.png",
+  image: "/property-portfolio-strategy-mastery.jpg",
   featured: true,
-  tags: ["Investing", "Workshop", "Portfolio Strategy"],
+  tags: ["Investing", "Workshop"],
   rating: 0,
   students: 0,
   instructors: [
     {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Adrian Lim",
-      image: "/images/instructors/adrian-lim.png",
-      bio: "Portfolio Strategy Specialist and Real Estate Analyst",
+      name: "To be announced",
+      image: "/images/instructors/placeholder.jpg",
     },
   ],
-  lastUpdated: "May 2023",
+  lastUpdated: "23/06/2025",
   description:
     "This comprehensive workshop is designed for serious property investors looking to build and manage a diversified property portfolio in Singapore. Moving beyond single property investments, this course teaches you how to think strategically about your entire property holdings, optimize for different market conditions, and create a resilient portfolio that generates consistent returns while managing risk effectively.",
   whatYouWillLearn: [

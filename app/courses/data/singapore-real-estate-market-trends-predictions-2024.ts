@@ -1,31 +1,39 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const grayce = getFacilitator("grayce-tan");
 
 export const courseData: CourseData = {
   id: 2002,
   title: "Singapore Real Estate Market Trends & Predictions 2024",
   slug: "singapore-real-estate-market-trends-predictions-2024",
   level: "All Levels",
-  duration: "2 hours",
-  category: "Market Trends",
+  duration: "1 hour 41 minutes",
+  category: "Webinar",
   price: "Free",
-  image: "/images/courses/sg-market-trends-2024.jpg",
+  image: "/singapore-real-estate-market-trends-predictions-2024.jpg",
   featured: false,
-  tags: ["Singapore", "Market Trends", "2024"],
+  tags: ["Webinar", "Market Trends"],
   rating: 0,
-  students: 0,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-    {
-      name: "Grayce Tan",
-      image: "/images/instructors/grayce-tan.png",
-      bio: "Property Investment Expert with over 15 years of experience",
-    }
-  ],
-  lastUpdated: "2024-06-01",
+  students: 46,
+  instructors: melvin && grayce
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: grayce.name,
+          image: grayce.image,
+          title: grayce.role,
+          bio: grayce.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description: "A comprehensive overview of Singapore's real estate market trends and predictions for 2024.",
   whatYouWillLearn: [
     "Analyze Singapore's 2024 real estate market",

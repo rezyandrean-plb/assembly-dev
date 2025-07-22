@@ -1,19 +1,22 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   testimonial: {
-    name: string
-    role: string
-    quote: string
-    image: string
-  }
-  delay: number
+    name: string;
+    role: string;
+    quote: string;
+    image: string;
+  };
+  delay: number;
 }
 
-export default function TestimonialCard({ testimonial, delay }: TestimonialCardProps) {
+export default function TestimonialCard({
+  testimonial,
+  delay,
+}: TestimonialCardProps) {
   return (
     <motion.div
       className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
@@ -25,7 +28,12 @@ export default function TestimonialCard({ testimonial, delay }: TestimonialCardP
     >
       <div className="flex items-center mb-4">
         <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
-          <Image src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} fill className="object-cover" />
+          <Image
+            src={testimonial.image || "/placeholder.svg"}
+            alt={testimonial.name}
+            fill
+            className="object-cover"
+          />
         </div>
         <div>
           <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
@@ -33,7 +41,9 @@ export default function TestimonialCard({ testimonial, delay }: TestimonialCardP
         </div>
       </div>
 
-      <blockquote className="text-gray-700 italic">"{testimonial.quote}"</blockquote>
+      <blockquote className="text-gray-700 italic">
+        "{testimonial.quote}"
+      </blockquote>
 
       <div className="mt-4 flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -49,5 +59,5 @@ export default function TestimonialCard({ testimonial, delay }: TestimonialCardP
         ))}
       </div>
     </motion.div>
-  )
+  );
 }

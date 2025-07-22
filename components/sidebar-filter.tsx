@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
 interface SidebarFilterProps {
   filterOptions: {
-    level: string[]
-    duration: string[]
-    category: string[]
-    type: string[] // Added new filter
-    price: string[] // Added new filter
-  }
+    level: string[];
+    duration: string[];
+    category: string[];
+    type: string[]; // Added new filter
+    price: string[]; // Added new filter
+  };
   selectedFilters: {
-    level: string[]
-    duration: string[]
-    category: string[]
-    type: string[] // Added new filter
-    price: string[] // Added new filter
-  }
-  toggleFilter: (type: string, value: string) => void
-  clearFilters: () => void
-  totalResults: number
-  isMobile?: boolean
+    level: string[];
+    duration: string[];
+    category: string[];
+    type: string[]; // Added new filter
+    price: string[]; // Added new filter
+  };
+  toggleFilter: (type: string, value: string) => void;
+  clearFilters: () => void;
+  totalResults: number;
+  isMobile?: boolean;
 }
 
 export default function SidebarFilter({
@@ -38,7 +38,10 @@ export default function SidebarFilter({
           selectedFilters.category.length > 0 ||
           selectedFilters.type.length > 0 ||
           selectedFilters.price.length > 0) && (
-          <button className="text-sm text-[#123B79] hover:underline" onClick={clearFilters}>
+          <button
+            className="text-sm text-[#123B79] hover:underline"
+            onClick={clearFilters}
+          >
             Clear all
           </button>
         )}
@@ -56,6 +59,7 @@ export default function SidebarFilter({
                 checked={selectedFilters.level.includes(level)}
                 onChange={() => toggleFilter("level", level)}
               />
+
               <span className="ml-2 text-sm text-gray-700">{level}</span>
             </label>
           ))}
@@ -74,6 +78,7 @@ export default function SidebarFilter({
                 checked={selectedFilters.type.includes(type)}
                 onChange={() => toggleFilter("type", type)}
               />
+
               <span className="ml-2 text-sm text-gray-700">{type}</span>
             </label>
           ))}
@@ -92,6 +97,7 @@ export default function SidebarFilter({
                 checked={selectedFilters.price.includes(price)}
                 onChange={() => toggleFilter("price", price)}
               />
+
               <span className="ml-2 text-sm text-gray-700">{price}</span>
             </label>
           ))}
@@ -110,6 +116,7 @@ export default function SidebarFilter({
                 checked={selectedFilters.duration.includes(duration)}
                 onChange={() => toggleFilter("duration", duration)}
               />
+
               <span className="ml-2 text-sm text-gray-700">{duration}</span>
             </label>
           ))}
@@ -128,6 +135,7 @@ export default function SidebarFilter({
                 checked={selectedFilters.category.includes(category)}
                 onChange={() => toggleFilter("category", category)}
               />
+
               <span className="ml-2 text-sm text-gray-700">{category}</span>
             </label>
           ))}
@@ -138,5 +146,5 @@ export default function SidebarFilter({
         {totalResults} {totalResults === 1 ? "result" : "results"}
       </div>
     </div>
-  )
+  );
 }

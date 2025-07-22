@@ -1,43 +1,67 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
+const george = getFacilitator("george-peng");
+const marc = getFacilitator("marc-chan");
+const shawntay = getFacilitator("shawn-tay");
+const jesley = getFacilitator("jesley-lim");
 
 export const courseData: CourseData = {
   id: 4,
   title: "Master New Launch Selection: 6 Exclusive Frameworks to Select the Winning New Launch in 2024/2025",
   slug: "master-new-launch-selection",
   level: "All Levels",
-  duration: "12 hours",
-  category: "Condo Investment",
+  duration: "3 hours 55 minutes",
+  category: "Condo",
   price: "$399.00",
   image: "/master-new-launch-selection.jpg",
   featured: true,
-  tags: ["Condo", "Masterclass", "New Launch"],
-  rating: 4.7,
-  students: 120,
-  instructors: [
-    ...getInstructors(["melvin-lim"]),
-    {
-      name: "Marc Chan",
-      image: "/images/instructors/marc-chan.png",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/images/instructors/yu-rong.png",
-    },
-    {
-      name: "Shawn Tay",
-      image: "/images/instructors/shawn-tay.png",
-    },
-    {
-      name: "George Peng",
-      image: "/images/instructors/george-peng.png",
-    },
-    {
-      name: "Jesley Lim",
-      image: "/images/instructors/jesley-lim.png",
-    },
-  ],
-  lastUpdated: "April 2025",
+  tags: ["Condo"],
+  rating: 0,
+  students: 7,
+  instructors: melvin && marc && yurong && george && shawntay && jesley
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: marc.name,
+          image: marc.image,
+          title: marc.role,
+          bio: marc.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+        {
+          name: shawntay.name,
+          image: shawntay.image,
+          title: shawntay.role,
+          bio: shawntay.bio,
+        },
+        {
+          name: jesley.name,
+          image: jesley.image,
+          title: jesley.role,
+          bio: jesley.bio,
+        },
+        {
+          name: george.name,
+          image: george.image,
+          title: george.role,
+          bio: george.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "23/06/2025",
   description: `This comprehensive masterclass is designed for property investors looking to make informed decisions when selecting new launch properties in Singapore. Through our 6 exclusive frameworks, you'll learn how to identify winning properties that align with your investment goals and maximize your returns.
 
 Our team of expert instructors brings decades of combined experience in the Singapore property market, offering you insights that go beyond what's available to the general public. You'll learn how to analyze market trends, evaluate developer track records, assess location potential, and much more.

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "../components/course-detail-template"
-import { courseData } from "../data/freehold-property-investment-strategy"
+import CourseDetailTemplate from "../components/course-detail-template";
+import { courseData } from "../data/freehold-property-investment-strategy";
 
 export default function FreeholdPropertyInvestmentStrategy() {
-  return <CourseDetailTemplate courseData={courseData} />
+  return <CourseDetailTemplate courseData={courseData} />;
 }

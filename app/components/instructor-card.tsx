@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 export interface InstructorProps {
-  name: string
-  image: string
+  name: string;
+  image: string;
+  title?: string;
+  bio?: string;
 }
 
 export function InstructorCard({ name, image }: InstructorProps) {
@@ -21,5 +23,5 @@ export function InstructorCard({ name, image }: InstructorProps) {
       </div>
       <h3 className="font-semibold text-center text-[#123B79]">{name}</h3>
     </div>
-  )
+  );
 }

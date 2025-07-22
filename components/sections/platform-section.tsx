@@ -1,24 +1,32 @@
-"use client"
+"use client";
 
-import { useRef, useState, useEffect } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useNetwork } from "@/context/network-context"
-import { Compass, Map, Navigation } from "lucide-react"
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useNetwork } from "@/context/network-context";
+import { Compass, Map, Navigation } from "lucide-react";
 
 export default function PlatformSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const { networkState } = useNetwork()
-  const [activeFeature, setActiveFeature] = useState(-1)
+  const { networkState } = useNetwork();
+  const [activeFeature, setActiveFeature] = useState(-1);
 
   // Transform values based on scroll
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const contentY = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50])
+  const contentOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 1, 1, 0],
+  );
+  const contentY = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [50, 0, 0, -50],
+  );
 
   // Add state for random paths
   const [randomPaths, setRandomPaths] = useState<string[]>([])
@@ -33,59 +41,73 @@ export default function PlatformSection() {
   // Update active feature based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return
+      if (!sectionRef.current) return;
 
-      const sectionTop = sectionRef.current.getBoundingClientRect().top
-      const sectionHeight = sectionRef.current.getBoundingClientRect().height
-      const scrollPosition = window.scrollY
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionHeight = sectionRef.current.getBoundingClientRect().height;
+      const scrollPosition = window.scrollY;
 
       // Calculate relative position within the section (0 to 1)
-      const relativePosition = Math.min(Math.max((window.innerHeight - sectionTop) / sectionHeight, 0), 1)
+      const relativePosition = Math.min(
+        Math.max((window.innerHeight - sectionTop) / sectionHeight, 0),
+        1,
+      );
 
       // Set active feature based on scroll position
       if (relativePosition < 0.4) {
-        setActiveFeature(-1) // No feature active yet
+        setActiveFeature(-1); // No feature active yet
       } else if (relativePosition < 0.6) {
-        setActiveFeature(0) // First feature
+        setActiveFeature(0); // First feature
       } else if (relativePosition < 0.8) {
-        setActiveFeature(1) // Second feature
+        setActiveFeature(1); // Second feature
       } else {
-        setActiveFeature(2) // Third feature
+        setActiveFeature(2); // Third feature
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    handleScroll() // Initial check
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const features = [
     {
       icon: <Compass className="h-8 w-8 text-[#123B79]" />,
       title: "Navigate Complexity",
-      description: "Find your way through Singapore's intricate real estate landscape with expert guidance.",
+      description:
+        "Find your way through Singapore's intricate real estate landscape with expert guidance.",
     },
     {
       icon: <Map className="h-8 w-8 text-[#123B79]" />,
       title: "Map Your Journey",
-      description: "Visualize your path to success with our structured learning approach.",
+      description:
+        "Visualize your path to success with our structured learning approach.",
     },
     {
       icon: <Navigation className="h-8 w-8 text-[#123B79]" />,
+
       title: "Connect the Dots",
-      description: "Discover how real estate, finance, and learning interconnect to create opportunities.",
+      description:
+        "Discover how real estate, finance, and learning interconnect to create opportunities.",
     },
-  ]
+  ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+    >
       <div className="absolute inset-0 bg-white/30 z-[1]"></div>
       {/* Dynamic Network Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+        >
           {/* Base network - complex background */}
           {randomPaths.map((d, i) => (
             <motion.path
@@ -141,7 +163,11 @@ export default function PlatformSection() {
               }}
               transition={{
                 pathLength: { duration: 1.5, delay: 0.3 },
-                opacity: { duration: 2, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" },
+                opacity: {
+                  duration: 2,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
+                },
               }}
             />
 
@@ -162,7 +188,8 @@ export default function PlatformSection() {
                   delay: i * 0.6,
                 }}
                 style={{
-                  offsetPath: "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
+                  offsetPath:
+                    "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
                 }}
               />
             ))}
@@ -341,21 +368,33 @@ export default function PlatformSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
-        <motion.div className="text-center mb-16" style={{ opacity: contentOpacity, y: contentY }}>
-          <h2 className="text-4xl font-bold text-[#123B79] mb-4">Your Platform for Mastery</h2>
+        <motion.div
+          className="text-center mb-16"
+          style={{ opacity: contentOpacity, y: contentY }}
+        >
+          <h2 className="text-4xl font-bold text-[#123B79] mb-4">
+            Your Platform for Mastery
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Assembly guides you through the interwoven network of opportunity in Singapore's real estate ecosystem
+            Assembly guides you through the interwoven network of opportunity in
+            Singapore's real estate ecosystem
           </p>
           <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
         </motion.div>
 
         <div className="flex flex-col items-center gap-12">
-          <motion.div className="w-full max-w-3xl" style={{ opacity: contentOpacity, y: contentY }}>
-            <h3 className="text-3xl font-bold text-[#123B79] mb-6 text-center">Navigating the Network</h3>
+          <motion.div
+            className="w-full max-w-3xl"
+            style={{ opacity: contentOpacity, y: contentY }}
+          >
+            <h3 className="text-3xl font-bold text-[#123B79] mb-6 text-center">
+              Navigating the Network
+            </h3>
             <p className="text-lg text-gray-700 mb-12 text-center">
-              In today's complex real estate landscape, success comes from understanding the interconnected nature of
-              property, finance, and continuous learning. Assembly provides the tools, knowledge, and community to help
-              you navigate this network with confidence.
+              In today's complex real estate landscape, success comes from
+              understanding the interconnected nature of property, finance, and
+              continuous learning. Assembly provides the tools, knowledge, and
+              community to help you navigate this network with confidence.
             </p>
 
             <div className="space-y-16">
@@ -385,14 +424,19 @@ export default function PlatformSection() {
                     }}
                     transition={{
                       duration: 2,
-                      repeat: activeFeature === index ? Number.POSITIVE_INFINITY : 0,
+                      repeat:
+                        activeFeature === index ? Number.POSITIVE_INFINITY : 0,
                     }}
                   >
                     {feature.icon}
                   </motion.div>
                   <div className="text-center md:text-left">
-                    <h4 className="text-2xl font-semibold text-[#123B79] mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 max-w-xl">{feature.description}</p>
+                    <h4 className="text-2xl font-semibold text-[#123B79] mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 max-w-xl">
+                      {feature.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -401,5 +445,5 @@ export default function PlatformSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

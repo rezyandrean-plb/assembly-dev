@@ -1,16 +1,19 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, BookOpen } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 export default function CtaSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-[#f0f4f8] relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-24 bg-[#f0f4f8] relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-gray-800">
           <motion.h2
@@ -34,7 +37,8 @@ export default function CtaSection() {
             }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            There's so much to learn that it doesn't all fit into one page. Click below to access our content.
+            There's so much to learn that it doesn't all fit into one page.
+            Click below to access our content.
           </motion.p>
 
           <div className="flex justify-center">
@@ -62,5 +66,5 @@ export default function CtaSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

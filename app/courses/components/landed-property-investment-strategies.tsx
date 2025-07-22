@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import CourseDetailTemplate from "../components/course-detail-template"
-import { courseData } from "../data/landed-property-investment-strategies"
+import CourseDetailTemplate from "../components/course-detail-template";
+import { courseData } from "../data/landed-property-investment-strategies";
 
 export default function LandedPropertyInvestmentStrategies() {
-  return <CourseDetailTemplate courseData={courseData} />
+  return <CourseDetailTemplate courseData={courseData} />;
 }

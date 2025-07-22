@@ -1,51 +1,54 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { ArrowLeft, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import { NetworkProvider } from "@/context/network-context"
-import NetworkBackground from "@/components/network-background"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import { NetworkProvider } from "@/context/network-context";
+import NetworkBackground from "@/components/network-background";
 
 export default function ForgotPasswordPage() {
-  const router = useRouter()
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
+    e.preventDefault();
+    setError("");
 
     if (!email) {
-      setError("Please enter your email address")
-      return
+      setError("Please enter your email address");
+      return;
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     // Simulate API call
     try {
       // In a real app, you would call your API here
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      setIsSubmitted(true)
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setIsSubmitted(true);
     } catch (err) {
-      setError("An error occurred. Please try again.")
+      setError("An error occurred. Please try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <NetworkProvider>
       <main className="relative overflow-hidden bg-[#F5F5F5] min-h-screen">
-        <NetworkBackground scrollY={0} scrollSpeed={0} windowHeight={0} opacity={0.3} />
-        <Navbar />
+        <NetworkBackground
+          scrollY={0}
+          scrollSpeed={0}
+          windowHeight={0}
+          opacity={0.3}
+        />
 
         <section className="pt-32 pb-16 relative z-10">
           <div className="container mx-auto px-4 relative z-10">
@@ -61,10 +64,13 @@ export default function ForgotPasswordPage() {
               </div>
 
               <div className="text-center mb-6">
-                <h1 className="text-2xl font-bold text-[#123B79]">Reset Your Password</h1>
+                <h1 className="text-2xl font-bold text-[#123B79]">
+                  Reset Your Password
+                </h1>
                 {!isSubmitted && (
                   <p className="text-gray-600 mt-2">
-                    Enter your email address and we'll send you instructions to reset your password.
+                    Enter your email address and we'll send you instructions to
+                    reset your password.
                   </p>
                 )}
               </div>
@@ -72,7 +78,10 @@ export default function ForgotPasswordPage() {
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Email Address
                     </label>
                     <input
@@ -84,10 +93,17 @@ export default function ForgotPasswordPage() {
                       placeholder="your@email.com"
                       required
                     />
-                    {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
+
+                    {error && (
+                      <p className="mt-1 text-sm text-red-600">{error}</p>
+                    )}
                   </div>
 
-                  <Button type="submit" className="w-full bg-[#123B79] hover:bg-[#0A2A5E]" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <span className="flex items-center">
                         <svg
@@ -122,7 +138,10 @@ export default function ForgotPasswordPage() {
 
                   <div className="text-center text-sm text-gray-500 pt-4">
                     Remember your password?{" "}
-                    <a href="/login" className="text-[#123B79] hover:underline font-medium">
+                    <a
+                      href="/login"
+                      className="text-[#123B79] hover:underline font-medium"
+                    >
                       Login instead
                     </a>
                   </div>
@@ -137,28 +156,44 @@ export default function ForgotPasswordPage() {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-800 mb-2">Check Your Email</h2>
+                  <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                    Check Your Email
+                  </h2>
                   <p className="text-gray-600 mb-3">
-                    If <span className="font-medium">{email}</span> is associated with an existing account, you'll
-                    receive password reset instructions shortly.
+                    If <span className="font-medium">{email}</span> is
+                    associated with an existing account, you'll receive password
+                    reset instructions shortly.
                   </p>
                   <div className="text-sm text-gray-500 mb-6">
                     <p className="mb-2">Haven't received an email?</p>
                     <ul className="space-y-1">
-                      <li>• Please wait a few minutes and check your spam folder</li>
+                      <li>
+                        • Please wait a few minutes and check your spam folder
+                      </li>
                       <li>• You may try again if the email doesn't arrive</li>
                       <li>
                         • If you don't have an account with us, please{" "}
-                        <a href="/register" className="text-[#123B79] hover:underline font-medium">
+                        <a
+                          href="/register"
+                          className="text-[#123B79] hover:underline font-medium"
+                        >
                           register here
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <Button onClick={() => router.push("/login")} className="bg-[#123B79] hover:bg-[#0A2A5E]">
+                  <Button
+                    onClick={() => router.push("/login")}
+                    className="bg-[#123B79] hover:bg-[#0A2A5E]"
+                  >
                     Return to Login
                   </Button>
                 </div>
@@ -166,9 +201,7 @@ export default function ForgotPasswordPage() {
             </div>
           </div>
         </section>
-
-        <Footer />
       </main>
     </NetworkProvider>
-  )
+  );
 }

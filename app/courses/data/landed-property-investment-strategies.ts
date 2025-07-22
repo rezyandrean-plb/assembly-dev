@@ -1,26 +1,32 @@
 import type { CourseData } from "../components/course-detail-template"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
 
 export const courseData: CourseData = {
   id: 24,
   title: "Landed Property Investment Strategies",
   slug: "landed-property-investment-strategies",
   level: "All Levels",
-  duration: "1 hour",
-  category: "landed",
+  duration: "1 hour 17 minutes",
+  category: "Webinar",
   price: "Free",
   image: "/landed-property-investment-strategies.jpg",
   featured: true,
-  tags: ["Landed", "Investment", "Webinar"],
-  rating: 4.9,
-  students: 780,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "https://www.propertylimbrothers.com/wp-content/uploads/2017/10/Melvin-Lim_Headshot_V2_900px.jpg",
-      bio: "Property Investment Expert with over 15 years of experience",
-    },
-  ],
-  lastUpdated: "April 2023",
+  tags: ["Landed", "Webinar"],
+  rating: 0,
+  students: 9,
+  instructors: melvin
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+      ]
+      :[],
+  lastUpdated: "10/09/2024",
   description:
     "Landed properties represent a unique segment in Singapore's real estate market, offering distinct investment characteristics and opportunities. This webinar delves into specialized strategies for investing in landed properties, covering everything from selection criteria and valuation methods to renovation strategies and long-term wealth building approaches. Whether you're a seasoned investor or considering your first landed property, this session will provide valuable insights into this premium market segment.",
   whatYouWillLearn: [

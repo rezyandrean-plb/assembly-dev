@@ -1,148 +1,244 @@
-"use client"
+"use client";
 
-import type React from "react"
+import React, { useState, useEffect } from "react";
+import { useAuth } from "@/context/auth-context";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  User,
+  Settings,
+  BookOpen,
+  Heart,
+  ShoppingBag,
+  LogOut,
+  Menu,
+  X,
+  FileText,
+  BarChart3,
+  Award,
+} from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Home, User, BookOpen, Award, Heart, MessageSquare, LogOut } from "lucide-react"
-import NetworkBackground from "@/components/network-background"
-import { Suspense } from "react"
-import ProfileNavbar from "../components/profile-navbar"
-
-export default function ProfileLayout({ children }: { children: React.ReactNode }) {
-  const [scrollY, setScrollY] = useState(0)
-  const pathname = usePathname()
+export default function ProfileLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { isLoggedIn, user, logout } = useAuth();
+  const router = useRouter();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
+    if (!isLoggedIn) {
+      router.push("/login");
     }
+  }, [isLoggedIn, router]);
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  useEffect(() => {
+    const handleResize = () => {
+      const desktop = window.innerWidth >= 1024;
+      setIsDesktop(desktop);
+      if (desktop) {
+        setIsSidebarOpen(true);
+      }
+    };
 
-  const isActive = (path: string) => {
-    return pathname === path
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!isLoggedIn) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Checking authentication...</p>
+        </div>
+      </div>
+    );
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50 pt-16 relative">
-      <NetworkBackground scrollY={scrollY} scrollSpeed={0.5} windowHeight={0} opacity={0.05} />
+  const sidebarItems = [
+    {
+      name: "Profile Overview",
+      href: "/profile",
+      icon: User,
+      description: "View and edit your profile",
+    },
+    {
+      name: "Account Details",
+      href: "/profile/details",
+      icon: Settings,
+      description: "Manage your account information",
+    },
+    {
+      name: "Learning Progress",
+      href: "/profile/learning-progress",
+      icon: BarChart3,
+      description: "Track your learning journey",
+    },
+    {
+      name: "Completed Courses",
+      href: "/profile/completed-courses",
+      icon: Award,
+      description: "View certificates and achievements",
+    },
+    {
+      name: "Purchase History",
+      href: "/profile/purchase-history",
+      icon: ShoppingBag,
+      description: "View your past orders",
+    },
+    {
+      name: "Wishlist",
+      href: "/profile/wishlist",
+      icon: Heart,
+      description: "Courses you want to take",
+    },
+    {
+      name: "Reviews",
+      href: "/profile/reviews",
+      icon: BookOpen,
+      description: "Your course reviews",
+    },
+    {
+      name: "Settings",
+      href: "/profile/settings",
+      icon: Settings,
+      description: "Account preferences",
+    },
+    {
+      name: "Terms of Use",
+      href: "/profile/terms",
+      icon: FileText,
+      description: "View terms and policies",
+    },
+  ];
 
-      {/* Use the ProfileNavbar component */}
-      <ProfileNavbar />
+  return (
+    <div className="min-h-screen bg-gray-50 pt-16">
+      {/* Mobile sidebar overlay */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
       <div className="flex">
         {/* Sidebar */}
-        <div
-          className="w-64 fixed left-0 top-16 bg-white shadow-sm z-10 h-screen"
-          style={{ maxHeight: "calc(100vh - 16px)", overflowY: "auto" }}
+        <motion.aside
+          initial={false}
+          animate={{
+            x: isDesktop ? 0 : isSidebarOpen ? 0 : "-100%",
+          }}
+          className="fixed top-16 left-0 z-40 w-80 h-[calc(100vh-4rem)] bg-white shadow-lg lg:relative lg:top-0 lg:z-auto lg:h-auto overflow-y-auto"
         >
-          <div className="flex flex-col h-full">
-            <div className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden">
-                  <Image
-                    src="/profile-placeholder.png"
-                    alt="Melvin Lim"
-                    width={40}
-                    height={40}
-                    className="object-cover"
-                  />
+          <div className="p-6">
+            {/* Mobile close button */}
+            <div className="flex justify-between items-center lg:hidden mb-6">
+              <h2 className="text-xl font-bold text-gray-800">Profile Menu</h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                <X className="h-5 w-5" />
+              </Button>
+            </div>
+
+            {/* User info */}
+            <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg mb-6">
+              {user?.image ? (
+                <img
+                  src={user.image}
+                  alt={user.name || "User"}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
+                />
+              ) : (
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
+                  {user?.name
+                    ? user.name.charAt(0).toUpperCase()
+                    : user?.email?.charAt(0).toUpperCase() || "U"}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-sm font-medium text-gray-900 truncate">Melvin Lim</h3>
-                </div>
+              )}
+              <div>
+                <h3 className="font-semibold text-gray-800 text-lg">
+                  {user?.name || "User"}
+                </h3>
+                <p className="text-gray-600 text-sm">{user?.email}</p>
               </div>
             </div>
 
-            <div className="px-3 py-2">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 mb-2">MAIN NAVIGATION</p>
-              <Link
-                href="/profile"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <Home size={18} />
-                Dashboard
-              </Link>
-              <Link
-                href="/profile/details"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/details")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <User size={18} />
-                Learning Preferences
-              </Link>
-              <Link
-                href="/profile/learning-progress"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/learning-progress")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <BookOpen size={18} />
-                Learning Progress
-              </Link>
-              <Link
-                href="/profile/completed-courses"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/completed-courses")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <Award size={18} />
-                Completed Courses
-              </Link>
-              <Link
-                href="/profile/reviews"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/reviews")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <MessageSquare size={18} />
-                My Reviews
-              </Link>
-              <Link
-                href="/profile/wishlist"
-                className={`w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 ${
-                  isActive("/profile/wishlist")
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                }`}
-              >
-                <Heart size={18} />
-                Wishlist
-              </Link>
-            </div>
+            {/* Navigation */}
+            <nav className="space-y-2">
+              {sidebarItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsSidebarOpen(false)}
+                >
+                  <item.icon className="h-5 w-5 text-gray-500 group-hover:text-blue-600" />
 
-            <div className="mt-auto p-4">
-              <button className="w-full px-3 py-2 rounded-lg font-medium text-sm flex items-center gap-3 text-red-600 hover:bg-red-50">
-                <LogOut size={18} />
-                Logout
+                  <div>
+                    <div className="font-medium text-gray-800 group-hover:text-blue-600">
+                      {item.name}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {item.description}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              {/* Logout */}
+              <button
+                onClick={() => {
+                  logout();
+                  router.push("/");
+                }}
+                className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors group mt-6 border-t border-gray-200 pt-6"
+              >
+                <LogOut className="h-5 w-5 text-red-500" />
+                <div className="text-left">
+                  <div className="font-medium text-red-600">Log Out</div>
+                  <div className="text-xs text-red-400">
+                    Sign out of your account
+                  </div>
+                </div>
               </button>
-            </div>
+            </nav>
           </div>
-        </div>
+        </motion.aside>
 
-        {/* Main Content */}
-        <div className="ml-64 flex-1 pb-16 min-h-screen">
-          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        {/* Main content */}
+        <div className="flex-1 lg:ml-0">
+          {/* Mobile header */}
+          <div className="lg:hidden bg-white shadow-sm border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsSidebarOpen(true)}
+              className="text-gray-600"
+            >
+              <Menu className="h-5 w-5 mr-2" />
+              Profile Menu
+            </Button>
+          </div>
+
+          {/* Content */}
+          <main className="p-6">{children}</main>
         </div>
       </div>
     </div>
-  )
+  );
 }

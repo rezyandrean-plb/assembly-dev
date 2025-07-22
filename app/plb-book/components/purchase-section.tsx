@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useRef, useState } from "react"
-import { useScrollAnimation } from "../hooks/use-scroll-animation"
-import anime from "animejs"
-import { Download, ShoppingBag } from "lucide-react"
-import { useCart } from "@/components/cart-context"
-import toast from "react-hot-toast"
+import { useRef, useState } from "react";
+import { useScrollAnimation } from "../hooks/use-scroll-animation";
+import anime from "animejs";
+import { Download, ShoppingBag } from "lucide-react";
+import { useCart } from "@/components/cart-context";
+import toast from "react-hot-toast";
 
 export default function PurchaseSection() {
-  const { addToCart } = useCart()
-  const [isAddingToCart, setIsAddingToCart] = useState(false)
+  const { addToCart } = useCart();
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
 
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const subtitleRef = useRef<HTMLParagraphElement>(null)
-  const priceRef = useRef<HTMLDivElement>(null)
-  const buttonsRef = useRef<HTMLDivElement>(null)
-  const guaranteeRef = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const priceRef = useRef<HTMLDivElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const guaranteeRef = useRef<HTMLDivElement>(null);
 
   const titleAnimRef = useScrollAnimation(() => {
     return anime({
@@ -23,8 +23,8 @@ export default function PurchaseSection() {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 800,
-    })
-  })
+    });
+  });
 
   const subtitleAnimRef = useScrollAnimation(() => {
     return anime({
@@ -33,8 +33,8 @@ export default function PurchaseSection() {
       translateY: [20, 0],
       duration: 800,
       delay: 200,
-    })
-  })
+    });
+  });
 
   const priceAnimRef = useScrollAnimation(() => {
     return anime({
@@ -43,8 +43,8 @@ export default function PurchaseSection() {
       translateY: [20, 0],
       duration: 800,
       delay: 400,
-    })
-  })
+    });
+  });
 
   const buttonsAnimRef = useScrollAnimation(() => {
     return anime({
@@ -53,8 +53,8 @@ export default function PurchaseSection() {
       translateY: [20, 0],
       duration: 800,
       delay: 600,
-    })
-  })
+    });
+  });
 
   const guaranteeAnimRef = useScrollAnimation(() => {
     return anime({
@@ -63,23 +63,23 @@ export default function PurchaseSection() {
       translateY: [20, 0],
       duration: 800,
       delay: 800,
-    })
-  })
+    });
+  });
 
   const handlePaperbackClick = () => {
-    setIsAddingToCart(true)
+    setIsAddingToCart(true);
     addToCart({
       id: "plb-paperback",
       title: "Property Launch Bible (Paperback)",
       slug: "plb-book-paperback",
       price: "$29.99",
       image: "/images/plb-book-paperback.jpg",
-      instructor: "Assembly SG",
+      author: "PropertyLimBrothers",
       type: "paperback",
-    })
-    toast.success("Paperback added to your cart!")
-    setIsAddingToCart(false)
-  }
+    });
+    toast.success("Paperback added to your cart!");
+    setIsAddingToCart(false);
+  };
 
   return (
     <section className="section purchase-section" id="purchase">
@@ -88,10 +88,10 @@ export default function PurchaseSection() {
           className="section-title text-center"
           ref={(el) => {
             if (titleRef.current === null && el !== null) {
-              titleRef.current = el
+              titleRef.current = el;
             }
             if (typeof titleAnimRef === "function") {
-              titleAnimRef(el)
+              titleAnimRef(el);
             }
           }}
         >
@@ -102,10 +102,10 @@ export default function PurchaseSection() {
           className="section-subtitle text-center"
           ref={(el) => {
             if (subtitleRef.current === null && el !== null) {
-              subtitleRef.current = el
+              subtitleRef.current = el;
             }
             if (typeof subtitleAnimRef === "function") {
-              subtitleAnimRef(el)
+              subtitleAnimRef(el);
             }
           }}
         >
@@ -116,10 +116,10 @@ export default function PurchaseSection() {
           className="price-container"
           ref={(el) => {
             if (priceRef.current === null && el !== null) {
-              priceRef.current = el
+              priceRef.current = el;
             }
             if (typeof priceAnimRef === "function") {
-              priceAnimRef(el)
+              priceAnimRef(el);
             }
           }}
         >
@@ -127,7 +127,9 @@ export default function PurchaseSection() {
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-2">E-Book</h3>
               <div className="flex items-center justify-center">
-                <span className="original-price line-through text-gray-500 mr-2">$29</span>
+                <span className="original-price line-through text-gray-500 mr-2">
+                  $29
+                </span>
                 <span className="price text-green-600 font-bold">FREE</span>
               </div>
             </div>
@@ -145,10 +147,10 @@ export default function PurchaseSection() {
           className="form-container"
           ref={(el) => {
             if (buttonsRef.current === null && el !== null) {
-              buttonsRef.current = el
+              buttonsRef.current = el;
             }
             if (typeof buttonsAnimRef === "function") {
-              buttonsAnimRef(el)
+              buttonsAnimRef(el);
             }
           }}
         >
@@ -178,7 +180,8 @@ export default function PurchaseSection() {
             </button>
           </div>
           <p className="form-disclaimer mt-4 text-center">
-            E-book will redirect to Amazon in a new tab. Paperback will be added to your cart.
+            E-book will redirect to Amazon in a new tab. Paperback will be added
+            to your cart.
           </p>
         </div>
 
@@ -186,20 +189,21 @@ export default function PurchaseSection() {
           className="guarantee-container"
           ref={(el) => {
             if (guaranteeRef.current === null && el !== null) {
-              guaranteeRef.current = el
+              guaranteeRef.current = el;
             }
             if (typeof guaranteeAnimRef === "function") {
-              guaranteeAnimRef(el)
+              guaranteeAnimRef(el);
             }
           }}
         >
           <h3 className="guarantee-title">Our Guarantee</h3>
           <p className="guarantee-text">
-            We're confident that the Property Launch Bible will provide you with valuable insights and strategies. If
-            you're not completely satisfied, simply let us know and we'll address any concerns.
+            We're confident that the Property Launch Bible will provide you with
+            valuable insights and strategies. If you're not completely
+            satisfied, simply let us know and we'll address any concerns.
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }

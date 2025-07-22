@@ -1,16 +1,19 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, BookOpen, Users } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BookOpen, Users } from "lucide-react";
 
 export default function CtaSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden"
+    >
       {/* Animated background gradient */}
       <motion.div
         className="absolute inset-0"
@@ -39,7 +42,8 @@ export default function CtaSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Take the next step in your real estate journey with Assembly's resources and network of professionals
+            Take the next step in your real estate journey with Assembly's
+            resources and network of professionals
           </motion.p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -81,5 +85,5 @@ export default function CtaSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,19 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Search, Filter, X, ChevronDown } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Search, Filter, X, ChevronDown } from "lucide-react";
 
 interface CourseFilterProps {
-  onFilterChange: (filter: string) => void
-  onSearchChange: (search: string) => void
-  activeFilter: string
-  searchQuery: string
+  onFilterChange: (filter: string) => void;
+  onSearchChange: (search: string) => void;
+  activeFilter: string;
+  searchQuery: string;
 }
 
-export default function CourseFilter({ onFilterChange, onSearchChange, activeFilter, searchQuery }: CourseFilterProps) {
-  const [showMobileFilters, setShowMobileFilters] = useState(false)
+export default function CourseFilter({
+  onFilterChange,
+  onSearchChange,
+  activeFilter,
+  searchQuery,
+}: CourseFilterProps) {
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   const filters = [
     { id: "all", label: "All Courses" },
@@ -23,21 +28,21 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
     { id: "skills", label: "Skills" },
     { id: "legal", label: "Legal" },
     { id: "analysis", label: "Analysis" },
-  ]
+  ];
 
   const levels = [
     { id: "all-levels", label: "All Levels" },
     { id: "beginner", label: "Beginner" },
     { id: "intermediate", label: "Intermediate" },
     { id: "advanced", label: "Advanced" },
-  ]
+  ];
 
   const durations = [
     { id: "any-duration", label: "Any Duration" },
     { id: "short", label: "0-4 weeks" },
     { id: "medium", label: "5-8 weeks" },
     { id: "long", label: "9+ weeks" },
-  ]
+  ];
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 mb-12">
@@ -45,7 +50,11 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
       <div className="hidden md:block">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="relative flex-grow">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            <Search
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size={20}
+            />
+
             <input
               type="text"
               placeholder="Search courses by name or topic..."
@@ -53,6 +62,7 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
             />
+
             {searchQuery && (
               <button
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
@@ -75,7 +85,9 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
                     <button
                       key={filter.id}
                       className={`w-full text-left px-3 py-2 rounded-md text-sm ${
-                        activeFilter === filter.id ? "bg-[#123B79] text-white" : "hover:bg-gray-100 text-gray-700"
+                        activeFilter === filter.id
+                          ? "bg-[#123B79] text-white"
+                          : "hover:bg-gray-100 text-gray-700"
                       }`}
                       onClick={() => onFilterChange(filter.id)}
                     >
@@ -131,7 +143,11 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
       <div className="md:hidden">
         <div className="flex gap-2 mb-4">
           <div className="relative flex-grow">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            <Search
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size={20}
+            />
+
             <input
               type="text"
               placeholder="Search courses..."
@@ -139,6 +155,7 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
             />
+
             {searchQuery && (
               <button
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
@@ -148,7 +165,11 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
               </button>
             )}
           </div>
-          <Button variant="outline" className="flex-shrink-0" onClick={() => setShowMobileFilters(!showMobileFilters)}>
+          <Button
+            variant="outline"
+            className="flex-shrink-0"
+            onClick={() => setShowMobileFilters(!showMobileFilters)}
+          >
             <Filter size={20} />
           </Button>
         </div>
@@ -168,9 +189,13 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
                   {filters.map((filter) => (
                     <Button
                       key={filter.id}
-                      variant={activeFilter === filter.id ? "default" : "outline"}
+                      variant={
+                        activeFilter === filter.id ? "default" : "outline"
+                      }
                       size="sm"
-                      className={activeFilter === filter.id ? "bg-[#123B79]" : ""}
+                      className={
+                        activeFilter === filter.id ? "bg-[#123B79]" : ""
+                      }
                       onClick={() => onFilterChange(filter.id)}
                     >
                       {filter.label}
@@ -205,5 +230,5 @@ export default function CourseFilter({ onFilterChange, onSearchChange, activeFil
         )}
       </div>
     </div>
-  )
+  );
 }

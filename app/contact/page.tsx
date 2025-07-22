@@ -1,30 +1,38 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { useForm } from "react-hook-form"
-import { Send, CheckCircle, MapPin, Phone, Mail, ChevronDown } from "lucide-react"
-import NetworkBackground from "@/components/network-background"
-import { Button } from "@/components/ui/button"
-import ContactAnimation from "./components/contact-animation"
-import ContactMap from "./components/contact-map"
-import { countries } from "./data/countries"
-import Navbar from "@/components/navbar"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useForm } from "react-hook-form";
+import {
+  Send,
+  CheckCircle,
+  MapPin,
+  Phone,
+  Mail,
+  ChevronDown,
+} from "lucide-react";
+import NetworkBackground from "@/components/network-background";
+import { Button } from "@/components/ui/button";
+import ContactAnimation from "./components/contact-animation";
+import ContactMap from "./components/contact-map";
+import { countries } from "./data/countries";
 
 type FormData = {
-  name: string
-  email: string
-  phone: string
-  countryCode: string
-  message: string
-  interests: string[]
-}
+  name: string;
+  email: string;
+  phone: string;
+  countryCode: string;
+  message: string;
+  interests: string[];
+};
 
 export default function ContactPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [selectedInterests, setSelectedInterests] = useState<string[]>([])
-  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false)
-  const [selectedCountry, setSelectedCountry] = useState(countries.find((c) => c.code === "+65") || countries[0])
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(
+    countries.find((c) => c.code === "+65") || countries[0],
+  );
 
   const {
     register,
@@ -37,50 +45,51 @@ export default function ContactPage() {
     defaultValues: {
       countryCode: "+65",
     },
-  })
+  });
 
   const interestOptions = [
     { id: "courses", label: "Courses" },
     { id: "careers", label: "Careers" },
     { id: "book", label: "PLB Book" },
     { id: "others", label: "Others" },
-  ]
+  ];
 
   const toggleInterest = (id: string) => {
-    setSelectedInterests((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]))
-  }
+    setSelectedInterests((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
+  };
 
   const selectCountry = (country: (typeof countries)[0]) => {
-    setSelectedCountry(country)
-    setValue("countryCode", country.code)
-    setIsCountryDropdownOpen(false)
-  }
+    setSelectedCountry(country);
+    setValue("countryCode", country.code);
+    setIsCountryDropdownOpen(false);
+  };
 
   const onSubmit = async (data: FormData) => {
     // Include selected interests in the form data
-    data.interests = selectedInterests
+    data.interests = selectedInterests;
 
     // Combine country code with phone number
-    const fullPhoneNumber = `${data.countryCode}${data.phone}`
-    console.log("Full phone number:", fullPhoneNumber)
+    const fullPhoneNumber = `${data.countryCode}${data.phone}`;
+    console.log("Full phone number:", fullPhoneNumber);
 
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    console.log("Form submitted:", data)
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    console.log("Form submitted:", data);
 
-    setIsSubmitted(true)
-    reset()
-    setSelectedInterests([])
+    setIsSubmitted(true);
+    reset();
+    setSelectedInterests([]);
 
     // Reset success message after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
-    }, 5000)
-  }
+      setIsSubmitted(false);
+    }, 5000);
+  };
 
   return (
     <>
-      <Navbar />
       <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-blue-50 to-white">
         {/* Background */}
         <div className="absolute inset-0 z-0 opacity-20">
@@ -125,7 +134,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                  <h3 className="text-2xl font-bold text-blue-900 mb-6">Contact Information</h3>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-6">
+                    Contact Information
+                  </h3>
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
@@ -133,8 +144,13 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-blue-600" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">Our Location</h4>
-                        <p className="text-gray-600">Oxley Bizhub 2, #11-15, 62 Ubi Road 1, Singapore 408734</p>
+                        <h4 className="font-semibold text-gray-900">
+                          Our Location
+                        </h4>
+                        <p className="text-gray-600">
+                          Oxley Bizhub 2, #11-15, 62 Ubi Road 1, Singapore
+                          408734
+                        </p>
                       </div>
                     </div>
 
@@ -143,7 +159,9 @@ export default function ContactPage() {
                         <Phone className="h-6 w-6 text-blue-600" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">Phone Number</h4>
+                        <h4 className="font-semibold text-gray-900">
+                          Phone Number
+                        </h4>
                         <p className="text-gray-600">+65 6232 6719</p>
                       </div>
                     </div>
@@ -153,7 +171,9 @@ export default function ContactPage() {
                         <Mail className="h-6 w-6 text-blue-600" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">Email Address</h4>
+                        <h4 className="font-semibold text-gray-900">
+                          Email Address
+                        </h4>
                         <p className="text-gray-600">hello@assembly.sg</p>
                       </div>
                     </div>
@@ -182,9 +202,13 @@ export default function ContactPage() {
                         exit={{ opacity: 0, scale: 0.8 }}
                       >
                         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                        <h3 className="text-xl font-semibold text-green-800 mb-2">Thank You!</h3>
+
+                        <h3 className="text-xl font-semibold text-green-800 mb-2">
+                          Thank You!
+                        </h3>
                         <p className="text-green-700">
-                          Your message has been sent successfully. We'll get back to you shortly.
+                          Your message has been sent successfully. We'll get
+                          back to you shortly.
                         </p>
                       </motion.div>
                     ) : (
@@ -195,7 +219,10 @@ export default function ContactPage() {
                         exit={{ opacity: 0 }}
                       >
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                          <label
+                            htmlFor="name"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                          >
                             Full Name <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -203,14 +230,25 @@ export default function ContactPage() {
                             type="text"
                             className={`w-full px-4 py-3 rounded-lg border ${errors.name ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
                             placeholder="Your name"
-                            {...register("name", { required: "Name is required" })}
+                            {...register("name", {
+                              required: "Name is required",
+                            })}
                           />
-                          {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
+
+                          {errors.name && (
+                            <p className="mt-1 text-sm text-red-600">
+                              {errors.name.message}
+                            </p>
+                          )}
                         </div>
 
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                            Email Address <span className="text-red-500">*</span>
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                          >
+                            Email Address{" "}
+                            <span className="text-red-500">*</span>
                           </label>
                           <input
                             id="email"
@@ -220,16 +258,25 @@ export default function ContactPage() {
                             {...register("email", {
                               required: "Email is required",
                               pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                value:
+                                  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                 message: "Invalid email address",
                               },
                             })}
                           />
-                          {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
+
+                          {errors.email && (
+                            <p className="mt-1 text-sm text-red-600">
+                              {errors.email.message}
+                            </p>
+                          )}
                         </div>
 
                         <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                          <label
+                            htmlFor="phone"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                          >
                             Phone Number <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
@@ -239,10 +286,18 @@ export default function ContactPage() {
                                 <button
                                   type="button"
                                   className="flex items-center gap-1 px-2 py-3 rounded-l-lg border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
-                                  onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
+                                  onClick={() =>
+                                    setIsCountryDropdownOpen(
+                                      !isCountryDropdownOpen,
+                                    )
+                                  }
                                 >
-                                  <span className="text-base">{selectedCountry.flag}</span>
-                                  <span className="text-sm whitespace-nowrap">{selectedCountry.code}</span>
+                                  <span className="text-base">
+                                    {selectedCountry.flag}
+                                  </span>
+                                  <span className="text-sm whitespace-nowrap">
+                                    {selectedCountry.code}
+                                  </span>
                                   <ChevronDown className="h-3 w-3 text-gray-500" />
                                 </button>
 
@@ -271,9 +326,15 @@ export default function ContactPage() {
                                           className="w-full text-left px-3 py-1.5 hover:bg-blue-50 flex items-center gap-2 text-sm"
                                           onClick={() => selectCountry(country)}
                                         >
-                                          <span className="text-base">{country.flag}</span>
-                                          <span className="truncate">{country.name}</span>
-                                          <span className="text-gray-500 ml-auto text-xs">{country.code}</span>
+                                          <span className="text-base">
+                                            {country.flag}
+                                          </span>
+                                          <span className="truncate">
+                                            {country.name}
+                                          </span>
+                                          <span className="text-gray-500 ml-auto text-xs">
+                                            {country.code}
+                                          </span>
                                         </button>
                                       ))}
                                     </div>
@@ -286,7 +347,9 @@ export default function ContactPage() {
                                 id="phone"
                                 type="tel"
                                 className={`flex-1 px-4 py-3 rounded-r-lg border ${
-                                  errors.phone ? "border-red-500" : "border-gray-300"
+                                  errors.phone
+                                    ? "border-red-500"
+                                    : "border-gray-300"
                                 } focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
                                 placeholder="Your phone number"
                                 {...register("phone", {
@@ -294,18 +357,26 @@ export default function ContactPage() {
                                 })}
                               />
                             </div>
-                            {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
+                            {errors.phone && (
+                              <p className="mt-1 text-sm text-red-600">
+                                {errors.phone.message}
+                              </p>
+                            )}
 
                             {/* Add click outside handler to close dropdown */}
                             {isCountryDropdownOpen && (
-                              <div className="fixed inset-0 z-0" onClick={() => setIsCountryDropdownOpen(false)}></div>
+                              <div
+                                className="fixed inset-0 z-0"
+                                onClick={() => setIsCountryDropdownOpen(false)}
+                              ></div>
                             )}
                           </div>
                         </div>
 
                         <div>
                           <label className="block text-sm font-medium text-gray-700 mb-3">
-                            What can we help you with? <span className="text-red-500">*</span>
+                            What can we help you with?{" "}
+                            <span className="text-red-500">*</span>
                           </label>
                           <div className="grid grid-cols-2 gap-3">
                             {interestOptions.map((option) => (
@@ -337,18 +408,25 @@ export default function ContactPage() {
                                       />
                                     )}
                                   </div>
-                                  <span className="ml-2 text-sm">{option.label}</span>
+                                  <span className="ml-2 text-sm">
+                                    {option.label}
+                                  </span>
                                 </div>
                               </motion.div>
                             ))}
                           </div>
                           {selectedInterests.length === 0 && (
-                            <p className="mt-1 text-sm text-red-600">Please select at least one option</p>
+                            <p className="mt-1 text-sm text-red-600">
+                              Please select at least one option
+                            </p>
                           )}
                         </div>
 
                         <div>
-                          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                          <label
+                            htmlFor="message"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                          >
                             Message <span className="text-red-500">*</span>
                           </label>
                           <textarea
@@ -356,20 +434,31 @@ export default function ContactPage() {
                             rows={4}
                             className={`w-full px-4 py-3 rounded-lg border ${errors.message ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50`}
                             placeholder="Tell us how we can help you..."
-                            {...register("message", { required: "Message is required" })}
+                            {...register("message", {
+                              required: "Message is required",
+                            })}
                           />
-                          {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
+
+                          {errors.message && (
+                            <p className="mt-1 text-sm text-red-600">
+                              {errors.message.message}
+                            </p>
+                          )}
                         </div>
 
                         <div className="text-xs text-gray-500">
-                          By submitting this form, you agree to receive future marketing materials from Assembly SG.
-                          Your personal information will be used in accordance with our privacy policy.
+                          By submitting this form, you agree to receive future
+                          marketing materials from Assembly SG. Your personal
+                          information will be used in accordance with our terms
+                          of service.
                         </div>
 
                         <Button
                           type="submit"
                           className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-medium rounded-lg flex items-center justify-center"
-                          disabled={isSubmitting || selectedInterests.length === 0}
+                          disabled={
+                            isSubmitting || selectedInterests.length === 0
+                          }
                         >
                           {isSubmitting ? (
                             <>
@@ -425,5 +514,5 @@ export default function ContactPage() {
         </section>
       </main>
     </>
-  )
+  );
 }

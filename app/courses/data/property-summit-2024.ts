@@ -1,55 +1,88 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const grayce = getFacilitator("grayce-tan");
+const yurong = getFacilitator("ong-yu-rong");
+const george = getFacilitator("george-peng");
+const marc = getFacilitator("marc-chan");
+const shawntay = getFacilitator("shawn-tay");
+const jesley = getFacilitator("jesley-lim");
+const wayne = getFacilitator("wayne-tang");
+const joan = getFacilitator("joan-loh");
 
 export const courseData: CourseData = {
   id: 6,
   title: "Property Summit 2024",
   slug: "property-summit-2024",
   level: "All Levels",
-  duration: "2 days",
+  duration: "11 hours 5 minutes",
   category: "Event",
   price: "$399.00",
   image: "/property-summit-2024.jpg",
   featured: true,
-  tags: ["Event", "Summit", "Market Trends"],
-  rating: 4.8,
-  students: 350,
-  instructors: [
-    ...getInstructors(["melvin-lim"]),
-    {
-      name: "Marc Chan",
-      image: "/images/instructors/marc-chan.png",
-    },
-    {
-      name: "Grayce Tan",
-      image: "/images/instructors/grayce-tan.png",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/images/instructors/yu-rong.png",
-    },
-    {
-      name: "Shawn Tay",
-      image: "/images/instructors/shawn-tay.png",
-    },
-    {
-      name: "Jesley Lim",
-      image: "/images/instructors/jesley-lim.png",
-    },
-    {
-      name: "George Peng",
-      image: "/images/instructors/george-peng.png",
-    },
-    {
-      name: "Wayne Tang",
-      image: "/images/instructors/wayne-tang.png",
-    },
-    {
-      name: "Joan Loh",
-      image: "/images/instructors/joan-loh.png",
-    },
-  ],
-  lastUpdated: "June 2024",
+  tags: ["Event Courses", "Condo", "HDB", "Investing", "Landed", "Market Trends"],
+  rating: 0,
+  students: 90,
+  instructors: melvin && marc && grayce && yurong && george && shawntay && jesley && wayne && joan
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: marc.name,
+          image: marc.image,
+          title: marc.role,
+          bio: marc.bio,
+        },
+        {
+          name: grayce.name,
+          image: grayce.image,
+          title: grayce.role,
+          bio: grayce.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+        {
+          name: shawntay.name,
+          image: shawntay.image,
+          title: shawntay.role,
+          bio: shawntay.bio,
+        },
+        {
+          name: jesley.name,
+          image: jesley.image,
+          title: jesley.role,
+          bio: jesley.bio,
+        },
+        {
+          name: george.name,
+          image: george.image,
+          title: george.role,
+          bio: george.bio,
+        },
+        {
+          name: wayne.name,
+          image: wayne.image,
+          title: wayne.role,
+          bio: wayne.bio,
+        },
+        {
+          name: joan.name,
+          image: joan.image,
+          title: joan.role,
+          bio: joan.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "11/01/2024",
   description: `Join us for the premier property investment event of the year! The Property Summit 2024 brings together Singapore's top property experts, successful investors, and industry insiders for two days of intensive learning, networking, and strategy development.
 
 This exclusive event will cover the latest market trends, investment strategies, and opportunities across all property segments in Singapore. From HDB to luxury condos, from landed properties to commercial real estate, our expert speakers will provide insights and actionable advice to help you make informed investment decisions.

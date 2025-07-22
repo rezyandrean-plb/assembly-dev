@@ -1,29 +1,36 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useNetwork } from "@/context/network-context"
-import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useNetwork } from "@/context/network-context";
+import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
 
 export default function HeroSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const { networkState } = useNetwork()
+  const { networkState } = useNetwork();
 
   // Transform values based on scroll
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const subtitleOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
-  const buttonOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
-  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const subtitleOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const buttonOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const scrollIndicatorOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2],
+    [1, 0],
+  );
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0 bg-white/5 z-[1]"></div>
       <div className="container relative z-10 text-center px-4 mt-20">
         <motion.h1
@@ -43,7 +50,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ opacity: subtitleOpacity }}
         >
-          Where Real Estate, Finance, and Learning converge to create a powerful ecosystem for your success
+          Where Real Estate, Finance, and Learning converge to create a powerful
+          ecosystem for your success
         </motion.p>
 
         <motion.div
@@ -95,5 +103,5 @@ export default function HeroSection() {
         <span>Learning</span>
       </div>
     </section>
-  )
+  );
 }

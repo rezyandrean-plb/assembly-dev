@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { useRef, useEffect } from "react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import anime from "animejs"
-import { ChevronDown } from "lucide-react"
-import BookCover from "./book-cover"
+import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import anime from "animejs";
+import { ChevronDown } from "lucide-react";
+import BookCover from "./book-cover";
 
 export default function HeroSection() {
   const [heroRef, heroInView] = useInView({
     threshold: 0.3,
     triggerOnce: false,
-  })
+  });
 
-  const bookRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const subtitleRef = useRef<HTMLParagraphElement>(null)
-  const ctaRef = useRef<HTMLDivElement>(null)
+  const bookRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (heroInView) {
       const timeline = anime.timeline({
         easing: "easeOutExpo",
-      })
+      });
 
       timeline
         .add({
@@ -58,7 +58,7 @@ export default function HeroSection() {
             duration: 1000,
           },
           "-=800",
-        )
+        );
 
       // Start floating animation for book cover
       anime({
@@ -68,9 +68,9 @@ export default function HeroSection() {
         direction: "alternate",
         loop: true,
         easing: "easeInOutSine",
-      })
+      });
     }
-  }, [heroInView])
+  }, [heroInView]);
 
   return (
     <section ref={heroRef} className="section hero-section" id="hero">
@@ -81,7 +81,8 @@ export default function HeroSection() {
               Property Launch <span className="text-highlight">Bible</span>
             </h1>
             <p ref={subtitleRef} className="hero-subtitle feature-text">
-              Your comprehensive guide to navigating Singapore's property market with confidence and precision
+              Your comprehensive guide to navigating Singapore's property market
+              with confidence and precision
             </p>
             <div ref={ctaRef} className="hero-cta">
               <a href="#purchase" className="btn btn-primary">
@@ -108,5 +109,5 @@ export default function HeroSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

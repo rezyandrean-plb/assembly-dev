@@ -1,34 +1,46 @@
 import type { CourseData } from "../components/course-detail-template"
-import { getInstructors } from "@/app/data/instructors"
+import { getFacilitator } from "@/app/data/facilitators"
+
+const melvin = getFacilitator("melvin-lim");
+const yurong = getFacilitator("ong-yu-rong");
+const george = getFacilitator("george-peng");
 
 const courseData: CourseData = {
   id: 1002,
   title: "Property Portfolio Expansion Strategies 2024",
   slug: "property-portfolio-expansion-strategies-2024",
-  level: "Intermediate",
-  duration: "2 hours",
-  category: "Investment Strategy",
+  level: "All Levels",
+  duration: "1 hour 59 minutes",
+  category: "Investing",
   price: "Free",
   image: "/property-portfolio-expansion-strategies-2024.jpg",
   featured: false,
-  tags: ["Portfolio Management", "Investment Strategy", "Market Analysis"],
+  tags: ["Investing", "Webinar"],
   rating: 0,
-  students: 0,
-  instructors: [
-    {
-      name: "Melvin Lim",
-      image: "/images/instructors/melvin-lim.png",
-    },
-    {
-      name: "Ong Yu Rong",
-      image: "/images/instructors/yu-rong.png",
-    },
-    {
-      name: "George Peng",
-      image: "/images/instructors/george-peng.png",
-    },
-  ],
-  lastUpdated: "2024-06-01",
+  students: 27,
+  instructors: melvin && yurong && george
+    ? [
+        {
+          name: melvin.name,
+          image: melvin.image,
+          title: melvin.role,
+          bio: melvin.bio,
+        },
+        {
+          name: yurong.name,
+          image: yurong.image,
+          title: yurong.role,
+          bio: yurong.bio,
+        },
+        {
+          name: george.name,
+          image: george.image,
+          title: george.role,
+          bio: george.bio,
+        },
+      ]
+    : [],
+  lastUpdated: "10/09/2024",
   description: "Learn advanced strategies for expanding your property portfolio in 2024's market conditions.",
   whatYouWillLearn: [
     "Learn advanced portfolio expansion techniques",

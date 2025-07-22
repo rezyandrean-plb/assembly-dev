@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
-import { ArrowRight, Target } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { ArrowRight, Target } from "lucide-react";
 
 export default function FeaturedSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
     <section ref={sectionRef} className="py-24 bg-gray-50">
@@ -26,6 +26,7 @@ export default function FeaturedSection() {
               transition={{ duration: 1.2, ease: "easeInOut" }}
               style={{ originX: 0 }}
             />
+
             <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
                 src="/singapore-skyline-day.png"
@@ -33,6 +34,7 @@ export default function FeaturedSection() {
                 fill
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
               <div className="absolute bottom-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                 Featured Course
@@ -55,9 +57,10 @@ export default function FeaturedSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Stand out in a crowded market by identifying and dominating your unique niche. This masterclass teaches
-              real estate professionals how to position themselves as specialists rather than generalists, attracting
-              higher-value clients and commanding premium fees.
+              Stand out in a crowded market by identifying and dominating your
+              unique niche. This masterclass teaches real estate professionals
+              how to position themselves as specialists rather than generalists,
+              attracting higher-value clients and commanding premium fees.
             </motion.p>
             <div className="relative h-24 w-full mb-6">
               {[0, 1, 2, 3].map((i) => (
@@ -73,7 +76,12 @@ export default function FeaturedSection() {
                   }}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: 0.5 + i * 0.15, type: "spring", stiffness: 100 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.5 + i * 0.15,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
                 />
               ))}
               <Target className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-white z-10" />
@@ -92,5 +100,5 @@ export default function FeaturedSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

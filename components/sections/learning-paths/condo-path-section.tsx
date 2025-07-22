@@ -1,76 +1,76 @@
-"use client"
+"use client";
 
-import { useRef, useState, useEffect } from "react"
-import { motion, useInView, useScroll } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useScroll } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function CondoPathSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
   // State to store transformed values
-  const [headerOpacity, setHeaderOpacity] = useState(0)
-  const [headerY, setHeaderY] = useState(50)
-  const [pathProgress, setPathProgress] = useState(0)
-  const [clusterProgress, setClusterProgress] = useState(0)
-  const [exitPathProgress, setExitPathProgress] = useState(0)
+  const [headerOpacity, setHeaderOpacity] = useState(0);
+  const [headerY, setHeaderY] = useState(50);
+  const [pathProgress, setPathProgress] = useState(0);
+  const [clusterProgress, setClusterProgress] = useState(0);
+  const [exitPathProgress, setExitPathProgress] = useState(0);
 
   useEffect(() => {
     const updateValues = () => {
-      const progress = scrollYProgress.get()
+      const progress = scrollYProgress.get();
 
       // Header animations
       if (progress >= 0.1 && progress <= 0.9) {
-        setHeaderOpacity(1)
-        setHeaderY(0)
+        setHeaderOpacity(1);
+        setHeaderY(0);
       } else if (progress > 0.9) {
-        setHeaderOpacity(0)
-        setHeaderY(-50)
+        setHeaderOpacity(0);
+        setHeaderY(-50);
       } else {
-        setHeaderOpacity(0)
-        setHeaderY(50)
+        setHeaderOpacity(0);
+        setHeaderY(50);
       }
 
       // Path progress
       if (progress >= 0.1 && progress <= 0.3) {
-        setPathProgress((progress - 0.1) / 0.2)
+        setPathProgress((progress - 0.1) / 0.2);
       } else if (progress > 0.3) {
-        setPathProgress(1)
+        setPathProgress(1);
       } else {
-        setPathProgress(0)
+        setPathProgress(0);
       }
 
       // Cluster progress
       if (progress >= 0.3 && progress <= 0.7) {
-        setClusterProgress((progress - 0.3) / 0.4)
+        setClusterProgress((progress - 0.3) / 0.4);
       } else if (progress > 0.7) {
-        setClusterProgress(1)
+        setClusterProgress(1);
       } else {
-        setClusterProgress(0)
+        setClusterProgress(0);
       }
 
       // Exit path progress
       if (progress >= 0.7 && progress <= 0.9) {
-        setExitPathProgress((progress - 0.7) / 0.2)
+        setExitPathProgress((progress - 0.7) / 0.2);
       } else if (progress > 0.9) {
-        setExitPathProgress(1)
+        setExitPathProgress(1);
       } else {
-        setExitPathProgress(0)
+        setExitPathProgress(0);
       }
-    }
+    };
 
-    const unsubscribe = scrollYProgress.onChange(updateValues)
-    updateValues() // Initial call
+    const unsubscribe = scrollYProgress.onChange(updateValues);
+    updateValues(); // Initial call
 
     return () => {
-      unsubscribe()
-    }
-  }, [scrollYProgress])
+      unsubscribe();
+    };
+  }, [scrollYProgress]);
 
   // Specialized condo market segments
   const segments = [
@@ -79,7 +79,7 @@ export default function CondoPathSection() {
     { label: "Entry-level", x: 450, y: 500, size: 50, delay: 0.3 },
     { label: "Integrated", x: 550, y: 550, size: 55, delay: 0.4 },
     { label: "Waterfront", x: 650, y: 350, size: 45, delay: 0.5 },
-  ]
+  ];
 
   // Connection lines between segments
   const connections = [
@@ -90,13 +90,20 @@ export default function CondoPathSection() {
     { from: 2, to: 3 },
     { from: 3, to: 4 },
     { from: 3, to: 4 },
-  ]
+  ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
+    <section
+      ref={sectionRef}
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+    >
       {/* Network Path Animation */}
       <div className="absolute inset-0 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 1000"
+          preserveAspectRatio="xMidYMid slice"
+        >
           {/* Background network elements */}
           {Array(20)
             .fill(0)
@@ -145,10 +152,10 @@ export default function CondoPathSection() {
 
           {/* Specialized cluster - segment nodes */}
           {segments.map((segment, index) => {
-            const segmentStart = 0.1 + index * 0.05
-            const segmentEnd = 0.2 + index * 0.05
-            const labelStart = 0.2 + index * 0.05
-            const labelEnd = 0.3 + index * 0.05
+            const segmentStart = 0.1 + index * 0.05;
+            const segmentEnd = 0.2 + index * 0.05;
+            const labelStart = 0.2 + index * 0.05;
+            const labelEnd = 0.3 + index * 0.05;
 
             return (
               <motion.g key={`segment-${index}`}>
@@ -230,7 +237,7 @@ export default function CondoPathSection() {
                   }}
                 />
               </motion.g>
-            )
+            );
           })}
 
           {/* Connections between segments */}
@@ -309,9 +316,12 @@ export default function CondoPathSection() {
             y: headerY,
           }}
         >
-          <h2 className="text-4xl font-bold text-[#79123B] mb-4">Condo Investment Specialist Path</h2>
+          <h2 className="text-4xl font-bold text-[#79123B] mb-4">
+            Condo Investment Specialist Path
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Master the art of investing in condominiums, from selection to portfolio building
+            Master the art of investing in condominiums, from selection to
+            portfolio building
           </p>
           <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
         </motion.div>
@@ -323,16 +333,22 @@ export default function CondoPathSection() {
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h3 className="text-2xl font-bold text-[#79123B] mb-4">Specialized Market Mastery</h3>
+            <h3 className="text-2xl font-bold text-[#79123B] mb-4">
+              Specialized Market Mastery
+            </h3>
             <p className="text-gray-700 mb-6">
-              The Condo Investment Specialist Path takes you deep into the specialized world of condominium investments
-              in Singapore. This focused learning journey helps you develop expertise in analyzing, selecting, and
-              building a portfolio of condominium properties across different market segments.
+              The Condo Investment Specialist Path takes you deep into the
+              specialized world of condominium investments in Singapore. This
+              focused learning journey helps you develop expertise in analyzing,
+              selecting, and building a portfolio of condominium properties
+              across different market segments.
             </p>
             <p className="text-gray-700 mb-6">
-              Through advanced courses covering entry price analysis, selection frameworks, market comparisons, and
-              portfolio building strategies, you'll gain the specialized knowledge needed to make informed decisions in
-              this competitive market segment and maximize your investment returns.
+              Through advanced courses covering entry price analysis, selection
+              frameworks, market comparisons, and portfolio building strategies,
+              you'll gain the specialized knowledge needed to make informed
+              decisions in this competitive market segment and maximize your
+              investment returns.
             </p>
             <div className="flex justify-center mt-8">
               <Button className="bg-[#79123B] hover:bg-[#5A0E2C] text-white">
@@ -344,5 +360,5 @@ export default function CondoPathSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

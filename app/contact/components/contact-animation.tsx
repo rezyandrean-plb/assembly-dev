@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Mail, MessageSquare, Phone, Send } from "lucide-react"
+import { motion } from "framer-motion";
+import { Mail, MessageSquare, Phone, Send } from "lucide-react";
 
 export default function ContactAnimation() {
   return (
@@ -19,6 +19,7 @@ export default function ContactAnimation() {
             repeatType: "reverse",
           }}
         />
+
         <motion.div
           className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-blue-200 opacity-30"
           animate={{
@@ -31,6 +32,7 @@ export default function ContactAnimation() {
             delay: 1,
           }}
         />
+
         <motion.div
           className="absolute top-1/2 right-20 w-20 h-20 rounded-full bg-blue-300 opacity-20"
           animate={{
@@ -71,7 +73,9 @@ export default function ContactAnimation() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <p className="text-xs text-gray-700">Hello! I'm interested in property investment courses.</p>
+              <p className="text-xs text-gray-700">
+                Hello! I'm interested in property investment courses.
+              </p>
             </motion.div>
 
             <motion.div
@@ -81,7 +85,8 @@ export default function ContactAnimation() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <p className="text-xs text-white">
-                Hi there! We'd be happy to help you with our property investment courses.
+                Hi there! We'd be happy to help you with our property investment
+                courses.
               </p>
             </motion.div>
 
@@ -91,7 +96,9 @@ export default function ContactAnimation() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.5, duration: 0.5 }}
             >
-              <p className="text-xs text-gray-700">Great! When can we schedule a consultation?</p>
+              <p className="text-xs text-gray-700">
+                Great! When can we schedule a consultation?
+              </p>
             </motion.div>
 
             <motion.div
@@ -100,7 +107,9 @@ export default function ContactAnimation() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 2, duration: 0.5 }}
             >
-              <p className="text-xs text-white">We're available Mon-Fri, 9am-6pm. Would you like us to call you?</p>
+              <p className="text-xs text-white">
+                We're available Mon-Fri, 9am-6pm. Would you like us to call you?
+              </p>
             </motion.div>
 
             <motion.div
@@ -109,7 +118,9 @@ export default function ContactAnimation() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 2.5, duration: 0.5 }}
             >
-              <p className="text-xs text-gray-700">Yes, please call me tomorrow at 10am.</p>
+              <p className="text-xs text-gray-700">
+                Yes, please call me tomorrow at 10am.
+              </p>
             </motion.div>
 
             {/* Typing indicator */}
@@ -117,23 +128,45 @@ export default function ContactAnimation() {
               className="bg-gray-200 rounded-full p-3 w-16 mr-auto flex justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 0] }}
-              transition={{ delay: 3, duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 1 }}
+              transition={{
+                delay: 3,
+                duration: 1.5,
+                repeat: Number.POSITIVE_INFINITY,
+                repeatDelay: 1,
+              }}
             >
               <div className="flex space-x-1">
                 <motion.div
                   className="w-2 h-2 bg-gray-500 rounded-full"
                   animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", delay: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    delay: 0,
+                  }}
                 />
+
                 <motion.div
                   className="w-2 h-2 bg-gray-500 rounded-full"
                   animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", delay: 0.2 }}
+                  transition={{
+                    duration: 0.6,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    delay: 0.2,
+                  }}
                 />
+
                 <motion.div
                   className="w-2 h-2 bg-gray-500 rounded-full"
                   animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", delay: 0.4 }}
+                  transition={{
+                    duration: 0.6,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    delay: 0.4,
+                  }}
                 />
               </div>
             </motion.div>
@@ -186,5 +219,5 @@ export default function ContactAnimation() {
         <MessageSquare className="h-6 w-6 text-blue-600" />
       </motion.div>
     </div>
-  )
+  );
 }

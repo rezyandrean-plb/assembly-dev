@@ -1,24 +1,32 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useNetwork } from "@/context/network-context"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useNetwork } from "@/context/network-context";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export default function FeaturedCoursesSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const { networkState } = useNetwork()
+  const { networkState } = useNetwork();
 
   // Transform values based on scroll
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const headerY = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50])
+  const headerOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 1, 1, 0],
+  );
+  const headerY = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [50, 0, 0, -50],
+  );
 
   const courses = [
     {
@@ -51,15 +59,21 @@ export default function FeaturedCoursesSection() {
       secondaryColor: "#79123B",
       delay: 0.7,
     },
-  ]
+  ];
 
   return (
     <section ref={sectionRef} className="relative py-24 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div className="text-center mb-16" style={{ opacity: headerOpacity, y: headerY }}>
-          <h2 className="text-4xl font-bold text-[#123B79] mb-4">Nodes of Expertise</h2>
+        <motion.div
+          className="text-center mb-16"
+          style={{ opacity: headerOpacity, y: headerY }}
+        >
+          <h2 className="text-4xl font-bold text-[#123B79] mb-4">
+            Nodes of Expertise
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover specialized courses that represent key intersections within our knowledge network
+            Discover specialized courses that represent key intersections within
+            our knowledge network
           </p>
           <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
         </motion.div>
@@ -91,8 +105,12 @@ export default function FeaturedCoursesSection() {
                 >
                   {course.category}
                 </div>
-                <h3 className="text-3xl font-bold text-[#123B79] mb-4">{course.title}</h3>
-                <p className="text-lg text-gray-700 mb-6">{course.description}</p>
+                <h3 className="text-3xl font-bold text-[#123B79] mb-4">
+                  {course.title}
+                </h3>
+                <p className="text-lg text-gray-700 mb-6">
+                  {course.description}
+                </p>
 
                 <div className="flex space-x-4 mb-6">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -125,6 +143,7 @@ export default function FeaturedCoursesSection() {
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
+
                   <div
                     className="absolute inset-0 bg-gradient-to-r"
                     style={{
@@ -134,7 +153,13 @@ export default function FeaturedCoursesSection() {
 
                   {/* Network node visualization */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      width="200"
+                      height="200"
+                      viewBox="0 0 200 200"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <motion.circle
                         cx="100"
                         cy="100"
@@ -150,6 +175,7 @@ export default function FeaturedCoursesSection() {
                         }}
                         transition={{ duration: 1, delay: course.delay + 0.3 }}
                       />
+
                       <motion.circle
                         cx="100"
                         cy="100"
@@ -174,5 +200,5 @@ export default function FeaturedCoursesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
