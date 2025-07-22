@@ -48,35 +48,35 @@ import { QuickEditModal } from "../products/components/quick-edit-modal";
 
 // Sample product data with enhanced fields for WooCommerce-style display
 const products = [
-  {
-    id: 1,
-    slug: "making-the-right-move",
-    title: "Making The Right Move",
+    {
+      id: 1,
+      slug: "making-the-right-move",
+      title: "Making The Right Move",
     sku: "COURSE-001",
-    category: "HDB Investment",
-    instructor: "George Peng",
-    price: 149.99,
+      category: "HDB Investment",
+      instructor: "George Peng",
+      price: 149.99,
     salePrice: 129.99,
-    status: "Published",
+      status: "Published",
     stock: "In stock",
     stockQuantity: 116,
-    students: 245,
+      students: 245,
     type: "Course",
     image: "/making-the-right-move.jpg",
     datePublished: "2023-05-15",
     virtual: true,
     downloadable: false,
-  },
-  {
-    id: 2,
+    },
+    {
+      id: 2,
     slug: "property-summit-2024",
     title: "Property Summit 2024",
     sku: "EVENT-001",
-    category: "Market Analysis",
-    instructor: "Adrian Lim",
+      category: "Market Analysis",
+      instructor: "Adrian Lim",
     price: 299.99,
     salePrice: null,
-    status: "Published",
+      status: "Published",
     stock: "Limited stock",
     stockQuantity: 25,
     students: 89,
@@ -85,55 +85,55 @@ const products = [
     datePublished: "2023-06-22",
     virtual: false,
     downloadable: true,
-  },
-  {
-    id: 3,
+    },
+    {
+      id: 3,
     slug: "property-investment-book",
     title: "Property Investment Guide - Physical Book",
     sku: "BOOK-001",
-    category: "Investment Strategy",
-    instructor: "Beatrice Lim",
+      category: "Investment Strategy",
+      instructor: "Beatrice Lim",
     price: 39.99,
     salePrice: 29.99,
     status: "Published",
     stock: "In stock",
     stockQuantity: 500,
-    students: 0,
+      students: 0,
     type: "Book",
     image: "/property-investment-book.jpg",
     datePublished: "2023-07-10",
     virtual: false,
     downloadable: false,
-  },
-  {
-    id: 4,
-    slug: "module-1-of-niche-positioning-masterclass",
-    title: "Module 1 of Niche Positioning Masterclass",
+    },
+    {
+      id: 4,
+      slug: "module-1-of-niche-positioning-masterclass",
+      title: "Module 1 of Niche Positioning Masterclass",
     sku: "COURSE-002",
-    category: "Strategic Investment",
-    instructor: "Marc Chan",
-    price: 199.99,
+      category: "Strategic Investment",
+      instructor: "Marc Chan",
+      price: 199.99,
     salePrice: null,
     status: "Draft",
     stock: "Out of stock",
     stockQuantity: 0,
-    students: 132,
+      students: 132,
     type: "Course",
     image: "/module-1-of-niche-positioning-masterclass.jpg",
     datePublished: "2023-04-30",
     virtual: true,
     downloadable: true,
-  },
-  {
-    id: 5,
+    },
+    {
+      id: 5,
     slug: "webinar-market-trends",
     title: "Live Webinar: Market Trends 2024",
     sku: "WEBINAR-001",
     category: "Market Analysis",
-    instructor: "Shawn Tay",
+      instructor: "Shawn Tay",
     price: 0,
     salePrice: null,
-    status: "Published",
+      status: "Published",
     stock: "In stock",
     stockQuantity: 1000,
     students: 456,
@@ -276,8 +276,8 @@ export default function ProductsPage() {
             <Link href="/admin/products/new">
               <Plus className="h-4 w-4" />
               Add New Product
-            </Link>
-          </Button>
+          </Link>
+        </Button>
         </div>
       </div>
 
@@ -364,21 +364,21 @@ export default function ProductsPage() {
               <span className="text-sm font-medium">
                 {selectedProducts.length} product
                 {selectedProducts.length !== 1 ? "s" : ""} selected
-              </span>
+                              </span>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="sm">
                   Bulk Edit
                 </Button>
                 <Button variant="outline" size="sm">
                   Archive
-                </Button>
+                            </Button>
                 <Button variant="destructive" size="sm">
-                  Delete
+                              Delete
                 </Button>
               </div>
             </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
       )}
 
       {/* Professional Data Grid */}
@@ -402,8 +402,8 @@ export default function ProductsPage() {
                 <TableHead className="font-semibold">Type</TableHead>
                 <TableHead className="font-semibold">Date Published</TableHead>
                 <TableHead className="w-12"></TableHead>
-              </TableRow>
-            </TableHeader>
+                  </TableRow>
+                </TableHeader>
             <TableBody>
               {filteredProducts.map((product) => (
                 <TableRow
@@ -442,12 +442,12 @@ export default function ProductsPage() {
                       {/* Hover Actions */}
                       {hoveredRow === product.id && (
                         <div className="flex items-center gap-3 text-sm text-blue-600">
-                          <Link
+                                <Link
                             href={`/admin/products/${product.slug}/edit`}
                             className="hover:underline"
-                          >
-                            Edit
-                          </Link>
+                                >
+                                  Edit
+                                </Link>
                           <span className="text-gray-300">|</span>
                           <button
                             className="hover:underline"
@@ -468,77 +468,77 @@ export default function ProductsPage() {
                           <span className="text-gray-300">|</span>
                           <button className="hover:underline">Archive</button>
                           <span className="text-gray-300">|</span>
-                          <Link
+                                <Link
                             href={`/courses/${product.slug}`}
                             className="hover:underline"
-                          >
-                            View
-                          </Link>
+                                >
+                                  View
+                                </Link>
                         </div>
                       )}
                     </div>
-                  </TableCell>
+                        </TableCell>
                   <TableCell className="font-mono text-sm">
                     {product.sku}
-                  </TableCell>
+                        </TableCell>
                   <TableCell>
                     {getStockDisplay(product.stock, product.stockQuantity)}
-                  </TableCell>
+                        </TableCell>
                   <TableCell>
                     {getPriceDisplay(product.price, product.salePrice)}
-                  </TableCell>
+                        </TableCell>
                   <TableCell>
                     <Badge variant="secondary">{product.category}</Badge>
-                  </TableCell>
+                        </TableCell>
                   <TableCell>
                     <div className="flex items-center gap-2">
                       {getProductTypeIcon(product.type)}
                       <span className="text-sm">{product.type}</span>
                     </div>
-                  </TableCell>
+                        </TableCell>
                   <TableCell className="text-sm text-gray-600">
                     {product.datePublished}
-                  </TableCell>
+                        </TableCell>
                   <TableCell>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon">
                           <MoreHorizontal className="h-4 w-4" />
                           <span className="sr-only">Actions</span>
-                        </Button>
-                      </DropdownMenuTrigger>
+                              </Button>
+                            </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuItem asChild>
-                          <Link
+                                <Link
                             href={`/courses/${product.slug}`}
-                            className="flex items-center"
-                          >
+                                  className="flex items-center"
+                                >
                             <Eye className="mr-2 h-4 w-4" />
-                            View
-                          </Link>
-                        </DropdownMenuItem>
+                                  View
+                                </Link>
+                              </DropdownMenuItem>
                         <DropdownMenuItem asChild>
-                          <Link
+                                <Link
                             href={`/admin/products/${product.slug}/edit`}
-                            className="flex items-center"
-                          >
+                                  className="flex items-center"
+                                >
                             <Edit className="mr-2 h-4 w-4" />
-                            Edit
-                          </Link>
-                        </DropdownMenuItem>
+                                  Edit
+                                </Link>
+                              </DropdownMenuItem>
                         <DropdownMenuItem className="flex items-center">
                           <Archive className="mr-2 h-4 w-4" />
                           Archive
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
 
       {/* Quick Edit Modal */}
       <QuickEditModal
