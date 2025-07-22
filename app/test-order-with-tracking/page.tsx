@@ -51,16 +51,10 @@ export default function TestOrderWithTrackingPage() {
   }, [router]);
 
   return (
-    <div
-      className="min-h-screen bg-gray-50 flex items-center justify-center"
-      data-oid="qyle06c"
-    >
-      <div className="text-center" data-oid="0njooi3">
-        <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79] mx-auto mb-4"
-          data-oid="hhgh4xa"
-        ></div>
-        <p className="text-gray-600" data-oid="3jco4cz">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79] mx-auto mb-4"></div>
+        <p className="text-gray-600">
           Setting up order with tracking number...
         </p>
       </div>

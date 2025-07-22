@@ -552,29 +552,19 @@ export default function CourseAssessment({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        data-oid="0e0ux:2"
       >
-        <div className="text-center mb-8" data-oid="dib36qi">
-          <CheckCircle
-            className="w-16 h-16 text-green-500 mx-auto mb-4"
-            data-oid="qv2-x:_"
-          />
+        <div className="text-center mb-8">
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
 
-          <h3
-            className="text-2xl font-bold text-gray-900 mb-2"
-            data-oid="_k8m041"
-          >
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
             Your Personalized Learning Path
           </h3>
-          <p className="text-gray-600" data-oid="c9shpeb">
+          <p className="text-gray-600">
             Based on your responses, here are the courses we recommend for you:
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
-          data-oid="5h7ba.x"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {recommendedCourses.slice(0, 6).map((course, index) => {
             // Get instructor names from IDs
             const instructorNames =
@@ -599,25 +589,22 @@ export default function CourseAssessment({
                   price: course.price || "Free",
                 }}
                 delay={index * 0.1}
-                data-oid="80.md_8"
               />
             );
           })}
         </div>
 
-        <div className="text-center" data-oid="twisyif">
+        <div className="text-center">
           <Button
             variant="outline"
             onClick={restartAssessment}
             className="mr-4"
-            data-oid="0acsktq"
           >
             Retake Assessment
           </Button>
           <Button
             className="bg-[#123B79] hover:bg-[#0f2f5f]"
             onClick={() => window.open("/courses", "_blank")}
-            data-oid="600v6a:"
           >
             View All Courses
           </Button>
@@ -632,26 +619,19 @@ export default function CourseAssessment({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      data-oid="m:3xoc3"
     >
-      <div className="mb-8" data-oid="oq1q9rn">
-        <div
-          className="flex justify-between items-center mb-4"
-          data-oid="kgpahkb"
-        >
-          <h3 className="text-xl font-bold text-gray-900" data-oid="-ut-.rt">
+      <div className="mb-8">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-bold text-gray-900">
             Find Your Perfect Learning Path
           </h3>
-          <span className="text-sm text-gray-500" data-oid="ni.m-i4">
+          <span className="text-sm text-gray-500">
             {assessmentStep + 1} of {assessmentQuestions.length}
           </span>
         </div>
 
         {/* Progress bar */}
-        <div
-          className="w-full bg-gray-200 rounded-full h-2 mb-6"
-          data-oid="s6-._lj"
-        >
+        <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
           <motion.div
             className="bg-[#123B79] h-2 rounded-full"
             initial={{ width: 0 }}
@@ -659,21 +639,17 @@ export default function CourseAssessment({
               width: `${((assessmentStep + 1) / assessmentQuestions.length) * 100}%`,
             }}
             transition={{ duration: 0.3 }}
-            data-oid="lasljlv"
           />
         </div>
       </div>
 
       {currentQuestion && (
-        <div data-oid="zff9kvf">
-          <h4
-            className="text-lg font-semibold text-gray-900 mb-6"
-            data-oid="qz7:mrn"
-          >
+        <div>
+          <h4 className="text-lg font-semibold text-gray-900 mb-6">
             {currentQuestion.question}
           </h4>
 
-          <div className="space-y-3 mb-8" data-oid="vw5t9q-">
+          <div className="space-y-3 mb-8">
             {currentQuestion.options.map((option, index) => (
               <motion.button
                 key={option.value}
@@ -688,38 +664,30 @@ export default function CourseAssessment({
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                data-oid="e1nlna0"
               >
-                <div className="flex items-center" data-oid="kffet_9">
+                <div className="flex items-center">
                   <div
                     className={`w-4 h-4 rounded-full border-2 mr-3 ${
                       assessmentAnswers[currentQuestion.id] === option.value
                         ? "border-[#123B79] bg-[#123B79]"
                         : "border-gray-300"
                     }`}
-                    data-oid=":4dqj7c"
                   >
                     {assessmentAnswers[currentQuestion.id] === option.value && (
-                      <div
-                        className="w-2 h-2 bg-white rounded-full mx-auto mt-0.5"
-                        data-oid="v5q8qe1"
-                      />
+                      <div className="w-2 h-2 bg-white rounded-full mx-auto mt-0.5" />
                     )}
                   </div>
-                  <span className="text-gray-700" data-oid="z76cjvp">
-                    {option.label}
-                  </span>
+                  <span className="text-gray-700">{option.label}</span>
                 </div>
               </motion.button>
             ))}
           </div>
 
-          <div className="flex justify-between" data-oid="irqqimz">
+          <div className="flex justify-between">
             <Button
               variant="outline"
               onClick={previousQuestion}
               disabled={assessmentStep === 0}
-              data-oid="m_nuqfw"
             >
               Previous
             </Button>
@@ -727,10 +695,9 @@ export default function CourseAssessment({
               onClick={nextQuestion}
               disabled={!isQuestionAnswered}
               className="bg-[#123B79] hover:bg-[#0f2f5f]"
-              data-oid="bcyc990"
             >
               {isLastQuestion ? "Get Recommendations" : "Next"}
-              <ArrowRight className="ml-2 h-4 w-4" data-oid="y0c4vtn" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>

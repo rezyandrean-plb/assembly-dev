@@ -13,7 +13,7 @@ const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
-  <PopoverPrimitive.Portal data-oid="_3eddfe">
+  <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
       align={align}
@@ -23,7 +23,6 @@ const PopoverContent = React.forwardRef<
         className,
       )}
       {...props}
-      data-oid="xc-qulo"
     />
   </PopoverPrimitive.Portal>
 ));

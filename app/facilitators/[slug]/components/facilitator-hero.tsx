@@ -53,48 +53,28 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
     <section
       ref={sectionRef}
       className="relative py-20 bg-white overflow-hidden"
-      data-oid="lo4-ovj"
     >
       {/* Background Pattern */}
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20"
-        data-oid="c9:q090"
-      />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20" />
 
-      <div
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl"
-        data-oid="mofy30y"
-      />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
 
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100/40 to-transparent rounded-full blur-3xl"
-        data-oid="pgbqfvv"
-      />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100/40 to-transparent rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="ifo_0sy">
-        <div className="max-w-7xl mx-auto" data-oid="y7_8rh7">
-          <div
-            className="grid lg:grid-cols-5 gap-12 items-center"
-            data-oid="mrbtfr9"
-          >
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Image Section - Takes 2 columns */}
-            <div className="lg:col-span-2 relative" data-oid="7yjk0g3">
-              <div className="relative" data-oid="4f2zcal">
+            <div className="lg:col-span-2 relative">
+              <div className="relative">
                 {/* Main Image */}
-                <div
-                  className="relative w-full max-w-md mx-auto"
-                  data-oid="43vixf:"
-                >
-                  <div
-                    className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200"
-                    data-oid="e2j18i:"
-                  >
+                <div className="relative w-full max-w-md mx-auto">
+                  <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200">
                     <Image
                       src={facilitator.image}
                       alt={facilitator.name}
                       fill
                       className="object-cover"
-                      data-oid="ejoen2e"
                     />
                   </div>
                 </div>
@@ -102,47 +82,29 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
             </div>
 
             {/* Content Section - Takes 3 columns */}
-            <div className="lg:col-span-3 space-y-8" data-oid="xci8h8k">
+            <div className="lg:col-span-3 space-y-8">
               {/* Header */}
-              <div data-oid="im7fgpz">
-                <div
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-blue-100"
-                  data-oid="ax2svm6"
-                >
-                  <Star className="w-4 h-4" data-oid="3tv:ofq" />
+              <div>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-blue-100">
+                  <Star className="w-4 h-4" />
                   {facilitator.specialty}
                 </div>
 
-                <h1
-                  className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight"
-                  data-oid="euz1plm"
-                >
+                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
                   {facilitator.name}
                 </h1>
 
-                <p
-                  className="text-2xl text-blue-600 font-semibold mb-6"
-                  data-oid="vi28y6a"
-                >
+                <p className="text-2xl text-blue-600 font-semibold mb-6">
                   {facilitator.role}
                 </p>
 
-                <p
-                  className="text-xl text-gray-600 leading-relaxed mb-8"
-                  data-oid="qwv98p9"
-                >
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">
                   {facilitator.bio}
                 </p>
 
                 {/* Long Bio */}
-                <div
-                  className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm mb-8"
-                  data-oid="poxah5v"
-                >
-                  <p
-                    className="text-lg text-gray-700 leading-relaxed"
-                    data-oid="nb6.pl."
-                  >
+                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm mb-8">
+                  <p className="text-lg text-gray-700 leading-relaxed">
                     {facilitator.longBio}
                   </p>
                 </div>
@@ -150,14 +112,11 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
 
               {/* Social Links */}
               {facilitator.socialLinks && (
-                <div className="flex items-center gap-4" data-oid="dgcmh1m">
-                  <span
-                    className="text-gray-600 font-medium"
-                    data-oid="9oohz3u"
-                  >
+                <div className="flex items-center gap-4">
+                  <span className="text-gray-600 font-medium">
                     Connect with {facilitator.name.split(" ")[0]}:
                   </span>
-                  <div className="flex gap-3" data-oid="d8ty0q9">
+                  <div className="flex gap-3">
                     {Object.entries(facilitator.socialLinks).map(
                       ([platform, url]) => {
                         const Icon = getSocialIcon(platform);
@@ -172,12 +131,8 @@ export function FacilitatorHero({ facilitator }: FacilitatorHeroProps) {
                               platform === "email" ? "" : "noopener noreferrer"
                             }
                             className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 group shadow-sm"
-                            data-oid=":f3-ybn"
                           >
-                            <Icon
-                              className="w-5 h-5 text-gray-600 group-hover:text-gray-800 group-hover:scale-110 transition-all duration-300"
-                              data-oid="g-sr8l4"
-                            />
+                            <Icon className="w-5 h-5 text-gray-600 group-hover:text-gray-800 group-hover:scale-110 transition-all duration-300" />
                           </Link>
                         );
                       },

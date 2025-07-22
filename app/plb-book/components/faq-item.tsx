@@ -31,7 +31,6 @@ export function FAQItem({
         "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md",
         isOpen && "shadow-lg border-primary/20",
       )}
-      data-oid="06uz-2k"
     >
       <button
         className={cn(
@@ -40,7 +39,6 @@ export function FAQItem({
         )}
         onClick={onClick}
         aria-expanded={isOpen}
-        data-oid="ze-z1ll"
       >
         {/* Question icon */}
         <div
@@ -50,16 +48,12 @@ export function FAQItem({
               ? "bg-primary text-white"
               : "bg-primary/10 text-primary group-hover:bg-primary/20",
           )}
-          data-oid="qw96o4z"
         >
-          <HelpCircle className="w-4 h-4" data-oid="t2848cj" />
+          <HelpCircle className="w-4 h-4" />
         </div>
 
         {/* Question text */}
-        <div
-          className="flex-grow flex items-center min-h-[32px]"
-          data-oid="yw-glc-"
-        >
+        <div className="flex-grow flex items-center min-h-[32px]">
           <h3
             className={cn(
               "text-lg font-semibold transition-colors duration-300 leading-tight",
@@ -67,7 +61,6 @@ export function FAQItem({
                 ? "text-primary"
                 : "text-gray-900 group-hover:text-primary",
             )}
-            data-oid="x3illyu"
           >
             {question}
           </h3>
@@ -81,7 +74,6 @@ export function FAQItem({
               ? "transform rotate-180 text-primary"
               : "text-gray-400 group-hover:text-primary",
           )}
-          data-oid=".7uk:04"
         />
       </button>
 
@@ -93,13 +85,10 @@ export function FAQItem({
           "overflow-hidden transition-all duration-300 ease-in-out",
           isOpen ? "opacity-100" : "opacity-0",
         )}
-        data-oid="x99r19t"
       >
-        <div className="px-6 pb-6 pl-18" data-oid="zhdmplx">
-          <div className="border-l-2 border-primary/20 pl-6" data-oid="wsajq.v">
-            <p className="text-gray-600 leading-relaxed" data-oid="9mttd0z">
-              {answer}
-            </p>
+        <div className="px-6 pb-6 pl-18">
+          <div className="border-l-2 border-primary/20 pl-6">
+            <p className="text-gray-600 leading-relaxed">{answer}</p>
           </div>
         </div>
       </div>

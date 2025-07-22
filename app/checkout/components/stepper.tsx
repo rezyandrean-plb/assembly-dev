@@ -63,9 +63,9 @@ export default function Stepper({ currentStep, hasBook }: StepperProps) {
   };
 
   return (
-    <div className="w-full py-8 bg-white border-b" data-oid="wt6nna8">
-      <div className="max-w-6xl mx-auto px-4" data-oid="l42ydpz">
-        <div className="flex items-center justify-center" data-oid="2emltzx">
+    <div className="w-full py-8 bg-white border-b">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-center">
           {steps.map((step, index) => {
             const isCompleted = index + 1 < currentStep;
             const isCurrent = index + 1 === currentStep;
@@ -76,7 +76,6 @@ export default function Stepper({ currentStep, hasBook }: StepperProps) {
                 <div
                   className={`flex flex-col items-center ${isClickable ? "cursor-pointer hover:opacity-80" : "cursor-default"} transition-opacity`}
                   onClick={() => handleStepClick(step, index)}
-                  data-oid="4njwo_c"
                 >
                   <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-200 ${
@@ -86,28 +85,20 @@ export default function Stepper({ currentStep, hasBook }: StepperProps) {
                           ? "bg-[#123b79] text-white shadow-lg ring-2 ring-[#123b79] ring-opacity-30"
                           : "bg-gray-200 text-gray-500"
                     }`}
-                    data-oid="nb0j-my"
                   >
-                    {isCompleted ? (
-                      <Check className="w-5 h-5" data-oid="4eu7b.:" />
-                    ) : (
-                      step.id
-                    )}
+                    {isCompleted ? <Check className="w-5 h-5" /> : step.id}
                   </div>
-                  <div className="mt-2 text-center" data-oid="pjz0-mr">
+                  <div className="mt-2 text-center">
                     <p
                       className={`text-sm font-medium transition-colors duration-200 ${
                         isCompleted || isCurrent
                           ? "text-[#123b79]"
                           : "text-gray-500"
                       } ${isClickable ? "hover:text-[#123b79]" : ""}`}
-                      data-oid="_wkqzak"
                     >
                       {step.name}
                     </p>
-                    <p className="text-xs text-gray-400" data-oid="y3a9np0">
-                      {step.label}
-                    </p>
+                    <p className="text-xs text-gray-400">{step.label}</p>
                   </div>
                 </div>
                 {index < steps.length - 1 && (
@@ -116,7 +107,6 @@ export default function Stepper({ currentStep, hasBook }: StepperProps) {
                       index + 1 < currentStep ? "bg-[#123b79]" : "bg-gray-200"
                     }`}
                     style={{ minWidth: "60px" }}
-                    data-oid=".dypp4r"
                   />
                 )}
               </React.Fragment>

@@ -44,80 +44,44 @@ export default function OrderSummary() {
   const gst = (orderTotal / 1.09) * 0.09; // 9% GST is included in the price
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-lg overflow-hidden"
-      data-oid="2.ab21s"
-    >
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
       {/* Header */}
-      <div className="bg-[#2B4C8C] text-white p-6" data-oid="0pp:6f:">
-        <h2 className="text-xl font-bold" data-oid="5qr7lha">
-          Order Summary
-        </h2>
-        <p className="text-blue-100 text-sm mt-1" data-oid="oxqdqzs">
-          Ready to start learning
-        </p>
+      <div className="bg-[#2B4C8C] text-white p-6">
+        <h2 className="text-xl font-bold">Order Summary</h2>
+        <p className="text-blue-100 text-sm mt-1">Ready to start learning</p>
       </div>
 
       {/* Order Details */}
-      <div className="p-6" data-oid="69fs.:9">
-        <div className="space-y-4" data-oid="9y1h1ng">
-          <div
-            className="flex justify-between text-gray-700"
-            data-oid="6mwcm08"
-          >
-            <span data-oid="4k_4b_a">Subtotal</span>
-            <span className="font-semibold" data-oid=":q84gih">
-              {formatPrice(subtotal)}
-            </span>
+      <div className="p-6">
+        <div className="space-y-4">
+          <div className="flex justify-between text-gray-700">
+            <span>Subtotal</span>
+            <span className="font-semibold">{formatPrice(subtotal)}</span>
           </div>
 
           {discount > 0 && (
-            <div
-              className="flex justify-between text-green-600"
-              data-oid="m:9-yq0"
-            >
-              <span data-oid="g._8ii1">Discount</span>
-              <span className="font-semibold" data-oid=":qxwswj">
-                -{formatPrice(discount)}
-              </span>
+            <div className="flex justify-between text-green-600">
+              <span>Discount</span>
+              <span className="font-semibold">-{formatPrice(discount)}</span>
             </div>
           )}
 
-          <div
-            className="flex justify-between text-gray-700"
-            data-oid="9rx56ix"
-          >
-            <span data-oid="vbl2c:i">Shipping</span>
-            <span className="font-semibold" data-oid="l3jcnrw">
+          <div className="flex justify-between text-gray-700">
+            <span>Shipping</span>
+            <span className="font-semibold">
               {finalShippingCost > 0 ? formatPrice(finalShippingCost) : "Free"}
             </span>
           </div>
 
-          <div
-            className="flex justify-between text-gray-700"
-            data-oid="dvhv-3z"
-          >
-            <span data-oid="1tk.eqc">GST (included)</span>
-            <span className="font-semibold" data-oid="9xg7ne1">
-              {formatPrice(gst)}
-            </span>
+          <div className="flex justify-between text-gray-700">
+            <span>GST (included)</span>
+            <span className="font-semibold">{formatPrice(gst)}</span>
           </div>
 
-          <div className="border-t border-gray-200 pt-4" data-oid="oqjaesh">
-            <div
-              className="flex justify-between items-center"
-              data-oid="ft.lecj"
-            >
-              <span
-                className="text-lg font-bold text-gray-900"
-                data-oid="02ha82a"
-              >
-                Total
-              </span>
-              <span
-                className="text-2xl font-bold text-[#2B4C8C]"
-                data-oid="o5044f4"
-              >
+          <div className="border-t border-gray-200 pt-4">
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-gray-900">Total</span>
+              <span className="text-2xl font-bold text-[#2B4C8C]">
                 {formatPrice(orderTotal)}
               </span>
             </div>
@@ -125,22 +89,20 @@ export default function OrderSummary() {
         </div>
 
         {/* Security Features */}
-        <div className="mt-6 pt-6 border-t border-gray-100" data-oid="o63judm">
-          <div className="flex items-center gap-2 mb-4" data-oid="mtj5xda">
-            <Shield className="w-5 h-5 text-green-600" data-oid="_3l2tk5" />
-            <span className="font-semibold text-gray-900" data-oid="ppekiqp">
-              Secure Checkout
-            </span>
+        <div className="mt-6 pt-6 border-t border-gray-100">
+          <div className="flex items-center gap-2 mb-4">
+            <Shield className="w-5 h-5 text-green-600" />
+            <span className="font-semibold text-gray-900">Secure Checkout</span>
           </div>
 
-          <div className="space-y-2 text-sm text-gray-600" data-oid="pml3ujq">
-            <div className="flex items-center gap-2" data-oid="4uaz2:h">
-              <Check className="w-4 h-4 text-green-600" data-oid="1n20gua" />
-              <span data-oid="pv89czv">Lifetime access to courses</span>
+          <div className="space-y-2 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-green-600" />
+              <span>Lifetime access to courses</span>
             </div>
-            <div className="flex items-center gap-2" data-oid="8_oh_91">
-              <Check className="w-4 h-4 text-green-600" data-oid="p0lw3i3" />
-              <span data-oid="aabaw6p">SSL encrypted payment</span>
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-green-600" />
+              <span>SSL encrypted payment</span>
             </div>
           </div>
         </div>

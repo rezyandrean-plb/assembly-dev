@@ -427,35 +427,16 @@ export default function LearningPathPage() {
 
   if (loading) {
     return (
-      <div
-        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-        data-oid="o.kwm5r"
-      >
-        <div className="pt-24 pb-16" data-oid="wdkdvul">
-          <div className="container mx-auto px-4" data-oid="t_5zoya">
-            <div className="animate-pulse" data-oid="qe:h:wg">
-              <div
-                className="h-8 bg-gray-200 rounded w-1/3 mb-4"
-                data-oid="ptfajji"
-              ></div>
-              <div
-                className="h-4 bg-gray-200 rounded w-2/3 mb-8"
-                data-oid="9diik.r"
-              ></div>
-              <div
-                className="h-64 bg-gray-200 rounded mb-8"
-                data-oid="-xuun:8"
-              ></div>
-              <div
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                data-oid="odvs:t_"
-              >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20">
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-4">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-200 rounded w-1/3 mb-4"></div>
+              <div className="h-4 bg-gray-200 rounded w-2/3 mb-8"></div>
+              <div className="h-64 bg-gray-200 rounded mb-8"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[...Array(3)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-64 bg-gray-200 rounded"
-                    data-oid="rltgl7g"
-                  ></div>
+                  <div key={i} className="h-64 bg-gray-200 rounded"></div>
                 ))}
               </div>
             </div>
@@ -467,28 +448,19 @@ export default function LearningPathPage() {
 
   if (!pathData) {
     return (
-      <div
-        className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-        data-oid="74grb.n"
-      >
-        <div className="pt-24 pb-16" data-oid="bkr5aw.">
-          <div
-            className="container mx-auto px-4 text-center"
-            data-oid="m3btuat"
-          >
-            <h1
-              className="text-3xl font-bold text-gray-900 mb-4"
-              data-oid=":2p.j6v"
-            >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20">
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">
               Learning Path Not Found
             </h1>
-            <p className="text-gray-600 mb-8" data-oid="ph1.q0g">
+            <p className="text-gray-600 mb-8">
               The learning path you're looking for doesn't exist or has been
               moved.
             </p>
-            <Link href="/courses" data-oid="ssxmb6-">
-              <Button data-oid="52e9dom">
-                <ArrowLeft className="mr-2 h-4 w-4" data-oid="1xgwdtt" />
+            <Link href="/courses">
+              <Button>
+                <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Courses
               </Button>
             </Link>
@@ -501,45 +473,28 @@ export default function LearningPathPage() {
   const pricing = calculatePricing(pathCourses);
 
   return (
-    <div
-      className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20"
-      data-oid="-29:9u6"
-    >
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5" data-oid="-kni.04">
-        <div
-          className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          data-oid="hajb:fm"
-        ></div>
-        <div
-          className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"
-          data-oid="_n1--4u"
-        ></div>
-        <div
-          className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"
-          data-oid="ca.obez"
-        ></div>
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="pt-24 pb-16 relative z-10" data-oid="z.vqp3:">
-        <div className="container mx-auto px-4" data-oid="owmfi42">
+      <div className="pt-24 pb-16 relative z-10">
+        <div className="container mx-auto px-4">
           {/* Back button */}
           <motion.div
             className="mb-6"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            data-oid="z6.:i55"
           >
             <Link
               href="/courses?tab=paths"
               className="inline-flex items-center text-[#123B79] hover:text-[#0A2A5E] font-medium transition-colors group"
-              data-oid="vpmnf_9"
             >
-              <ArrowLeft
-                className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform"
-                data-oid="m1bs:mk"
-              />
+              <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to Learning Paths
             </Link>
           </motion.div>
@@ -550,96 +505,60 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            data-oid="jkf_wb."
           >
-            <div
-              className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 relative overflow-hidden"
-              data-oid="vy3upno"
-            >
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 relative overflow-hidden">
               {/* Gradient overlay */}
-              <div
-                className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#123B79] via-[#F0A500] to-[#123B79]"
-                data-oid="wgtf6_3"
-              ></div>
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#123B79] via-[#F0A500] to-[#123B79]"></div>
 
-              <div className="flex items-center mb-6" data-oid="9sicv_:">
+              <div className="flex items-center mb-6">
                 <div
                   className="rounded-full w-16 h-16 flex items-center justify-center mr-6 shadow-lg"
                   style={{ backgroundColor: pathData.color }}
-                  data-oid=".krpmcz"
                 >
                   {pathData.id === "beginner-property-investor" ? (
-                    <Target className="h-8 w-8 text-white" data-oid="pm4415v" />
+                    <Target className="h-8 w-8 text-white" />
                   ) : pathData.id === "hdb-upgrader-strategist" ? (
-                    <TrendingDown
-                      className="h-8 w-8 text-white"
-                      data-oid="sicev:y"
-                    />
+                    <TrendingDown className="h-8 w-8 text-white" />
                   ) : (
-                    <Award className="h-8 w-8 text-white" data-oid=":ov82.i" />
+                    <Award className="h-8 w-8 text-white" />
                   )}
                 </div>
-                <div data-oid="a:den-i">
-                  <div
-                    className="flex items-center gap-3 mb-2"
-                    data-oid="9wujhbd"
-                  >
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
                     <h1
                       className="text-4xl lg:text-5xl font-bold"
                       style={{ color: pathData.color }}
-                      data-oid="w7o.b5r"
                     >
                       {pathData.title}
                     </h1>
-                    <span
-                      className="bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-sm font-bold px-3 py-1 rounded-full"
-                      data-oid="nwjhnhc"
-                    >
-                      <Sparkles
-                        className="h-3 w-3 inline mr-1"
-                        data-oid="2slmqr_"
-                      />
+                    <span className="bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-sm font-bold px-3 py-1 rounded-full">
+                      <Sparkles className="h-3 w-3 inline mr-1" />
 
                       {pathData.bundleType}
                     </span>
                   </div>
-                  <p
-                    className="text-xl text-gray-700 max-w-4xl leading-relaxed"
-                    data-oid="qysc2by"
-                  >
+                  <p className="text-xl text-gray-700 max-w-4xl leading-relaxed">
                     {pathData.description}
                   </p>
                 </div>
               </div>
 
-              <div
-                className="flex flex-wrap items-center gap-6 text-sm text-gray-600"
-                data-oid="e7mc1u8"
-              >
-                <div
-                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="b6td04k"
-                >
-                  <BookOpen className="h-4 w-4 mr-2" data-oid="eh8_ovl" />
-                  <span className="font-medium" data-oid="pbz7_e4">
+              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+                <div className="flex items-center bg-white/50 rounded-full px-4 py-2">
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  <span className="font-medium">
                     {pathCourses.length} courses
                   </span>
                 </div>
-                <div
-                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="6_a3fp8"
-                >
-                  <Clock className="h-4 w-4 mr-2" data-oid="98jq_4t" />
-                  <span className="font-medium" data-oid="0cw-:1p">
+                <div className="flex items-center bg-white/50 rounded-full px-4 py-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span className="font-medium">
                     Approximately {pathCourses.length * 4} weeks
                   </span>
                 </div>
-                <div
-                  className="flex items-center bg-white/50 rounded-full px-4 py-2"
-                  data-oid="p8xsbp8"
-                >
-                  <Users className="h-4 w-4 mr-2" data-oid="_mgiwnk" />
-                  <span className="font-medium" data-oid="5s1epyb">
+                <div className="flex items-center bg-white/50 rounded-full px-4 py-2">
+                  <Users className="h-4 w-4 mr-2" />
+                  <span className="font-medium">
                     {pathData.id === "beginner-property-investor"
                       ? "Beginner to Intermediate"
                       : pathData.id === "hdb-upgrader-strategist"
@@ -652,61 +571,36 @@ export default function LearningPathPage() {
           </motion.div>
 
           {/* Enhanced Path Description with Sidebar */}
-          <div
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12"
-            data-oid="a7mi.cw"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             <motion.div
               className="lg:col-span-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              data-oid="7_uzz5v"
             >
               {/* About Section */}
-              <div
-                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 mb-6"
-                data-oid="y00bzyt"
-              >
-                <div className="flex items-center mb-6" data-oid="6z17k6j">
-                  <div
-                    className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
-                    data-oid="swx:-k6"
-                  >
-                    <BookOpen
-                      className="h-6 w-6 text-white"
-                      data-oid="889id:k"
-                    />
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 mb-6">
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4">
+                    <BookOpen className="h-6 w-6 text-white" />
                   </div>
-                  <h2
-                    className="text-3xl font-bold text-[#123B79]"
-                    data-oid="8wfc4_s"
-                  >
+                  <h2 className="text-3xl font-bold text-[#123B79]">
                     About This Learning Path
                   </h2>
                 </div>
-                <p
-                  className="text-gray-700 mb-8 text-lg leading-relaxed"
-                  data-oid="23qstym"
-                >
+                <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                   {pathData.longDescription}
                 </p>
 
-                <div className="flex items-center mb-6" data-oid="ra.xepl">
-                  <div
-                    className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-3 mr-4"
-                    data-oid="c8ua433"
-                  >
-                    <Target className="h-6 w-6 text-white" data-oid="23wwwnh" />
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-3 mr-4">
+                    <Target className="h-6 w-6 text-white" />
                   </div>
-                  <h3
-                    className="text-2xl font-bold text-[#123B79]"
-                    data-oid="vgezb62"
-                  >
+                  <h3 className="text-2xl font-bold text-[#123B79]">
                     What You'll Master
                   </h3>
                 </div>
-                <div className="space-y-4" data-oid="ougbuby">
+                <div className="space-y-4">
                   {pathData.outcomes.map((outcome, index) => (
                     <motion.div
                       key={index}
@@ -715,21 +609,11 @@ export default function LearningPathPage() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      data-oid="9zsw46p"
                     >
-                      <div
-                        className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                        data-oid=".ydir46"
-                      >
-                        <CheckCircle
-                          className="h-4 w-4 text-white"
-                          data-oid="nxfney:"
-                        />
+                      <div className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform">
+                        <CheckCircle className="h-4 w-4 text-white" />
                       </div>
-                      <p
-                        className="text-gray-700 font-medium text-lg leading-relaxed"
-                        data-oid="ez0-3_f"
-                      >
+                      <p className="text-gray-700 font-medium text-lg leading-relaxed">
                         {outcome}
                       </p>
                     </motion.div>
@@ -744,68 +628,40 @@ export default function LearningPathPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              data-oid="a5oesqd"
             >
               {/* Bundle Pricing Card */}
-              <div
-                className="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl border border-white/50 mb-6 relative"
-                data-oid="jwt9ihr"
-              >
+              <div className="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl border border-white/50 mb-6 relative">
                 {/* Premium Badge */}
-                <div
-                  className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
-                  data-oid="0:0vuzm"
-                >
-                  <Gift className="h-3 w-3 inline mr-1" data-oid="ug0jr0n" />
+                <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#F0A500] to-[#D89400] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  <Gift className="h-3 w-3 inline mr-1" />
                   BUNDLE DEAL
                 </div>
 
-                <div className="p-8" data-oid="b5b8qe5">
-                  <div className="text-center mb-8" data-oid="tljlrh7">
-                    <div className="mb-4" data-oid="qjm8wd5">
-                      <span
-                        className="text-sm text-gray-500 font-medium"
-                        data-oid="j5:v6sr"
-                      >
+                <div className="p-8">
+                  <div className="text-center mb-8">
+                    <div className="mb-4">
+                      <span className="text-sm text-gray-500 font-medium">
                         Bundle Price
                       </span>
-                      <div
-                        className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent"
-                        data-oid="szzb31v"
-                      >
+                      <div className="text-4xl font-bold bg-gradient-to-r from-[#123B79] to-[#0A2A5E] bg-clip-text text-transparent">
                         ${formatPrice(pricing.bundlePrice)}
                       </div>
                     </div>
 
                     {/* Savings Display */}
-                    <div
-                      className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-4 mb-6"
-                      data-oid="eq1g53z"
-                    >
-                      <div
-                        className="flex items-center justify-center mb-2"
-                        data-oid="u.c1m-s"
-                      >
-                        <TrendingDown
-                          className="h-5 w-5 text-red-600 mr-2"
-                          data-oid="nxse.53"
-                        />
+                    <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-4 mb-6">
+                      <div className="flex items-center justify-center mb-2">
+                        <TrendingDown className="h-5 w-5 text-red-600 mr-2" />
 
-                        <span
-                          className="text-red-600 font-bold text-lg"
-                          data-oid=".qq..-:"
-                        >
+                        <span className="text-red-600 font-bold text-lg">
                           Save ${formatPrice(pricing.savings)}
                         </span>
                       </div>
-                      <div className="text-sm text-gray-600" data-oid="g7uc4bh">
-                        <span className="line-through" data-oid=".p97kmg">
+                      <div className="text-sm text-gray-600">
+                        <span className="line-through">
                           ${formatPrice(pricing.originalPrice)}
                         </span>
-                        <span
-                          className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold"
-                          data-oid="0oa.tb3"
-                        >
+                        <span className="ml-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold">
                           {pricing.discountPercentage}% OFF
                         </span>
                       </div>
@@ -815,145 +671,75 @@ export default function LearningPathPage() {
                     <Button
                       onClick={addBundleToCart}
                       className="w-full bg-gradient-to-r from-[#123B79] to-[#0A2A5E] hover:from-[#0A2A5E] hover:to-[#123B79] text-white font-bold py-6 text-lg mb-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
-                      data-oid="lrdt.-9"
                     >
-                      <ShoppingCart
-                        className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
-                        data-oid="8t5r5-2"
-                      />
+                      <ShoppingCart className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform" />
                       Enroll in Bundle Now
                     </Button>
 
-                    <p
-                      className="text-xs text-gray-500 mb-6"
-                      data-oid="esfax3:"
-                    >
+                    <p className="text-xs text-gray-500 mb-6">
                       30-day money-back guarantee • Lifetime access
                     </p>
                   </div>
 
                   {/* Bundle Benefits */}
-                  <div className="space-y-4" data-oid="9n.fj-3">
-                    <h3
-                      className="font-bold text-lg text-[#123B79] mb-4 flex items-center"
-                      data-oid="_-l3xi3"
-                    >
-                      <Gift className="h-5 w-5 mr-2" data-oid="6.0kfac" />
+                  <div className="space-y-4">
+                    <h3 className="font-bold text-lg text-[#123B79] mb-4 flex items-center">
+                      <Gift className="h-5 w-5 mr-2" />
                       Bundle Includes:
                     </h3>
 
-                    <div className="space-y-3" data-oid="n-fp57y">
-                      <div
-                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="jgou4li"
-                      >
-                        <div
-                          className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="5i99j6_"
-                        >
-                          <BookOpen
-                            className="h-4 w-4 text-white"
-                            data-oid="hk4bsbw"
-                          />
+                    <div className="space-y-3">
+                      <div className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300">
+                        <div className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform">
+                          <BookOpen className="h-4 w-4 text-white" />
                         </div>
-                        <div data-oid="-nc10z8">
-                          <p
-                            className="font-semibold text-gray-900 text-lg"
-                            data-oid="44ee68o"
-                          >
+                        <div>
+                          <p className="font-semibold text-gray-900 text-lg">
                             {pathCourses.length} Premium Courses
                           </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="jfsu7.u"
-                          >
+                          <p className="text-sm text-gray-600">
                             Structured learning path
                           </p>
                         </div>
                       </div>
 
-                      <div
-                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="71d_nxu"
-                      >
-                        <div
-                          className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="-c7_w-j"
-                        >
-                          <Percent
-                            className="h-4 w-4 text-white"
-                            data-oid="_3jbe40"
-                          />
+                      <div className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300">
+                        <div className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform">
+                          <Percent className="h-4 w-4 text-white" />
                         </div>
-                        <div data-oid="qn-r84l">
-                          <p
-                            className="font-semibold text-gray-900 text-lg"
-                            data-oid="46uij4v"
-                          >
+                        <div>
+                          <p className="font-semibold text-gray-900 text-lg">
                             25% Bundle Discount
                           </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="--2elki"
-                          >
+                          <p className="text-sm text-gray-600">
                             Significant savings vs individual courses
                           </p>
                         </div>
                       </div>
 
-                      <div
-                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="_wrt.bz"
-                      >
-                        <div
-                          className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="-rbt5_d"
-                        >
-                          <Award
-                            className="h-4 w-4 text-white"
-                            data-oid="kgww2uk"
-                          />
+                      <div className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300">
+                        <div className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform">
+                          <Award className="h-4 w-4 text-white" />
                         </div>
-                        <div data-oid="bm9c8bw">
-                          <p
-                            className="font-semibold text-gray-900 text-lg"
-                            data-oid="x3traxp"
-                          >
+                        <div>
+                          <p className="font-semibold text-gray-900 text-lg">
                             Completion Certificate
                           </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="pzi09jy"
-                          >
+                          <p className="text-sm text-gray-600">
                             Professional credential
                           </p>
                         </div>
                       </div>
 
-                      <div
-                        className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300"
-                        data-oid="b_dbvwk"
-                      >
-                        <div
-                          className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform"
-                          data-oid="u_kyejz"
-                        >
-                          <Users
-                            className="h-4 w-4 text-white"
-                            data-oid="ervomr-"
-                          />
+                      <div className="flex items-center group hover:bg-gradient-to-r hover:from-[#123B79]/5 hover:to-transparent rounded-xl p-3 transition-all duration-300">
+                        <div className="bg-gradient-to-r from-[#F0A500] to-[#D89400] rounded-full p-2 mr-4 group-hover:scale-110 transition-transform">
+                          <Users className="h-4 w-4 text-white" />
                         </div>
-                        <div data-oid="j.rus13">
-                          <p
-                            className="font-semibold text-gray-900 text-lg"
-                            data-oid="pjh4nah"
-                          >
+                        <div>
+                          <p className="font-semibold text-gray-900 text-lg">
                             Expert Support
                           </p>
-                          <p
-                            className="text-sm text-gray-600"
-                            data-oid="zoh4owe"
-                          >
+                          <p className="text-sm text-gray-600">
                             Direct access to instructors
                           </p>
                         </div>
@@ -971,23 +757,16 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            data-oid="d2mt.mh"
           >
-            <div className="flex items-center mb-8" data-oid="qslsssd">
-              <div
-                className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4"
-                data-oid="ashw1jc"
-              >
-                <BookOpen className="h-6 w-6 text-white" data-oid=".ibfnve" />
+            <div className="flex items-center mb-8">
+              <div className="bg-gradient-to-r from-[#123B79] to-[#0A2A5E] rounded-full p-3 mr-4">
+                <BookOpen className="h-6 w-6 text-white" />
               </div>
-              <h2
-                className="text-3xl font-bold text-[#123B79]"
-                data-oid="stx4f-d"
-              >
+              <h2 className="text-3xl font-bold text-[#123B79]">
                 Course Sequence
               </h2>
             </div>
-            <div className="space-y-6" data-oid="vcil840">
+            <div className="space-y-6">
               {pathCourses.map((course, index) => (
                 <motion.div
                   key={course.id}
@@ -996,43 +775,28 @@ export default function LearningPathPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  data-oid="h4l3ata"
                 >
-                  <div className="flex flex-col md:flex-row" data-oid="1160-51">
-                    <div className="md:w-1/4 relative" data-oid="1eybeyt">
-                      <div
-                        className="relative h-48 md:h-full"
-                        data-oid="_m.19r8"
-                      >
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/4 relative">
+                      <div className="relative h-48 md:h-full">
                         <Image
                           src={course.image || "/placeholder.svg"}
                           alt={course.title}
                           fill
                           className="object-cover"
-                          data-oid="zi2pcks"
                         />
 
-                        <div
-                          className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
-                          data-oid="6e19c8p"
-                        ></div>
-                        <div
-                          className="absolute top-4 left-4 bg-gradient-to-r from-[#123B79] to-[#0A2A5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
-                          data-oid="bctv3vv"
-                        >
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div className="absolute top-4 left-4 bg-gradient-to-r from-[#123B79] to-[#0A2A5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
                           {index + 1}
                         </div>
-                        <div
-                          className="absolute top-4 right-4"
-                          data-oid="3-fnfl5"
-                        >
+                        <div className="absolute top-4 right-4">
                           <span
                             className={`text-xs font-bold px-3 py-1 rounded-full shadow-lg ${
                               course.price.toLowerCase() === "free"
                                 ? "bg-green-500 text-white"
                                 : "bg-white text-gray-800"
                             }`}
-                            data-oid="w4hsbvt"
                           >
                             {course.price.toLowerCase() === "free"
                               ? "FREE"
@@ -1041,45 +805,29 @@ export default function LearningPathPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-8 md:w-3/4" data-oid="2idhtfh">
-                      <h3
-                        className="text-2xl font-bold text-[#123B79] mb-3"
-                        data-oid="5.gvp9c"
-                      >
+                    <div className="p-8 md:w-3/4">
+                      <h3 className="text-2xl font-bold text-[#123B79] mb-3">
                         {course.title}
                       </h3>
-                      <p
-                        className="text-gray-500 text-sm mb-3 font-medium"
-                        data-oid="ckp94cf"
-                      >
+                      <p className="text-gray-500 text-sm mb-3 font-medium">
                         Instructor: {course.instructor} • {course.duration}
                       </p>
-                      <p
-                        className="text-gray-700 mb-6 text-lg leading-relaxed"
-                        data-oid="ckfeuj3"
-                      >
+                      <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                         {course.description}
                       </p>
-                      <div
-                        className="flex flex-wrap gap-2 mb-6"
-                        data-oid="enqg:fy"
-                      >
+                      <div className="flex flex-wrap gap-2 mb-6">
                         {course.categories.map((category, i) => (
                           <span
                             key={i}
                             className="text-xs font-medium px-3 py-1 bg-gradient-to-r from-[#123B79]/10 to-[#123B79]/5 text-[#123B79] rounded-full border border-[#123B79]/20"
-                            data-oid="xg0hqz0"
                           >
                             {category}
                           </span>
                         ))}
                       </div>
-                      <div
-                        className="flex items-center justify-between"
-                        data-oid="14:kt:w"
-                      >
-                        <div className="flex items-center" data-oid="o6re.ts">
-                          <div className="flex mr-3" data-oid="sz197b5">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <div className="flex mr-3">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
@@ -1088,38 +836,23 @@ export default function LearningPathPage() {
                                     ? "text-[#F0A500] fill-[#F0A500]"
                                     : "text-gray-300"
                                 }`}
-                                data-oid="xnskt.f"
                               />
                             ))}
                           </div>
-                          <span
-                            className="text-sm text-gray-600 font-medium"
-                            data-oid="qquol2y"
-                          >
+                          <span className="text-sm text-gray-600 font-medium">
                             {course.rating} ({course.reviewCount} reviews)
                           </span>
                         </div>
-                        <div className="text-right" data-oid="x_c43x-">
-                          <div
-                            className="text-2xl font-bold text-[#123B79]"
-                            data-oid="aa7qz54"
-                          >
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-[#123B79]">
                             {course.price.toLowerCase() === "free" ? (
-                              <span
-                                className="text-green-600"
-                                data-oid="k8ttzuh"
-                              >
-                                FREE
-                              </span>
+                              <span className="text-green-600">FREE</span>
                             ) : (
                               course.price
                             )}
                           </div>
                           {course.price.toLowerCase() !== "free" && (
-                            <div
-                              className="text-xs text-gray-500"
-                              data-oid="eiuoz6p"
-                            >
+                            <div className="text-xs text-gray-500">
                               Individual price
                             </div>
                           )}
@@ -1138,66 +871,41 @@ export default function LearningPathPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            data-oid="4nhflvx"
           >
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10" data-oid="iogui4u">
-              <div
-                className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full mix-blend-overlay filter blur-xl animate-pulse"
-                data-oid="jzviz-z"
-              ></div>
-              <div
-                className="absolute bottom-10 right-10 w-32 h-32 bg-[#F0A500] rounded-full mix-blend-overlay filter blur-xl animate-pulse delay-1000"
-                data-oid="ah8-fwt"
-              ></div>
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
+              <div className="absolute bottom-10 right-10 w-32 h-32 bg-[#F0A500] rounded-full mix-blend-overlay filter blur-xl animate-pulse delay-1000"></div>
             </div>
 
-            <div className="relative z-10" data-oid="xce8_pc">
-              <h2 className="text-4xl font-bold mb-4" data-oid="bpotfs_">
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold mb-4">
                 Ready to Start Your
-                <span
-                  className="bg-gradient-to-r from-[#F0A500] to-[#D89400] bg-clip-text text-transparent"
-                  data-oid="ul.wmej"
-                >
+                <span className="bg-gradient-to-r from-[#F0A500] to-[#D89400] bg-clip-text text-transparent">
                   {" "}
                   Learning Journey?
                 </span>
               </h2>
-              <p
-                className="text-xl mb-8 max-w-3xl mx-auto opacity-90"
-                data-oid=".t0obyv"
-              >
+              <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
                 Join hundreds of successful students and save $
                 {formatPrice(pricing.savings)} with our exclusive bundle deal.
                 Transform your property investment knowledge with expert
                 guidance.
               </p>
-              <div
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                data-oid="v2q96hp"
-              >
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
                   onClick={addBundleToCart}
                   className="bg-gradient-to-r from-[#F0A500] to-[#D89400] hover:from-[#D89400] hover:to-[#F0A500] text-[#123B79] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 group"
-                  data-oid="c_don9s"
                 >
-                  <ShoppingCart
-                    className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
-                    data-oid="mrq93nu"
-                  />
+                  <ShoppingCart className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform" />
                   Enroll Now - Save ${formatPrice(pricing.savings)}
                 </Button>
-                <div className="text-center" data-oid="_re4_i.">
-                  <div className="text-sm opacity-80" data-oid="rhff2ml">
-                    Bundle Price
-                  </div>
-                  <div className="text-2xl font-bold" data-oid="ii7m_nk">
+                <div className="text-center">
+                  <div className="text-sm opacity-80">Bundle Price</div>
+                  <div className="text-2xl font-bold">
                     ${formatPrice(pricing.bundlePrice)}
                   </div>
-                  <div
-                    className="text-sm opacity-80 line-through"
-                    data-oid="tou63yh"
-                  >
+                  <div className="text-sm opacity-80 line-through">
                     ${formatPrice(pricing.originalPrice)}
                   </div>
                 </div>

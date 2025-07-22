@@ -106,7 +106,7 @@ export const ShoppingCartProvider = ({
   };
 
   return (
-    <ShoppingCartContext.Provider value={value} data-oid="r1xqb_h">
+    <ShoppingCartContext.Provider value={value}>
       {children}
     </ShoppingCartContext.Provider>
   );

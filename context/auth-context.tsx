@@ -1,17 +1,12 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  ReactNode,
-} from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface User {
   email: string;
   name?: string;
   image?: string;
+  role?: string;
 }
 
 interface AuthContextType {
@@ -30,62 +25,34 @@ const TEMP_USERS = [
     password: "Abc123456#",
     name: "Pei Yee",
     image: undefined,
+    role: "user",
   },
   {
     email: "jenna.tan@propertylimbrothers.com",
     password: "Abc123456#",
     name: "Jenna Tan",
     image: undefined,
+    role: "admin",
   },
   {
     email: "blurryorr@gmail.com",
     password: "Abc123456#",
     name: "Blurry Orr",
     image: undefined,
+    role: "user",
+  },
+  {
+    email: "admin@assembly.com",
+    password: "SuperAdmin123#",
+    name: "Super Admin",
+    image: undefined,
+    role: "super_admin",
   },
 ];
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User | null>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  // Load auth state from localStorage on mount (client-side only)
-  useEffect(() => {
-    // Ensure we're on the client side
-    if (typeof window === "undefined") return;
-
-    try {
-      const savedUser = localStorage.getItem("auth_user");
-      const savedLoginState = localStorage.getItem("auth_logged_in");
-
-      if (savedUser && savedLoginState === "true") {
-        setUser(JSON.parse(savedUser));
-        setIsLoggedIn(true);
-      }
-    } catch (error) {
-      console.error("Error loading auth state:", error);
-    }
-    setIsInitialized(true);
-  }, []);
-
-  // Save auth state to localStorage whenever it changes (client-side only)
-  useEffect(() => {
-    // Ensure we're on the client side and initialized
-    if (typeof window === "undefined" || !isInitialized) return;
-
-    try {
-      if (isLoggedIn && user) {
-        localStorage.setItem("auth_user", JSON.stringify(user));
-        localStorage.setItem("auth_logged_in", "true");
-      } else {
-        localStorage.removeItem("auth_user");
-        localStorage.removeItem("auth_logged_in");
-      }
-    } catch (error) {
-      console.error("Error saving auth state:", error);
-    }
-  }, [isLoggedIn, user, isInitialized]);
 
   const login = async (email: string, password: string): Promise<boolean> => {
     // Simulate API call delay
@@ -97,13 +64,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     );
 
     if (foundUser) {
-      const userData = {
+      setIsLoggedIn(true);
+      setUser({
         email: foundUser.email,
         name: foundUser.name,
         image: foundUser.image,
-      };
-      setIsLoggedIn(true);
-      setUser(userData);
+        role: foundUser.role,
+      });
       return true;
     }
 
@@ -116,10 +83,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider
-      value={{ isLoggedIn, user, login, logout }}
-      data-oid="wqdf_kj"
-    >
+    <AuthContext.Provider value={{ isLoggedIn, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

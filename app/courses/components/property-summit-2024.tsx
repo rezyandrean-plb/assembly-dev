@@ -4,5 +4,5 @@ import CourseDetailTemplate from "../components/course-detail-template";
 import { courseData } from "../data/property-summit-2024";
 
 export default function PropertySummit2024() {
-  return <CourseDetailTemplate courseData={courseData} data-oid="x9g8ql6" />;
+  return <CourseDetailTemplate courseData={courseData} />;
 }

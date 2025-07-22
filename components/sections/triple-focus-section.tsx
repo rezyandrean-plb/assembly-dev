@@ -84,43 +84,22 @@ const TripleFocusSection: React.FC<TripleFocusSectionProps> = ({
   }, []);
 
   return (
-    <section
-      className="py-12 bg-gray-900 text-white relative overflow-hidden"
-      data-oid="sczrk1b"
-    >
+    <section className="py-12 bg-gray-900 text-white relative overflow-hidden">
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-full z-0"
         style={{ pointerEvents: "none" }}
-        data-oid="calxpr2"
       />
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="8t9iwig">
-        <h2 className="text-3xl font-semibold mb-4" data-oid="7m9j9wi">
-          {title}
-        </h2>
-        <p className="text-gray-300 mb-8" data-oid="2c:e23w">
-          {description}
-        </p>
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          data-oid="t:2b--0"
-        >
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl font-semibold mb-4">{title}</h2>
+        <p className="text-gray-300 mb-8">{description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {focusPoints.map((point, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 p-6 rounded-lg shadow-md"
-              data-oid="9jspajr"
-            >
-              <div className="text-4xl mb-4" data-oid="hfs6km5">
-                {point.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2" data-oid="z9-7_6u">
-                {point.title}
-              </h3>
-              <p className="text-gray-300" data-oid="3y:5d6:">
-                {point.description}
-              </p>
+            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="text-4xl mb-4">{point.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{point.title}</h3>
+              <p className="text-gray-300">{point.description}</p>
             </div>
           ))}
         </div>

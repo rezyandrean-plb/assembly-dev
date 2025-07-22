@@ -1,10 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/components/cart-context";
 
-export default function CheckoutPage() {
+function CheckoutPage() {
   const router = useRouter();
   const { cart } = useCart();
 
@@ -23,16 +24,15 @@ export default function CheckoutPage() {
 
   // Show loading while redirecting
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="ncesbb8">
-      <div
-        className="flex items-center justify-center min-h-[400px]"
-        data-oid="mcg971v"
-      >
-        <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-          data-oid="6zpk.tj"
-        ></div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"></div>
       </div>
     </div>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(CheckoutPage), {
+  ssr: false,
+});

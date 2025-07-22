@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState, useEffect, Suspense } from "react";
 import { Button } from "@/components/ui/button";
@@ -218,33 +219,25 @@ const countryList: string[] = [
   "Zimbabwe",
 ];
 
-export default function CartPage() {
+function CartPage() {
   return (
     <Suspense
       fallback={
-        <div
-          className="min-h-screen flex items-center justify-center"
-          data-oid="au95kk-"
-        >
-          <div className="animate-pulse" data-oid="iriee69">
-            <div
-              className="h-12 w-32 bg-gray-200 rounded mb-4"
-              data-oid="598gu-g"
-            ></div>
-            <div
-              className="h-8 w-48 bg-gray-200 rounded mb-4"
-              data-oid="cxkarfs"
-            ></div>
-            <div
-              className="h-4 w-64 bg-gray-200 rounded"
-              data-oid="9v3l7oq"
-            ></div>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-pulse">
+            <div className="h-12 w-32 bg-gray-200 rounded mb-4"></div>
+            <div className="h-8 w-48 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 w-64 bg-gray-200 rounded"></div>
           </div>
         </div>
       }
-      data-oid="-h9n:tb"
     >
-      <CartPageContent data-oid="_f9:zs8" />
+      <CartPageContent />
     </Suspense>
   );
 }
+
+// Export as dynamic to skip SSR
+export default dynamic(() => Promise.resolve(CartPage), {
+  ssr: false,
+});
