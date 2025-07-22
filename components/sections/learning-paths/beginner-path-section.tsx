@@ -5,6 +5,24 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+// Seeded random number generator
+function seededRandom(seed: number) {
+  const x = Math.sin(seed) * 10000
+  return x - Math.floor(x)
+}
+
+function generatePath(seed: number) {
+  const x1 = seededRandom(seed) * 1000
+  const y1 = seededRandom(seed + 1) * 1000
+  const x2 = seededRandom(seed + 2) * 1000
+  const y2 = seededRandom(seed + 3) * 1000
+  const x3 = seededRandom(seed + 4) * 1000
+  const y3 = seededRandom(seed + 5) * 1000
+  const x4 = seededRandom(seed + 6) * 1000
+  const y4 = seededRandom(seed + 7) * 1000
+  return `M${x1},${y1} C${x2},${y2} ${x3},${y3} ${x4},${y4}`
+}
+
 export default function BeginnerPathSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
@@ -38,30 +56,36 @@ export default function BeginnerPathSection() {
   // Exit pathway
   const exitPathwayPathLength = useTransform(scrollYProgress, [0.7, 0.9], [0, 1])
 
+  // Replace the random path generation with seeded paths
+  const paths = useMemo(() => 
+    Array(20)
+      .fill(0)
+      .map((_, i) => ({
+        d: generatePath(i),
+        key: `bg-path-${i}`,
+        index: i
+      }))
+  , [])
+
   return (
     <section ref={sectionRef} className="relative py-24 bg-white overflow-hidden min-h-screen">
       {/* Network Path Animation */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
           {/* Background network elements */}
-          {Array(20)
-            .fill(0)
-            .map((_, i) => (
-              <motion.path
-                key={`bg-path-${i}`}
-                d={`M${Math.random() * 1000},${Math.random() * 1000} C${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000} ${Math.random() * 1000},${Math.random() * 1000}`}
-                stroke="#AAAAAA"
-                strokeWidth="1"
-                strokeOpacity="0.2"
-                fill="none"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{
-                  pathLength: isInView ? 1 : 0,
-                  opacity: isInView ? 0.18 : 0,
-                }}
-                transition={{ duration: 1.5, delay: i * 0.05 }}
-              />
-            ))}
+          {paths.map(({ d, key, index }) => (
+            <motion.path
+              key={key}
+              d={d}
+              stroke="#AAAAAA"
+              strokeWidth="1"
+              strokeOpacity="0.2"
+              fill="none"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: index * 0.1 }}
+            />
+          ))}
 
           {/* Main entry pathway */}
           <motion.path
