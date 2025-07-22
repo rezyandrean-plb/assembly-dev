@@ -16,12 +16,10 @@ const Progress = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="fj_of_j"
   >
     <ProgressPrimitive.Indicator
       className="h-full w-full flex-1 bg-[#123B79] transition-all"
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-      data-oid="yyxoxlt"
     />
   </ProgressPrimitive.Root>
 ));

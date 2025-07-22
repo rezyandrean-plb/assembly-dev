@@ -101,45 +101,32 @@ function TestEnrollmentPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8" data-oid="rd9pzyg">
-      <h1 className="text-3xl font-bold mb-8" data-oid="h_pz9xd">
-        Test Enrollment System
-      </h1>
+    <div className="max-w-4xl mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-8">Test Enrollment System</h1>
 
       {!isLoggedIn ? (
-        <div
-          className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-6"
-          data-oid="82.9988"
-        >
-          <p data-oid="5.g8lml">
+        <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-6">
+          <p>
             Please{" "}
-            <a
-              href="/login"
-              className="text-blue-600 underline"
-              data-oid="9e:clnu"
-            >
+            <a href="/login" className="text-blue-600 underline">
               log in
             </a>{" "}
             to test the enrollment system.
           </p>
         </div>
       ) : (
-        <div
-          className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6"
-          data-oid="n:4nxg8"
-        >
-          <p data-oid="kmudgcb">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+          <p>
             ✅ Logged in as: {user?.name} ({user?.email})
           </p>
         </div>
       )}
 
-      <div className="space-y-4 mb-6" data-oid="dlqrwzp">
+      <div className="space-y-4 mb-6">
         <button
           onClick={testEnrollment}
           disabled={!isLoggedIn || loading}
           className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-          data-oid="p4ak-66"
         >
           {loading ? "Testing..." : "Test Course Enrollment"}
         </button>
@@ -148,47 +135,29 @@ function TestEnrollmentPage() {
           onClick={testStats}
           disabled={!isLoggedIn || loading}
           className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed ml-4"
-          data-oid="9z5.epf"
         >
           {loading ? "Testing..." : "Test User Stats"}
         </button>
       </div>
 
       {result && (
-        <div
-          className="bg-gray-100 border border-gray-300 rounded-lg p-4"
-          data-oid="i-yvlkl"
-        >
-          <h3 className="font-semibold mb-2" data-oid="i3dfdpu">
-            Test Result:
-          </h3>
-          <pre className="whitespace-pre-wrap text-sm" data-oid="hn9pdlp">
-            {result}
-          </pre>
+        <div className="bg-gray-100 border border-gray-300 rounded-lg p-4">
+          <h3 className="font-semibold mb-2">Test Result:</h3>
+          <pre className="whitespace-pre-wrap text-sm">{result}</pre>
         </div>
       )}
 
-      <div className="mt-8 p-4 bg-blue-50 rounded-lg" data-oid="7x3.hig">
-        <h3 className="font-semibold mb-2" data-oid="p99ohkr">
-          How to use:
-        </h3>
-        <ol
-          className="list-decimal list-inside space-y-1 text-sm"
-          data-oid="b4_lybt"
-        >
-          <li data-oid="3or7vlh">Make sure you're logged in</li>
-          <li data-oid="gl627mb">
-            Click "Test Course Enrollment" to enroll in a test course
-          </li>
-          <li data-oid="cei7hty">
-            Click "Test User Stats" to view your learning statistics
-          </li>
-          <li data-oid="ogab5r:">
+      <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+        <h3 className="font-semibold mb-2">How to use:</h3>
+        <ol className="list-decimal list-inside space-y-1 text-sm">
+          <li>Make sure you're logged in</li>
+          <li>Click "Test Course Enrollment" to enroll in a test course</li>
+          <li>Click "Test User Stats" to view your learning statistics</li>
+          <li>
             Go to your{" "}
             <a
               href="/profile/learning-progress"
               className="text-blue-600 underline"
-              data-oid="dl7tw4g"
             >
               Learning Progress
             </a>{" "}

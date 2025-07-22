@@ -13,7 +13,6 @@ export default function CtaSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden"
-      data-oid="6-_i4wh"
     >
       {/* Animated background gradient */}
       <motion.div
@@ -21,29 +20,18 @@ export default function CtaSection() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
-        data-oid="7l0o3pw"
       >
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-400/30 to-transparent"
-          data-oid="4u2hk02"
-        ></div>
-        <div
-          className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-orange-700/20 to-transparent"
-          data-oid="pulvl2y"
-        ></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-orange-700/20 to-transparent"></div>
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="ltcxw_-">
-        <div
-          className="max-w-4xl mx-auto text-center text-white"
-          data-oid="umvfjfi"
-        >
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center text-white">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            data-oid="-.7olez"
           >
             Explore Our Content & Join the Community
           </motion.h2>
@@ -53,32 +41,26 @@ export default function CtaSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            data-oid="f0t61q4"
           >
             Take the next step in your real estate journey with Assembly's
             resources and network of professionals
           </motion.p>
 
-          <div
-            className="flex flex-col sm:flex-row justify-center gap-6"
-            data-oid="xxgb:5a"
-          >
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="9xhr78z"
             >
               <Button
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-full flex items-center"
-                data-oid="2cyzixa"
               >
-                <BookOpen className="mr-2 h-5 w-5" data-oid="1sfl0yl" />
+                <BookOpen className="mr-2 h-5 w-5" />
                 Explore Content
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="nez:mkf" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
 
@@ -88,17 +70,15 @@ export default function CtaSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="jkhb7tu"
             >
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full flex items-center"
-                data-oid="bbdn4d3"
               >
-                <Users className="mr-2 h-5 w-5" data-oid="waf3qjx" />
+                <Users className="mr-2 h-5 w-5" />
                 Join Community
-                <ArrowRight className="ml-2 h-5 w-5" data-oid="e8ogmo8" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
           </div>

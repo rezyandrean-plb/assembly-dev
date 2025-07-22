@@ -68,44 +68,37 @@ export default function BookPreviewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 md:pt-28" data-oid="5y.jhye">
+    <div className="min-h-screen bg-gray-50 pt-24 md:pt-28">
       {isMounted && (
         <NetworkBackground
           scrollY={0}
           scrollSpeed={0}
           windowHeight={windowHeight}
-          data-oid="jdin3gd"
         />
       )}
 
-      <div className="container mx-auto py-16 px-4" data-oid="jjaqev:">
+      <div className="container mx-auto py-16 px-4">
         <Link
           href="/plb-book"
           className="inline-flex items-center text-primary mb-8 hover:underline"
-          data-oid="oo37-:0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 mr-2"
             viewBox="0 0 20 20"
             fill="currentColor"
-            data-oid="rvsqnxy"
           >
             <path
               fillRule="evenodd"
               d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
               clipRule="evenodd"
-              data-oid="v2tlt-1"
             />
           </svg>
           Back to Book Page
         </Link>
 
-        <div
-          className="bg-white rounded-lg shadow-xl overflow-hidden"
-          data-oid="e1:9b-a"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2" data-oid="kh37jjk">
+        <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Book Cover Side */}
             <div
               className="p-8 flex flex-col justify-center items-center text-gray-800 relative overflow-hidden"
@@ -113,66 +106,35 @@ export default function BookPreviewPage() {
                 background:
                   "linear-gradient(to bottom right, #fffbeb, #fdfdfd, #d1e1f8)",
               }}
-              data-oid="ts72fud"
             >
               {/* Subtle pattern overlay */}
-              <div className="absolute inset-0 opacity-10" data-oid="z204j4a">
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent transform -skew-y-12"
-                  data-oid="gj.j079"
-                ></div>
-                <div
-                  className="absolute inset-0 bg-gradient-to-l from-transparent via-orange-200/15 to-transparent transform skew-y-12"
-                  data-oid="bwfu8pp"
-                ></div>
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent transform -skew-y-12"></div>
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-orange-200/15 to-transparent transform skew-y-12"></div>
               </div>
-              <div className="max-w-md relative z-10" data-oid="3zfj1sp">
-                <div
-                  className="relative w-full max-w-xs mx-auto mb-8"
-                  data-oid="-40xug7"
-                >
-                  <div
-                    className="relative w-64 h-80 bg-blue-900 rounded-lg shadow-2xl transform rotate-3 mx-auto hover:rotate-1 transition-transform duration-300"
-                    data-oid="k98:vit"
-                  >
+              <div className="max-w-md relative z-10">
+                <div className="relative w-full max-w-xs mx-auto mb-8">
+                  <div className="relative w-64 h-80 bg-blue-900 rounded-lg shadow-2xl transform rotate-3 mx-auto hover:rotate-1 transition-transform duration-300">
                     <img
                       src="/images/PLB Book Front Cover_FA.jpg"
                       alt="PropertyLimBrothers Book Cover"
                       className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                      data-oid="pj.o34f"
                     />
 
-                    <div
-                      className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center opacity-0"
-                      data-oid=".:4d_o5"
-                    >
-                      <div className="text-center p-4" data-oid="9.el7eg">
-                        <h3
-                          className="text-primary text-xl font-bold mb-2"
-                          data-oid="cdajviy"
-                        >
+                    <div className="absolute inset-0 bg-white m-1 rounded-lg flex items-center justify-center opacity-0">
+                      <div className="text-center p-4">
+                        <h3 className="text-primary text-xl font-bold mb-2">
                           POSITIONING
                         </h3>
-                        <h4
-                          className="text-primary text-lg mb-4"
-                          data-oid="atsosu:"
-                        >
+                        <h4 className="text-primary text-lg mb-4">
                           THE ART OF SELLING YOUR PROPERTY
                         </h4>
-                        <p className="text-sm text-gray-600" data-oid="927sxq1">
+                        <p className="text-sm text-gray-600">
                           TO ITS MAXIMUM POTENTIAL
                         </p>
-                        <div className="mt-8" data-oid="wn95fts">
-                          <p
-                            className="text-primary font-bold"
-                            data-oid="3yyx5ha"
-                          >
-                            MELVIN LIM
-                          </p>
-                          <p
-                            className="text-xs text-gray-500"
-                            data-oid="bqsqi8x"
-                          >
+                        <div className="mt-8">
+                          <p className="text-primary font-bold">MELVIN LIM</p>
+                          <p className="text-xs text-gray-500">
                             CO-FOUNDER & CEO PROPERTYLIMBROTHERS
                           </p>
                         </div>
@@ -181,82 +143,50 @@ export default function BookPreviewPage() {
                   </div>
                 </div>
 
-                <h2 className="text-2xl font-bold mb-4" data-oid="gj7c2ey">
+                <h2 className="text-2xl font-bold mb-4">
                   Unlock Your Property's Maximum Potential
                 </h2>
-                <p className="mb-6" data-oid="v78y7:3">
+                <p className="mb-6">
                   Delve into a comprehensive guide to optimising property value,
                   blending market insights, data analysis, and buyer psychology.
                 </p>
 
-                <div className="space-y-3 mt-8" data-oid="c1_x7i5">
-                  <div className="flex items-center" data-oid="j0uhhs9">
-                    <span
-                      className="text-sm mr-3 opacity-70"
-                      data-oid="7r-ghu9"
-                    >
-                      01
-                    </span>
-                    <span data-oid="wc-m98t">
-                      The Most Common Reasons for Selling
-                    </span>
+                <div className="space-y-3 mt-8">
+                  <div className="flex items-center">
+                    <span className="text-sm mr-3 opacity-70">01</span>
+                    <span>The Most Common Reasons for Selling</span>
                   </div>
-                  <div className="flex items-center" data-oid="xy3b5jl">
-                    <span
-                      className="text-sm mr-3 opacity-70"
-                      data-oid="alp8m0:"
-                    >
-                      02
-                    </span>
-                    <span data-oid="g5oig8w">
-                      12 Steps to Selling Your Home
-                    </span>
+                  <div className="flex items-center">
+                    <span className="text-sm mr-3 opacity-70">02</span>
+                    <span>12 Steps to Selling Your Home</span>
                   </div>
-                  <div className="flex items-center" data-oid="rpd5uaw">
-                    <span
-                      className="text-sm mr-3 opacity-70"
-                      data-oid="x_2s2h9"
-                    >
-                      03
-                    </span>
-                    <span data-oid="6mvry1g">
-                      Product Positioning: Transforming the home
-                    </span>
+                  <div className="flex items-center">
+                    <span className="text-sm mr-3 opacity-70">03</span>
+                    <span>Product Positioning: Transforming the home</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Form Side */}
-            <div className="p-8" data-oid="uq3.5ib">
+            <div className="p-8">
               {!isSubmitted ? (
                 <>
-                  <h2
-                    className="text-2xl font-bold text-gray-800 mb-6"
-                    data-oid="-djvt7f"
-                  >
+                  <h2 className="text-2xl font-bold text-gray-800 mb-6">
                     Claim Your Free Preview Now
                   </h2>
-                  <p className="text-gray-600 mb-8" data-oid="e.j6lqu">
+                  <p className="text-gray-600 mb-8">
                     Grab our complimentary chapter packed with actionable
                     insights to start transforming your home-selling experience
                     today!
                   </p>
 
-                  <form
-                    onSubmit={handleSubmit}
-                    className="space-y-6"
-                    data-oid="n:dfhyh"
-                  >
-                    <div
-                      className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                      data-oid="t228rs5"
-                    >
-                      <div data-oid="nhq_r8:">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
                         <label
                           htmlFor="firstName"
                           className="block text-sm font-medium text-gray-700 mb-1"
-                          data-oid=".ct9zk6"
                         >
                           First Name
                         </label>
@@ -269,14 +199,12 @@ export default function BookPreviewPage() {
                           required
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                           placeholder="First Name"
-                          data-oid="eeyz5_f"
                         />
                       </div>
-                      <div data-oid="aba3gu7">
+                      <div>
                         <label
                           htmlFor="lastName"
                           className="block text-sm font-medium text-gray-700 mb-1"
-                          data-oid="_k-buhm"
                         >
                           Last Name
                         </label>
@@ -289,16 +217,14 @@ export default function BookPreviewPage() {
                           required
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                           placeholder="Last Name"
-                          data-oid="eirikl7"
                         />
                       </div>
                     </div>
 
-                    <div data-oid="slcou2m">
+                    <div>
                       <label
                         htmlFor="email"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="chki857"
                       >
                         Email
                       </label>
@@ -311,15 +237,13 @@ export default function BookPreviewPage() {
                         required
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="Email"
-                        data-oid="23jzloz"
                       />
                     </div>
 
-                    <div data-oid="i5u2msc">
+                    <div>
                       <label
                         htmlFor="phoneNumber"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="b0:asdl"
                       >
                         Phone Number
                       </label>
@@ -332,15 +256,13 @@ export default function BookPreviewPage() {
                         required
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="Phone Number"
-                        data-oid="u_:ma5-"
                       />
                     </div>
 
-                    <div data-oid="j.e5n5h">
+                    <div>
                       <label
                         htmlFor="propertyType"
                         className="block text-sm font-medium text-gray-700 mb-1"
-                        data-oid="re0jlpt"
                       >
                         What Property Do You Currently Own?
                       </label>
@@ -350,27 +272,16 @@ export default function BookPreviewPage() {
                         value={formState.propertyType}
                         onChange={handleChange}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        data-oid="xlq84:w"
                       >
-                        <option value="None" data-oid="oa-ag9s">
-                          None
-                        </option>
-                        <option value="HDB" data-oid="7au:nbi">
-                          HDB
-                        </option>
-                        <option value="Condo" data-oid=".x8ra10">
-                          Condominium
-                        </option>
-                        <option value="Landed" data-oid="pkywp0u">
-                          Landed Property
-                        </option>
-                        <option value="Multiple" data-oid="vrhqrqh">
-                          Multiple Properties
-                        </option>
+                        <option value="None">None</option>
+                        <option value="HDB">HDB</option>
+                        <option value="Condo">Condominium</option>
+                        <option value="Landed">Landed Property</option>
+                        <option value="Multiple">Multiple Properties</option>
                       </select>
                     </div>
 
-                    <div className="flex items-start" data-oid="b3dvpwp">
+                    <div className="flex items-start">
                       <input
                         type="checkbox"
                         id="marketingConsent"
@@ -378,13 +289,11 @@ export default function BookPreviewPage() {
                         checked={formState.marketingConsent}
                         onChange={handleCheckboxChange}
                         className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded mt-1"
-                        data-oid="yuuubwz"
                       />
 
                       <label
                         htmlFor="marketingConsent"
                         className="ml-2 block text-sm text-gray-600"
-                        data-oid="fh-t8w4"
                       >
                         Upon registering, you agree to receive future marketing
                         materials from PropertyLimBrothers. Your personal
@@ -397,7 +306,6 @@ export default function BookPreviewPage() {
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-primary/90 transition-colors disabled:opacity-70"
-                      data-oid="h19:6lj"
                     >
                       {isSubmitting
                         ? "Processing..."
@@ -406,38 +314,30 @@ export default function BookPreviewPage() {
                   </form>
                 </>
               ) : (
-                <div className="text-center py-12" data-oid="t7.wqeg">
+                <div className="text-center py-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-16 w-16 text-green-500 mx-auto mb-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    data-oid="47jp0:o"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      data-oid="2wikty:"
                     />
                   </svg>
-                  <h2
-                    className="text-2xl font-bold text-gray-800 mb-4"
-                    data-oid=":rib7he"
-                  >
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
                     Thank You!
                   </h2>
-                  <p className="text-gray-600 mb-8" data-oid="i2:yn:t">
+                  <p className="text-gray-600 mb-8">
                     Your free preview is on its way to your inbox. Please check
                     your email in the next few minutes.
                   </p>
-                  <Link href="/plb-book" data-oid=":rfs:3w">
-                    <button
-                      className="bg-primary text-white py-2 px-6 rounded-md hover:bg-primary/90 transition-colors"
-                      data-oid="eq5.rgt"
-                    >
+                  <Link href="/plb-book">
+                    <button className="bg-primary text-white py-2 px-6 rounded-md hover:bg-primary/90 transition-colors">
                       Return to Book Page
                     </button>
                   </Link>

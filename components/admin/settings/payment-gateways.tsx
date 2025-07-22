@@ -145,40 +145,35 @@ export function PaymentGateways() {
   };
 
   return (
-    <div className="space-y-6" data-oid="omo:4f8">
-      <Card data-oid="7szxl3:">
-        <CardHeader data-oid="39c::j6">
-          <CardTitle className="flex items-center gap-2" data-oid="s0fiqp8">
-            <CreditCard className="h-5 w-5" data-oid="o.dpyva" />
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <CreditCard className="h-5 w-5" />
             Payment Gateways
           </CardTitle>
-          <CardDescription data-oid="a2xvt.r">
+          <CardDescription>
             Configure payment providers for processing customer transactions. At
             least one gateway must be enabled for checkout to function.
           </CardDescription>
         </CardHeader>
       </Card>
 
-      <Alert data-oid="_6ziwyc">
-        <AlertTriangle className="h-4 w-4" data-oid="29bckcv" />
-        <AlertDescription data-oid="ve6p7ou">
-          <strong data-oid="ozf:fgl">Security Notice:</strong> API keys are
-          sensitive information. Only enter production keys in a secure
-          environment. Test keys are safe for development.
+      <Alert>
+        <AlertTriangle className="h-4 w-4" />
+        <AlertDescription>
+          <strong>Security Notice:</strong> API keys are sensitive information.
+          Only enter production keys in a secure environment. Test keys are safe
+          for development.
         </AlertDescription>
       </Alert>
 
       {gateways.map((gateway) => (
-        <Card key={gateway.id} data-oid="7kt_lk:">
-          <CardHeader data-oid="_rf4llu">
-            <div
-              className="flex items-center justify-between"
-              data-oid="oca3mog"
-            >
-              <div className="flex items-center gap-3" data-oid="jcukd-o">
-                <CardTitle className="text-lg" data-oid="o6h1r.9">
-                  {gateway.name}
-                </CardTitle>
+        <Card key={gateway.id}>
+          <CardHeader>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <CardTitle className="text-lg">{gateway.name}</CardTitle>
                 <Badge
                   variant={gateway.enabled ? "default" : "secondary"}
                   className={
@@ -186,7 +181,6 @@ export function PaymentGateways() {
                       ? "bg-green-600 text-white"
                       : "bg-gray-500 text-white"
                   }
-                  data-oid="vl6u:82"
                 >
                   {gateway.enabled ? "Enabled" : "Disabled"}
                 </Badge>
@@ -197,7 +191,6 @@ export function PaymentGateways() {
                       ? "bg-green-600 text-white"
                       : "bg-red-600 text-white"
                   }
-                  data-oid="q8n_8kb"
                 >
                   {gateway.isConnected ? "Connected" : "Not Connected"}
                 </Badge>
@@ -207,19 +200,16 @@ export function PaymentGateways() {
                 onCheckedChange={(enabled) =>
                   updateGateway(gateway.id, { enabled })
                 }
-                data-oid="az6gbwj"
               />
             </div>
-            <CardDescription data-oid="ot6ckj7">
+            <CardDescription>
               Configure {gateway.name} payment processing
             </CardDescription>
           </CardHeader>
 
-          <CardContent className="space-y-4" data-oid="d0q8mgj">
-            <div className="space-y-2" data-oid="e7qywqb">
-              <Label htmlFor={`${gateway.id}-display-name`} data-oid="ts4dfe-">
-                Display Name
-              </Label>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor={`${gateway.id}-display-name`}>Display Name</Label>
               <Input
                 id={`${gateway.id}-display-name`}
                 value={gateway.displayName}
@@ -227,22 +217,18 @@ export function PaymentGateways() {
                   updateGateway(gateway.id, { displayName: e.target.value })
                 }
                 placeholder="Name shown to customers at checkout"
-                data-oid="gnc3ajg"
               />
 
-              <p className="text-xs text-gray-500" data-oid="eh7nwnv">
+              <p className="text-xs text-gray-500">
                 This is what customers see as a payment option
               </p>
             </div>
 
-            <Separator data-oid="u9-a.p4" />
+            <Separator />
 
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-4"
-              data-oid="ge7-ikd"
-            >
-              <div className="space-y-2" data-oid="_cydla_">
-                <Label htmlFor={`${gateway.id}-public-key`} data-oid="lx9uz9p">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor={`${gateway.id}-public-key`}>
                   Public API Key
                 </Label>
                 <Input
@@ -252,19 +238,18 @@ export function PaymentGateways() {
                     updateGateway(gateway.id, { publicKey: e.target.value })
                   }
                   placeholder="pk_test_..."
-                  data-oid="i0-__bm"
                 />
 
-                <p className="text-xs text-gray-500" data-oid="zzkdgkh">
+                <p className="text-xs text-gray-500">
                   Safe to expose in frontend code
                 </p>
               </div>
 
-              <div className="space-y-2" data-oid="apbe8-l">
-                <Label htmlFor={`${gateway.id}-secret-key`} data-oid="f.cd6z7">
+              <div className="space-y-2">
+                <Label htmlFor={`${gateway.id}-secret-key`}>
                   Secret API Key
                 </Label>
-                <div className="relative" data-oid="ffcao8w">
+                <div className="relative">
                   <Input
                     id={`${gateway.id}-secret-key`}
                     type={showSecrets[gateway.id] ? "text" : "password"}
@@ -277,7 +262,6 @@ export function PaymentGateways() {
                       updateGateway(gateway.id, { secretKey: e.target.value })
                     }
                     placeholder="sk_test_..."
-                    data-oid="w8gnm--"
                   />
 
                   <Button
@@ -286,29 +270,27 @@ export function PaymentGateways() {
                     size="sm"
                     className="absolute right-0 top-0 h-full px-3"
                     onClick={() => toggleSecretVisibility(gateway.id)}
-                    data-oid="i8lt9n_"
                   >
                     {showSecrets[gateway.id] ? (
-                      <EyeOff className="h-4 w-4" data-oid="kfay5.c" />
+                      <EyeOff className="h-4 w-4" />
                     ) : (
-                      <Eye className="h-4 w-4" data-oid="r5ix9pi" />
+                      <Eye className="h-4 w-4" />
                     )}
                   </Button>
                 </div>
-                <p className="text-xs text-gray-500" data-oid="64e1re2">
+                <p className="text-xs text-gray-500">
                   Keep this secret and secure
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-2 pt-4" data-oid="tpkl4cu">
+            <div className="flex gap-2 pt-4">
               <Button
                 onClick={() => handleSave(gateway.id)}
                 disabled={isLoading}
                 className="bg-[#123B79] hover:bg-[#425DA0]"
-                data-oid="qo5n0sz"
               >
-                <Save className="mr-2 h-4 w-4" data-oid="evow8nf" />
+                <Save className="mr-2 h-4 w-4" />
                 {isLoading ? "Saving..." : "Save"}
               </Button>
 
@@ -316,9 +298,8 @@ export function PaymentGateways() {
                 variant="outline"
                 onClick={() => testConnection(gateway.id)}
                 disabled={isLoading || !gateway.publicKey || !gateway.secretKey}
-                data-oid="tb.qfa9"
               >
-                <Wifi className="mr-2 h-4 w-4" data-oid="8imtdis" />
+                <Wifi className="mr-2 h-4 w-4" />
                 {isLoading ? "Testing..." : "Test Connection"}
               </Button>
             </div>

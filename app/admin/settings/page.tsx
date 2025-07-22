@@ -43,13 +43,11 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="space-y-6" data-oid="z6ls.29">
-      <div className="flex items-center justify-between" data-oid="rbqqm.x">
-        <div data-oid="qe1dz5j">
-          <h1 className="text-3xl font-bold text-[#123B79]" data-oid="8.wimb7">
-            Settings
-          </h1>
-          <p className="text-gray-600 mt-1" data-oid="gncbb52">
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-[#123B79]">Settings</h1>
+          <p className="text-gray-600 mt-1">
             Manage platform configuration and preferences
           </p>
         </div>
@@ -57,45 +55,44 @@ export default function SettingsPage() {
           onClick={handleSaveAll}
           disabled={isLoading}
           className="bg-[#123B79] hover:bg-[#425DA0]"
-          data-oid="eklgz2n"
         >
-          <Save className="mr-2 h-4 w-4" data-oid="wrlhqsk" />
+          <Save className="mr-2 h-4 w-4" />
           {isLoading ? "Saving..." : "Save All Changes"}
         </Button>
       </div>
 
-      <Tabs 
-        value={activeSection} 
+      <Tabs
+        value={activeSection}
         onValueChange={(value) => setActiveSection(value as SettingsSection)}
         className="mt-6"
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <TabsList className="bg-white border border-gray-200">
-            <TabsTrigger 
+            <TabsTrigger
               value="general"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               General
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="shipping"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Shipping & Delivery
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="email-templates"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Email Templates
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="payment-gateways"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Payment Gateways
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="integrations"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >

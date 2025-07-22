@@ -12,13 +12,13 @@ import NewCtaSection from "@/components/sections/new-cta-section";
 export default function HomePage() {
   return (
     <>
-      <NewHeroSection data-oid="3xc:t7h" />
-      <NewFeaturesSection data-oid="r3t9a9r" />
-      <NewCoursesSection data-oid="pd3rcve" />
-      <NewLearningPathsSection data-oid=":tscvpd" />
-      <NewStatsSection data-oid="kgbmlpq" />
-      <NewTestimonialsSection data-oid="s63aosm" />
-      <NewCtaSection data-oid="nw3254d" />
+      <NewHeroSection />
+      <NewFeaturesSection />
+      <NewCoursesSection />
+      <NewLearningPathsSection />
+      <NewStatsSection />
+      <NewTestimonialsSection />
+      <NewCtaSection />
     </>
   );
 }

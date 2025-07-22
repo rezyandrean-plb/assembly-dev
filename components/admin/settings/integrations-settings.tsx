@@ -148,45 +148,42 @@ export function IntegrationsSettings() {
   };
 
   return (
-    <div className="space-y-6" data-oid="k0pvkb-">
-      <Card data-oid="c4d-yh-">
-        <CardHeader data-oid="t85.2ir">
-          <CardTitle className="flex items-center gap-2" data-oid="gt_jrkb">
-            <Key className="h-5 w-5" data-oid="h3swxvl" />
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Key className="h-5 w-5" />
             Integrations & API Keys
           </CardTitle>
-          <CardDescription data-oid="k-cng3h">
+          <CardDescription>
             Configure third-party services and API integrations. These services
             power various platform features.
           </CardDescription>
         </CardHeader>
       </Card>
 
-      <Alert data-oid="towgge1">
-        <AlertTriangle className="h-4 w-4" data-oid="o8twe-o" />
-        <AlertDescription data-oid="6:ran40">
-          <strong data-oid="razm.1y">Security Notice:</strong> API keys and
-          secrets are sensitive. Only authorized personnel should have access to
-          this section.
+      <Alert>
+        <AlertTriangle className="h-4 w-4" />
+        <AlertDescription>
+          <strong>Security Notice:</strong> API keys and secrets are sensitive.
+          Only authorized personnel should have access to this section.
         </AlertDescription>
       </Alert>
 
       {/* Email Service Integration */}
-      <Card data-oid="sodoblz">
-        <CardHeader data-oid="x29bbhb">
-          <div className="flex items-center justify-between" data-oid="nif39hp">
-            <div className="flex items-center gap-3" data-oid="3-7yd9s">
-              <Mail className="h-5 w-5" data-oid="niedfm7" />
-              <div data-oid="wzpd983">
-                <CardTitle className="text-lg" data-oid="mk7-3xe">
-                  Email Service
-                </CardTitle>
-                <CardDescription data-oid="pyzliei">
+      <Card>
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Mail className="h-5 w-5" />
+              <div>
+                <CardTitle className="text-lg">Email Service</CardTitle>
+                <CardDescription>
                   Configure email provider for sending automated emails
                 </CardDescription>
               </div>
             </div>
-            <div className="flex items-center gap-2" data-oid="pmpaey2">
+            <div className="flex items-center gap-2">
               <Badge
                 variant={
                   integrations.find((i) => i.id === "email")?.isConnected
@@ -198,7 +195,6 @@ export function IntegrationsSettings() {
                     ? "bg-green-600 text-white"
                     : "bg-red-600 text-white"
                 }
-                data-oid="l32qbw9"
               >
                 {integrations.find((i) => i.id === "email")?.isConnected
                   ? "Connected"
@@ -207,35 +203,22 @@ export function IntegrationsSettings() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="space-y-4" data-oid="k_n1sp1">
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4"
-            data-oid="tsd02f4"
-          >
-            <div className="space-y-2" data-oid="6ao:9q5">
-              <Label htmlFor="email-provider" data-oid="og905v1">
-                Email Provider
-              </Label>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="email-provider">Email Provider</Label>
               <Select
                 value={emailSettings.provider}
                 onValueChange={(value) =>
                   setEmailSettings((prev) => ({ ...prev, provider: value }))
                 }
-                data-oid="z5zpby4"
               >
-                <SelectTrigger data-oid=":3s2.p:">
-                  <SelectValue
-                    placeholder="Select provider"
-                    data-oid="oolzq32"
-                  />
+                <SelectTrigger>
+                  <SelectValue placeholder="Select provider" />
                 </SelectTrigger>
-                <SelectContent data-oid="lu4hii7">
+                <SelectContent>
                   {emailProviders.map((provider) => (
-                    <SelectItem
-                      key={provider.value}
-                      value={provider.value}
-                      data-oid="remc3xc"
-                    >
+                    <SelectItem key={provider.value} value={provider.value}>
                       {provider.label}
                     </SelectItem>
                   ))}
@@ -243,10 +226,8 @@ export function IntegrationsSettings() {
               </Select>
             </div>
 
-            <div className="space-y-2" data-oid="0lvk25c">
-              <Label htmlFor="email-domain" data-oid="-_3-kxj">
-                Domain
-              </Label>
+            <div className="space-y-2">
+              <Label htmlFor="email-domain">Domain</Label>
               <Input
                 id="email-domain"
                 value={emailSettings.domain}
@@ -257,16 +238,13 @@ export function IntegrationsSettings() {
                   }))
                 }
                 placeholder="mg.yourdomain.com"
-                data-oid="7outn.x"
               />
             </div>
           </div>
 
-          <div className="space-y-2" data-oid="fl53634">
-            <Label htmlFor="email-api-key" data-oid="4ym1ok-">
-              API Key
-            </Label>
-            <div className="relative" data-oid="12f8xm:">
+          <div className="space-y-2">
+            <Label htmlFor="email-api-key">API Key</Label>
+            <div className="relative">
               <Input
                 id="email-api-key"
                 type={showSecrets.emailApiKey ? "text" : "password"}
@@ -282,7 +260,6 @@ export function IntegrationsSettings() {
                   }))
                 }
                 placeholder="key-1234567890abcdef"
-                data-oid="j1.qk-4"
               />
 
               <Button
@@ -291,28 +268,26 @@ export function IntegrationsSettings() {
                 size="sm"
                 className="absolute right-0 top-0 h-full px-3"
                 onClick={() => toggleSecretVisibility("emailApiKey")}
-                data-oid="4rmv2la"
               >
                 {showSecrets.emailApiKey ? (
-                  <EyeOff className="h-4 w-4" data-oid="5ax:6zl" />
+                  <EyeOff className="h-4 w-4" />
                 ) : (
-                  <Eye className="h-4 w-4" data-oid="gwhnkhm" />
+                  <Eye className="h-4 w-4" />
                 )}
               </Button>
             </div>
-            <p className="text-xs text-gray-500" data-oid="_-hdgx8">
+            <p className="text-xs text-gray-500">
               Used to send all automated emails from the platform
             </p>
           </div>
 
-          <div className="flex gap-2 pt-2" data-oid="vd2.msv">
+          <div className="flex gap-2 pt-2">
             <Button
               variant="outline"
               onClick={() => testConnection("email")}
               disabled={isLoading}
-              data-oid="7s3grry"
             >
-              <Wifi className="mr-2 h-4 w-4" data-oid="5nmx7cf" />
+              <Wifi className="mr-2 h-4 w-4" />
               {isLoading ? "Testing..." : "Test Connection"}
             </Button>
           </div>
@@ -320,21 +295,19 @@ export function IntegrationsSettings() {
       </Card>
 
       {/* Analytics Integration */}
-      <Card data-oid="cxl._-9">
-        <CardHeader data-oid=".kqcxh7">
-          <div className="flex items-center justify-between" data-oid="y.ydpn9">
-            <div className="flex items-center gap-3" data-oid="hnf-qs0">
-              <BarChart3 className="h-5 w-5" data-oid="cjich2c" />
-              <div data-oid="cni_yi:">
-                <CardTitle className="text-lg" data-oid="rrbihhp">
-                  Analytics
-                </CardTitle>
-                <CardDescription data-oid="w_80yn4">
+      <Card>
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <BarChart3 className="h-5 w-5" />
+              <div>
+                <CardTitle className="text-lg">Analytics</CardTitle>
+                <CardDescription>
                   Configure analytics and tracking services
                 </CardDescription>
               </div>
             </div>
-            <div className="flex items-center gap-2" data-oid="uc6h.bc">
+            <div className="flex items-center gap-2">
               <Badge
                 variant={
                   integrations.find((i) => i.id === "analytics")?.isConnected
@@ -346,7 +319,6 @@ export function IntegrationsSettings() {
                     ? "bg-green-600 text-white"
                     : "bg-red-600 text-white"
                 }
-                data-oid=":g7hec-"
               >
                 {integrations.find((i) => i.id === "analytics")?.isConnected
                   ? "Connected"
@@ -355,11 +327,9 @@ export function IntegrationsSettings() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="space-y-4" data-oid="78:vb9l">
-          <div className="space-y-2" data-oid="_-w_ufh">
-            <Label htmlFor="ga-id" data-oid="big7__r">
-              Google Analytics ID
-            </Label>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="ga-id">Google Analytics ID</Label>
             <Input
               id="ga-id"
               value={analyticsSettings.googleAnalyticsId}
@@ -370,25 +340,19 @@ export function IntegrationsSettings() {
                 }))
               }
               placeholder="G-XXXXXXXXXX"
-              data-oid="s:9dcok"
             />
 
-            <p className="text-xs text-gray-500" data-oid="-.axlhc">
+            <p className="text-xs text-gray-500">
               Used to track user behavior and validate KPIs in the admin
               dashboard
             </p>
           </div>
 
-          <Separator data-oid="dzzbfz7" />
+          <Separator />
 
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4"
-            data-oid="pjzhvvg"
-          >
-            <div className="space-y-2" data-oid="n7i5o89">
-              <Label htmlFor="fb-pixel" data-oid="2a3x01e">
-                Facebook Pixel ID (Optional)
-              </Label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="fb-pixel">Facebook Pixel ID (Optional)</Label>
               <Input
                 id="fb-pixel"
                 value={analyticsSettings.facebookPixelId}
@@ -399,14 +363,11 @@ export function IntegrationsSettings() {
                   }))
                 }
                 placeholder="123456789012345"
-                data-oid="wkchaas"
               />
             </div>
 
-            <div className="space-y-2" data-oid="21jtrp1">
-              <Label htmlFor="hotjar-id" data-oid="xfd:fj4">
-                Hotjar Site ID (Optional)
-              </Label>
+            <div className="space-y-2">
+              <Label htmlFor="hotjar-id">Hotjar Site ID (Optional)</Label>
               <Input
                 id="hotjar-id"
                 value={analyticsSettings.hotjarId}
@@ -417,19 +378,17 @@ export function IntegrationsSettings() {
                   }))
                 }
                 placeholder="1234567"
-                data-oid="sapmopg"
               />
             </div>
           </div>
 
-          <div className="flex gap-2 pt-2" data-oid="jwwpqwd">
+          <div className="flex gap-2 pt-2">
             <Button
               variant="outline"
               onClick={() => testConnection("analytics")}
               disabled={isLoading}
-              data-oid="o:k2jvq"
             >
-              <Wifi className="mr-2 h-4 w-4" data-oid="unr:5l2" />
+              <Wifi className="mr-2 h-4 w-4" />
               {isLoading ? "Testing..." : "Test Connection"}
             </Button>
           </div>
@@ -437,15 +396,14 @@ export function IntegrationsSettings() {
       </Card>
 
       {/* Save All Button */}
-      <Card data-oid="q.h51w-">
-        <CardContent className="pt-6" data-oid="2hvfudx">
+      <Card>
+        <CardContent className="pt-6">
           <Button
             onClick={handleSave}
             disabled={isLoading}
             className="bg-[#123B79] hover:bg-[#425DA0]"
-            data-oid="u2i:zft"
           >
-            <Save className="mr-2 h-4 w-4" data-oid="g6aui5n" />
+            <Save className="mr-2 h-4 w-4" />
             {isLoading ? "Saving..." : "Save All Integrations"}
           </Button>
         </CardContent>

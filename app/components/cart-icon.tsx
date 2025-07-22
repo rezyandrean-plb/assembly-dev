@@ -14,21 +14,11 @@ export default function CartIcon() {
   }, []);
 
   return (
-    <Link
-      href="/cart"
-      className="relative inline-flex items-center"
-      data-oid="66lct3d"
-    >
-      <ShoppingCart
-        className="h-6 w-6 text-neutral-600 hover:text-primary transition-colors"
-        data-oid="y0sq0lf"
-      />
+    <Link href="/cart" className="relative inline-flex items-center">
+      <ShoppingCart className="h-6 w-6 text-neutral-600 hover:text-primary transition-colors" />
 
       {mounted && cart.length > 0 && (
-        <span
-          className="absolute -top-2 -right-2 bg-[#ff6b35] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold"
-          data-oid="n6bqlfe"
-        >
+        <span className="absolute -top-2 -right-2 bg-[#ff6b35] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
           {cart.length}
         </span>
       )}

@@ -149,34 +149,29 @@ export default function FAQPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-neutral-50 w-full" data-oid="6r:h8uk">
+      <div className="min-h-screen bg-neutral-50 w-full">
         {/* Hero Section */}
         <section
           ref={sectionRef}
           className="relative bg-primary overflow-hidden mt-16 py-16 lg:py-32 w-full"
-          data-oid="m.r0g9p"
         >
-          <div className="w-full px-4 lg:px-8 relative z-10" data-oid="kwwnvhh">
-            <div className="max-w-7xl mx-auto text-center" data-oid="x-pp4bv">
+          <div className="w-full px-4 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto text-center">
               {" "}
               <motion.h1
                 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                data-oid="y3padpm"
               >
                 Frequently Asked
-                <span className="block text-white/90" data-oid="1n.r4lt">
-                  Questions
-                </span>
+                <span className="block text-white/90">Questions</span>
               </motion.h1>
               <motion.p
                 className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                data-oid="nc.2y7j"
               >
                 Find answers to common questions about Assembly SG courses,
                 platform features, and more.
@@ -186,14 +181,11 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Content */}
-        <section className="py-20 w-full" data-oid="eq9w6-i">
-          <div className="w-full px-4 lg:px-8" data-oid="q72:lzr">
-            <div className="max-w-7xl mx-auto" data-oid="53sm8y6">
+        <section className="py-20 w-full">
+          <div className="w-full px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto">
               {/* Category Filter */}
-              <div
-                className="flex flex-wrap gap-2 mb-12 justify-center"
-                data-oid="6uq2u.n"
-              >
+              <div className="flex flex-wrap gap-2 mb-12 justify-center">
                 {categories.map((category) => (
                   <button
                     key={category}
@@ -203,7 +195,6 @@ export default function FAQPage() {
                         ? "bg-primary text-white shadow-lg"
                         : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
                     }`}
-                    data-oid="qezm9k-"
                   >
                     {category}
                   </button>
@@ -211,10 +202,7 @@ export default function FAQPage() {
               </div>
 
               {/* FAQ Items */}
-              <div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
-                data-oid="nstr_:n"
-              >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {filteredFAQs.map((item, index) => (
                   <motion.div
                     key={index}
@@ -222,48 +210,32 @@ export default function FAQPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    data-oid="1bt.uay"
                   >
                     <button
                       onClick={() => toggleItem(index)}
                       className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200 group"
-                      data-oid="mu7r6m-"
                     >
-                      <div
-                        className="flex items-start gap-4"
-                        data-oid="5r_vdq1"
-                      >
-                        <div
-                          className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1"
-                          data-oid="x0ux:r9"
-                        >
-                          <HelpCircle
-                            className="w-5 h-5 text-primary"
-                            data-oid="ilyt:zz"
-                          />
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                          <HelpCircle className="w-5 h-5 text-primary" />
                         </div>
-                        <h3
-                          className="text-lg font-semibold text-gray-900 pr-4 group-hover:text-primary transition-colors"
-                          data-oid="i5rcjt1"
-                        >
+                        <h3 className="text-lg font-semibold text-gray-900 pr-4 group-hover:text-primary transition-colors">
                           {item.question}
                         </h3>
                       </div>
-                      <div className="flex-shrink-0" data-oid="sxtqgoa">
+                      <div className="flex-shrink-0">
                         {openItems.includes(index) ? (
                           <svg
                             className="h-6 w-6 text-primary transition-transform duration-200"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            data-oid="5jz1-2b"
                           >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
                               d="M5 15l7-7 7 7"
-                              data-oid="9f1d_pu"
                             />
                           </svg>
                         ) : (
@@ -272,14 +244,12 @@ export default function FAQPage() {
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            data-oid="-2tk.-w"
                           >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
                               d="M19 9l-7 7-7-7"
-                              data-oid="_hwm_gu"
                             />
                           </svg>
                         )}
@@ -292,16 +262,9 @@ export default function FAQPage() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         className="px-8 pb-6"
-                        data-oid="14kams."
                       >
-                        <div
-                          className="border-t border-gray-100 pt-6 ml-14"
-                          data-oid="6iw-y6j"
-                        >
-                          <p
-                            className="text-gray-700 leading-relaxed"
-                            data-oid="gj1:c1i"
-                          >
+                        <div className="border-t border-gray-100 pt-6 ml-14">
+                          <p className="text-gray-700 leading-relaxed">
                             {item.answer}
                           </p>
                         </div>
@@ -313,26 +276,14 @@ export default function FAQPage() {
 
               {/* No Results */}
               {filteredFAQs.length === 0 && (
-                <div
-                  className="text-center py-12 lg:col-span-2"
-                  data-oid="m4vat0:"
-                >
-                  <div
-                    className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                    data-oid="6u8nhj8"
-                  >
-                    <Search
-                      className="w-8 h-8 text-gray-400"
-                      data-oid="l8m-a2t"
-                    />
+                <div className="text-center py-12 lg:col-span-2">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Search className="w-8 h-8 text-gray-400" />
                   </div>
-                  <h3
-                    className="text-xl font-semibold text-gray-900 mb-2"
-                    data-oid="5co7rmd"
-                  >
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     No results found
                   </h3>
-                  <p className="text-gray-600" data-oid="_7ky7vg">
+                  <p className="text-gray-600">
                     Try adjusting your search or filter criteria
                   </p>
                 </div>
@@ -342,63 +293,40 @@ export default function FAQPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-neutral-100 w-full" data-oid="1kolmtd">
-          <div className="w-full px-4 lg:px-8" data-oid="ksnm:7h">
-            <div className="max-w-7xl mx-auto" data-oid="0.kf6ma">
-              <div
-                className="bg-[#0000000000] rounded-3xl p-12 text-center text-white relative overflow-hidden"
-                data-oid="1.d0hyi"
-              >
+        <section className="py-20 bg-neutral-100 w-full">
+          <div className="w-full px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-[#0000000000] rounded-3xl p-12 text-center text-white relative overflow-hidden">
                 {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-5" data-oid="pmjfywx">
+                <div className="absolute inset-0 opacity-5">
                   <div
                     className="absolute inset-0"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
                     }}
-                    data-oid="3x3io7y"
                   />
                 </div>
 
-                <div className="relative z-10" data-oid="7_9n8t7">
-                  <div
-                    className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6"
-                    data-oid="0swrq6p"
-                  >
-                    <MessageCircle
-                      className="w-8 h-8 text-primary"
-                      data-oid="dc-y2fk"
-                    />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <MessageCircle className="w-8 h-8 text-primary" />
                   </div>
 
-                  <h2
-                    className="text-primary text-3xl lg:text-4xl font-bold mb-4"
-                    data-oid="fhoe24r"
-                  >
+                  <h2 className="text-primary text-3xl lg:text-4xl font-bold mb-4">
                     Still have questions?
                   </h2>
-                  <p
-                    className="text-xl text-primary mb-8 max-w-2xl mx-auto"
-                    data-oid="dazfup3"
-                  >
+                  <p className="text-xl text-primary mb-8 max-w-2xl mx-auto">
                     Can't find the answer you're looking for? Our support team
                     is here to help you succeed.
                   </p>
 
-                  <div
-                    className="flex flex-col sm:flex-row gap-4 justify-center"
-                    data-oid="0qf_7_z"
-                  >
-                    <Link href="/contact" data-oid="c8b:tjh">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="/contact">
                       <Button
                         size="lg"
                         className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
-                        data-oid="g-wuebx"
                       >
-                        <MessageCircle
-                          className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                          data-oid="8utn4bv"
-                        />
+                        <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                         Contact Support
                       </Button>
                     </Link>
@@ -406,13 +334,9 @@ export default function FAQPage() {
                       size="lg"
                       className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
                       asChild
-                      data-oid="9gmqb0q"
                     >
-                      <a href="mailto:support@assembly.sg" data-oid="a3wvp04">
-                        <Mail
-                          className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-                          data-oid="ao7h1il"
-                        />
+                      <a href="mailto:support@assembly.sg">
+                        <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                         Email Us
                       </a>
                     </Button>

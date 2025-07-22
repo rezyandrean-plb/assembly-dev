@@ -189,8 +189,12 @@ const getPriceDisplay = (price: number, salePrice: number | null) => {
   if (salePrice && salePrice < price) {
     return (
       <div className="flex flex-col">
-        <span className="text-gray-400 line-through text-sm">${price.toFixed(2)}</span>
-        <span className="font-medium text-green-600">${salePrice.toFixed(2)}</span>
+        <span className="text-gray-400 line-through text-sm">
+          ${price.toFixed(2)}
+        </span>
+        <span className="font-medium text-green-600">
+          ${salePrice.toFixed(2)}
+        </span>
       </div>
     );
   } else if (price === 0) {
@@ -212,7 +216,7 @@ export default function ProductsPage() {
 
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
-      setSelectedProducts(products.map(p => p.id));
+      setSelectedProducts(products.map((p) => p.id));
     } else {
       setSelectedProducts([]);
     }
@@ -222,7 +226,7 @@ export default function ProductsPage() {
     if (checked) {
       setSelectedProducts([...selectedProducts, productId]);
     } else {
-      setSelectedProducts(selectedProducts.filter(id => id !== productId));
+      setSelectedProducts(selectedProducts.filter((id) => id !== productId));
     }
   };
 
@@ -238,16 +242,19 @@ export default function ProductsPage() {
     setQuickEditProduct(null);
   };
 
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.sku.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = categoryFilter === "all" || product.category === categoryFilter;
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch =
+      product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.sku.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      categoryFilter === "all" || product.category === categoryFilter;
     const matchesType = typeFilter === "all" || product.type === typeFilter;
-    const matchesStock = stockFilter === "all" || 
-                        (stockFilter === "in-stock" && product.stock === "In stock") ||
-                        (stockFilter === "out-of-stock" && product.stock === "Out of stock") ||
-                        (stockFilter === "limited" && product.stock === "Limited stock");
-    
+    const matchesStock =
+      stockFilter === "all" ||
+      (stockFilter === "in-stock" && product.stock === "In stock") ||
+      (stockFilter === "out-of-stock" && product.stock === "Out of stock") ||
+      (stockFilter === "limited" && product.stock === "Limited stock");
+
     return matchesSearch && matchesCategory && matchesType && matchesStock;
   });
 
@@ -275,7 +282,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Command Bar - Advanced Filters */}
-      <Card className="border-gray-200">
+      <Card className="border-gray-300 bg-white shadow-sm">
         <CardContent className="p-4">
           <div className="flex flex-wrap items-center gap-4">
             {/* Category Filter */}
@@ -288,9 +295,15 @@ export default function ProductsPage() {
                 <SelectContent>
                   <SelectItem value="all">All categories</SelectItem>
                   <SelectItem value="HDB Investment">HDB Investment</SelectItem>
-                  <SelectItem value="Market Analysis">Market Analysis</SelectItem>
-                  <SelectItem value="Investment Strategy">Investment Strategy</SelectItem>
-                  <SelectItem value="Strategic Investment">Strategic Investment</SelectItem>
+                  <SelectItem value="Market Analysis">
+                    Market Analysis
+                  </SelectItem>
+                  <SelectItem value="Investment Strategy">
+                    Investment Strategy
+                  </SelectItem>
+                  <SelectItem value="Strategic Investment">
+                    Strategic Investment
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -345,16 +358,23 @@ export default function ProductsPage() {
 
       {/* Bulk Actions Bar */}
       {selectedProducts.length > 0 && (
-        <Card className="border-blue-200 bg-blue-50">
+        <Card className="border-gray-300 bg-blue-50 shadow-sm">
           <CardContent className="p-3">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">
-                {selectedProducts.length} product{selectedProducts.length !== 1 ? 's' : ''} selected
+                {selectedProducts.length} product
+                {selectedProducts.length !== 1 ? "s" : ""} selected
               </span>
               <div className="flex items-center gap-2">
-                <Button variant="outline" size="sm">Bulk Edit</Button>
-                <Button variant="outline" size="sm">Archive</Button>
-                <Button variant="destructive" size="sm">Delete</Button>
+                <Button variant="outline" size="sm">
+                  Bulk Edit
+                </Button>
+                <Button variant="outline" size="sm">
+                  Archive
+                </Button>
+                <Button variant="destructive" size="sm">
+                  Delete
+                </Button>
               </div>
             </div>
           </CardContent>
@@ -362,11 +382,11 @@ export default function ProductsPage() {
       )}
 
       {/* Professional Data Grid */}
-      <Card className="border-gray-200">
+      <Card className="border-gray-300 bg-white shadow-sm">
         <CardContent className="p-0">
           <Table>
             <TableHeader>
-              <TableRow className="bg-gray-50">
+              <TableRow className="bg-gray-100 border-b border-gray-300">
                 <TableHead className="w-12">
                   <Checkbox
                     checked={selectedProducts.length === products.length}
@@ -388,14 +408,16 @@ export default function ProductsPage() {
               {filteredProducts.map((product) => (
                 <TableRow
                   key={product.id}
-                  className="hover:bg-gray-50 transition-colors"
+                  className="hover:bg-gray-50 transition-colors border-b border-gray-200"
                   onMouseEnter={() => setHoveredRow(product.id)}
                   onMouseLeave={() => setHoveredRow(null)}
                 >
                   <TableCell>
                     <Checkbox
                       checked={selectedProducts.includes(product.id)}
-                      onCheckedChange={(checked) => handleSelectProduct(product.id, checked as boolean)}
+                      onCheckedChange={(checked) =>
+                        handleSelectProduct(product.id, checked as boolean)
+                      }
                     />
                   </TableCell>
                   <TableCell>
@@ -414,38 +436,57 @@ export default function ProductsPage() {
                   </TableCell>
                   <TableCell>
                     <div className="space-y-1">
-                      <div className="font-medium text-[#123B79]">{product.title}</div>
-                                             {/* Hover Actions */}
-                       {hoveredRow === product.id && (
-                         <div className="flex items-center gap-3 text-sm text-blue-600">
-                           <Link href={`/admin/products/${product.slug}/edit`} className="hover:underline">
-                             Edit
-                           </Link>
-                           <span className="text-gray-300">|</span>
-                           <button 
-                             className="hover:underline"
-                             onClick={() => handleQuickEdit({
-                               ...product,
-                               virtual: product.virtual,
-                               downloadable: product.downloadable,
-                               status: product.status as "Published" | "Draft" | "Archived"
-                             })}
-                           >
-                             Quick Edit
-                           </button>
-                           <span className="text-gray-300">|</span>
-                           <button className="hover:underline">Archive</button>
-                           <span className="text-gray-300">|</span>
-                           <Link href={`/courses/${product.slug}`} className="hover:underline">
-                             View
-                           </Link>
-                         </div>
-                       )}
+                      <div className="font-medium text-[#123B79]">
+                        {product.title}
+                      </div>
+                      {/* Hover Actions */}
+                      {hoveredRow === product.id && (
+                        <div className="flex items-center gap-3 text-sm text-blue-600">
+                          <Link
+                            href={`/admin/products/${product.slug}/edit`}
+                            className="hover:underline"
+                          >
+                            Edit
+                          </Link>
+                          <span className="text-gray-300">|</span>
+                          <button
+                            className="hover:underline"
+                            onClick={() =>
+                              handleQuickEdit({
+                                ...product,
+                                virtual: product.virtual,
+                                downloadable: product.downloadable,
+                                status: product.status as
+                                  | "Published"
+                                  | "Draft"
+                                  | "Archived",
+                              })
+                            }
+                          >
+                            Quick Edit
+                          </button>
+                          <span className="text-gray-300">|</span>
+                          <button className="hover:underline">Archive</button>
+                          <span className="text-gray-300">|</span>
+                          <Link
+                            href={`/courses/${product.slug}`}
+                            className="hover:underline"
+                          >
+                            View
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   </TableCell>
-                  <TableCell className="font-mono text-sm">{product.sku}</TableCell>
-                  <TableCell>{getStockDisplay(product.stock, product.stockQuantity)}</TableCell>
-                  <TableCell>{getPriceDisplay(product.price, product.salePrice)}</TableCell>
+                  <TableCell className="font-mono text-sm">
+                    {product.sku}
+                  </TableCell>
+                  <TableCell>
+                    {getStockDisplay(product.stock, product.stockQuantity)}
+                  </TableCell>
+                  <TableCell>
+                    {getPriceDisplay(product.price, product.salePrice)}
+                  </TableCell>
                   <TableCell>
                     <Badge variant="secondary">{product.category}</Badge>
                   </TableCell>
@@ -455,7 +496,9 @@ export default function ProductsPage() {
                       <span className="text-sm">{product.type}</span>
                     </div>
                   </TableCell>
-                  <TableCell className="text-sm text-gray-600">{product.datePublished}</TableCell>
+                  <TableCell className="text-sm text-gray-600">
+                    {product.datePublished}
+                  </TableCell>
                   <TableCell>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -466,13 +509,19 @@ export default function ProductsPage() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuItem asChild>
-                          <Link href={`/courses/${product.slug}`} className="flex items-center">
+                          <Link
+                            href={`/courses/${product.slug}`}
+                            className="flex items-center"
+                          >
                             <Eye className="mr-2 h-4 w-4" />
                             View
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
-                          <Link href={`/admin/products/${product.slug}/edit`} className="flex items-center">
+                          <Link
+                            href={`/admin/products/${product.slug}/edit`}
+                            className="flex items-center"
+                          >
                             <Edit className="mr-2 h-4 w-4" />
                             Edit
                           </Link>

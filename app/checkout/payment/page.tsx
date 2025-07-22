@@ -179,34 +179,22 @@ export default function PaymentPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="askap5v">
-      <div className="max-w-7xl mx-auto px-4 py-8" data-oid="ah6_t5x">
-        <div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          data-oid="4eq.64x"
-        >
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Payment Methods */}
-          <div className="lg:col-span-2" data-oid="m17qev0">
-            <div
-              className="bg-white rounded-lg shadow-sm p-6"
-              data-oid="xy7r.kn"
-            >
-              <h2
-                className="text-2xl font-bold mb-2 text-gray-900"
-                data-oid="0l-0bi7"
-              >
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h2 className="text-2xl font-bold mb-2 text-gray-900">
                 Payment Method
               </h2>
-              <p className="text-gray-600 mb-6" data-oid="zg-:_xm">
+              <p className="text-gray-600 mb-6">
                 Choose your preferred payment method
               </p>
 
-              <div className="space-y-6" data-oid="qsc2jb5">
+              <div className="space-y-6">
                 {/* Credit/Debit Card Section */}
-                <div
-                  className="border border-gray-200 rounded-lg"
-                  data-oid=".a5mect"
-                >
+                <div className="border border-gray-200 rounded-lg">
                   <div
                     className="flex justify-between items-center p-4 cursor-pointer"
                     onClick={() =>
@@ -216,9 +204,8 @@ export default function PaymentPage() {
                           : "Credit / Debit",
                       )
                     }
-                    data-oid="5sfsmis"
                   >
-                    <div className="flex items-center gap-3" data-oid="s7iq3w1">
+                    <div className="flex items-center gap-3">
                       <input
                         type="radio"
                         name="paymentMethod"
@@ -226,21 +213,19 @@ export default function PaymentPage() {
                         checked={selectedPayment === "Credit / Debit"}
                         onChange={() => setSelectedPayment("Credit / Debit")}
                         className="w-4 h-4"
-                        data-oid="z8m6n5b"
                       />
 
-                      <span className="font-semibold" data-oid="09-go73">
+                      <span className="font-semibold">
                         Debit or Credit Card
                       </span>
                     </div>
-                    <div className="flex items-center gap-2" data-oid="808x:th">
+                    <div className="flex items-center gap-2">
                       <Image
                         src="/images/payment/visa-mastercard.png"
                         alt="Visa and Mastercard"
                         width={100}
                         height={25}
                         className="object-contain"
-                        data-oid="zuba3jk"
                       />
 
                       <ChevronDown
@@ -249,63 +234,39 @@ export default function PaymentPage() {
                             ? "rotate-180"
                             : ""
                         }`}
-                        data-oid="efoqaz3"
                       />
                     </div>
                   </div>
 
                   {expandedSection === "Credit / Debit" &&
                     selectedPayment === "Credit / Debit" && (
-                      <div
-                        className="border-t p-4 space-y-4"
-                        data-oid="p.eps9a"
-                      >
-                        <div data-oid="8fb_kt:">
-                          <label
-                            className="block text-sm font-medium mb-1"
-                            data-oid="6o262aw"
-                          >
+                      <div className="border-t p-4 space-y-4">
+                        <div>
+                          <label className="block text-sm font-medium mb-1">
                             Card Number *
                           </label>
                           <input
                             type="text"
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                            data-oid="a1j0q3q"
                           />
                         </div>
-                        <div data-oid="s-9x4ov">
-                          <label
-                            className="block text-sm font-medium mb-1"
-                            data-oid="irv:k04"
-                          >
+                        <div>
+                          <label className="block text-sm font-medium mb-1">
                             Card Name *
                           </label>
                           <input
                             type="text"
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            data-oid="re25y1w"
                           />
                         </div>
-                        <div
-                          className="grid grid-cols-2 gap-4"
-                          data-oid="ddx-070"
-                        >
-                          <div data-oid="hkdw29v">
-                            <label
-                              className="block text-sm font-medium mb-1"
-                              data-oid="7-9e5r5"
-                            >
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm font-medium mb-1">
                               Expiry Date *
                             </label>
-                            <div
-                              className="grid grid-cols-2 gap-2"
-                              data-oid="p15f5g6"
-                            >
-                              <select
-                                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]"
-                                data-oid="coxgo55"
-                              >
-                                <option data-oid="r0r7l_.">MM</option>
+                            <div className="grid grid-cols-2 gap-2">
+                              <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#123b79]">
+                                <option>MM</option>
                                 {Array.from(
                                   { length: 12 },
                                   (_, i) => i + 1,
@@ -313,39 +274,31 @@ export default function PaymentPage() {
                                   <option
                                     key={m}
                                     value={m.toString().padStart(2, "0")}
-                                    data-oid="p9rqqq_"
                                   >
                                     {m.toString().padStart(2, "0")}
                                   </option>
                                 ))}
                               </select>
-                              <select
-                                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                data-oid="rgdru7d"
-                              >
-                                <option data-oid="itwmhk2">YYYY</option>
+                              <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>YYYY</option>
                                 {Array.from(
                                   { length: 10 },
                                   (_, i) => new Date().getFullYear() + i,
                                 ).map((y) => (
-                                  <option key={y} value={y} data-oid="vtvytab">
+                                  <option key={y} value={y}>
                                     {y}
                                   </option>
                                 ))}
                               </select>
                             </div>
                           </div>
-                          <div data-oid="oehjkld">
-                            <label
-                              className="block text-sm font-medium mb-1"
-                              data-oid="hpsmbbk"
-                            >
+                          <div>
+                            <label className="block text-sm font-medium mb-1">
                               CVC *
                             </label>
                             <input
                               type="text"
                               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              data-oid="t-yn.xg"
                             />
                           </div>
                         </div>
@@ -358,9 +311,8 @@ export default function PaymentPage() {
                   <div
                     key={method.id}
                     className="border border-gray-200 rounded-lg p-4 flex items-center justify-between"
-                    data-oid="eii:-x_"
                   >
-                    <div className="flex items-center gap-3" data-oid="rintvja">
+                    <div className="flex items-center gap-3">
                       <input
                         type="radio"
                         name="paymentMethod"
@@ -368,17 +320,12 @@ export default function PaymentPage() {
                         checked={selectedPayment === method.id}
                         onChange={() => setSelectedPayment(method.id)}
                         className="w-4 h-4"
-                        data-oid="46ckqx1"
                       />
 
-                      <span className="font-semibold" data-oid="7xsrh-0">
-                        {method.name}
-                      </span>
+                      <span className="font-semibold">{method.name}</span>
                     </div>
                     {method.id === "stripe" ? (
-                      <span className="text-2xl" data-oid="hoszrpi">
-                        {method.icon}
-                      </span>
+                      <span className="text-2xl">{method.icon}</span>
                     ) : (
                       <Image
                         src={method.icon}
@@ -386,7 +333,6 @@ export default function PaymentPage() {
                         width={40}
                         height={40}
                         className="object-contain"
-                        data-oid="nhch6ub"
                       />
                     )}
                   </div>
@@ -396,45 +342,32 @@ export default function PaymentPage() {
           </div>
 
           {/* Right Column - Order Summary & Review */}
-          <div className="lg:col-span-1" data-oid="5.2lt_k">
-            <div className="sticky top-8 space-y-6" data-oid="3pp:srb">
-              <OrderSummary data-oid="w0ccytj" />
+          <div className="lg:col-span-1">
+            <div className="sticky top-8 space-y-6">
+              <OrderSummary />
 
               {/* Review Address */}
-              <div
-                className="bg-white rounded-lg shadow-sm p-6"
-                data-oid="p90e9qi"
-              >
-                <div
-                  className="flex justify-between items-center mb-4"
-                  data-oid="qc_3y_r"
-                >
-                  <h3 className="text-lg font-semibold" data-oid="ppx_k1i">
-                    Review Address
-                  </h3>
+              <div className="bg-white rounded-lg shadow-sm p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold">Review Address</h3>
                   <button
                     onClick={() => router.push("/checkout/address")}
                     className="text-[#123b79] text-sm hover:underline font-medium"
-                    data-oid="a5g1asb"
                   >
                     Edit
                   </button>
                 </div>
-                <div className="text-sm space-y-1" data-oid="jjx3c53">
-                  <h4 className="font-bold text-gray-900" data-oid="jwh_ue.">
+                <div className="text-sm space-y-1">
+                  <h4 className="font-bold text-gray-900">
                     Delivery & Billing Address
                   </h4>
-                  <p className="font-semibold text-gray-800" data-oid="nxkma39">
+                  <p className="font-semibold text-gray-800">
                     {finalBillingAddress.firstName}{" "}
                     {finalBillingAddress.lastName}
                   </p>
-                  <p className="text-gray-600" data-oid="1l0g2.7">
-                    {finalBillingAddress.email}
-                  </p>
-                  <p className="text-gray-600" data-oid="b.-pys8">
-                    {finalBillingAddress.mobile}
-                  </p>
-                  <p className="text-gray-600" data-oid="-uq6t37">
+                  <p className="text-gray-600">{finalBillingAddress.email}</p>
+                  <p className="text-gray-600">{finalBillingAddress.mobile}</p>
+                  <p className="text-gray-600">
                     {finalBillingAddress.streetAddress}
                     {finalBillingAddress.streetAddress2 &&
                       `, ${finalBillingAddress.streetAddress2}`}
@@ -450,7 +383,6 @@ export default function PaymentPage() {
               <button
                 onClick={handleProceedToCheckout}
                 className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-lg shadow-lg"
-                data-oid="y8_-08u"
               >
                 {orderTotal === 0
                   ? "Complete Free Enrollment →"
@@ -461,22 +393,14 @@ export default function PaymentPage() {
               <button
                 onClick={() => router.push("/courses")}
                 className="w-full bg-white border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-                data-oid="szc:xj7"
               >
                 Continue Shopping
               </button>
 
-              <p
-                className="text-xs text-gray-500 text-center leading-relaxed"
-                data-oid="t.0_ftx"
-              >
+              <p className="text-xs text-gray-500 text-center leading-relaxed">
                 By clicking Proceed to Checkout you confirm that you have read,
                 understood and accept our{" "}
-                <a
-                  href="/terms"
-                  className="text-[#123b79] hover:underline"
-                  data-oid="taj3tc."
-                >
+                <a href="/terms" className="text-[#123b79] hover:underline">
                   terms of service
                 </a>
                 .
@@ -487,25 +411,15 @@ export default function PaymentPage() {
       </div>
 
       {/* Help Section */}
-      <div className="mt-12 mb-12 text-center" data-oid="xbshbxr">
-        <h3 className="text-lg font-semibold mb-2" data-oid="kakbwk5">
-          Need Help?
-        </h3>
-        <p className="text-gray-600" data-oid="vwil8ak">
+      <div className="mt-12 mb-12 text-center">
+        <h3 className="text-lg font-semibold mb-2">Need Help?</h3>
+        <p className="text-gray-600">
           Perhaps our{" "}
-          <a
-            href="#"
-            className="text-blue-600 hover:underline font-medium"
-            data-oid="6tyjzn:"
-          >
+          <a href="#" className="text-blue-600 hover:underline font-medium">
             FAQs
           </a>{" "}
           page can answer your question. Alternatively, use our{" "}
-          <a
-            href="#"
-            className="text-blue-600 hover:underline font-medium"
-            data-oid="_qdjsez"
-          >
+          <a href="#" className="text-blue-600 hover:underline font-medium">
             Contact Us
           </a>{" "}
           page to speak to a member of our customer service team

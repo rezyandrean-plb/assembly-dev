@@ -186,19 +186,13 @@ export default function HeroSection() {
     <section
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      data-oid="d.63ggc"
     >
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 z-0"
-        data-oid="968i88o"
-      />
+      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
       {/* Abstract animated lines */}
       <svg
         className="absolute inset-0 z-10 w-full h-full"
         preserveAspectRatio="none"
-        data-oid="l0i4r5m"
       >
         <line
           className="abstract-line"
@@ -208,7 +202,6 @@ export default function HeroSection() {
           y2="30%"
           stroke="rgba(249, 115, 22, 0.3)"
           strokeWidth="2"
-          data-oid="-6g_rh3"
         />
 
         <line
@@ -219,7 +212,6 @@ export default function HeroSection() {
           y2="100%"
           stroke="rgba(249, 115, 22, 0.2)"
           strokeWidth="1"
-          data-oid="fdargnd"
         />
 
         <line
@@ -230,18 +222,13 @@ export default function HeroSection() {
           y2="100%"
           stroke="rgba(249, 115, 22, 0.2)"
           strokeWidth="1"
-          data-oid="_gre025"
         />
       </svg>
 
-      <div
-        className="container relative z-20 text-center px-4"
-        data-oid="9xqpox0"
-      >
+      <div className="container relative z-20 text-center px-4">
         <h1
           ref={textRef}
           className="hero-title text-5xl md:text-7xl font-bold text-white mb-6"
-          data-oid="xv5hwb8"
         >
           Unlock Your Potential in Singapore Real Estate
         </h1>
@@ -249,34 +236,24 @@ export default function HeroSection() {
         <p
           ref={subTextRef}
           className="hero-subtitle text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto opacity-0"
-          data-oid="6hzdwyl"
         >
           Navigate the dynamic Singapore property market with expert insights
           and community support
         </p>
 
-        <div ref={ctaRef} className="hero-cta opacity-0" data-oid="aozx9x6">
+        <div ref={ctaRef} className="hero-cta opacity-0">
           <Button
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full hover:shadow-lg transition-all"
-            data-oid="h04.v.."
           >
             Start Your Journey
           </Button>
         </div>
       </div>
 
-      <div
-        className="scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 opacity-0 text-white text-center"
-        data-oid="3si4s4k"
-      >
-        <p className="text-sm mb-2" data-oid=":ji1ay6">
-          Scroll to explore
-        </p>
-        <ArrowDown
-          className="h-6 w-6 mx-auto animate-bounce"
-          data-oid="c9uerqz"
-        />
+      <div className="scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 opacity-0 text-white text-center">
+        <p className="text-sm mb-2">Scroll to explore</p>
+        <ArrowDown className="h-6 w-6 mx-auto animate-bounce" />
       </div>
     </section>
   );

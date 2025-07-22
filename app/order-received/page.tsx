@@ -76,14 +76,8 @@ export default function OrderReceivedPage() {
   if (isLoading) {
     return (
       <>
-        <div
-          className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
-          data-oid="-nli4_h"
-        >
-          <div
-            className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-            data-oid="k:.mq5b"
-          ></div>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"></div>
         </div>
       </>
     );
@@ -92,29 +86,19 @@ export default function OrderReceivedPage() {
   if (!orderDetails) {
     return (
       <>
-        <div
-          className="min-h-screen bg-gray-50 flex items-center justify-center pt-20"
-          data-oid="3gk6e-m"
-        >
-          <div className="text-center" data-oid="22xx6x.">
-            <CheckCircle
-              className="mx-auto h-16 w-16 text-gray-400 mb-4"
-              data-oid="d09tyt:"
-            />
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
+          <div className="text-center">
+            <CheckCircle className="mx-auto h-16 w-16 text-gray-400 mb-4" />
 
-            <h1
-              className="text-2xl font-bold text-gray-900 mb-2"
-              data-oid="7mpjmqp"
-            >
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
               Order Not Found
             </h1>
-            <p className="text-gray-600 mb-6" data-oid="fhbavs_">
+            <p className="text-gray-600 mb-6">
               We couldn't find your order details.
             </p>
             <button
               onClick={() => router.push("/")}
               className="bg-[#123b79] text-white px-6 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors"
-              data-oid="1tgrugv"
             >
               Return Home
             </button>
@@ -149,86 +133,52 @@ export default function OrderReceivedPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50 py-8 pt-24" data-oid="_di9rxm">
-        <div className="max-w-4xl mx-auto px-4" data-oid="7px0my_">
+      <div className="min-h-screen bg-gray-50 py-8 pt-24">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Header */}
-          <div
-            className="bg-white rounded-lg shadow-sm p-8 mb-6 text-center"
-            data-oid=".1zc1:p"
-          >
-            <CheckCircle
-              className="mx-auto h-16 w-16 text-green-600 mb-6"
-              data-oid="h28pgiq"
-            />
+          <div className="bg-white rounded-lg shadow-sm p-8 mb-6 text-center">
+            <CheckCircle className="mx-auto h-16 w-16 text-green-600 mb-6" />
 
-            <h1
-              className="text-3xl font-bold text-gray-900 mb-2"
-              data-oid="2by98qu"
-            >
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
               {orderDetails.totalAmount === 0
                 ? "Enrollment Complete!"
                 : "Order Received!"}
             </h1>
-            <p className="text-lg text-gray-600 mb-6" data-oid="3gcyens">
+            <p className="text-lg text-gray-600 mb-6">
               {orderDetails.totalAmount === 0
                 ? "Thank you for enrolling! You now have access to your selected courses."
                 : "Thank you for your purchase. Your order has been successfully placed and confirmed."}
             </p>
 
-            <div
-              className="bg-gray-50 rounded-lg p-6 max-w-2xl mx-auto"
-              data-oid="v13np4m"
-            >
-              <div
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left"
-                data-oid="-zfx_ec"
-              >
-                <div data-oid="6zhsbu3">
-                  <h3
-                    className="font-semibold text-gray-900 mb-1"
-                    data-oid="7qp0:q:"
-                  >
-                    Order ID
-                  </h3>
-                  <p className="text-gray-600 font-mono" data-oid="w-3_tap">
+            <div className="bg-gray-50 rounded-lg p-6 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Order ID</h3>
+                  <p className="text-gray-600 font-mono">
                     {orderDetails.orderId}
                   </p>
                 </div>
-                <div data-oid="bp2dv4q">
-                  <h3
-                    className="font-semibold text-gray-900 mb-1"
-                    data-oid="xdw30va"
-                  >
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">
                     Order Date
                   </h3>
-                  <p className="text-gray-600" data-oid="aduvgyt">
+                  <p className="text-gray-600">
                     {formatDate(orderDetails.orderDate)}
                   </p>
                 </div>
-                <div data-oid="l459r2h">
-                  <h3
-                    className="font-semibold text-gray-900 mb-1"
-                    data-oid="cnnmqs9"
-                  >
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">
                     Total Amount
                   </h3>
-                  <p
-                    className="text-gray-600 font-semibold text-lg"
-                    data-oid="y:tknsc"
-                  >
+                  <p className="text-gray-600 font-semibold text-lg">
                     {orderDetails.totalAmount === 0
                       ? "Free"
                       : `$${orderDetails.totalAmount.toFixed(2)}`}
                   </p>
                 </div>
-                <div data-oid="yvtpv2i">
-                  <h3
-                    className="font-semibold text-gray-900 mb-1"
-                    data-oid="j4:f9ng"
-                  >
-                    Customer
-                  </h3>
-                  <p className="text-gray-600" data-oid="xi696yx">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Customer</h3>
+                  <p className="text-gray-600">
                     {orderDetails.customerInfo.name}
                   </p>
                 </div>
@@ -237,59 +187,38 @@ export default function OrderReceivedPage() {
           </div>
 
           {/* Customer Information */}
-          <div
-            className="bg-white rounded-lg shadow-sm p-6 mb-6"
-            data-oid=".:q.6ve"
-          >
-            <h2
-              className="text-xl font-bold text-gray-900 mb-4"
-              data-oid="n6mvz_4"
-            >
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
               Customer Information
             </h2>
 
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              data-oid="jdlyunq"
-            >
-              <div data-oid="6:s.kbk">
-                <h3
-                  className="font-semibold text-gray-900 mb-2"
-                  data-oid="ii5r3gs"
-                >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">
                   Contact Details
                 </h3>
-                <div className="space-y-1 text-gray-600" data-oid="-k4z005">
-                  <p data-oid="as4aa5_">
-                    <span className="font-medium" data-oid="oww-fhn">
-                      Name:
-                    </span>{" "}
+                <div className="space-y-1 text-gray-600">
+                  <p>
+                    <span className="font-medium">Name:</span>{" "}
                     {orderDetails.customerInfo.name}
                   </p>
-                  <p data-oid="55ulaka">
-                    <span className="font-medium" data-oid="2ivnoou">
-                      Email:
-                    </span>{" "}
+                  <p>
+                    <span className="font-medium">Email:</span>{" "}
                     {orderDetails.customerInfo.email}
                   </p>
-                  <p data-oid="3n7i972">
-                    <span className="font-medium" data-oid="fbjvrm5">
-                      Phone:
-                    </span>{" "}
+                  <p>
+                    <span className="font-medium">Phone:</span>{" "}
                     {orderDetails.customerInfo.phone}
                   </p>
                 </div>
               </div>
 
               {orderDetails.hasBooks && (
-                <div data-oid="1..crja">
-                  <h3
-                    className="font-semibold text-gray-900 mb-2"
-                    data-oid="tp65_fy"
-                  >
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">
                     Delivery Address
                   </h3>
-                  <p className="text-gray-600" data-oid="c8.hhmr">
+                  <p className="text-gray-600">
                     {orderDetails.customerInfo.address}
                   </p>
                 </div>
@@ -298,99 +227,66 @@ export default function OrderReceivedPage() {
           </div>
 
           {/* Order Items */}
-          <div
-            className="bg-white rounded-lg shadow-sm p-6 mb-6"
-            data-oid="p3a06be"
-          >
-            <h2
-              className="text-2xl font-bold text-gray-900 mb-6"
-              data-oid=":i4z54u"
-            >
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Order Details
             </h2>
-            <div className="space-y-4" data-oid="5jv-udo">
+            <div className="space-y-4">
               {orderDetails.items.map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
                   className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg"
-                  data-oid="ov_53s2"
                 >
                   {item.image && (
-                    <div
-                      className="w-16 h-16 bg-gray-100 rounded-lg flex-shrink-0 overflow-hidden"
-                      data-oid=":_26n63"
-                    >
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex-shrink-0 overflow-hidden">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover"
-                        data-oid="wv5ytd6"
                       />
                     </div>
                   )}
 
-                  <div className="flex-1" data-oid="7ap7e7m">
-                    <h3
-                      className="font-semibold text-gray-900"
-                      data-oid="3qrizo7"
-                    >
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900">
                       {item.title}
                     </h3>
                     {item.author && (
-                      <span
-                        className="text-xs text-gray-500 ml-2"
-                        data-oid="iiinjti"
-                      >
+                      <span className="text-xs text-gray-500 ml-2">
                         by {item.author}
                       </span>
                     )}
-                    <div
-                      className="flex items-center gap-2 mt-1"
-                      data-oid="q0rxhlm"
-                    >
+                    <div className="flex items-center gap-2 mt-1">
                       <span
                         className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
                           item.type === "book" || item.type === "Book"
                             ? "bg-blue-100 text-blue-800"
                             : "bg-green-100 text-green-800"
                         }`}
-                        data-oid="widrw10"
                       >
                         {item.type === "book" || item.type === "Book" ? (
                           <>
-                            <Package
-                              className="w-3 h-3 mr-1"
-                              data-oid="s3kum1o"
-                            />
+                            <Package className="w-3 h-3 mr-1" />
                             Physical Book
                           </>
                         ) : (
                           <>
-                            <Download
-                              className="w-3 h-3 mr-1"
-                              data-oid="crvy8vi"
-                            />
+                            <Download className="w-3 h-3 mr-1" />
                             Digital Course
                           </>
                         )}
                       </span>
-                      <span
-                        className="text-sm text-gray-500"
-                        data-oid="7w-f5ms"
-                      >
+                      <span className="text-sm text-gray-500">
                         Qty: {item.quantity}
                       </span>
                     </div>
                   </div>
 
-                  <div className="text-right" data-oid="d255u0m">
-                    <p
-                      className="font-semibold text-gray-900"
-                      data-oid="d.njcxp"
-                    >
+                  <div className="text-right">
+                    <p className="font-semibold text-gray-900">
                       ${(item.price * item.quantity).toFixed(2)}
                     </p>
-                    <p className="text-sm text-gray-500" data-oid="4verl1h">
+                    <p className="text-sm text-gray-500">
                       ${item.price.toFixed(2)} each
                     </p>
                   </div>
@@ -401,74 +297,41 @@ export default function OrderReceivedPage() {
 
           {/* Books Section - Tracking Information */}
           {bookItems.length > 0 && (
-            <div
-              className="bg-white rounded-lg shadow-sm p-6 mb-6"
-              data-oid="lp711s2"
-            >
-              <div className="flex items-center gap-3 mb-4" data-oid="lxwfwju">
-                <Package className="h-6 w-6 text-blue-600" data-oid="5ic-afx" />
-                <h2
-                  className="text-xl font-bold text-gray-900"
-                  data-oid="r1rd2wt"
-                >
+            <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Package className="h-6 w-6 text-blue-600" />
+                <h2 className="text-xl font-bold text-gray-900">
                   Physical Books - Shipping Information
                 </h2>
               </div>
 
-              <div
-                className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4"
-                data-oid="0hbv.4u"
-              >
-                <div className="flex items-start gap-3" data-oid="502nbuy">
-                  <MapPin
-                    className="h-5 w-5 text-blue-600 mt-0.5"
-                    data-oid="dlsk9og"
-                  />
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
 
-                  <div data-oid="2nw7b8x">
-                    <h3
-                      className="font-semibold text-blue-900 mb-1"
-                      data-oid="4xlg-t5"
-                    >
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-1">
                       Shipping Address
                     </h3>
-                    <p className="text-blue-800" data-oid="mti5g26">
+                    <p className="text-blue-800">
                       {orderDetails.customerInfo.address}
                     </p>
-                    <p
-                      className="text-blue-700 text-sm mt-1"
-                      data-oid="ndvzwa0"
-                    >
+                    <p className="text-blue-700 text-sm mt-1">
                       Phone: {orderDetails.customerInfo.phone}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div
-                className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4"
-                data-oid="r8f6l17"
-              >
-                <div
-                  className="flex items-center justify-between"
-                  data-oid="ehnjsuw"
-                >
-                  <div className="flex-1" data-oid="ookgh2b">
-                    <h3
-                      className="font-semibold text-gray-900 mb-1"
-                      data-oid="d-mnpop"
-                    >
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-1">
                       Tracking Number
                     </h3>
                     {orderDetails.trackingNumber ? (
-                      <div
-                        className="flex items-center gap-3"
-                        data-oid="sxs0hlc"
-                      >
-                        <p
-                          className="text-gray-600 font-mono text-lg"
-                          data-oid="b7et.mw"
-                        >
+                      <div className="flex items-center gap-3">
+                        <p className="text-gray-600 font-mono text-lg">
                           {orderDetails.trackingNumber}
                         </p>
                         <button
@@ -478,17 +341,13 @@ export default function OrderReceivedPage() {
                             )
                           }
                           className="bg-[#123b79] text-white px-4 py-2 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center gap-2 text-sm"
-                          data-oid="::x.4pn"
                         >
-                          <ExternalLink
-                            className="h-4 w-4"
-                            data-oid=":zfzii8"
-                          />
+                          <ExternalLink className="h-4 w-4" />
                           Track Package
                         </button>
                       </div>
                     ) : (
-                      <p className="text-gray-500 italic" data-oid="g1tr.k3">
+                      <p className="text-gray-500 italic">
                         Tracking number will be updated once the order is ready
                         to ship.
                       </p>
@@ -497,56 +356,33 @@ export default function OrderReceivedPage() {
                 </div>
               </div>
 
-              <div
-                className="flex items-center gap-2 text-sm text-gray-600"
-                data-oid="36smbpb"
-              >
-                <Clock className="h-4 w-4" data-oid="bd71h-5" />
-                <span data-oid="tc2yzx9">
-                  Estimated delivery: 3-5 business days
-                </span>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <Clock className="h-4 w-4" />
+                <span>Estimated delivery: 3-5 business days</span>
               </div>
             </div>
           )}
 
           {/* Courses Section */}
           {courseItems.length > 0 && (
-            <div
-              className="bg-white rounded-lg shadow-sm p-6 mb-6"
-              data-oid="5.5fw:9"
-            >
-              <div className="flex items-center gap-3 mb-4" data-oid="u95-lm6">
-                <Download
-                  className="h-6 w-6 text-green-600"
-                  data-oid="wf-y2ni"
-                />
+            <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Download className="h-6 w-6 text-green-600" />
 
-                <h2
-                  className="text-xl font-bold text-gray-900"
-                  data-oid="bjmbrsm"
-                >
+                <h2 className="text-xl font-bold text-gray-900">
                   Digital Courses - Ready to Access
                 </h2>
               </div>
 
-              <div
-                className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4"
-                data-oid="s7kg49o"
-              >
-                <div className="flex items-start gap-3" data-oid="8r8rew2">
-                  <CheckCircle
-                    className="h-5 w-5 text-green-600 mt-0.5"
-                    data-oid="g_kist7"
-                  />
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
 
-                  <div data-oid="7uyxf4f">
-                    <h3
-                      className="font-semibold text-green-900 mb-1"
-                      data-oid="dhoxiwr"
-                    >
+                  <div>
+                    <h3 className="font-semibold text-green-900 mb-1">
                       Courses Available Now
                     </h3>
-                    <p className="text-green-800" data-oid="ft:3stt">
+                    <p className="text-green-800">
                       Your digital courses are now available in your profile.
                       Start learning immediately!
                     </p>
@@ -554,25 +390,20 @@ export default function OrderReceivedPage() {
                 </div>
               </div>
 
-              <div
-                className="flex flex-col sm:flex-row gap-3"
-                data-oid="knvpoil"
-              >
+              <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => router.push("/profile/learning-progress")}
                   className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                  data-oid="g-r3f5p"
                 >
-                  <User className="h-4 w-4" data-oid="u4v1c-3" />
+                  <User className="h-4 w-4" />
                   Go to My Courses
                 </button>
 
                 <button
                   onClick={() => router.push("/profile")}
                   className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                  data-oid="2crmaeg"
                 >
-                  <ArrowRight className="h-4 w-4" data-oid="io9buh9" />
+                  <ArrowRight className="h-4 w-4" />
                   View Profile
                 </button>
               </div>
@@ -580,14 +411,10 @@ export default function OrderReceivedPage() {
           )}
 
           {/* Action Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-oid="91e_hac"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => router.push("/profile/purchase-history")}
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
-              data-oid="wf:o6gj"
             >
               View Order History
             </button>
@@ -595,7 +422,6 @@ export default function OrderReceivedPage() {
             <button
               onClick={() => router.push("/contact")}
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
-              data-oid=":g6_rt0"
             >
               Contact Support
             </button>
@@ -603,20 +429,18 @@ export default function OrderReceivedPage() {
             <button
               onClick={() => router.push("/courses")}
               className="bg-[#123b79] text-white px-6 py-3 rounded-lg hover:bg-[#0f2d5c] transition-colors whitespace-nowrap"
-              data-oid="idxm8w:"
             >
               Continue Browsing Courses
             </button>
           </div>
 
           {/* Help Section */}
-          <div className="mt-8 text-center" data-oid="9ms28cf">
-            <p className="text-sm text-gray-500" data-oid="n4dz6xy">
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-500">
               Questions about your order?{" "}
               <button
                 onClick={() => router.push("/contact")}
                 className="text-[#123b79] hover:underline font-medium"
-                data-oid="4pbtns4"
               >
                 Contact our support team
               </button>{" "}
@@ -624,7 +448,6 @@ export default function OrderReceivedPage() {
               <button
                 onClick={() => router.push("/help")}
                 className="text-[#123b79] hover:underline font-medium"
-                data-oid="_2ujryz"
               >
                 help center
               </button>

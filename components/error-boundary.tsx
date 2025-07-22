@@ -32,18 +32,12 @@ export class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="ozr752o"
-          >
-            <div className="text-center" data-oid="im267wo">
-              <h2
-                className="text-2xl font-bold text-gray-800 mb-4"
-                data-oid="h_-7w30"
-              >
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 Something went wrong
               </h2>
-              <p className="text-gray-600" data-oid="czo1x6x">
+              <p className="text-gray-600">
                 Please refresh the page to try again.
               </p>
             </div>

@@ -23,7 +23,6 @@ const TooltipContent = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="hc9tzv0"
   />
 ));
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;

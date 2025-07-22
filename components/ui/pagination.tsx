@@ -10,7 +10,6 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
     aria-label="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
     {...props}
-    data-oid="geo7b7d"
   />
 );
 
@@ -24,7 +23,6 @@ const PaginationContent = React.forwardRef<
     ref={ref}
     className={cn("flex flex-row items-center gap-1", className)}
     {...props}
-    data-oid="bzup:-h"
   />
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -33,7 +31,7 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} data-oid="uxdlufy" />
+  <li ref={ref} className={cn("", className)} {...props} />
 ));
 PaginationItem.displayName = "PaginationItem";
 
@@ -58,7 +56,6 @@ const PaginationLink = ({
       className,
     )}
     {...props}
-    data-oid="mcszaoi"
   />
 );
 
@@ -73,10 +70,9 @@ const PaginationPrevious = ({
     size="default"
     className={cn("gap-1 pl-2.5", className)}
     {...props}
-    data-oid="vdrgqew"
   >
-    <ChevronLeft className="h-4 w-4" data-oid="jr7s1tw" />
-    <span data-oid="lh8i9hl">Previous</span>
+    <ChevronLeft className="h-4 w-4" />
+    <span>Previous</span>
   </PaginationLink>
 );
 
@@ -91,10 +87,9 @@ const PaginationNext = ({
     size="default"
     className={cn("gap-1 pr-2.5", className)}
     {...props}
-    data-oid="813xxwq"
   >
-    <span data-oid="q8pye3l">Next</span>
-    <ChevronRight className="h-4 w-4" data-oid="puwpif9" />
+    <span>Next</span>
+    <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 );
 
@@ -108,12 +103,9 @@ const PaginationEllipsis = ({
     aria-hidden
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
-    data-oid="j7wvw93"
   >
-    <MoreHorizontal className="h-4 w-4" data-oid="vr2580u" />
-    <span className="sr-only" data-oid="bg06a..">
-      More pages
-    </span>
+    <MoreHorizontal className="h-4 w-4" />
+    <span className="sr-only">More pages</span>
   </span>
 );
 

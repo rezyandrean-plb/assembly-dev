@@ -48,42 +48,46 @@ import Image from "next/image";
 const EditProductPage = () => {
   const params = useParams();
   const productSlug = params.slug as string;
-  
+
   const [productType, setProductType] = useState("course");
 
   // State variables for dynamic content
   const [highlights, setHighlights] = useState<string[]>([
     "Navigate 2025's changing interest rate environment",
-    "Identify high-yield property opportunities", 
+    "Identify high-yield property opportunities",
     "Master financing strategies for maximum leverage",
-    "Build a recession-proof property portfolio"
+    "Build a recession-proof property portfolio",
   ]);
-  
+
   const [learningOutcomes, setLearningOutcomes] = useState<string[]>([
     "Analyze market trends and identify profitable investment opportunities",
-    "Implement advanced financing strategies to maximize returns", 
+    "Implement advanced financing strategies to maximize returns",
     "Develop risk management techniques for property investments",
     "Create a diversified property portfolio strategy",
-    "Navigate legal and tax implications of property investment"
+    "Navigate legal and tax implications of property investment",
   ]);
-  
+
   const [targetAudience, setTargetAudience] = useState<string[]>([
     "Aspiring property investors looking to start their journey",
     "Experienced investors wanting to adapt to 2025 market conditions",
-    "Financial advisors seeking property investment knowledge", 
-    "Anyone interested in building wealth through real estate"
+    "Financial advisors seeking property investment knowledge",
+    "Anyone interested in building wealth through real estate",
   ]);
 
   const [isVirtual, setIsVirtual] = useState(true);
   const [isDownloadable, setIsDownloadable] = useState(false);
   const [trackStock, setTrackStock] = useState(true);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>(["HDB Investment"]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([
+    "HDB Investment",
+  ]);
   const [courseHighlights, setCourseHighlights] = useState<string[]>([
     "Learn property investment fundamentals",
-    "Understand market timing strategies", 
-    "Get exclusive market insights"
+    "Understand market timing strategies",
+    "Get exclusive market insights",
   ]);
-  const [featuredImage, setFeaturedImage] = useState<string | null>("/making-the-right-move.jpg");
+  const [featuredImage, setFeaturedImage] = useState<string | null>(
+    "/making-the-right-move.jpg",
+  );
   const [galleryImages, setGalleryImages] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -91,8 +95,10 @@ const EditProductPage = () => {
   const [formData, setFormData] = useState({
     title: "Making The Right Move",
     slug: "making-the-right-move",
-    description: "A comprehensive course on HDB investment strategies and property market analysis. Learn the fundamentals of making informed property investment decisions in Singapore's competitive market.",
-    shortDescription: "Master HDB investment strategies with expert guidance from George Peng.",
+    description:
+      "A comprehensive course on HDB investment strategies and property market analysis. Learn the fundamentals of making informed property investment decisions in Singapore's competitive market.",
+    shortDescription:
+      "Master HDB investment strategies with expert guidance from George Peng.",
     regularPrice: "149.99",
     salePrice: "129.99",
     sku: "COURSE-001",
@@ -122,52 +128,87 @@ const EditProductPage = () => {
   const [courseData, setCourseData] = useState({
     highlights: [
       "Learn property investment fundamentals",
-      "Understand market timing strategies", 
-      "Get exclusive market insights"
+      "Understand market timing strategies",
+      "Get exclusive market insights",
     ],
+
     learningOutcomes: [
       "Analyze market trends and identify profitable investment opportunities",
       "Implement advanced financing strategies to maximize returns",
       "Develop risk management techniques for property investments",
       "Create a diversified property portfolio strategy",
-      "Navigate legal and tax implications of property investment"
+      "Navigate legal and tax implications of property investment",
     ],
+
     targetAudience: [
       "Aspiring property investors looking to start their journey",
       "Experienced investors wanting to adapt to 2025 market conditions",
       "Financial advisors seeking property investment knowledge",
-      "Anyone interested in building wealth through real estate"
+      "Anyone interested in building wealth through real estate",
     ],
+
     instructors: [
       {
         id: "george-peng",
         name: "George Peng",
         title: "Property Investment Expert",
-        avatar: "/george-peng-headshot.png"
-      }
+        avatar: "/george-peng-headshot.png",
+      },
     ],
+
     modules: [
       {
         id: 1,
         title: "Market Analysis & 2025 Outlook",
         duration: "2h 15m",
         lessons: [
-          { id: 1, title: "Understanding Rate Cut Impacts", type: "video", duration: "25:30" },
-          { id: 2, title: "Market Trends Analysis", type: "video", duration: "32:15" },
-          { id: 3, title: "Regional Market Opportunities", type: "video", duration: "28:45" }
-        ]
+          {
+            id: 1,
+            title: "Understanding Rate Cut Impacts",
+            type: "video",
+            duration: "25:30",
+          },
+          {
+            id: 2,
+            title: "Market Trends Analysis",
+            type: "video",
+            duration: "32:15",
+          },
+          {
+            id: 3,
+            title: "Regional Market Opportunities",
+            type: "video",
+            duration: "28:45",
+          },
+        ],
       },
       {
         id: 2,
         title: "Financing Strategies",
-        duration: "2h 45m", 
+        duration: "2h 45m",
         lessons: [
-          { id: 5, title: "Leveraging Low Interest Rates", type: "video", duration: "35:20" },
-          { id: 6, title: "Alternative Financing Options", type: "video", duration: "29:40" },
-          { id: 7, title: "Mortgage Optimization Techniques", type: "video", duration: "41:15" }
-        ]
-      }
+          {
+            id: 5,
+            title: "Leveraging Low Interest Rates",
+            type: "video",
+            duration: "35:20",
+          },
+          {
+            id: 6,
+            title: "Alternative Financing Options",
+            type: "video",
+            duration: "29:40",
+          },
+          {
+            id: 7,
+            title: "Mortgage Optimization Techniques",
+            type: "video",
+            duration: "41:15",
+          },
+        ],
+      },
     ],
+
     reviews: [
       {
         id: 1,
@@ -175,15 +216,17 @@ const EditProductPage = () => {
         avatar: "/placeholder-user.jpg",
         rating: 5,
         date: "2024-01-10",
-        comment: "Excellent course! The strategies are practical and the market analysis is spot-on. Already implementing the techniques learned."
+        comment:
+          "Excellent course! The strategies are practical and the market analysis is spot-on. Already implementing the techniques learned.",
       },
       {
         id: 2,
-        author: "Sarah Williams", 
+        author: "Sarah Williams",
         avatar: "/placeholder-user.jpg",
         rating: 5,
         date: "2024-01-08",
-        comment: "George's expertise really shows. The financing strategies section was particularly valuable for my investment goals."
+        comment:
+          "George's expertise really shows. The financing strategies section was particularly valuable for my investment goals.",
       },
       {
         id: 3,
@@ -191,18 +234,19 @@ const EditProductPage = () => {
         avatar: "/placeholder-user.jpg",
         rating: 4,
         date: "2024-01-05",
-        comment: "Great content and well-structured. Would love to see more case studies in future updates."
-      }
-    ]
+        comment:
+          "Great content and well-structured. Would love to see more case studies in future updates.",
+      },
+    ],
   });
 
   const categories = [
     "HDB Investment",
-    "Market Analysis", 
+    "Market Analysis",
     "Investment Strategy",
     "Strategic Investment",
     "Property Finance",
-    "Real Estate Trends"
+    "Real Estate Trends",
   ];
 
   const instructors = [
@@ -210,7 +254,7 @@ const EditProductPage = () => {
     { id: "adrian-lim", name: "Adrian Lim" },
     { id: "beatrice-lim", name: "Beatrice Lim" },
     { id: "marc-chan", name: "Marc Chan" },
-    { id: "shawn-tay", name: "Shawn Tay" }
+    { id: "shawn-tay", name: "Shawn Tay" },
   ];
 
   // Simulate loading product data
@@ -221,20 +265,20 @@ const EditProductPage = () => {
         setIsLoading(false);
       }, 500);
     };
-    
+
     loadProductData();
   }, [productSlug]);
 
   const handleCategoryToggle = (category: string) => {
-    setSelectedCategories(prev =>
+    setSelectedCategories((prev) =>
       prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
+        ? prev.filter((c) => c !== category)
+        : [...prev, category],
     );
   };
 
   const handleHighlightChange = (index: number, value: string) => {
-    setCourseHighlights(prev => {
+    setCourseHighlights((prev) => {
       const newHighlights = [...prev];
       newHighlights[index] = value;
       return newHighlights;
@@ -242,36 +286,45 @@ const EditProductPage = () => {
   };
 
   const addHighlight = () => {
-    setCourseHighlights(prev => [...prev, ""]);
+    setCourseHighlights((prev) => [...prev, ""]);
   };
 
   const removeHighlight = (index: number) => {
-    setCourseHighlights(prev => prev.filter((_, i) => i !== index));
+    setCourseHighlights((prev) => prev.filter((_, i) => i !== index));
   };
 
   // Helper functions for managing course data arrays
   const addItemToArray = (arrayName: string, value: string) => {
     if (!value.trim()) return;
-    setCourseData(prev => ({
+    setCourseData((prev) => ({
       ...prev,
-      [arrayName]: [...prev[arrayName as keyof typeof prev] as string[], value.trim()]
+      [arrayName]: [
+        ...(prev[arrayName as keyof typeof prev] as string[]),
+        value.trim(),
+      ],
     }));
   };
 
   const removeItemFromArray = (arrayName: string, index: number) => {
-    setCourseData(prev => ({
+    setCourseData((prev) => ({
       ...prev,
-      [arrayName]: (prev[arrayName as keyof typeof prev] as string[]).filter((_, i) => i !== index)
+      [arrayName]: (prev[arrayName as keyof typeof prev] as string[]).filter(
+        (_, i) => i !== index,
+      ),
     }));
   };
 
-  const updateItemInArray = (arrayName: string, index: number, value: string) => {
-    setCourseData(prev => {
+  const updateItemInArray = (
+    arrayName: string,
+    index: number,
+    value: string,
+  ) => {
+    setCourseData((prev) => {
       const newArray = [...(prev[arrayName as keyof typeof prev] as string[])];
       newArray[index] = value;
       return {
         ...prev,
-        [arrayName]: newArray
+        [arrayName]: newArray,
       };
     });
   };
@@ -309,7 +362,9 @@ const EditProductPage = () => {
           </Button>
           <div>
             <h1 className="text-3xl font-bold text-[#123B79]">Edit Product</h1>
-            <p className="text-gray-600 mt-1">Update product information and settings</p>
+            <p className="text-gray-600 mt-1">
+              Update product information and settings
+            </p>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -364,7 +419,9 @@ const EditProductPage = () => {
                 <Card className="mb-6">
                   <CardHeader>
                     <CardTitle>Basic Information</CardTitle>
-                    <p className="text-sm text-muted-foreground">Enter the basic details about your course</p>
+                    <p className="text-sm text-muted-foreground">
+                      Enter the basic details about your course
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid gap-4 md:grid-cols-2">
@@ -373,7 +430,9 @@ const EditProductPage = () => {
                         <Input
                           id="title"
                           value={formData.title}
-                          onChange={(e) => setFormData({...formData, title: e.target.value})}
+                          onChange={(e) =>
+                            setFormData({ ...formData, title: e.target.value })
+                          }
                           placeholder="Enter course title"
                         />
                       </div>
@@ -385,8 +444,12 @@ const EditProductPage = () => {
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="Finance">Finance</SelectItem>
-                            <SelectItem value="Real Estate">Real Estate</SelectItem>
-                            <SelectItem value="Investment">Investment</SelectItem>
+                            <SelectItem value="Real Estate">
+                              Real Estate
+                            </SelectItem>
+                            <SelectItem value="Investment">
+                              Investment
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -400,7 +463,12 @@ const EditProductPage = () => {
                           <Input
                             id="duration"
                             value={formData.courseDuration}
-                            onChange={(e) => setFormData({...formData, courseDuration: e.target.value})}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                courseDuration: e.target.value,
+                              })
+                            }
                             placeholder="e.g., 8 hours 30 minutes"
                             className="pl-8"
                           />
@@ -424,7 +492,12 @@ const EditProductPage = () => {
                       <Textarea
                         id="description"
                         value={formData.description}
-                        onChange={(e) => setFormData({...formData, description: e.target.value})}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            description: e.target.value,
+                          })
+                        }
                         placeholder="Describe your course in detail..."
                         className="min-h-[120px]"
                       />
@@ -456,7 +529,9 @@ const EditProductPage = () => {
                             <Upload className="mr-2 h-4 w-4" />
                             Upload Image
                           </Button>
-                          <p className="text-xs text-muted-foreground">Recommended size: 1280x720px. Max file size: 5MB.</p>
+                          <p className="text-xs text-muted-foreground">
+                            Recommended size: 1280x720px. Max file size: 5MB.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -465,9 +540,14 @@ const EditProductPage = () => {
                       <Switch
                         id="featured"
                         checked={formData.featured}
-                        onCheckedChange={(checked) => setFormData({...formData, featured: checked})}
+                        onCheckedChange={(checked) =>
+                          setFormData({ ...formData, featured: checked })
+                        }
                       />
-                      <Label htmlFor="featured">Feature this course on the homepage</Label>
+
+                      <Label htmlFor="featured">
+                        Feature this course on the homepage
+                      </Label>
                     </div>
                   </CardContent>
                 </Card>
@@ -477,12 +557,19 @@ const EditProductPage = () => {
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       Course Highlights
-                      <Button variant="outline" size="sm" onClick={() => setHighlights([...highlights, ''])}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setHighlights([...highlights, ""])}
+                      >
                         <Plus className="h-4 w-4 mr-2" />
                         Add
                       </Button>
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground">Key selling points that will appear on the course landing page</p>
+                    <p className="text-sm text-muted-foreground">
+                      Key selling points that will appear on the course landing
+                      page
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {highlights.map((highlight, index) => (
@@ -497,10 +584,15 @@ const EditProductPage = () => {
                           placeholder="Enter a course highlight"
                           className="flex-1"
                         />
+
                         <Button
                           variant="outline"
                           size="icon"
-                          onClick={() => setHighlights(highlights.filter((_, i) => i !== index))}
+                          onClick={() =>
+                            setHighlights(
+                              highlights.filter((_, i) => i !== index),
+                            )
+                          }
                         >
                           <Trash className="h-4 w-4" />
                         </Button>
@@ -508,8 +600,15 @@ const EditProductPage = () => {
                     ))}
                     {highlights.length === 0 && (
                       <div className="text-center py-4 border-2 border-dashed border-gray-300 rounded">
-                        <p className="text-sm text-muted-foreground">No highlights added yet</p>
-                        <Button variant="ghost" size="sm" onClick={() => setHighlights([''])} className="mt-2">
+                        <p className="text-sm text-muted-foreground">
+                          No highlights added yet
+                        </p>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setHighlights([""])}
+                          className="mt-2"
+                        >
                           <Plus className="h-4 w-4 mr-2" />
                           Add your first highlight
                         </Button>
@@ -523,12 +622,20 @@ const EditProductPage = () => {
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       Learning Outcomes
-                      <Button variant="outline" size="sm" onClick={() => setLearningOutcomes([...learningOutcomes, ''])}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() =>
+                          setLearningOutcomes([...learningOutcomes, ""])
+                        }
+                      >
                         <Plus className="h-4 w-4 mr-2" />
                         Add
                       </Button>
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground">What will students learn in this course?</p>
+                    <p className="text-sm text-muted-foreground">
+                      What will students learn in this course?
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {learningOutcomes.map((outcome, index) => (
@@ -543,10 +650,15 @@ const EditProductPage = () => {
                           placeholder="Enter a learning outcome"
                           className="flex-1"
                         />
+
                         <Button
                           variant="outline"
                           size="icon"
-                          onClick={() => setLearningOutcomes(learningOutcomes.filter((_, i) => i !== index))}
+                          onClick={() =>
+                            setLearningOutcomes(
+                              learningOutcomes.filter((_, i) => i !== index),
+                            )
+                          }
                         >
                           <Trash className="h-4 w-4" />
                         </Button>
@@ -560,12 +672,20 @@ const EditProductPage = () => {
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       Target Audience
-                      <Button variant="outline" size="sm" onClick={() => setTargetAudience([...targetAudience, ''])}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() =>
+                          setTargetAudience([...targetAudience, ""])
+                        }
+                      >
                         <Plus className="h-4 w-4 mr-2" />
                         Add
                       </Button>
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground">Who is this course designed for?</p>
+                    <p className="text-sm text-muted-foreground">
+                      Who is this course designed for?
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {targetAudience.map((audience, index) => (
@@ -580,10 +700,15 @@ const EditProductPage = () => {
                           placeholder="Enter target audience description"
                           className="flex-1"
                         />
+
                         <Button
                           variant="outline"
                           size="icon"
-                          onClick={() => setTargetAudience(targetAudience.filter((_, i) => i !== index))}
+                          onClick={() =>
+                            setTargetAudience(
+                              targetAudience.filter((_, i) => i !== index),
+                            )
+                          }
                         >
                           <Trash className="h-4 w-4" />
                         </Button>
@@ -602,25 +727,36 @@ const EditProductPage = () => {
                         Manage Content
                       </Button>
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground">Quick overview of your course modules. Use "Manage Content" for detailed editing.</p>
+                    <p className="text-sm text-muted-foreground">
+                      Quick overview of your course modules. Use "Manage
+                      Content" for detailed editing.
+                    </p>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
                       <div className="text-sm text-muted-foreground">
                         Modules ({courseData.modules.length})
                       </div>
-                      
+
                       {courseData.modules.length > 0 ? (
                         <div className="space-y-3">
                           {courseData.modules.map((module, index) => (
-                            <div key={module.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div
+                              key={module.id}
+                              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                            >
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-medium text-blue-600">
                                   {index + 1}
                                 </div>
                                 <div>
-                                  <h4 className="font-medium">{module.title}</h4>
-                                  <p className="text-sm text-muted-foreground">{module.lessons.length} lessons • {module.duration}</p>
+                                  <h4 className="font-medium">
+                                    {module.title}
+                                  </h4>
+                                  <p className="text-sm text-muted-foreground">
+                                    {module.lessons.length} lessons •{" "}
+                                    {module.duration}
+                                  </p>
                                 </div>
                               </div>
                               <Badge variant="secondary">Published</Badge>
@@ -630,8 +766,12 @@ const EditProductPage = () => {
                       ) : (
                         <div className="text-center py-6 border-2 border-dashed border-gray-300 rounded-lg">
                           <FileText className="h-10 w-10 mx-auto mb-3 text-gray-400" />
-                          <p className="text-gray-600 mb-2">No modules created yet</p>
-                          <p className="text-sm text-gray-500">Use "Manage Content" to add your first module</p>
+                          <p className="text-gray-600 mb-2">
+                            No modules created yet
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            Use "Manage Content" to add your first module
+                          </p>
                         </div>
                       )}
                     </div>
@@ -642,7 +782,9 @@ const EditProductPage = () => {
                 <Card className="mt-6">
                   <CardHeader>
                     <CardTitle>Product Information</CardTitle>
-                    <p className="text-sm text-muted-foreground">Additional product details and settings</p>
+                    <p className="text-sm text-muted-foreground">
+                      Additional product details and settings
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid gap-4 md:grid-cols-2">
@@ -651,7 +793,9 @@ const EditProductPage = () => {
                         <Input
                           id="sku"
                           value={formData.sku}
-                          onChange={(e) => setFormData({...formData, sku: e.target.value})}
+                          onChange={(e) =>
+                            setFormData({ ...formData, sku: e.target.value })
+                          }
                           placeholder="e.g., COURSE-001"
                         />
                       </div>
@@ -661,7 +805,12 @@ const EditProductPage = () => {
                           id="stock"
                           type="number"
                           value={formData.stockQuantity}
-                          onChange={(e) => setFormData({...formData, stockQuantity: e.target.value})}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              stockQuantity: e.target.value,
+                            })
+                          }
                           placeholder="Unlimited for digital courses"
                         />
                       </div>
@@ -674,7 +823,10 @@ const EditProductPage = () => {
                           checked={isVirtual}
                           onCheckedChange={setIsVirtual}
                         />
-                        <Label htmlFor="virtual-product">Virtual product (no shipping required)</Label>
+
+                        <Label htmlFor="virtual-product">
+                          Virtual product (no shipping required)
+                        </Label>
                       </div>
 
                       <div className="flex items-center space-x-2">
@@ -683,7 +835,10 @@ const EditProductPage = () => {
                           checked={isDownloadable}
                           onCheckedChange={setIsDownloadable}
                         />
-                        <Label htmlFor="downloadable">Downloadable product</Label>
+
+                        <Label htmlFor="downloadable">
+                          Downloadable product
+                        </Label>
                       </div>
 
                       <div className="flex items-center space-x-2">
@@ -692,24 +847,35 @@ const EditProductPage = () => {
                           checked={trackStock}
                           onCheckedChange={setTrackStock}
                         />
-                        <Label htmlFor="track-stock">Track stock quantity</Label>
+
+                        <Label htmlFor="track-stock">
+                          Track stock quantity
+                        </Label>
                       </div>
                     </div>
 
                     <Separator />
 
                     <div className="space-y-4">
-                      <Label className="text-base font-semibold">Product Categories</Label>
+                      <Label className="text-base font-semibold">
+                        Product Categories
+                      </Label>
                       <div className="flex flex-wrap gap-2">
                         {selectedCategories.map((category) => (
-                          <Badge key={category} variant="secondary" className="px-3 py-1">
+                          <Badge
+                            key={category}
+                            variant="secondary"
+                            className="px-3 py-1"
+                          >
                             {category}
                             <Button
                               variant="ghost"
                               size="sm"
                               className="ml-2 h-4 w-4 p-0"
                               onClick={() => {
-                                setSelectedCategories(prev => prev.filter(c => c !== category));
+                                setSelectedCategories((prev) =>
+                                  prev.filter((c) => c !== category),
+                                );
                               }}
                             >
                               <X className="h-3 w-3" />
@@ -720,7 +886,7 @@ const EditProductPage = () => {
                       <Select
                         onValueChange={(value) => {
                           if (!selectedCategories.includes(value)) {
-                            setSelectedCategories(prev => [...prev, value]);
+                            setSelectedCategories((prev) => [...prev, value]);
                           }
                         }}
                       >
@@ -728,18 +894,20 @@ const EditProductPage = () => {
                           <SelectValue placeholder="Add category" />
                         </SelectTrigger>
                         <SelectContent>
-                          {categories.filter(cat => !selectedCategories.includes(cat)).map((category) => (
-                            <SelectItem key={category} value={category}>
-                              {category}
-                            </SelectItem>
-                          ))}
+                          {categories
+                            .filter((cat) => !selectedCategories.includes(cat))
+                            .map((category) => (
+                              <SelectItem key={category} value={category}>
+                                {category}
+                              </SelectItem>
+                            ))}
                         </SelectContent>
                       </Select>
                     </div>
                   </CardContent>
                 </Card>
               </div>
-              
+
               {/* Sidebar */}
               <div className="col-span-4 space-y-6">
                 <Card>
@@ -757,7 +925,9 @@ const EditProductPage = () => {
                     </div>
                     <div className="flex items-center justify-between">
                       <Label>Last Modified</Label>
-                      <p className="text-sm text-muted-foreground">15/01/2024, 18:30:00</p>
+                      <p className="text-sm text-muted-foreground">
+                        15/01/2024, 18:30:00
+                      </p>
                     </div>
                     <Separator />
                     <div className="flex gap-2">
@@ -841,16 +1011,24 @@ const EditProductPage = () => {
               <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="modules">Modules & Lessons</TabsTrigger>
                 <TabsTrigger value="resources">Course Resources</TabsTrigger>
-                <TabsTrigger value="assignments">Assignments & Quizzes</TabsTrigger>
-                <TabsTrigger value="content-settings">Content Settings</TabsTrigger>
+                <TabsTrigger value="assignments">
+                  Assignments & Quizzes
+                </TabsTrigger>
+                <TabsTrigger value="content-settings">
+                  Content Settings
+                </TabsTrigger>
               </TabsList>
 
               {/* Modules & Lessons */}
               <TabsContent value="modules" className="space-y-4 mt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <Label className="text-base font-semibold">Course Structure</Label>
-                    <p className="text-sm text-muted-foreground">Manage your course modules and lessons</p>
+                    <Label className="text-base font-semibold">
+                      Course Structure
+                    </Label>
+                    <p className="text-sm text-muted-foreground">
+                      Manage your course modules and lessons
+                    </p>
                   </div>
                   <Button className="bg-[#123B79] hover:bg-[#425DA0]">
                     <Plus className="h-4 w-4 mr-2" />
@@ -862,9 +1040,12 @@ const EditProductPage = () => {
                   <div className="text-sm text-muted-foreground">
                     Modules ({courseData.modules.length})
                   </div>
-                  
+
                   {courseData.modules.map((module, index) => (
-                    <Card key={module.id} className="border-l-4 border-l-blue-600">
+                    <Card
+                      key={module.id}
+                      className="border-l-4 border-l-blue-600"
+                    >
                       <CardContent className="p-4">
                         <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-3">
@@ -873,7 +1054,10 @@ const EditProductPage = () => {
                             </div>
                             <div>
                               <h4 className="font-medium">{module.title}</h4>
-                              <p className="text-sm text-muted-foreground">{module.lessons.length} lessons • {module.duration}</p>
+                              <p className="text-sm text-muted-foreground">
+                                {module.lessons.length} lessons •{" "}
+                                {module.duration}
+                              </p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
@@ -887,10 +1071,13 @@ const EditProductPage = () => {
                             </Button>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-2">
                           {module.lessons.map((lesson, lessonIndex) => (
-                            <div key={lesson.id} className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                            <div
+                              key={lesson.id}
+                              className="flex items-center justify-between p-2 bg-gray-50 rounded"
+                            >
                               <div className="flex items-center gap-2">
                                 <div className="w-6 h-6 bg-gray-200 rounded text-xs flex items-center justify-center">
                                   {lessonIndex + 1}
@@ -901,8 +1088,14 @@ const EditProductPage = () => {
                                 </Badge>
                               </div>
                               <div className="flex items-center gap-2">
-                                <span className="text-xs text-muted-foreground">{lesson.duration}</span>
-                                <Button variant="ghost" size="icon" className="h-6 w-6">
+                                <span className="text-xs text-muted-foreground">
+                                  {lesson.duration}
+                                </span>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  className="h-6 w-6"
+                                >
                                   <Edit className="h-3 w-3" />
                                 </Button>
                               </div>
@@ -916,8 +1109,12 @@ const EditProductPage = () => {
                   {courseData.modules.length === 0 && (
                     <div className="text-center py-8 border-2 border-dashed border-gray-300 rounded-lg">
                       <FileText className="h-12 w-12 mx-auto mb-4 text-gray-400" />
-                      <p className="text-gray-600 mb-2">No modules created yet</p>
-                      <p className="text-sm text-gray-500">Add your first module to get started</p>
+                      <p className="text-gray-600 mb-2">
+                        No modules created yet
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Add your first module to get started
+                      </p>
                     </div>
                   )}
                 </div>
@@ -927,8 +1124,13 @@ const EditProductPage = () => {
               <TabsContent value="resources" className="space-y-4 mt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <Label className="text-base font-semibold">Course Resources</Label>
-                    <p className="text-sm text-muted-foreground">Manage downloadable resources, templates, and supplementary materials</p>
+                    <Label className="text-base font-semibold">
+                      Course Resources
+                    </Label>
+                    <p className="text-sm text-muted-foreground">
+                      Manage downloadable resources, templates, and
+                      supplementary materials
+                    </p>
                   </div>
                   <Button className="bg-[#123B79] hover:bg-[#425DA0]">
                     <Upload className="h-4 w-4 mr-2" />
@@ -945,14 +1147,26 @@ const EditProductPage = () => {
                           <FileText className="h-5 w-5 text-red-600" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-medium text-sm">Course Handbook.pdf</h4>
-                          <p className="text-xs text-muted-foreground">2.4 MB • PDF</p>
+                          <h4 className="font-medium text-sm">
+                            Course Handbook.pdf
+                          </h4>
+                          <p className="text-xs text-muted-foreground">
+                            2.4 MB • PDF
+                          </p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Download className="h-3 w-3" />
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Trash className="h-3 w-3" />
                           </Button>
                         </div>
@@ -967,14 +1181,26 @@ const EditProductPage = () => {
                           <FileText className="h-5 w-5 text-green-600" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-medium text-sm">Investment Calculator.xlsx</h4>
-                          <p className="text-xs text-muted-foreground">156 KB • Excel</p>
+                          <h4 className="font-medium text-sm">
+                            Investment Calculator.xlsx
+                          </h4>
+                          <p className="text-xs text-muted-foreground">
+                            156 KB • Excel
+                          </p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Download className="h-3 w-3" />
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Trash className="h-3 w-3" />
                           </Button>
                         </div>
@@ -989,14 +1215,26 @@ const EditProductPage = () => {
                           <ImageIcon className="h-5 w-5 text-purple-600" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-medium text-sm">Market Charts.png</h4>
-                          <p className="text-xs text-muted-foreground">892 KB • Image</p>
+                          <h4 className="font-medium text-sm">
+                            Market Charts.png
+                          </h4>
+                          <p className="text-xs text-muted-foreground">
+                            892 KB • Image
+                          </p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Download className="h-3 w-3" />
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-6 w-6">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6"
+                          >
                             <Trash className="h-3 w-3" />
                           </Button>
                         </div>
@@ -1010,8 +1248,12 @@ const EditProductPage = () => {
               <TabsContent value="assignments" className="space-y-4 mt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <Label className="text-base font-semibold">Assignments & Quizzes</Label>
-                    <p className="text-sm text-muted-foreground">Create and manage assignments, quizzes, and assessments</p>
+                    <Label className="text-base font-semibold">
+                      Assignments & Quizzes
+                    </Label>
+                    <p className="text-sm text-muted-foreground">
+                      Create and manage assignments, quizzes, and assessments
+                    </p>
                   </div>
                   <Button className="bg-[#123B79] hover:bg-[#425DA0]">
                     <Plus className="h-4 w-4 mr-2" />
@@ -1029,7 +1271,9 @@ const EditProductPage = () => {
                           </div>
                           <div>
                             <h4 className="font-medium">Module 1 Quiz</h4>
-                            <p className="text-sm text-muted-foreground">5 questions • 10 minutes</p>
+                            <p className="text-sm text-muted-foreground">
+                              5 questions • 10 minutes
+                            </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
@@ -1051,8 +1295,12 @@ const EditProductPage = () => {
                             <FileText className="h-5 w-5 text-orange-600" />
                           </div>
                           <div>
-                            <h4 className="font-medium">Property Analysis Assignment</h4>
-                            <p className="text-sm text-muted-foreground">Written assignment • Due in 1 week</p>
+                            <h4 className="font-medium">
+                              Property Analysis Assignment
+                            </h4>
+                            <p className="text-sm text-muted-foreground">
+                              Written assignment • Due in 1 week
+                            </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
@@ -1071,104 +1319,118 @@ const EditProductPage = () => {
               {/* Content Settings */}
               <TabsContent value="content-settings" className="space-y-6 mt-6">
                 <div>
-                  <Label className="text-base font-semibold">Content Settings</Label>
-                  <p className="text-sm text-muted-foreground">Configure how content is delivered and accessed</p>
+                  <Label className="text-base font-semibold">
+                    Content Settings
+                  </Label>
+                  <p className="text-sm text-muted-foreground">
+                    Configure how content is delivered and accessed
+                  </p>
                 </div>
 
                 <div className="space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="drip-content">Enable drip content (release lessons over time)</Label>
-                        <p className="text-sm text-muted-foreground">Control when students can access lessons</p>
+                        <Label htmlFor="drip-content">
+                          Enable drip content (release lessons over time)
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Control when students can access lessons
+                        </p>
                       </div>
-                      <Switch
-                        id="drip-content"
-                        checked={false}
-                      />
+                      <Switch id="drip-content" checked={false} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="sequential">Require sequential lesson completion</Label>
-                        <p className="text-sm text-muted-foreground">Students must complete lessons in order</p>
+                        <Label htmlFor="sequential">
+                          Require sequential lesson completion
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Students must complete lessons in order
+                        </p>
                       </div>
-                      <Switch
-                        id="sequential"
-                        checked={true}
-                      />
+                      <Switch id="sequential" checked={true} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="downloads">Allow students to download resources</Label>
-                        <p className="text-sm text-muted-foreground">Enable resource downloads for students</p>
+                        <Label htmlFor="downloads">
+                          Allow students to download resources
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Enable resource downloads for students
+                        </p>
                       </div>
-                      <Switch
-                        id="downloads"
-                        checked={true}
-                      />
+                      <Switch id="downloads" checked={true} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="video-downloads">Allow video downloads</Label>
-                        <p className="text-sm text-muted-foreground">Let students download video content</p>
+                        <Label htmlFor="video-downloads">
+                          Allow video downloads
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Let students download video content
+                        </p>
                       </div>
-                      <Switch
-                        id="video-downloads"
-                        checked={false}
-                      />
+                      <Switch id="video-downloads" checked={false} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="playback-controls">Enable video playback speed controls</Label>
-                        <p className="text-sm text-muted-foreground">Allow students to adjust video speed</p>
+                        <Label htmlFor="playback-controls">
+                          Enable video playback speed controls
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Allow students to adjust video speed
+                        </p>
                       </div>
-                      <Switch
-                        id="playback-controls"
-                        checked={true}
-                      />
+                      <Switch id="playback-controls" checked={true} />
                     </div>
                   </div>
 
                   <Separator />
 
                   <div className="space-y-4">
-                    <Label className="text-base font-semibold">Content Protection</Label>
-                    
+                    <Label className="text-base font-semibold">
+                      Content Protection
+                    </Label>
+
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="watermark">Add watermark to videos</Label>
-                        <p className="text-sm text-muted-foreground">Protect video content with watermarks</p>
+                        <Label htmlFor="watermark">
+                          Add watermark to videos
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Protect video content with watermarks
+                        </p>
                       </div>
-                      <Switch
-                        id="watermark"
-                        checked={false}
-                      />
+                      <Switch id="watermark" checked={false} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="right-click">Disable right-click on content</Label>
-                        <p className="text-sm text-muted-foreground">Prevent right-click context menu</p>
+                        <Label htmlFor="right-click">
+                          Disable right-click on content
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Prevent right-click context menu
+                        </p>
                       </div>
-                      <Switch
-                        id="right-click"
-                        checked={false}
-                      />
+                      <Switch id="right-click" checked={false} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="screenshot">Enable screenshot protection</Label>
-                        <p className="text-sm text-muted-foreground">Attempt to prevent screenshots</p>
+                        <Label htmlFor="screenshot">
+                          Enable screenshot protection
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Attempt to prevent screenshots
+                        </p>
                       </div>
-                      <Switch
-                        id="screenshot"
-                        checked={false}
-                      />
+                      <Switch id="screenshot" checked={false} />
                     </div>
                   </div>
                 </div>
@@ -1187,7 +1449,9 @@ const EditProductPage = () => {
                     Add Instructor
                   </Button>
                 </CardTitle>
-                <p className="text-sm text-muted-foreground">Manage the instructors for this course</p>
+                <p className="text-sm text-muted-foreground">
+                  Manage the instructors for this course
+                </p>
               </CardHeader>
               <CardContent className="space-y-4">
                 {courseData.instructors.map((instructor, index) => (
@@ -1197,7 +1461,9 @@ const EditProductPage = () => {
                         <div className="flex items-center gap-4">
                           <div className="relative h-12 w-12 rounded-full overflow-hidden bg-gray-200">
                             <Image
-                              src={instructor.avatar || "/profile-placeholder.png"}
+                              src={
+                                instructor.avatar || "/profile-placeholder.png"
+                              }
                               alt={instructor.name}
                               fill
                               className="object-cover"
@@ -1209,7 +1475,9 @@ const EditProductPage = () => {
                           </div>
                           <div>
                             <h4 className="font-medium">{instructor.name}</h4>
-                            <p className="text-sm text-muted-foreground">{instructor.title}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {instructor.title}
+                            </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
@@ -1234,7 +1502,9 @@ const EditProductPage = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Course Pricing</CardTitle>
-                <p className="text-sm text-muted-foreground">Set the price and payment options for your course</p>
+                <p className="text-sm text-muted-foreground">
+                  Set the price and payment options for your course
+                </p>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
@@ -1266,14 +1536,15 @@ const EditProductPage = () => {
 
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
-                    <Switch
-                      id="discount-pricing"
-                      defaultChecked
-                    />
-                    <Label htmlFor="discount-pricing">Show discount pricing</Label>
+                    <Switch id="discount-pricing" defaultChecked />
+
+                    <Label htmlFor="discount-pricing">
+                      Show discount pricing
+                    </Label>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    When enabled, both original and current prices will be displayed with discount percentage.
+                    When enabled, both original and current prices will be
+                    displayed with discount percentage.
                   </p>
                 </div>
               </CardContent>
@@ -1285,25 +1556,35 @@ const EditProductPage = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Course Reviews</CardTitle>
-                <p className="text-sm text-muted-foreground">Manage student reviews and ratings</p>
+                <p className="text-sm text-muted-foreground">
+                  Manage student reviews and ratings
+                </p>
               </CardHeader>
               <CardContent className="space-y-6">
                 {/* Review Stats */}
                 <div className="grid gap-4 md:grid-cols-3">
                   <div className="text-center">
-                    <Label className="text-sm text-muted-foreground">Average Rating</Label>
+                    <Label className="text-sm text-muted-foreground">
+                      Average Rating
+                    </Label>
                     <div className="flex items-center justify-center gap-2 mt-1">
                       <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                       <span className="text-2xl font-bold">4.8</span>
-                      <span className="text-sm text-muted-foreground">(324 reviews)</span>
+                      <span className="text-sm text-muted-foreground">
+                        (324 reviews)
+                      </span>
                     </div>
                   </div>
                   <div className="text-center">
-                    <Label className="text-sm text-muted-foreground">Total Reviews</Label>
+                    <Label className="text-sm text-muted-foreground">
+                      Total Reviews
+                    </Label>
                     <div className="text-2xl font-bold mt-1">324</div>
                   </div>
                   <div className="text-center">
-                    <Label className="text-sm text-muted-foreground">Enrolled Students</Label>
+                    <Label className="text-sm text-muted-foreground">
+                      Enrolled Students
+                    </Label>
                     <div className="text-2xl font-bold mt-1">1247</div>
                   </div>
                 </div>
@@ -1312,8 +1593,10 @@ const EditProductPage = () => {
 
                 {/* Recent Reviews */}
                 <div className="space-y-4">
-                  <Label className="text-base font-semibold">Recent Reviews</Label>
-                  
+                  <Label className="text-base font-semibold">
+                    Recent Reviews
+                  </Label>
+
                   {courseData.reviews.map((review, index) => (
                     <Card key={review.id}>
                       <CardContent className="p-4">
@@ -1321,7 +1604,9 @@ const EditProductPage = () => {
                           <div className="flex items-center gap-3">
                             <div className="relative h-10 w-10 rounded-full overflow-hidden bg-gray-200">
                               <Image
-                                src={review.avatar || "/profile-placeholder.png"}
+                                src={
+                                  review.avatar || "/profile-placeholder.png"
+                                }
                                 alt={review.author}
                                 fill
                                 className="object-cover"
@@ -1348,14 +1633,20 @@ const EditProductPage = () => {
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Button variant="outline" size="sm">Reply</Button>
+                            <Button variant="outline" size="sm">
+                              Reply
+                            </Button>
                             <Button variant="outline" size="sm">
                               <Trash className="h-4 w-4" />
                             </Button>
                           </div>
                         </div>
-                        <p className="text-sm text-gray-700">{review.comment}</p>
-                        <p className="text-xs text-muted-foreground mt-2">{review.date}</p>
+                        <p className="text-sm text-gray-700">
+                          {review.comment}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-2">
+                          {review.date}
+                        </p>
                       </CardContent>
                     </Card>
                   ))}
@@ -1370,52 +1661,58 @@ const EditProductPage = () => {
               <Card>
                 <CardHeader>
                   <CardTitle>Course Settings</CardTitle>
-                  <p className="text-sm text-muted-foreground">Configure additional settings for your course</p>
+                  <p className="text-sm text-muted-foreground">
+                    Configure additional settings for your course
+                  </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="allow-comments">Allow student comments</Label>
-                        <p className="text-sm text-muted-foreground">Enable students to leave comments on lessons</p>
+                        <Label htmlFor="allow-comments">
+                          Allow student comments
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Enable students to leave comments on lessons
+                        </p>
                       </div>
-                      <Switch
-                        id="allow-comments"
-                        defaultChecked
-                      />
+                      <Switch id="allow-comments" defaultChecked />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="allow-downloads">Allow resource downloads</Label>
-                        <p className="text-sm text-muted-foreground">Let students download course materials</p>
+                        <Label htmlFor="allow-downloads">
+                          Allow resource downloads
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Let students download course materials
+                        </p>
                       </div>
-                      <Switch
-                        id="allow-downloads"
-                        defaultChecked={false}
-                      />
+                      <Switch id="allow-downloads" defaultChecked={false} />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="certificate">Issue completion certificate</Label>
-                        <p className="text-sm text-muted-foreground">Award certificate when students complete the course</p>
+                        <Label htmlFor="certificate">
+                          Issue completion certificate
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Award certificate when students complete the course
+                        </p>
                       </div>
-                      <Switch
-                        id="certificate"
-                        defaultChecked
-                      />
+                      <Switch id="certificate" defaultChecked />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label htmlFor="auto-enroll">Auto-enroll in related courses</Label>
-                        <p className="text-sm text-muted-foreground">Automatically enroll students in suggested courses</p>
+                        <Label htmlFor="auto-enroll">
+                          Auto-enroll in related courses
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Automatically enroll students in suggested courses
+                        </p>
                       </div>
-                      <Switch
-                        id="auto-enroll"
-                        defaultChecked={false}
-                      />
+                      <Switch id="auto-enroll" defaultChecked={false} />
                     </div>
                   </div>
                 </CardContent>
@@ -1439,7 +1736,7 @@ const EditProductPage = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label>Last Modified</Label>
                     <div className="flex items-center gap-2">
@@ -1454,1124 +1751,1610 @@ const EditProductPage = () => {
 
           {/* Product Data Tab - The original WooCommerce-style interface */}
           <TabsContent value="product-data" className="mt-6">
-
-      <div className="grid grid-cols-12 gap-6">
-        {/* Main Content Area */}
-        <div className="col-span-8">
-          {/* Product Name */}
-          <Card className="mb-6">
-            <CardContent className="p-6">
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="title" className="text-base font-semibold">Product Name</Label>
-                  <Input
-                    id="title"
-                    placeholder="Enter product name"
-                    className="text-lg h-12 mt-2"
-                    value={formData.title}
-                    onChange={(e) => setFormData({...formData, title: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="slug" className="text-sm font-medium text-gray-600">Slug</Label>
-                  <Input
-                    id="slug"
-                    value={formData.slug}
-                    onChange={(e) => setFormData({...formData, slug: e.target.value})}
-                    className="font-mono text-sm"
-                  />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Permalink: /courses/{formData.slug}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Long Description */}
-          <Card className="mb-6">
-            <CardHeader>
-              <CardTitle>Product Description</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Textarea
-                placeholder="Describe your product in detail..."
-                className="min-h-[200px] resize-none"
-                value={formData.description}
-                onChange={(e) => setFormData({...formData, description: e.target.value})}
-              />
-            </CardContent>
-          </Card>
-
-          {/* Product Data Section */}
-          <Card className="mb-6">
-            <CardHeader className="pb-3">
-              <div className="flex items-center justify-between">
-                <CardTitle>Product Data</CardTitle>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Label htmlFor="product-type" className="text-sm">Product type:</Label>
-                    <Select value={productType} onValueChange={setProductType}>
-                      <SelectTrigger id="product-type" className="w-[180px]">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="simple">Simple Product</SelectItem>
-                        <SelectItem value="course">Course Product</SelectItem>
-                        <SelectItem value="book">Physical Book</SelectItem>
-                        <SelectItem value="event">Event/Workshop</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center space-x-2">
-                      <Checkbox
-                        id="virtual"
-                        checked={isVirtual}
-                        onCheckedChange={setIsVirtual}
-                      />
-                      <Label htmlFor="virtual" className="text-sm">Virtual</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Checkbox
-                        id="downloadable"
-                        checked={isDownloadable}
-                        onCheckedChange={setIsDownloadable}
-                      />
-                      <Label htmlFor="downloadable" className="text-sm">Downloadable</Label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <Tabs defaultValue="general" className="w-full">
-                <div className="grid grid-cols-12 gap-6">
-                  {/* Vertical Tabs */}
-                  <div className="col-span-3">
-                    <TabsList className="grid w-full grid-rows-6 h-auto bg-gray-100">
-                      <TabsTrigger value="general" className="justify-start text-left">General</TabsTrigger>
-                      <TabsTrigger value="inventory" className="justify-start text-left">Inventory</TabsTrigger>
-                      <TabsTrigger
-                        value="shipping"
-                        className="justify-start text-left"
-                        disabled={isVirtual}
-                      >
-                        Shipping
-                      </TabsTrigger>
-                      {productType === "course" && (
-                        <TabsTrigger value="course-details" className="justify-start text-left">
-                          Course Details
-                        </TabsTrigger>
-                      )}
-                      {productType === "course" && (
-                        <TabsTrigger value="course-content" className="justify-start text-left">
-                          Course Content
-                        </TabsTrigger>
-                      )}
-                      <TabsTrigger value="linked" className="justify-start text-left">Linked Products</TabsTrigger>
-                    </TabsList>
-                  </div>
-
-                  {/* Tab Content */}
-                  <div className="col-span-9">
-                    {/* General Tab */}
-                    <TabsContent value="general" className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <Label htmlFor="regular-price">Regular price ($)</Label>
-                          <Input
-                            id="regular-price"
-                            placeholder="0.00"
-                            type="number"
-                            step="0.01"
-                            value={formData.regularPrice}
-                            onChange={(e) => setFormData({...formData, regularPrice: e.target.value})}
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="sale-price">Sale price ($)</Label>
-                          <Input
-                            id="sale-price"
-                            placeholder="0.00"
-                            type="number"
-                            step="0.01"
-                            value={formData.salePrice}
-                            onChange={(e) => setFormData({...formData, salePrice: e.target.value})}
-                          />
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-blue-600">
-                        <CalendarIcon className="h-4 w-4" />
-                        <span>Schedule sale dates</span>
-                      </div>
+            <div className="grid grid-cols-12 gap-6">
+              {/* Main Content Area */}
+              <div className="col-span-8">
+                {/* Product Name */}
+                <Card className="mb-6">
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
                       <div>
-                        <Label htmlFor="tax-status">Tax status</Label>
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Taxable" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="taxable">Taxable</SelectItem>
-                            <SelectItem value="shipping">Shipping only</SelectItem>
-                            <SelectItem value="none">None</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </TabsContent>
-
-                    {/* Inventory Tab */}
-                    <TabsContent value="inventory" className="space-y-4">
-                      <div>
-                        <Label htmlFor="sku">SKU</Label>
+                        <Label
+                          htmlFor="title"
+                          className="text-base font-semibold"
+                        >
+                          Product Name
+                        </Label>
                         <Input
-                          id="sku"
-                          placeholder="e.g. COURSE-001"
-                          value={formData.sku}
-                          onChange={(e) => setFormData({...formData, sku: e.target.value})}
+                          id="title"
+                          placeholder="Enter product name"
+                          className="text-lg h-12 mt-2"
+                          value={formData.title}
+                          onChange={(e) =>
+                            setFormData({ ...formData, title: e.target.value })
+                          }
                         />
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Checkbox
-                          id="track-stock"
-                          checked={trackStock}
-                          onCheckedChange={setTrackStock}
+                      <div>
+                        <Label
+                          htmlFor="slug"
+                          className="text-sm font-medium text-gray-600"
+                        >
+                          Slug
+                        </Label>
+                        <Input
+                          id="slug"
+                          value={formData.slug}
+                          onChange={(e) =>
+                            setFormData({ ...formData, slug: e.target.value })
+                          }
+                          className="font-mono text-sm"
                         />
-                        <Label htmlFor="track-stock">Track stock quantity for this product</Label>
+
+                        <p className="text-xs text-gray-500 mt-1">
+                          Permalink: /courses/{formData.slug}
+                        </p>
                       </div>
-                      {trackStock && (
-                        <>
-                          <div>
-                            <Label htmlFor="stock-quantity">Stock quantity</Label>
-                            <Input
-                              id="stock-quantity"
-                              type="number"
-                              placeholder="0"
-                              value={formData.stockQuantity}
-                              onChange={(e) => setFormData({...formData, stockQuantity: e.target.value})}
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Long Description */}
+                <Card className="mb-6">
+                  <CardHeader>
+                    <CardTitle>Product Description</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Textarea
+                      placeholder="Describe your product in detail..."
+                      className="min-h-[200px] resize-none"
+                      value={formData.description}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          description: e.target.value,
+                        })
+                      }
+                    />
+                  </CardContent>
+                </Card>
+
+                {/* Product Data Section */}
+                <Card className="mb-6">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between">
+                      <CardTitle>Product Data</CardTitle>
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <Label htmlFor="product-type" className="text-sm">
+                            Product type:
+                          </Label>
+                          <Select
+                            value={productType}
+                            onValueChange={setProductType}
+                          >
+                            <SelectTrigger
+                              id="product-type"
+                              className="w-[180px]"
+                            >
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="simple">
+                                Simple Product
+                              </SelectItem>
+                              <SelectItem value="course">
+                                Course Product
+                              </SelectItem>
+                              <SelectItem value="book">
+                                Physical Book
+                              </SelectItem>
+                              <SelectItem value="event">
+                                Event/Workshop
+                              </SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="flex items-center space-x-2">
+                            <Checkbox
+                              id="virtual"
+                              checked={isVirtual}
+                              onCheckedChange={setIsVirtual}
                             />
+
+                            <Label htmlFor="virtual" className="text-sm">
+                              Virtual
+                            </Label>
                           </div>
-                          <div>
-                            <Label htmlFor="low-stock">Low stock threshold</Label>
-                            <Input
-                              id="low-stock"
-                              type="number"
-                              placeholder="5"
-                              value={formData.lowStockThreshold}
-                              onChange={(e) => setFormData({...formData, lowStockThreshold: e.target.value})}
+                          <div className="flex items-center space-x-2">
+                            <Checkbox
+                              id="downloadable"
+                              checked={isDownloadable}
+                              onCheckedChange={setIsDownloadable}
                             />
-                          </div>
-                          <div>
-                            <Label htmlFor="backorders">Allow backorders?</Label>
-                            <Select>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Do not allow" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="no">Do not allow</SelectItem>
-                                <SelectItem value="notify">Allow, but notify customer</SelectItem>
-                                <SelectItem value="yes">Allow</SelectItem>
-                              </SelectContent>
-                            </Select>
-                          </div>
-                        </>
-                      )}
-                    </TabsContent>
 
-                    {/* Course Details Tab */}
-                    {productType === "course" && (
-                      <TabsContent value="course-details" className="space-y-6">
-                        {/* Basic Course Info */}
-                        <div className="grid grid-cols-2 gap-4">
-                          <div>
-                            <Label htmlFor="course-duration">Course Duration</Label>
-                            <div className="relative">
-                              <Clock className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                              <Input
-                                id="course-duration"
-                                placeholder="2 hours 30 minutes"
-                                value={formData.courseDuration}
-                                onChange={(e) => setFormData({...formData, courseDuration: e.target.value})}
-                                className="pl-8"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <Label>Enrolled Students</Label>
-                            <div className="relative">
-                              <Users className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                              <Input
-                                value={formData.enrolledStudents.toString()}
-                                disabled
-                                className="bg-gray-100 pl-8"
-                              />
-                            </div>
-                            <p className="text-xs text-gray-500 mt-1">This field is automatically updated</p>
+                            <Label htmlFor="downloadable" className="text-sm">
+                              Downloadable
+                            </Label>
                           </div>
                         </div>
-
-                        <div className="grid grid-cols-2 gap-4">
-                          <div>
-                            <Label>Average Rating</Label>
-                            <div className="flex items-center gap-2">
-                              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                              <span className="text-2xl font-bold">{formData.rating}</span>
-                              <span className="text-muted-foreground">({formData.totalReviews} reviews)</span>
-                            </div>
-                          </div>
-                          <div>
-                            <Label>Featured Course</Label>
-                            <div className="flex items-center space-x-2 mt-2">
-                              <Switch
-                                id="featured"
-                                checked={formData.featured}
-                                onCheckedChange={(checked) => setFormData({...formData, featured: checked})}
-                              />
-                              <Label htmlFor="featured">Feature this course on the homepage</Label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Course Highlights */}
-                        <div className="space-y-4">
-                          <div>
-                            <Label className="text-base font-semibold">Course Highlights</Label>
-                            <p className="text-sm text-muted-foreground">Key selling points that will appear on the course landing page</p>
-                          </div>
-                          <div className="space-y-2">
-                            {courseData.highlights.map((highlight, index) => (
-                              <div key={index} className="flex items-center gap-2">
-                                <Input
-                                  placeholder={`Highlight ${index + 1}`}
-                                  value={highlight}
-                                  onChange={(e) => updateItemInArray('highlights', index, e.target.value)}
-                                />
-                                <Button
-                                  type="button"
-                                  variant="outline"
-                                  size="icon"
-                                  onClick={() => removeItemFromArray('highlights', index)}
-                                >
-                                  <Trash className="h-4 w-4" />
-                                </Button>
-                              </div>
-                            ))}
-                            <Button
-                              type="button"
-                              variant="outline"
-                              onClick={() => addItemToArray('highlights', 'New highlight')}
-                              className="w-full"
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <Tabs defaultValue="general" className="w-full">
+                      <div className="grid grid-cols-12 gap-6">
+                        {/* Vertical Tabs */}
+                        <div className="col-span-3">
+                          <TabsList className="grid w-full grid-rows-6 h-auto bg-gray-100">
+                            <TabsTrigger
+                              value="general"
+                              className="justify-start text-left"
                             >
-                              <Plus className="h-4 w-4 mr-2" />
-                              Add Highlight
-                            </Button>
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Learning Outcomes */}
-                        <div className="space-y-4">
-                          <div>
-                            <Label className="text-base font-semibold">Learning Outcomes</Label>
-                            <p className="text-sm text-muted-foreground">What will students learn in this course?</p>
-                          </div>
-                          <div className="space-y-2">
-                            {courseData.learningOutcomes.map((outcome, index) => (
-                              <div key={index} className="flex items-center gap-2">
-                                <Input
-                                  placeholder={`Learning outcome ${index + 1}`}
-                                  value={outcome}
-                                  onChange={(e) => updateItemInArray('learningOutcomes', index, e.target.value)}
-                                />
-                                <Button
-                                  type="button"
-                                  variant="outline"
-                                  size="icon"
-                                  onClick={() => removeItemFromArray('learningOutcomes', index)}
-                                >
-                                  <Trash className="h-4 w-4" />
-                                </Button>
-                              </div>
-                            ))}
-                            <Button
-                              type="button"
-                              variant="outline"
-                              onClick={() => addItemToArray('learningOutcomes', 'New learning outcome')}
-                              className="w-full"
+                              General
+                            </TabsTrigger>
+                            <TabsTrigger
+                              value="inventory"
+                              className="justify-start text-left"
                             >
-                              <Plus className="h-4 w-4 mr-2" />
-                              Add Learning Outcome
-                            </Button>
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Target Audience */}
-                        <div className="space-y-4">
-                          <div>
-                            <Label className="text-base font-semibold">Target Audience</Label>
-                            <p className="text-sm text-muted-foreground">Who is this course designed for?</p>
-                          </div>
-                          <div className="space-y-2">
-                            {courseData.targetAudience.map((audience, index) => (
-                              <div key={index} className="flex items-center gap-2">
-                                <Input
-                                  placeholder={`Target audience ${index + 1}`}
-                                  value={audience}
-                                  onChange={(e) => updateItemInArray('targetAudience', index, e.target.value)}
-                                />
-                                <Button
-                                  type="button"
-                                  variant="outline"
-                                  size="icon"
-                                  onClick={() => removeItemFromArray('targetAudience', index)}
-                                >
-                                  <Trash className="h-4 w-4" />
-                                </Button>
-                              </div>
-                            ))}
-                            <Button
-                              type="button"
-                              variant="outline"
-                              onClick={() => addItemToArray('targetAudience', 'New target audience')}
-                              className="w-full"
+                              Inventory
+                            </TabsTrigger>
+                            <TabsTrigger
+                              value="shipping"
+                              className="justify-start text-left"
+                              disabled={isVirtual}
                             >
-                              <Plus className="h-4 w-4 mr-2" />
-                              Add Target Audience
-                            </Button>
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Instructors Management */}
-                        <div className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <Label className="text-base font-semibold">Course Instructors</Label>
-                              <p className="text-sm text-muted-foreground">Manage the instructors for this course</p>
-                            </div>
-                            <Button variant="outline">
-                              <Plus className="h-4 w-4 mr-2" />
-                              Add Instructor
-                            </Button>
-                          </div>
-                          <div className="space-y-3">
-                            {courseData.instructors.map((instructor, index) => (
-                              <div key={instructor.id} className="flex items-center gap-4 rounded-md border p-3">
-                                <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                                  <Image
-                                    src={instructor.avatar}
-                                    alt={instructor.name}
-                                    width={48}
-                                    height={48}
-                                    className="h-full w-full object-cover"
-                                    onError={(e) => {
-                                      const target = e.target as HTMLImageElement;
-                                      target.src = "/placeholder-user.jpg";
-                                    }}
-                                  />
-                                </div>
-                                <div className="flex-1">
-                                  <h4 className="font-medium">{instructor.name}</h4>
-                                  <p className="text-sm text-muted-foreground">{instructor.title}</p>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                  <Button variant="outline" size="sm">
-                                    <Edit className="h-4 w-4 mr-2" />
-                                    Edit
-                                  </Button>
-                                  <Button variant="outline" size="icon">
-                                    <Trash className="h-4 w-4" />
-                                  </Button>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Course Structure Overview */}
-                        <div className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <Label className="text-base font-semibold">Course Structure Overview</Label>
-                              <p className="text-sm text-muted-foreground">Quick overview of your course modules. Use "Manage Content" for detailed editing.</p>
-                            </div>
-                            <Button variant="outline" asChild>
-                              <Link href={`/admin/courses/${productSlug}/content`}>
-                                <Settings className="h-4 w-4 mr-2" />
-                                Manage Content
-                              </Link>
-                            </Button>
-                          </div>
-                          {courseData.modules.length > 0 ? (
-                            <div className="space-y-3">
-                              {courseData.modules.map((module, index) => (
-                                <div key={module.id} className="flex items-center justify-between rounded-md border p-3">
-                                  <div>
-                                    <p className="font-medium">{index + 1}. {module.title}</p>
-                                    <p className="text-sm text-muted-foreground">
-                                      {module.lessons.length} lessons • {module.duration}
-                                    </p>
-                                  </div>
-                                  <div className="flex items-center gap-2">
-                                    <Button variant="outline" size="sm">
-                                      <Edit className="h-4 w-4 mr-2" />
-                                      Edit
-                                    </Button>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <div className="text-center py-8 text-muted-foreground">
-                              <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                              <p>No modules created yet</p>
-                              <p className="text-sm">Use "Manage Content" to add course modules and lessons</p>
-                            </div>
-                          )}
-                        </div>
-
-                        <Separator />
-
-                        {/* Course Settings */}
-                        <div className="space-y-4">
-                          <div>
-                            <Label className="text-base font-semibold">Course Settings</Label>
-                            <p className="text-sm text-muted-foreground">Configure additional settings for your course</p>
-                          </div>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="flex items-center space-x-2">
-                              <Switch
-                                id="allow-comments"
-                                checked={formData.allowComments}
-                                onCheckedChange={(checked) => setFormData({...formData, allowComments: checked})}
-                              />
-                              <Label htmlFor="allow-comments">Allow student comments</Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Switch
-                                id="allow-downloads"
-                                checked={formData.allowDownloads}
-                                onCheckedChange={(checked) => setFormData({...formData, allowDownloads: checked})}
-                              />
-                              <Label htmlFor="allow-downloads">Allow resource downloads</Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Switch
-                                id="certificate"
-                                checked={formData.certificate}
-                                onCheckedChange={(checked) => setFormData({...formData, certificate: checked})}
-                              />
-                              <Label htmlFor="certificate">Issue completion certificate</Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Switch
-                                id="auto-enroll"
-                                checked={formData.autoEnroll}
-                                onCheckedChange={(checked) => setFormData({...formData, autoEnroll: checked})}
-                              />
-                              <Label htmlFor="auto-enroll">Auto-enroll in related courses</Label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <Separator />
-
-                        {/* Recent Reviews */}
-                        <div className="space-y-4">
-                          <div>
-                            <Label className="text-base font-semibold">Recent Reviews</Label>
-                            <p className="text-sm text-muted-foreground">Latest student feedback and ratings</p>
-                          </div>
-                          <div className="space-y-3">
-                            {courseData.reviews.map((review) => (
-                              <div key={review.id} className="rounded-md border p-4">
-                                <div className="flex items-center gap-3 mb-3">
-                                  <Image
-                                    src={review.avatar}
-                                    alt={review.student}
-                                    width={40}
-                                    height={40}
-                                    className="rounded-full"
-                                    onError={(e) => {
-                                      const target = e.target as HTMLImageElement;
-                                      target.src = "/placeholder-user.jpg";
-                                    }}
-                                  />
-                                  <div className="flex-1">
-                                    <div className="flex items-center gap-2">
-                                      <span className="font-medium">{review.student}</span>
-                                      <div className="flex items-center">
-                                        {Array.from({ length: review.rating }).map((_, i) => (
-                                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                        ))}
-                                      </div>
-                                    </div>
-                                    <p className="text-sm text-muted-foreground">{review.date}</p>
-                                  </div>
-                                  <div className="flex items-center gap-2">
-                                    <Button variant="outline" size="sm">Reply</Button>
-                                    <Button variant="outline" size="icon">
-                                      <Trash className="h-4 w-4" />
-                                    </Button>
-                                  </div>
-                                </div>
-                                <p className="text-sm">{review.comment}</p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </TabsContent>
-                    )}
-
-                    {/* Course Content Management Tab */}
-                    {productType === "course" && (
-                      <TabsContent value="course-content" className="space-y-6">
-                        {/* Course Content Subtabs */}
-                        <Tabs defaultValue="modules" className="w-full">
-                          <TabsList className="grid w-full grid-cols-4">
-                            <TabsTrigger value="modules">Modules & Lessons</TabsTrigger>
-                            <TabsTrigger value="resources">Course Resources</TabsTrigger>
-                            <TabsTrigger value="assignments">Assignments & Quizzes</TabsTrigger>
-                            <TabsTrigger value="content-settings">Content Settings</TabsTrigger>
+                              Shipping
+                            </TabsTrigger>
+                            {productType === "course" && (
+                              <TabsTrigger
+                                value="course-details"
+                                className="justify-start text-left"
+                              >
+                                Course Details
+                              </TabsTrigger>
+                            )}
+                            {productType === "course" && (
+                              <TabsTrigger
+                                value="course-content"
+                                className="justify-start text-left"
+                              >
+                                Course Content
+                              </TabsTrigger>
+                            )}
+                            <TabsTrigger
+                              value="linked"
+                              className="justify-start text-left"
+                            >
+                              Linked Products
+                            </TabsTrigger>
                           </TabsList>
+                        </div>
 
-                          {/* Modules & Lessons */}
-                          <TabsContent value="modules" className="space-y-4 mt-6">
-                            <div className="flex items-center justify-between">
+                        {/* Tab Content */}
+                        <div className="col-span-9">
+                          {/* General Tab */}
+                          <TabsContent value="general" className="space-y-4">
+                            <div className="grid grid-cols-2 gap-4">
                               <div>
-                                <Label className="text-base font-semibold">Course Structure</Label>
-                                <p className="text-sm text-muted-foreground">Manage your course modules and lessons</p>
+                                <Label htmlFor="regular-price">
+                                  Regular price ($)
+                                </Label>
+                                <Input
+                                  id="regular-price"
+                                  placeholder="0.00"
+                                  type="number"
+                                  step="0.01"
+                                  value={formData.regularPrice}
+                                  onChange={(e) =>
+                                    setFormData({
+                                      ...formData,
+                                      regularPrice: e.target.value,
+                                    })
+                                  }
+                                />
                               </div>
-                              <Button className="bg-[#123B79] hover:bg-[#425DA0]">
-                                <Plus className="h-4 w-4 mr-2" />
-                                Add Module
-                              </Button>
-                            </div>
-
-                            <div className="space-y-4">
-                              <div className="text-sm text-muted-foreground">
-                                Modules ({courseData.modules.length})
-                              </div>
-                              
-                              {courseData.modules.map((module, index) => (
-                                <Card key={module.id} className="border-l-4 border-l-blue-600">
-                                  <CardContent className="p-4">
-                                    <div className="flex items-center justify-between mb-3">
-                                      <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-medium text-blue-600">
-                                          {index + 1}
-                                        </div>
-                                        <div>
-                                          <h4 className="font-medium">{module.title}</h4>
-                                          <p className="text-sm text-muted-foreground">{module.lessons.length} lessons • {module.duration}</p>
-                                        </div>
-                                      </div>
-                                      <div className="flex items-center gap-2">
-                                        <Badge variant="secondary">Published</Badge>
-                                        <Button variant="outline" size="sm">
-                                          <Edit className="h-4 w-4 mr-2" />
-                                          Edit
-                                        </Button>
-                                        <Button variant="outline" size="icon">
-                                          <Trash className="h-4 w-4" />
-                                        </Button>
-                                      </div>
-                                    </div>
-                                    
-                                    <div className="space-y-2">
-                                      {module.lessons.map((lesson, lessonIndex) => (
-                                        <div key={lesson.id} className="flex items-center justify-between p-2 bg-gray-50 rounded">
-                                          <div className="flex items-center gap-2">
-                                            <div className="w-6 h-6 bg-gray-200 rounded text-xs flex items-center justify-center">
-                                              {lessonIndex + 1}
-                                            </div>
-                                            <span className="text-sm">{lesson.title}</span>
-                                            <Badge variant="outline" className="text-xs">
-                                              {lesson.type}
-                                            </Badge>
-                                          </div>
-                                          <div className="flex items-center gap-2">
-                                            <span className="text-xs text-muted-foreground">{lesson.duration}</span>
-                                            <Button variant="ghost" size="icon" className="h-6 w-6">
-                                              <Edit className="h-3 w-3" />
-                                            </Button>
-                                          </div>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </CardContent>
-                                </Card>
-                              ))}
-
-                              {courseData.modules.length === 0 && (
-                                <div className="text-center py-8 border-2 border-dashed border-gray-300 rounded-lg">
-                                  <FileText className="h-12 w-12 mx-auto mb-4 text-gray-400" />
-                                  <p className="text-gray-600 mb-2">No modules created yet</p>
-                                  <p className="text-sm text-gray-500">Add your first module to get started</p>
-                                </div>
-                              )}
-                            </div>
-                          </TabsContent>
-
-                          {/* Course Resources */}
-                          <TabsContent value="resources" className="space-y-4 mt-6">
-                            <div className="flex items-center justify-between">
                               <div>
-                                <Label className="text-base font-semibold">Course Resources</Label>
-                                <p className="text-sm text-muted-foreground">Manage downloadable resources, templates, and supplementary materials</p>
+                                <Label htmlFor="sale-price">
+                                  Sale price ($)
+                                </Label>
+                                <Input
+                                  id="sale-price"
+                                  placeholder="0.00"
+                                  type="number"
+                                  step="0.01"
+                                  value={formData.salePrice}
+                                  onChange={(e) =>
+                                    setFormData({
+                                      ...formData,
+                                      salePrice: e.target.value,
+                                    })
+                                  }
+                                />
                               </div>
-                              <Button className="bg-[#123B79] hover:bg-[#425DA0]">
-                                <Upload className="h-4 w-4 mr-2" />
-                                Upload Resource
-                              </Button>
                             </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                              {/* Sample resources */}
-                              <Card>
-                                <CardContent className="p-4">
-                                  <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center">
-                                      <FileText className="h-5 w-5 text-red-600" />
-                                    </div>
-                                    <div className="flex-1">
-                                      <h4 className="font-medium text-sm">Course Handbook.pdf</h4>
-                                      <p className="text-xs text-muted-foreground">2.4 MB • PDF</p>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Download className="h-3 w-3" />
-                                      </Button>
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Trash className="h-3 w-3" />
-                                      </Button>
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
-
-                              <Card>
-                                <CardContent className="p-4">
-                                  <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 bg-green-100 rounded flex items-center justify-center">
-                                      <FileText className="h-5 w-5 text-green-600" />
-                                    </div>
-                                    <div className="flex-1">
-                                      <h4 className="font-medium text-sm">Investment Calculator.xlsx</h4>
-                                      <p className="text-xs text-muted-foreground">156 KB • Excel</p>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Download className="h-3 w-3" />
-                                      </Button>
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Trash className="h-3 w-3" />
-                                      </Button>
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
-
-                              <Card>
-                                <CardContent className="p-4">
-                                  <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 bg-purple-100 rounded flex items-center justify-center">
-                                      <ImageIcon className="h-5 w-5 text-purple-600" />
-                                    </div>
-                                    <div className="flex-1">
-                                      <h4 className="font-medium text-sm">Market Charts.png</h4>
-                                      <p className="text-xs text-muted-foreground">892 KB • Image</p>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Download className="h-3 w-3" />
-                                      </Button>
-                                      <Button variant="ghost" size="icon" className="h-6 w-6">
-                                        <Trash className="h-3 w-3" />
-                                      </Button>
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
+                            <div className="flex items-center gap-2 text-sm text-blue-600">
+                              <CalendarIcon className="h-4 w-4" />
+                              <span>Schedule sale dates</span>
                             </div>
-                          </TabsContent>
-
-                          {/* Assignments & Quizzes */}
-                          <TabsContent value="assignments" className="space-y-4 mt-6">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <Label className="text-base font-semibold">Assignments & Quizzes</Label>
-                                <p className="text-sm text-muted-foreground">Create and manage assignments, quizzes, and assessments</p>
-                              </div>
-                              <Button className="bg-[#123B79] hover:bg-[#425DA0]">
-                                <Plus className="h-4 w-4 mr-2" />
-                                Create Assignment
-                              </Button>
-                            </div>
-
-                            <div className="space-y-3">
-                              <Card>
-                                <CardContent className="p-4">
-                                  <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                      <div className="w-10 h-10 bg-blue-100 rounded flex items-center justify-center">
-                                        <FileText className="h-5 w-5 text-blue-600" />
-                                      </div>
-                                      <div>
-                                        <h4 className="font-medium">Module 1 Quiz</h4>
-                                        <p className="text-sm text-muted-foreground">5 questions • 10 minutes</p>
-                                      </div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                      <Badge className="bg-green-600">Published</Badge>
-                                      <Button variant="outline" size="sm">
-                                        <Edit className="h-4 w-4 mr-2" />
-                                        Edit
-                                      </Button>
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
-
-                              <Card>
-                                <CardContent className="p-4">
-                                  <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                      <div className="w-10 h-10 bg-orange-100 rounded flex items-center justify-center">
-                                        <FileText className="h-5 w-5 text-orange-600" />
-                                      </div>
-                                      <div>
-                                        <h4 className="font-medium">Property Analysis Assignment</h4>
-                                        <p className="text-sm text-muted-foreground">Written assignment • Due in 1 week</p>
-                                      </div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                      <Badge variant="secondary">Draft</Badge>
-                                      <Button variant="outline" size="sm">
-                                        <Edit className="h-4 w-4 mr-2" />
-                                        Edit
-                                      </Button>
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            </div>
-                          </TabsContent>
-
-                          {/* Content Settings */}
-                          <TabsContent value="content-settings" className="space-y-6 mt-6">
                             <div>
-                              <Label className="text-base font-semibold">Content Settings</Label>
-                              <p className="text-sm text-muted-foreground">Configure how content is delivered and accessed</p>
+                              <Label htmlFor="tax-status">Tax status</Label>
+                              <Select>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Taxable" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="taxable">
+                                    Taxable
+                                  </SelectItem>
+                                  <SelectItem value="shipping">
+                                    Shipping only
+                                  </SelectItem>
+                                  <SelectItem value="none">None</SelectItem>
+                                </SelectContent>
+                              </Select>
                             </div>
+                          </TabsContent>
 
-                            <div className="space-y-6">
-                              <div className="space-y-4">
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="drip-content">Enable drip content (release lessons over time)</Label>
-                                    <p className="text-sm text-muted-foreground">Control when students can access lessons</p>
-                                  </div>
-                                  <Switch
-                                    id="drip-content"
-                                    checked={false}
+                          {/* Inventory Tab */}
+                          <TabsContent value="inventory" className="space-y-4">
+                            <div>
+                              <Label htmlFor="sku">SKU</Label>
+                              <Input
+                                id="sku"
+                                placeholder="e.g. COURSE-001"
+                                value={formData.sku}
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    sku: e.target.value,
+                                  })
+                                }
+                              />
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <Checkbox
+                                id="track-stock"
+                                checked={trackStock}
+                                onCheckedChange={setTrackStock}
+                              />
+
+                              <Label htmlFor="track-stock">
+                                Track stock quantity for this product
+                              </Label>
+                            </div>
+                            {trackStock && (
+                              <>
+                                <div>
+                                  <Label htmlFor="stock-quantity">
+                                    Stock quantity
+                                  </Label>
+                                  <Input
+                                    id="stock-quantity"
+                                    type="number"
+                                    placeholder="0"
+                                    value={formData.stockQuantity}
+                                    onChange={(e) =>
+                                      setFormData({
+                                        ...formData,
+                                        stockQuantity: e.target.value,
+                                      })
+                                    }
                                   />
                                 </div>
-
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="sequential">Require sequential lesson completion</Label>
-                                    <p className="text-sm text-muted-foreground">Students must complete lessons in order</p>
-                                  </div>
-                                  <Switch
-                                    id="sequential"
-                                    checked={true}
+                                <div>
+                                  <Label htmlFor="low-stock">
+                                    Low stock threshold
+                                  </Label>
+                                  <Input
+                                    id="low-stock"
+                                    type="number"
+                                    placeholder="5"
+                                    value={formData.lowStockThreshold}
+                                    onChange={(e) =>
+                                      setFormData({
+                                        ...formData,
+                                        lowStockThreshold: e.target.value,
+                                      })
+                                    }
                                   />
                                 </div>
-
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="downloads">Allow students to download resources</Label>
-                                    <p className="text-sm text-muted-foreground">Enable resource downloads for students</p>
-                                  </div>
-                                  <Switch
-                                    id="downloads"
-                                    checked={true}
-                                  />
+                                <div>
+                                  <Label htmlFor="backorders">
+                                    Allow backorders?
+                                  </Label>
+                                  <Select>
+                                    <SelectTrigger>
+                                      <SelectValue placeholder="Do not allow" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                      <SelectItem value="no">
+                                        Do not allow
+                                      </SelectItem>
+                                      <SelectItem value="notify">
+                                        Allow, but notify customer
+                                      </SelectItem>
+                                      <SelectItem value="yes">Allow</SelectItem>
+                                    </SelectContent>
+                                  </Select>
                                 </div>
+                              </>
+                            )}
+                          </TabsContent>
 
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="video-downloads">Allow video downloads</Label>
-                                    <p className="text-sm text-muted-foreground">Let students download video content</p>
+                          {/* Course Details Tab */}
+                          {productType === "course" && (
+                            <TabsContent
+                              value="course-details"
+                              className="space-y-6"
+                            >
+                              {/* Basic Course Info */}
+                              <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                  <Label htmlFor="course-duration">
+                                    Course Duration
+                                  </Label>
+                                  <div className="relative">
+                                    <Clock className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                                    <Input
+                                      id="course-duration"
+                                      placeholder="2 hours 30 minutes"
+                                      value={formData.courseDuration}
+                                      onChange={(e) =>
+                                        setFormData({
+                                          ...formData,
+                                          courseDuration: e.target.value,
+                                        })
+                                      }
+                                      className="pl-8"
+                                    />
                                   </div>
-                                  <Switch
-                                    id="video-downloads"
-                                    checked={false}
-                                  />
                                 </div>
-
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="playback-controls">Enable video playback speed controls</Label>
-                                    <p className="text-sm text-muted-foreground">Allow students to adjust video speed</p>
+                                <div>
+                                  <Label>Enrolled Students</Label>
+                                  <div className="relative">
+                                    <Users className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                                    <Input
+                                      value={formData.enrolledStudents.toString()}
+                                      disabled
+                                      className="bg-gray-100 pl-8"
+                                    />
                                   </div>
-                                  <Switch
-                                    id="playback-controls"
-                                    checked={true}
-                                  />
+                                  <p className="text-xs text-gray-500 mt-1">
+                                    This field is automatically updated
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                  <Label>Average Rating</Label>
+                                  <div className="flex items-center gap-2">
+                                    <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                                    <span className="text-2xl font-bold">
+                                      {formData.rating}
+                                    </span>
+                                    <span className="text-muted-foreground">
+                                      ({formData.totalReviews} reviews)
+                                    </span>
+                                  </div>
+                                </div>
+                                <div>
+                                  <Label>Featured Course</Label>
+                                  <div className="flex items-center space-x-2 mt-2">
+                                    <Switch
+                                      id="featured"
+                                      checked={formData.featured}
+                                      onCheckedChange={(checked) =>
+                                        setFormData({
+                                          ...formData,
+                                          featured: checked,
+                                        })
+                                      }
+                                    />
+
+                                    <Label htmlFor="featured">
+                                      Feature this course on the homepage
+                                    </Label>
+                                  </div>
                                 </div>
                               </div>
 
                               <Separator />
 
+                              {/* Course Highlights */}
                               <div className="space-y-4">
-                                <Label className="text-base font-semibold">Content Protection</Label>
-                                
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="watermark">Add watermark to videos</Label>
-                                    <p className="text-sm text-muted-foreground">Protect video content with watermarks</p>
-                                  </div>
-                                  <Switch
-                                    id="watermark"
-                                    checked={false}
-                                  />
+                                <div>
+                                  <Label className="text-base font-semibold">
+                                    Course Highlights
+                                  </Label>
+                                  <p className="text-sm text-muted-foreground">
+                                    Key selling points that will appear on the
+                                    course landing page
+                                  </p>
                                 </div>
+                                <div className="space-y-2">
+                                  {courseData.highlights.map(
+                                    (highlight, index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center gap-2"
+                                      >
+                                        <Input
+                                          placeholder={`Highlight ${index + 1}`}
+                                          value={highlight}
+                                          onChange={(e) =>
+                                            updateItemInArray(
+                                              "highlights",
+                                              index,
+                                              e.target.value,
+                                            )
+                                          }
+                                        />
 
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="right-click">Disable right-click on content</Label>
-                                    <p className="text-sm text-muted-foreground">Prevent right-click context menu</p>
-                                  </div>
-                                  <Switch
-                                    id="right-click"
-                                    checked={false}
-                                  />
-                                </div>
-
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <Label htmlFor="screenshot">Enable screenshot protection</Label>
-                                    <p className="text-sm text-muted-foreground">Attempt to prevent screenshots</p>
-                                  </div>
-                                  <Switch
-                                    id="screenshot"
-                                    checked={false}
-                                  />
+                                        <Button
+                                          type="button"
+                                          variant="outline"
+                                          size="icon"
+                                          onClick={() =>
+                                            removeItemFromArray(
+                                              "highlights",
+                                              index,
+                                            )
+                                          }
+                                        >
+                                          <Trash className="h-4 w-4" />
+                                        </Button>
+                                      </div>
+                                    ),
+                                  )}
+                                  <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={() =>
+                                      addItemToArray(
+                                        "highlights",
+                                        "New highlight",
+                                      )
+                                    }
+                                    className="w-full"
+                                  >
+                                    <Plus className="h-4 w-4 mr-2" />
+                                    Add Highlight
+                                  </Button>
                                 </div>
                               </div>
+
+                              <Separator />
+
+                              {/* Learning Outcomes */}
+                              <div className="space-y-4">
+                                <div>
+                                  <Label className="text-base font-semibold">
+                                    Learning Outcomes
+                                  </Label>
+                                  <p className="text-sm text-muted-foreground">
+                                    What will students learn in this course?
+                                  </p>
+                                </div>
+                                <div className="space-y-2">
+                                  {courseData.learningOutcomes.map(
+                                    (outcome, index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center gap-2"
+                                      >
+                                        <Input
+                                          placeholder={`Learning outcome ${index + 1}`}
+                                          value={outcome}
+                                          onChange={(e) =>
+                                            updateItemInArray(
+                                              "learningOutcomes",
+                                              index,
+                                              e.target.value,
+                                            )
+                                          }
+                                        />
+
+                                        <Button
+                                          type="button"
+                                          variant="outline"
+                                          size="icon"
+                                          onClick={() =>
+                                            removeItemFromArray(
+                                              "learningOutcomes",
+                                              index,
+                                            )
+                                          }
+                                        >
+                                          <Trash className="h-4 w-4" />
+                                        </Button>
+                                      </div>
+                                    ),
+                                  )}
+                                  <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={() =>
+                                      addItemToArray(
+                                        "learningOutcomes",
+                                        "New learning outcome",
+                                      )
+                                    }
+                                    className="w-full"
+                                  >
+                                    <Plus className="h-4 w-4 mr-2" />
+                                    Add Learning Outcome
+                                  </Button>
+                                </div>
+                              </div>
+
+                              <Separator />
+
+                              {/* Target Audience */}
+                              <div className="space-y-4">
+                                <div>
+                                  <Label className="text-base font-semibold">
+                                    Target Audience
+                                  </Label>
+                                  <p className="text-sm text-muted-foreground">
+                                    Who is this course designed for?
+                                  </p>
+                                </div>
+                                <div className="space-y-2">
+                                  {courseData.targetAudience.map(
+                                    (audience, index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center gap-2"
+                                      >
+                                        <Input
+                                          placeholder={`Target audience ${index + 1}`}
+                                          value={audience}
+                                          onChange={(e) =>
+                                            updateItemInArray(
+                                              "targetAudience",
+                                              index,
+                                              e.target.value,
+                                            )
+                                          }
+                                        />
+
+                                        <Button
+                                          type="button"
+                                          variant="outline"
+                                          size="icon"
+                                          onClick={() =>
+                                            removeItemFromArray(
+                                              "targetAudience",
+                                              index,
+                                            )
+                                          }
+                                        >
+                                          <Trash className="h-4 w-4" />
+                                        </Button>
+                                      </div>
+                                    ),
+                                  )}
+                                  <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={() =>
+                                      addItemToArray(
+                                        "targetAudience",
+                                        "New target audience",
+                                      )
+                                    }
+                                    className="w-full"
+                                  >
+                                    <Plus className="h-4 w-4 mr-2" />
+                                    Add Target Audience
+                                  </Button>
+                                </div>
+                              </div>
+
+                              <Separator />
+
+                              {/* Instructors Management */}
+                              <div className="space-y-4">
+                                <div className="flex items-center justify-between">
+                                  <div>
+                                    <Label className="text-base font-semibold">
+                                      Course Instructors
+                                    </Label>
+                                    <p className="text-sm text-muted-foreground">
+                                      Manage the instructors for this course
+                                    </p>
+                                  </div>
+                                  <Button variant="outline">
+                                    <Plus className="h-4 w-4 mr-2" />
+                                    Add Instructor
+                                  </Button>
+                                </div>
+                                <div className="space-y-3">
+                                  {courseData.instructors.map(
+                                    (instructor, index) => (
+                                      <div
+                                        key={instructor.id}
+                                        className="flex items-center gap-4 rounded-md border p-3"
+                                      >
+                                        <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                                          <Image
+                                            src={instructor.avatar}
+                                            alt={instructor.name}
+                                            width={48}
+                                            height={48}
+                                            className="h-full w-full object-cover"
+                                            onError={(e) => {
+                                              const target =
+                                                e.target as HTMLImageElement;
+                                              target.src =
+                                                "/placeholder-user.jpg";
+                                            }}
+                                          />
+                                        </div>
+                                        <div className="flex-1">
+                                          <h4 className="font-medium">
+                                            {instructor.name}
+                                          </h4>
+                                          <p className="text-sm text-muted-foreground">
+                                            {instructor.title}
+                                          </p>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                          <Button variant="outline" size="sm">
+                                            <Edit className="h-4 w-4 mr-2" />
+                                            Edit
+                                          </Button>
+                                          <Button variant="outline" size="icon">
+                                            <Trash className="h-4 w-4" />
+                                          </Button>
+                                        </div>
+                                      </div>
+                                    ),
+                                  )}
+                                </div>
+                              </div>
+
+                              <Separator />
+
+                              {/* Course Structure Overview */}
+                              <div className="space-y-4">
+                                <div className="flex items-center justify-between">
+                                  <div>
+                                    <Label className="text-base font-semibold">
+                                      Course Structure Overview
+                                    </Label>
+                                    <p className="text-sm text-muted-foreground">
+                                      Quick overview of your course modules. Use
+                                      "Manage Content" for detailed editing.
+                                    </p>
+                                  </div>
+                                  <Button variant="outline" asChild>
+                                    <Link
+                                      href={`/admin/courses/${productSlug}/content`}
+                                    >
+                                      <Settings className="h-4 w-4 mr-2" />
+                                      Manage Content
+                                    </Link>
+                                  </Button>
+                                </div>
+                                {courseData.modules.length > 0 ? (
+                                  <div className="space-y-3">
+                                    {courseData.modules.map((module, index) => (
+                                      <div
+                                        key={module.id}
+                                        className="flex items-center justify-between rounded-md border p-3"
+                                      >
+                                        <div>
+                                          <p className="font-medium">
+                                            {index + 1}. {module.title}
+                                          </p>
+                                          <p className="text-sm text-muted-foreground">
+                                            {module.lessons.length} lessons •{" "}
+                                            {module.duration}
+                                          </p>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                          <Button variant="outline" size="sm">
+                                            <Edit className="h-4 w-4 mr-2" />
+                                            Edit
+                                          </Button>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <div className="text-center py-8 text-muted-foreground">
+                                    <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                                    <p>No modules created yet</p>
+                                    <p className="text-sm">
+                                      Use "Manage Content" to add course modules
+                                      and lessons
+                                    </p>
+                                  </div>
+                                )}
+                              </div>
+
+                              <Separator />
+
+                              {/* Course Settings */}
+                              <div className="space-y-4">
+                                <div>
+                                  <Label className="text-base font-semibold">
+                                    Course Settings
+                                  </Label>
+                                  <p className="text-sm text-muted-foreground">
+                                    Configure additional settings for your
+                                    course
+                                  </p>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                  <div className="flex items-center space-x-2">
+                                    <Switch
+                                      id="allow-comments"
+                                      checked={formData.allowComments}
+                                      onCheckedChange={(checked) =>
+                                        setFormData({
+                                          ...formData,
+                                          allowComments: checked,
+                                        })
+                                      }
+                                    />
+
+                                    <Label htmlFor="allow-comments">
+                                      Allow student comments
+                                    </Label>
+                                  </div>
+                                  <div className="flex items-center space-x-2">
+                                    <Switch
+                                      id="allow-downloads"
+                                      checked={formData.allowDownloads}
+                                      onCheckedChange={(checked) =>
+                                        setFormData({
+                                          ...formData,
+                                          allowDownloads: checked,
+                                        })
+                                      }
+                                    />
+
+                                    <Label htmlFor="allow-downloads">
+                                      Allow resource downloads
+                                    </Label>
+                                  </div>
+                                  <div className="flex items-center space-x-2">
+                                    <Switch
+                                      id="certificate"
+                                      checked={formData.certificate}
+                                      onCheckedChange={(checked) =>
+                                        setFormData({
+                                          ...formData,
+                                          certificate: checked,
+                                        })
+                                      }
+                                    />
+
+                                    <Label htmlFor="certificate">
+                                      Issue completion certificate
+                                    </Label>
+                                  </div>
+                                  <div className="flex items-center space-x-2">
+                                    <Switch
+                                      id="auto-enroll"
+                                      checked={formData.autoEnroll}
+                                      onCheckedChange={(checked) =>
+                                        setFormData({
+                                          ...formData,
+                                          autoEnroll: checked,
+                                        })
+                                      }
+                                    />
+
+                                    <Label htmlFor="auto-enroll">
+                                      Auto-enroll in related courses
+                                    </Label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <Separator />
+
+                              {/* Recent Reviews */}
+                              <div className="space-y-4">
+                                <div>
+                                  <Label className="text-base font-semibold">
+                                    Recent Reviews
+                                  </Label>
+                                  <p className="text-sm text-muted-foreground">
+                                    Latest student feedback and ratings
+                                  </p>
+                                </div>
+                                <div className="space-y-3">
+                                  {courseData.reviews.map((review) => (
+                                    <div
+                                      key={review.id}
+                                      className="rounded-md border p-4"
+                                    >
+                                      <div className="flex items-center gap-3 mb-3">
+                                        <Image
+                                          src={review.avatar}
+                                          alt={review.student}
+                                          width={40}
+                                          height={40}
+                                          className="rounded-full"
+                                          onError={(e) => {
+                                            const target =
+                                              e.target as HTMLImageElement;
+                                            target.src =
+                                              "/placeholder-user.jpg";
+                                          }}
+                                        />
+
+                                        <div className="flex-1">
+                                          <div className="flex items-center gap-2">
+                                            <span className="font-medium">
+                                              {review.student}
+                                            </span>
+                                            <div className="flex items-center">
+                                              {Array.from({
+                                                length: review.rating,
+                                              }).map((_, i) => (
+                                                <Star
+                                                  key={i}
+                                                  className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                                                />
+                                              ))}
+                                            </div>
+                                          </div>
+                                          <p className="text-sm text-muted-foreground">
+                                            {review.date}
+                                          </p>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                          <Button variant="outline" size="sm">
+                                            Reply
+                                          </Button>
+                                          <Button variant="outline" size="icon">
+                                            <Trash className="h-4 w-4" />
+                                          </Button>
+                                        </div>
+                                      </div>
+                                      <p className="text-sm">
+                                        {review.comment}
+                                      </p>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </TabsContent>
+                          )}
+
+                          {/* Course Content Management Tab */}
+                          {productType === "course" && (
+                            <TabsContent
+                              value="course-content"
+                              className="space-y-6"
+                            >
+                              {/* Course Content Subtabs */}
+                              <Tabs defaultValue="modules" className="w-full">
+                                <TabsList className="grid w-full grid-cols-4">
+                                  <TabsTrigger value="modules">
+                                    Modules & Lessons
+                                  </TabsTrigger>
+                                  <TabsTrigger value="resources">
+                                    Course Resources
+                                  </TabsTrigger>
+                                  <TabsTrigger value="assignments">
+                                    Assignments & Quizzes
+                                  </TabsTrigger>
+                                  <TabsTrigger value="content-settings">
+                                    Content Settings
+                                  </TabsTrigger>
+                                </TabsList>
+
+                                {/* Modules & Lessons */}
+                                <TabsContent
+                                  value="modules"
+                                  className="space-y-4 mt-6"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <div>
+                                      <Label className="text-base font-semibold">
+                                        Course Structure
+                                      </Label>
+                                      <p className="text-sm text-muted-foreground">
+                                        Manage your course modules and lessons
+                                      </p>
+                                    </div>
+                                    <Button className="bg-[#123B79] hover:bg-[#425DA0]">
+                                      <Plus className="h-4 w-4 mr-2" />
+                                      Add Module
+                                    </Button>
+                                  </div>
+
+                                  <div className="space-y-4">
+                                    <div className="text-sm text-muted-foreground">
+                                      Modules ({courseData.modules.length})
+                                    </div>
+
+                                    {courseData.modules.map((module, index) => (
+                                      <Card
+                                        key={module.id}
+                                        className="border-l-4 border-l-blue-600"
+                                      >
+                                        <CardContent className="p-4">
+                                          <div className="flex items-center justify-between mb-3">
+                                            <div className="flex items-center gap-3">
+                                              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-medium text-blue-600">
+                                                {index + 1}
+                                              </div>
+                                              <div>
+                                                <h4 className="font-medium">
+                                                  {module.title}
+                                                </h4>
+                                                <p className="text-sm text-muted-foreground">
+                                                  {module.lessons.length}{" "}
+                                                  lessons • {module.duration}
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                              <Badge variant="secondary">
+                                                Published
+                                              </Badge>
+                                              <Button
+                                                variant="outline"
+                                                size="sm"
+                                              >
+                                                <Edit className="h-4 w-4 mr-2" />
+                                                Edit
+                                              </Button>
+                                              <Button
+                                                variant="outline"
+                                                size="icon"
+                                              >
+                                                <Trash className="h-4 w-4" />
+                                              </Button>
+                                            </div>
+                                          </div>
+
+                                          <div className="space-y-2">
+                                            {module.lessons.map(
+                                              (lesson, lessonIndex) => (
+                                                <div
+                                                  key={lesson.id}
+                                                  className="flex items-center justify-between p-2 bg-gray-50 rounded"
+                                                >
+                                                  <div className="flex items-center gap-2">
+                                                    <div className="w-6 h-6 bg-gray-200 rounded text-xs flex items-center justify-center">
+                                                      {lessonIndex + 1}
+                                                    </div>
+                                                    <span className="text-sm">
+                                                      {lesson.title}
+                                                    </span>
+                                                    <Badge
+                                                      variant="outline"
+                                                      className="text-xs"
+                                                    >
+                                                      {lesson.type}
+                                                    </Badge>
+                                                  </div>
+                                                  <div className="flex items-center gap-2">
+                                                    <span className="text-xs text-muted-foreground">
+                                                      {lesson.duration}
+                                                    </span>
+                                                    <Button
+                                                      variant="ghost"
+                                                      size="icon"
+                                                      className="h-6 w-6"
+                                                    >
+                                                      <Edit className="h-3 w-3" />
+                                                    </Button>
+                                                  </div>
+                                                </div>
+                                              ),
+                                            )}
+                                          </div>
+                                        </CardContent>
+                                      </Card>
+                                    ))}
+
+                                    {courseData.modules.length === 0 && (
+                                      <div className="text-center py-8 border-2 border-dashed border-gray-300 rounded-lg">
+                                        <FileText className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+                                        <p className="text-gray-600 mb-2">
+                                          No modules created yet
+                                        </p>
+                                        <p className="text-sm text-gray-500">
+                                          Add your first module to get started
+                                        </p>
+                                      </div>
+                                    )}
+                                  </div>
+                                </TabsContent>
+
+                                {/* Course Resources */}
+                                <TabsContent
+                                  value="resources"
+                                  className="space-y-4 mt-6"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <div>
+                                      <Label className="text-base font-semibold">
+                                        Course Resources
+                                      </Label>
+                                      <p className="text-sm text-muted-foreground">
+                                        Manage downloadable resources,
+                                        templates, and supplementary materials
+                                      </p>
+                                    </div>
+                                    <Button className="bg-[#123B79] hover:bg-[#425DA0]">
+                                      <Upload className="h-4 w-4 mr-2" />
+                                      Upload Resource
+                                    </Button>
+                                  </div>
+
+                                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    {/* Sample resources */}
+                                    <Card>
+                                      <CardContent className="p-4">
+                                        <div className="flex items-start gap-3">
+                                          <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center">
+                                            <FileText className="h-5 w-5 text-red-600" />
+                                          </div>
+                                          <div className="flex-1">
+                                            <h4 className="font-medium text-sm">
+                                              Course Handbook.pdf
+                                            </h4>
+                                            <p className="text-xs text-muted-foreground">
+                                              2.4 MB • PDF
+                                            </p>
+                                          </div>
+                                          <div className="flex items-center gap-1">
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Download className="h-3 w-3" />
+                                            </Button>
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Trash className="h-3 w-3" />
+                                            </Button>
+                                          </div>
+                                        </div>
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card>
+                                      <CardContent className="p-4">
+                                        <div className="flex items-start gap-3">
+                                          <div className="w-10 h-10 bg-green-100 rounded flex items-center justify-center">
+                                            <FileText className="h-5 w-5 text-green-600" />
+                                          </div>
+                                          <div className="flex-1">
+                                            <h4 className="font-medium text-sm">
+                                              Investment Calculator.xlsx
+                                            </h4>
+                                            <p className="text-xs text-muted-foreground">
+                                              156 KB • Excel
+                                            </p>
+                                          </div>
+                                          <div className="flex items-center gap-1">
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Download className="h-3 w-3" />
+                                            </Button>
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Trash className="h-3 w-3" />
+                                            </Button>
+                                          </div>
+                                        </div>
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card>
+                                      <CardContent className="p-4">
+                                        <div className="flex items-start gap-3">
+                                          <div className="w-10 h-10 bg-purple-100 rounded flex items-center justify-center">
+                                            <ImageIcon className="h-5 w-5 text-purple-600" />
+                                          </div>
+                                          <div className="flex-1">
+                                            <h4 className="font-medium text-sm">
+                                              Market Charts.png
+                                            </h4>
+                                            <p className="text-xs text-muted-foreground">
+                                              892 KB • Image
+                                            </p>
+                                          </div>
+                                          <div className="flex items-center gap-1">
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Download className="h-3 w-3" />
+                                            </Button>
+                                            <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-6 w-6"
+                                            >
+                                              <Trash className="h-3 w-3" />
+                                            </Button>
+                                          </div>
+                                        </div>
+                                      </CardContent>
+                                    </Card>
+                                  </div>
+                                </TabsContent>
+
+                                {/* Assignments & Quizzes */}
+                                <TabsContent
+                                  value="assignments"
+                                  className="space-y-4 mt-6"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <div>
+                                      <Label className="text-base font-semibold">
+                                        Assignments & Quizzes
+                                      </Label>
+                                      <p className="text-sm text-muted-foreground">
+                                        Create and manage assignments, quizzes,
+                                        and assessments
+                                      </p>
+                                    </div>
+                                    <Button className="bg-[#123B79] hover:bg-[#425DA0]">
+                                      <Plus className="h-4 w-4 mr-2" />
+                                      Create Assignment
+                                    </Button>
+                                  </div>
+
+                                  <div className="space-y-3">
+                                    <Card>
+                                      <CardContent className="p-4">
+                                        <div className="flex items-center justify-between">
+                                          <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-blue-100 rounded flex items-center justify-center">
+                                              <FileText className="h-5 w-5 text-blue-600" />
+                                            </div>
+                                            <div>
+                                              <h4 className="font-medium">
+                                                Module 1 Quiz
+                                              </h4>
+                                              <p className="text-sm text-muted-foreground">
+                                                5 questions • 10 minutes
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="flex items-center gap-2">
+                                            <Badge className="bg-green-600">
+                                              Published
+                                            </Badge>
+                                            <Button variant="outline" size="sm">
+                                              <Edit className="h-4 w-4 mr-2" />
+                                              Edit
+                                            </Button>
+                                          </div>
+                                        </div>
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card>
+                                      <CardContent className="p-4">
+                                        <div className="flex items-center justify-between">
+                                          <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-orange-100 rounded flex items-center justify-center">
+                                              <FileText className="h-5 w-5 text-orange-600" />
+                                            </div>
+                                            <div>
+                                              <h4 className="font-medium">
+                                                Property Analysis Assignment
+                                              </h4>
+                                              <p className="text-sm text-muted-foreground">
+                                                Written assignment • Due in 1
+                                                week
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="flex items-center gap-2">
+                                            <Badge variant="secondary">
+                                              Draft
+                                            </Badge>
+                                            <Button variant="outline" size="sm">
+                                              <Edit className="h-4 w-4 mr-2" />
+                                              Edit
+                                            </Button>
+                                          </div>
+                                        </div>
+                                      </CardContent>
+                                    </Card>
+                                  </div>
+                                </TabsContent>
+
+                                {/* Content Settings */}
+                                <TabsContent
+                                  value="content-settings"
+                                  className="space-y-6 mt-6"
+                                >
+                                  <div>
+                                    <Label className="text-base font-semibold">
+                                      Content Settings
+                                    </Label>
+                                    <p className="text-sm text-muted-foreground">
+                                      Configure how content is delivered and
+                                      accessed
+                                    </p>
+                                  </div>
+
+                                  <div className="space-y-6">
+                                    <div className="space-y-4">
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="drip-content">
+                                            Enable drip content (release lessons
+                                            over time)
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Control when students can access
+                                            lessons
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="drip-content"
+                                          checked={false}
+                                        />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="sequential">
+                                            Require sequential lesson completion
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Students must complete lessons in
+                                            order
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="sequential"
+                                          checked={true}
+                                        />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="downloads">
+                                            Allow students to download resources
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Enable resource downloads for
+                                            students
+                                          </p>
+                                        </div>
+                                        <Switch id="downloads" checked={true} />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="video-downloads">
+                                            Allow video downloads
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Let students download video content
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="video-downloads"
+                                          checked={false}
+                                        />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="playback-controls">
+                                            Enable video playback speed controls
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Allow students to adjust video speed
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="playback-controls"
+                                          checked={true}
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <Separator />
+
+                                    <div className="space-y-4">
+                                      <Label className="text-base font-semibold">
+                                        Content Protection
+                                      </Label>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="watermark">
+                                            Add watermark to videos
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Protect video content with
+                                            watermarks
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="watermark"
+                                          checked={false}
+                                        />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="right-click">
+                                            Disable right-click on content
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Prevent right-click context menu
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="right-click"
+                                          checked={false}
+                                        />
+                                      </div>
+
+                                      <div className="flex items-center justify-between">
+                                        <div>
+                                          <Label htmlFor="screenshot">
+                                            Enable screenshot protection
+                                          </Label>
+                                          <p className="text-sm text-muted-foreground">
+                                            Attempt to prevent screenshots
+                                          </p>
+                                        </div>
+                                        <Switch
+                                          id="screenshot"
+                                          checked={false}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </TabsContent>
+                              </Tabs>
+                            </TabsContent>
+                          )}
+
+                          {/* Linked Products Tab */}
+                          <TabsContent value="linked" className="space-y-4">
+                            <div>
+                              <Label htmlFor="upsells">Upsells</Label>
+                              <Textarea
+                                id="upsells"
+                                placeholder="Search for products to upsell..."
+                                className="min-h-[100px]"
+                              />
+
+                              <p className="text-sm text-gray-600 mt-1">
+                                Upsells are products which you recommend instead
+                                of the currently viewed product.
+                              </p>
+                            </div>
+                            <div>
+                              <Label htmlFor="cross-sells">Cross-sells</Label>
+                              <Textarea
+                                id="cross-sells"
+                                placeholder="Search for products to cross-sell..."
+                                className="min-h-[100px]"
+                              />
+
+                              <p className="text-sm text-gray-600 mt-1">
+                                Cross-sells are products which you promote in
+                                the cart, based on the current product.
+                              </p>
                             </div>
                           </TabsContent>
-                        </Tabs>
-                      </TabsContent>
-                    )}
-
-                    {/* Linked Products Tab */}
-                    <TabsContent value="linked" className="space-y-4">
-                      <div>
-                        <Label htmlFor="upsells">Upsells</Label>
-                        <Textarea
-                          id="upsells"
-                          placeholder="Search for products to upsell..."
-                          className="min-h-[100px]"
-                        />
-                        <p className="text-sm text-gray-600 mt-1">
-                          Upsells are products which you recommend instead of the currently viewed product.
-                        </p>
+                        </div>
                       </div>
-                      <div>
-                        <Label htmlFor="cross-sells">Cross-sells</Label>
-                        <Textarea
-                          id="cross-sells"
-                          placeholder="Search for products to cross-sell..."
-                          className="min-h-[100px]"
-                        />
-                        <p className="text-sm text-gray-600 mt-1">
-                          Cross-sells are products which you promote in the cart, based on the current product.
-                        </p>
-                      </div>
-                    </TabsContent>
-                  </div>
-                </div>
-              </Tabs>
-            </CardContent>
-          </Card>
+                    </Tabs>
+                  </CardContent>
+                </Card>
 
-          {/* Product Short Description */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Product Short Description</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Textarea
-                placeholder="Enter a short description for your product..."
-                className="min-h-[120px] resize-none"
-                value={formData.shortDescription}
-                onChange={(e) => setFormData({...formData, shortDescription: e.target.value})}
-              />
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Right Sidebar */}
-        <div className="col-span-4 space-y-6">
-          {/* Publish Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Publish</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center justify-between text-sm">
-                <span>Status:</span>
-                <Select defaultValue="published">
-                  <SelectTrigger className="w-24 h-8">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="published">Published</SelectItem>
-                    <SelectItem value="draft">Draft</SelectItem>
-                    <SelectItem value="pending">Pending</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span>Visibility:</span>
-                <span className="text-blue-600">Public</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
-                  Save Draft
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Eye className="h-4 w-4 mr-2" />
-                  Preview
-                </Button>
-              </div>
-              <Button className="w-full bg-[#123B79] hover:bg-[#425DA0]">
-                Update Product
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Categories Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Categories</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
-                {categories.map((category) => (
-                  <div key={category} className="flex items-center space-x-2">
-                    <Checkbox
-                      id={`category-${category}`}
-                      checked={selectedCategories.includes(category)}
-                      onCheckedChange={() => handleCategoryToggle(category)}
+                {/* Product Short Description */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Product Short Description</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Textarea
+                      placeholder="Enter a short description for your product..."
+                      className="min-h-[120px] resize-none"
+                      value={formData.shortDescription}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          shortDescription: e.target.value,
+                        })
+                      }
                     />
-                    <Label
-                      htmlFor={`category-${category}`}
-                      className="text-sm cursor-pointer"
-                    >
-                      {category}
-                    </Label>
-                  </div>
-                ))}
+                  </CardContent>
+                </Card>
               </div>
-              <div className="mt-3 pt-3 border-t">
-                <Button variant="outline" size="sm">
-                  + Add new category
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
 
-          {/* Product Image Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Featured Image</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {featuredImage ? (
-                <div className="relative">
-                  <Image
-                    src={featuredImage}
-                    alt="Featured image"
-                    width={300}
-                    height={200}
-                    className="w-full h-40 object-cover rounded-md"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "/placeholder.jpg";
-                    }}
-                  />
-                  <Button
-                    variant="destructive"
-                    size="icon"
-                    className="absolute top-2 right-2"
-                    onClick={() => setFeaturedImage(null)}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
-                </div>
-              ) : (
-                <div className="border-2 border-dashed border-gray-300 rounded-md p-6 text-center">
-                  <Upload className="mx-auto h-8 w-8 text-gray-400" />
-                  <p className="mt-2 text-sm text-gray-600">Click to upload image</p>
-                  <Button variant="outline" size="sm" className="mt-2">
-                    Upload Image
-                  </Button>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-
-          {/* Product Gallery Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Product Gallery</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {galleryImages.length > 0 ? (
-                <div className="grid grid-cols-2 gap-2">
-                  {galleryImages.map((image, index) => (
-                    <div key={index} className="relative">
-                      <Image
-                        src={image}
-                        alt={`Gallery image ${index + 1}`}
-                        width={150}
-                        height={100}
-                        className="w-full h-20 object-cover rounded-md"
-                      />
-                      <Button
-                        variant="destructive"
-                        size="icon"
-                        className="absolute top-1 right-1 w-6 h-6"
-                        onClick={() => {
-                          setGalleryImages(prev => prev.filter((_, i) => i !== index));
-                        }}
-                      >
-                        <X className="h-3 w-3" />
+              {/* Right Sidebar */}
+              <div className="col-span-4 space-y-6">
+                {/* Publish Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Publish</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Status:</span>
+                      <Select defaultValue="published">
+                        <SelectTrigger className="w-24 h-8">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="published">Published</SelectItem>
+                          <SelectItem value="draft">Draft</SelectItem>
+                          <SelectItem value="pending">Pending</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Visibility:</span>
+                      <span className="text-blue-600">Public</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        Save Draft
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Eye className="h-4 w-4 mr-2" />
+                        Preview
                       </Button>
                     </div>
-                  ))}
-                </div>
-              ) : null}
-              <Button variant="outline" size="sm" className="w-full mt-2">
-                <Upload className="h-4 w-4 mr-2" />
-                Add Gallery Images
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+                    <Button className="w-full bg-[#123B79] hover:bg-[#425DA0]">
+                      Update Product
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Categories Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Categories</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {categories.map((category) => (
+                        <div
+                          key={category}
+                          className="flex items-center space-x-2"
+                        >
+                          <Checkbox
+                            id={`category-${category}`}
+                            checked={selectedCategories.includes(category)}
+                            onCheckedChange={() =>
+                              handleCategoryToggle(category)
+                            }
+                          />
+
+                          <Label
+                            htmlFor={`category-${category}`}
+                            className="text-sm cursor-pointer"
+                          >
+                            {category}
+                          </Label>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-3 pt-3 border-t">
+                      <Button variant="outline" size="sm">
+                        + Add new category
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Product Image Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Featured Image</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {featuredImage ? (
+                      <div className="relative">
+                        <Image
+                          src={featuredImage}
+                          alt="Featured image"
+                          width={300}
+                          height={200}
+                          className="w-full h-40 object-cover rounded-md"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.jpg";
+                          }}
+                        />
+
+                        <Button
+                          variant="destructive"
+                          size="icon"
+                          className="absolute top-2 right-2"
+                          onClick={() => setFeaturedImage(null)}
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="border-2 border-dashed border-gray-300 rounded-md p-6 text-center">
+                        <Upload className="mx-auto h-8 w-8 text-gray-400" />
+                        <p className="mt-2 text-sm text-gray-600">
+                          Click to upload image
+                        </p>
+                        <Button variant="outline" size="sm" className="mt-2">
+                          Upload Image
+                        </Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {/* Product Gallery Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Product Gallery</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {galleryImages.length > 0 ? (
+                      <div className="grid grid-cols-2 gap-2">
+                        {galleryImages.map((image, index) => (
+                          <div key={index} className="relative">
+                            <Image
+                              src={image}
+                              alt={`Gallery image ${index + 1}`}
+                              width={150}
+                              height={100}
+                              className="w-full h-20 object-cover rounded-md"
+                            />
+
+                            <Button
+                              variant="destructive"
+                              size="icon"
+                              className="absolute top-1 right-1 w-6 h-6"
+                              onClick={() => {
+                                setGalleryImages((prev) =>
+                                  prev.filter((_, i) => i !== index),
+                                );
+                              }}
+                            >
+                              <X className="h-3 w-3" />
+                            </Button>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+                    <Button variant="outline" size="sm" className="w-full mt-2">
+                      <Upload className="h-4 w-4 mr-2" />
+                      Add Gallery Images
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </TabsContent>
         </Tabs>
       ) : (
@@ -2587,4 +3370,4 @@ const EditProductPage = () => {
   );
 };
 
-export default EditProductPage; 
+export default EditProductPage;

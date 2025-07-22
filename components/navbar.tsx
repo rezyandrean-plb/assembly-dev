@@ -102,74 +102,44 @@ export default function Navbar() {
           ? "bg-white backdrop-blur-lg shadow-lg py-3"
           : "bg-white backdrop-blur-sm py-4"
       }`}
-      data-oid="63yrf_e"
     >
-      <div
-        className="w-full px-6 lg:px-8 xl:px-12 flex justify-between items-center"
-        data-oid="6-3sj8_"
-      >
+      <div className="w-full px-6 lg:px-8 xl:px-12 flex justify-between items-center">
         {/* Logo - Always on the far left */}
-        <Link
-          href="/"
-          className="flex items-center z-10 group flex-shrink-0"
-          data-oid="s6la8gk"
-        >
+        <Link href="/" className="flex items-center z-10 group flex-shrink-0">
           <img
             src="/images/assembly-logo.png"
             alt="Assembly Logo"
             style={{ height: "40px", width: "auto" }}
-            data-oid="l.adv7r"
           />
         </Link>
 
         {/* Desktop Navigation - Always on the far right */}
-        <div
-          className="hidden md:flex items-center space-x-8"
-          data-oid="lt27hr2"
-        >
-          <nav className="flex space-x-6" data-oid="-_-z2ya">
+        <div className="hidden md:flex items-center space-x-8">
+          <nav className="flex space-x-6">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
                 {...getAnimationProps(0.1 + index * 0.1)}
-                data-oid="k_kl:ku"
               >
                 <Link
                   href={item.href}
                   className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group whitespace-nowrap"
-                  data-oid=".v7l1.q"
                 >
                   {item.name}
-                  <span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
-                    data-oid="ncfwjg0"
-                  />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300" />
                 </Link>
               </motion.div>
             ))}
           </nav>
 
           {/* Cart */}
-          <motion.div
-            className="relative"
-            {...getAnimationProps(0.5)}
-            data-oid="51vktl1"
-          >
-            <Link href="/cart" className="relative group" data-oid="fe.dsf7">
-              <div
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                data-oid="4iecfh_"
-              >
-                <ShoppingCart
-                  className="h-6 w-6 text-gray-700 group-hover:text-blue-600 transition-colors"
-                  data-oid="a:bywqo"
-                />
+          <motion.div className="relative" {...getAnimationProps(0.5)}>
+            <Link href="/cart" className="relative group">
+              <div className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                <ShoppingCart className="h-6 w-6 text-gray-700 group-hover:text-blue-600 transition-colors" />
 
                 {cart.length > 0 && (
-                  <span
-                    className="absolute -top-1 -right-1 bg-[#ff6b35] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
-                    data-oid="71z.lhe"
-                  >
+                  <span className="absolute -top-1 -right-1 bg-[#ff6b35] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
                     {cart.length}
                   </span>
                 )}
@@ -181,31 +151,20 @@ export default function Navbar() {
           {isLoggedIn && user ? (
             <>
               {/* Notifications - Only show when logged in */}
-              <motion.div
-                className="relative"
-                {...getAnimationProps(0.6)}
-                data-oid="5xftpm3"
-              >
+              <motion.div className="relative" {...getAnimationProps(0.6)}>
                 <button
                   onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
                   className="relative p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                  data-oid="notifications-btn"
                 >
-                  <Bell
-                    className="h-6 w-6 text-gray-700 hover:text-blue-600 transition-colors"
-                    data-oid="a7o7zs6"
-                  />
+                  <Bell className="h-6 w-6 text-gray-700 hover:text-blue-600 transition-colors" />
 
                   {hasNotifications && (
-                    <span
-                      className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
-                      data-oid="sp_uvww"
-                    />
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium" />
                   )}
                 </button>
 
                 {/* Notifications Dropdown */}
-                <AnimatePresence data-oid="notifications-animate">
+                <AnimatePresence>
                   {isNotificationsOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -213,91 +172,47 @@ export default function Navbar() {
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                      data-oid="notifications-dropdown"
                     >
-                      <div
-                        className="px-4 py-2 border-b border-gray-100"
-                        data-oid="xski63p"
-                      >
-                        <div
-                          className="flex justify-between items-center"
-                          data-oid="zw4mmsc"
-                        >
-                          <h3
-                            className="font-semibold text-gray-800"
-                            data-oid="4-vkkvv"
-                          >
+                      <div className="px-4 py-2 border-b border-gray-100">
+                        <div className="flex justify-between items-center">
+                          <h3 className="font-semibold text-gray-800">
                             Notifications
                           </h3>
                           <button
                             className="text-xs text-blue-600 hover:underline"
                             onClick={() => setHasNotifications(false)}
-                            data-oid="-pciavd"
                           >
                             Mark all as read
                           </button>
                         </div>
                       </div>
-                      <div
-                        className="max-h-80 overflow-y-auto"
-                        data-oid="ej4:lg8"
-                      >
-                        <div
-                          className="px-4 py-3 border-b border-gray-100 bg-blue-50"
-                          data-oid="p_rtszg"
-                        >
-                          <p
-                            className="text-sm font-medium text-gray-800"
-                            data-oid="uvguw:4"
-                          >
+                      <div className="max-h-80 overflow-y-auto">
+                        <div className="px-4 py-3 border-b border-gray-100 bg-blue-50">
+                          <p className="text-sm font-medium text-gray-800">
                             New course available
                           </p>
-                          <p
-                            className="text-xs text-gray-500 mt-1"
-                            data-oid=".y_p2dt"
-                          >
+                          <p className="text-xs text-gray-500 mt-1">
                             "Advanced Property Investment Strategies" is now
                             available.
                           </p>
-                          <p
-                            className="text-xs text-gray-400 mt-1"
-                            data-oid="3a_u:ln"
-                          >
+                          <p className="text-xs text-gray-400 mt-1">
                             2 hours ago
                           </p>
                         </div>
-                        <div
-                          className="px-4 py-3 border-b border-gray-100"
-                          data-oid="2orgror"
-                        >
-                          <p
-                            className="text-sm font-medium text-gray-800"
-                            data-oid="fbnzm_8"
-                          >
+                        <div className="px-4 py-3 border-b border-gray-100">
+                          <p className="text-sm font-medium text-gray-800">
                             Course completed
                           </p>
-                          <p
-                            className="text-xs text-gray-500 mt-1"
-                            data-oid="mbmsp--"
-                          >
+                          <p className="text-xs text-gray-500 mt-1">
                             You've completed "HDB Investment Masterclass". View
                             your certificate.
                           </p>
-                          <p
-                            className="text-xs text-gray-400 mt-1"
-                            data-oid="yd:2_0w"
-                          >
+                          <p className="text-xs text-gray-400 mt-1">
                             Yesterday
                           </p>
                         </div>
-                        <div
-                          className="px-4 py-3 text-center"
-                          data-oid="view-all"
-                        >
-                          <button
-                            className="text-sm text-blue-600 hover:underline"
-                            data-oid="view-all-btn"
-                          >
+                        <div className="px-4 py-3 text-center">
+                          <button className="text-sm text-blue-600 hover:underline">
                             View all notifications
                           </button>
                         </div>
@@ -308,44 +223,35 @@ export default function Navbar() {
               </motion.div>
 
               {/* Profile Dropdown */}
-              <div className="relative" data-oid="-knzbcp">
+              <div className="relative">
                 <motion.button
                   {...getAnimationProps(0.7)}
                   onClick={() => setIsProfileOpen(!isProfileOpen)}
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                  data-oid="profile-btn"
                 >
                   {user.image ? (
                     <img
                       src={user.image}
                       alt={user.name || "User"}
                       className="w-8 h-8 rounded-full object-cover"
-                      data-oid="6z9:yiv"
                     />
                   ) : (
-                    <div
-                      className="w-8 h-8 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
-                      data-oid="s3zra48"
-                    >
+                    <div className="w-8 h-8 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold">
                       {user.name
                         ? user.name.charAt(0).toUpperCase()
                         : user.email.charAt(0).toUpperCase()}
                     </div>
                   )}
-                  <span
-                    className="font-medium text-gray-700 whitespace-nowrap"
-                    data-oid="08v-s8x"
-                  >
+                  <span className="font-medium text-gray-700 whitespace-nowrap">
                     {user.name || user.email.split("@")[0]}
                   </span>
                   <ChevronDown
                     className={`w-4 h-4 text-gray-500 transition-transform ${isProfileOpen ? "rotate-180" : ""}`}
-                    data-oid="6p4ezyd"
                   />
                 </motion.button>
 
                 {/* Profile Dropdown Menu */}
-                <AnimatePresence data-oid="0.xsk37">
+                <AnimatePresence>
                   {isProfileOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -353,16 +259,9 @@ export default function Navbar() {
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                      data-oid="profile-dropdown"
                     >
-                      <div
-                        className="px-4 py-3 border-b border-gray-100"
-                        data-oid="9r8vo0v"
-                      >
-                        <p
-                          className="text-sm font-medium text-gray-900"
-                          data-oid="asvwxlw"
-                        >
+                      <div className="px-4 py-3 border-b border-gray-100">
+                        <p className="text-sm font-medium text-gray-900">
                           {user.email}
                         </p>
                       </div>
@@ -371,54 +270,43 @@ export default function Navbar() {
                         href="/profile"
                         className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                         onClick={() => setIsProfileOpen(false)}
-                        data-oid="1k6c8ju"
                       >
-                        <User className="w-4 h-4 mr-3" data-oid="25alrdt" />
+                        <User className="w-4 h-4 mr-3" />
                         Profile
                       </Link>
                       <Link
                         href="/profile/purchase-history"
                         className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                         onClick={() => setIsProfileOpen(false)}
-                        data-oid="purchase-history"
                       >
-                        <ShoppingBag
-                          className="w-4 h-4 mr-3"
-                          data-oid="shopping-bag"
-                        />
+                        <ShoppingBag className="w-4 h-4 mr-3" />
                         Purchase History
                       </Link>
                       <Link
                         href="/profile/settings"
                         className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                         onClick={() => setIsProfileOpen(false)}
-                        data-oid="kfp6ai7"
                       >
-                        <Settings className="w-4 h-4 mr-3" data-oid="j7m:yym" />
+                        <Settings className="w-4 h-4 mr-3" />
                         Settings
                       </Link>
                       <Link
                         href="/profile/terms"
                         className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                         onClick={() => setIsProfileOpen(false)}
-                        data-oid="terms-link"
                       >
-                        <FileText
-                          className="w-4 h-4 mr-3"
-                          data-oid="file-text"
-                        />
+                        <FileText className="w-4 h-4 mr-3" />
                         Terms of Use
                       </Link>
-                      <hr className="my-2 border-gray-200" data-oid="9v9cqdp" />
+                      <hr className="my-2 border-gray-200" />
                       <button
                         onClick={() => {
                           logout();
                           setIsProfileOpen(false);
                         }}
                         className="w-full flex items-center px-4 py-2 text-red-600 hover:bg-red-50 transition-colors"
-                        data-oid="fh4vj1y"
                       >
-                        <LogOut className="w-4 h-4 mr-3" data-oid="wufq2dp" />
+                        <LogOut className="w-4 h-4 mr-3" />
                         Log Out
                       </button>
                     </motion.div>
@@ -428,24 +316,20 @@ export default function Navbar() {
             </>
           ) : (
             /* Auth Buttons - Only show when not logged in */
-            <div className="flex space-x-3" data-oid="udajwx4">
-              <motion.div {...getAnimationProps(0.6)} data-oid="b9fg9h4">
-                <Link href="/login" data-oid="ma2ql9r">
+            <div className="flex space-x-3">
+              <motion.div {...getAnimationProps(0.6)}>
+                <Link href="/login">
                   <Button
                     variant="outline"
                     className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
-                    data-oid="66rbolk"
                   >
                     Log In
                   </Button>
                 </Link>
               </motion.div>
-              <motion.div {...getAnimationProps(0.7)} data-oid="z:n:qrl">
-                <Link href="/signup" data-oid="-rea637">
-                  <Button
-                    className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                    data-oid="d595fuu"
-                  >
+              <motion.div {...getAnimationProps(0.7)}>
+                <Link href="/signup">
+                  <Button className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white shadow-lg hover:shadow-xl transition-all duration-300">
                     Get Started
                   </Button>
                 </Link>
@@ -458,18 +342,17 @@ export default function Navbar() {
         <button
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
-          data-oid="pt-g0vh"
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-gray-700" data-oid="yhsvdb0" />
+            <X className="h-6 w-6 text-gray-700" />
           ) : (
-            <Menu className="h-6 w-6 text-gray-700" data-oid=".ecc5oc" />
+            <Menu className="h-6 w-6 text-gray-700" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence data-oid="qhf8y7o">
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             className="md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200"
@@ -477,36 +360,27 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            data-oid="ba9la_j"
           >
-            <div
-              className="w-full px-6 lg:px-8 xl:px-12 py-6"
-              data-oid="b4lzrcs"
-            >
-              <nav className="flex flex-col space-y-4" data-oid="_serqfm">
+            <div className="w-full px-6 lg:px-8 xl:px-12 py-6">
+              <nav className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    data-oid="4vg5obv"
                   >
                     <Link
                       href={item.href}
                       className="font-medium text-gray-700 py-2 hover:text-blue-600 transition-colors block"
                       onClick={() => setIsOpen(false)}
-                      data-oid="oz8n4lo"
                     >
                       {item.name}
                     </Link>
                   </motion.div>
                 ))}
 
-                <div
-                  className="flex flex-col space-y-3 pt-4 border-t border-gray-200"
-                  data-oid="hf_ack1"
-                >
+                <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
                   {isLoggedIn && user ? (
                     /* Mobile Profile Section */
                     <>
@@ -515,58 +389,39 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.4 }}
                         className="flex items-center space-x-3 px-3 py-2 bg-gray-50 rounded-lg"
-                        data-oid="mobile-profile"
                       >
                         {user.image ? (
                           <img
                             src={user.image}
                             alt={user.name || "User"}
                             className="w-10 h-10 rounded-full object-cover"
-                            data-oid="l2rgr83"
                           />
                         ) : (
-                          <div
-                            className="w-10 h-10 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold"
-                            data-oid="y2igfn_"
-                          >
+                          <div className="w-10 h-10 bg-[#ff6b35] rounded-full flex items-center justify-center text-white font-semibold">
                             {user.name
                               ? user.name.charAt(0).toUpperCase()
                               : user.email.charAt(0).toUpperCase()}
                           </div>
                         )}
-                        <div data-oid="vw4a3i8">
-                          <p
-                            className="font-medium text-gray-900"
-                            data-oid="mn.p.93"
-                          >
+                        <div>
+                          <p className="font-medium text-gray-900">
                             {user.name || user.email.split("@")[0]}
                           </p>
-                          <p
-                            className="text-sm text-gray-500"
-                            data-oid="spz8k58"
-                          >
-                            {user.email}
-                          </p>
+                          <p className="text-sm text-gray-500">{user.email}</p>
                         </div>
                       </motion.div>
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.5 }}
-                        data-oid="mobile-profile-link"
                       >
-                        <Link
-                          href="/profile"
-                          className="w-full"
-                          data-oid="mobile-profile-btn"
-                        >
+                        <Link href="/profile" className="w-full">
                           <Button
                             variant="outline"
                             className="w-full justify-start"
                             onClick={() => setIsOpen(false)}
-                            data-oid="profile-btn-mobile"
                           >
-                            <User className="w-4 h-4 mr-2" data-oid="8k_z2vj" />
+                            <User className="w-4 h-4 mr-2" />
                             Profile
                           </Button>
                         </Link>
@@ -575,7 +430,6 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.6 }}
-                        data-oid="mobile-logout"
                       >
                         <Button
                           variant="outline"
@@ -584,9 +438,8 @@ export default function Navbar() {
                             logout();
                             setIsOpen(false);
                           }}
-                          data-oid="logout-btn-mobile"
                         >
-                          <LogOut className="w-4 h-4 mr-2" data-oid="i1yb14q" />
+                          <LogOut className="w-4 h-4 mr-2" />
                           Log Out
                         </Button>
                       </motion.div>
@@ -598,18 +451,12 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.4 }}
-                        data-oid="ndg3.do"
                       >
-                        <Link
-                          href="/login"
-                          className="w-full"
-                          data-oid="7dquadt"
-                        >
+                        <Link href="/login" className="w-full">
                           <Button
                             variant="outline"
                             className="w-full"
                             onClick={() => setIsOpen(false)}
-                            data-oid="7017dcg"
                           >
                             Log In
                           </Button>
@@ -619,13 +466,11 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.5 }}
-                        data-oid="jf77fby"
                       >
-                        <Link href="/signup" data-oid="9sip:zl">
+                        <Link href="/signup">
                           <Button
                             className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white"
                             onClick={() => setIsOpen(false)}
-                            data-oid="j_vis6p"
                           >
                             Get Started
                           </Button>

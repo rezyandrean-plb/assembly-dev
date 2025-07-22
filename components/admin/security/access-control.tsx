@@ -62,6 +62,7 @@ const adminRoles: AdminRole[] = [
       "Manage security policies",
       "Configure API keys and integrations",
     ],
+
     userCount: 1,
     color: "bg-red-100 text-red-800 border-red-200",
   },
@@ -76,6 +77,7 @@ const adminRoles: AdminRole[] = [
       "Manage inventory levels for physical books",
       "Set product status (Draft/Published)",
     ],
+
     userCount: 2,
     color: "bg-blue-100 text-blue-800 border-blue-200",
   },
@@ -90,6 +92,7 @@ const adminRoles: AdminRole[] = [
       "View customer details associated with an order",
       "Add tracking numbers for shipped orders",
     ],
+
     userCount: 1,
     color: "bg-green-100 text-green-800 border-green-200",
   },
@@ -104,6 +107,7 @@ const adminRoles: AdminRole[] = [
       "Assist with user password resets",
       "View user activity and purchase history",
     ],
+
     userCount: 1,
     color: "bg-purple-100 text-purple-800 border-purple-200",
   },

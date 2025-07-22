@@ -111,252 +111,149 @@ export default function AnalyticsPage() {
   ];
 
   return (
-    <div className="space-y-6" data-oid="1e4aine">
-      <div className="flex items-center justify-between" data-oid="7_ffnzy">
-        <h1 className="text-3xl font-bold text-[#123B79]" data-oid="iojg3r9">
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-[#123B79]">
           Analytics & Reports
         </h1>
-        <div className="flex items-center gap-2" data-oid="n846l:p">
-          <Select defaultValue="30" data-oid=":7zw:d5">
-            <SelectTrigger
-              className="w-[180px] border-gray-200"
-              data-oid="gri6ztu"
-            >
-              <SelectValue placeholder="Select period" data-oid="czqg6s6" />
+        <div className="flex items-center gap-2">
+          <Select defaultValue="30">
+            <SelectTrigger className="w-[180px] border-gray-200">
+              <SelectValue placeholder="Select period" />
             </SelectTrigger>
-            <SelectContent data-oid="34f.ot0">
-              <SelectItem value="7" data-oid="zey9m38">
-                Last 7 days
-              </SelectItem>
-              <SelectItem value="30" data-oid="0tykcj1">
-                Last 30 days
-              </SelectItem>
-              <SelectItem value="90" data-oid="77m.jn5">
-                Last 3 months
-              </SelectItem>
-              <SelectItem value="365" data-oid="j_votu:">
-                Last year
-              </SelectItem>
+            <SelectContent>
+              <SelectItem value="7">Last 7 days</SelectItem>
+              <SelectItem value="30">Last 30 days</SelectItem>
+              <SelectItem value="90">Last 3 months</SelectItem>
+              <SelectItem value="365">Last year</SelectItem>
             </SelectContent>
           </Select>
-          <Button
-            variant="outline"
-            className="border-gray-200"
-            data-oid="cfhxexb"
-          >
-            <Download className="mr-2 h-4 w-4" data-oid="g29pf6n" />
+          <Button variant="outline" className="border-gray-200">
+            <Download className="mr-2 h-4 w-4" />
             Export Report
           </Button>
         </div>
       </div>
 
       {/* Key Metrics Overview */}
-      <div
-        className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
-        data-oid="a3jb4rz"
-      >
-        <Card className="border-gray-200 shadow-md" data-oid="66a8xfx">
-          <CardHeader
-            className="flex flex-row items-center justify-between pb-2"
-            data-oid=".wnndrq"
-          >
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid=".v.bfbn"
-            >
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Total Revenue
             </CardTitle>
-            <DollarSign className="h-4 w-4 text-[#123B79]" data-oid="-lfpbi." />
+            <DollarSign className="h-4 w-4 text-[#123B79]" />
           </CardHeader>
-          <CardContent data-oid="z0mr54x">
-            <div className="text-2xl font-bold" data-oid="-_3dlfg">
-              $140,000
-            </div>
-            <div
-              className="flex items-center text-xs text-muted-foreground"
-              data-oid="d6rrlfl"
-            >
-              <TrendingUp
-                className="mr-1 h-3 w-3 text-green-500"
-                data-oid="pmghm1l"
-              />
+          <CardContent>
+            <div className="text-2xl font-bold">$140,000</div>
+            <div className="flex items-center text-xs text-muted-foreground">
+              <TrendingUp className="mr-1 h-3 w-3 text-green-500" />
               +12.5% from last month
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-gray-200 shadow-md" data-oid="809q3-f">
-          <CardHeader
-            className="flex flex-row items-center justify-between pb-2"
-            data-oid="vw1464o"
-          >
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid="ovhjw7l"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Total Users
             </CardTitle>
-            <Users className="h-4 w-4 text-[#123B79]" data-oid="hu8mkz2" />
+            <Users className="h-4 w-4 text-[#123B79]" />
           </CardHeader>
-          <CardContent data-oid="y_riy7v">
-            <div className="text-2xl font-bold" data-oid=":4u_6dz">
-              2,600
-            </div>
-            <div
-              className="flex items-center text-xs text-muted-foreground"
-              data-oid="ta9cny-"
-            >
-              <TrendingUp
-                className="mr-1 h-3 w-3 text-green-500"
-                data-oid="iuxj5fv"
-              />
+          <CardContent>
+            <div className="text-2xl font-bold">2,600</div>
+            <div className="flex items-center text-xs text-muted-foreground">
+              <TrendingUp className="mr-1 h-3 w-3 text-green-500" />
               +18.2% from last month
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-gray-200 shadow-md" data-oid="2mjtw49">
-          <CardHeader
-            className="flex flex-row items-center justify-between pb-2"
-            data-oid="6fbq:_d"
-          >
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid=":uoe3.5"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Course Enrollments
             </CardTitle>
-            <BookOpen className="h-4 w-4 text-[#123B79]" data-oid=".remjbo" />
+            <BookOpen className="h-4 w-4 text-[#123B79]" />
           </CardHeader>
-          <CardContent data-oid="-1yp54n">
-            <div className="text-2xl font-bold" data-oid="w7b5mud">
-              1,378
-            </div>
-            <div
-              className="flex items-center text-xs text-muted-foreground"
-              data-oid="fk_59_z"
-            >
-              <TrendingUp
-                className="mr-1 h-3 w-3 text-green-500"
-                data-oid="puzh_4w"
-              />
+          <CardContent>
+            <div className="text-2xl font-bold">1,378</div>
+            <div className="flex items-center text-xs text-muted-foreground">
+              <TrendingUp className="mr-1 h-3 w-3 text-green-500" />
               +8.1% from last month
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-gray-200 shadow-md" data-oid="-9pi2be">
-          <CardHeader
-            className="flex flex-row items-center justify-between pb-2"
-            data-oid="i60xui6"
-          >
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid=":tcrz.q"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Avg. Completion Rate
             </CardTitle>
-            <Clock className="h-4 w-4 text-[#123B79]" data-oid="5eyea2a" />
+            <Clock className="h-4 w-4 text-[#123B79]" />
           </CardHeader>
-          <CardContent data-oid="jp_dzy4">
-            <div className="text-2xl font-bold" data-oid="a3jmomr">
-              71%
-            </div>
-            <div
-              className="flex items-center text-xs text-muted-foreground"
-              data-oid="keriw:e"
-            >
-              <TrendingDown
-                className="mr-1 h-3 w-3 text-red-500"
-                data-oid="lks_f::"
-              />
+          <CardContent>
+            <div className="text-2xl font-bold">71%</div>
+            <div className="flex items-center text-xs text-muted-foreground">
+              <TrendingDown className="mr-1 h-3 w-3 text-red-500" />
               -2.1% from last month
             </div>
           </CardContent>
         </Card>
       </div>
 
-      <Tabs defaultValue="overview" className="mt-6" data-oid=".pn9r3y">
-        <TabsList
-          className="bg-white border border-gray-200"
-          data-oid="7jjtdzq"
-        >
+      <Tabs defaultValue="overview" className="mt-6">
+        <TabsList className="bg-white border border-gray-200">
           <TabsTrigger
             value="overview"
             className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-            data-oid="1c:1-e-"
           >
             Overview
           </TabsTrigger>
           <TabsTrigger
             value="revenue"
             className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-            data-oid="m6h8rru"
           >
             Revenue
           </TabsTrigger>
           <TabsTrigger
             value="users"
             className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-            data-oid="iy-lrw-"
           >
             Users
           </TabsTrigger>
           <TabsTrigger
             value="courses"
             className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-            data-oid="5vhh-24"
           >
             Courses
           </TabsTrigger>
           <TabsTrigger
             value="traffic"
             className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-            data-oid="qxjkkp0"
           >
             Traffic
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent
-          value="overview"
-          className="mt-6 space-y-6"
-          data-oid="4a:33pq"
-        >
-          <div className="grid gap-6 md:grid-cols-2" data-oid="n.mu1.6">
-            <Card className="border-gray-200 shadow-md" data-oid="x-t8.s-">
-              <CardHeader data-oid="2dhrj40">
-                <CardTitle className="text-[#123B79]" data-oid=":mwops:">
-                  Revenue Trend
-                </CardTitle>
-                <CardDescription data-oid="m35sst:">
+        <TabsContent value="overview" className="mt-6 space-y-6">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">Revenue Trend</CardTitle>
+                <CardDescription>
                   Monthly revenue over the last 6 months
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="ppzt8jc">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="duyad4x"
-                >
-                  <AreaChart data={revenueData} data-oid="n8o2d3y">
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#E8EFFF"
-                      data-oid="u:6duhu"
-                    />
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <AreaChart data={revenueData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-                    <XAxis
-                      dataKey="month"
-                      stroke="#737687"
-                      data-oid="njf1vgb"
-                    />
+                    <XAxis dataKey="month" stroke="#737687" />
 
-                    <YAxis stroke="#737687" data-oid="vfco:hu" />
-                    <Tooltip
-                      formatter={(value) => [`$${value}`, "Revenue"]}
-                      data-oid="8-9dfqw"
-                    />
+                    <YAxis stroke="#737687" />
+                    <Tooltip formatter={(value) => [`$${value}`, "Revenue"]} />
 
                     <Area
                       type="monotone"
@@ -364,49 +261,33 @@ export default function AnalyticsPage() {
                       stroke="#123B79"
                       fill="#123B79"
                       fillOpacity={0.1}
-                      data-oid="53by1b2"
                     />
                   </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid="whsthhi">
-              <CardHeader data-oid="ecpvz9p">
-                <CardTitle className="text-[#123B79]" data-oid="enj2s2a">
-                  User Growth
-                </CardTitle>
-                <CardDescription data-oid="67f8ov0">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">User Growth</CardTitle>
+                <CardDescription>
                   Total and active users over time
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="-:w0-vk">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="mx_vc3s"
-                >
-                  <LineChart data={userGrowthData} data-oid="j4nl57t">
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#E8EFFF"
-                      data-oid="t5_nbkk"
-                    />
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={userGrowthData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-                    <XAxis
-                      dataKey="month"
-                      stroke="#737687"
-                      data-oid="-ymolbj"
-                    />
+                    <XAxis dataKey="month" stroke="#737687" />
 
-                    <YAxis stroke="#737687" data-oid="ghqyg_d" />
-                    <Tooltip data-oid="19s03au" />
+                    <YAxis stroke="#737687" />
+                    <Tooltip />
                     <Line
                       type="monotone"
                       dataKey="users"
                       stroke="#123B79"
                       strokeWidth={2}
-                      data-oid="75kihnb"
                     />
 
                     <Line
@@ -414,7 +295,6 @@ export default function AnalyticsPage() {
                       dataKey="active"
                       stroke="#D3A518"
                       strokeWidth={2}
-                      data-oid="ar_f:7:"
                     />
                   </LineChart>
                 </ResponsiveContainer>
@@ -422,23 +302,19 @@ export default function AnalyticsPage() {
             </Card>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2" data-oid="gn3hikc">
-            <Card className="border-gray-200 shadow-md" data-oid="bdreedo">
-              <CardHeader data-oid="osy:121">
-                <CardTitle className="text-[#123B79]" data-oid="hb6errt">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Sales by Category
                 </CardTitle>
-                <CardDescription data-oid="-nop:n2">
+                <CardDescription>
                   Revenue distribution across course categories
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="m:u37.d">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="bvfteas"
-                >
-                  <PieChart data-oid="a95.o7t">
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
                     <Pie
                       data={categoryData}
                       cx="50%"
@@ -447,71 +323,47 @@ export default function AnalyticsPage() {
                       fill="#8884d8"
                       dataKey="value"
                       label={({ name, value }) => `${name}: ${value}%`}
-                      data-oid="d-uys9v"
                     >
                       {categoryData.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={entry.color}
-                          data-oid="z004qzp"
-                        />
+                        <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Pie>
-                    <Tooltip data-oid="s02txq-" />
+                    <Tooltip />
                   </PieChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid=":opfxn6">
-              <CardHeader data-oid="k82bkp:">
-                <CardTitle className="text-[#123B79]" data-oid="ka29ni4">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Top Performing Courses
                 </CardTitle>
-                <CardDescription data-oid="-cgjk8o">
+                <CardDescription>
                   Courses ranked by enrollment and completion
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="wzlqtpy">
-                <div className="space-y-4" data-oid="vc-2i0g">
+              <CardContent>
+                <div className="space-y-4">
                   {coursePerformanceData.slice(0, 5).map((course, index) => (
-                    <div key={index} className="space-y-2" data-oid="v9iuay3">
-                      <div
-                        className="flex items-center justify-between"
-                        data-oid="qy2vvuz"
-                      >
-                        <p className="text-sm font-medium" data-oid=":m_0_me">
-                          {course.name}
-                        </p>
+                    <div key={index} className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-medium">{course.name}</p>
                         <Badge
                           variant="outline"
                           className="border-[#123B79] text-[#123B79]"
-                          data-oid="57t1d84"
                         >
                           {course.enrollments} enrolled
                         </Badge>
                       </div>
-                      <div
-                        className="flex items-center gap-2"
-                        data-oid="2xzuflg"
-                      >
-                        <Progress
-                          value={course.completion}
-                          className="h-2"
-                          data-oid="h3rgkpm"
-                        />
+                      <div className="flex items-center gap-2">
+                        <Progress value={course.completion} className="h-2" />
 
-                        <span
-                          className="text-xs font-medium"
-                          data-oid="t_:f2hs"
-                        >
+                        <span className="text-xs font-medium">
                           {course.completion}%
                         </span>
                       </div>
-                      <p
-                        className="text-xs text-muted-foreground"
-                        data-oid="x7d3-vj"
-                      >
+                      <p className="text-xs text-muted-foreground">
                         Revenue: ${course.revenue.toLocaleString()}
                       </p>
                     </div>
@@ -522,45 +374,24 @@ export default function AnalyticsPage() {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="revenue"
-          className="mt-6 space-y-6"
-          data-oid="s67hiqe"
-        >
-          <div className="grid gap-6 md:grid-cols-2" data-oid="cl5omd1">
-            <Card className="border-gray-200 shadow-md" data-oid="xo856f5">
-              <CardHeader data-oid="c6c9i79">
-                <CardTitle className="text-[#123B79]" data-oid="pr.ev8h">
-                  Revenue Trend
-                </CardTitle>
-                <CardDescription data-oid="y64oe0t">
+        <TabsContent value="revenue" className="mt-6 space-y-6">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">Revenue Trend</CardTitle>
+                <CardDescription>
                   Monthly revenue over the last 6 months
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="3c14gn5">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="oenn5g_"
-                >
-                  <AreaChart data={revenueData} data-oid="3yo0q2u">
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#E8EFFF"
-                      data-oid="7-ieu:_"
-                    />
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <AreaChart data={revenueData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-                    <XAxis
-                      dataKey="month"
-                      stroke="#737687"
-                      data-oid="7.k.f:o"
-                    />
+                    <XAxis dataKey="month" stroke="#737687" />
 
-                    <YAxis stroke="#737687" data-oid="jnp_r49" />
-                    <Tooltip
-                      formatter={(value) => [`$${value}`, "Revenue"]}
-                      data-oid="7lwv.-e"
-                    />
+                    <YAxis stroke="#737687" />
+                    <Tooltip formatter={(value) => [`$${value}`, "Revenue"]} />
 
                     <Area
                       type="monotone"
@@ -568,29 +399,24 @@ export default function AnalyticsPage() {
                       stroke="#123B79"
                       fill="#123B79"
                       fillOpacity={0.1}
-                      data-oid="n899c22"
                     />
                   </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid="pk9h184">
-              <CardHeader data-oid=":z2q.38">
-                <CardTitle className="text-[#123B79]" data-oid="-2cpxrt">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Sales by Category
                 </CardTitle>
-                <CardDescription data-oid="-uqo8xf">
+                <CardDescription>
                   Revenue distribution across course categories
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="x-p5qg_">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="r4vbxv:"
-                >
-                  <PieChart data-oid="c3l5tqw">
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
                     <Pie
                       data={categoryData}
                       cx="50%"
@@ -599,17 +425,12 @@ export default function AnalyticsPage() {
                       fill="#8884d8"
                       dataKey="value"
                       label={({ name, value }) => `${name}: ${value}%`}
-                      data-oid="cji73k4"
                     >
                       {categoryData.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={entry.color}
-                          data-oid="9svah.5"
-                        />
+                        <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Pie>
-                    <Tooltip data-oid="4f0th59" />
+                    <Tooltip />
                   </PieChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -617,48 +438,29 @@ export default function AnalyticsPage() {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="users"
-          className="mt-6 space-y-6"
-          data-oid="zetlo8s"
-        >
-          <div className="grid gap-6 md:grid-cols-2" data-oid="vrleh5y">
-            <Card className="border-gray-200 shadow-md" data-oid="62qiv5n">
-              <CardHeader data-oid="8f0ugv7">
-                <CardTitle className="text-[#123B79]" data-oid="-adku-7">
-                  User Growth
-                </CardTitle>
-                <CardDescription data-oid="7oy:no9">
+        <TabsContent value="users" className="mt-6 space-y-6">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">User Growth</CardTitle>
+                <CardDescription>
                   Total and active users over time
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="myy4yg0">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="apbgt8m"
-                >
-                  <LineChart data={userGrowthData} data-oid="cqd7i54">
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#E8EFFF"
-                      data-oid="fsefng:"
-                    />
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={userGrowthData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-                    <XAxis
-                      dataKey="month"
-                      stroke="#737687"
-                      data-oid="moafo.9"
-                    />
+                    <XAxis dataKey="month" stroke="#737687" />
 
-                    <YAxis stroke="#737687" data-oid="3yqkf65" />
-                    <Tooltip data-oid="ivg40li" />
+                    <YAxis stroke="#737687" />
+                    <Tooltip />
                     <Line
                       type="monotone"
                       dataKey="users"
                       stroke="#123B79"
                       strokeWidth={2}
-                      data-oid="g6q1tdc"
                     />
 
                     <Line
@@ -666,98 +468,53 @@ export default function AnalyticsPage() {
                       dataKey="active"
                       stroke="#D3A518"
                       strokeWidth={2}
-                      data-oid="m76efy:"
                     />
                   </LineChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid="ipfhghq">
-              <CardHeader data-oid="t-s1ymu">
-                <CardTitle className="text-[#123B79]" data-oid="ib07tup">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   User Demographics
                 </CardTitle>
-                <CardDescription data-oid="bqm4omk">
+                <CardDescription>
                   User distribution by age and location
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="l8un.::">
-                <div className="space-y-4" data-oid="32_2d3v">
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="azfw0vw"
-                  >
-                    <span className="text-sm" data-oid="y.:jy9j">
-                      Age 18-25
-                    </span>
-                    <div className="flex items-center gap-2" data-oid="4k4cglk">
-                      <Progress
-                        value={35}
-                        className="w-32 h-2"
-                        data-oid="h_bfya3"
-                      />
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Age 18-25</span>
+                    <div className="flex items-center gap-2">
+                      <Progress value={35} className="w-32 h-2" />
 
-                      <span className="text-sm font-medium" data-oid="f9jkzo1">
-                        35%
-                      </span>
+                      <span className="text-sm font-medium">35%</span>
                     </div>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="rx9262z"
-                  >
-                    <span className="text-sm" data-oid="uvb0w5f">
-                      Age 26-35
-                    </span>
-                    <div className="flex items-center gap-2" data-oid=":2ef7u4">
-                      <Progress
-                        value={42}
-                        className="w-32 h-2"
-                        data-oid="_:a-nrg"
-                      />
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Age 26-35</span>
+                    <div className="flex items-center gap-2">
+                      <Progress value={42} className="w-32 h-2" />
 
-                      <span className="text-sm font-medium" data-oid="a--h1qx">
-                        42%
-                      </span>
+                      <span className="text-sm font-medium">42%</span>
                     </div>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="kjbk7tz"
-                  >
-                    <span className="text-sm" data-oid="mlbsaf2">
-                      Age 36-45
-                    </span>
-                    <div className="flex items-center gap-2" data-oid="i8.cv:p">
-                      <Progress
-                        value={18}
-                        className="w-32 h-2"
-                        data-oid="wxyfscz"
-                      />
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Age 36-45</span>
+                    <div className="flex items-center gap-2">
+                      <Progress value={18} className="w-32 h-2" />
 
-                      <span className="text-sm font-medium" data-oid="ynvetbu">
-                        18%
-                      </span>
+                      <span className="text-sm font-medium">18%</span>
                     </div>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="rm_:y-t"
-                  >
-                    <span className="text-sm" data-oid="u_53h3g">
-                      Age 45+
-                    </span>
-                    <div className="flex items-center gap-2" data-oid="ql.g4iy">
-                      <Progress
-                        value={5}
-                        className="w-32 h-2"
-                        data-oid="p.gsp_j"
-                      />
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Age 45+</span>
+                    <div className="flex items-center gap-2">
+                      <Progress value={5} className="w-32 h-2" />
 
-                      <span className="text-sm font-medium" data-oid="yse25-f">
-                        5%
-                      </span>
+                      <span className="text-sm font-medium">5%</span>
                     </div>
                   </div>
                 </div>
@@ -766,103 +523,67 @@ export default function AnalyticsPage() {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="courses"
-          className="mt-6 space-y-6"
-          data-oid="oq7q6.y"
-        >
-          <div className="grid gap-6 md:grid-cols-2" data-oid="vodp89b">
-            <Card className="border-gray-200 shadow-md" data-oid="ys3pjzi">
-              <CardHeader data-oid="0-id3-s">
-                <CardTitle className="text-[#123B79]" data-oid="u44nb91">
+        <TabsContent value="courses" className="mt-6 space-y-6">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Course Performance
                 </CardTitle>
-                <CardDescription data-oid="rmw5ysq">
+                <CardDescription>
                   Enrollment and completion rates
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="atp.1xb">
-                <ResponsiveContainer
-                  width="100%"
-                  height={300}
-                  data-oid="xu-4h3h"
-                >
-                  <LineChart data={revenueData} data-oid="68pzwo3">
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#E8EFFF"
-                      data-oid="1bq0bqb"
-                    />
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={revenueData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-                    <XAxis
-                      dataKey="month"
-                      stroke="#737687"
-                      data-oid="_e:e5f:"
-                    />
+                    <XAxis dataKey="month" stroke="#737687" />
 
-                    <YAxis stroke="#737687" data-oid="6xae3hw" />
-                    <Tooltip data-oid="1d468s7" />
+                    <YAxis stroke="#737687" />
+                    <Tooltip />
                     <Line
                       type="monotone"
                       dataKey="courses"
                       stroke="#123B79"
                       strokeWidth={2}
-                      data-oid="3yixagu"
                     />
                   </LineChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid="pdl49z0">
-              <CardHeader data-oid="qcycyy-">
-                <CardTitle className="text-[#123B79]" data-oid="ifojtqj">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Top Performing Courses
                 </CardTitle>
-                <CardDescription data-oid="ae.ymrj">
+                <CardDescription>
                   Courses ranked by enrollment and completion
                 </CardDescription>
               </CardHeader>
-              <CardContent data-oid="slsus01">
-                <div className="space-y-4" data-oid="vddgjd2">
+              <CardContent>
+                <div className="space-y-4">
                   {coursePerformanceData.slice(0, 5).map((course, index) => (
-                    <div key={index} className="space-y-2" data-oid="u5d48-r">
-                      <div
-                        className="flex items-center justify-between"
-                        data-oid="dh24a6o"
-                      >
-                        <p className="text-sm font-medium" data-oid="9sg960q">
-                          {course.name}
-                        </p>
+                    <div key={index} className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-medium">{course.name}</p>
                         <Badge
                           variant="outline"
                           className="border-[#123B79] text-[#123B79]"
-                          data-oid="zn4iv.u"
                         >
                           {course.enrollments} enrolled
                         </Badge>
                       </div>
-                      <div
-                        className="flex items-center gap-2"
-                        data-oid="rg-zie5"
-                      >
-                        <Progress
-                          value={course.completion}
-                          className="h-2"
-                          data-oid=":ke1vxi"
-                        />
+                      <div className="flex items-center gap-2">
+                        <Progress value={course.completion} className="h-2" />
 
-                        <span
-                          className="text-xs font-medium"
-                          data-oid="8l7.hop"
-                        >
+                        <span className="text-xs font-medium">
                           {course.completion}%
                         </span>
                       </div>
-                      <p
-                        className="text-xs text-muted-foreground"
-                        data-oid="44ybbqk"
-                      >
+                      <p className="text-xs text-muted-foreground">
                         Revenue: ${course.revenue.toLocaleString()}
                       </p>
                     </div>
@@ -873,46 +594,30 @@ export default function AnalyticsPage() {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="traffic"
-          className="mt-6 space-y-6"
-          data-oid="w7u.z8:"
-        >
-          <div className="grid gap-6 md:grid-cols-2" data-oid="9f3vv:x">
-            <Card className="border-gray-200 shadow-md" data-oid="5:w7_-8">
-              <CardHeader data-oid="ak81fop">
-                <CardTitle className="text-[#123B79]" data-oid="xl.:8wx">
+        <TabsContent value="traffic" className="mt-6 space-y-6">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">
                   Traffic Sources
                 </CardTitle>
-                <CardDescription data-oid="1.urla.">
-                  Website traffic by source
-                </CardDescription>
+                <CardDescription>Website traffic by source</CardDescription>
               </CardHeader>
-              <CardContent data-oid="_:l65o.">
-                <div className="space-y-4" data-oid="idxqkwv">
+              <CardContent>
+                <div className="space-y-4">
                   {trafficSourceData.map((source, index) => (
                     <div
                       key={index}
                       className="flex items-center justify-between"
-                      data-oid="li_ib-u"
                     >
-                      <span className="text-sm" data-oid=":xn.4rj">
-                        {source.source}
-                      </span>
-                      <div
-                        className="flex items-center gap-2"
-                        data-oid="g8kwwh_"
-                      >
+                      <span className="text-sm">{source.source}</span>
+                      <div className="flex items-center gap-2">
                         <Progress
                           value={source.percentage}
                           className="w-32 h-2"
-                          data-oid="bmo2dvp"
                         />
 
-                        <span
-                          className="text-sm font-medium"
-                          data-oid="883szwt"
-                        >
+                        <span className="text-sm font-medium">
                           {source.percentage}%
                         </span>
                       </div>
@@ -922,73 +627,45 @@ export default function AnalyticsPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 shadow-md" data-oid="mz5cjv_">
-              <CardHeader data-oid="w6njkq-">
-                <CardTitle className="text-[#123B79]" data-oid="6j7ussi">
-                  Page Views
-                </CardTitle>
-                <CardDescription data-oid="3bmii34">
-                  Most visited pages
-                </CardDescription>
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader>
+                <CardTitle className="text-[#123B79]">Page Views</CardTitle>
+                <CardDescription>Most visited pages</CardDescription>
               </CardHeader>
-              <CardContent data-oid=":w_jg76">
-                <div className="space-y-4" data-oid="8okgor7">
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="h8a2yr:"
-                  >
-                    <span className="text-sm" data-oid="y5ku-b1">
-                      Homepage
-                    </span>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Homepage</span>
                     <Badge
                       variant="outline"
                       className="border-[#123B79] text-[#123B79]"
-                      data-oid="-6gu-g3"
                     >
                       12,450 views
                     </Badge>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="eo6n89x"
-                  >
-                    <span className="text-sm" data-oid="_5t_:5n">
-                      Courses
-                    </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Courses</span>
                     <Badge
                       variant="outline"
                       className="border-[#123B79] text-[#123B79]"
-                      data-oid="easdb4j"
                     >
                       8,920 views
                     </Badge>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid=".3jvl7h"
-                  >
-                    <span className="text-sm" data-oid="ud65329">
-                      About
-                    </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">About</span>
                     <Badge
                       variant="outline"
                       className="border-[#123B79] text-[#123B79]"
-                      data-oid="-bet4sz"
                     >
                       3,240 views
                     </Badge>
                   </div>
-                  <div
-                    className="flex items-center justify-between"
-                    data-oid="mg1toq7"
-                  >
-                    <span className="text-sm" data-oid="4cnfrvx">
-                      Contact
-                    </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Contact</span>
                     <Badge
                       variant="outline"
                       className="border-[#123B79] text-[#123B79]"
-                      data-oid="_i7i4:k"
                     >
                       1,890 views
                     </Badge>

@@ -166,14 +166,8 @@ export default function CourseDetailPage({
       () => import("../components/property-strategies-in-2025-amid-rate-cuts"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="t5fwq7n"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="qg5l3-l"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -183,14 +177,8 @@ export default function CourseDetailPage({
       () => import("../components/condo-investment-workshop"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="ebn6pgd"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="wd4ompn"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -199,14 +187,8 @@ export default function CourseDetailPage({
       () => import("../components/master-new-launch-selection"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="4.def:r"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="gaoiag8"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -215,14 +197,8 @@ export default function CourseDetailPage({
       () => import("../components/module-1-of-niche-positioning-masterclass"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="hn54gdn"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="a-nf28k"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -231,14 +207,8 @@ export default function CourseDetailPage({
       () => import("../components/property-summit-2024"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="9f5jp:k"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="npjfzb8"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -250,14 +220,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="0tbglxl"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="y_mqlt:"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -266,14 +230,8 @@ export default function CourseDetailPage({
       () => import("../components/property-financing-strategy-mastery"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="xl0h.6b"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="mnk8dk5"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -281,14 +239,8 @@ export default function CourseDetailPage({
     "master-new-launch-selection-6-exclusive-frameworks-to-select-the-winning-new-launch-in-20242025":
       dynamic(() => import("../components/master-new-launch-selection"), {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="huhj98y"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="a7wz:uu"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       }),
@@ -296,14 +248,8 @@ export default function CourseDetailPage({
       () => import("../components/property-portfolio-strategy-mastery"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="98qfpmk"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="u9qo0-u"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -312,14 +258,8 @@ export default function CourseDetailPage({
       () => import("../components/landed-buyer-investing"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="m1iegje"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="bfm2u3x"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -331,14 +271,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="lig:eqj"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="4:9hciq"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -348,14 +282,8 @@ export default function CourseDetailPage({
         import("../components/the-shift-in-singapores-real-estate-market-2023"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="277ok7_"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="y:hvvrz"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -367,14 +295,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="ob2cak6"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="yjwxxr4"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -383,14 +305,8 @@ export default function CourseDetailPage({
       () => import("../components/making-the-right-move"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="7nmtfzk"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="9qz7pen"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -399,14 +315,8 @@ export default function CourseDetailPage({
       () => import("../components/landed-property-investment-strategies"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="13oral9"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="_380d3t"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -415,14 +325,8 @@ export default function CourseDetailPage({
       () => import("../components/the-art-of-real-estate-investment"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="2vngi2q"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="r1k-5__"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -431,14 +335,8 @@ export default function CourseDetailPage({
       () => import("../components/exit-with-confidence"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="_lte2j2"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="g.en._e"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -451,14 +349,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="6byuh2d"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="jw11_db"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -467,14 +359,8 @@ export default function CourseDetailPage({
       () => import("../components/freehold-property-investment-strategy"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="iudm0qq"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="erm_2ab"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -483,14 +369,8 @@ export default function CourseDetailPage({
       () => import("../components/rising-stars-or-hidden-gems"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid=".2_bw44"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="fffwhu-"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -502,14 +382,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="r1-8u-c"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="7eb:x-:"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -521,14 +395,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="nntwodq"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="688qiy2"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -537,14 +405,8 @@ export default function CourseDetailPage({
       () => import("../components/maximizing-your-property-investment"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="noexo-1"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="bmz_d:s"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -556,14 +418,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="43.cg-2"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="gmfj9hl"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -573,14 +429,8 @@ export default function CourseDetailPage({
         import("../components/property-portfolio-expansion-strategies-2024"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid=".nnm.rz"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="34xyme0"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -592,14 +442,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="awemr1s"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="c.gflcw"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -608,14 +452,8 @@ export default function CourseDetailPage({
       () => import("../components/singapores-master-plan-transformation"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="eu9uj08"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="-pd:kph"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -628,14 +466,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="5s-k-b8"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="06dv8_z"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -648,14 +480,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid=":ge38l3"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="hoklh.-"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -668,14 +494,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="u69lmhk"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="::2ft6z"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -688,14 +508,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="mzx6394"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="::5izbp"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -704,14 +518,8 @@ export default function CourseDetailPage({
       () => import("../components/new-launch-condo-selection-strategies"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="lukq9e8"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="ckjwryd"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -724,14 +532,8 @@ export default function CourseDetailPage({
           ),
         {
           loading: () => (
-            <div
-              className="flex items-center justify-center min-h-screen"
-              data-oid="-4.d2tx"
-            >
-              <div
-                className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-                data-oid="uo9eors"
-              ></div>
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ),
         },
@@ -743,14 +545,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="3:oai.x"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="qrx09y4"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -762,14 +558,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="o1uvtge"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="l:aztf0"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -781,14 +571,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="og26b2t"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="q04elrw"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -797,14 +581,8 @@ export default function CourseDetailPage({
       () => import("../components/live-debate-resale-hdb-vs-resale-condo"),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid="f46uafp"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="xd9qgzy"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -816,14 +594,8 @@ export default function CourseDetailPage({
         ),
       {
         loading: () => (
-          <div
-            className="flex items-center justify-center min-h-screen"
-            data-oid=".__84eb"
-          >
-            <div
-              className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"
-              data-oid="sljui-x"
-            ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ),
       },
@@ -836,5 +608,5 @@ export default function CourseDetailPage({
     return notFound();
   }
 
-  return <CourseComponent data-oid="m68z25e" />;
+  return <CourseComponent />;
 }

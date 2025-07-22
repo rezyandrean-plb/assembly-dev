@@ -24,15 +24,9 @@ function CheckoutPage() {
 
   // Show loading while redirecting
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8" data-oid="hsyl:e-">
-      <div
-        className="flex items-center justify-center min-h-[400px]"
-        data-oid="nicodwa"
-      >
-        <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"
-          data-oid="md3yc9w"
-        ></div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#123b79]"></div>
       </div>
     </div>
   );

@@ -236,6 +236,7 @@ export function SecurityPolicies() {
                   }))
                 }
               />
+
               <p className="text-xs text-gray-500">
                 Prevent reuse of last N passwords
               </p>
@@ -325,6 +326,7 @@ export function SecurityPolicies() {
                 }))
               }
             />
+
             <p className="text-xs text-gray-500">
               Set to 0 for passwords that never expire
             </p>
@@ -365,6 +367,7 @@ export function SecurityPolicies() {
                   }))
                 }
               />
+
               <p className="text-xs text-gray-500">
                 Automatically log out after inactivity
               </p>
@@ -552,6 +555,7 @@ export function SecurityPolicies() {
                     value={newIP}
                     onChange={(e) => setNewIP(e.target.value)}
                   />
+
                   <Button onClick={addIPAddress} variant="outline">
                     Add
                   </Button>

@@ -65,21 +65,19 @@ export default function PlatformSection() {
 
   const features = [
     {
-      icon: <Compass className="h-8 w-8 text-[#123B79]" data-oid="3zf3jrx" />,
+      icon: <Compass className="h-8 w-8 text-[#123B79]" />,
       title: "Navigate Complexity",
       description:
         "Find your way through Singapore's intricate real estate landscape with expert guidance.",
     },
     {
-      icon: <Map className="h-8 w-8 text-[#123B79]" data-oid="14pjn:f" />,
+      icon: <Map className="h-8 w-8 text-[#123B79]" />,
       title: "Map Your Journey",
       description:
         "Visualize your path to success with our structured learning approach.",
     },
     {
-      icon: (
-        <Navigation className="h-8 w-8 text-[#123B79]" data-oid="oh0-2g5" />
-      ),
+      icon: <Navigation className="h-8 w-8 text-[#123B79]" />,
 
       title: "Connect the Dots",
       description:
@@ -91,22 +89,14 @@ export default function PlatformSection() {
     <section
       ref={sectionRef}
       className="relative py-24 bg-white overflow-hidden min-h-screen"
-      data-oid="32c_lo8"
     >
-      <div
-        className="absolute inset-0 bg-white/30 z-[1]"
-        data-oid="7:qyanp"
-      ></div>
+      <div className="absolute inset-0 bg-white/30 z-[1]"></div>
       {/* Dynamic Network Background */}
-      <div
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        data-oid="str-99w"
-      >
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid slice"
-          data-oid="q60jx-m"
         >
           {/* Base network - complex background */}
           {[...Array(30)].map((_, i) => (
@@ -123,7 +113,6 @@ export default function PlatformSection() {
                 opacity: isInView ? 0.18 : 0,
               }}
               transition={{ duration: 1.5, delay: i * 0.05 }}
-              data-oid="ba2fz2r"
             />
           ))}
 
@@ -134,7 +123,6 @@ export default function PlatformSection() {
               opacity: activeFeature >= 0 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="v71tzib"
           >
             <motion.path
               d="M100,500 C250,400 400,550 600,450 S800,500 900,400"
@@ -148,7 +136,6 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 0 ? 0.8 : 0,
               }}
               transition={{ duration: 1.5, delay: 0.3 }}
-              data-oid="v4aw:b5"
             />
 
             {/* Glowing effect for the path */}
@@ -172,7 +159,6 @@ export default function PlatformSection() {
                   repeatType: "reverse",
                 },
               }}
-              data-oid="zy9wqce"
             />
 
             {/* Particles flowing along the path */}
@@ -195,7 +181,6 @@ export default function PlatformSection() {
                   offsetPath:
                     "path('M100,500 C250,400 400,550 600,450 S800,500 900,400')",
                 }}
-                data-oid="8pw_-f6"
               />
             ))}
           </motion.g>
@@ -207,7 +192,6 @@ export default function PlatformSection() {
               opacity: activeFeature >= 1 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="72c0ptz"
           >
             {/* Map nodes */}
             {[
@@ -229,7 +213,6 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 1 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                data-oid="hkvel1z"
               />
             ))}
 
@@ -245,7 +228,6 @@ export default function PlatformSection() {
                 opacity: activeFeature >= 1 ? 0.57 : 0,
               }}
               transition={{ duration: 1.8, delay: 0.7 }}
-              data-oid="l2o45i1"
             />
 
             {/* "You are here" indicator */}
@@ -266,7 +248,6 @@ export default function PlatformSection() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "reverse",
               }}
-              data-oid="fntdfe:"
             />
           </motion.g>
 
@@ -277,7 +258,6 @@ export default function PlatformSection() {
               opacity: activeFeature >= 2 ? 1 : 0,
             }}
             transition={{ duration: 0.8 }}
-            data-oid="uzyrgzb"
           >
             {/* Additional nodes */}
             {[
@@ -299,7 +279,6 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.8 : 0,
                 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                data-oid="g57cvpl"
               />
             ))}
 
@@ -323,7 +302,6 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.7 : 0,
                 }}
                 transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
-                data-oid="6x3ewii"
               />
             ))}
 
@@ -347,7 +325,6 @@ export default function PlatformSection() {
                   opacity: activeFeature >= 2 ? 0.49 : 0,
                 }}
                 transition={{ duration: 1, delay: 0.5 + i * 0.15 }}
-                data-oid="hiiw1p9"
               />
             ))}
 
@@ -374,61 +351,43 @@ export default function PlatformSection() {
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                 }}
-                data-oid=":g06_g-"
               />
             ))}
           </motion.g>
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-20" data-oid="6h4z4cv">
+      <div className="container mx-auto px-4 relative z-20">
         <motion.div
           className="text-center mb-16"
           style={{ opacity: contentOpacity, y: contentY }}
-          data-oid="3y1pf_5"
         >
-          <h2
-            className="text-4xl font-bold text-[#123B79] mb-4"
-            data-oid="-.tbqsf"
-          >
+          <h2 className="text-4xl font-bold text-[#123B79] mb-4">
             Your Platform for Mastery
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-            data-oid="szij77u"
-          >
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Assembly guides you through the interwoven network of opportunity in
             Singapore's real estate ecosystem
           </p>
-          <div
-            className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"
-            data-oid="bfv6gfo"
-          ></div>
+          <div className="w-20 h-1 bg-[#F0A500] mx-auto mt-4"></div>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-12" data-oid="uyy-acy">
+        <div className="flex flex-col items-center gap-12">
           <motion.div
             className="w-full max-w-3xl"
             style={{ opacity: contentOpacity, y: contentY }}
-            data-oid="ar2e76d"
           >
-            <h3
-              className="text-3xl font-bold text-[#123B79] mb-6 text-center"
-              data-oid="k5n50_4"
-            >
+            <h3 className="text-3xl font-bold text-[#123B79] mb-6 text-center">
               Navigating the Network
             </h3>
-            <p
-              className="text-lg text-gray-700 mb-12 text-center"
-              data-oid="9gkeol0"
-            >
+            <p className="text-lg text-gray-700 mb-12 text-center">
               In today's complex real estate landscape, success comes from
               understanding the interconnected nature of property, finance, and
               continuous learning. Assembly provides the tools, knowledge, and
               community to help you navigate this network with confidence.
             </p>
 
-            <div className="space-y-16" data-oid="jy--jfp">
+            <div className="space-y-16">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -440,7 +399,6 @@ export default function PlatformSection() {
                     scale: activeFeature === index ? 1.05 : 1,
                   }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  data-oid="fkkil::"
                 >
                   <motion.div
                     className="p-5 bg-[#F0A500]/10 rounded-full"
@@ -459,18 +417,14 @@ export default function PlatformSection() {
                       repeat:
                         activeFeature === index ? Number.POSITIVE_INFINITY : 0,
                     }}
-                    data-oid="76cp18l"
                   >
                     {feature.icon}
                   </motion.div>
-                  <div className="text-center md:text-left" data-oid="t89z5sw">
-                    <h4
-                      className="text-2xl font-semibold text-[#123B79] mb-2"
-                      data-oid="n6-32p4"
-                    >
+                  <div className="text-center md:text-left">
+                    <h4 className="text-2xl font-semibold text-[#123B79] mb-2">
                       {feature.title}
                     </h4>
-                    <p className="text-gray-600 max-w-xl" data-oid="o8l9g57">
+                    <p className="text-gray-600 max-w-xl">
                       {feature.description}
                     </p>
                   </div>

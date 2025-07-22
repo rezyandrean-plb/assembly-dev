@@ -14,32 +14,23 @@ interface TestimonialProps {
 
 function Testimonial({ quote, author, title, rating }: TestimonialProps) {
   return (
-    <div className="testimonial-card" data-oid="eqdx5k6">
-      <div className="rating" data-oid="ycwom1e">
+    <div className="testimonial-card">
+      <div className="rating">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
             size={18}
             className={i < rating ? "star filled" : "star"}
             fill={i < rating ? "currentColor" : "none"}
-            data-oid="jvczt5y"
           />
         ))}
       </div>
-      <p className="testimonial-quote" data-oid="rvxhvic">
-        {quote}
-      </p>
-      <div className="testimonial-author" data-oid="k755s7h">
-        <div className="author-avatar" data-oid="ml:l:tm">
-          {author.charAt(0)}
-        </div>
-        <div className="author-info" data-oid="h:v.f:5">
-          <h4 className="author-name" data-oid="krzg67-">
-            {author}
-          </h4>
-          <p className="author-title" data-oid="81r1sak">
-            {title}
-          </p>
+      <p className="testimonial-quote">{quote}</p>
+      <div className="testimonial-author">
+        <div className="author-avatar">{author.charAt(0)}</div>
+        <div className="author-info">
+          <h4 className="author-name">{author}</h4>
+          <p className="author-title">{title}</p>
         </div>
       </div>
     </div>
@@ -127,9 +118,8 @@ export default function TestimonialsSection() {
     <section
       className="section testimonials-section bg-[#F0EAE2]"
       id="testimonials"
-      data-oid="wbfngry"
     >
-      <div className="container" data-oid="0-h6jqu">
+      <div className="container">
         <h2
           className="section-title text-center"
           ref={(el) => {
@@ -140,12 +130,8 @@ export default function TestimonialsSection() {
               titleAnimRef(el);
             }
           }}
-          data-oid="tk26lqj"
         >
-          What Our{" "}
-          <span className="text-highlight" data-oid="py8-:w_">
-            Readers Say
-          </span>
+          What Our <span className="text-highlight">Readers Say</span>
         </h2>
 
         <p
@@ -158,19 +144,17 @@ export default function TestimonialsSection() {
               subtitleAnimRef(el);
             }
           }}
-          data-oid="y3k-8a8"
         >
           Join thousands of satisfied readers who have transformed their
           property investment journey
         </p>
 
-        <div className="testimonials-slider" data-oid="ft5x46z">
-          <div className="navigation-buttons" data-oid="0.2sbv-">
+        <div className="testimonials-slider">
+          <div className="navigation-buttons">
             <button
               onClick={handlePrev}
               className="nav-button prev"
               aria-label="Previous testimonial"
-              data-oid=".esfih8"
             >
               &#10094;
             </button>
@@ -178,23 +162,17 @@ export default function TestimonialsSection() {
               onClick={handleNext}
               className="nav-button next"
               aria-label="Next testimonial"
-              data-oid="76le1ur"
             >
               &#10095;
             </button>
           </div>
 
-          <div
-            className="slider-container"
-            ref={containerRef}
-            data-oid="jr70x.9"
-          >
+          <div className="slider-container" ref={containerRef}>
             <div
               className="slider-track"
               style={{
                 transform: `translateX(${-currentSlide * slideWidth}px)`,
               }}
-              data-oid="655mh2a"
             >
               {testimonials.map((testimonial, index) => (
                 <Testimonial
@@ -203,20 +181,18 @@ export default function TestimonialsSection() {
                   author={testimonial.author}
                   title={testimonial.title}
                   rating={testimonial.rating}
-                  data-oid="8vg1x.c"
                 />
               ))}
             </div>
           </div>
 
-          <div className="slider-controls" data-oid="1ef2zsj">
+          <div className="slider-controls">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 className={`slider-dot ${currentSlide === index ? "active" : ""}`}
                 onClick={() => setCurrentSlide(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                data-oid="ybzhhir"
               />
             ))}
           </div>

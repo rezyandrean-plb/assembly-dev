@@ -272,59 +272,44 @@ The {{site_name}} Team`,
   };
 
   return (
-    <div className="space-y-6" data-oid="732e349">
-      <Card data-oid="cu_yb.7">
-        <CardHeader data-oid="0n97sxk">
-          <CardTitle className="flex items-center gap-2" data-oid="er-dx1z">
-            <Mail className="h-5 w-5" data-oid="8e70::w" />
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Mail className="h-5 w-5" />
             Email Template Management
           </CardTitle>
-          <CardDescription data-oid="ed.53a-">
+          <CardDescription>
             Customize automated email templates sent to users. Use placeholders
             to insert dynamic content.
           </CardDescription>
         </CardHeader>
       </Card>
 
-      <Card data-oid="p74:b9g">
-        <CardHeader data-oid="7ceaahl">
+      <Card>
+        <CardHeader>
           <Collapsible
             open={showPlaceholders}
             onOpenChange={setShowPlaceholders}
-            data-oid="jen:w.c"
           >
-            <CollapsibleTrigger asChild data-oid="e49ty6y">
-              <Button
-                variant="outline"
-                className="w-full justify-between"
-                data-oid="p8upx0a"
-              >
+            <CollapsibleTrigger asChild>
+              <Button variant="outline" className="w-full justify-between">
                 Available Placeholders
-                <Eye className="h-4 w-4" data-oid="pc5grz6" />
+                <Eye className="h-4 w-4" />
               </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="mt-4" data-oid="bcm6z6v">
-              <div
-                className="grid grid-cols-1 md:grid-cols-2 gap-2"
-                data-oid="v8t7sfr"
-              >
+            <CollapsibleContent className="mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {availablePlaceholders.map((placeholder) => (
                   <div
                     key={placeholder.key}
                     className="flex items-center justify-between p-2 border rounded-lg"
-                    data-oid="pnj6qi8"
                   >
-                    <div data-oid="x-zhq7:">
-                      <code
-                        className="text-sm font-mono bg-gray-100 px-2 py-1 rounded"
-                        data-oid="hypc4c-"
-                      >
+                    <div>
+                      <code className="text-sm font-mono bg-gray-100 px-2 py-1 rounded">
                         {placeholder.key}
                       </code>
-                      <p
-                        className="text-xs text-gray-500 mt-1"
-                        data-oid="t5rk0tz"
-                      >
+                      <p className="text-xs text-gray-500 mt-1">
                         {placeholder.description}
                       </p>
                     </div>
@@ -332,9 +317,8 @@ The {{site_name}} Team`,
                       variant="ghost"
                       size="sm"
                       onClick={() => copyPlaceholder(placeholder.key)}
-                      data-oid="caym2sd"
                     >
-                      <Copy className="h-4 w-4" data-oid="ks_:j7z" />
+                      <Copy className="h-4 w-4" />
                     </Button>
                   </div>
                 ))}
@@ -344,53 +328,42 @@ The {{site_name}} Team`,
         </CardHeader>
       </Card>
 
-      <div className="space-y-4" data-oid="p.lundo">
+      <div className="space-y-4">
         {templates.map((template) => (
-          <Card key={template.id} data-oid="b.g4hdd">
-            <CardHeader data-oid="pwl9gmr">
-              <div
-                className="flex items-center justify-between"
-                data-oid="w21:ifb"
-              >
-                <div data-oid="1vp4.sw">
-                  <CardTitle className="text-lg" data-oid="_y46qo3">
-                    {template.name}
-                  </CardTitle>
-                  <CardDescription data-oid="8toi:zp">
-                    {template.description}
-                  </CardDescription>
+          <Card key={template.id}>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="text-lg">{template.name}</CardTitle>
+                  <CardDescription>{template.description}</CardDescription>
                 </div>
                 <Button
                   variant="outline"
                   onClick={() => handleEditTemplate(template)}
-                  data-oid="a-a7ra9"
                 >
-                  <Edit className="mr-2 h-4 w-4" data-oid="r8:ruld" />
+                  <Edit className="mr-2 h-4 w-4" />
                   Edit
                 </Button>
               </div>
             </CardHeader>
-            <CardContent data-oid="v:m2gyx">
-              <div className="space-y-2" data-oid="3af6nl4">
-                <div data-oid="1.5n3q.">
-                  <Label className="text-sm font-medium" data-oid="6yk_v3.">
-                    Subject:
-                  </Label>
-                  <p className="text-sm text-gray-600 mt-1" data-oid="v6q-38n">
+            <CardContent>
+              <div className="space-y-2">
+                <div>
+                  <Label className="text-sm font-medium">Subject:</Label>
+                  <p className="text-sm text-gray-600 mt-1">
                     {template.subject}
                   </p>
                 </div>
-                <div data-oid="q88hdw2">
-                  <Label className="text-sm font-medium" data-oid="5h-ugrd">
+                <div>
+                  <Label className="text-sm font-medium">
                     Placeholders used:
                   </Label>
-                  <div className="flex flex-wrap gap-1 mt-1" data-oid="frh99cx">
+                  <div className="flex flex-wrap gap-1 mt-1">
                     {template.placeholders.map((placeholder) => (
                       <Badge
                         key={placeholder}
                         variant="secondary"
                         className="text-xs bg-gray-600 text-white"
-                        data-oid="1qaqqo:"
                       >
                         {placeholder}
                       </Badge>
@@ -403,43 +376,33 @@ The {{site_name}} Team`,
         ))}
       </div>
 
-      <Card data-oid="6a2xnf9">
-        <CardContent className="pt-6" data-oid=":y1im-a">
+      <Card>
+        <CardContent className="pt-6">
           <Button
             onClick={handleSaveAll}
             disabled={isLoading}
             className="bg-[#123B79] hover:bg-[#425DA0]"
-            data-oid="p9o:jba"
           >
-            <Save className="mr-2 h-4 w-4" data-oid="nid08r_" />
+            <Save className="mr-2 h-4 w-4" />
             {isLoading ? "Saving..." : "Save All Templates"}
           </Button>
         </CardContent>
       </Card>
 
-      <Dialog
-        open={isDialogOpen}
-        onOpenChange={setIsDialogOpen}
-        data-oid="i5wz.fv"
-      >
-        <DialogContent
-          className="max-w-4xl max-h-[80vh] overflow-y-auto"
-          data-oid="6db10cd"
-        >
-          <DialogHeader data-oid="3yew5.u">
-            <DialogTitle data-oid="hx0d0k3">Edit Email Template</DialogTitle>
-            <DialogDescription data-oid="vb1bhk3">
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Edit Email Template</DialogTitle>
+            <DialogDescription>
               Customize the email template content. Use placeholders for dynamic
               content.
             </DialogDescription>
           </DialogHeader>
 
           {editingTemplate && (
-            <div className="space-y-4" data-oid="63geu:u">
-              <div className="space-y-2" data-oid="2sy91mo">
-                <Label htmlFor="template-subject" data-oid="pcy9ujl">
-                  Subject Line
-                </Label>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="template-subject">Subject Line</Label>
                 <Input
                   id="template-subject"
                   value={editingTemplate.subject}
@@ -449,14 +412,11 @@ The {{site_name}} Team`,
                     )
                   }
                   placeholder="Email subject line"
-                  data-oid="j2450xt"
                 />
               </div>
 
-              <div className="space-y-2" data-oid="pll47im">
-                <Label htmlFor="template-body" data-oid="k-7b-3i">
-                  Email Body
-                </Label>
+              <div className="space-y-2">
+                <Label htmlFor="template-body">Email Body</Label>
                 <Textarea
                   id="template-body"
                   value={editingTemplate.body}
@@ -468,28 +428,22 @@ The {{site_name}} Team`,
                   placeholder="Email content..."
                   rows={15}
                   className="font-mono text-sm"
-                  data-oid="axz5cgd"
                 />
 
-                <p className="text-xs text-gray-500" data-oid=".bihxy2">
+                <p className="text-xs text-gray-500">
                   Use placeholders like {{ customer_name }} for dynamic content
                 </p>
               </div>
             </div>
           )}
 
-          <DialogFooter data-oid=".n4x076">
-            <Button
-              variant="outline"
-              onClick={() => setIsDialogOpen(false)}
-              data-oid="mxd--5b"
-            >
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
               Cancel
             </Button>
             <Button
               onClick={handleSaveTemplate}
               className="bg-[#123B79] hover:bg-[#425DA0]"
-              data-oid="8qab9e:"
             >
               Save Template
             </Button>

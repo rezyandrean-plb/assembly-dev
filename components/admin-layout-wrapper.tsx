@@ -12,17 +12,9 @@ export function AdminLayoutWrapper({ children }: AdminLayoutWrapperProps) {
 
   if (isAdminRoute) {
     // For admin routes, render without padding
-    return (
-      <main className="flex-grow" data-oid="631cf8n">
-        {children}
-      </main>
-    );
+    return <main className="flex-grow">{children}</main>;
   }
 
   // For public routes, render with padding
-  return (
-    <main className="flex-grow pt-16" data-oid="njl2fur">
-      {children}
-    </main>
-  );
+  return <main className="flex-grow pt-16">{children}</main>;
 }

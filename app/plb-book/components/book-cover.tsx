@@ -42,20 +42,17 @@ export default function BookCover() {
             "perspective(1000px) rotateY(0) rotateX(0)";
         }
       }}
-      data-oid="8n_1ml8"
     >
-      <div ref={bookRef} className="book" data-oid="727n8sr">
-        <div className="book-cover" data-oid="hxtry5d">
-          <div className="book-title" data-oid="-c0cir3">
-            <h2 data-oid="6jw:bqa">Property Launch Bible</h2>
-            <p data-oid="8.b.1bn">2025 Edition</p>
+      <div ref={bookRef} className="book">
+        <div className="book-cover">
+          <div className="book-title">
+            <h2>Property Launch Bible</h2>
+            <p>2025 Edition</p>
           </div>
-          <div className="book-author" data-oid="wnyiqpm">
-            By Property Lim Brothers
-          </div>
-          <div className="book-effect" data-oid=".vs3.j5"></div>
+          <div className="book-author">By Property Lim Brothers</div>
+          <div className="book-effect"></div>
         </div>
-        <div className="book-spine" data-oid="0ftx94y"></div>
+        <div className="book-spine"></div>
       </div>
 
       <motion.div
@@ -64,7 +61,6 @@ export default function BookCover() {
           width: isHovered ? "90%" : "80%",
           opacity: isHovered ? 0.3 : 0.2,
         }}
-        data-oid="f3jnow7"
       ></motion.div>
 
       <motion.div
@@ -76,7 +72,6 @@ export default function BookCover() {
           yoyo: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
-        data-oid="x.-2qii"
       >
         FREE!
       </motion.div>

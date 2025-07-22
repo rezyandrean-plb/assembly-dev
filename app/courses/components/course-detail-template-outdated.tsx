@@ -204,31 +204,26 @@ export default function CourseDetailTemplate({
   const hasReviews = courseData.reviews && courseData.reviews.length > 0;
 
   return (
-    <main className="relative bg-white min-h-screen" data-oid="4vgz3jp">
+    <main className="relative bg-white min-h-screen">
       {/* Hero Section */}
-      <section ref={heroSectionRef} className="pt-32 pb-16" data-oid="phfyo0h">
-        <div className="container mx-auto px-4" data-oid="2llei2m">
+      <section ref={heroSectionRef} className="pt-32 pb-16">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mb-6"
-            data-oid="_40dhyk"
           >
             <a
               href="/courses"
               className="inline-flex items-center text-[#123B79] hover:underline"
-              data-oid="_.j6xw."
             >
-              <ArrowLeft className="h-4 w-4 mr-2" data-oid="ji1mqsa" />
+              <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Courses
             </a>
           </motion.div>
 
-          <div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-            data-oid="gsqye9y"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Content - Takes up 2/3 of the space */}
             <motion.div
               ref={mainContentRef}
@@ -236,95 +231,61 @@ export default function CourseDetailTemplate({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              data-oid="qb4uu8s"
             >
-              <h1
-                className="text-4xl font-bold text-[#123B79] mb-4 drop-shadow-sm"
-                data-oid="58egc2q"
-              >
+              <h1 className="text-4xl font-bold text-[#123B79] mb-4 drop-shadow-sm">
                 {courseData.title}
               </h1>
 
-              <div
-                className="flex flex-wrap items-center gap-4 mb-6"
-                data-oid="yy:5t7j"
-              >
-                <div className="flex items-center" data-oid="b-m6oia">
-                  <Star
-                    className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                    data-oid="vip3ypw"
-                  />
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                <div className="flex items-center">
+                  <Star className="h-5 w-5 text-[#F0A500] fill-[#F0A500]" />
 
-                  <span className="ml-1 font-semibold" data-oid="q0i94-_">
+                  <span className="ml-1 font-semibold">
                     {courseData.rating}
                   </span>
-                  <span className="ml-1 text-gray-500" data-oid="v87ve3d">
+                  <span className="ml-1 text-gray-500">
                     ({courseData.students} students)
                   </span>
                 </div>
-                <div
-                  className="flex items-center text-gray-600"
-                  data-oid="isc3.7m"
-                >
-                  <Clock className="h-4 w-4 mr-1" data-oid="l-s3vij" />
-                  <span data-oid="lu6rskm">{courseData.duration}</span>
+                <div className="flex items-center text-gray-600">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{courseData.duration}</span>
                 </div>
-                <div
-                  className="flex items-center text-gray-600"
-                  data-oid="t23va1w"
-                >
-                  <Calendar className="h-4 w-4 mr-1" data-oid="jgt14e3" />
-                  <span data-oid="j8t47ke">
-                    Last updated: {courseData.lastUpdated}
-                  </span>
+                <div className="flex items-center text-gray-600">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span>Last updated: {courseData.lastUpdated}</span>
                 </div>
-                <div
-                  className="flex items-center text-gray-600"
-                  data-oid="01:ds_n"
-                >
-                  <Award className="h-4 w-4 mr-1" data-oid="i324f.7" />
-                  <span data-oid="ewqd8yk">{courseData.level}</span>
+                <div className="flex items-center text-gray-600">
+                  <Award className="h-4 w-4 mr-1" />
+                  <span>{courseData.level}</span>
                 </div>
               </div>
 
               {/* Course Image for Mobile */}
-              <div
-                className="lg:hidden mb-6 relative rounded-xl overflow-hidden"
-                data-oid="o336krc"
-              >
-                <div className="aspect-video relative" data-oid=":avta66">
+              <div className="lg:hidden mb-6 relative rounded-xl overflow-hidden">
+                <div className="aspect-video relative">
                   <Image
                     src={courseData.image || "/placeholder.svg"}
                     alt={courseData.title}
                     fill
                     className="object-cover"
-                    data-oid="4yqv0us"
                   />
                 </div>
               </div>
 
-              <div className="text-lg text-gray-700 mb-8" data-oid="s.61svn">
+              <div className="text-lg text-gray-700 mb-8">
                 {typeof courseData.description === "string"
                   ? courseData.description
                   : courseData.description}
               </div>
 
               {/* Instructors Section - Updated to display side by side */}
-              <div className="mb-8" data-oid="unyctl9">
-                <h2
-                  className="font-semibold text-xl text-[#123B79] mb-4"
-                  data-oid="_pge1:c"
-                >
+              <div className="mb-8">
+                <h2 className="font-semibold text-xl text-[#123B79] mb-4">
                   Course Instructors
                 </h2>
-                <div
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
-                  data-oid="-dp9r0-"
-                >
-                  <div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                    data-oid="r3:ers6"
-                  >
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {Array.isArray(courseData.instructors) &&
                     courseData.instructors.length > 0 ? (
                       courseData.instructors.map((instructor, index) => (
@@ -332,14 +293,10 @@ export default function CourseDetailTemplate({
                           key={index}
                           name={instructor.name}
                           image={instructor.image}
-                          data-oid="6z..ugq"
                         />
                       ))
                     ) : (
-                      <div
-                        className="text-gray-500 col-span-4"
-                        data-oid="468ve.y"
-                      >
+                      <div className="text-gray-500 col-span-4">
                         Instructor information coming soon.
                       </div>
                     )}
@@ -349,34 +306,16 @@ export default function CourseDetailTemplate({
 
               {/* Course Highlights */}
               {courseData.highlights && (
-                <div
-                  className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="j4413js"
-                >
-                  <h2
-                    className="text-xl font-bold text-[#123B79] mb-4"
-                    data-oid="w804y6r"
-                  >
+                <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100">
+                  <h2 className="text-xl font-bold text-[#123B79] mb-4">
                     Course Highlights
                   </h2>
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                    data-oid="tc1-1up"
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {courseData.highlights.map((highlight, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start"
-                        data-oid="q2:j:re"
-                      >
-                        <CheckCircle
-                          className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5"
-                          data-oid="2:95cb0"
-                        />
+                      <div key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-[#F0A500] mr-3 flex-shrink-0 mt-0.5" />
 
-                        <p className="text-gray-700" data-oid="uvavsuo">
-                          {highlight}
-                        </p>
+                        <p className="text-gray-700">{highlight}</p>
                       </div>
                     ))}
                   </div>
@@ -384,40 +323,22 @@ export default function CourseDetailTemplate({
               )}
 
               {/* What You'll Learn */}
-              <div
-                className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                data-oid="vxfd5xu"
-              >
-                <h2
-                  className="text-xl font-bold text-[#123B79] mb-4"
-                  data-oid=":l7eex4"
-                >
+              <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100">
+                <h2 className="text-xl font-bold text-[#123B79] mb-4">
                   What You'll Learn
                 </h2>
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                  data-oid="ycxmckj"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {Array.isArray(courseData.whatYouWillLearn) &&
                   courseData.whatYouWillLearn.length > 0 ? (
                     courseData.whatYouWillLearn.map((item, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start"
-                        data-oid="yyqo:ty"
-                      >
-                        <CheckCircle
-                          className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5"
-                          data-oid="86:jfyl"
-                        />
+                      <div key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-[#123B79] mr-3 flex-shrink-0 mt-0.5" />
 
-                        <p className="text-gray-700" data-oid="wlv:50p">
-                          {item}
-                        </p>
+                        <p className="text-gray-700">{item}</p>
                       </div>
                     ))
                   ) : (
-                    <div className="text-gray-500" data-oid="ygjto8k">
+                    <div className="text-gray-500">
                       Learning outcomes will be updated soon.
                     </div>
                   )}
@@ -425,21 +346,12 @@ export default function CourseDetailTemplate({
               </div>
 
               {/* Course Content */}
-              <div
-                className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                data-oid="45b54:_"
-              >
-                <div
-                  className="flex justify-between items-center mb-4"
-                  data-oid="zjljl06"
-                >
-                  <h2
-                    className="text-xl font-bold text-[#123B79]"
-                    data-oid="wcih0rj"
-                  >
+              <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100">
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-xl font-bold text-[#123B79]">
                     Course Content
                   </h2>
-                  <div className="text-sm text-gray-600" data-oid="cohuiq9">
+                  <div className="text-sm text-gray-600">
                     {Array.isArray(courseData.curriculum) &&
                     courseData.curriculum.length > 0
                       ? `${courseData.curriculum.length} modules • ${courseData.duration}`
@@ -450,65 +362,41 @@ export default function CourseDetailTemplate({
                   </div>
                 </div>
 
-                <div className="space-y-4" data-oid="gxsll6f">
+                <div className="space-y-4">
                   {Array.isArray(courseData.curriculum) &&
                   courseData.curriculum.length > 0 ? (
                     courseData.curriculum.map((module, moduleIndex) => (
                       <div
                         key={moduleIndex}
                         className="border border-gray-200 rounded-lg overflow-hidden"
-                        data-oid="su2mz-f"
                       >
                         <button
                           className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center hover:bg-gray-100 transition-colors"
                           onClick={() => toggleModule(moduleIndex)}
-                          data-oid="_lpxe.m"
                         >
-                          <h3
-                            className="font-bold text-[#123B79] text-left"
-                            data-oid="mf210w1"
-                          >
+                          <h3 className="font-bold text-[#123B79] text-left">
                             Module {moduleIndex + 1}: {module.title}
                           </h3>
-                          <div className="flex items-center" data-oid="a1plsoo">
+                          <div className="flex items-center">
                             {expandedModules.includes(moduleIndex) ? (
-                              <ChevronUp
-                                className="h-5 w-5 text-gray-600"
-                                data-oid="cb1xej8"
-                              />
+                              <ChevronUp className="h-5 w-5 text-gray-600" />
                             ) : (
-                              <ChevronDown
-                                className="h-5 w-5 text-gray-600"
-                                data-oid="yax_it2"
-                              />
+                              <ChevronDown className="h-5 w-5 text-gray-600" />
                             )}
                           </div>
                         </button>
 
                         {expandedModules.includes(moduleIndex) && (
-                          <div
-                            className="divide-y divide-gray-200"
-                            data-oid="acqbc6j"
-                          >
+                          <div className="divide-y divide-gray-200">
                             {module.lessons.map((lesson, lessonIndex) => (
                               <div
                                 key={lessonIndex}
                                 className="px-6 py-4 flex items-center"
-                                data-oid="j:.ht4a"
                               >
-                                <div
-                                  className="flex items-center"
-                                  data-oid="38ujl4:"
-                                >
-                                  <BookOpen
-                                    className="h-4 w-4 text-[#123B79] mr-3"
-                                    data-oid="l3-ek9:"
-                                  />
+                                <div className="flex items-center">
+                                  <BookOpen className="h-4 w-4 text-[#123B79] mr-3" />
 
-                                  <span
-                                    className="text-gray-700"
-                                    data-oid="yzaf74h"
-                                  >
+                                  <span className="text-gray-700">
                                     {lesson}
                                   </span>
                                 </div>
@@ -524,28 +412,21 @@ export default function CourseDetailTemplate({
                       <div
                         key={sectionIndex}
                         className="border border-gray-200 rounded-lg overflow-hidden"
-                        data-oid="adn-ys4"
                       >
-                        <div
-                          className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center"
-                          data-oid="_87ljxs"
-                        >
-                          <h3
-                            className="font-bold text-[#123B79] text-left"
-                            data-oid="0wb.80b"
-                          >
+                        <div className="w-full bg-gray-50 px-6 py-4 flex justify-between items-center">
+                          <h3 className="font-bold text-[#123B79] text-left">
                             Section {sectionIndex + 1}: {section.title}
                           </h3>
                         </div>
-                        <div className="px-6 py-4" data-oid="8fmjx8x">
-                          <span className="text-gray-700" data-oid="1bxxtmg">
+                        <div className="px-6 py-4">
+                          <span className="text-gray-700">
                             {section.content}
                           </span>
                         </div>
                       </div>
                     ))
                   ) : (
-                    <div className="text-gray-500" data-oid="73.rclx">
+                    <div className="text-gray-500">
                       No course content available.
                     </div>
                   )}
@@ -554,47 +435,29 @@ export default function CourseDetailTemplate({
 
               {/* Who This Course Is For */}
               {courseData.targetAudience && (
-                <div
-                  className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                  data-oid="ep10fm0"
-                >
-                  <h2
-                    className="text-xl font-bold text-[#123B79] mb-4"
-                    data-oid="ip3c5d3"
-                  >
+                <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100">
+                  <h2 className="text-xl font-bold text-[#123B79] mb-4">
                     Who This Course Is For
                   </h2>
-                  <ul
-                    className="list-disc pl-5 space-y-2 text-gray-700"
-                    data-oid="rqlbkym"
-                  >
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     {courseData.targetAudience.map((audience, index) => (
-                      <li key={index} data-oid="n9vfih:">
-                        {audience}
-                      </li>
+                      <li key={index}>{audience}</li>
                     ))}
                   </ul>
                 </div>
               )}
 
               {/* Student Testimonials - Now part of the main content */}
-              <div
-                className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100"
-                data-oid=".:uwtjk"
-              >
+              <div className="bg-white rounded-xl p-6 mb-8 shadow-md border border-gray-100">
                 <h2
                   ref={reviewsSectionRef}
                   className="text-2xl font-bold text-[#123B79] mb-8"
-                  data-oid="xh-4951"
                 >
                   What Our Students Say
                 </h2>
 
                 {hasReviews ? (
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
-                    data-oid="f-uru7g"
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {courseData.reviews!.map((review, index) => (
                       <motion.div
                         key={index}
@@ -603,20 +466,11 @@ export default function CourseDetailTemplate({
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 * index }}
                         viewport={{ once: true }}
-                        data-oid="kvjx_fa"
                       >
-                        <div
-                          className="flex justify-between items-start mb-4"
-                          data-oid="-h_.e.2"
-                        >
-                          <div data-oid="4uvjspj">
-                            <h4 className="font-bold" data-oid="et0zxrh">
-                              {review.name}
-                            </h4>
-                            <div
-                              className="flex items-center mt-1"
-                              data-oid="u0h5r-q"
-                            >
+                        <div className="flex justify-between items-start mb-4">
+                          <div>
+                            <h4 className="font-bold">{review.name}</h4>
+                            <div className="flex items-center mt-1">
                               {[...Array(5)].map((_, i) => (
                                 <Star
                                   key={i}
@@ -625,21 +479,15 @@ export default function CourseDetailTemplate({
                                       ? "text-[#F0A500] fill-[#F0A500]"
                                       : "text-gray-300"
                                   }`}
-                                  data-oid="uus5r_6"
                                 />
                               ))}
-                              <span
-                                className="ml-2 text-sm text-gray-500"
-                                data-oid="mowlzg7"
-                              >
+                              <span className="ml-2 text-sm text-gray-500">
                                 {review.date}
                               </span>
                             </div>
                           </div>
                         </div>
-                        <p className="text-gray-700" data-oid="ycjmx7_">
-                          {review.comment}
-                        </p>
+                        <p className="text-gray-700">{review.comment}</p>
                       </motion.div>
                     ))}
                   </div>
@@ -649,29 +497,16 @@ export default function CourseDetailTemplate({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    data-oid="4rkmrhv"
                   >
-                    <div className="mb-6 text-gray-300" data-oid="uemnmhp">
-                      <div
-                        className="rounded-full bg-gray-100 w-24 h-24 flex items-center justify-center mb-2"
-                        data-oid="srb4xkf"
-                      >
-                        <MessageCircle
-                          className="h-12 w-12"
-                          data-oid="7bg.u.a"
-                        />
+                    <div className="mb-6 text-gray-300">
+                      <div className="rounded-full bg-gray-100 w-24 h-24 flex items-center justify-center mb-2">
+                        <MessageCircle className="h-12 w-12" />
                       </div>
                     </div>
-                    <h3
-                      className="text-xl font-semibold text-gray-700 mb-2"
-                      data-oid="pgf:8cy"
-                    >
+                    <h3 className="text-xl font-semibold text-gray-700 mb-2">
                       No Reviews Yet
                     </h3>
-                    <p
-                      className="text-gray-500 text-center max-w-md mb-6"
-                      data-oid="dq33pdl"
-                    >
+                    <p className="text-gray-500 text-center max-w-md mb-6">
                       Be the first to share your experience with this course and
                       help others make informed decisions.
                     </p>
@@ -679,7 +514,6 @@ export default function CourseDetailTemplate({
                       onClick={() => {}}
                       variant="outline"
                       className="text-[#123B79] border-[#123B79]"
-                      data-oid="4cl:t0t"
                     >
                       Write a Review
                     </Button>
@@ -704,41 +538,27 @@ export default function CourseDetailTemplate({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              data-oid="gqsudm3"
             >
               {/* Course Preview Image - Desktop Only */}
-              <div
-                className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg"
-                data-oid="j3-z13-"
-              >
-                <div className="aspect-video relative" data-oid="w-v.psq">
+              <div className="hidden lg:block mb-6 rounded-xl overflow-hidden shadow-lg">
+                <div className="aspect-video relative">
                   <Image
                     src={courseData.image || "/placeholder.svg"}
                     alt={courseData.title}
                     fill
                     className="object-cover"
-                    data-oid="w7k_.2j"
                   />
                 </div>
               </div>
 
               {/* Enrollment Card */}
-              <div
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6"
-                data-oid="2_2ntu."
-              >
-                <div className="p-6" data-oid=".0.c.3m">
-                  <div
-                    className="flex justify-between items-center mb-4"
-                    data-oid="hx9vbwz"
-                  >
-                    <div
-                      className="text-3xl font-bold text-[#123B79]"
-                      data-oid="zsbvo:w"
-                    >
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 mb-6">
+                <div className="p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="text-3xl font-bold text-[#123B79]">
                       {courseData.price}
                     </div>
-                    <div className="flex space-x-2" data-oid="bm5-cpy">
+                    <div className="flex space-x-2">
                       <button
                         onClick={handleBookmark}
                         className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
@@ -747,30 +567,19 @@ export default function CourseDetailTemplate({
                             ? "Remove from wishlist"
                             : "Add to wishlist"
                         }
-                        data-oid="k-w5.x9"
                       >
                         {isBookmarked ? (
-                          <BookOpen
-                            className="h-5 w-5 text-[#F0A500] fill-[#F0A500]"
-                            data-oid="vuom5si"
-                          />
+                          <BookOpen className="h-5 w-5 text-[#F0A500] fill-[#F0A500]" />
                         ) : (
-                          <BookOpen
-                            className="h-5 w-5 text-gray-700"
-                            data-oid="ii.gi65"
-                          />
+                          <BookOpen className="h-5 w-5 text-gray-700" />
                         )}
                       </button>
                       <button
                         className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                         onClick={() => setIsShareModalOpen(true)}
                         aria-label="Share course"
-                        data-oid="x-yj98e"
                       >
-                        <Share2
-                          className="h-5 w-5 text-gray-700"
-                          data-oid="y5q4x94"
-                        />
+                        <Share2 className="h-5 w-5 text-gray-700" />
                       </button>
                     </div>
                   </div>
@@ -796,54 +605,38 @@ export default function CourseDetailTemplate({
                         // For now, just show a message or redirect
                       }
                     }}
-                    data-oid="ve9lcy1"
                   >
-                    <ShoppingCart className="mr-2 h-4 w-4" data-oid="-ah5djk" />
+                    <ShoppingCart className="mr-2 h-4 w-4" />
                     Enroll Now
                   </Button>
 
-                  <div className="space-y-4 mt-6" data-oid="pko1qit">
-                    <div className="flex items-center" data-oid="cdvw4ej">
-                      <Clock
-                        className="h-5 w-5 text-[#123B79] mr-3"
-                        data-oid="lglwqu2"
-                      />
+                  <div className="space-y-4 mt-6">
+                    <div className="flex items-center">
+                      <Clock className="h-5 w-5 text-[#123B79] mr-3" />
 
-                      <div data-oid="qelm-wm">
-                        <p className="font-semibold" data-oid=":ecb227">
-                          Course Duration
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="nzi-w8o">
+                      <div>
+                        <p className="font-semibold">Course Duration</p>
+                        <p className="text-sm text-gray-600">
                           {courseData.duration}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center" data-oid="10sduw3">
-                      <Users
-                        className="h-5 w-5 text-[#123B79] mr-3"
-                        data-oid=".pvlsi0"
-                      />
+                    <div className="flex items-center">
+                      <Users className="h-5 w-5 text-[#123B79] mr-3" />
 
-                      <div data-oid="5e9ntry">
-                        <p className="font-semibold" data-oid="zw3posr">
-                          Total Enrolled
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="7muo2l3">
+                      <div>
+                        <p className="font-semibold">Total Enrolled</p>
+                        <p className="text-sm text-gray-600">
                           {courseData.students}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center" data-oid="hul1.q7">
-                      <BarChart
-                        className="h-5 w-5 text-[#123B79] mr-3"
-                        data-oid="2l.nhjx"
-                      />
+                    <div className="flex items-center">
+                      <BarChart className="h-5 w-5 text-[#123B79] mr-3" />
 
-                      <div data-oid="343ckr4">
-                        <p className="font-semibold" data-oid="9k.687u">
-                          Course Level
-                        </p>
-                        <p className="text-sm text-gray-600" data-oid="a00k_-f">
+                      <div>
+                        <p className="font-semibold">Course Level</p>
+                        <p className="text-sm text-gray-600">
                           {courseData.level}
                         </p>
                       </div>
@@ -861,19 +654,12 @@ export default function CourseDetailTemplate({
       <section
         ref={relatedCoursesRef}
         className="py-16 bg-gray-50 border-y border-gray-100"
-        data-oid="_u:_yi:"
       >
-        <div className="container mx-auto px-4" data-oid="dl1bsxn">
-          <h2
-            className="text-2xl font-bold text-[#123B79] mb-8"
-            data-oid="l6rj83u"
-          >
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-[#123B79] mb-8">
             Related Courses You Might Like
           </h2>
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            data-oid="spa.jiz"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Financial Modeling Masterclass",
@@ -907,51 +693,31 @@ export default function CourseDetailTemplate({
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 viewport={{ once: true }}
-                data-oid="plehf:q"
               >
-                <div className="relative h-48" data-oid="039yy:8">
+                <div className="relative h-48">
                   <Image
                     src={relatedCourse.image || "/placeholder.svg"}
                     alt={relatedCourse.title}
                     fill
                     className="object-cover"
-                    data-oid="chcn2::"
                   />
 
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-                    data-oid="axqpnes"
-                  ></div>
-                  <div
-                    className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full"
-                    data-oid="0gbcsb5"
-                  >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-[#123B79] text-white text-xs font-bold px-3 py-1 rounded-full">
                     {relatedCourse.level}
                   </div>
                 </div>
-                <div className="p-6" data-oid="8tps:0s">
-                  <h3
-                    className="text-lg font-bold text-[#123B79] mb-2"
-                    data-oid=":igi5u8"
-                  >
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-[#123B79] mb-2">
                     {relatedCourse.title}
                   </h3>
-                  <div
-                    className="text-gray-500 text-sm mb-4"
-                    data-oid="rbze4xj"
-                  >
-                    <span className="inline-block mr-4" data-oid="vjcypve">
+                  <div className="text-gray-500 text-sm mb-4">
+                    <span className="inline-block mr-4">
                       ⏱️ {relatedCourse.duration}
                     </span>
                   </div>
-                  <div
-                    className="flex justify-between items-center"
-                    data-oid="1j87p0q"
-                  >
-                    <span
-                      className="font-bold text-[#123B79]"
-                      data-oid="o64ktg4"
-                    >
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-[#123B79]">
                       {relatedCourse.price}
                     </span>
                     <Button
@@ -960,7 +726,6 @@ export default function CourseDetailTemplate({
                       onClick={() =>
                         router.push(`/courses/${relatedCourse.slug}`)
                       }
-                      data-oid="t.pj_2z"
                     >
                       View Course
                     </Button>
@@ -972,22 +737,16 @@ export default function CourseDetailTemplate({
         </div>
       </section>
       {/* Final CTA */}
-      <section
-        className="py-16 bg-[#123B79] text-white border-y border-gray-100"
-        data-oid="i-7r4ij"
-      >
-        <div className="container mx-auto px-4 text-center" data-oid="g:gqn7_">
-          <h2 className="text-3xl font-bold mb-4" data-oid="_gaogaq">
+      <section className="py-16 bg-[#123B79] text-white border-y border-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">
             Ready to advance your property investment knowledge?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" data-oid="ymxm6-2">
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join {courseData.students}+ students who are already transforming
             their investment strategies with this course.
           </p>
-          <Button
-            className="bg-[#F0A500] hover:bg-[#D89400] text-[#123B79] font-bold text-lg px-8 py-6"
-            data-oid="hp1i:yy"
-          >
+          <Button className="bg-[#F0A500] hover:bg-[#D89400] text-[#123B79] font-bold text-lg px-8 py-6">
             Enroll Now for {courseData.price}
           </Button>
         </div>
@@ -995,82 +754,61 @@ export default function CourseDetailTemplate({
 
       {/* Share Modal */}
       {isShareModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          data-oid="mtpuj0v"
-        >
-          <div
-            className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-            data-oid="j:d.t30"
-          >
-            <div
-              className="flex justify-between items-center p-4 border-b"
-              data-oid="74khkic"
-            >
-              <h3 className="font-bold text-lg" data-oid="elezv:f">
-                Share Course
-              </h3>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl overflow-hidden max-w-md w-full">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="font-bold text-lg">Share Course</h3>
               <button
                 onClick={() => setIsShareModalOpen(false)}
                 className="p-1 rounded-full hover:bg-gray-100"
-                data-oid="t0d-:ku"
               >
-                <X className="h-5 w-5" data-oid="2ovg_o6" />
+                <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="p-6" data-oid="uw96n_t">
-              <div className="mb-6" data-oid="91uf4on">
-                <p className="font-medium mb-2" data-oid="pk:__36">
-                  Page Link
-                </p>
-                <div className="flex" data-oid="ays15hi">
+            <div className="p-6">
+              <div className="mb-6">
+                <p className="font-medium mb-2">Page Link</p>
+                <div className="flex">
                   <input
                     type="text"
                     value={`https://assembly.sg/courses/${courseData.slug}`}
                     readOnly
                     className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 bg-gray-50"
-                    data-oid="qe:20.h"
                   />
 
                   <button
                     onClick={copyToClipboard}
                     className="bg-[#123B79] text-white px-3 py-2 rounded-r-md hover:bg-[#0A2A5E] transition-colors"
-                    data-oid="oz65_r4"
                   >
                     {copied ? (
-                      <Check className="h-5 w-5" data-oid="z5xnw8t" />
+                      <Check className="h-5 w-5" />
                     ) : (
-                      <Copy className="h-5 w-5" data-oid="jt.7a.i" />
+                      <Copy className="h-5 w-5" />
                     )}
                   </button>
                 </div>
               </div>
 
-              <div data-oid="4fxxkfi">
-                <p className="font-medium mb-3" data-oid="jwn_2ce">
-                  Share on social media
-                </p>
-                <div className="flex space-x-4" data-oid="6skl4m.">
+              <div>
+                <p className="font-medium mb-3">Share on social media</p>
+                <div className="flex space-x-4">
                   <button
                     onClick={() => shareOnSocialMedia("facebook")}
                     className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                    data-oid="x6nqfmm"
                   >
-                    <Facebook className="h-6 w-6" data-oid="6szlm-b" />
+                    <Facebook className="h-6 w-6" />
                   </button>
                   <button
                     onClick={() => shareOnSocialMedia("twitter")}
                     className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                    data-oid="yavggtq"
                   >
-                    <X className="h-5 w-5" data-oid="kcp1t_-" />
+                    <X className="h-5 w-5" />
                   </button>
                   <button
                     onClick={() => shareOnSocialMedia("linkedin")}
                     className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
-                    data-oid="s0s_26u"
                   >
-                    <Linkedin className="h-5 w-5" data-oid="2z0qqp." />
+                    <Linkedin className="h-5 w-5" />
                   </button>
                 </div>
               </div>
@@ -1081,39 +819,26 @@ export default function CourseDetailTemplate({
 
       {/* Login Modal */}
       {isLoginModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          data-oid="jlnbdpn"
-        >
-          <div
-            className="bg-white rounded-xl overflow-hidden max-w-md w-full"
-            data-oid="b._99os"
-          >
-            <div
-              className="flex justify-between items-center p-4 border-b"
-              data-oid="08q0u84"
-            >
-              <h3 className="font-bold text-lg" data-oid="c4fost_">
-                Login Required
-              </h3>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl overflow-hidden max-w-md w-full">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="font-bold text-lg">Login Required</h3>
               <button
                 onClick={() => setIsLoginModalOpen(false)}
                 className="p-1 rounded-full hover:bg-gray-100"
-                data-oid="wat0.c-"
               >
-                <X className="h-5 w-5" data-oid=":b0dhh4" />
+                <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="p-6" data-oid="9jcfqpa">
-              <p className="mb-6" data-oid="uo.oscs">
+            <div className="p-6">
+              <p className="mb-6">
                 Please log in to add this course to your wishlist.
               </p>
-              <div className="space-y-4" data-oid="b4_d:ke">
-                <div data-oid=".3dmxna">
+              <div className="space-y-4">
+                <div>
                   <label
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid=":sjjqoj"
                   >
                     Email
                   </label>
@@ -1122,14 +847,12 @@ export default function CourseDetailTemplate({
                     id="email"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md"
                     placeholder="your@email.com"
-                    data-oid="3v-.jer"
                   />
                 </div>
-                <div data-oid="-83dbvs">
+                <div>
                   <label
                     htmlFor="password"
                     className="block text-sm font-medium text-gray-700 mb-1"
-                    data-oid=".4v2.ef"
                   >
                     Password
                   </label>
@@ -1138,35 +861,23 @@ export default function CourseDetailTemplate({
                     id="password"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md"
                     placeholder="••••••••"
-                    data-oid="jgxxhkq"
                   />
                 </div>
                 <Button
                   onClick={handleLogin}
                   className="w-full bg-[#123B79] hover:bg-[#0A2A5E]"
-                  data-oid="jsf3:u8"
                 >
                   Log In
                 </Button>
-                <div
-                  className="text-center text-sm text-gray-500"
-                  data-oid="1cnb0:j"
-                >
+                <div className="text-center text-sm text-gray-500">
                   <a
                     href="/forgot-password"
                     className="text-[#123B79] hover:underline"
-                    data-oid="_33pg_z"
                   >
                     Forgot password?
                   </a>
-                  <span className="mx-2" data-oid="6ehifjb">
-                    •
-                  </span>
-                  <a
-                    href="/signup"
-                    className="text-[#123B79] hover:underline"
-                    data-oid="bdl:05v"
-                  >
+                  <span className="mx-2">•</span>
+                  <a href="/signup" className="text-[#123B79] hover:underline">
                     Create account
                   </a>
                 </div>

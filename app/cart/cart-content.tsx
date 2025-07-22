@@ -192,14 +192,8 @@ export default function CartPageContent() {
 
   if (!isMounted) {
     return (
-      <div
-        className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex items-center justify-center"
-        data-oid="ogq43s2"
-      >
-        <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"
-          data-oid="17ga3q4"
-        ></div>
+      <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     );
   }
@@ -226,56 +220,30 @@ export default function CartPageContent() {
             router.push("/checkout/payment");
           }
         }}
-        data-oid="_5.onsn"
       />
 
-      <div
-        className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5"
-        data-oid="3:ngaw9"
-      >
-        <div
-          className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24"
-          data-oid="3b-bhw6"
-        >
+      <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
-            data-oid="jt5e2yn"
           >
-            <div
-              className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
-              data-oid="cnnol86"
-            >
-              <ShoppingBag
-                className="w-6 h-6 text-primary"
-                data-oid=":aqoyw_"
-              />
+            <div className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg mb-6">
+              <ShoppingBag className="w-6 h-6 text-primary" />
 
-              <span
-                className="font-semibold text-neutral-700"
-                data-oid="bf1dpu-"
-              >
+              <span className="font-semibold text-neutral-700">
                 Shopping Cart
               </span>
-              <span
-                className="bg-primary text-white text-sm px-2 py-1 rounded-full"
-                data-oid="c0ynav:"
-              >
+              <span className="bg-primary text-white text-sm px-2 py-1 rounded-full">
                 {cart.length}
               </span>
             </div>
-            <h1
-              className="text-4xl font-bold text-neutral-900 mb-4"
-              data-oid="gnb5gm6"
-            >
+            <h1 className="text-4xl font-bold text-neutral-900 mb-4">
               Your Learning Journey Awaits
             </h1>
-            <p
-              className="text-xl text-neutral-600 max-w-2xl mx-auto"
-              data-oid="adrbi3j"
-            >
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Review your selected courses and take the next step towards
               mastering real estate investment
             </p>
@@ -286,67 +254,43 @@ export default function CartPageContent() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="max-w-2xl mx-auto text-center py-20"
-              data-oid="u84xht5"
             >
-              <div
-                className="bg-white rounded-3xl shadow-xl p-12"
-                data-oid="krkar.c"
-              >
-                <div
-                  className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8"
-                  data-oid="h840m0_"
-                >
-                  <ShoppingBag
-                    className="w-12 h-12 text-primary"
-                    data-oid="wijq56e"
-                  />
+              <div className="bg-white rounded-3xl shadow-xl p-12">
+                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                  <ShoppingBag className="w-12 h-12 text-primary" />
                 </div>
-                <h2
-                  className="text-3xl font-bold text-neutral-900 mb-4"
-                  data-oid="holkqql"
-                >
+                <h2 className="text-3xl font-bold text-neutral-900 mb-4">
                   Your cart is empty
                 </h2>
-                <p className="text-neutral-600 mb-8 text-lg" data-oid=":l6oxaz">
+                <p className="text-neutral-600 mb-8 text-lg">
                   Discover our expert-led courses and start building your real
                   estate investment portfolio today.
                 </p>
                 <Button
                   onClick={() => router.push("/courses")}
                   className="bg-[#ff6b35] hover:bg-[#e55a2b] text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  data-oid="lqqkuq9"
                 >
                   Explore Courses
-                  <ArrowRight className="w-5 h-5 ml-2" data-oid="7qjbqn2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
             </motion.div>
           ) : (
-            <div
-              className="grid grid-cols-1 lg:grid-cols-3 gap-12"
-              data-oid="mk7gqws"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Cart Items */}
-              <div className="lg:col-span-2" data-oid="n:-8_zf">
+              <div className="lg:col-span-2">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                  data-oid="9v.qhm:"
                 >
-                  <div
-                    className="p-6 border-b border-neutral-200"
-                    data-oid="b-4-g97"
-                  >
-                    <h2
-                      className="text-2xl font-bold text-neutral-900"
-                      data-oid="qemxl1."
-                    >
+                  <div className="p-6 border-b border-neutral-200">
+                    <h2 className="text-2xl font-bold text-neutral-900">
                       Course Selection ({cart.length} items)
                     </h2>
                   </div>
 
-                  <AnimatePresence data-oid="mrw:3d5">
+                  <AnimatePresence>
                     {cart.map((item, index) => (
                       <motion.div
                         key={item.id}
@@ -356,28 +300,20 @@ export default function CartPageContent() {
                         className={`border-b border-neutral-100 last:border-b-0 ${
                           removingItems.has(item.id) ? "opacity-50" : ""
                         }`}
-                        data-oid="t_z35vt"
                       >
-                        <div className="p-6" data-oid="zba1m-s">
-                          <div className="flex gap-6" data-oid="5_yiki:">
+                        <div className="p-6">
+                          <div className="flex gap-6">
                             {/* Course Image */}
-                            <div className="flex-shrink-0" data-oid="thnusx-">
-                              <div
-                                className="relative w-32 h-32 rounded-xl overflow-hidden bg-neutral-100"
-                                data-oid="5zopgwy"
-                              >
+                            <div className="flex-shrink-0">
+                              <div className="relative w-32 h-32 rounded-xl overflow-hidden bg-neutral-100">
                                 {item.type === "Book" ? (
-                                  <div
-                                    className="w-full h-full bg-gray-100 flex items-center justify-center rounded-lg"
-                                    data-oid="qiygth_"
-                                  >
+                                  <div className="w-full h-full bg-gray-100 flex items-center justify-center rounded-lg">
                                     <Image
                                       src="/images/PLB Book Front Cover_FA.jpg"
                                       alt="Book Cover"
                                       width={80}
                                       height={120}
                                       className="object-contain"
-                                      data-oid="kbw.t1w"
                                     />
                                   </div>
                                 ) : (
@@ -386,18 +322,11 @@ export default function CartPageContent() {
                                     alt={item.title}
                                     fill
                                     className="object-cover"
-                                    data-oid="svxta:b"
                                   />
                                 )}
 
-                                <div
-                                  className="absolute top-2 left-2"
-                                  data-oid="7_nerwl"
-                                >
-                                  <span
-                                    className="bg-primary text-white text-xs px-2 py-1 rounded-full font-medium"
-                                    data-oid="9s36ilf"
-                                  >
+                                <div className="absolute top-2 left-2">
+                                  <span className="bg-primary text-white text-xs px-2 py-1 rounded-full font-medium">
                                     {item.type === "Book" ? "Book" : "Course"}
                                   </span>
                                 </div>
@@ -405,83 +334,42 @@ export default function CartPageContent() {
                             </div>
 
                             {/* Course Details */}
-                            <div className="flex-1 min-w-0" data-oid="iirwc49">
-                              <div
-                                className="flex justify-between items-start mb-3"
-                                data-oid="0b.cc6r"
-                              >
-                                <div className="flex-1" data-oid=":d6ym10">
-                                  <h3
-                                    className="text-lg font-bold text-neutral-900 mb-2 line-clamp-2"
-                                    data-oid="yjjz06m"
-                                  >
+                            <div className="flex-1 min-w-0">
+                              <div className="flex justify-between items-start mb-3">
+                                <div className="flex-1">
+                                  <h3 className="text-lg font-bold text-neutral-900 mb-2 line-clamp-2">
                                     {item.title}
                                   </h3>
-                                  <p
-                                    className="text-neutral-600 mb-3"
-                                    data-oid="_88neut"
-                                  >
+                                  <p className="text-neutral-600 mb-3">
                                     By {item.author || "Assembly.sg"}
                                   </p>
 
                                   {/* Course Features */}
-                                  <div
-                                    className="flex items-center gap-4 text-sm text-neutral-500 mb-4"
-                                    data-oid="9dbc0zs"
-                                  >
-                                    <div
-                                      className="flex items-center gap-1"
-                                      data-oid="fexxov6"
-                                    >
-                                      <Clock
-                                        className="w-4 h-4"
-                                        data-oid="2rh8:y1"
-                                      />
+                                  <div className="flex items-center gap-4 text-sm text-neutral-500 mb-4">
+                                    <div className="flex items-center gap-1">
+                                      <Clock className="w-4 h-4" />
 
-                                      <span data-oid="u4ezlmz">2-3 hours</span>
+                                      <span>2-3 hours</span>
                                     </div>
-                                    <div
-                                      className="flex items-center gap-1"
-                                      data-oid="nof00ll"
-                                    >
-                                      <Users
-                                        className="w-4 h-4"
-                                        data-oid="40da:7w"
-                                      />
+                                    <div className="flex items-center gap-1">
+                                      <Users className="w-4 h-4" />
 
-                                      <span data-oid="w92ic9v">
-                                        1,200+ students
-                                      </span>
+                                      <span>1,200+ students</span>
                                     </div>
-                                    <div
-                                      className="flex items-center gap-1"
-                                      data-oid="mk6e9-o"
-                                    >
-                                      <Star
-                                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                                        data-oid="egg04sp"
-                                      />
+                                    <div className="flex items-center gap-1">
+                                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
 
-                                      <span data-oid="4hs6yk5">4.8</span>
+                                      <span>4.8</span>
                                     </div>
                                   </div>
                                 </div>
 
-                                <div
-                                  className="text-right ml-4"
-                                  data-oid="w483_zl"
-                                >
-                                  <div
-                                    className="text-2xl font-bold text-neutral-900"
-                                    data-oid="_zo8yg2"
-                                  >
+                                <div className="text-right ml-4">
+                                  <div className="text-2xl font-bold text-neutral-900">
                                     {formatPrice(item.price)}
                                   </div>
                                   {item.id === BOOK_ID && (
-                                    <div
-                                      className="text-sm text-neutral-500 line-through"
-                                      data-oid="t_laaui"
-                                    >
+                                    <div className="text-sm text-neutral-500 line-through">
                                       {formatPrice(BOOK_ORIGINAL_PRICE)}
                                     </div>
                                   )}
@@ -489,29 +377,14 @@ export default function CartPageContent() {
                               </div>
 
                               {/* Quantity and Actions */}
-                              <div
-                                className="flex items-center justify-between"
-                                data-oid="nqaly8w"
-                              >
-                                <div
-                                  className="flex items-center gap-4"
-                                  data-oid="1sgj1md"
-                                >
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-4">
                                   {item.type === "Book" ? (
-                                    <div
-                                      className="flex items-center gap-2"
-                                      data-oid="-u.s1ms"
-                                    >
-                                      <span
-                                        className="text-sm text-neutral-600"
-                                        data-oid="1ktjp1n"
-                                      >
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-sm text-neutral-600">
                                         Quantity:
                                       </span>
-                                      <div
-                                        className="flex items-center border border-neutral-200 rounded-lg"
-                                        data-oid="0w2m.uc"
-                                      >
+                                      <div className="flex items-center border border-neutral-200 rounded-lg">
                                         <button
                                           onClick={() =>
                                             updateQuantity(
@@ -520,17 +393,10 @@ export default function CartPageContent() {
                                             )
                                           }
                                           className="p-2 hover:bg-neutral-50 transition-colors"
-                                          data-oid="tnosnf_"
                                         >
-                                          <Minus
-                                            className="w-4 h-4"
-                                            data-oid="yq5ewys"
-                                          />
+                                          <Minus className="w-4 h-4" />
                                         </button>
-                                        <span
-                                          className="px-4 py-2 font-medium"
-                                          data-oid="h3idrrr"
-                                        >
+                                        <span className="px-4 py-2 font-medium">
                                           {item.quantity}
                                         </span>
                                         <button
@@ -541,56 +407,33 @@ export default function CartPageContent() {
                                             )
                                           }
                                           className="p-2 hover:bg-neutral-50 transition-colors"
-                                          data-oid="rf:rw2r"
                                         >
-                                          <Plus
-                                            className="w-4 h-4"
-                                            data-oid="m3175u."
-                                          />
+                                          <Plus className="w-4 h-4" />
                                         </button>
                                       </div>
                                     </div>
                                   ) : (
-                                    <div
-                                      className="flex items-center gap-2 text-sm text-neutral-600"
-                                      data-oid="3leo34."
-                                    >
-                                      <Award
-                                        className="w-4 h-4"
-                                        data-oid="xyyv.3b"
-                                      />
+                                    <div className="flex items-center gap-2 text-sm text-neutral-600">
+                                      <Award className="w-4 h-4" />
 
-                                      <span data-oid="crjnazm">
-                                        Lifetime Access
-                                      </span>
+                                      <span>Lifetime Access</span>
                                     </div>
                                   )}
                                 </div>
 
-                                <div
-                                  className="flex items-center gap-2"
-                                  data-oid="by:_0da"
-                                >
+                                <div className="flex items-center gap-2">
                                   <button
                                     type="button"
                                     className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
-                                    data-oid="pro.azf"
                                   >
-                                    <Heart
-                                      className="w-5 h-5"
-                                      data-oid="1xetgf8"
-                                    />
+                                    <Heart className="w-5 h-5" />
                                   </button>
                                   <button
                                     onClick={() => handleRemoveItem(item.id)}
                                     type="button"
                                     className="p-2 text-neutral-400 hover:text-red-500 transition-colors"
-                                    data-oid=".r-fwp7"
                                   >
-                                    <Trash
-                                      className="w-5 h-5"
-                                      data-oid="remblk."
-                                    />
+                                    <Trash className="w-5 h-5" />
                                   </button>
                                 </div>
                               </div>
@@ -604,87 +447,51 @@ export default function CartPageContent() {
               </div>
 
               {/* Order Summary */}
-              <div className="lg:col-span-1" data-oid="x0l6iel">
+              <div className="lg:col-span-1">
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="sticky top-24"
-                  data-oid="y.l9_ar"
                 >
-                  <div
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                    data-oid="5hbrn7k"
-                  >
-                    <div
-                      className="p-6 bg-primary text-white"
-                      data-oid="r90_nit"
-                    >
-                      <h2 className="text-xl font-bold mb-2" data-oid="gowg.u6">
-                        Order Summary
-                      </h2>
-                      <p className="text-grey-400" data-oid="_hvkqg9">
-                        Ready to start learning?
-                      </p>
+                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="p-6 bg-primary text-white">
+                      <h2 className="text-xl font-bold mb-2">Order Summary</h2>
+                      <p className="text-grey-400">Ready to start learning?</p>
                     </div>
 
-                    <div className="p-6" data-oid="9twv2ri">
-                      <div className="space-y-4 mb-6" data-oid="fcbsyhe">
-                        <div
-                          className="flex justify-between items-center"
-                          data-oid="qscdp1w"
-                        >
-                          <span className="text-neutral-600" data-oid="1unewy9">
-                            Subtotal
-                          </span>
-                          <span className="font-semibold" data-oid="oiwac.4">
+                    <div className="p-6">
+                      <div className="space-y-4 mb-6">
+                        <div className="flex justify-between items-center">
+                          <span className="text-neutral-600">Subtotal</span>
+                          <span className="font-semibold">
                             {formatPrice(subtotal)}
                           </span>
                         </div>
 
                         {discount > 0 && (
-                          <div
-                            className="flex justify-between items-center text-green-600"
-                            data-oid="sh_t.1-"
-                          >
-                            <span data-oid="diao-8n">Discount</span>
-                            <span className="font-semibold" data-oid="r-igltm">
+                          <div className="flex justify-between items-center text-green-600">
+                            <span>Discount</span>
+                            <span className="font-semibold">
                               -{formatPrice(discount)}
                             </span>
                           </div>
                         )}
 
-                        <div
-                          className="flex justify-between items-center"
-                          data-oid="8xjokwp"
-                        >
-                          <span className="text-neutral-600" data-oid="uhypltp">
-                            Shipping
-                          </span>
-                          <span className="font-semibold" data-oid="043ue:c">
+                        <div className="flex justify-between items-center">
+                          <span className="text-neutral-600">Shipping</span>
+                          <span className="font-semibold">
                             {shippingCost > 0
                               ? formatPrice(shippingCost)
                               : "Free"}
                           </span>
                         </div>
 
-                        <div
-                          className="border-t border-neutral-200 pt-4"
-                          data-oid="0l5t9ir"
-                        >
-                          <div
-                            className="flex justify-between items-center"
-                            data-oid="gnr3_w1"
-                          >
-                            <span
-                              className="text-lg font-bold text-neutral-900"
-                              data-oid="_23.x5y"
-                            >
+                        <div className="border-t border-neutral-200 pt-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-lg font-bold text-neutral-900">
                               Total
                             </span>
-                            <span
-                              className="text-2xl font-bold text-primary"
-                              data-oid="xwd7an-"
-                            >
+                            <span className="text-2xl font-bold text-primary">
                               {formatPrice(orderTotal)}
                             </span>
                           </div>
@@ -692,54 +499,32 @@ export default function CartPageContent() {
                       </div>
 
                       {/* Security Features */}
-                      <div
-                        className="bg-neutral-50 rounded-xl p-4 mb-6"
-                        data-oid="5:lhzl7"
-                      >
-                        <div
-                          className="flex items-center gap-3 mb-3"
-                          data-oid="94plpwy"
-                        >
-                          <Shield
-                            className="w-5 h-5 text-green-500"
-                            data-oid="j40q.iu"
-                          />
+                      <div className="bg-neutral-50 rounded-xl p-4 mb-6">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Shield className="w-5 h-5 text-green-500" />
 
-                          <span
-                            className="font-semibold text-neutral-900"
-                            data-oid="nvnl539"
-                          >
+                          <span className="font-semibold text-neutral-900">
                             Secure Checkout
                           </span>
                         </div>
-                        <ul
-                          className="text-sm text-neutral-600 space-y-1"
-                          data-oid="c55y21u"
-                        >
-                          <li data-oid="0.g2:2h">
-                            • Lifetime access to courses
-                          </li>
-                          <li data-oid="pj:opg3">• SSL encrypted payment</li>
+                        <ul className="text-sm text-neutral-600 space-y-1">
+                          <li>• Lifetime access to courses</li>
+                          <li>• SSL encrypted payment</li>
                         </ul>
                       </div>
 
                       <Button
                         onClick={handleCheckout}
                         className="w-full bg-[#ff6b35] hover:bg-[#e55a2b] text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                        data-oid="5ped2xi"
                       >
                         Proceed to Checkout
-                        <ArrowRight
-                          className="w-5 h-5 ml-2"
-                          data-oid="6r9c7he"
-                        />
+                        <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
 
                       <Button
                         onClick={() => router.push("/courses")}
                         variant="outline"
                         className="w-full mt-3 py-3 border-2 border-neutral-200 hover:border-primary hover:text-primary transition-all duration-300"
-                        data-oid="88ecj2j"
                       >
                         Continue Shopping
                       </Button>
@@ -757,53 +542,33 @@ export default function CartPageContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="mt-20"
-              data-oid="i5g05s1"
             >
-              <div className="text-center mb-12" data-oid=".n3xfah">
-                <div
-                  className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg mb-6"
-                  data-oid="_x:-pd7"
-                >
-                  <Sparkles
-                    className="w-5 h-5 text-yellow-500"
-                    data-oid="0olozlr"
-                  />
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg mb-6">
+                  <Sparkles className="w-5 h-5 text-yellow-500" />
 
-                  <span
-                    className="font-semibold text-neutral-700"
-                    data-oid="6tgsn.y"
-                  >
+                  <span className="font-semibold text-neutral-700">
                     Recommended for You
                   </span>
                 </div>
-                <h2
-                  className="text-3xl font-bold text-neutral-900 mb-4"
-                  data-oid="72._oux"
-                >
+                <h2 className="text-3xl font-bold text-neutral-900 mb-4">
                   Complete Your Learning Path
                 </h2>
-                <p
-                  className="text-neutral-600 text-lg max-w-2xl mx-auto"
-                  data-oid="fcy-y0-"
-                >
+                <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
                   Based on your selections, these courses will help you build a
                   comprehensive understanding of real estate investment
                 </p>
               </div>
 
-              <div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                data-oid="emxhejp"
-              >
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recommendedCourses.map((course, index) => (
                   <motion.div
                     key={course.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * index }}
-                    data-oid="uavlk0q"
                   >
-                    <CourseCard course={course} data-oid="293:xgt" />
+                    <CourseCard course={course} />
                   </motion.div>
                 ))}
               </div>

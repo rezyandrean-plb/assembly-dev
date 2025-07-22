@@ -21,21 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-oid="tq.obm3">
-      <body className="" data-oid="sn.4sk0">
-        <Providers data-oid="ve0hf5x">
-          <ScrollToTop data-oid="_u4wv8c" />
-          <div
-            className="relative min-h-screen flex flex-col bg-[#F5F5F5]"
-            data-oid="qdk5evo"
-          >
-            <ConditionalHeader data-oid="1kx8_ps" />
-            <main className="flex-grow" data-oid="onua6cg">
-              {children}
-            </main>
-            <ConditionalFooter data-oid="1pogakd" />
+    <html lang="en">
+      <body className="">
+        <Providers>
+          <ScrollToTop />
+          <div className="relative min-h-screen flex flex-col bg-[#F5F5F5]">
+            <ConditionalHeader />
+            <main className="flex-grow">{children}</main>
+            <ConditionalFooter />
           </div>
-          <Toaster position="top-center" data-oid="xo-4sml" />
+          <Toaster position="top-center" />
         </Providers>
       </body>
     </html>

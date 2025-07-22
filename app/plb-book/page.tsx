@@ -162,72 +162,47 @@ export default function PLBBookPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-white" data-oid="n5-83fw">
+      <main className="min-h-screen bg-white">
         {/* Page Content */}
-        <div className="pt-24 pb-16" data-oid="x7ji7wq">
-          <div className="plb-book-page relative" data-oid="ub:vk9k">
+        <div className="pt-24 pb-16">
+          <div className="plb-book-page relative">
             {/* Light gradient background instead of network */}
             <div
               className="absolute inset-0 z-0"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="hcurb2e"
             ></div>
 
             {/* Hero Section */}
-            <section
-              className="section"
-              style={{ paddingTop: "120px" }}
-              data-oid="rdlewnp"
-            >
-              <div className="container relative z-10" data-oid="mc6d-23">
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="b:pze4c"
-                >
-                  <div className="fade-in" data-oid="crx7.:3">
-                    <h1
-                      className="text-primary mb-4 text-3xl"
-                      data-oid="9toy9g6"
-                    >
+            <section className="section" style={{ paddingTop: "120px" }}>
+              <div className="container relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div className="fade-in">
+                    <h1 className="text-primary mb-4 text-3xl">
                       Positioning: PropertyLimBrothers on the Art of Selling
                       Your Property to its Maximum Potential
                     </h1>
-                    <p className="text-md mb-6" data-oid="2mcdx4n">
+                    <p className="text-md mb-6">
                       When you truly understand how to sell and see through the
                       lens of a buyer, you gain charity on what, where and which
                       property to buy and invest in next.
                     </p>
-                    <div className="mb-6" data-oid="4b0co13">
-                      <div
-                        className="flex items-center mb-2"
-                        data-oid="dj.c4tq"
-                      >
-                        <span
-                          className="text-gray-500 line-through mr-2"
-                          data-oid="0ojtude"
-                        >
+                    <div className="mb-6">
+                      <div className="flex items-center mb-2">
+                        <span className="text-gray-500 line-through mr-2">
                           $39.00
                         </span>
-                        <span
-                          className="text-2xl font-bold text-primary"
-                          data-oid="6cxdoiz"
-                        >
+                        <span className="text-2xl font-bold text-primary">
                           $29.00
                         </span>
                       </div>
                     </div>
-                    <div className="mt-8 flex space-x-4" data-oid="dnvnwjx">
+                    <div className="mt-8 flex space-x-4">
                       <a
                         href="https://www.amazon.com/dp/B0F1CMZ9MQ"
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-oid="qdlcp.w"
                       >
-                        <Button
-                          size="lg"
-                          className="bg-primary text-white"
-                          data-oid="78aupuo"
-                        >
+                        <Button size="lg" className="bg-primary text-white">
                           Get the E-book
                         </Button>
                       </a>
@@ -235,25 +210,17 @@ export default function PLBBookPage() {
                         size="lg"
                         variant="outline"
                         onClick={handleAddToCart}
-                        data-oid="yt25h52"
                       >
                         Get the Paperback
                       </Button>
                     </div>
                   </div>
-                  <div
-                    className="fade-in flex justify-center"
-                    data-oid="74uyanx"
-                  >
-                    <div
-                      className="relative w-[300px] h-[390px] bg-primary rounded-lg shadow-xl transform rotate-3 animate-float"
-                      data-oid="6q1k9xb"
-                    >
+                  <div className="fade-in flex justify-center">
+                    <div className="relative w-[300px] h-[390px] bg-primary rounded-lg shadow-xl transform rotate-3 animate-float">
                       <img
                         src="/images/PLB Book Front Cover_FA.jpg"
                         alt="PropertyLimBrothers Book Cover"
                         className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                        data-oid="fnu0i04"
                       />
                     </div>
                   </div>
@@ -265,63 +232,35 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#eff5fd" }}
-              data-oid="35db9jb"
             >
-              <div
-                className="absolute top-0 left-0 w-full h-full opacity-5"
-                data-oid="vz85hff"
-              >
-                <div
-                  className="absolute top-10 right-10 w-40 h-40 rounded-full bg-primary"
-                  data-oid="r67u8di"
-                ></div>
-                <div
-                  className="absolute bottom-20 left-10 w-60 h-60 rounded-full bg-primary-dark"
-                  data-oid="yiz2_7i"
-                ></div>
+              <div className="absolute top-0 left-0 w-full h-full opacity-5">
+                <div className="absolute top-10 right-10 w-40 h-40 rounded-full bg-primary"></div>
+                <div className="absolute bottom-20 left-10 w-60 h-60 rounded-full bg-primary-dark"></div>
               </div>
-              <div className="container relative z-10" data-oid="0_3z_24">
-                <div className="text-center mb-12" data-oid="1h2_uf4">
-                  <h2
-                    className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="v8ddp-z"
-                  >
+              <div className="container relative z-10">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in">
                     In a crowded real estate marketplace,{" "}
-                    <span className="text-primary-dark" data-oid="jlkfr5u">
+                    <span className="text-primary-dark">
                       Positioning is Everything
                     </span>
                     .
                   </h2>
-                  <div
-                    className="flex flex-wrap justify-center gap-3 mt-4 mb-8"
-                    data-oid="z41hnos"
-                  >
-                    <span
-                      className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="q.5vzha"
-                    >
+                  <div className="flex flex-wrap justify-center gap-3 mt-4 mb-8">
+                    <span className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">
                       Real Estate
                     </span>
-                    <span
-                      className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid="kuzttls"
-                    >
+                    <span className="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">
                       Selling
                     </span>
-                    <span
-                      className="bg-[#123b79] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md"
-                      data-oid=".95c:0l"
-                    >
+                    <span className="bg-[#123b79] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">
                       Property Investing Mindset
                     </span>
                   </div>
                 </div>
 
-                <div
-                  className="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto"
-                  data-oid="17pa0vh"
-                >
-                  <p className="mb-6 text-lg" data-oid="7zcmpeq">
+                <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto">
+                  <p className="mb-6 text-lg">
                     The moment you list your property in the resale market, it
                     becomes a unique product that needs to attract that one
                     right buyer to make the offer you desire. How do you stand
@@ -330,31 +269,26 @@ export default function PLBBookPage() {
                     potential sale price of your home?
                   </p>
 
-                  <div
-                    className="bg-primary text-white p-5 mb-6 rounded-lg shadow-inner"
-                    data-oid="g-zd3_r"
-                  >
-                    <p className="font-medium text-lg" data-oid="1nzu.01">
+                  <div className="bg-primary text-white p-5 mb-6 rounded-lg shadow-inner">
+                    <p className="font-medium text-lg">
                       It's about attracting genuine buyers by positioning your
                       property with content and maximum exposure.
                     </p>
                   </div>
 
-                  <div className="mb-6" data-oid="9118z3y">
-                    <p className="mb-4" data-oid="rpplyjg">
-                      For the first time ever,{" "}
-                      <strong data-oid="-f9_ppw">Melvin Lim</strong> and{" "}
-                      <strong data-oid="rxzr0ek">Adrian Lim</strong>—more
-                      popularly known as PropertyLimBrothers, Singapore's most
-                      successful real estate duo that revolutionalise how
-                      properties are being marketed with video home tours in
-                      Singapore—have assembled an unrivaled playbook on property
-                      marketing, designed to take your home from{" "}
-                      <strong data-oid="1sxqwzl">"listed"</strong> to{" "}
-                      <strong data-oid="74:cyq3">"sold"</strong>.
+                  <div className="mb-6">
+                    <p className="mb-4">
+                      For the first time ever, <strong>Melvin Lim</strong> and{" "}
+                      <strong>Adrian Lim</strong>—more popularly known as
+                      PropertyLimBrothers, Singapore's most successful real
+                      estate duo that revolutionalise how properties are being
+                      marketed with video home tours in Singapore—have assembled
+                      an unrivaled playbook on property marketing, designed to
+                      take your home from <strong>"listed"</strong> to{" "}
+                      <strong>"sold"</strong>.
                     </p>
 
-                    <p data-oid="6jacnx2">
+                    <p>
                       More than just a guide, this is a blueprint for uncovering
                       the unique potential of every real estate you touch and
                       finding the perfect buyer for every home. Backed by wisdom
@@ -371,20 +305,13 @@ export default function PLBBookPage() {
             <section
               className="section py-16"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="d7_6fz6"
             >
-              <div className="container-fluid px-0" data-oid="plkvufw">
-                <div className="text-center mb-8 px-4" data-oid="_5qg_lt">
-                  <h2
-                    className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="roxurwy"
-                  >
+              <div className="container-fluid px-0">
+                <div className="text-center mb-8 px-4">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in">
                     Key Insights from the Book
                   </h2>
-                  <p
-                    className="text-lg text-gray-700 max-w-2xl mx-auto"
-                    data-oid="c4xoblk"
-                  >
+                  <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                     Discover powerful strategies and insights that will
                     transform your approach to property selling
                   </p>
@@ -394,7 +321,6 @@ export default function PLBBookPage() {
                   images={quoteImages}
                   visibleCount={4}
                   autoScrollInterval={4000}
-                  data-oid="hwyhawy"
                 />
               </div>
             </section>
@@ -403,184 +329,102 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden py-16"
               style={{ backgroundColor: "#e7ebf1" }}
-              data-oid="r:ql9cs"
             >
-              <div
-                className="container-fluid px-4 md:px-8 lg:px-12 relative z-10 max-w-[1600px] mx-auto"
-                data-oid="6w08qk:"
-              >
-                <div className="text-center mb-12" data-oid="3v9tte5">
-                  <h2
-                    className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in"
-                    data-oid="27_3kn3"
-                  >
+              <div className="container-fluid px-4 md:px-8 lg:px-12 relative z-10 max-w-[1600px] mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-3 text-primary fade-in">
                     Discover the Art of{" "}
-                    <span className="text-primary-dark" data-oid="8lg8-.-">
-                      Home Selling
-                    </span>
+                    <span className="text-primary-dark">Home Selling</span>
                   </h2>
-                  <p
-                    className="text-lg mb-8 max-w-3xl mx-auto"
-                    data-oid="8wt0j4h"
-                  >
+                  <p className="text-lg mb-8 max-w-3xl mx-auto">
                     Embark on a journey through the pages of this book, where we
                     demystify the art of home selling with a comprehensive,
                     step-by-step playbook.
                   </p>
                 </div>
 
-                <div className="max-w-6xl mx-auto" data-oid="5p3.2am">
-                  <div
-                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8"
-                    data-oid="_f1rf1f"
-                  >
+                <div className="max-w-6xl mx-auto">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
                     {/* Book image on the left - outside white container */}
-                    <div
-                      className="lg:col-span-4 fade-in relative"
-                      data-oid="576mpuu"
-                    >
-                      <div
-                        className="absolute w-[165%] -left-[30%]"
-                        data-oid="albk58u"
-                      >
+                    <div className="lg:col-span-4 fade-in relative">
+                      <div className="absolute w-[165%] -left-[30%]">
                         <img
                           src="/images/PLB Book Mockup Cover & Content.png"
                           alt="PropertyLimBrothers Book Cover"
                           className="w-full h-full object-contain scale-150"
-                          data-oid="r3mjc7u"
                         />
                       </div>
                     </div>
 
                     {/* List on the right - in white container */}
-                    <div className="lg:col-span-8 fade-in" data-oid="wnzmntu">
-                      <div
-                        className="bg-white rounded-xl shadow-lg p-8"
-                        data-oid="-difivz"
-                      >
-                        <div
-                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                          data-oid="i:k.754"
-                        >
-                          <div className="space-y-3" data-oid="7.suqpq">
-                            <div
-                              className="flex items-start"
-                              data-oid="kgljm5b"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="3kx3__d"
-                              >
+                    <div className="lg:col-span-8 fade-in">
+                      <div className="bg-white rounded-xl shadow-lg p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="space-y-3">
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 01
                               </div>
-                              <div data-oid="f:5:.qs">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="of6hyl:"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   The mindset of successful property sellers
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="dtm9lr0"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="8cd-c1h"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 02
                               </div>
-                              <div data-oid="9ra_6s_">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid=".fk:5:d"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   The Singapore Buy and Sell Pattern
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="xpa_.:f"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="7ysn4oo"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 03
                               </div>
-                              <div data-oid="-8v1zqo">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="4_0i_f5"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   How to build empathy and connection with your
                                   eventual buyer
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="qi2n5j."
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="njox5ub"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 04
                               </div>
-                              <div data-oid="18xmi1.">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="bzilx5d"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   Step-by-step guide to preparing for a home
                                   sale
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="l-j2cms"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="zcvu98x"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 05
                               </div>
-                              <div data-oid="kxgb-_k">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="ug.6y07"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   How to prepare and dress your house for the
                                   sale
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="apjt7y5"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="xx6q6kb"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 06
                               </div>
-                              <div data-oid="5c93ziu">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="gwx9nzz"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   How to leverage on and harness the power of
                                   social media
                                 </h3>
@@ -588,104 +432,59 @@ export default function PLBBookPage() {
                             </div>
                           </div>
 
-                          <div className="space-y-3" data-oid="iu:xml-">
-                            <div
-                              className="flex items-start"
-                              data-oid="0amehij"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="jtffjqy"
-                              >
+                          <div className="space-y-3">
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 07
                               </div>
-                              <div data-oid="f11mhk7">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="p:xt0e7"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   The four pillars of social media content
                                   creation
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="hdmg1yo"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="e5_.go7"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 08
                               </div>
-                              <div data-oid="9kmb.hl">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="l6hbwfa"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   How to create a comprehensive Home Tour
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="3t2_qcd"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="ah3ptci"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 09
                               </div>
-                              <div data-oid="d1cvd4l">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="r7sl4:."
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   How to advertise and distribute your content
                                   to maximise attention
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="b6lrxou"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="cwwa:sz"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 10
                               </div>
-                              <div data-oid="5.ret:p">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="n-fnwfa"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   Pricing techniques for your home
                                 </h3>
                               </div>
                             </div>
 
-                            <div
-                              className="flex items-start"
-                              data-oid="dib1hwt"
-                            >
-                              <div
-                                className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5"
-                                data-oid="x40x:y9"
-                              >
+                            <div className="flex items-start">
+                              <div className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold mr-3 text-xs flex-shrink-0 mt-0.5">
                                 11
                               </div>
-                              <div data-oid="qp-4k68">
-                                <h3
-                                  className="text-primary font-semibold text-sm"
-                                  data-oid="0n36k4e"
-                                >
+                              <div>
+                                <h3 className="text-primary font-semibold text-sm">
                                   Graphic guides to timeline and financial
                                   calculations
                                 </h3>
@@ -704,141 +503,68 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden text-white"
               style={{ backgroundColor: "#123b79" }}
-              data-oid=":ftceft"
             >
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-blue-900/20"
-                data-oid="t1v8vxj"
-              ></div>
-              <div className="container relative z-10" data-oid="2eri8ov">
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  data-oid="t1g-hah"
-                >
-                  <div className="fade-in" data-oid="yfmdbi8">
-                    <h2
-                      className="text-2xl md:text-3xl font-bold mb-4"
-                      data-oid="07-zg8n"
-                    >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-blue-900/20"></div>
+              <div className="container relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div className="fade-in">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
                       Unlock Your Property's Maximum Potential
                     </h2>
-                    <p className="mb-6" data-oid="ky1mozl">
+                    <p className="mb-6">
                       Delve into a comprehensive guide to optimising property
                       value, blending market insights, data analysis, and buyer
                       psychology.
                     </p>
-                    <Link
-                      href="/plb-book/preview"
-                      className="inline-block"
-                      data-oid="0eh4w7-"
-                    >
-                      <button
-                        className="btn bg-transparent border-2 border-white text-white hover:bg-white/10"
-                        data-oid="knzvd.:"
-                      >
+                    <Link href="/plb-book/preview" className="inline-block">
+                      <button className="btn bg-transparent border-2 border-white text-white hover:bg-white/10">
                         Preview Free Chapter →
                       </button>
                     </Link>
                   </div>
-                  <div className="fade-in" data-oid="n4-s7qu">
-                    <div className="space-y-4" data-oid="b80-r-r">
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="2uq0t2c"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="pkfl1:b"
-                        >
-                          01
-                        </span>
-                        <span className="text-lg" data-oid="63l6.ut">
+                  <div className="fade-in">
+                    <div className="space-y-4">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">01</span>
+                        <span className="text-lg">
                           The Most Common Reasons for Selling
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="y.t:zf4"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="1u.8ogd"
-                        >
-                          02
-                        </span>
-                        <span className="text-lg" data-oid="jt7w5m4">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">02</span>
+                        <span className="text-lg">
                           12 Steps to Selling Your Home
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="2302g2:"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid=".dfvxe9"
-                        >
-                          03
-                        </span>
-                        <span className="text-lg" data-oid="-qkciib">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">03</span>
+                        <span className="text-lg">
                           Product Positioning: Transforming the home
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="sth5dbh"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="yt9my2y"
-                        >
-                          04
-                        </span>
-                        <span className="text-lg" data-oid="wbhlyms">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">04</span>
+                        <span className="text-lg">
                           Marketing in the 21st Century: Real Estate Content
                           Creation
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="c16oze3"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="l9ap_uv"
-                        >
-                          05
-                        </span>
-                        <span className="text-lg" data-oid="1wegacd">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">05</span>
+                        <span className="text-lg">
                           Advertising and Distribution of Content: The Often
                           Neglected Part
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="jh0qa92"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="8jw8ksk"
-                        >
-                          06
-                        </span>
-                        <span className="text-lg" data-oid="v2.iv86">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">06</span>
+                        <span className="text-lg">
                           Viewings: The Art of Showmanship
                         </span>
                       </div>
-                      <div
-                        className="flex items-center border-b border-white/20 pb-3"
-                        data-oid="z97k.ah"
-                      >
-                        <span
-                          className="text-sm mr-4 opacity-70"
-                          data-oid="bb56.:_"
-                        >
-                          07
-                        </span>
-                        <span className="text-lg" data-oid="-mv7eqr">
+                      <div className="flex items-center border-b border-white/20 pb-3">
+                        <span className="text-sm mr-4 opacity-70">07</span>
+                        <span className="text-lg">
                           Sealing the Deal: How to Price Your Property Correctly
                         </span>
                       </div>
@@ -853,79 +579,44 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#ffffff" }}
-              data-oid="s.gb_5g"
             >
-              <div
-                className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full -translate-y-32 translate-x-32"
-                data-oid="8z1s2lk"
-              ></div>
-              <div
-                className="absolute bottom-0 left-0 w-48 h-48 bg-white/20 rounded-full translate-y-24 -translate-x-24"
-                data-oid="r3da:su"
-              ></div>
-              <div className="container relative z-10" data-oid="8hnvtts">
-                <div className="text-center mb-16 fade-in" data-oid="ijtz2f.">
-                  <h2
-                    className="text-3xl md:text-4xl font-bold mb-3 text-primary"
-                    data-oid="zuolg-t"
-                  >
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full -translate-y-32 translate-x-32"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/20 rounded-full translate-y-24 -translate-x-24"></div>
+              <div className="container relative z-10">
+                <div className="text-center mb-16 fade-in">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-3 text-primary">
                     About the Authors
                   </h2>
-                  <p
-                    className="text-lg text-gray-700 max-w-2xl mx-auto"
-                    data-oid="a0uf8t4"
-                  >
+                  <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                     Meet the PropertyLimBrothers team - Singapore's leading
                     property experts with over 17 years of combined experience
                   </p>
                 </div>
 
                 {/* Melvin Lim - Image Left, Bio Right */}
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
-                  data-oid="zar4fyn"
-                >
-                  <div className="order-1 md:order-1" data-oid="levpv0d">
-                    <div className="relative" data-oid="tj675rf">
-                      <div
-                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                        data-oid="bhpi0-8"
-                      >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in">
+                  <div className="order-1 md:order-1">
+                    <div className="relative">
+                      <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
                         <img
                           src="/images/Melvin_01.png"
                           alt="Melvin Lim"
                           className="w-full h-full object-cover"
-                          data-oid="ybpxcd0"
                         />
                       </div>
-                      <div
-                        className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10"
-                        data-oid="-cmbivf"
-                      ></div>
+                      <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10"></div>
                     </div>
                   </div>
-                  <div className="order-2 md:order-2" data-oid="._orfp-">
-                    <div
-                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="if1oz1a"
-                    >
-                      <h3
-                        className="text-2xl font-bold text-primary mb-2"
-                        data-oid="2ruqpfc"
-                      >
+                  <div className="order-2 md:order-2">
+                    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                      <h3 className="text-2xl font-bold text-primary mb-2">
                         Melvin Lim
                       </h3>
-                      <p
-                        className="text-primary-dark font-semibold mb-4"
-                        data-oid="-0pmcc-"
-                      >
+                      <p className="text-primary-dark font-semibold mb-4">
                         Co-Founder and CEO
                       </p>
-                      <div
-                        className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="z2fj92n"
-                      >
-                        <p data-oid="m9p:iw6">
+                      <div className="text-gray-700 leading-relaxed space-y-4">
+                        <p>
                           Co-Founder and CEO of PropertyLimBrothers (PLB),
                           brings 17 years of real estate expertise to the
                           forefront of Singapore's property market. Under his
@@ -933,7 +624,7 @@ export default function PLBBookPage() {
                           1,800 homes, setting a new benchmark for real estate
                           in Singapore.
                         </p>
-                        <p data-oid="d9n.cmz">
+                        <p>
                           In 2017, Melvin introduced presenter-led home tour
                           videos to Singapore—a groundbreaking move that
                           redefined property marketing by showcasing each home's
@@ -942,7 +633,7 @@ export default function PLBBookPage() {
                           innovative strategies have become a standard others
                           aspire to achieve.
                         </p>
-                        <p data-oid="k1vs2pn">
+                        <p>
                           Melvin remains committed to his core values of
                           integrity and innovation. His passion for uncovering
                           the true character of every home drives his success,
@@ -956,32 +647,17 @@ export default function PLBBookPage() {
                 </div>
 
                 {/* Adrian Lim - Bio Left, Image Right */}
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in"
-                  data-oid="mzw:iyi"
-                >
-                  <div className="order-2 md:order-1" data-oid="x-3kkrh">
-                    <div
-                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="hpzlc95"
-                    >
-                      <h3
-                        className="text-2xl font-bold text-primary mb-2"
-                        data-oid="bdv6og3"
-                      >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in">
+                  <div className="order-2 md:order-1">
+                    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                      <h3 className="text-2xl font-bold text-primary mb-2">
                         Adrian Lim
                       </h3>
-                      <p
-                        className="text-primary-dark font-semibold mb-4"
-                        data-oid="ywsxsrw"
-                      >
+                      <p className="text-primary-dark font-semibold mb-4">
                         Co-Founder and Managing Director
                       </p>
-                      <div
-                        className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="3ff4ti2"
-                      >
-                        <p data-oid="wq.6pgu">
+                      <div className="text-gray-700 leading-relaxed space-y-4">
+                        <p>
                           Co-Founder and Managing Director of
                           PropertyLimBrothers, has 17 years of real estate
                           experience in the industry and has transacted over
@@ -990,14 +666,14 @@ export default function PLBBookPage() {
                           has solved many complex situations for our clients
                           over the past years.
                         </p>
-                        <p data-oid="tyvznj9">
+                        <p>
                           He constantly spearheads the Realty Team in PLB. His
                           passion is driven by a relentless pursuit of what lies
                           ahead. This dedication to serve effortlessly connects
                           realtors and clients, inspiring others to thrive under
                           his leadership.
                         </p>
-                        <p data-oid="643lr8g">
+                        <p>
                           A family man who enjoys the company of his wife, four
                           children and their dogs Coffee and Mocha, Adrian is
                           known for his passion, dedication and achievements in
@@ -1006,73 +682,44 @@ export default function PLBBookPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="order-1 md:order-2" data-oid="aumjt8i">
-                    <div className="relative" data-oid="kxquc8y">
-                      <div
-                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300"
-                        data-oid="6e.2z51"
-                      >
+                  <div className="order-1 md:order-2">
+                    <div className="relative">
+                      <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                         <img
                           src="/images/Adrian_01-600x600.png"
                           alt="Adrian Lim"
                           className="w-full h-full object-cover"
-                          data-oid="73x6-2u"
                         />
                       </div>
-                      <div
-                        className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary-dark/10 rounded-full -z-10"
-                        data-oid="7rzq_y9"
-                      ></div>
+                      <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary-dark/10 rounded-full -z-10"></div>
                     </div>
                   </div>
                 </div>
 
                 {/* Grayce Tan - Image Left, Bio Right */}
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 fade-in"
-                  data-oid="dxsgqpo"
-                >
-                  <div className="order-1 md:order-1" data-oid="kijj1v2">
-                    <div className="relative" data-oid="v93wky5">
-                      <div
-                        className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300"
-                        data-oid="id6z3q1"
-                      >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 fade-in">
+                  <div className="order-1 md:order-1">
+                    <div className="relative">
+                      <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
                         <img
                           src="/images/Grayce_02-600x600.png"
                           alt="Grayce Tan"
                           className="w-full h-full object-cover"
-                          data-oid="7b4d6:v"
                         />
                       </div>
-                      <div
-                        className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10"
-                        data-oid="hfhqik-"
-                      ></div>
+                      <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10"></div>
                     </div>
                   </div>
-                  <div className="order-2 md:order-2" data-oid="5rov37u">
-                    <div
-                      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                      data-oid="op7-qvc"
-                    >
-                      <h3
-                        className="text-2xl font-bold text-primary mb-2"
-                        data-oid="o::v8hd"
-                      >
+                  <div className="order-2 md:order-2">
+                    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                      <h3 className="text-2xl font-bold text-primary mb-2">
                         Grayce Tan
                       </h3>
-                      <p
-                        className="text-primary-dark font-semibold mb-4"
-                        data-oid="or1c2mh"
-                      >
+                      <p className="text-primary-dark font-semibold mb-4">
                         Senior Marketing and Business Development Manager
                       </p>
-                      <div
-                        className="text-gray-700 leading-relaxed space-y-4"
-                        data-oid="b3r:q8c"
-                      >
-                        <p data-oid="e-on794">
+                      <div className="text-gray-700 leading-relaxed space-y-4">
+                        <p>
                           Senior Marketing and Business Development Manager at
                           PropertyLimBrothers, with a rich background in Real
                           Estate, Sociology, and Educational Pedagogy. Leading
@@ -1081,7 +728,7 @@ export default function PLBBookPage() {
                           boosting brand visibility and customer engagement
                           through innovative strategies and key partnerships.
                         </p>
-                        <p data-oid="0d6inv:">
+                        <p>
                           A passionate lifelong learner, Grayce's deep curiosity
                           for people and market dynamics drives her approach to
                           real estate. She spearheads strategic content
@@ -1089,7 +736,7 @@ export default function PLBBookPage() {
                           ensures her teams stay at the forefront of industry
                           trends.
                         </p>
-                        <p data-oid="q1q55.2">
+                        <p>
                           Grounded in a commitment to delivering insightful,
                           data-driven content, Grayce is dedicated to helping
                           clients and readers alike navigate the ever-evolving
@@ -1106,67 +753,47 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#e1e7ee" }}
-              data-oid="a5pj_2o"
             >
-              <div className="container relative z-10" data-oid="dxe48.c">
-                <div
-                  className="max-w-4xl mx-auto text-center fade-in"
-                  data-oid="fl2adfq"
-                >
-                  <div
-                    className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6"
-                    data-oid="9wno7pg"
-                  >
+              <div className="container relative z-10">
+                <div className="max-w-4xl mx-auto text-center fade-in">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
                     <svg
                       className="w-8 h-8 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      data-oid="yjycjzj"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        data-oid="ca.b:bx"
                       />
                     </svg>
                   </div>
-                  <h2
-                    className="text-4xl md:text-5xl font-bold text-primary mb-4"
-                    data-oid="eo7zfxl"
-                  >
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                     Frequently Asked Questions
                   </h2>
-                  <p
-                    className="text-xl text-gray-600 max-w-2xl mx-auto"
-                    data-oid="ihq3ju3"
-                  >
+                  <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                     Everything you need to know about the Property Leverage
                     Blueprint
                   </p>
                 </div>
 
                 {/* FAQ Grid Layout */}
-                <div className="max-w-6xl mx-auto mt-12" data-oid="gbrfi17">
-                  <div
-                    className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start"
-                    data-oid="w77y_:f"
-                  >
+                <div className="max-w-6xl mx-auto mt-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                     {faqItems.map((item, index) => (
                       <div
                         key={index}
                         className="fade-in h-full"
                         style={{ animationDelay: `${index * 0.1}s` }}
-                        data-oid=".w9d2ip"
                       >
                         <FAQItem
                           question={item.question}
                           answer={item.answer}
                           isOpen={activeIndex === index}
                           onClick={() => toggleFAQ(index)}
-                          data-oid="l6csr-6"
                         />
                       </div>
                     ))}
@@ -1179,63 +806,48 @@ export default function PLBBookPage() {
             <section
               className="section relative overflow-hidden"
               style={{ backgroundColor: "#fdfdfd" }}
-              data-oid="i5qy7c_"
             >
-              <div className="container relative z-10" data-oid="bv7kqyr">
+              <div className="container relative z-10">
                 {/* Contact support section */}
-                <div className="text-center fade-in" data-oid="vx6gs:-">
-                  <div
-                    className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100"
-                    data-oid="qa70f15"
-                  >
-                    <div
-                      className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-4"
-                      data-oid="y-g1irh"
-                    >
+                <div className="text-center fade-in">
+                  <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100">
+                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-4">
                       <svg
                         className="w-6 h-6 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        data-oid="d_7urto"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
                           d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          data-oid="vu2ajcx"
                         />
                       </svg>
                     </div>
-                    <h3
-                      className="text-2xl font-bold text-primary mb-3"
-                      data-oid="5p2552."
-                    >
+                    <h3 className="text-2xl font-bold text-primary mb-3">
                       Still have questions?
                     </h3>
-                    <p className="text-gray-600 mb-6" data-oid="o-i:-wu">
+                    <p className="text-gray-600 mb-6">
                       Can't find the answer you're looking for? Our friendly
                       team is here to help.
                     </p>
                     <a
                       href="mailto:hello@assembly.sg"
                       className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium"
-                      data-oid="it8efcl"
                     >
                       <svg
                         className="w-5 h-5 mr-2"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        data-oid="linwl.t"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
                           d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          data-oid="fiwke.0"
                         />
                       </svg>
                       Contact Support

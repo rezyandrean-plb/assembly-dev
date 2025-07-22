@@ -53,38 +53,38 @@ export default function SecurityPage() {
         </Button>
       </div>
 
-      <Tabs 
-        value={activeSection} 
+      <Tabs
+        value={activeSection}
         onValueChange={(value) => setActiveSection(value as SecuritySection)}
         className="mt-6"
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <TabsList className="bg-white border border-gray-200">
-            <TabsTrigger 
+            <TabsTrigger
               value="dashboard"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Dashboard
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="audit-log"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Audit Log
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="access-control"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Access Control
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="security-policies"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >
               Security Policies
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="api-keys"
               className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
             >

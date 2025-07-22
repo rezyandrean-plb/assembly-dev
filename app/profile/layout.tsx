@@ -52,18 +52,10 @@ export default function ProfileLayout({
 
   if (!isLoggedIn) {
     return (
-      <div
-        className="min-h-screen flex items-center justify-center bg-gray-50"
-        data-oid="uhz2-7h"
-      >
-        <div className="text-center" data-oid="gqd_vk7">
-          <div
-            className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"
-            data-oid="5ejgcip"
-          ></div>
-          <p className="text-gray-600" data-oid="56o75nr">
-            Checking authentication...
-          </p>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Checking authentication...</p>
         </div>
       </div>
     );
@@ -127,9 +119,9 @@ export default function ProfileLayout({
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16" data-oid="0j5xm1w">
+    <div className="min-h-screen bg-gray-50 pt-16">
       {/* Mobile sidebar overlay */}
-      <AnimatePresence data-oid="mkgr5v6">
+      <AnimatePresence>
         {isSidebarOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -137,12 +129,11 @@ export default function ProfileLayout({
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden"
             onClick={() => setIsSidebarOpen(false)}
-            data-oid="qemn2g4"
           />
         )}
       </AnimatePresence>
 
-      <div className="flex" data-oid=".oc5qpz">
+      <div className="flex">
         {/* Sidebar */}
         <motion.aside
           initial={false}
@@ -150,88 +141,59 @@ export default function ProfileLayout({
             x: isDesktop ? 0 : isSidebarOpen ? 0 : "-100%",
           }}
           className="fixed top-16 left-0 z-40 w-80 h-[calc(100vh-4rem)] bg-white shadow-lg lg:relative lg:top-0 lg:z-auto lg:h-auto overflow-y-auto"
-          data-oid="db8ngev"
         >
-          <div className="p-6" data-oid="-.aw66l">
+          <div className="p-6">
             {/* Mobile close button */}
-            <div
-              className="flex justify-between items-center lg:hidden mb-6"
-              data-oid="x-.1axn"
-            >
-              <h2
-                className="text-xl font-bold text-gray-800"
-                data-oid=".jcjkp-"
-              >
-                Profile Menu
-              </h2>
+            <div className="flex justify-between items-center lg:hidden mb-6">
+              <h2 className="text-xl font-bold text-gray-800">Profile Menu</h2>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsSidebarOpen(false)}
-                data-oid="i27v6r0"
               >
-                <X className="h-5 w-5" data-oid="ts.w2c7" />
+                <X className="h-5 w-5" />
               </Button>
             </div>
 
             {/* User info */}
-            <div
-              className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg mb-6"
-              data-oid="ea3.yft"
-            >
+            <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg mb-6">
               {user?.image ? (
                 <img
                   src={user.image}
                   alt={user.name || "User"}
                   className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
-                  data-oid="x1hkwuu"
                 />
               ) : (
-                <div
-                  className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md"
-                  data-oid="x.lbjq."
-                >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
                   {user?.name
                     ? user.name.charAt(0).toUpperCase()
                     : user?.email?.charAt(0).toUpperCase() || "U"}
                 </div>
               )}
-              <div data-oid="ziy1_-c">
-                <h3
-                  className="font-semibold text-gray-800 text-lg"
-                  data-oid="qwn.03i"
-                >
+              <div>
+                <h3 className="font-semibold text-gray-800 text-lg">
                   {user?.name || "User"}
                 </h3>
-                <p className="text-gray-600 text-sm" data-oid="ws67avm">
-                  {user?.email}
-                </p>
+                <p className="text-gray-600 text-sm">{user?.email}</p>
               </div>
             </div>
 
             {/* Navigation */}
-            <nav className="space-y-2" data-oid="kp4uk6:">
+            <nav className="space-y-2">
               {sidebarItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsSidebarOpen(false)}
-                  data-oid="lzo:.-q"
                 >
-                  <item.icon
-                    className="h-5 w-5 text-gray-500 group-hover:text-blue-600"
-                    data-oid="8._w.o5"
-                  />
+                  <item.icon className="h-5 w-5 text-gray-500 group-hover:text-blue-600" />
 
-                  <div data-oid="9ais90p">
-                    <div
-                      className="font-medium text-gray-800 group-hover:text-blue-600"
-                      data-oid="o3g:10t"
-                    >
+                  <div>
+                    <div className="font-medium text-gray-800 group-hover:text-blue-600">
                       {item.name}
                     </div>
-                    <div className="text-xs text-gray-500" data-oid="vqbxm7x">
+                    <div className="text-xs text-gray-500">
                       {item.description}
                     </div>
                   </div>
@@ -245,14 +207,11 @@ export default function ProfileLayout({
                   router.push("/");
                 }}
                 className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors group mt-6 border-t border-gray-200 pt-6"
-                data-oid="5-_as7c"
               >
-                <LogOut className="h-5 w-5 text-red-500" data-oid="rvjzy5." />
-                <div className="text-left" data-oid="z13ipcf">
-                  <div className="font-medium text-red-600" data-oid="5.jeex8">
-                    Log Out
-                  </div>
-                  <div className="text-xs text-red-400" data-oid="cj7kyvc">
+                <LogOut className="h-5 w-5 text-red-500" />
+                <div className="text-left">
+                  <div className="font-medium text-red-600">Log Out</div>
+                  <div className="text-xs text-red-400">
                     Sign out of your account
                   </div>
                 </div>
@@ -262,28 +221,22 @@ export default function ProfileLayout({
         </motion.aside>
 
         {/* Main content */}
-        <div className="flex-1 lg:ml-0" data-oid="_gzo:d.">
+        <div className="flex-1 lg:ml-0">
           {/* Mobile header */}
-          <div
-            className="lg:hidden bg-white shadow-sm border-b border-gray-200 px-4 py-3 flex items-center justify-between"
-            data-oid="lv1.nfz"
-          >
+          <div className="lg:hidden bg-white shadow-sm border-b border-gray-200 px-4 py-3 flex items-center justify-between">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsSidebarOpen(true)}
               className="text-gray-600"
-              data-oid="an-f9bb"
             >
-              <Menu className="h-5 w-5 mr-2" data-oid="17821kx" />
+              <Menu className="h-5 w-5 mr-2" />
               Profile Menu
             </Button>
           </div>
 
           {/* Content */}
-          <main className="p-6" data-oid="g:ovglf">
-            {children}
-          </main>
+          <main className="p-6">{children}</main>
         </div>
       </div>
     </div>

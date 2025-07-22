@@ -54,36 +54,25 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
       viewport={{ once: true }}
-      data-oid="m0s3:7-"
     >
       {/* Image Section */}
-      <div className="relative lg:w-1/2" data-oid="3r37x-8">
-        <div className="relative" data-oid="fpq-heo">
+      <div className="relative lg:w-1/2">
+        <div className="relative">
           {/* Main Image */}
-          <div
-            className="relative w-80 h-96 mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500"
-            data-oid="f6cabzz"
-          >
+          <div className="relative w-80 h-96 mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500">
             <Image
               src={facilitator.image}
               alt={facilitator.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
-              data-oid="t0zcfsg"
             />
 
             {/* Gradient Overlay */}
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-              data-oid="5h6q6j6"
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
             {/* Social Links */}
             {facilitator.socialLinks && (
-              <div
-                className="absolute top-6 right-6 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="ske9esf"
-              >
+              <div className="absolute top-6 right-6 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {Object.entries(facilitator.socialLinks).map(
                   ([platform, url]) => {
                     const Icon = getSocialIcon(platform);
@@ -96,12 +85,8 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
                         target={platform === "email" ? "_self" : "_blank"}
                         rel={platform === "email" ? "" : "noopener noreferrer"}
                         className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg"
-                        data-oid="psoj21d"
                       >
-                        <Icon
-                          className="w-4 h-4 text-gray-700"
-                          data-oid="136zyx8"
-                        />
+                        <Icon className="w-4 h-4 text-gray-700" />
                       </Link>
                     );
                   },
@@ -113,65 +98,42 @@ export function FacilitatorCard({ facilitator, index }: FacilitatorCardProps) {
       </div>
 
       {/* Content Section */}
-      <div className="lg:w-1/2 space-y-6" data-oid="cns6jt5">
+      <div className="lg:w-1/2 space-y-6">
         {/* Header */}
-        <div data-oid="ok:c89k">
-          <div
-            className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
-            data-oid="e_ve85k"
-          >
-            <Star className="w-4 h-4" data-oid="7m4ovlv" />
+        <div>
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Star className="w-4 h-4" />
             {facilitator.specialty}
           </div>
 
-          <h3
-            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2"
-            data-oid="gsn7dyy"
-          >
+          <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
             {facilitator.name}
           </h3>
 
-          <p
-            className="text-xl text-blue-600 font-semibold mb-4"
-            data-oid="d1pnwbm"
-          >
+          <p className="text-xl text-blue-600 font-semibold mb-4">
             {facilitator.role}
           </p>
 
-          <p
-            className="text-gray-600 leading-relaxed text-lg"
-            data-oid="fd:rjmx"
-          >
+          <p className="text-gray-600 leading-relaxed text-lg">
             {facilitator.longBio}
           </p>
-          <p className="text-gray-500 text-lg" data-oid=".z:hjsi">
+          <p className="text-gray-500 text-lg">
             {facilitator.stats?.coursesCreated} Expert Courses
           </p>
         </div>
 
         {/* CTA */}
-        <div className="flex gap-4" data-oid="4y80ros">
-          <Link
-            href={`/facilitators/${facilitator.id}`}
-            className="flex-1"
-            data-oid="0qa_.hr"
-          >
-            <Button
-              className="w-full bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 py-4 px-8 rounded-xl text-lg font-semibold group shadow-lg hover:shadow-xl transition-all duration-300"
-              data-oid="55_avrj"
-            >
+        <div className="flex gap-4">
+          <Link href={`/facilitators/${facilitator.id}`} className="flex-1">
+            <Button className="w-full bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 py-4 px-8 rounded-xl text-lg font-semibold group shadow-lg hover:shadow-xl transition-all duration-300">
               Meet {facilitator.name.split(" ")[0]}
-              <ArrowRight
-                className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
-                data-oid="q5b6k_x"
-              />
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          <Link href="/courses" data-oid="ui88irm">
+          <Link href="/courses">
             <Button
               variant="outline"
               className="px-6 py-3 rounded-xl border-2 hover:bg-gray-50"
-              data-oid="rrig75i"
             >
               View Courses
             </Button>

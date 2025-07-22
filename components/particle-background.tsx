@@ -112,11 +112,5 @@ export default function ParticleBackground() {
 
   if (!isMounted) return null;
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 -z-10"
-      data-oid="yeu717a"
-    />
-  );
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-10" />;
 }

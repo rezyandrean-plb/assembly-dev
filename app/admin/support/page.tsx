@@ -109,112 +109,76 @@ export default function SupportPage() {
   ];
 
   return (
-    <div data-oid="pxktwr_">
-      <div className="flex items-center justify-between" data-oid="xrrwyer">
-        <h1 className="text-3xl font-bold text-[#123B79]" data-oid="2:z4c0r">
-          Support
-        </h1>
-        <div className="flex items-center gap-2" data-oid="7dzaylk">
-          <Button variant="outline" data-oid="2yti3cr">
-            <Phone className="mr-2 h-4 w-4" data-oid="pfodz9l" />
+    <div>
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-[#123B79]">Support</h1>
+        <div className="flex items-center gap-2">
+          <Button variant="outline">
+            <Phone className="mr-2 h-4 w-4" />
             Call Support
           </Button>
-          <Button
-            className="bg-[#123B79] hover:bg-[#425DA0]"
-            data-oid="_hqru2j"
-          >
-            <Mail className="mr-2 h-4 w-4" data-oid="t_z_et:" />
+          <Button className="bg-[#123B79] hover:bg-[#425DA0]">
+            <Mail className="mr-2 h-4 w-4" />
             Contact Support
           </Button>
         </div>
       </div>
 
-      <div
-        className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
-        data-oid="t66m2hd"
-      >
+      <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {supportStats.map((stat, index) => (
-          <Card
-            key={index}
-            className="border-none shadow-md"
-            data-oid="4.e7_:z"
-          >
-            <CardHeader
-              className="flex flex-row items-center justify-between pb-2"
-              data-oid="ingjw9n"
-            >
-              <CardTitle className="text-sm font-medium" data-oid="xfe8iw1">
+          <Card key={index} className="border-none shadow-md">
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">
                 {stat.title}
               </CardTitle>
-              <stat.icon
-                className="h-4 w-4 text-[#123B79]"
-                data-oid="ug3odb0"
-              />
+              <stat.icon className="h-4 w-4 text-[#123B79]" />
             </CardHeader>
-            <CardContent data-oid="m4x29gi">
-              <div className="text-2xl font-bold" data-oid=":3dhfhm">
-                {stat.value}
-              </div>
-              <p className="text-xs text-muted-foreground" data-oid="jos4gy2">
-                <span className="text-green-500" data-oid="otpp0e6">
-                  {stat.change}
-                </span>{" "}
-                from yesterday
+            <CardContent>
+              <div className="text-2xl font-bold">{stat.value}</div>
+              <p className="text-xs text-muted-foreground">
+                <span className="text-green-500">{stat.change}</span> from
+                yesterday
               </p>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      <div className="mt-6" data-oid="sjju8wr">
-        <Card data-oid="bgu24ix">
-          <CardHeader data-oid="gaw5rn4">
-            <CardTitle data-oid="_1tce8j">Support Tickets</CardTitle>
-            <CardDescription data-oid="s-ot.w3">
+      <div className="mt-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Support Tickets</CardTitle>
+            <CardDescription>
               Manage customer support requests and inquiries
             </CardDescription>
           </CardHeader>
-          <CardContent data-oid="3m3i_q8">
-            <div className="space-y-4" data-oid="r6ctiz:">
+          <CardContent>
+            <div className="space-y-4">
               {supportTickets.map((ticket) => (
                 <div
                   key={ticket.id}
                   className="flex items-center justify-between p-4 border rounded-lg"
-                  data-oid="7j1vpaf"
                 >
-                  <div className="flex items-center gap-4" data-oid="htswy5k">
-                    <Avatar className="h-10 w-10" data-oid="s3_qcy-">
+                  <div className="flex items-center gap-4">
+                    <Avatar className="h-10 w-10">
                       <AvatarImage
                         src={ticket.user.avatar || "/placeholder.svg"}
                         alt={ticket.user.name}
-                        data-oid="5uo8o9w"
                       />
 
-                      <AvatarFallback
-                        className="bg-[#123B79] text-white"
-                        data-oid="m2y3er."
-                      >
+                      <AvatarFallback className="bg-[#123B79] text-white">
                         {ticket.user.name.charAt(0)}
                       </AvatarFallback>
                     </Avatar>
-                    <div data-oid=".4hlsov">
-                      <h3 className="font-medium" data-oid="gpo5ur.">
-                        {ticket.subject}
-                      </h3>
-                      <p
-                        className="text-sm text-muted-foreground"
-                        data-oid="61c4d63"
-                      >
+                    <div>
+                      <h3 className="font-medium">{ticket.subject}</h3>
+                      <p className="text-sm text-muted-foreground">
                         {ticket.user.name} • {ticket.user.email}
                       </p>
-                      <div
-                        className="flex items-center gap-2 mt-1"
-                        data-oid="_iek9c2"
-                      >
+                      <div className="flex items-center gap-2 mt-1">
                         <Badge
                           variant="outline"
                           className="text-xs border-[#123B79] text-[#123B79]"
-                          data-oid="hifmpnb"
                         >
                           {ticket.category}
                         </Badge>
@@ -227,25 +191,18 @@ export default function SupportPage() {
                                 : "outline"
                           }
                           className="text-xs"
-                          data-oid="dbd49.0"
                         >
                           {ticket.priority}
                         </Badge>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4" data-oid="me94tbs">
-                    <div className="text-right" data-oid="4w6w6sv">
-                      <div
-                        className="text-sm text-muted-foreground"
-                        data-oid="0c-3..."
-                      >
+                  <div className="flex items-center gap-4">
+                    <div className="text-right">
+                      <div className="text-sm text-muted-foreground">
                         Created {ticket.createdAt}
                       </div>
-                      <div
-                        className="text-sm text-muted-foreground"
-                        data-oid="v38d.wd"
-                      >
+                      <div className="text-sm text-muted-foreground">
                         Updated {ticket.lastUpdated}
                       </div>
                     </div>
@@ -258,11 +215,10 @@ export default function SupportPage() {
                             : "outline"
                       }
                       className="text-xs"
-                      data-oid="jij46nx"
                     >
                       {ticket.status}
                     </Badge>
-                    <Button variant="outline" size="sm" data-oid="wwk:cag">
+                    <Button variant="outline" size="sm">
                       View
                     </Button>
                   </div>
@@ -273,90 +229,66 @@ export default function SupportPage() {
         </Card>
       </div>
 
-      <div className="mt-6 grid gap-6 md:grid-cols-2" data-oid="a6pavjl">
-        <Card data-oid="bywp-3g">
-          <CardHeader data-oid="wlvr2vc">
-            <CardTitle data-oid="9pyj6f-">Quick Actions</CardTitle>
-            <CardDescription data-oid="o2wm1xu">
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Quick Actions</CardTitle>
+            <CardDescription>
               Common support tasks and shortcuts
             </CardDescription>
           </CardHeader>
-          <CardContent data-oid="1gz-v1-">
-            <div className="space-y-3" data-oid="bh0m33p">
-              <Button
-                variant="outline"
-                className="w-full justify-start"
-                data-oid="_wvr5uw"
-              >
-                <MessageCircle className="mr-2 h-4 w-4" data-oid=".sllm3k" />
+          <CardContent>
+            <div className="space-y-3">
+              <Button variant="outline" className="w-full justify-start">
+                <MessageCircle className="mr-2 h-4 w-4" />
                 Create Knowledge Base Article
               </Button>
-              <Button
-                variant="outline"
-                className="w-full justify-start"
-                data-oid="8k_vf2-"
-              >
-                <Mail className="mr-2 h-4 w-4" data-oid="wfkqzaf" />
+              <Button variant="outline" className="w-full justify-start">
+                <Mail className="mr-2 h-4 w-4" />
                 Send Bulk Email
               </Button>
-              <Button
-                variant="outline"
-                className="w-full justify-start"
-                data-oid="nyv0e:9"
-              >
-                <Clock className="mr-2 h-4 w-4" data-oid="asn9sa1" />
+              <Button variant="outline" className="w-full justify-start">
+                <Clock className="mr-2 h-4 w-4" />
                 Set Response Time SLA
               </Button>
-              <Button
-                variant="outline"
-                className="w-full justify-start"
-                data-oid="j5y9lye"
-              >
-                <AlertCircle className="mr-2 h-4 w-4" data-oid="_jqzl:l" />
+              <Button variant="outline" className="w-full justify-start">
+                <AlertCircle className="mr-2 h-4 w-4" />
                 Escalate Critical Issues
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        <Card data-oid="-j4v3l8">
-          <CardHeader data-oid="j-zrt1j">
-            <CardTitle data-oid="pwwzwnq">Support Resources</CardTitle>
-            <CardDescription data-oid="la2l5pw">
+        <Card>
+          <CardHeader>
+            <CardTitle>Support Resources</CardTitle>
+            <CardDescription>
               Helpful resources for support team
             </CardDescription>
           </CardHeader>
-          <CardContent data-oid="-yyab_v">
-            <div className="space-y-3" data-oid="onhag7h">
-              <div className="p-3 border rounded-lg" data-oid="xf4g:3c">
-                <h3 className="font-medium" data-oid="r9run.2">
-                  Knowledge Base
-                </h3>
-                <p className="text-sm text-muted-foreground" data-oid="bnx1pjs">
+          <CardContent>
+            <div className="space-y-3">
+              <div className="p-3 border rounded-lg">
+                <h3 className="font-medium">Knowledge Base</h3>
+                <p className="text-sm text-muted-foreground">
                   Access to common solutions and FAQs
                 </p>
               </div>
-              <div className="p-3 border rounded-lg" data-oid="4c0jpd6">
-                <h3 className="font-medium" data-oid="-9s7gxc">
-                  Training Materials
-                </h3>
-                <p className="text-sm text-muted-foreground" data-oid="5wsk6ox">
+              <div className="p-3 border rounded-lg">
+                <h3 className="font-medium">Training Materials</h3>
+                <p className="text-sm text-muted-foreground">
                   Support team training and guidelines
                 </p>
               </div>
-              <div className="p-3 border rounded-lg" data-oid="znn-r51">
-                <h3 className="font-medium" data-oid="hodiqna">
-                  Escalation Matrix
-                </h3>
-                <p className="text-sm text-muted-foreground" data-oid="vo:lc3u">
+              <div className="p-3 border rounded-lg">
+                <h3 className="font-medium">Escalation Matrix</h3>
+                <p className="text-sm text-muted-foreground">
                   When and how to escalate issues
                 </p>
               </div>
-              <div className="p-3 border rounded-lg" data-oid="y4r1znd">
-                <h3 className="font-medium" data-oid="5u1iut_">
-                  Support Templates
-                </h3>
-                <p className="text-sm text-muted-foreground" data-oid="ca.s8h4">
+              <div className="p-3 border rounded-lg">
+                <h3 className="font-medium">Support Templates</h3>
+                <p className="text-sm text-muted-foreground">
                   Pre-written responses for common issues
                 </p>
               </div>

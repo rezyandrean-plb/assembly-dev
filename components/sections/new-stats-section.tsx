@@ -67,7 +67,7 @@ export default function NewStatsSection() {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8" data-oid="3qkr7qp" />,
+      icon: <Users className="w-8 h-8" />,
       value: Math.floor(counters.students).toLocaleString(),
       suffix: "+",
       label: "Active Students",
@@ -75,7 +75,7 @@ export default function NewStatsSection() {
       color: "bg-primary-light",
     },
     {
-      icon: <BookOpen className="w-8 h-8" data-oid="he8fp5l" />,
+      icon: <BookOpen className="w-8 h-8" />,
       value: Math.floor(counters.courses),
       suffix: "+",
       label: "Expert Courses",
@@ -83,7 +83,7 @@ export default function NewStatsSection() {
       color: "bg-success",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" data-oid="xqs7m_z" />,
+      icon: <TrendingUp className="w-8 h-8" />,
       value: Math.floor(counters.success),
       suffix: "%",
       label: "Success Rate",
@@ -91,7 +91,7 @@ export default function NewStatsSection() {
       color: "bg-secondary",
     },
     {
-      icon: <DollarSign className="w-8 h-8" data-oid="y_0wg1o" />,
+      icon: <DollarSign className="w-8 h-8" />,
       value: counters.portfolio.toFixed(1),
       suffix: "B+",
       label: "Portfolio Value",
@@ -99,7 +99,7 @@ export default function NewStatsSection() {
       color: "bg-accent",
     },
     {
-      icon: <Globe className="w-8 h-8" data-oid="qg3utey" />,
+      icon: <Globe className="w-8 h-8" />,
       value: Math.floor(counters.countries),
       suffix: "+",
       label: "Countries",
@@ -107,7 +107,7 @@ export default function NewStatsSection() {
       color: "bg-primary-darker",
     },
     {
-      icon: <Award className="w-8 h-8" data-oid="we4j489" />,
+      icon: <Award className="w-8 h-8" />,
       value: counters.satisfaction.toFixed(1),
       suffix: "/5",
       label: "Satisfaction",
@@ -120,24 +120,19 @@ export default function NewStatsSection() {
     <section
       ref={sectionRef}
       className="py-24 bg-primary text-white relative overflow-hidden"
-      data-oid="eqmqqji"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10" data-oid="vb.tzsp">
+      <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
-          data-oid="2k_w1rk"
         />
       </div>
 
       {/* Floating Elements */}
-      <div
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        data-oid="3w.qtbj"
-      >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"
           animate={{
@@ -149,7 +144,6 @@ export default function NewStatsSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="j3jowy2"
         />
 
         <motion.div
@@ -163,39 +157,28 @@ export default function NewStatsSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          data-oid="33t8ykj"
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" data-oid="xr_peui">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8 }}
-          data-oid="i_ms8_9"
         >
-          <h2
-            className="text-4xl lg:text-5xl font-bold mb-6 text-white"
-            data-oid="xr.ydcp"
-          >
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Our Impact in Numbers
           </h2>
-          <p
-            className="text-xl text-white/80 max-w-3xl mx-auto"
-            data-oid="p3wdghz"
-          >
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Join a thriving community of successful real estate investors from
             around the world
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          data-oid=":ekwv2x"
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -204,46 +187,28 @@ export default function NewStatsSection() {
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              data-oid="jfusj.q"
             >
               <div
                 className={`inline-flex p-4 rounded-2xl ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
-                data-oid="d54681x"
               >
-                <div className="text-white" data-oid="topcpui">
-                  {stat.icon}
-                </div>
+                <div className="text-white">{stat.icon}</div>
               </div>
 
-              <div
-                className="text-4xl lg:text-5xl font-bold mb-2"
-                data-oid="rk4v2f4"
-              >
+              <div className="text-4xl lg:text-5xl font-bold mb-2">
                 {stat.value}
-                <span
-                  className="text-2xl lg:text-3xl text-white/60"
-                  data-oid="2ehcbvd"
-                >
+                <span className="text-2xl lg:text-3xl text-white/60">
                   {stat.suffix}
                 </span>
               </div>
 
-              <h3
-                className="text-xl font-semibold mb-2 text-white"
-                data-oid="zy57kk3"
-              >
+              <h3 className="text-xl font-semibold mb-2 text-white">
                 {stat.label}
               </h3>
 
-              <p className="text-white/70" data-oid="r2r5gfz">
-                {stat.description}
-              </p>
+              <p className="text-white/70">{stat.description}</p>
 
               {/* Hover Effect */}
-              <div
-                className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="s5gw06b"
-              />
+              <div className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>
@@ -254,16 +219,12 @@ export default function NewStatsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          data-oid="5-ker:-"
         >
-          <div
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto"
-            data-oid="8r3i4np"
-          >
-            <h3 className="text-2xl font-bold mb-4" data-oid="54ky.-c">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-white/80 mb-6" data-oid="185-i8s">
+            <p className="text-white/80 mb-6">
               Start your real estate investment journey today and become part of
               our growing community.
             </p>
@@ -271,7 +232,6 @@ export default function NewStatsSection() {
               className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              data-oid="7ro1qq8"
             >
               Start Learning Today
             </motion.button>

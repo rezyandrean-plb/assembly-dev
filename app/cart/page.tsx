@@ -223,29 +223,16 @@ function CartPage() {
   return (
     <Suspense
       fallback={
-        <div
-          className="min-h-screen flex items-center justify-center"
-          data-oid="0-69x34"
-        >
-          <div className="animate-pulse" data-oid="ig6p2dl">
-            <div
-              className="h-12 w-32 bg-gray-200 rounded mb-4"
-              data-oid="ujxc9tv"
-            ></div>
-            <div
-              className="h-8 w-48 bg-gray-200 rounded mb-4"
-              data-oid="4ldody."
-            ></div>
-            <div
-              className="h-4 w-64 bg-gray-200 rounded"
-              data-oid="j8.yh2d"
-            ></div>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-pulse">
+            <div className="h-12 w-32 bg-gray-200 rounded mb-4"></div>
+            <div className="h-8 w-48 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 w-64 bg-gray-200 rounded"></div>
           </div>
         </div>
       }
-      data-oid="5aghoex"
     >
-      <CartPageContent data-oid="gl9eimq" />
+      <CartPageContent />
     </Suspense>
   );
 }

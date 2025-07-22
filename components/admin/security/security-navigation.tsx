@@ -86,6 +86,7 @@ export function SecurityNavigation({
                   isActive ? "text-[#123B79]" : "text-gray-400",
                 )}
               />
+
               <div className="min-w-0 flex-1">
                 <div
                   className={cn(

@@ -10,36 +10,28 @@ export default function PillarsSection() {
 
   const pillars = [
     {
-      icon: (
-        <TrendingUp className="h-12 w-12 text-orange-500" data-oid="e1akjij" />
-      ),
+      icon: <TrendingUp className="h-12 w-12 text-orange-500" />,
 
       title: "Market Trends",
       description:
         "Stay informed with the latest data and analysis on Singapore's property market movements.",
     },
     {
-      icon: (
-        <BookOpen className="h-12 w-12 text-orange-500" data-oid="cd6bxol" />
-      ),
+      icon: <BookOpen className="h-12 w-12 text-orange-500" />,
 
       title: "Regulations & Compliance",
       description:
         "Navigate the complex regulatory landscape with our comprehensive guides and updates.",
     },
     {
-      icon: (
-        <Lightbulb className="h-12 w-12 text-orange-500" data-oid="dnb862w" />
-      ),
+      icon: <Lightbulb className="h-12 w-12 text-orange-500" />,
 
       title: "Marketing Strategies",
       description:
         "Learn effective techniques to market properties and build your personal brand.",
     },
     {
-      icon: (
-        <BarChart3 className="h-12 w-12 text-orange-500" data-oid="7ihepn0" />
-      ),
+      icon: <BarChart3 className="h-12 w-12 text-orange-500" />,
 
       title: "Professional Development",
       description:
@@ -71,29 +63,22 @@ export default function PillarsSection() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50" data-oid="i67h5sn">
-      <div className="container mx-auto px-4" data-oid="0n.0om2">
+    <section ref={sectionRef} className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          data-oid="k5fddwn"
         >
-          <h2 className="text-4xl font-bold text-gray-900" data-oid="mcd2c8.">
+          <h2 className="text-4xl font-bold text-gray-900">
             Pillars of Content
           </h2>
-          <p
-            className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
-            data-oid="0d:yo8t"
-          >
+          <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
             Explore key areas of knowledge to build your expertise in
             Singapore's real estate market
           </p>
-          <div
-            className="w-20 h-1 bg-orange-500 mx-auto mt-4"
-            data-oid="ue0jnhw"
-          ></div>
+          <div className="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
         </motion.div>
 
         <motion.div
@@ -101,31 +86,19 @@ export default function PillarsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          data-oid=":105qa8"
         >
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
               variants={itemVariants}
-              data-oid="m0rj9wy"
             >
-              <div
-                className="flex flex-col items-center text-center"
-                data-oid="5k4oc5."
-              >
-                <div className="mb-6" data-oid="fuq_c-c">
-                  {pillar.icon}
-                </div>
-                <h3
-                  className="text-xl font-bold text-gray-800 mb-3"
-                  data-oid="2n9t_10"
-                >
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6">{pillar.icon}</div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">
                   {pillar.title}
                 </h3>
-                <p className="text-gray-600" data-oid="t-edz9j">
-                  {pillar.description}
-                </p>
+                <p className="text-gray-600">{pillar.description}</p>
               </div>
             </motion.div>
           ))}

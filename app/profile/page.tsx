@@ -91,67 +91,41 @@ export default function ProfilePage() {
   }, [isLoggedIn, user]);
 
   return (
-    <div className="p-6" data-oid="b:jrrik">
-      <div className="mb-6" data-oid="d4l87qz">
-        <h1 className="text-2xl font-bold text-gray-800" data-oid="mwz:d-d">
+    <div className="p-6">
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-gray-800">
           {greeting}, {user?.name || user?.email.split("@")[0]}
         </h1>
-        <p className="text-gray-500 mt-1" data-oid="-.utaps">
-          {dateString}
-        </p>
+        <p className="text-gray-500 mt-1">{dateString}</p>
       </div>
 
       {/* Stats Overview */}
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
-        data-oid="cma42eh"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         {/* Enrolled Courses */}
-        <Link
-          href="/profile/learning-progress"
-          className="block"
-          data-oid="zet.ieo"
-        >
+        <Link href="/profile/learning-progress" className="block">
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("enrolled")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="rdkm0lm"
           >
-            <div
-              className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="thu7_qm"
-            ></div>
-            <div className="p-5" data-oid="2qoju64">
-              <div
-                className="flex justify-between items-start"
-                data-oid="-uyy:sw"
-              >
-                <h3 className="text-gray-700 font-medium" data-oid="0_w0:qt">
-                  Enrolled Courses
-                </h3>
+            <div className="h-2 bg-blue-700 w-full absolute top-0"></div>
+            <div className="p-5">
+              <div className="flex justify-between items-start">
+                <h3 className="text-gray-700 font-medium">Enrolled Courses</h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "enrolled" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid=":18m7l1"
                 >
                   <BookOpen
                     className={`h-4 w-4 ${hoveredCard === "enrolled" ? "text-white" : "text-blue-700"}`}
-                    data-oid="ib65-vh"
                   />
                 </div>
               </div>
-              <p
-                className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="okuighz"
-              >
+              <p className="text-3xl font-bold text-blue-900 mt-3">
                 {loading ? "..." : stats.totalCourses}
               </p>
-              <p
-                className="text-sm text-gray-400 flex items-center mt-1"
-                data-oid="t5s1pj-"
-              >
+              <p className="text-sm text-gray-400 flex items-center mt-1">
                 {stats.totalCourses === 0
                   ? "No courses enrolled yet"
                   : `${stats.activeCourses} active`}
@@ -161,51 +135,30 @@ export default function ProfilePage() {
         </Link>
 
         {/* Completed Courses */}
-        <Link
-          href="/profile/completed-courses"
-          className="block"
-          data-oid="k8b3855"
-        >
+        <Link href="/profile/completed-courses" className="block">
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("completed")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="omrel05"
           >
-            <div
-              className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="lsfezu2"
-            ></div>
-            <div className="p-5" data-oid="wui7d55">
-              <div
-                className="flex justify-between items-start"
-                data-oid="5_rsy3b"
-              >
-                <h3 className="text-gray-700 font-medium" data-oid="v.ivua0">
-                  Completed Courses
-                </h3>
+            <div className="h-2 bg-blue-700 w-full absolute top-0"></div>
+            <div className="p-5">
+              <div className="flex justify-between items-start">
+                <h3 className="text-gray-700 font-medium">Completed Courses</h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "completed" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid=":hz3e56"
                 >
                   <Award
                     className={`h-4 w-4 ${hoveredCard === "completed" ? "text-white" : "text-blue-700"}`}
-                    data-oid="ta4u_l-"
                   />
                 </div>
               </div>
-              <p
-                className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="ajzpmdx"
-              >
+              <p className="text-3xl font-bold text-blue-900 mt-3">
                 {loading ? "..." : stats.completedCourses}
               </p>
-              <p
-                className="text-sm text-gray-400 flex items-center mt-1"
-                data-oid="u7:v0hg"
-              >
+              <p className="text-sm text-gray-400 flex items-center mt-1">
                 {stats.completedCourses === 0
                   ? "No courses completed yet"
                   : `${stats.completionRate}% completion rate`}
@@ -215,47 +168,30 @@ export default function ProfilePage() {
         </Link>
 
         {/* Wishlist */}
-        <Link href="/profile/wishlist" className="block" data-oid="6brrkll">
+        <Link href="/profile/wishlist" className="block">
           <div
             className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
             onMouseEnter={() => setHoveredCard("wishlist")}
             onMouseLeave={() => setHoveredCard(null)}
-            data-oid="i8-w_9y"
           >
-            <div
-              className="h-2 bg-blue-700 w-full absolute top-0"
-              data-oid="m5gku:k"
-            ></div>
-            <div className="p-5" data-oid="7pald4_">
-              <div
-                className="flex justify-between items-start"
-                data-oid="63k0oh4"
-              >
-                <h3 className="text-gray-700 font-medium" data-oid="ny0w6n8">
-                  Wishlist
-                </h3>
+            <div className="h-2 bg-blue-700 w-full absolute top-0"></div>
+            <div className="p-5">
+              <div className="flex justify-between items-start">
+                <h3 className="text-gray-700 font-medium">Wishlist</h3>
                 <div
                   className={`p-2 rounded-full transition-colors duration-200 ${
                     hoveredCard === "wishlist" ? "bg-blue-700" : "bg-blue-100"
                   }`}
-                  data-oid="0-e_8u0"
                 >
                   <Heart
                     className={`h-4 w-4 ${hoveredCard === "wishlist" ? "text-white" : "text-blue-700"}`}
-                    data-oid="k999o:4"
                   />
                 </div>
               </div>
-              <p
-                className="text-3xl font-bold text-blue-900 mt-3"
-                data-oid="3f.e6.i"
-              >
+              <p className="text-3xl font-bold text-blue-900 mt-3">
                 {loading ? "..." : "0"}
               </p>
-              <p
-                className="text-sm text-gray-400 flex items-center mt-1"
-                data-oid="eqia.ch"
-              >
+              <p className="text-sm text-gray-400 flex items-center mt-1">
                 No courses saved yet
               </p>
             </div>
@@ -267,42 +203,25 @@ export default function ProfilePage() {
           className="bg-white rounded-lg shadow-sm relative overflow-hidden cursor-pointer"
           onMouseEnter={() => setHoveredCard("events")}
           onMouseLeave={() => setHoveredCard(null)}
-          data-oid="hd-5p-s"
         >
-          <div
-            className="h-2 bg-blue-700 w-full absolute top-0"
-            data-oid="qsdknli"
-          ></div>
-          <div className="p-5" data-oid="wpffftm">
-            <div
-              className="flex justify-between items-start"
-              data-oid="w2uhgd_"
-            >
-              <h3 className="text-gray-700 font-medium" data-oid="3x72oz6">
-                Learning Streak
-              </h3>
+          <div className="h-2 bg-blue-700 w-full absolute top-0"></div>
+          <div className="p-5">
+            <div className="flex justify-between items-start">
+              <h3 className="text-gray-700 font-medium">Learning Streak</h3>
               <div
                 className={`p-2 rounded-full transition-colors duration-200 ${
                   hoveredCard === "events" ? "bg-blue-700" : "bg-blue-100"
                 }`}
-                data-oid="eiakswm"
               >
                 <Calendar
                   className={`h-4 w-4 ${hoveredCard === "events" ? "text-white" : "text-blue-700"}`}
-                  data-oid="mdjaar2"
                 />
               </div>
             </div>
-            <p
-              className="text-3xl font-bold text-blue-900 mt-3"
-              data-oid="g88cdcl"
-            >
+            <p className="text-3xl font-bold text-blue-900 mt-3">
               {loading ? "..." : stats.currentStreak}
             </p>
-            <p
-              className="text-sm text-gray-400 flex items-center mt-1"
-              data-oid="4-3l40q"
-            >
+            <p className="text-sm text-gray-400 flex items-center mt-1">
               {stats.currentStreak === 0
                 ? "No learning streak yet"
                 : "day learning streak"}
@@ -312,37 +231,25 @@ export default function ProfilePage() {
       </div>
 
       {/* Empty State Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" data-oid="0cpn_vd">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Learning Progress - Empty State */}
-        <div className="bg-white rounded-lg shadow-sm" data-oid="btor1qg">
-          <div
-            className="flex justify-between items-center p-6 border-b border-gray-100"
-            data-oid="in765f8"
-          >
-            <h2
-              className="text-lg font-semibold text-gray-800"
-              data-oid="wnpaoiy"
-            >
+        <div className="bg-white rounded-lg shadow-sm">
+          <div className="flex justify-between items-center p-6 border-b border-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800">
               Learning Progress
             </h2>
           </div>
-          <div className="p-6" data-oid="lw10l4i">
-            <div className="text-center py-8" data-oid="lu05ce:">
-              <BookOpen
-                className="mx-auto h-12 w-12 text-gray-300 mb-4"
-                data-oid="khrvhfx"
-              />
+          <div className="p-6">
+            <div className="text-center py-8">
+              <BookOpen className="mx-auto h-12 w-12 text-gray-300 mb-4" />
 
-              <p className="text-gray-500 mb-2" data-oid="on8z9cw">
-                No courses in progress
-              </p>
-              <p className="text-sm text-gray-400" data-oid="3k3c-d8">
+              <p className="text-gray-500 mb-2">No courses in progress</p>
+              <p className="text-sm text-gray-400">
                 Start learning by browsing our course catalog
               </p>
               <Link
                 href="/courses"
                 className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-                data-oid="tv1sc4w"
               >
                 Browse Courses
               </Link>
@@ -351,29 +258,18 @@ export default function ProfilePage() {
         </div>
 
         {/* Recent Activity - Empty State */}
-        <div className="bg-white rounded-lg shadow-sm" data-oid="wh5fwie">
-          <div
-            className="flex justify-between items-center p-6 border-b border-gray-100"
-            data-oid="5:v3a9i"
-          >
-            <h2
-              className="text-lg font-semibold text-gray-800"
-              data-oid="ilwnvwr"
-            >
+        <div className="bg-white rounded-lg shadow-sm">
+          <div className="flex justify-between items-center p-6 border-b border-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800">
               Recent Activity
             </h2>
           </div>
-          <div className="p-6" data-oid="b73j0zw">
-            <div className="text-center py-8" data-oid="s95-qe7">
-              <Calendar
-                className="mx-auto h-12 w-12 text-gray-300 mb-4"
-                data-oid="7a4rd1q"
-              />
+          <div className="p-6">
+            <div className="text-center py-8">
+              <Calendar className="mx-auto h-12 w-12 text-gray-300 mb-4" />
 
-              <p className="text-gray-500 mb-2" data-oid="ik-ju.0">
-                No recent activity
-              </p>
-              <p className="text-sm text-gray-400" data-oid="mdkwoal">
+              <p className="text-gray-500 mb-2">No recent activity</p>
+              <p className="text-sm text-gray-400">
                 Your learning activity will appear here
               </p>
             </div>

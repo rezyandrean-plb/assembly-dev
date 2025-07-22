@@ -253,283 +253,193 @@ function OrdersPage() {
   };
 
   return (
-    <div className="space-y-6" data-oid="pd3m9md">
-      <div className="flex items-center justify-between" data-oid="ardef-1">
-        <h1 className="text-3xl font-bold text-[#123B79]" data-oid="ijgqoe9">
-          Orders & Sales
-        </h1>
-        <div className="flex items-center gap-2" data-oid="b2bg2h-">
-          <Button
-            variant="outline"
-            className="border-gray-200"
-            data-oid="-.3okzs"
-          >
-            <Download className="mr-2 h-4 w-4" data-oid="le_5pvo" />
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-[#123B79]">Orders & Sales</h1>
+        <div className="flex items-center gap-2">
+          <Button variant="outline" className="border-gray-200">
+            <Download className="mr-2 h-4 w-4" />
             Export Orders
           </Button>
         </div>
       </div>
 
-      <div
-        className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
-        data-oid="4a.sff2"
-      >
-        <Card className="border-gray-200 shadow-md" data-oid="i3z5m.n">
-          <CardHeader className="pb-2" data-oid="ja8yf7r">
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid="6m0:jaj"
-            >
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Total Orders
             </CardTitle>
           </CardHeader>
-          <CardContent data-oid="xfu5gqv">
-            <div className="text-2xl font-bold" data-oid="2e4v257">
-              {orders.length}
-            </div>
-            <p className="text-xs text-muted-foreground" data-oid="r5_kvw:">
+          <CardContent>
+            <div className="text-2xl font-bold">{orders.length}</div>
+            <p className="text-xs text-muted-foreground">
               +12% from last month
             </p>
           </CardContent>
         </Card>
-        <Card className="border-gray-200 shadow-md" data-oid=".yt3_1u">
-          <CardHeader className="pb-2" data-oid="z_r--3g">
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid="1u.6v7y"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Total Revenue
             </CardTitle>
           </CardHeader>
-          <CardContent data-oid="kmvq3rb">
-            <div className="text-2xl font-bold" data-oid=".qfa3nm">
+          <CardContent>
+            <div className="text-2xl font-bold">
               ${orders.reduce((sum, order) => sum + order.total, 0).toFixed(2)}
             </div>
-            <p className="text-xs text-muted-foreground" data-oid="47kz1oq">
-              +8% from last month
-            </p>
+            <p className="text-xs text-muted-foreground">+8% from last month</p>
           </CardContent>
         </Card>
-        <Card className="border-gray-200 shadow-md" data-oid="ef7-r7u">
-          <CardHeader className="pb-2" data-oid="213aetu">
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid="v.47szu"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Course Sales
             </CardTitle>
           </CardHeader>
-          <CardContent data-oid="crw1s2f">
-            <div className="text-2xl font-bold" data-oid="ktxfdsa">
+          <CardContent>
+            <div className="text-2xl font-bold">
               {
                 orders.filter((order) =>
                   order.items.some((item) => item.type === "course"),
                 ).length
               }
             </div>
-            <p className="text-xs text-muted-foreground" data-oid="l1.6378">
+            <p className="text-xs text-muted-foreground">
               +15% from last month
             </p>
           </CardContent>
         </Card>
-        <Card className="border-gray-200 shadow-md" data-oid="n4yr_lo">
-          <CardHeader className="pb-2" data-oid="sjp_3z3">
-            <CardTitle
-              className="text-sm font-medium text-[#123B79]"
-              data-oid="9jy2ngr"
-            >
+        <Card className="border-gray-200 shadow-md">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-[#123B79]">
               Book Sales
             </CardTitle>
           </CardHeader>
-          <CardContent data-oid="onhbod0">
-            <div className="text-2xl font-bold" data-oid="3w3j_2o">
+          <CardContent>
+            <div className="text-2xl font-bold">
               {
                 orders.filter((order) =>
                   order.items.some((item) => item.type === "book"),
                 ).length
               }
             </div>
-            <p className="text-xs text-muted-foreground" data-oid="g1o5wtz">
-              +5% from last month
-            </p>
+            <p className="text-xs text-muted-foreground">+5% from last month</p>
           </CardContent>
         </Card>
       </div>
 
-      <div
-        className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between"
-        data-oid="c71be5f"
-      >
-        <Tabs defaultValue="all" className="w-full" data-oid="qi.d0xn">
-          <div
-            className="flex flex-col sm:flex-row sm:items-center sm:justify-between"
-            data-oid="hv4kibe"
-          >
-            <TabsList
-              className="bg-white border border-gray-200"
-              data-oid="-6w6to4"
-            >
+      <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <Tabs defaultValue="all" className="w-full">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <TabsList className="bg-white border border-gray-200">
               <TabsTrigger
                 value="all"
                 className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-                data-oid="eyfawxp"
               >
                 All Orders
               </TabsTrigger>
               <TabsTrigger
                 value="completed"
                 className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-                data-oid="tt1_fha"
               >
                 Completed
               </TabsTrigger>
               <TabsTrigger
                 value="processing"
                 className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-                data-oid="0te1js-"
               >
                 Processing
               </TabsTrigger>
               <TabsTrigger
                 value="pending"
                 className="data-[state=active]:bg-[#123B79] data-[state=active]:text-white"
-                data-oid="rej1661"
               >
                 Pending
               </TabsTrigger>
             </TabsList>
 
-            <div
-              className="mt-4 flex items-center gap-2 sm:mt-0"
-              data-oid="ogpbyu9"
-            >
-              <div className="relative" data-oid="bi82nzi">
-                <Search
-                  className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
-                  data-oid="ax1htx."
-                />
+            <div className="mt-4 flex items-center gap-2 sm:mt-0">
+              <div className="relative">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
 
                 <Input
                   type="search"
                   placeholder="Search orders..."
                   className="pl-8 w-[200px] md:w-[300px] border-gray-200 bg-white"
-                  data-oid="zpkkrmt"
                 />
               </div>
-              <Select defaultValue="all" data-oid="9:.q:w2">
-                <SelectTrigger
-                  className="w-[180px] border-gray-200"
-                  data-oid="vobwemy"
-                >
-                  <SelectValue
-                    placeholder="Filter by type"
-                    data-oid="b18phu7"
-                  />
+              <Select defaultValue="all">
+                <SelectTrigger className="w-[180px] border-gray-200">
+                  <SelectValue placeholder="Filter by type" />
                 </SelectTrigger>
-                <SelectContent data-oid="0t_ct38">
-                  <SelectItem value="all" data-oid="ruo1hr1">
-                    All Products
-                  </SelectItem>
-                  <SelectItem value="course" data-oid="o0x4lef">
-                    Courses Only
-                  </SelectItem>
-                  <SelectItem value="book" data-oid="_hh4x:y">
-                    Books Only
-                  </SelectItem>
+                <SelectContent>
+                  <SelectItem value="all">All Products</SelectItem>
+                  <SelectItem value="course">Courses Only</SelectItem>
+                  <SelectItem value="book">Books Only</SelectItem>
                 </SelectContent>
               </Select>
-              <Button
-                variant="outline"
-                size="icon"
-                className="border-gray-200"
-                data-oid="wdb2z3j"
-              >
-                <Filter className="h-4 w-4" data-oid="rwo:3wa" />
+              <Button variant="outline" size="icon" className="border-gray-200">
+                <Filter className="h-4 w-4" />
               </Button>
             </div>
           </div>
 
-          <TabsContent value="all" className="mt-4" data-oid="ejpq:37">
-            <Card className="border-gray-200 shadow-md" data-oid="0hg-hxx">
-              <CardHeader className="px-6 py-4" data-oid="0.qjp2t">
-                <CardTitle
-                  className="text-base text-[#123B79]"
-                  data-oid="xqo-f0_"
-                >
+          <TabsContent value="all" className="mt-4">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader className="px-6 py-4">
+                <CardTitle className="text-base text-[#123B79]">
                   All Orders
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0" data-oid="goiykvh">
-                <Table data-oid="ztu3qnz">
-                  <TableHeader className="bg-[#F6F8FF]" data-oid="-03igbl">
-                    <TableRow data-oid="8ojejw3">
-                      <TableHead data-oid="dhs0ig3">Order ID</TableHead>
-                      <TableHead data-oid="tl9fgrh">Customer</TableHead>
-                      <TableHead data-oid="c45_440">Date</TableHead>
-                      <TableHead data-oid="m3x0igc">Total</TableHead>
-                      <TableHead data-oid="qyd17ua">Status</TableHead>
-                      <TableHead data-oid="zzsrunz">Payment</TableHead>
-                      <TableHead
-                        className="w-[80px]"
-                        data-oid="glj492g"
-                      ></TableHead>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader className="bg-[#F6F8FF]">
+                    <TableRow>
+                      <TableHead>Order ID</TableHead>
+                      <TableHead>Customer</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Total</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Payment</TableHead>
+                      <TableHead className="w-[80px]"></TableHead>
                     </TableRow>
                   </TableHeader>
-                  <TableBody data-oid="v64zet8">
+                  <TableBody>
                     {orders.map((order) => (
-                      <TableRow
-                        key={order.id}
-                        className="hover:bg-[#F6F8FF]"
-                        data-oid="i34.nui"
-                      >
-                        <TableCell
-                          className="font-medium text-[#123B79]"
-                          data-oid="i0zm6xa"
-                        >
+                      <TableRow key={order.id} className="hover:bg-[#F6F8FF]">
+                        <TableCell className="font-medium text-[#123B79]">
                           {order.id}
                         </TableCell>
-                        <TableCell data-oid="7.9642w">
-                          <div
-                            className="flex items-center gap-3"
-                            data-oid="28dsy9c"
-                          >
-                            <Avatar
-                              className="h-8 w-8 border border-[#E8EFFF]"
-                              data-oid="8s8udpa"
-                            >
+                        <TableCell>
+                          <div className="flex items-center gap-3">
+                            <Avatar className="h-8 w-8 border border-[#E8EFFF]">
                               <AvatarImage
                                 src={
                                   order.customer.avatar || "/placeholder.svg"
                                 }
                                 alt={order.customer.name}
-                                data-oid="p45pe6q"
                               />
 
-                              <AvatarFallback
-                                className="bg-[#123B79] text-white"
-                                data-oid="8529g_2"
-                              >
+                              <AvatarFallback className="bg-[#123B79] text-white">
                                 {order.customer.name.charAt(0)}
                               </AvatarFallback>
                             </Avatar>
-                            <div data-oid="d1o0xa2">
-                              <div className="font-medium" data-oid="dgib.d5">
+                            <div>
+                              <div className="font-medium">
                                 {order.customer.name}
                               </div>
-                              <div
-                                className="text-xs text-muted-foreground"
-                                data-oid="dcg3at0"
-                              >
+                              <div className="text-xs text-muted-foreground">
                                 {order.customer.email}
                               </div>
                             </div>
                           </div>
                         </TableCell>
-                        <TableCell data-oid="xt-aqc_">{order.date}</TableCell>
-                        <TableCell className="font-medium" data-oid="3zq4d:d">
+                        <TableCell>{order.date}</TableCell>
+                        <TableCell className="font-medium">
                           ${order.total.toFixed(2)}
                         </TableCell>
-                        <TableCell data-oid="gu191wd">
+                        <TableCell>
                           <Badge
                             variant={getStatusBadgeVariant(order.status)}
                             className={
@@ -549,12 +459,11 @@ function OrdersPage() {
                                             ? "bg-[#FDEBD0] text-[#77370B]"
                                             : ""
                             }
-                            data-oid="iiyzj.o"
                           >
                             {order.status}
                           </Badge>
                         </TableCell>
-                        <TableCell data-oid="vxiu7k_">
+                        <TableCell>
                           <Badge
                             variant={getPaymentStatusBadgeVariant(
                               order.paymentStatus,
@@ -568,53 +477,35 @@ function OrdersPage() {
                                     ? "bg-[#FDEBD0] text-[#77370B]"
                                     : ""
                             }
-                            data-oid="0vp_2qq"
                           >
                             {order.paymentStatus}
                           </Badge>
                         </TableCell>
-                        <TableCell data-oid="4w9c5.8">
-                          <DropdownMenu data-oid="gu3njgt">
-                            <DropdownMenuTrigger asChild data-oid="ca1_si_">
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                data-oid="cqalqb7"
-                              >
-                                <MoreHorizontal
-                                  className="h-4 w-4"
-                                  data-oid="8_.nkh7"
-                                />
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button variant="ghost" size="icon">
+                                <MoreHorizontal className="h-4 w-4" />
 
-                                <span className="sr-only" data-oid="tg5zhzw">
-                                  Actions
-                                </span>
+                                <span className="sr-only">Actions</span>
                               </Button>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end" data-oid="uhdwy9f">
-                              <DropdownMenuItem asChild data-oid="p85jlqu">
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuItem asChild>
                                 <Link
                                   href={`/admin/orders/${order.id}`}
                                   className="flex items-center"
-                                  data-oid="vxx3-t2"
                                 >
-                                  <Eye
-                                    className="mr-2 h-4 w-4"
-                                    data-oid="3zrxdti"
-                                  />
+                                  <Eye className="mr-2 h-4 w-4" />
                                   View Details
                                 </Link>
                               </DropdownMenuItem>
-                              <DropdownMenuItem asChild data-oid="hxijhe_">
+                              <DropdownMenuItem asChild>
                                 <Link
                                   href={`/admin/orders/${order.id}/invoice`}
                                   className="flex items-center"
-                                  data-oid="-_kyi_0"
                                 >
-                                  <FileText
-                                    className="mr-2 h-4 w-4"
-                                    data-oid="mmmm:a_"
-                                  />
+                                  <FileText className="mr-2 h-4 w-4" />
                                   View Invoice
                                 </Link>
                               </DropdownMenuItem>
@@ -623,16 +514,12 @@ function OrdersPage() {
                                   item.type === "book" &&
                                   item.deliveryMethod === "Home Delivery",
                               ) && (
-                                <DropdownMenuItem asChild data-oid="mubw402">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}/tracking`}
                                     className="flex items-center"
-                                    data-oid="p3eh70x"
                                   >
-                                    <Truck
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="s65mw.-"
-                                    />
+                                    <Truck className="mr-2 h-4 w-4" />
                                     Track Shipment
                                   </Link>
                                 </DropdownMenuItem>
@@ -648,140 +535,91 @@ function OrdersPage() {
             </Card>
           </TabsContent>
 
-          <TabsContent value="completed" className="mt-4" data-oid="gf.jclr">
-            <Card className="border-gray-200 shadow-md" data-oid="jmd-45:">
-              <CardHeader className="px-6 py-4" data-oid="9sqneq-">
-                <CardTitle
-                  className="text-base text-[#123B79]"
-                  data-oid="n8m5qth"
-                >
+          <TabsContent value="completed" className="mt-4">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader className="px-6 py-4">
+                <CardTitle className="text-base text-[#123B79]">
                   Completed Orders
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0" data-oid="s5dprif">
-                <Table data-oid="w31vwbd">
-                  <TableHeader className="bg-[#F6F8FF]" data-oid="mzoa374">
-                    <TableRow data-oid="jn3bl5o">
-                      <TableHead data-oid="jtkn4co">Order ID</TableHead>
-                      <TableHead data-oid="b:28l5m">Customer</TableHead>
-                      <TableHead data-oid="78.y6dk">Date</TableHead>
-                      <TableHead data-oid="d3..9lb">Total</TableHead>
-                      <TableHead data-oid="k8kmqr_">Payment</TableHead>
-                      <TableHead
-                        className="w-[80px]"
-                        data-oid="q_.n5-l"
-                      ></TableHead>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader className="bg-[#F6F8FF]">
+                    <TableRow>
+                      <TableHead>Order ID</TableHead>
+                      <TableHead>Customer</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Total</TableHead>
+                      <TableHead>Payment</TableHead>
+                      <TableHead className="w-[80px]"></TableHead>
                     </TableRow>
                   </TableHeader>
-                  <TableBody data-oid="zm6f74m">
+                  <TableBody>
                     {orders
                       .filter((order) => order.status === "Completed")
                       .map((order) => (
-                        <TableRow
-                          key={order.id}
-                          className="hover:bg-[#F6F8FF]"
-                          data-oid="--9s1uc"
-                        >
-                          <TableCell
-                            className="font-medium text-[#123B79]"
-                            data-oid="-cb0g1g"
-                          >
+                        <TableRow key={order.id} className="hover:bg-[#F6F8FF]">
+                          <TableCell className="font-medium text-[#123B79]">
                             {order.id}
                           </TableCell>
-                          <TableCell data-oid="2.3b8zs">
-                            <div
-                              className="flex items-center gap-3"
-                              data-oid=".hm8ijb"
-                            >
-                              <Avatar
-                                className="h-8 w-8 border border-[#E8EFFF]"
-                                data-oid=".e11ag_"
-                              >
+                          <TableCell>
+                            <div className="flex items-center gap-3">
+                              <Avatar className="h-8 w-8 border border-[#E8EFFF]">
                                 <AvatarImage
                                   src={
                                     order.customer.avatar || "/placeholder.svg"
                                   }
                                   alt={order.customer.name}
-                                  data-oid="es4im.-"
                                 />
 
-                                <AvatarFallback
-                                  className="bg-[#123B79] text-white"
-                                  data-oid="7:lei6."
-                                >
+                                <AvatarFallback className="bg-[#123B79] text-white">
                                   {order.customer.name.charAt(0)}
                                 </AvatarFallback>
                               </Avatar>
-                              <div data-oid="kqw10w4">
-                                <div className="font-medium" data-oid="1pz_l06">
+                              <div>
+                                <div className="font-medium">
                                   {order.customer.name}
                                 </div>
-                                <div
-                                  className="text-xs text-muted-foreground"
-                                  data-oid="grxnor3"
-                                >
+                                <div className="text-xs text-muted-foreground">
                                   {order.customer.email}
                                 </div>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell data-oid="wte6bdz">{order.date}</TableCell>
-                          <TableCell className="font-medium" data-oid="px-21u:">
+                          <TableCell>{order.date}</TableCell>
+                          <TableCell className="font-medium">
                             ${order.total.toFixed(2)}
                           </TableCell>
-                          <TableCell data-oid="4pz9fkq">
-                            <Badge
-                              className="bg-[#28A745] text-white"
-                              data-oid="08i9314"
-                            >
+                          <TableCell>
+                            <Badge className="bg-[#28A745] text-white">
                               {order.paymentStatus}
                             </Badge>
                           </TableCell>
-                          <TableCell data-oid="3if9-e0">
-                            <DropdownMenu data-oid="cl_n58a">
-                              <DropdownMenuTrigger asChild data-oid="nkmfn9t">
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  data-oid="i3ndjbs"
-                                >
-                                  <MoreHorizontal
-                                    className="h-4 w-4"
-                                    data-oid="avo3may"
-                                  />
+                          <TableCell>
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                  <MoreHorizontal className="h-4 w-4" />
 
-                                  <span className="sr-only" data-oid="qcj0au8">
-                                    Actions
-                                  </span>
+                                  <span className="sr-only">Actions</span>
                                 </Button>
                               </DropdownMenuTrigger>
-                              <DropdownMenuContent
-                                align="end"
-                                data-oid="6spq66q"
-                              >
-                                <DropdownMenuItem asChild data-oid="h4fr-g6">
+                              <DropdownMenuContent align="end">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}`}
                                     className="flex items-center"
-                                    data-oid="1j1kdo8"
                                   >
-                                    <Eye
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="3n6ormi"
-                                    />
+                                    <Eye className="mr-2 h-4 w-4" />
                                     View Details
                                   </Link>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem asChild data-oid="cv8q8os">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}/invoice`}
                                     className="flex items-center"
-                                    data-oid="xj2t2js"
                                   >
-                                    <FileText
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="p:obbct"
-                                    />
+                                    <FileText className="mr-2 h-4 w-4" />
                                     View Invoice
                                   </Link>
                                 </DropdownMenuItem>
@@ -796,140 +634,91 @@ function OrdersPage() {
             </Card>
           </TabsContent>
 
-          <TabsContent value="processing" className="mt-4" data-oid="2hfn-ws">
-            <Card className="border-gray-200 shadow-md" data-oid="sya4dqe">
-              <CardHeader className="px-6 py-4" data-oid="h5bab4l">
-                <CardTitle
-                  className="text-base text-[#123B79]"
-                  data-oid="zxzdryj"
-                >
+          <TabsContent value="processing" className="mt-4">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader className="px-6 py-4">
+                <CardTitle className="text-base text-[#123B79]">
                   Processing Orders
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0" data-oid="wecg2a3">
-                <Table data-oid="7ywgb4m">
-                  <TableHeader className="bg-[#F6F8FF]" data-oid="mbplidz">
-                    <TableRow data-oid="z95_h7h">
-                      <TableHead data-oid="mzuwitg">Order ID</TableHead>
-                      <TableHead data-oid="1tbwnf1">Customer</TableHead>
-                      <TableHead data-oid="b6xhtd0">Date</TableHead>
-                      <TableHead data-oid="a5rbgd6">Total</TableHead>
-                      <TableHead data-oid="vx5ojb5">Payment</TableHead>
-                      <TableHead
-                        className="w-[80px]"
-                        data-oid="diqcjk1"
-                      ></TableHead>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader className="bg-[#F6F8FF]">
+                    <TableRow>
+                      <TableHead>Order ID</TableHead>
+                      <TableHead>Customer</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Total</TableHead>
+                      <TableHead>Payment</TableHead>
+                      <TableHead className="w-[80px]"></TableHead>
                     </TableRow>
                   </TableHeader>
-                  <TableBody data-oid=".22s4gx">
+                  <TableBody>
                     {orders
                       .filter((order) => order.status === "Processing")
                       .map((order) => (
-                        <TableRow
-                          key={order.id}
-                          className="hover:bg-[#F6F8FF]"
-                          data-oid=".a1z_sf"
-                        >
-                          <TableCell
-                            className="font-medium text-[#123B79]"
-                            data-oid="9dajgvd"
-                          >
+                        <TableRow key={order.id} className="hover:bg-[#F6F8FF]">
+                          <TableCell className="font-medium text-[#123B79]">
                             {order.id}
                           </TableCell>
-                          <TableCell data-oid="b4n3u92">
-                            <div
-                              className="flex items-center gap-3"
-                              data-oid="tjhjnrz"
-                            >
-                              <Avatar
-                                className="h-8 w-8 border border-[#E8EFFF]"
-                                data-oid="zx11m85"
-                              >
+                          <TableCell>
+                            <div className="flex items-center gap-3">
+                              <Avatar className="h-8 w-8 border border-[#E8EFFF]">
                                 <AvatarImage
                                   src={
                                     order.customer.avatar || "/placeholder.svg"
                                   }
                                   alt={order.customer.name}
-                                  data-oid="rgqby.l"
                                 />
 
-                                <AvatarFallback
-                                  className="bg-[#123B79] text-white"
-                                  data-oid="rjglh1."
-                                >
+                                <AvatarFallback className="bg-[#123B79] text-white">
                                   {order.customer.name.charAt(0)}
                                 </AvatarFallback>
                               </Avatar>
-                              <div data-oid="e4pvs4g">
-                                <div className="font-medium" data-oid="kxhish8">
+                              <div>
+                                <div className="font-medium">
                                   {order.customer.name}
                                 </div>
-                                <div
-                                  className="text-xs text-muted-foreground"
-                                  data-oid="7t702vn"
-                                >
+                                <div className="text-xs text-muted-foreground">
                                   {order.customer.email}
                                 </div>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell data-oid="pp2w188">{order.date}</TableCell>
-                          <TableCell className="font-medium" data-oid="d-tq1.:">
+                          <TableCell>{order.date}</TableCell>
+                          <TableCell className="font-medium">
                             ${order.total.toFixed(2)}
                           </TableCell>
-                          <TableCell data-oid="id1y.kp">
-                            <Badge
-                              className="bg-[#28A745] text-white"
-                              data-oid="vs37kk4"
-                            >
+                          <TableCell>
+                            <Badge className="bg-[#28A745] text-white">
                               {order.paymentStatus}
                             </Badge>
                           </TableCell>
-                          <TableCell data-oid="8ru0p.7">
-                            <DropdownMenu data-oid="h2mqvsb">
-                              <DropdownMenuTrigger asChild data-oid="qghvbe0">
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  data-oid="yel236f"
-                                >
-                                  <MoreHorizontal
-                                    className="h-4 w-4"
-                                    data-oid="-5jho23"
-                                  />
+                          <TableCell>
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                  <MoreHorizontal className="h-4 w-4" />
 
-                                  <span className="sr-only" data-oid="3-34-04">
-                                    Actions
-                                  </span>
+                                  <span className="sr-only">Actions</span>
                                 </Button>
                               </DropdownMenuTrigger>
-                              <DropdownMenuContent
-                                align="end"
-                                data-oid="y57521f"
-                              >
-                                <DropdownMenuItem asChild data-oid=":sh.pwv">
+                              <DropdownMenuContent align="end">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}`}
                                     className="flex items-center"
-                                    data-oid="7hlzvq6"
                                   >
-                                    <Eye
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="-u-qnml"
-                                    />
+                                    <Eye className="mr-2 h-4 w-4" />
                                     View Details
                                   </Link>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem asChild data-oid="iz79q4l">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}/invoice`}
                                     className="flex items-center"
-                                    data-oid="hjgtqvb"
                                   >
-                                    <FileText
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="c1n.pad"
-                                    />
+                                    <FileText className="mr-2 h-4 w-4" />
                                     View Invoice
                                   </Link>
                                 </DropdownMenuItem>
@@ -938,16 +727,12 @@ function OrdersPage() {
                                     item.type === "book" &&
                                     item.deliveryMethod === "Home Delivery",
                                 ) && (
-                                  <DropdownMenuItem asChild data-oid=":poeagp">
+                                  <DropdownMenuItem asChild>
                                     <Link
                                       href={`/admin/orders/${order.id}/tracking`}
                                       className="flex items-center"
-                                      data-oid="33tcr4u"
                                     >
-                                      <Truck
-                                        className="mr-2 h-4 w-4"
-                                        data-oid="mud9w58"
-                                      />
+                                      <Truck className="mr-2 h-4 w-4" />
                                       Track Shipment
                                     </Link>
                                   </DropdownMenuItem>
@@ -963,140 +748,91 @@ function OrdersPage() {
             </Card>
           </TabsContent>
 
-          <TabsContent value="pending" className="mt-4" data-oid="c7.a.bs">
-            <Card className="border-gray-200 shadow-md" data-oid="5oa9adj">
-              <CardHeader className="px-6 py-4" data-oid="hgjm3hu">
-                <CardTitle
-                  className="text-base text-[#123B79]"
-                  data-oid="i6xiraa"
-                >
+          <TabsContent value="pending" className="mt-4">
+            <Card className="border-gray-200 shadow-md">
+              <CardHeader className="px-6 py-4">
+                <CardTitle className="text-base text-[#123B79]">
                   Pending Orders
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0" data-oid="w.advc1">
-                <Table data-oid="t-zpeh0">
-                  <TableHeader className="bg-[#F6F8FF]" data-oid="e_zv89d">
-                    <TableRow data-oid="wpl5fru">
-                      <TableHead data-oid="c0_b9bm">Order ID</TableHead>
-                      <TableHead data-oid="97qq:x8">Customer</TableHead>
-                      <TableHead data-oid="_d-x_xm">Date</TableHead>
-                      <TableHead data-oid="c84ivjl">Total</TableHead>
-                      <TableHead data-oid="4cxx0dx">Payment</TableHead>
-                      <TableHead
-                        className="w-[80px]"
-                        data-oid="xi7pg_h"
-                      ></TableHead>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader className="bg-[#F6F8FF]">
+                    <TableRow>
+                      <TableHead>Order ID</TableHead>
+                      <TableHead>Customer</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Total</TableHead>
+                      <TableHead>Payment</TableHead>
+                      <TableHead className="w-[80px]"></TableHead>
                     </TableRow>
                   </TableHeader>
-                  <TableBody data-oid="4ceewh7">
+                  <TableBody>
                     {orders
                       .filter((order) => order.status === "Pending")
                       .map((order) => (
-                        <TableRow
-                          key={order.id}
-                          className="hover:bg-[#F6F8FF]"
-                          data-oid=".ay9aha"
-                        >
-                          <TableCell
-                            className="font-medium text-[#123B79]"
-                            data-oid="suwozwm"
-                          >
+                        <TableRow key={order.id} className="hover:bg-[#F6F8FF]">
+                          <TableCell className="font-medium text-[#123B79]">
                             {order.id}
                           </TableCell>
-                          <TableCell data-oid="caadsso">
-                            <div
-                              className="flex items-center gap-3"
-                              data-oid="19xefsy"
-                            >
-                              <Avatar
-                                className="h-8 w-8 border border-[#E8EFFF]"
-                                data-oid="7butmh:"
-                              >
+                          <TableCell>
+                            <div className="flex items-center gap-3">
+                              <Avatar className="h-8 w-8 border border-[#E8EFFF]">
                                 <AvatarImage
                                   src={
                                     order.customer.avatar || "/placeholder.svg"
                                   }
                                   alt={order.customer.name}
-                                  data-oid="shtqi6t"
                                 />
 
-                                <AvatarFallback
-                                  className="bg-[#123B79] text-white"
-                                  data-oid="b7jh1_n"
-                                >
+                                <AvatarFallback className="bg-[#123B79] text-white">
                                   {order.customer.name.charAt(0)}
                                 </AvatarFallback>
                               </Avatar>
-                              <div data-oid="9-6fwae">
-                                <div className="font-medium" data-oid="y25i:5y">
+                              <div>
+                                <div className="font-medium">
                                   {order.customer.name}
                                 </div>
-                                <div
-                                  className="text-xs text-muted-foreground"
-                                  data-oid="c-p7fey"
-                                >
+                                <div className="text-xs text-muted-foreground">
                                   {order.customer.email}
                                 </div>
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell data-oid="aim4tht">{order.date}</TableCell>
-                          <TableCell className="font-medium" data-oid=".6fvp5j">
+                          <TableCell>{order.date}</TableCell>
+                          <TableCell className="font-medium">
                             ${order.total.toFixed(2)}
                           </TableCell>
-                          <TableCell data-oid="2-hymp1">
-                            <Badge
-                              className="bg-[#E4E4E7] text-[#52525B]"
-                              data-oid=":7aol4j"
-                            >
+                          <TableCell>
+                            <Badge className="bg-[#E4E4E7] text-[#52525B]">
                               {order.paymentStatus}
                             </Badge>
                           </TableCell>
-                          <TableCell data-oid=":k_4m0m">
-                            <DropdownMenu data-oid="k.oskd0">
-                              <DropdownMenuTrigger asChild data-oid="pe3qrmq">
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  data-oid="xpfmrsj"
-                                >
-                                  <MoreHorizontal
-                                    className="h-4 w-4"
-                                    data-oid="k7gp_t9"
-                                  />
+                          <TableCell>
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                  <MoreHorizontal className="h-4 w-4" />
 
-                                  <span className="sr-only" data-oid="16i-7a0">
-                                    Actions
-                                  </span>
+                                  <span className="sr-only">Actions</span>
                                 </Button>
                               </DropdownMenuTrigger>
-                              <DropdownMenuContent
-                                align="end"
-                                data-oid="wo3z6s6"
-                              >
-                                <DropdownMenuItem asChild data-oid="yg1g.wr">
+                              <DropdownMenuContent align="end">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}`}
                                     className="flex items-center"
-                                    data-oid="rk:n08."
                                   >
-                                    <Eye
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="rke5zh6"
-                                    />
+                                    <Eye className="mr-2 h-4 w-4" />
                                     View Details
                                   </Link>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem asChild data-oid="gnzujrr">
+                                <DropdownMenuItem asChild>
                                   <Link
                                     href={`/admin/orders/${order.id}/invoice`}
                                     className="flex items-center"
-                                    data-oid="7-:.dlj"
                                   >
-                                    <FileText
-                                      className="mr-2 h-4 w-4"
-                                      data-oid="1hh.l-x"
-                                    />
+                                    <FileText className="mr-2 h-4 w-4" />
                                     View Invoice
                                   </Link>
                                 </DropdownMenuItem>

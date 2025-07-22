@@ -133,7 +133,6 @@ const Carousel = React.forwardRef<
           canScrollPrev,
           canScrollNext,
         }}
-        data-oid="e8won0n"
       >
         <div
           ref={ref}
@@ -142,7 +141,6 @@ const Carousel = React.forwardRef<
           role="region"
           aria-roledescription="carousel"
           {...props}
-          data-oid="clm3xa8"
         >
           {children}
         </div>
@@ -159,7 +157,7 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className="overflow-hidden" data-oid="gr9t.e_">
+    <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
@@ -168,7 +166,6 @@ const CarouselContent = React.forwardRef<
           className,
         )}
         {...props}
-        data-oid="lx.hmgu"
       />
     </div>
   );
@@ -192,7 +189,6 @@ const CarouselItem = React.forwardRef<
         className,
       )}
       {...props}
-      data-oid="d2czfle"
     />
   );
 });
@@ -219,12 +215,9 @@ const CarouselPrevious = React.forwardRef<
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-      data-oid="x.5rfx2"
     >
-      <ArrowLeft className="h-4 w-4" data-oid="wc3e-db" />
-      <span className="sr-only" data-oid="6t2ee07">
-        Previous slide
-      </span>
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
     </Button>
   );
 });
@@ -251,12 +244,9 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-      data-oid="xhvi2li"
     >
-      <ArrowRight className="h-4 w-4" data-oid="bq03ijj" />
-      <span className="sr-only" data-oid="._kaif3">
-        Next slide
-      </span>
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
     </Button>
   );
 });

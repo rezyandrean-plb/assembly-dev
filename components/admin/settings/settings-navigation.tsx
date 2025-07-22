@@ -47,17 +47,12 @@ export function SettingsNavigation({
   onSectionChange,
 }: SettingsNavigationProps) {
   return (
-    <nav className="space-y-2" data-oid="qt0if:z">
-      <div className="pb-2" data-oid="gbhwqls">
-        <h2
-          className="text-lg font-semibold text-[#123B79] mb-1"
-          data-oid="v5io7nc"
-        >
+    <nav className="space-y-2">
+      <div className="pb-2">
+        <h2 className="text-lg font-semibold text-[#123B79] mb-1">
           Settings Categories
         </h2>
-        <p className="text-sm text-gray-600" data-oid="iby-hux">
-          Configure platform settings
-        </p>
+        <p className="text-sm text-gray-600">Configure platform settings</p>
       </div>
 
       {navigationItems.map((item) => {
@@ -75,31 +70,25 @@ export function SettingsNavigation({
                 ? "border-[#123B79] bg-[#E8EFFF] shadow-sm"
                 : "border-gray-200 bg-white",
             )}
-            data-oid="0zw8rxc"
           >
-            <div className="flex items-start gap-3" data-oid=".qjjgpo">
+            <div className="flex items-start gap-3">
               <Icon
                 className={cn(
                   "h-5 w-5 mt-0.5 flex-shrink-0",
                   isActive ? "text-[#123B79]" : "text-gray-400",
                 )}
-                data-oid="fwa8lco"
               />
 
-              <div className="min-w-0 flex-1" data-oid="n3kwh:k">
+              <div className="min-w-0 flex-1">
                 <div
                   className={cn(
                     "font-medium text-sm",
                     isActive ? "text-[#123B79]" : "text-gray-900",
                   )}
-                  data-oid="-pn6bp3"
                 >
                   {item.label}
                 </div>
-                <div
-                  className="text-xs text-gray-500 mt-1 leading-tight"
-                  data-oid="en.1v0r"
-                >
+                <div className="text-xs text-gray-500 mt-1 leading-tight">
                   {item.description}
                 </div>
               </div>

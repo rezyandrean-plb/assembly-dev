@@ -27,25 +27,20 @@ export default function FacilitatorsPage() {
 
   return (
     <>
-      <div className="bg-white" data-oid="-yw_4qv">
-        <FacilitatorHero data-oid="-nc7v2p" />
+      <div className="bg-white">
+        <FacilitatorHero />
 
         {/* Main Facilitators Section */}
-        <section
-          ref={sectionRef}
-          className="py-24 bg-gray-50"
-          data-oid="hbvoam-"
-        >
-          <div className="container mx-auto px-4" data-oid="uxziwkb">
-            <div className="max-w-7xl mx-auto" data-oid="ym7z2-o">
+        <section ref={sectionRef} className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
               {/* Facilitators List */}
-              <div className="space-y-24 mb-16" data-oid="ku:s5ro">
+              <div className="space-y-24 mb-16">
                 {facilitators.map((facilitator, index) => (
                   <FacilitatorCard
                     key={facilitator.id}
                     facilitator={facilitator}
                     index={index}
-                    data-oid="1kvqpe."
                   />
                 ))}
               </div>
@@ -54,53 +49,38 @@ export default function FacilitatorsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-white" data-oid="hwq7-8b">
-          <div className="container mx-auto px-4" data-oid="h453do5">
-            <div className="max-w-4xl mx-auto text-center" data-oid="sp96i8f">
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                data-oid="ti51orx"
               >
-                <h3
-                  className="text-3xl font-bold text-gray-900 mb-4"
-                  data-oid="5_dqokf"
-                >
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   Ready to Learn from the Best?
                 </h3>
-                <p
-                  className="text-gray-600 mb-8 max-w-2xl mx-auto"
-                  data-oid="2k.ryny"
-                >
+                <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                   Join thousands of successful property investors who have
                   learned from our expert facilitators. Start your journey today
                   with our comprehensive courses and personalized guidance.
                 </p>
-                <div
-                  className="flex flex-col sm:flex-row gap-4 justify-center"
-                  data-oid="i.nfrfs"
-                >
-                  <Link href="/courses" data-oid=":55t1r.">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/courses">
                     <Button
                       size="lg"
                       className="bg-slate-300 hover:bg-zinc-100 text-gray-800 hover:text-gray-800 px-8 py-3 rounded-xl transition-all duration-300 group"
-                      data-oid="9a6n-3d"
                     >
                       Browse Courses
-                      <ArrowRight
-                        className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                        data-oid="0s2idnp"
-                      />
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
-                  <Link href="/contact" data-oid="_wl-r5o">
+                  <Link href="/contact">
                     <Button
                       variant="outline"
                       size="lg"
                       className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-xl transition-all duration-300"
-                      data-oid="3fn96-6"
                     >
                       Get in Touch
                     </Button>

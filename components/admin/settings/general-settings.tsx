@@ -109,6 +109,7 @@ export function GeneralSettings() {
                 }
                 placeholder="Enter site name"
               />
+
               <p className="text-xs text-gray-500">
                 Used in browser titles and email templates
               </p>
@@ -128,6 +129,7 @@ export function GeneralSettings() {
                 }
                 placeholder="contact@yoursite.com"
               />
+
               <p className="text-xs text-gray-500">
                 Displayed on contact forms and support pages
               </p>

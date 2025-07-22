@@ -34,39 +34,32 @@ export function PopularCoursesTable() {
   ];
 
   return (
-    <div className="space-y-4" data-oid="8h5790t">
+    <div className="space-y-4">
       {popularCourses.map((course) => (
-        <div key={course.id} className="space-y-2" data-oid=":ki5ia_">
-          <div className="flex items-center justify-between" data-oid="zfbo-rr">
-            <div data-oid="5:4b569">
-              <p className="text-sm font-medium" data-oid="jwtulu9">
-                {course.title}
-              </p>
-              <div className="flex items-center gap-2" data-oid="k:uv2kx">
+        <div key={course.id} className="space-y-2">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium">{course.title}</p>
+              <div className="flex items-center gap-2">
                 <Badge
                   variant="outline"
                   className="text-xs border-[#123B79] text-[#123B79]"
-                  data-oid="p:t6hiy"
                 >
                   {course.category}
                 </Badge>
-                <span
-                  className="text-xs text-muted-foreground"
-                  data-oid="3qjmzq:"
-                >
+                <span className="text-xs text-muted-foreground">
                   {course.enrollments} enrollments
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2" data-oid="rlxsgn-">
+          <div className="flex items-center gap-2">
             <Progress
               value={course.completionRate}
               className="h-2 bg-gray-200"
-              data-oid="hm57ffh"
             />
 
-            <span className="text-xs font-medium" data-oid="9j3zir1">
+            <span className="text-xs font-medium">
               {course.completionRate}%
             </span>
           </div>

@@ -118,71 +118,53 @@ export default function TestLoginPage() {
 
   if (!isClient) {
     return (
-      <div
-        className="min-h-screen bg-gray-50 flex items-center justify-center p-4"
-        data-oid="ev82k8."
-      >
-        <div className="text-center" data-oid="fxwwljo">
-          <div
-            className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#123B79] mx-auto"
-            data-oid="ftveylm"
-          ></div>
-          <p className="mt-2 text-gray-600" data-oid="n:k6svg">
-            Loading...
-          </p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#123B79] mx-auto"></div>
+          <p className="mt-2 text-gray-600">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div
-      className="min-h-screen bg-gray-50 flex items-center justify-center p-4"
-      data-oid="9zb2gn8"
-    >
-      <div className="w-full max-w-4xl" data-oid="0yq1-gf">
-        <div className="text-center mb-8" data-oid="9332lzj">
-          <h1
-            className="text-4xl font-bold text-[#123B79] mb-2"
-            data-oid="ilx27eq"
-          >
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-4xl">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-[#123B79] mb-2">
             Assembly Admin Test
           </h1>
-          <p className="text-gray-600" data-oid="1va.9m0">
+          <p className="text-gray-600">
             Test super admin login and dashboard access
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          data-oid="7aq2c6h"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Login Form */}
-          <Card className="border-gray-200" data-oid="mqczn.2">
-            <CardHeader data-oid="kzwou-v">
-              <CardTitle className="flex items-center gap-2" data-oid="3t3z__a">
-                <LogIn className="h-5 w-5" data-oid="88f_v0n" />
+          <Card className="border-gray-200">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <LogIn className="h-5 w-5" />
                 Super Admin Login
               </CardTitle>
-              <CardDescription data-oid="pejcp7s">
+              <CardDescription>
                 Test credentials: admin@assembly.com / admin123
               </CardDescription>
             </CardHeader>
-            <CardContent data-oid="moq1ka2">
+            <CardContent>
               {adminSession ? (
-                <div className="space-y-4" data-oid=":.osipl">
-                  <Alert data-oid="0-b5z04">
-                    <CheckCircle className="h-4 w-4" data-oid="6o_3qov" />
-                    <AlertDescription data-oid="dhimz1c">
-                      <strong data-oid="52u0t6m">Logged in as:</strong>{" "}
-                      {adminSession.user.name} ({adminSession.user.email})
+                <div className="space-y-4">
+                  <Alert>
+                    <CheckCircle className="h-4 w-4" />
+                    <AlertDescription>
+                      <strong>Logged in as:</strong> {adminSession.user.name} (
+                      {adminSession.user.email})
                     </AlertDescription>
                   </Alert>
-                  <div className="space-y-2" data-oid="8h4r7xt">
+                  <div className="space-y-2">
                     <Button
                       onClick={() => router.push("/admin")}
                       className="w-full bg-[#123B79] hover:bg-[#425DA0]"
-                      data-oid="y228qk4"
                     >
                       Go to Admin Dashboard
                     </Button>
@@ -190,48 +172,36 @@ export default function TestLoginPage() {
                       onClick={() => router.push("/admin/settings")}
                       variant="outline"
                       className="w-full"
-                      data-oid="_zhh5a3"
                     >
-                      <Settings className="mr-2 h-4 w-4" data-oid="h8v:e9j" />
+                      <Settings className="mr-2 h-4 w-4" />
                       Go to Settings
                     </Button>
                     <Button
                       onClick={handleLogout}
                       variant="outline"
                       className="w-full"
-                      data-oid="bn.bdyo"
                     >
                       Logout
                     </Button>
                   </div>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleLogin}
-                  className="space-y-4"
-                  data-oid="_-s_9ln"
-                >
+                <form onSubmit={handleLogin} className="space-y-4">
                   {error && (
-                    <Alert variant="destructive" data-oid="ry3szgi">
-                      <AlertTriangle className="h-4 w-4" data-oid="k_tdsrh" />
-                      <AlertDescription data-oid="3mhka_e">
-                        {error}
-                      </AlertDescription>
+                    <Alert variant="destructive">
+                      <AlertTriangle className="h-4 w-4" />
+                      <AlertDescription>{error}</AlertDescription>
                     </Alert>
                   )}
                   {success && (
-                    <Alert data-oid="qietgtr">
-                      <CheckCircle className="h-4 w-4" data-oid="fordx9:" />
-                      <AlertDescription data-oid="wrcj-ys">
-                        {success}
-                      </AlertDescription>
+                    <Alert>
+                      <CheckCircle className="h-4 w-4" />
+                      <AlertDescription>{success}</AlertDescription>
                     </Alert>
                   )}
 
-                  <div className="space-y-2" data-oid="j-enb2v">
-                    <Label htmlFor="email" data-oid="0ky9otn">
-                      Email
-                    </Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
                       type="email"
@@ -244,14 +214,11 @@ export default function TestLoginPage() {
                       }
                       placeholder="admin@assembly.com"
                       required
-                      data-oid="3ulnxqc"
                     />
                   </div>
 
-                  <div className="space-y-2" data-oid="7sg:clf">
-                    <Label htmlFor="password" data-oid="aci36sf">
-                      Password
-                    </Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="password">Password</Label>
                     <Input
                       id="password"
                       type="password"
@@ -264,7 +231,6 @@ export default function TestLoginPage() {
                       }
                       placeholder="admin123"
                       required
-                      data-oid="r_t6xkw"
                     />
                   </div>
 
@@ -272,7 +238,6 @@ export default function TestLoginPage() {
                     type="submit"
                     disabled={isLoading}
                     className="w-full bg-[#123B79] hover:bg-[#425DA0]"
-                    data-oid="a32n1wg"
                   >
                     {isLoading ? "Logging in..." : "Login as Super Admin"}
                   </Button>
@@ -282,141 +247,89 @@ export default function TestLoginPage() {
           </Card>
 
           {/* Admin Dashboard Preview */}
-          <Card className="border-gray-200" data-oid="xza1140">
-            <CardHeader data-oid="zbquk7_">
-              <CardTitle className="flex items-center gap-2" data-oid="bmp4g9c">
-                <BarChart3 className="h-5 w-5" data-oid="__1w-9i" />
+          <Card className="border-gray-200">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BarChart3 className="h-5 w-5" />
                 Admin Dashboard Preview
               </CardTitle>
-              <CardDescription data-oid="9101cir">
+              <CardDescription>
                 Available admin pages and features
               </CardDescription>
             </CardHeader>
-            <CardContent data-oid="2a6hjch">
-              <div className="space-y-4" data-oid="9k06sgw">
-                <div className="grid grid-cols-2 gap-3" data-oid="swc26u:">
-                  <div
-                    className="p-3 border border-gray-200 rounded-lg"
-                    data-oid="l7cwjdx"
-                  >
-                    <div
-                      className="flex items-center gap-2 mb-2"
-                      data-oid="2q-3t9s"
-                    >
-                      <BarChart3
-                        className="h-4 w-4 text-[#123B79]"
-                        data-oid="nxd2fpe"
-                      />
-                      <span className="font-medium text-sm" data-oid="rb:chz0">
-                        Dashboard
-                      </span>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 border border-gray-200 rounded-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <BarChart3 className="h-4 w-4 text-[#123B79]" />
+
+                      <span className="font-medium text-sm">Dashboard</span>
                     </div>
-                    <p className="text-xs text-gray-600" data-oid="6:jwu.k">
+                    <p className="text-xs text-gray-600">
                       Overview and analytics
                     </p>
                   </div>
 
-                  <div
-                    className="p-3 border border-gray-200 rounded-lg"
-                    data-oid="9:n:2cw"
-                  >
-                    <div
-                      className="flex items-center gap-2 mb-2"
-                      data-oid="e7y1mhw"
-                    >
-                      <Users
-                        className="h-4 w-4 text-[#123B79]"
-                        data-oid="-8tl-do"
-                      />
-                      <span className="font-medium text-sm" data-oid="mhcq_w0">
+                  <div className="p-3 border border-gray-200 rounded-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Users className="h-4 w-4 text-[#123B79]" />
+
+                      <span className="font-medium text-sm">
                         User Management
                       </span>
                     </div>
-                    <p className="text-xs text-gray-600" data-oid="7nl2bai">
+                    <p className="text-xs text-gray-600">
                       Manage users and roles
                     </p>
                   </div>
 
-                  <div
-                    className="p-3 border border-gray-200 rounded-lg"
-                    data-oid="n0v_g.1"
-                  >
-                    <div
-                      className="flex items-center gap-2 mb-2"
-                      data-oid="oluv2fz"
-                    >
-                      <ShoppingCart
-                        className="h-4 w-4 text-[#123B79]"
-                        data-oid="heuby0v"
-                      />
-                      <span className="font-medium text-sm" data-oid="-nwuw.j">
+                  <div className="p-3 border border-gray-200 rounded-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <ShoppingCart className="h-4 w-4 text-[#123B79]" />
+
+                      <span className="font-medium text-sm">
                         Orders & Sales
                       </span>
                     </div>
-                    <p className="text-xs text-gray-600" data-oid="u5tqzwc">
+                    <p className="text-xs text-gray-600">
                       View orders and revenue
                     </p>
                   </div>
 
-                  <div
-                    className="p-3 border border-gray-200 rounded-lg"
-                    data-oid=":avo084"
-                  >
-                    <div
-                      className="flex items-center gap-2 mb-2"
-                      data-oid="p3ma90a"
-                    >
-                      <CreditCard
-                        className="h-4 w-4 text-[#123B79]"
-                        data-oid="0p6i3f-"
-                      />
-                      <span className="font-medium text-sm" data-oid="0bmo6nr">
-                        Payments
-                      </span>
+                  <div className="p-3 border border-gray-200 rounded-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CreditCard className="h-4 w-4 text-[#123B79]" />
+
+                      <span className="font-medium text-sm">Payments</span>
                     </div>
-                    <p className="text-xs text-gray-600" data-oid="vbrqxve">
-                      Payment management
-                    </p>
+                    <p className="text-xs text-gray-600">Payment management</p>
                   </div>
                 </div>
 
-                <div
-                  className="p-3 border border-gray-200 rounded-lg bg-[#E8EFFF]"
-                  data-oid="5g076qr"
-                >
-                  <div
-                    className="flex items-center gap-2 mb-2"
-                    data-oid=".ml-nvm"
-                  >
-                    <Settings
-                      className="h-4 w-4 text-[#123B79]"
-                      data-oid="6n1lidy"
-                    />
-                    <span
-                      className="font-medium text-sm text-[#123B79]"
-                      data-oid="tu424s3"
-                    >
+                <div className="p-3 border border-gray-200 rounded-lg bg-[#E8EFFF]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Settings className="h-4 w-4 text-[#123B79]" />
+
+                    <span className="font-medium text-sm text-[#123B79]">
                       Settings (Super Admin Only)
                     </span>
                   </div>
-                  <p className="text-xs text-gray-600" data-oid="7ewqasr">
+                  <p className="text-xs text-gray-600">
                     Platform configuration, payment gateways, email templates,
                     integrations
                   </p>
                 </div>
 
-                <div
-                  className="text-xs text-gray-500 space-y-1"
-                  data-oid="cmalar6"
-                >
-                  <p data-oid=".5_-jj.">
-                    <strong data-oid="72e:.:3">Test Credentials:</strong>
+                <div className="text-xs text-gray-500 space-y-1">
+                  <p>
+                    <strong>Test Credentials:</strong>
                   </p>
-                  <p data-oid="4sgsz44">Email: admin@assembly.com</p>
-                  <p data-oid="zavf1ej">Password: admin123</p>
-                  <p className="mt-2" data-oid="jlq5e47">
-                    <strong data-oid="-go04cw">Note:</strong> This is a test
-                    environment. In production, use proper authentication.
+                  <p>Email: admin@assembly.com</p>
+                  <p>Password: admin123</p>
+                  <p className="mt-2">
+                    <strong>Note:</strong> This is a test environment. In
+                    production, use proper authentication.
                   </p>
                 </div>
               </div>

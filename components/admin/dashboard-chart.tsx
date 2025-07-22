@@ -28,8 +28,8 @@ const data = [
 
 export function DashboardChart() {
   return (
-    <div className="h-[300px] w-full" data-oid="-hpu9pe">
-      <ResponsiveContainer width="100%" height="100%" data-oid="v45:fvy">
+    <div className="h-[300px] w-full">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
           margin={{
@@ -38,28 +38,20 @@ export function DashboardChart() {
             left: 20,
             bottom: 5,
           }}
-          data-oid="soxnbz9"
         >
-          <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="#E8EFFF"
-            data-oid="n7bifwi"
-          />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E8EFFF" />
 
-          <XAxis dataKey="name" stroke="#737687" data-oid="j2n6q02" />
-          <YAxis stroke="#737687" data-oid="yv-i:2b" />
+          <XAxis dataKey="name" stroke="#737687" />
+          <YAxis stroke="#737687" />
           <Tooltip
             content={({ active, payload }) => {
               if (active && payload && payload.length) {
                 return (
-                  <Card
-                    className="p-2 shadow-lg border-none"
-                    data-oid="5hijgn5"
-                  >
-                    <div className="text-sm font-medium" data-oid="vitez.r">
+                  <Card className="p-2 shadow-lg border-none">
+                    <div className="text-sm font-medium">
                       {payload[0].payload.name}
                     </div>
-                    <div className="text-sm text-[#123B79]" data-oid="a__yee3">
+                    <div className="text-sm text-[#123B79]">
                       Revenue: ${payload[0].value}
                     </div>
                   </Card>
@@ -67,7 +59,6 @@ export function DashboardChart() {
               }
               return null;
             }}
-            data-oid="y31:nca"
           />
 
           <Line
@@ -76,7 +67,6 @@ export function DashboardChart() {
             stroke="#123B79"
             strokeWidth={2}
             activeDot={{ r: 8 }}
-            data-oid="::xd285"
           />
         </LineChart>
       </ResponsiveContainer>

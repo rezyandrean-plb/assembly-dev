@@ -44,7 +44,12 @@ interface QuickEditModalProps {
   onSave: (productData: Partial<Product>) => void;
 }
 
-export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditModalProps) => {
+export const QuickEditModal = ({
+  product,
+  isOpen,
+  onClose,
+  onSave,
+}: QuickEditModalProps) => {
   const [formData, setFormData] = useState<Partial<Product>>({});
 
   // Initialize form data when product changes
@@ -79,7 +84,7 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent className="sm:max-w-[600px] border-gray-300 bg-white shadow-lg">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             Quick Edit Product
@@ -89,14 +94,16 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
           </DialogTitle>
         </DialogHeader>
 
-        <div className="grid grid-cols-2 gap-4 py-4">
+        <div className="grid grid-cols-2 gap-4 py-4 border-t border-gray-200">
           {/* Product Title */}
           <div className="col-span-2">
             <Label htmlFor="title">Product Name</Label>
             <Input
               id="title"
               value={formData.title || ""}
-              onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, title: e.target.value })
+              }
             />
           </div>
 
@@ -106,7 +113,9 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
             <Input
               id="sku"
               value={formData.sku || ""}
-              onChange={(e) => setFormData({ ...formData, sku: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, sku: e.target.value })
+              }
             />
           </div>
 
@@ -139,7 +148,10 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
               step="0.01"
               value={formData.price || ""}
               onChange={(e) =>
-                setFormData({ ...formData, price: parseFloat(e.target.value) || 0 })
+                setFormData({
+                  ...formData,
+                  price: parseFloat(e.target.value) || 0,
+                })
               }
             />
           </div>
@@ -190,7 +202,10 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
                   setFormData({ ...formData, virtual: checked as boolean })
                 }
               />
-              <Label htmlFor="virtual" className="text-sm">Virtual product</Label>
+
+              <Label htmlFor="virtual" className="text-sm">
+                Virtual product
+              </Label>
             </div>
 
             <div className="flex items-center space-x-2">
@@ -201,12 +216,15 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
                   setFormData({ ...formData, downloadable: checked as boolean })
                 }
               />
-              <Label htmlFor="downloadable" className="text-sm">Downloadable</Label>
+
+              <Label htmlFor="downloadable" className="text-sm">
+                Downloadable
+              </Label>
             </div>
           </div>
         </div>
 
-        <DialogFooter className="flex items-center justify-between">
+        <DialogFooter className="flex items-center justify-between border-t border-gray-200 pt-4">
           <div className="text-sm text-gray-500">
             ID: {product.id} | Last updated: Just now
           </div>
@@ -215,7 +233,10 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
               <X className="h-4 w-4 mr-2" />
               Cancel
             </Button>
-            <Button onClick={handleSave} className="bg-[#123B79] hover:bg-[#425DA0]">
+            <Button
+              onClick={handleSave}
+              className="bg-[#123B79] hover:bg-[#425DA0]"
+            >
               <Save className="h-4 w-4 mr-2" />
               Update
             </Button>
@@ -224,4 +245,4 @@ export const QuickEditModal = ({ product, isOpen, onClose, onSave }: QuickEditMo
       </DialogContent>
     </Dialog>
   );
-}; 
+};
