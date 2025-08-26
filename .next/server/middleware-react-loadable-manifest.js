@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/plb-book/preview/page.tsx -> @/components/network-background":{"id":13016,"files":["static/chunks/bd904a5c-d743d4504a1ad648.js","static/chunks/b536a0f1-2d74d8ae3b4fd9ca.js","static/chunks/3016.3270a6c9c69716ed.js"]}}';
