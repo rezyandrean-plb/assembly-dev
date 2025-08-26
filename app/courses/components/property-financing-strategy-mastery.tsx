@@ -1,6 +1,6 @@
 "use client";
 
-import CourseDetailTemplate from "../components/course-detail-template";
+import CourseDetailTemplate from "./course-detail-template";
 import { courseData } from "../data/property-financing-strategy-mastery";
 
 export default function PropertyFinancingStrategyMastery() {

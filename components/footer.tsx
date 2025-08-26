@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/courses/hdb-investment-masterclass"
+                  href="/courses/hdb-upgraders-101-secrets-to-upgrading-from-a-hdb-to-a-condo"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   HDB Investment
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/courses/condo-investment-masterclass"
+                  href="/courses/condo-investment-workshop"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Condo Investment
@@ -102,7 +102,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/courses/strategic-property-investment"
+                  href="/courses/property-portfolio-strategy-mastery"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Strategic Investment

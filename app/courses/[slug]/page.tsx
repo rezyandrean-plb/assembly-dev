@@ -5,10 +5,6 @@ import dynamic from "next/dynamic";
 // Define the valid course slugs
 const validSlugs = [
   "property-strategies-in-2025-amid-rate-cuts",
-  "hdb-investment-masterclass",
-
-  "property-market-trend-analysis",
-
   "condo-investment-workshop",
   "master-new-launch-selection",
   "module-1-of-niche-positioning-masterclass",
@@ -60,11 +56,6 @@ export async function generateMetadata({
   const titleMap: Record<string, string> = {
     "property-strategies-in-2025-amid-rate-cuts":
       "Property Strategies in 2025 Amid Rate Cuts | Assembly SG",
-    "hdb-investment-masterclass": "HDB Investment Masterclass | Assembly SG",
-
-    "property-market-trend-analysis":
-      "Property Market Trend Analysis | Assembly SG",
-
     "condo-investment-workshop":
       "Condo Investment Workshop: Building a Profitable Property Portfolio with Confidence | Assembly SG",
     "master-new-launch-selection":

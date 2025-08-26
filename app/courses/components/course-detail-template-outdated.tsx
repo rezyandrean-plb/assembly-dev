@@ -683,7 +683,7 @@ export default function CourseDetailTemplate({
                 duration: "32 hours 10 minutes",
                 price: "$1,199",
                 image: "/singapore-skyline-day.png",
-                slug: "property-market-trend-analysis",
+                slug: "property-strategies-in-2025-amid-rate-cuts",
               },
             ].map((relatedCourse, index) => (
               <motion.div
