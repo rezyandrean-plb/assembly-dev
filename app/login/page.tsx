@@ -4,45 +4,52 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  Eye,
-  EyeOff,
   Mail,
-  Lock,
   ArrowRight,
   Building2,
   TrendingUp,
   Users,
+  Send,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/context/auth-context";
 
 export default function LoginPage() {
   const router = useRouter();
-  const { login } = useAuth();
+  const { sendVerificationCode } = useAuth();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    if (!email || !password) {
-      setError("Please enter both email and password");
+    if (!email) {
+      setError("Please enter your email address");
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      const success = await login(email, password);
+      const success = await sendVerificationCode(email);
       if (success) {
-        router.push("/");
+        setSuccess(true);
+        // Redirect to verification page after a short delay
+        setTimeout(() => {
+          router.push(`/login/verification?email=${encodeURIComponent(email)}`);
+        }, 1500);
       } else {
-        setError("Invalid email or password. Please try again.");
+        setError("Failed to send verification code. Please try again.");
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
@@ -54,11 +61,8 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     setIsSubmitting(true);
     try {
-      // For demo purposes, log in with the first test account
-      const success = await login("pyee.1104@gmail.com", "Abc123456#");
-      if (success) {
-        router.push("/");
-      }
+      // For demo purposes, redirect to verification with test email
+      router.push(`/login/verification?email=${encodeURIComponent("pyee.1104@gmail.com")}`);
     } catch (err) {
       setError("An error occurred. Please try again.");
     } finally {
@@ -97,7 +101,7 @@ export default function LoginPage() {
               Welcome Back
             </h1>
             <p className="text-neutral-600">
-              Continue your real estate investment journey
+              Enter your email to receive a verification code
             </p>
           </div>
 
@@ -134,13 +138,17 @@ export default function LoginPage() {
             </span>
           </button>
 
-          {/* Divider */}
-          <div className="relative flex items-center justify-center mb-6">
-            <div className="border-t border-neutral-200 w-full"></div>
-            <span className="bg-white px-4 text-sm text-neutral-500 font-medium">
-              Or continue with email
-            </span>
-          </div>
+          {/* Success Message */}
+          {success && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl text-sm mb-6 flex items-center gap-2"
+            >
+              <Send className="w-5 h-5" />
+              Verification code sent! Redirecting to verification page...
+            </motion.div>
+          )}
 
           {/* Error Message */}
           {error && (
@@ -168,63 +176,10 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
-                  placeholder="Enter your email"
+                  placeholder="Enter your email address"
                   required
                 />
               </div>
-            </div>
-
-            {/* Password Field */}
-            <div>
-              <label className="block text-sm font-medium text-neutral-700 mb-2">
-                Password
-              </label>
-              <div className="relative">
-                <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400" />
-
-                <input
-                  type={showPassword ? "text" : "password"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-12 pr-12 py-4 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
-                  placeholder="Enter your password"
-                  required
-                />
-
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600"
-                >
-                  {showPassword ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-4 h-4 text-primary border-neutral-300 rounded focus:ring-primary/20"
-                />
-
-                <span className="ml-2 text-sm text-neutral-600">
-                  Remember me
-                </span>
-              </label>
-              <Link
-                href="/forgot-password"
-                className="text-sm text-primary hover:text-primary-dark font-medium"
-              >
-                Forgot password?
-              </Link>
             </div>
 
             {/* Submit Button */}
@@ -254,12 +209,12 @@ export default function LoginPage() {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  Signing in...
+                  Sending code...
                 </>
               ) : (
                 <>
-                  Sign In
-                  <ArrowRight className="w-5 h-5" />
+                  Sign In & Get Code
+                  <Send className="w-5 h-5" />
                 </>
               )}
             </button>
@@ -274,6 +229,15 @@ export default function LoginPage() {
                 className="text-primary hover:text-primary-dark font-semibold"
               >
                 Create account
+              </Link>
+            </p>
+            <p className="text-neutral-500 text-sm mt-2">
+              Need help?{" "}
+              <Link
+                href="/contact"
+                className="text-primary hover:text-primary-dark font-medium"
+              >
+                Contact Support
               </Link>
             </p>
           </div>
@@ -296,33 +260,32 @@ export default function LoginPage() {
           className="relative z-10 max-w-md"
         >
           <h2 className="text-4xl font-bold mb-6">
-            Master Real Estate Investment
+            Secure Email Verification
           </h2>
           <p className="text-xl text-white/80 mb-8">
-            Join thousands of successful investors who've transformed their
-            financial future with our expert-led courses.
+            We use email verification to ensure your account security and provide a seamless login experience without passwords.
           </p>
 
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <TrendingUp className="w-6 h-6" />
+                <Mail className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold">Expert-Led Courses</h3>
+                <h3 className="font-semibold">Email Verification</h3>
                 <p className="text-white/70">
-                  Learn from industry professionals
+                  One-time codes sent to your email
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <Users className="w-6 h-6" />
+                <TrendingUp className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold">Community Support</h3>
-                <p className="text-white/70">Connect with fellow investors</p>
+                <h3 className="font-semibold">Enhanced Security</h3>
+                <p className="text-white/70">No passwords to remember or lose</p>
               </div>
             </div>
 
@@ -331,8 +294,8 @@ export default function LoginPage() {
                 <Building2 className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold">Real-World Strategies</h3>
-                <p className="text-white/70">Practical investment techniques</p>
+                <h3 className="font-semibold">Quick Access</h3>
+                <p className="text-white/70">Fast and secure login process</p>
               </div>
             </div>
           </div>
